@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   date.hpp                                           :+:      :+:    :+:   */
+/*   format.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 21:38:21 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 18:19:47 by ls               ###   ########.fr       */
+/*   Created: 2024/09/08 18:08:19 by ls                #+#    #+#             */
+/*   Updated: 2024/09/08 18:22:43 by ls               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATE_HPP
-#define DATE_HPP
+#ifndef FORMAT_HPP
+#define FORMAT_HPP
 
 #include "includes.hpp"
 
-std::string get_current_date();
+std::string getCrlf(void);
 
 #endif

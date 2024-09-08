@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   date.hpp                                           :+:      :+:    :+:   */
+/*   Server.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 21:38:21 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 18:19:47 by ls               ###   ########.fr       */
+/*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
+/*   Updated: 2024/09/08 18:52:09 by ls               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATE_HPP
-#define DATE_HPP
+#ifndef SERVER_HPP
+#define SERVER_HPP
 
 #include "includes.hpp"
 
-std::string get_current_date();
+class Server
+{
+    private:
+        int port;
+        int host[4];
+    
+    public:
+        Server();
+        Server(std::string path);
+};
+
 
 #endif

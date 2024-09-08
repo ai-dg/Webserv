@@ -1,9 +1,11 @@
 SRC = src/core/main.cpp \
-      src/core/server.cpp \
+      src/core/Server.cpp \
       src/core/handler.cpp \
       src/cgi/cgi_handler.cpp \
       src/utils/logger.cpp \
-	  src/utils/date.cpp 
+	  src/utils/date.cpp \
+	  src/utils/format.cpp \
+	  src/utils/debugTools.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
