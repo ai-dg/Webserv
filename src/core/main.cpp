@@ -8,7 +8,7 @@ int main(int ac, char **av)
     (void) ac;
     (void) av;
     std::ostringstream req;
-    Server *server = NULL;
+   // Server *server = NULL;
     int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (fd_socket == -1)
     {
@@ -32,17 +32,20 @@ int main(int ac, char **av)
     (void) server;
     std::cout << get_current_date() << std::endl;*/
     bzero(buff, 1024);
+    std::cout << "test" << std::endl;
     int reads = read(fd_client, buff, 1024);
+    std::string response = "HTTP/1.1 200 OK\nContent-Type: text/html\n\n<html><body><h1>Hello, World!</h1></body></html>";
+    write(fd_client, response.c_str(), response.size());
     while(reads > 0)
     {
         req << buff;
+        std::cout << "test2" << std::endl;
         reads = read(fd_client, buff, 1024);
     }
     std::cout << req.str() << std::endl;
-    std::string response = "HTTP/1.1 200 OK\nContent-Type: text/html\n\n<html><body><h1>Hello, World!</h1></body></html>";
-    write(fd_client, response.c_str(), response.size());
+    std::cout << "test3" << std::endl;
     close (fd_client);  
     close (fd_socket);
-    delete (server);
+    //delete (server);
     return (0);
 }
