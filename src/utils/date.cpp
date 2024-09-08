@@ -6,14 +6,12 @@
 /*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 21:34:06 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 13:10:18 by ls               ###   ########.fr       */
+/*   Updated: 2024/09/08 18:25:55 by ls               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctime>
-#include <cstring>
-#include <string>
-#include <sstream>
+#include "../headers/includes.hpp"
+#include "../headers/format.hpp"
  
 std::string format_num(int nb)
 {
@@ -49,7 +47,7 @@ std::string get_current_date()
         << (1900 + ltm->tm_year) << " "
         << format_num(ltm->tm_hour) << ":"
         << format_num(ltm->tm_min) << ":"
-        << format_num(ltm->tm_sec) << " GMT" ;
+        << format_num(ltm->tm_sec) << " GMT";
     std::string date = dm.str();
     return date;
 }
