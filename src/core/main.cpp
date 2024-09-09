@@ -56,6 +56,8 @@ int main(int ac, char **av)
         server = new Server();
     (void) server;
     std::cout << get_current_date() << std::endl;*/
+    std::string mime = checkMimeType("www/index.html");
+    std::cout << "test fonction mime : " << mime << std::endl;
     std::string resp = getFile("wwww/index.html");
     int reads = 1;
     while(reads > 0)
@@ -71,7 +73,7 @@ int main(int ac, char **av)
             std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><h1>Hello, Diego !!! on a un début de serveur 😀😀😀😀 !!!!<br> Mais tout reste à faire !!!</h1></body></html>\r\n";
             //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"+resp+"\r\n";
             write(fd_client, response.c_str(), response.size());
-            close (fd_client);  
+            close (fd_client);
             break;
         }
    }
