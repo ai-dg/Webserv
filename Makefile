@@ -6,6 +6,8 @@ SRC = src/core/main.cpp \
 	  src/utils/date.cpp \
 	  src/utils/format.cpp \
 	  src/utils/debugTools.cpp \
+	  src/utils/files.cpp \
+
 
 OBJ = $(SRC:.cpp=.o)
 
