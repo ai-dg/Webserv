@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/09/18 16:30:47 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/09/18 17:46:14 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,19 @@ Server::Server()
     std::cout << "server on" << std::endl;
 }
 
+void Server::getHostipv4()
+{
+    int i = 0;
+    while (i < 4)
+    {
+        if (i == 3)
+            std::cout << this->hostipv4[i] << std::endl;
+        else
+            std::cout << this->hostipv4[i] << ".";
+        i++;
+    }
+
+}
 
 Server::Server(std::string path)
 {
