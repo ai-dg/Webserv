@@ -12,6 +12,7 @@ int main(int ac, char **av)
     std::string req;
     std::string path;
     Server server;
+    server.getHostipv4();
     if (av[1])
         path.assign(av[1]);
     else 
@@ -37,7 +38,7 @@ int main(int ac, char **av)
      */
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(8080);
+    addr.sin_port = htons(server.getPort());
     addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
     // redemarre le serveur en cas de crash pour pouvoir reutiliser le port
     int opt = 1;
@@ -73,12 +74,12 @@ int main(int ac, char **av)
         req += buff;
         bzero(buff, 2048);
         reads = read(fd_client, buff, 2048);
-        std::cout << "reads / " << reads << std::endl;
-        std::cout << "test3" << std::endl;
-        std::cout << req << std::endl;
+       // std::cout << "reads / " << reads << std::endl;
+      //  std::cout << "test3" << std::endl;
+       // std::cout << req << std::endl;
         if (reads == 0 || reads < 2048)
         {
-            std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><h1>Hello, Diego !!! on a un début de serveur 😀😀😀😀 !!!!<br> Mais tout reste à faire !!!</h1></body></html>\r\n";
+            std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><h1>Hello,  😀😀😀😀 !!!!</h1></body></html>\r\n";
             //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"+resp+"\r\n";
             write(fd_client, response.c_str(), response.size());
             close (fd_client);

@@ -6,12 +6,13 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:32:55 by calbor-p          #+#    #+#             */
-/*   Updated: 2024/09/18 16:44:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/09/18 17:38:42 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <fstream>
+#include <cstdlib>
 
 #include "../headers/parser.hpp"
 
@@ -19,7 +20,9 @@ std::string trim(std::string str, char c)
 {
 	int start = 0;
 
-	while( str[start] == c)
+	if (str == "")
+		return str;
+	while(str[start] == c)
 		start++;
 	return str.substr(start, std::string::npos);
 }
@@ -43,13 +46,11 @@ std::string searchValueInFile(std::string path, std::string index)
 void setPort(std::string listen, Server *server)
 {
 	int port = 8080;
-	std::cout << listen << std::endl;
-	listen.
-	std::string num = listen.substr(listen.find(" "), std::string::npos);
-	std::cout << num << std::endl;
-	
-	server->setPort(port);
-	
+	listen = trim(listen, ' ');
+	int num = atoi((listen.substr(listen.find(" ") + 1, std::string::npos)).c_str());
+	if (num >= 1024 && num <= 49151)
+		port = num;		
+	server->setPort(port);	
 }
 
 void setServer(std::string path, Server *server)
