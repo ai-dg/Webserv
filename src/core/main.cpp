@@ -3,13 +3,21 @@
 #include "../headers/format.hpp"
 #include "../headers/Server.hpp"
 #include "../headers/files.hpp"
+#include "../headers/parser.hpp"
 
 int main(int ac, char **av)
 {
     (void) ac;
     (void) av;
     std::string req;
-   // Server *server = NULL;
+    std::string path;
+    Server server;
+    if (av[1])
+        path.assign(av[1]);
+    else 
+        path = "";    
+
+    setServer(path, &server);
    /**
     *  int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     * Creation d'un socket permettant la connextion

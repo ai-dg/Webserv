@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 19:01:03 by ls               ###   ########.fr       */
+/*   Updated: 2024/09/18 16:30:47 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,16 @@ Server::Server(std::string path)
 {
     (void) path;
      std::cout << "param server on" << std::endl;
+    
+}
+
+void Server::setPort(int port)
+{
+    this->port = port;
+    std::cout << "listening on port " << this->port << std::endl;    
+}
+
+int Server::getPort(void)
+{
+    return (this->port);
 }

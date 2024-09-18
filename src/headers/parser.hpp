@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Server.hpp                                         :+:      :+:    :+:   */
+/*   parser.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/09/18 16:31:39 by calbor-p         ###   ########.fr       */
+/*   Created: 2024/09/16 15:34:03 by calbor-p          #+#    #+#             */
+/*   Updated: 2024/09/18 11:58:42 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERVER_HPP
-#define SERVER_HPP
+#ifndef PARSER_HPP
+#define PARSER_HPP
 
-#include "includes.hpp"
-#include <map>
+#include "Server.hpp"
 
-class Server
-{
-    private:
-        int port;
-        int host[4];
-        std::string serverName;
-        std::string *methods;
-        std::map<int, std::string> err;
-        int maxBodySize;
-    
-    public:
-        Server();
-        Server(std::string path);
-        void setPort(int port);
-        int getPort(void);
-};
-
+void setServer(std::string path, Server *server);
 
 #endif
