@@ -4,6 +4,8 @@
 #include "../headers/Server.hpp"
 #include "../headers/files.hpp"
 #include "../headers/parser.hpp"
+#include "../headers/HttpRequest.hpp"
+
 
 int main(int ac, char **av)
 {
@@ -67,19 +69,20 @@ int main(int ac, char **av)
     std::cout << get_current_date() << std::endl;*/
     std::string mime = checkMimeType("www/index.html");
     std::cout << "test fonction mime : " << mime << std::endl;
-    std::string resp = getFile("wwww/index.html");
+    std::string resp = getFile("www/index.html");
+    std::cout << resp << std::endl;
     int reads = 1;
+    bzero(buff, 2048);
     while(reads > 0)
     {
+        reads = read(fd_client, buff, 2048);
         req += buff;
         bzero(buff, 2048);
-        reads = read(fd_client, buff, 2048);
-       // std::cout << "reads / " << reads << std::endl;
-      //  std::cout << "test3" << std::endl;
-       // std::cout << req << std::endl;
+        //std::cout << "req : " << req << std::endl;
         if (reads == 0 || reads < 2048)
         {
-            std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><h1>Hello,  😀😀😀😀 !!!!</h1></body></html>\r\n";
+            HttpRequest request(req);
+            std::string response = "HTTP/1.1 200 OK\r\nContent-Type: "+ mime + "; charset=UTF-8\r\n\r\n" + resp;
             //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"+resp+"\r\n";
             write(fd_client, response.c_str(), response.size());
             close (fd_client);
