@@ -45,10 +45,11 @@ std::string checkMimeType(const std::string& path)
 
 std::string getFile(const std::string& path)
 {
+
     std::ifstream file(path.c_str());
     std::string content;
     std::string line;
-
+    std::cout << "test path : " << path << std::endl;
     if (file.is_open())
     {
         while (std::getline(file, line))
@@ -57,7 +58,10 @@ std::string getFile(const std::string& path)
                 content += "\n";
             content += line;
         }
+        std::cout << "test getfile : " <<content << std::endl;
         file.close();
     }
+    else
+        std::cout << "file not found ! " << std::endl;
     return content;
 }
