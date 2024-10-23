@@ -31,7 +31,23 @@ void HttpRequest::setURI(std::string req)
 
 void HttpRequest::addToHeaders(std::string line)
 {
-    
+    int pos = line.find(":");
+    std::string first;
+    std::string second;
+    if (pos != std::string::npos)
+    {
+        first = line.substr(0, pos);
+        second = line.substr(pos + 2, std::string::npos);
+        this->headers[first] = second;
+        std::cout << "keyval : " << first << " - " << second << std::endl;
+    }
+    else 
+        this->setBody(line);
+}
+
+std::string HttpRequest::getHeader(std::string key)
+{
+    return this->headers[key];
 }
 
 void HttpRequest::setHeaders(std::string req)
@@ -41,12 +57,11 @@ void HttpRequest::setHeaders(std::string req)
     std::string headers = req.substr(start, std::string::npos);
     while(crlfPos != std::string::npos)
     {
-        crlfPos = req.find(CRLF);
-        std::string line = headers.substr(start, crlfPos - 2);
+        crlfPos = headers.find(CRLF);
+        std::string line = headers.substr(0, crlfPos);
         this->addToHeaders(line);
-        start = crlfPos + 2;
+        headers.erase(0, crlfPos + 2);
     }
-    std::cout << "headers : " << std::endl << headers << std::endl;
 }
 
 std::string HttpRequest::getURI() const
@@ -57,16 +72,19 @@ std::string HttpRequest::getURI() const
 
 void HttpRequest::setBody(std::string req)
 {
-
+    this->body = req;
 }
 
 
 void HttpRequest::parseRequest(std::string req)
 {
+    std::cout << "1 "  << std::endl;
     this->setMethod(req);
+      std::cout << "2 " << std::endl;
     this->setURI(req);
+      std::cout << "3 " << std::endl;
     this->setHeaders(req);
-    this->setBody(req);
+      std::cout << "4 " << std::endl;
     std::cout << "method : " << this->method << std::endl;
     std::cout << "URI : " << this->URI << std::endl;
 
@@ -79,6 +97,7 @@ HttpRequest::HttpRequest(std::string req, Server *server)
     std::cout << req << std::endl;
     parseRequest(req);
     this->server = server;
+    std::cout << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::~HttpRequest()

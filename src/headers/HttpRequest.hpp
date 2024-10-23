@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include "../headers/Server.hpp"
+#include "../headers/format.hpp"
 
 
 class HttpRequest
@@ -15,6 +16,7 @@ class HttpRequest
         std::string method;
         std::string host;
         std::string URI;
+        std::string body;
         int port;
         Server *server;
         void setMethod(std::string req);
@@ -28,6 +30,7 @@ class HttpRequest
 
         HttpRequest(std::string req);
         std::string getURI() const;
+        std::string getHeader(std::string key);
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
 

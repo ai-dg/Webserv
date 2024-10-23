@@ -12,6 +12,12 @@
 
 #include "../headers/format.hpp"
 
+std::string numberToString(int number) {
+    std::ostringstream oss;
+    oss << number;  // Convertir le nombre en chaîne
+    return oss.str();
+}
+
 std::string getCrlf(void)
 {
     std::string crlf = "  ";
@@ -19,3 +25,4 @@ std::string getCrlf(void)
     crlf[1] = 10;
     return (crlf);
 }
+

@@ -8,6 +8,7 @@
 #include "../headers/Server.hpp"
 #include "../headers/HttpRequest.hpp"
 #include "../headers/files.hpp"
+#include "../headers/stringUtils.hpp"
 
 
 class HttpResponse
