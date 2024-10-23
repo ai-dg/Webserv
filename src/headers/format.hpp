@@ -15,6 +15,7 @@
 
 #include "includes.hpp"
 
+std::string numberToString(int number);
 std::string getCrlf(void);
 
 #endif

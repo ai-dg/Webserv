@@ -14,10 +14,15 @@ void HttpResponse::setMineType(void)
 
 void HttpResponse::send(int fd_client)
 {
-    std::string res = "HTTP/1.1 200 OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8\r\n\r\n" + getFile(this->filePath);
-    write(fd_client, res.c_str(), res.size());
-
-    
+    std::string res = "HTTP/1.1 200 OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
+            CRLF + "Connection: keep-alive" + 
+            CRLF + "Content-Length: XXX" +
+            CRLF + CRLF + getFile(this->filePath);
+    int size = res.size() - 3;
+    size += numberToString(size).size();
+    res = replaceBy(res, "XXX", numberToString(size));
+    std::cout << "test res : " << res << std::endl;
+    write(fd_client, res.c_str(), res.size());    
 }
 
 HttpResponse::HttpResponse(const HttpRequest &req)

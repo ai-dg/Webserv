@@ -72,25 +72,21 @@ int main(int ac, char **av)
     std::cout << resp << std::endl;*/
     int reads = 1;
     bzero(buff, 2048);
-    while(reads > 0)
+    while(true)
     {
         reads = read(fd_client, buff, 2048);
         req += buff;
         bzero(buff, 2048);
         //std::cout << "req : " << req << std::endl;
-        if (reads == 0 || reads < 2048)
-        {
-            HttpRequest request(req, server);
-            // idéalement, faire un truc dans le genre : 
+               HttpRequest request(req, server);
             HttpResponse response(request);
             response.send(fd_client);
-            //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: "+ mime + "; charset=UTF-8\r\n\r\n" + resp;
-            //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"+resp+"\r\n";
-            //write(fd_client, response.c_str(), response.size());
-            break;
-        }
- 
-        close (fd_client);
+            if(request.getHeader("Connection") != "keep-alive")
+            {
+                std::cout << "end : " << request.getHeader("Connection") << std::endl;
+                close (fd_client);
+                break;
+            } 
    }
     close (fd_socket);
     //delete (server);
