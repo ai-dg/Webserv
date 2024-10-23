@@ -25,4 +25,6 @@
 #include <stdio.h>
 #include <errno.h>
 
+#define CRLF "\r\n"
+
 #endif

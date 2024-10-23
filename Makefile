@@ -1,6 +1,7 @@
 SRC = src/core/main.cpp \
       src/core/Server.cpp \
 	  src/core/HttpRequest.cpp \
+	  src/core/HttpResponse.cpp \
       src/core/handler.cpp \
       src/cgi/cgi_handler.cpp \
       src/utils/logger.cpp \

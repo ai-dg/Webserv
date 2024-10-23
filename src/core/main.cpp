@@ -5,6 +5,7 @@
 #include "../headers/files.hpp"
 #include "../headers/parser.hpp"
 #include "../headers/HttpRequest.hpp"
+#include "../headers/HttpResponse.hpp"
 
 
 int main(int ac, char **av)
@@ -13,14 +14,15 @@ int main(int ac, char **av)
     (void) av;
     std::string req;
     std::string path;
-    Server server;
-    server.getHostipv4();
-    if (av[1])
+    Server *server;
+    if (ac >= 2)
         path.assign(av[1]);
     else 
-        path = "";    
+        path = "config/server.conf";
 
-    setServer(path, &server);
+    server = new Server(path);
+    server->getHostipv4();
+    setServer(path, server);
    /**
     *  int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     * Creation d'un socket permettant la connextion
@@ -40,7 +42,7 @@ int main(int ac, char **av)
      */
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(server.getPort());
+    addr.sin_port = htons(server->getPort());
     addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
     // redemarre le serveur en cas de crash pour pouvoir reutiliser le port
     int opt = 1;
@@ -61,16 +63,13 @@ int main(int ac, char **av)
         return(1);
     }
     char buff[2048];
-   /* if (ac == 2)
-        server = new Server(av[1]);
-    else
-        server = new Server();
-    (void) server;
-    std::cout << get_current_date() << std::endl;*/
-    std::string mime = checkMimeType("www/index.html");
+
+
+    std::cout << get_current_date() << std::endl;
+   /*std::string mime = checkMimeType("www/index.html");
     std::cout << "test fonction mime : " << mime << std::endl;
     std::string resp = getFile("www/index.html");
-    std::cout << resp << std::endl;
+    std::cout << resp << std::endl;*/
     int reads = 1;
     bzero(buff, 2048);
     while(reads > 0)
@@ -81,13 +80,17 @@ int main(int ac, char **av)
         //std::cout << "req : " << req << std::endl;
         if (reads == 0 || reads < 2048)
         {
-            HttpRequest request(req);
-            std::string response = "HTTP/1.1 200 OK\r\nContent-Type: "+ mime + "; charset=UTF-8\r\n\r\n" + resp;
+            HttpRequest request(req, server);
+            // idéalement, faire un truc dans le genre : 
+            HttpResponse response(request);
+            response.send(fd_client);
+            //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: "+ mime + "; charset=UTF-8\r\n\r\n" + resp;
             //std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"+resp+"\r\n";
-            write(fd_client, response.c_str(), response.size());
-            close (fd_client);
+            //write(fd_client, response.c_str(), response.size());
             break;
         }
+ 
+        close (fd_client);
    }
     close (fd_socket);
     //delete (server);
