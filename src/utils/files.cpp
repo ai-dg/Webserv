@@ -37,20 +37,28 @@ std::string getMime(const std::string& mime)
 
 std::string checkMimeType(const std::string& path)
 {
-    if (path == "/")
+    std::string local = path;
+    std::cout << "path : " << path << std::endl;
+    local.erase(0,3);
+    std::cout << "local : " << local << std::endl;
+    if (local == "/")
         return "text/html";
-    std::string mime = path.substr(path.find_last_of(".") + 1);
+    
+    std::string mime = local.substr(local.find_last_of(".") + 1);
     return getMime(mime);
 }
 
 std::string getFile(const std::string& path)
 {
-
-    std::ifstream file(path.c_str());
+    std::string local = path;
+    
+    if (path.size() < 5)
+        local += "index.html";
+    //std::cout << "local 2 " << local << " - path size : " << path.size() << std::endl;
+    std::ifstream file(local.c_str());
     std::string content;
     std::string line;
-    std::cout << "test path : " << path << std::endl;
-    if (file.is_open())
+     if (file.is_open())
     {
         while (std::getline(file, line))
         {
@@ -58,7 +66,7 @@ std::string getFile(const std::string& path)
                 content += "\n";
             content += line;
         }
-        std::cout << "test getfile : " <<content << std::endl;
+       // std::cout << "test getfile : " << content << std::endl;
         file.close();
     }
     else

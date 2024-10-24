@@ -39,7 +39,7 @@ void HttpRequest::addToHeaders(std::string line)
         first = line.substr(0, pos);
         second = line.substr(pos + 2, std::string::npos);
         this->headers[first] = second;
-        std::cout << "keyval : " << first << " - " << second << std::endl;
+        //std::cout << "keyval : " << first << " - " << second << std::endl;
     }
     else 
         this->setBody(line);
@@ -78,15 +78,15 @@ void HttpRequest::setBody(std::string req)
 
 void HttpRequest::parseRequest(std::string req)
 {
-    std::cout << "1 "  << std::endl;
+    
     this->setMethod(req);
-      std::cout << "2 " << std::endl;
+    
     this->setURI(req);
-      std::cout << "3 " << std::endl;
+   
     this->setHeaders(req);
-      std::cout << "4 " << std::endl;
-    std::cout << "method : " << this->method << std::endl;
-    std::cout << "URI : " << this->URI << std::endl;
+   
+   // std::cout << "method : " << this->method << std::endl;
+    //std::cout << "URI : " << this->URI << std::endl;
 
     // Parser la methode - verifier si elle est acceptée par le serveur (voir le parsing du fichier server.conf et stocker ces informations dans un tableau)
     
@@ -97,10 +97,10 @@ HttpRequest::HttpRequest(std::string req, Server *server)
     std::cout << req << std::endl;
     parseRequest(req);
     this->server = server;
-    std::cout << "Test map : " << this->headers["Connection"] << std::endl;
+    //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::~HttpRequest()
 {    
-    std::cout << "end req" << std::endl;
+    //std::cout << "end req" << std::endl;
 }

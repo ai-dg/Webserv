@@ -24,7 +24,7 @@
 #include <netinet/in.h>
 #include <stdio.h>
 #include <errno.h>
-
+#include "colors.hpp"
 #define CRLF "\r\n"
 
 #endif

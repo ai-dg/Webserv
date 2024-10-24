@@ -9,6 +9,8 @@
 #include "../headers/HttpRequest.hpp"
 #include "../headers/files.hpp"
 #include "../headers/stringUtils.hpp"
+#include "../headers/date.hpp"
+#include "../headers/includes.hpp"
 
 
 class HttpResponse
