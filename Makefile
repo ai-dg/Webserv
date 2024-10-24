@@ -4,6 +4,7 @@ SRC = src/core/main.cpp \
 	  src/core/HttpRequest.cpp \
 	  src/core/HttpResponse.cpp \
       src/core/handler.cpp \
+	  src/core/Epoll.cpp \
       src/cgi/cgi_handler.cpp \
       src/utils/logger.cpp \
 	  src/utils/date.cpp \

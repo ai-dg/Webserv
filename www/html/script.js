@@ -24,3 +24,10 @@ if (page2)
         document.location.href = 'page2.html';
     })
 }
+
+if (page3)
+    {
+        page2.addEventListener('click', () => {
+            document.location.href = 'page3.html';
+        })
+    }
