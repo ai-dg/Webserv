@@ -40,8 +40,7 @@ std::string get_current_date()
     time_t now = time(0);
     tm *ltm = localtime(&now);
     std::ostringstream dm;
-    dm << "date: " 
-        << getDay(ltm->tm_wday) << ", " 
+    dm  << getDay(ltm->tm_wday) << ", " 
         << format_num(ltm->tm_mday) << " " 
         << getMonth(ltm->tm_mon) << " "
         << (1900 + ltm->tm_year) << " "

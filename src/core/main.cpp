@@ -75,18 +75,26 @@ int main(int ac, char **av)
     while(true)
     {
         reads = read(fd_client, buff, 2048);
-        req += buff;
-        bzero(buff, 2048);
-        //std::cout << "req : " << req << std::endl;
-               HttpRequest request(req, server);
-            HttpResponse response(request);
-            response.send(fd_client);
-            if(request.getHeader("Connection") != "keep-alive")
+        if (reads)
+        {
+            req += buff;
+            bzero(buff, 2048);
+            if (reads == 0 || reads < 2048)
             {
-                std::cout << "end : " << request.getHeader("Connection") << std::endl;
-                close (fd_client);
-                break;
-            } 
+                HttpRequest request(req, server);
+                HttpResponse response(request);
+                response.send(fd_client);
+                req = "";
+                std::cout << BLUE << request.getHeader("Connection") << RESET << std::endl;
+                if(request.getHeader("Connection") != "keep-alive")
+                {
+                    std::cout << "end : " << request.getHeader("Connection") << std::endl;
+                    close (fd_client);
+                    break;
+                } 
+            }
+        }
+        //std::cout << "req : " << req << std::endl;
    }
     close (fd_socket);
     //delete (server);
