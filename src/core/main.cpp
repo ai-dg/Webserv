@@ -1,4 +1,7 @@
 #include <iostream>
+#include <unistd.h>
+#include <cstring>
+#include <fcntl.h>
 #include "../headers/date.hpp"
 #include "../headers/format.hpp"
 #include "../headers/Server.hpp"
@@ -8,13 +11,19 @@
 #include "../headers/HttpResponse.hpp"
 #include "../headers/Conf.hpp"
 #include "../headers/cgi_handler.hpp"
+#include "../headers/Epoll.hpp"
 
+#define BUFFER_SIZE 2048
 
 int main(int ac, char **av)
 {
     std::string req;
     std::string path;
     Server *server;
+
+    /**
+     * Conditions du path, si NULL, path par defaut
+     */
     if (ac >= 2)
         path.assign(av[1]);
     else 
@@ -25,26 +34,26 @@ int main(int ac, char **av)
      */
 
     Conf conf(path);
-
     conf.getValuesFromPath();
     conf.printConfigs();
     conf.checkAndSetDefaultValues();
     conf.printConfigs();
 
-
     /**
      * Server start
      */
+
     server = new Server(path);
     server->getHostipv4();
     setServer(path, server);
+
     /**
-    *  int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
+    *    int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     *    Creation d'un socket permettant la connextion
     *    l'option AF_INET permet de choisir le protocole de connexion Protocoles Internet IPv4
     *    l'option SOCK_STREAM permet de choisir le type de connexion TCP man : (
     *    SOCK_STREAM Support de dialogue garantissant l'intégrité, fournissant un flux de données binaires, 
-    *   et intégrant un mécanisme pour les transmissions de données hors-bande. )
+    *    et intégrant un mécanisme pour les transmissions de données hors-bande. )
     */
     int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (fd_socket == -1)
@@ -52,6 +61,7 @@ int main(int ac, char **av)
         perror("socket");
         return (1);
     }
+
     /**
      * struct sockaddr_in afin de configurer le socket
      */
@@ -59,61 +69,143 @@ int main(int ac, char **av)
     addr.sin_family = AF_INET;
     addr.sin_port = htons(server->getPort());
     addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
-    // redemarre le serveur en cas de crash pour pouvoir reutiliser le port
+
+    /**
+     * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
+     */
     int opt = 1;
     setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
+
     if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
         perror("binding failed");
+
+
     if (listen(fd_socket, 10) < 0)
     {
         std::cout << "fail listening socket" << std::endl;
         return(1);        
-    }  
-    struct  sockaddr_in client_addr;
-    socklen_t client_addr_len = sizeof(client_addr);
-    int fd_client = accept(fd_socket, (struct sockaddr *) &client_addr, &client_addr_len);
-    if (fd_client < 0)
-    {
-        std::cout << "fail opening fd" << std::endl;
-        return(1);
     }
-    char buff[2048];
 
+    /**
+     * @brief
+     * Creation de la classe Epoll, une API pour gerer les evenements d'entree/sortie sur plusieurs FD,
+     * methode plus effiface en comparaison de poll() et select(), pas besoin d'examiner chaque descripteur
+     * de chaque appel.
+     */
+    Epoll epoll(10);  
+    epoll.addFd(fd_socket, EPOLLIN);  
+    epoll.makeSocketNonBlocking(fd_socket);  
+    char buff[BUFFER_SIZE];
 
-    std::cout << get_current_date() << std::endl;
-    /*std::string mime = checkMimeType("www/index.html");
-    std::cout << "test fonction mime : " << mime << std::endl;
-    std::string resp = getFile("www/index.html");
-    std::cout << resp << std::endl;*/
-    
-    Cgi_handler cgiHandler; // Creation du handler CGI    
-    int reads = 1;
-    bzero(buff, 2048);
-    while(true)
+    while (true) 
     {
-        reads = read(fd_client, buff, 2048);
-        if (reads)
+        int eventCount = epoll.wait(-1);
+        for (int i = 0; i < eventCount; ++i) 
         {
-            req += buff;
-            bzero(buff, 2048);
-            if (reads == 0 || reads < 2048)
+            struct epoll_event event = epoll.getEvent(i);
+
+            if (event.data.fd == fd_socket) 
             {
-                HttpRequest request(req, server);
-                HttpResponse response(request);
-                response.send(fd_client);
-                req = "";
-                std::cout << BLUE << request.getHeader("Connection") << RESET << std::endl;
-                if(request.getHeader("Connection") != "keep-alive")
+                
+                struct sockaddr_in client_addr;
+                socklen_t client_addr_len = sizeof(client_addr);
+                int fd_client = accept(fd_socket, (struct sockaddr*)&client_addr, &client_addr_len);
+                if (fd_client == -1) 
                 {
-                    std::cout << "end : " << request.getHeader("Connection") << std::endl;
-                    close (fd_client);
-                    break;
+                    perror("accept");
+                    continue;
+                }              
+                epoll.makeSocketNonBlocking(fd_client);
+                epoll.addFd(fd_client, EPOLLIN | EPOLLET);
+            } 
+            else if (event.events & EPOLLIN) 
+            {
+                
+                int fd_client = event.data.fd;
+                bzero(buff, BUFFER_SIZE);
+                int reads = read(fd_client, buff, BUFFER_SIZE);
+                if (reads == 0) 
+                {
+                    
+                    close(fd_client);
+                    epoll.removeFd(fd_client);
                 } 
+                else if (reads > 0) 
+                {
+                    req += std::string(buff, reads);
+
+                    
+                    if (req.find("\r\n\r\n") != std::string::npos) 
+                    {
+                        HttpRequest request(req, server);
+                        HttpResponse response(request);
+                        response.send(fd_client);
+                        req = "";  
+
+                        
+                        if (request.getHeader("Connection") != "keep-alive") 
+                        {
+                            close(fd_client);
+                            epoll.removeFd(fd_client);
+                        }
+                    }
+                } 
+                else 
+                {
+                    
+                    perror("read");
+                    close(fd_client);
+                    epoll.removeFd(fd_client);
+                }
             }
         }
-        //std::cout << "req : " << req << std::endl;
     }
+
+    // struct  sockaddr_in client_addr;
+    // socklen_t client_addr_len = sizeof(client_addr);
+    // int fd_client = accept(fd_socket, (struct sockaddr *) &client_addr, &client_addr_len);
+    // if (fd_client < 0)
+    // {
+    //     std::cout << "fail opening fd" << std::endl;
+    //     return(1);
+    // }
+    // char buff[2048];
+
+
+    // std::cout << get_current_date() << std::endl;
+    // /*std::string mime = checkMimeType("www/index.html");
+    // std::cout << "test fonction mime : " << mime << std::endl;
+    // std::string resp = getFile("www/index.html");
+    // std::cout << resp << std::endl;*/
+    
+    // Cgi_handler cgiHandler; // Creation du handler CGI    
+    // int reads = 1;
+    // bzero(buff, 2048);
+    // while(true)
+    // {
+    //     reads = read(fd_client, buff, 2048);
+    //     if (reads)
+    //     {
+    //         req += buff;
+    //         bzero(buff, 2048);
+    //         if (reads == 0 || reads < 2048)
+    //         {
+    //             HttpRequest request(req, server);
+    //             HttpResponse response(request);
+    //             response.send(fd_client);
+    //             req = "";
+    //             std::cout << BLUE << request.getHeader("Connection") << RESET << std::endl;
+    //             if(request.getHeader("Connection") != "keep-alive")
+    //             {
+    //                 std::cout << "end : " << request.getHeader("Connection") << std::endl;
+    //                 close (fd_client);
+    //                 break;
+    //             } 
+    //         }
+    //     }
+    //     //std::cout << "req : " << req << std::endl;
+    // }
     close (fd_socket);
-    delete (server);
+    // delete (server);
     return (0);
 }

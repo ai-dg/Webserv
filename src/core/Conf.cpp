@@ -56,12 +56,14 @@ void Conf::getValuesFromPath()
     std::string line;
     std::string currentLocation = ""; 
 
-    if (!confFile.is_open()) {
+    if (!confFile.is_open()) 
+    {
         std::cerr << "Unable to open configuration file: " << path << std::endl;
         return;
     }
 
-    while (std::getline(confFile, line)) {
+    while (std::getline(confFile, line)) 
+    {
         
         line.erase(0, line.find_first_not_of(" \t"));
         line.erase(line.find_last_not_of(" \t") + 1);
@@ -70,7 +72,8 @@ void Conf::getValuesFromPath()
         if (line.empty() || line[0] == '#') continue;
 
         
-        if (line.find("location") == 0) {
+        if (line.find("location") == 0) 
+        {
             size_t pos = line.find(" ");
             currentLocation = line.substr(pos + 1); 
             currentLocation = currentLocation.substr(0, currentLocation.find("{")); 
@@ -80,28 +83,35 @@ void Conf::getValuesFromPath()
         }
 
         
-        if (line == "}") {
+        if (line == "}") 
+        {
             currentLocation = ""; 
             continue;
         }
 
         
         size_t pos = line.find(' ');
-        if (pos != std::string::npos) {
+        if (pos != std::string::npos) 
+        {
             std::string key = line.substr(0, pos);
             std::string value = line.substr(pos + 1);
 
             
-            if (!value.empty() && value[value.length() - 1] == ';') {
+            if (!value.empty() && value[value.length() - 1] == ';') 
+            {
                 value.erase(value.length() - 1); 
             }
 
             
-            if (!currentLocation.empty()) {
+            if (!currentLocation.empty()) 
+            {
                 
-                if (currentLocation[currentLocation.length() - 1] != '/') {
+                if (currentLocation[currentLocation.length() - 1] != '/') 
+                {
                     key = "location_" + currentLocation + "/" + key;
-                } else {
+                } 
+                else 
+                {
                     key = "location_" + currentLocation + key;
                 }
 
@@ -114,9 +124,12 @@ void Conf::getValuesFromPath()
             std::cout << "Key: " << key << ", Value: " << value << std::endl;
 
             
-            if (hasKey(key)) {
+            if (hasKey(key)) 
+            {
                 setConf(key, value);
-            } else {
+            } 
+            else 
+            {
                 std::cout << "Key not found: " << key << std::endl; 
             }
         }
@@ -134,7 +147,8 @@ std::string Conf::getConfig(const std::string& key) const
 {
     
     std::map<std::string, std::string>::const_iterator it = configMap.find(key);
-    if (it != configMap.end()) {
+    if (it != configMap.end()) 
+    {
         return it->second;
     }
     return ""; 
@@ -152,11 +166,15 @@ void Conf::printConfigs() const
     
     std::map<std::string, std::string>::const_iterator it;
     std::cout << "-------Config values from map---------" << std::endl;
-    for (it = configMap.begin(); it != configMap.end(); ++it) {
+    for (it = configMap.begin(); it != configMap.end(); ++it) 
+    {
         std::cout << it->first << ": ";
-        if (it->second.empty()) {
+        if (it->second.empty()) 
+        {
             std::cout << "NULL";
-        } else {
+        } 
+        else 
+        {
             std::cout << it->second;
         }
         std::cout << std::endl;
@@ -169,56 +187,102 @@ void Conf::checkAndSetDefaultValues()
 {
     
     std::map<std::string, std::string>::iterator it;
-    for (it = configMap.begin(); it != configMap.end(); ++it) {
-        if (it->second.empty()) {  
+    for (it = configMap.begin(); it != configMap.end(); ++it) 
+    {
+        if (it->second.empty()) 
+        {  
             
-            if (it->first == "listen") {
+            if (it->first == "listen") 
+            {
                 it->second = "8080"; 
-            } else if (it->first == "host") {
+            } 
+            else if (it->first == "host") 
+            {
                 it->second = "127.0.0.1"; 
-            } else if (it->first == "server_name") {
+            } 
+            else if (it->first == "server_name") 
+            {
                 it->second = "myserver.local"; 
-            } else if (it->first == "error_page_404") {
+            } 
+            else if (it->first == "error_page_404") 
+            {
                 it->second = "/error_pages/404.html"; 
-            } else if (it->first == "error_page_500") {
+            } 
+            else if (it->first == "error_page_500") 
+            {
                 it->second = "/error_pages/500.html"; 
-            } else if (it->first == "client_max_body_size") {
+            } 
+            else if (it->first == "client_max_body_size") 
+            {
                 it->second = "4M"; 
-            } else if (it->first == "keepalive_timeout") {
+            } 
+            else if (it->first == "keepalive_timeout") 
+            {
                 it->second = "65"; 
-            } else if (it->first == "client_body_timeout") {
+            } 
+            else if (it->first == "client_body_timeout") 
+            {
                 it->second = "60"; 
-            } else if (it->first == "client_header_timeout") {
+            } 
+            else if (it->first == "client_header_timeout") 
+            {
                 it->second = "10"; 
             } 
             
-            else if (it->first == "location_/root") {
+            else if (it->first == "location_/root") 
+            {
                 it->second = "/www/html"; 
-            } else if (it->first == "location_/index") {
+            } 
+            else if (it->first == "location_/index") 
+            {
                 it->second = "index.html"; 
-            } else if (it->first == "location_/methods") {
+            } 
+            else if (it->first == "location_/methods") 
+            {
                 it->second = "GET POST"; 
-            } else if (it->first == "location_/images/root") {
+            } 
+            else if (it->first == "location_/images/root") 
+            {
                 it->second = "/www/images"; 
-            } else if (it->first == "location_/images/autoindex") {
+            } 
+            else if (it->first == "location_/images/autoindex") 
+            {
                 it->second = "on"; 
-            } else if (it->first == "location_/upload/root") {
+            } 
+            else if (it->first == "location_/upload/root") 
+            {
                 it->second = "/www/uploads"; 
-            } else if (it->first == "location_/upload/methods") {
+            } 
+            else if (it->first == "location_/upload/methods") 
+            {
                 it->second = "POST"; 
-            } else if (it->first == "location_/upload/upload_store") {
+            } 
+            else if (it->first == "location_/upload/upload_store") 
+            {
                 it->second = "/uploads/"; 
-            } else if (it->first == "location_/cgi-bin/root") {
+            } 
+            else if (it->first == "location_/cgi-bin/root") 
+            {
                 it->second = "/www/cgi-bin"; 
-            } else if (it->first == "location_/cgi-bin/cgi") {
+            } 
+            else if (it->first == "location_/cgi-bin/cgi") 
+            {
                 it->second = "on"; 
-            } else if (it->first == "location_/cgi-bin/cgi_bin") {
+            } 
+            else if (it->first == "location_/cgi-bin/cgi_bin") 
+            {
                 it->second = "/cgi-bin/"; 
-            } else if (it->first == "location_/cgi-bin/methods") {
+            } 
+            else if (it->first == "location_/cgi-bin/methods") 
+            {
                 it->second = "GET POST"; 
-            } else if (it->first == "location_/cgi-bin/extension") {
+            } 
+            else if (it->first == "location_/cgi-bin/extension") 
+            {
                 it->second = ".php"; 
-            } else if (it->first == "location_/old-page/return") {
+            } 
+            else if (it->first == "location_/old-page/return") 
+            {
                 it->second = "301 /new-page"; 
             }
         }

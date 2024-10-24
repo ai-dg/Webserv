@@ -59,7 +59,6 @@ void setServer(std::string path, Server *server)
 	std::ifstream config(path.c_str());	
 	
 	setPort(searchValueInFile(path, "listen"), server);
-	std::cout << "parsing server config..." << std::endl;
-	
+	std::cout << "parsing server config..." << std::endl;	
 	std::cout << "done..." << std::endl;
 }
