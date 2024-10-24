@@ -10,8 +10,6 @@
 
 int main(int ac, char **av)
 {
-    (void) ac;
-    (void) av;
     std::string req;
     std::string path;
     Server *server;
@@ -63,14 +61,7 @@ int main(int ac, char **av)
         return(1);
     }
     char buff[2048];
-
-
-    std::cout << get_current_date() << std::endl;
-   /*std::string mime = checkMimeType("www/index.html");
-    std::cout << "test fonction mime : " << mime << std::endl;
-    std::string resp = getFile("www/index.html");
-    std::cout << resp << std::endl;*/
-    int reads = 1;
+    int reads;
     bzero(buff, 2048);
     while(true)
     {
@@ -97,6 +88,6 @@ int main(int ac, char **av)
         //std::cout << "req : " << req << std::endl;
    }
     close (fd_socket);
-    //delete (server);
+    delete (server);
     return (0);
 }
