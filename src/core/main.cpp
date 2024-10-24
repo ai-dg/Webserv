@@ -6,6 +6,7 @@
 #include "../headers/parser.hpp"
 #include "../headers/HttpRequest.hpp"
 #include "../headers/HttpResponse.hpp"
+#include "../headers/Conf.hpp"
 
 
 int main(int ac, char **av)
@@ -20,12 +21,27 @@ int main(int ac, char **av)
     else 
         path = "config/server.conf";
 
+    /**
+     * Extraire les informations dans le path
+     */
+
+    Conf conf(path);
+
+    conf.getValuesFromPath();
+    conf.printConfigs();
+    conf.checkAndSetDefaultValues();
+    conf.printConfigs();
+
+
+    /**
+     * Server start
+     */
     server = new Server(path);
     server->getHostipv4();
     setServer(path, server);
-   /**
+    /**
     *  int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
-    * Creation d'un socket permettant la connextion
+    *    Creation d'un socket permettant la connextion
     *    l'option AF_INET permet de choisir le protocole de connexion Protocoles Internet IPv4
     *    l'option SOCK_STREAM permet de choisir le type de connexion TCP man : (
     *    SOCK_STREAM Support de dialogue garantissant l'intégrité, fournissant un flux de données binaires, 
@@ -66,7 +82,7 @@ int main(int ac, char **av)
 
 
     std::cout << get_current_date() << std::endl;
-   /*std::string mime = checkMimeType("www/index.html");
+    /*std::string mime = checkMimeType("www/index.html");
     std::cout << "test fonction mime : " << mime << std::endl;
     std::string resp = getFile("www/index.html");
     std::cout << resp << std::endl;*/

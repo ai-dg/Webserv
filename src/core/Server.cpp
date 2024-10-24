@@ -15,6 +15,10 @@
 Server::Server()
 {
     std::cout << "server on" << std::endl;
+    hostipv4[0] = 0;
+    hostipv4[1] = 0;
+    hostipv4[2] = 0;
+    hostipv4[3] = 0;
 }
 
 void Server::getHostipv4()

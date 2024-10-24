@@ -20,7 +20,7 @@ class Server
 {
     private:
         int port;
-        int hostipv4[4] = {0,0,0,0};
+        int hostipv4[4];
         std::string serverName;
         std::string *methods;
         std::map<int, std::string> err;
