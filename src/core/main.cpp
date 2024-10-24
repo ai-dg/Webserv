@@ -138,7 +138,12 @@ int main(int ac, char **av)
                     if (req.find("\r\n\r\n") != std::string::npos) 
                     {
                         HttpRequest request(req, server);
+                        
+                        std::string filePath = request.getRequestedFile();
+                        std::string mimeType = checkMimeType(filePath);
+
                         HttpResponse response(request);
+
                         response.send(fd_client);
                         req = "";  
 

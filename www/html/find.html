@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <!-- Links, references and scale settings -->
-
     <head>
         <script src="index.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <title>My Webpage</title>
+        <title>Chercher un projet</title>
     </head>
 
     <body>
-        <!-- Use of navbar tool from bootstrap -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,13 +34,28 @@
                 </ul>
             </div>
         </nav>
-        
-        <!-- Content of Home page -->
-        <div class="container">
-            <h2><span id="textclick">Hello, welcome to your projects library !</span></h2>
-            <img src="../images/42_Logo.svg.png" alt="Arc de triomphe" width="300" height="300">
-            <p></p>
-            <div class="btn-group" role="group">
+
+        <div class="container mt-4">
+            <h2>Chercher un projet</h2>
+            <form action="search_project.php" method="POST">
+                <!-- Champ pour entrer le nom du projet -->
+                <div class="form-group">
+                    <label for="projectName">Nom du projet :</label>
+                    <input type="text" class="form-control" id="projectName" name="projectName" placeholder="Entrez le nom du projet" required>
+                </div>
+
+                
+
+                <!-- Bouton de recherche -->
+                <button type="submit" class="btn btn-primary mt-2">Rechercher</button>
+            </form>
+        </div>
+
+        <!-- Résultats de recherche -->
+        <div class="container mt-1">
+            <h3>Résultats de la recherche :</h3>
+            <div id="searchResults">
+                <!-- Les résultats de la recherche s'afficheront ici après la soumission -->
             </div>
         </div>
 
