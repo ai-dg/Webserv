@@ -12,8 +12,6 @@
 
 int main(int ac, char **av)
 {
-    (void) ac;
-    (void) av;
     std::string req;
     std::string path;
     Server *server;
@@ -116,6 +114,6 @@ int main(int ac, char **av)
         //std::cout << "req : " << req << std::endl;
     }
     close (fd_socket);
-    //delete (server);
+    delete (server);
     return (0);
 }
