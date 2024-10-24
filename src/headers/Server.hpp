@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/09/18 17:47:17 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:52:48 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ class Server
         int hostipv4[4];
         std::string serverName;
         std::string *methods;
+        int keepAlive;
         std::map<int, std::string> err;
         int maxBodySize;
+        void setKeepAlive(std::string line);
+        void parseConfig(std::string line);
     
     public:
         Server();
@@ -33,6 +36,8 @@ class Server
         void getHostipv4();
         int getPort(void);
 };
+
+#include "parser.hpp"
 
 
 #endif

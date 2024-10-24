@@ -1,11 +1,11 @@
 #include "../headers/HttpResponse.hpp"
 
-
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     /// "www/" a modifier en fonction du parsing de configuration du serveur 
     this->filePath = "www/html" + req.getURI();
 }
+
 void HttpResponse::setMineType(void)
 {
     // protections et verifications a faires/// tests a faire avec netcat et telnet en envoyant des demandes erronées pour les fichiers

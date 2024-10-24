@@ -5,9 +5,6 @@
 #include <iostream>
 #include <zlib.h>
 
-std::string encode(std::string text, std::string format)
-{
-    
-}
+std::string encode(std::string text, std::string format);
 
 #endif
