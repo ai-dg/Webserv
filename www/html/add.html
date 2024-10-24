@@ -40,49 +40,49 @@
     <div class="custom-margin-top">
         <h2>Ajouter un nouveau projet</h2>
         <form action="submit_project.php" method="POST">
-            <!-- Champ pour le nom du projet -->
+            
             <div class="form-group">
                 <label for="projectName">Nom du projet :</label>
                 <input type="text" class="form-control" id="projectName" name="projectName" required>
             </div>
 
-            <!-- Champ pour la note du projet -->
+            
             <div class="form-group">
                 <label for="projectGrade">Note du projet :</label>
                 <input type="number" class="form-control" id="projectGrade" name="projectGrade" min="0" max="100" required>
             </div>
 
-            <!-- Champ pour le temps prévu -->
+            
             <div class="form-group">
                 <label for="expectedTime">Temps prévu (en heures) :</label>
                 <input type="number" class="form-control" id="expectedTime" name="expectedTime" min="0" required>
             </div>
 
-            <!-- Champ pour le temps réel de réalisation -->
+            
             <div class="form-group">
                 <label for="realTime">Temps réel de réalisation (en heures) :</label>
                 <input type="number" class="form-control" id="realTime" name="realTime" min="0" required>
             </div>
 
-            <!-- Champ pour l'expérience du projet -->
+            
             <div class="form-group">
                 <label for="experience">Experience :</label>
                 <textarea class="form-control" id="experience" name="experience" rows="3" required></textarea>
             </div>
 
-            <!-- Champ pour la note de satisfaction -->
+            
             <div class="form-group">
                 <label for="satisfaction">Note de satisfaction (1-5) :</label>
                 <input type="number" class="form-control" id="satisfaction" name="satisfaction" min="1" max="5" required>
             </div>
 
-            <!-- Champ pour les commentaires d'amélioration -->
+            
             <div class="form-group">
                 <label for="comments">Commentaires de l'amélioration du sujet :</label>
                 <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
             </div>
 
-            <!-- Bouton de soumission -->
+            
             <button type="submit" class="btn btn-primary">Ajouter le projet</button>
         </form>
     </div>
