@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 10:44:59 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:39:09 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
     std::cout << "path : " << path << std::endl;
-    local.erase(0,3);
+    local.erase(0,9);
     std::cout << "local : " << local << std::endl;
     if (local == "/")
         return "text/html";
@@ -52,9 +52,9 @@ std::string getFile(const std::string& path)
 {
     std::string local = path;
     
-    if (path.size() < 5)
+    if (path.size() < 10)
         local += "index.html";
-    //std::cout << "local 2 " << local << " - path size : " << path.size() << std::endl;
+    std::cout << "local 2 " << local << " - path size : " << path.size() << std::endl;
     std::ifstream file(local.c_str());
     std::string content;
     std::string line;
