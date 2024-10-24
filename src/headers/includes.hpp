@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 13:17:17 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 10:45:22 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:51:45 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,17 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <fstream>
 #include <sys/socket.h>
 #include <unistd.h>
+#include "Server.hpp"
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <stdio.h>
 #include <errno.h>
 #include "colors.hpp"
+#include <cstdlib>
+
 #define CRLF "\r\n"
 #define FILENOTFOUND "FILE NOT FOUND"
 

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/09/18 17:46:14 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:55:29 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,40 @@ void Server::getHostipv4()
 Server::Server(std::string path)
 {
     (void) path;
-     std::cout << "param server on" << std::endl;
+    std::string line;
+    std::cout << "param server on" << std::endl;
+    std::ifstream config(path.c_str());
+    if (!config.is_open())
+        return; /////////////////// wrong way ----- have to getout properly...
+    while (std::getline(config, line))
+    {
+        parseConfig(line);
+        //std::cout << line << std::endl;
+    }
+    config.close();
     
+}
+
+void Server::setKeepAlive(std::string line)
+{
+    line = trim(line, ' ');
+    int spacePos = line.find(" ");
+    std::string str_time;
+    if (spacePos != std::string::npos)
+    {
+        //a proteger...
+        str_time = line.substr(spacePos + 1, std::string::npos);
+        char* end;
+        this->keepAlive = std::strtol(str_time.c_str(), &end, 10);
+    }      
+    else
+        this->keepAlive = 60;
+}
+
+void Server::parseConfig(std::string line)
+{
+    if (line.find("keepalive_timeout") != std::string::npos)
+        this->setKeepAlive(line);
 }
 
 void Server::setPort(int port)
