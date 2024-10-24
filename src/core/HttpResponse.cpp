@@ -4,7 +4,7 @@
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     /// "www/" a modifier en fonction du parsing de configuration du serveur 
-    this->filePath = "www" + req.getURI();
+    this->filePath = "www/html" + req.getURI();
 }
 void HttpResponse::setMineType(void)
 {
