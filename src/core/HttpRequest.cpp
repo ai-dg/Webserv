@@ -1,5 +1,19 @@
 #include "../headers/HttpRequest.hpp"
 
+std::string HttpRequest::getRequestedFile() const
+{
+    return this->URI;
+}
+
+std::string HttpRequest::getQueryString() const
+{
+    size_t pos = this->URI.find("?");
+    if (pos != std::string::npos) {
+        return this->URI.substr(pos + 1); 
+    }
+    return "";
+}
+
 
 HttpRequest::HttpRequest(std::string req)
 {

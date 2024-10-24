@@ -13,6 +13,9 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("error_page_404", ""));
     configMap.insert(std::make_pair("error_page_500", ""));
     configMap.insert(std::make_pair("client_max_body_size", ""));
+    configMap.insert(std::make_pair("keepalive_timeout", ""));
+    configMap.insert(std::make_pair("client_body_timeout", ""));
+    configMap.insert(std::make_pair("client_header_timeout", ""));
 
     
     configMap.insert(std::make_pair("location_/root", ""));
@@ -170,7 +173,7 @@ void Conf::checkAndSetDefaultValues()
         if (it->second.empty()) {  
             
             if (it->first == "listen") {
-                it->second = "8090"; 
+                it->second = "8080"; 
             } else if (it->first == "host") {
                 it->second = "127.0.0.1"; 
             } else if (it->first == "server_name") {
@@ -181,6 +184,12 @@ void Conf::checkAndSetDefaultValues()
                 it->second = "/error_pages/500.html"; 
             } else if (it->first == "client_max_body_size") {
                 it->second = "4M"; 
+            } else if (it->first == "keepalive_timeout") {
+                it->second = "65"; 
+            } else if (it->first == "client_body_timeout") {
+                it->second = "60"; 
+            } else if (it->first == "client_header_timeout") {
+                it->second = "10"; 
             } 
             
             else if (it->first == "location_/root") {

@@ -27,6 +27,8 @@ class HttpRequest
         void addToHeaders(std::string line);
         
     public :
+        std::string getRequestedFile() const;
+        std::string getQueryString() const;
 
         HttpRequest(std::string req);
         std::string getURI() const;
