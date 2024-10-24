@@ -19,6 +19,7 @@ class HttpResponse
         std::map<std::string, std::string> headers;
         std::string mimeType;
         std::string filePath;
+        int statusCode;
         void setResourcePath(const HttpRequest &req);
         void setMineType(void);
         

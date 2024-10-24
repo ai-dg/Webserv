@@ -15,7 +15,12 @@ void HttpResponse::setMineType(void)
 void HttpResponse::send(int fd_client)
 {
     std::string resFile = getFile(this->filePath);
-    std::string res = "HTTP/1.1 200 OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
+    if (resFile == FILENOTFOUND)
+        this->statusCode = 404;
+    else
+        this->statusCode = 200;
+    std::cout << "status : " << this->statusCode << std::endl;
+    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
             "\r\nConnection: keep-alive" + 
             "\r\nContent-Length: " + numberToString(resFile.size()) +
             "\r\nDate: " + get_current_date() + 

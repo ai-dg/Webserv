@@ -6,6 +6,7 @@ text/javascript                     js;
 image/jpeg                          jpeg jpg;
 image/png                           png;
 image/gif                           gif;
+image/x-icon                        ico;
 application/json                    json;
 application/xml                     xml;
 application/pdf                     pdf;
