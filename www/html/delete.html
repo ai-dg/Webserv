@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Supprimer un projet</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link blue-button" href="introduce.html">Introduction</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle white-button" id="projectDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        Projets
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                        <li><a class="dropdown-item font-size-button" href="add.html">Ajouter un projet</a></li>
+                        <li><a class="dropdown-item font-size-button" href="find.html">Chercher un projet</a></li>
+                        <li><a class="dropdown-item font-size-button" href="delete.html">Supprimer un projet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Liste des projets</h2>
+
+        <!-- Table pour afficher la liste des projets avec les boutons "Supprimer" -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nom du projet</th>
+                    <th>Note</th>
+                    <th>Temps prévu (heures)</th>
+                    <th>Temps réel (heures)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ici, il est supposé que les données des projets sont générées dynamiquement -->
+                <!-- Exemple de ligne d'un projet -->
+                <tr>
+                    <td>Projet 1</td>
+                    <td>85</td>
+                    <td>40</td>
+                    <td>35</td>
+                    <td>
+                        <form action="delete_project.php" method="POST">
+                            <input type="hidden" name="projectName" value="Projet 1">
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Projet 2</td>
+                    <td>90</td>
+                    <td>50</td>
+                    <td>45</td>
+                    <td>
+                        <form action="delete_project.php" method="POST">
+                            <input type="hidden" name="projectName" value="Projet 2">
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+                <!-- Fin des exemples -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>
