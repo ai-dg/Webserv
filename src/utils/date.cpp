@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   date.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 21:34:06 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 18:25:55 by ls               ###   ########.fr       */
+/*   Updated: 2024/10/24 15:08:20 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ std::string get_current_date()
         << format_num(ltm->tm_sec) << " GMT";
     std::string date = dm.str();
     return date;
+}
+
+bool checkTimeOut()
+{
+    
 }
