@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   files.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/09/09 19:45:47 by ls               ###   ########.fr       */
+/*   Updated: 2024/10/24 10:44:59 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ std::string getFile(const std::string& path)
     std::ifstream file(local.c_str());
     std::string content;
     std::string line;
-     if (file.is_open())
+    if (file.is_open())
     {
         while (std::getline(file, line))
         {
@@ -68,8 +68,9 @@ std::string getFile(const std::string& path)
         }
        // std::cout << "test getfile : " << content << std::endl;
         file.close();
+        return content;
     }
     else
         std::cout << "file not found ! " << std::endl;
-    return content;
+    return FILENOTFOUND;
 }

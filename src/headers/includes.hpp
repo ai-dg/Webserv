@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 13:17:17 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 21:15:57 by ls               ###   ########.fr       */
+/*   Updated: 2024/10/24 10:45:22 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@
 #include <errno.h>
 #include "colors.hpp"
 #define CRLF "\r\n"
+#define FILENOTFOUND "FILE NOT FOUND"
 
 #endif
