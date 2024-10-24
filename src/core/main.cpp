@@ -7,6 +7,7 @@
 #include "../headers/HttpRequest.hpp"
 #include "../headers/HttpResponse.hpp"
 #include "../headers/Conf.hpp"
+#include "../headers/cgi_handler.hpp"
 
 
 int main(int ac, char **av)
@@ -86,6 +87,8 @@ int main(int ac, char **av)
     std::cout << "test fonction mime : " << mime << std::endl;
     std::string resp = getFile("www/index.html");
     std::cout << resp << std::endl;*/
+    
+    Cgi_handler cgiHandler; // Creation du handler CGI    
     int reads = 1;
     bzero(buff, 2048);
     while(true)
@@ -111,7 +114,7 @@ int main(int ac, char **av)
             }
         }
         //std::cout << "req : " << req << std::endl;
-   }
+    }
     close (fd_socket);
     //delete (server);
     return (0);
