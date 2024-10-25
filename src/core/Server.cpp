@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 14:55:29 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 12:12:48 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,18 @@
 
 Server::Server()
 {
-    std::cout << "server on" << std::endl;
-    hostipv4[0] = 0;
-    hostipv4[1] = 0;
-    hostipv4[2] = 0;
-    hostipv4[3] = 0;
+    std::cout << "server on" << std::endl;    
+    host_ip.s_addr = htonl(INADDR_LOOPBACK);
 }
 
-void Server::getHostipv4()
+Server::Server(Conf &c)
 {
-    int i = 0;
-    while (i < 4)
-    {
-        if (i == 3)
-            std::cout << this->hostipv4[i] << std::endl;
-        else
-            std::cout << this->hostipv4[i] << ".";
-        i++;
-    }
+    
+}
 
+std::string Server::getHostipv4()
+{
+    return std::string(inet_ntoa(host_ip));
 }
 
 Server::Server(std::string path)
@@ -51,6 +44,8 @@ Server::Server(std::string path)
     config.close();
     
 }
+
+
 
 void Server::setKeepAlive(std::string line)
 {
@@ -84,3 +79,4 @@ int Server::getPort(void)
 {
     return (this->port);
 }
+

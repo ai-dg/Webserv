@@ -11,6 +11,7 @@ class Conf
         std::string path;
 
     public:
+        Conf();
         Conf(std::string& path);
         ~Conf();
 

@@ -12,6 +12,8 @@
 #include "../headers/Conf.hpp"
 #include "../headers/cgi_handler.hpp"
 #include "../headers/Epoll.hpp"
+#include "../headers/Log.hpp"
+#include "../headers/ipTools.hpp"
 
 #define BUFFER_SIZE 2048
 
@@ -44,7 +46,7 @@ int main(int ac, char **av)
      */
 
     server = new Server(path);
-    server->getHostipv4();
+    //server->getHostipv4();
     setServer(path, server);
 
     /**
@@ -110,12 +112,13 @@ int main(int ac, char **av)
                 struct sockaddr_in client_addr;
                 socklen_t client_addr_len = sizeof(client_addr);
                 int fd_client = accept(fd_socket, (struct sockaddr*)&client_addr, &client_addr_len);
-                std::cout << "ip : " << client_addr.sin_addr.s_addr << std::endl;
+                Log::access(get_current_date() + " : Ip " + std::string(inet_ntoa(client_addr.sin_addr)));
                 if (fd_client == -1) 
                 {
+                    Log::error(get_current_date() + " connection failed");
                     perror("accept");
                     continue;
-                }              
+                }
                 epoll.makeSocketNonBlocking(fd_client);
                 epoll.addFd(fd_client, EPOLLIN | EPOLLET);
             } 
