@@ -19,11 +19,13 @@
 #include <netinet/in.h>
 #include "Conf.hpp"
 #include "Log.hpp"
+#include <string>
 
 class Server
 {
     private:
-        int port;
+        int port[65535];
+        int numPorts;
         struct in_addr host_ip;
         Conf conf;
         std::string serverName;
@@ -34,12 +36,13 @@ class Server
     
     public:
         Server();
-        Server(Conf &c);
+        Server(Conf const& c);
         ~Server();
-        void setPort(int port);
+        void addPort(int port);
         in_addr_t getAddr();
         std::string getHostipv4();
-        int getPort(void);
+        int* getPort(int& count);
+        int getNumPorts() const;
 };
 
 #endif

@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <vector>
 #include "../headers/Server.hpp"
 #include "../headers/files.hpp"
 #include "../headers/parser.hpp"
@@ -19,7 +20,7 @@
 
 #define BUFFER_SIZE 2048
 
-int socket_start(int *fd_socket)
+int socket_start(std::vector<int>& fd_sockets, Server *server)
 {
     /**
     *    int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
@@ -29,42 +30,67 @@ int socket_start(int *fd_socket)
     *    SOCK_STREAM Support de dialogue garantissant l'intégrité, fournissant un flux de données binaires, 
     *    et intégrant un mécanisme pour les transmissions de données hors-bande. )
     */
-    *fd_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (*fd_socket == -1)
+
+    int count  = server->getNumPorts();
+
+    fd_sockets.clear();
+    for (int i = 0; i < count; i++)
     {
-        perror("socket");
-        return (1);
+        int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
+        if (fd_socket == -1)
+        {
+            perror("socket");
+            return (1);
+        }
+        fd_sockets.push_back(fd_socket);
     }
     return 0;
 }
 
-int setup_connection_socket(int fd_socket, Server *server)
+int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
 {
+    int count;
+    int* ports = server->getPort(count);
+
     /**
      * struct sockaddr_in afin de configurer le socket
      */
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(server->getPort());
     addr.sin_addr.s_addr = server->getAddr();
 
     /**
      * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
      */
-    int opt = 1;
-    setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
 
-    if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
-        perror("binding failed");
-
-    /**
-     * Mets en ecoute les connections du socket et 
-     * un nombre maximal de connections simultannees, il refuse les autres
-     */
-    if (listen(fd_socket, 10) < 0)
+    for (int i = 0; i < count; i++)
     {
-        std::cout << "fail listening socket" << std::endl;
-        return(1);        
+        int fd_socket = fd_sockets[i];
+
+        int opt = 1;
+        setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
+
+
+        addr.sin_port = htons(ports[i]);
+
+        if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
+        {
+            perror("binding failed");
+            close(fd_socket);
+            return (1);
+        }
+
+        /**
+         * Mets en ecoute les connections du socket et 
+         * un nombre maximal de connections simultannees, il refuse les autres
+         */
+        if (listen(fd_socket, 10) < 0)
+        {
+            std::cout << "fail listening socket on port " << ports[i] << std::endl;
+            close(fd_socket);
+            return(1);        
+        }
+        std::cout << "Listening on port: " << ports[i] << std::endl;
     }
 
     return 0;
@@ -121,7 +147,7 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
     }
 }
 
-void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf, SessionManager &sessionManager)
+void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *server, Conf &conf, SessionManager &sessionManager)
 {
     /**
      * @brief
@@ -129,9 +155,12 @@ void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf,
      * methode plus effiface en comparaison de poll() et select(), pas besoin d'examiner chaque descripteur
      * de chaque appel.
      */
-    Epoll epoll(10);  
-    epoll.addFd(*fd_socket, EPOLLIN);  
-    epoll.makeSocketNonBlocking(*fd_socket);  
+    Epoll epoll(10);
+    for (size_t i = 0; i < fd_sockets.size(); ++i)
+    {
+        epoll.addFd(fd_sockets[i], EPOLLIN);  
+        epoll.makeSocketNonBlocking(fd_sockets[i]);  
+    }
     char buff[BUFFER_SIZE];
     std::string req;
     int fd_client;
@@ -149,10 +178,22 @@ void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf,
             /**
              * @brief Detecte s'il y a une connexion entrant dans le serveur
              */
-            if (event.data.fd == *fd_socket) 
+
+            bool isServerSocket = false;
+
+            for (size_t j = 0; j < fd_sockets.size(); ++j)
+            {
+                if (event.data.fd == fd_sockets[j])
+                {
+                    isServerSocket = true;
+                    break;
+                }
+            }
+            
+            if (isServerSocket)
             {
                 client_addr_len = sizeof(client_addr);
-                fd_client = accept(*fd_socket, (struct sockaddr*)&client_addr, &client_addr_len);
+                fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
                 Log::access(get_current_date() + " : Ip " + std::string(inet_ntoa(client_addr.sin_addr)));
                 if (fd_client == -1) 
                 {
@@ -197,6 +238,8 @@ int main(int ac, char **av)
 {
     std::string path;
     int fd_socket;
+    std::vector<int> fd_sockets;
+    int count;
     SessionManager sessionManager;
 
     /**
@@ -216,21 +259,23 @@ int main(int ac, char **av)
      * Server start
      */
     Server server(conf);
-    
+    count = server.getNumPorts();
     /**
      * @brief Reglages des connexion et communication "Sockets"
      */
-    if (socket_start(&fd_socket) > 0)
+    if (socket_start(fd_sockets, &server) > 0)
         return 1;
 
-    if (setup_connection_socket(fd_socket, &server) > 0)
+    if (setup_connection_socket(fd_sockets, &server) > 0)
         return 1;
     
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(&fd_socket, &server, conf, sessionManager);
-    close (fd_socket);
-
+    request_and_response_fd_manager(fd_sockets, &server, conf, sessionManager);
+    for (size_t i = 0; i < count; i++)
+    {
+        close(fd_sockets[i]);
+    }
     return (0);
 }
