@@ -47,8 +47,10 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("location_/cgi-bin/methods", ""));
     configMap.insert(std::make_pair("location_/cgi-bin/extension", ""));
 
-    
     configMap.insert(std::make_pair("location_/old-page/return", ""));
+
+    getValuesFromPath();
+    checkAndSetDefaultValues();
 }
 
 
