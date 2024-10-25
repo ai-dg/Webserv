@@ -12,6 +12,7 @@ class Conf
 
     public:
         Conf();
+        void operator=(Conf &conf);
         Conf(std::string& path);
         ~Conf();
 

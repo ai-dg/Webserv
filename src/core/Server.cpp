@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/25 12:12:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 12:32:33 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Server::Server()
 
 Server::Server(Conf &c)
 {
-    
+    this->conf = c;
 }
 
 std::string Server::getHostipv4()
