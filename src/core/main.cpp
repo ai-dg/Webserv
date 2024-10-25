@@ -126,7 +126,6 @@ int main(int ac, char **av)
                 int reads = read(fd_client, buff, BUFFER_SIZE);
                 if (reads == 0) 
                 {
-                    
                     close(fd_client);
                     epoll.removeFd(fd_client);
                 } 
@@ -138,16 +137,43 @@ int main(int ac, char **av)
                     if (req.find("\r\n\r\n") != std::string::npos) 
                     {
                         HttpRequest request(req, server);
-                        
-                        std::string filePath = request.getRequestedFile();
-                        std::string mimeType = checkMimeType(filePath);
-
                         HttpResponse response(request);
 
-                        response.send(fd_client);
+                        
+                        response.setResourcePath(request);
+                        std::string filePath = response.getFilePath();  
+
+                        if (filePath.find("cgi-bin/") == 0) 
+                        {
+                            
+                            Cgi_handler cgiHandler;
+                            std::cout << "Executing script..." << std::endl;
+                            if (request.getMethod() == "POST") 
+                            {
+                                
+                                std::string postBody = request.getBody();
+                                cgiHandler.executeCGI(filePath, postBody, "POST", fd_client);
+                            } 
+                            else if (request.getMethod() == "GET") 
+                            {
+                                
+                                cgiHandler.executeCGI(filePath, request.getQueryString(), "GET", fd_client);
+                            } 
+                            else if (request.getMethod() == "DELETE") 
+                            {
+                                
+                                cgiHandler.executeCGI(filePath, "", "DELETE", fd_client);
+                            }
+
+                        } 
+                        else 
+                        {
+                            
+                            response.send(fd_client);
+                        }
+
                         req = "";  
 
-                        
                         if (request.getHeader("Connection") != "keep-alive") 
                         {
                             close(fd_client);
@@ -165,6 +191,7 @@ int main(int ac, char **av)
             }
         }
     }
+
 
     // struct  sockaddr_in client_addr;
     // socklen_t client_addr_len = sizeof(client_addr);

@@ -19,6 +19,8 @@ class HttpRequest
         std::string body;
         int port;
         Server *server;
+
+
         void setMethod(std::string req);
         void setHeaders(std::string req);
         void setBody(std::string req);
@@ -27,14 +29,16 @@ class HttpRequest
         void addToHeaders(std::string line);
         
     public :
-        std::string getRequestedFile() const;
-        std::string getQueryString() const;
-
         HttpRequest(std::string req);
-        std::string getURI() const;
-        std::string getHeader(std::string key);
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
+
+        std::string getRequestedFile() const;
+        std::string getQueryString() const;
+        std::string getURI() const;
+        std::string getHeader(std::string key);
+        std::string getMethod() const;
+        std::string getBody() const; 
 
 };
 

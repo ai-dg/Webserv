@@ -21,7 +21,7 @@ NAME = webserv
 
 CXX = c++
 #CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
-CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -lz
+CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -lz -g
 
 all: $(NAME)
 

@@ -32,14 +32,14 @@ std::string getMime(const std::string& mime)
         }
         file.close();        
     }
-    return NULL;
+    return "";
 }
 
 std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
     std::cout << "path : " << path << std::endl;
-    local.erase(0,9);
+    local.erase(0,8);
     std::cout << "local : " << local << std::endl;
     if (local == "/")
         return "text/html";
