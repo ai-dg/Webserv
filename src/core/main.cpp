@@ -110,6 +110,7 @@ int main(int ac, char **av)
                 struct sockaddr_in client_addr;
                 socklen_t client_addr_len = sizeof(client_addr);
                 int fd_client = accept(fd_socket, (struct sockaddr*)&client_addr, &client_addr_len);
+                std::cout << "ip : " << client_addr.sin_addr.s_addr << std::endl;
                 if (fd_client == -1) 
                 {
                     perror("accept");
@@ -149,6 +150,7 @@ int main(int ac, char **av)
                             epoll.removeFd(fd_client);
                         }
                     }
+                    Epoll::purgeTimeOutFds(conf, epoll.getFd());
                 } 
                 else 
                 {
