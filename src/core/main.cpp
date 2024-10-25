@@ -35,17 +35,18 @@ int main(int ac, char **av)
      */
 
     Conf conf(path);
-    conf.getValuesFromPath();
+    // -> j'ai fait mis appel de ces fonctions dans le constructeur...
+    //conf.getValuesFromPath();
     //conf.printConfigs();
-    conf.checkAndSetDefaultValues();
-    conf.printConfigs();
+    //conf.checkAndSetDefaultValues();
+    //conf.printConfigs();
 
     /**
      * Server start
      */
 
     Server server(conf);
-    setServer(path, &server);
+   
 
     int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (fd_socket == -1)
@@ -60,7 +61,7 @@ int main(int ac, char **av)
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_port = htons(server.getPort());
-    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK); //// remplacer INADDR_LOOPBACK par l'adresse determinee dans conf
+    addr.sin_addr.s_addr = htonl(server.getAddr());
 
     /**
      * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port

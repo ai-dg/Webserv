@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/25 12:32:33 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 13:39:20 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,52 +21,29 @@ Server::Server()
 Server::Server(Conf &c)
 {
     this->conf = c;
+    port = atoi(conf.getConfig("listen").c_str());    
+    if (inet_pton(AF_INET, (conf.getConfig("host")).c_str(), &host_ip) < 0)
+    {
+        perror("invalid host");
+        Log::error("Invalid host : check your configuration file");
+    }
+    else
+    {
+        std::cout << "server on" << std::endl;    
+        std::cout << "listening " << conf.getConfig("host") << " on port " << port << std::endl;
+    }
+        
+    
+}
+
+in_addr_t Server::getAddr()
+{
+    return (host_ip.s_addr);
 }
 
 std::string Server::getHostipv4()
 {
     return std::string(inet_ntoa(host_ip));
-}
-
-Server::Server(std::string path)
-{
-    (void) path;
-    std::string line;
-    std::cout << "param server on" << std::endl;
-    std::ifstream config(path.c_str());
-    if (!config.is_open())
-        return; /////////////////// wrong way ----- have to getout properly...
-    while (std::getline(config, line))
-    {
-        parseConfig(line);
-        //std::cout << line << std::endl;
-    }
-    config.close();
-    
-}
-
-
-
-void Server::setKeepAlive(std::string line)
-{
-    line = trim(line, ' ');
-    int spacePos = line.find(" ");
-    std::string str_time;
-    if (spacePos != std::string::npos)
-    {
-        //a proteger...
-        str_time = line.substr(spacePos + 1, std::string::npos);
-        char* end;
-        this->keepAlive = std::strtol(str_time.c_str(), &end, 10);
-    }      
-    else
-        this->keepAlive = 60;
-}
-
-void Server::parseConfig(std::string line)
-{
-    if (line.find("keepalive_timeout") != std::string::npos)
-        this->setKeepAlive(line);
 }
 
 void Server::setPort(int port)
