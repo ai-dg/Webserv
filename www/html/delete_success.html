@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Projet supprimé</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link blue-button" href="introduce.html">Introduction</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle white-button" id="projectDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false" href="#">
+                        Projets
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                        <li><a class="dropdown-item font-size-button" href="add.html">Ajouter un projet</a></li>
+                        <li><a class="dropdown-item font-size-button" href="find.html">Chercher un projet</a></li>
+                        <li><a class="dropdown-item font-size-button" href="delete.html">Supprimer un projet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Projet supprimé avec succès</h2>
+        <p>Le projet a été supprimé avec succès.</p>
+        <a href="delete.html" class="btn btn-primary mt-2">Revenir à la liste des projets</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
