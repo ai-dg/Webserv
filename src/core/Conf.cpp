@@ -6,6 +6,11 @@ Conf::Conf()
 {
 }
 
+void Conf::operator=(Conf &conf)
+{
+    this->configMap = conf.configMap;
+}
+
 Conf::Conf(std::string& path) : path(path)
 {
     std::cout << "Initialize conf path" << std::endl;
