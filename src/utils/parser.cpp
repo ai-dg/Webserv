@@ -20,7 +20,7 @@
 void setServer(Conf const& conf, Server *server)
 {
 	
-	setPort(conf.getConfig("listen"), server);
+	// server->setPort(conf.getConfig("listen"), server);
 	
 	
 	// std::ifstream config(path.c_str());	

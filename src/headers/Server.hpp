@@ -35,10 +35,10 @@ class Server
     public:
         Server();
         Server(Conf &c);
+        ~Server();
         void setPort(int port);
         in_addr_t getAddr();
         std::string getHostipv4();
-        void setPort(int port);
         int getPort(void);
 };
 

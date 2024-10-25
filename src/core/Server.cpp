@@ -41,7 +41,6 @@ Server::Server(Conf &c)
         std::cout << "server on" << std::endl;    
         std::cout << "listening " << conf.getConfig("host") << " on port " << port << std::endl;
     } 
-
 }
 
 Server::~Server()
@@ -55,7 +54,6 @@ void Server::setPort(int port)
     std::cout << "listening on port " << this->port << std::endl;    
 }
 
-
 in_addr_t Server::getAddr()
 {
     return (host_ip.s_addr);
@@ -64,12 +62,6 @@ in_addr_t Server::getAddr()
 std::string Server::getHostipv4()
 {
     return std::string(inet_ntoa(host_ip));
-}
-
-void Server::setPort(int port)
-{
-    this->port = port;
-    std::cout << "listening on port " << this->port << std::endl;    
 }
 
 int Server::getPort(void)
