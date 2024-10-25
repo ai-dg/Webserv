@@ -21,7 +21,7 @@ SessionManager::~SessionManager()
 std::string SessionManager::createSessions() 
 {
     std::string sessionId = generateSessionsId();
-    sessions[sessionId];
+    sessions[sessionId] = std::map<std::string, std::string>();
     return sessionId;
 }
 
@@ -38,7 +38,6 @@ std::map<std::string, std::string>& SessionManager::getSession(std::string const
 /**
  * @brief Private:
  */
-
 std::string SessionManager::generateSessionsId() 
 {
     std::stringstream ss;

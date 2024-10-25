@@ -30,12 +30,10 @@ if form:
     project_id = form.getvalue("project_id", None)
 
     if project_id:
-        
         try:
             with open("./sessions/projects.txt", "r") as f:
                 lines = f.readlines()
 
-            
             with open("./sessions/projects.txt", "w") as f:
                 skip = False
                 for line in lines:
@@ -46,24 +44,32 @@ if form:
                     if not skip:
                         f.write(line)
 
+            content_length = len(html_success_template.encode('utf-8'))
             print("HTTP/1.1 200 OK")
+            print(f"Content-Length: {content_length}")
             print("Content-Type: text/html")
             print()
             print(html_success_template)
 
         except FileNotFoundError:
+            content_length = len(html_failure_template.encode('utf-8'))
             print("HTTP/1.1 500 Internal Server Error")
+            print(f"Content-Length: {content_length}")
             print("Content-Type: text/html")
             print()
             print(html_failure_template)
     else:
+        content_length = len(html_failure_template.encode('utf-8'))
         print("HTTP/1.1 400 Bad Request")
+        print(f"Content-Length: {content_length}")
         print("Content-Type: text/html")
         print()
         print(html_failure_template)
 
 else:
+    content_length = len(html_failure_template.encode('utf-8'))
     print("HTTP/1.1 400 Bad Request")
+    print(f"Content-Length: {content_length}")
     print("Content-Type: text/html")
     print()
     print(html_failure_template)

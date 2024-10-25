@@ -14,6 +14,8 @@
 #include "../headers/Epoll.hpp"
 #include "../headers/Log.hpp"
 #include "../headers/ipTools.hpp"
+#include "../headers/SessionManager.hpp"
+#include "../headers/Cookies.hpp"
 
 #define BUFFER_SIZE 2048
 
@@ -68,15 +70,31 @@ int setup_connection_socket(int fd_socket, Server *server)
     return 0;
 }
 
-void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll)
+void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager)
 {
+    (void)sessionManager;
     *req += std::string(buff, *reads);
     if ((*req).find("\r\n\r\n") != std::string::npos) 
     {
         HttpRequest request(*req, server);
-        HttpResponse response(request);
 
+        // std::string cookieHeader = request.getHeader("Cookie");
+        // Cookies cookies(cookieHeader);
+
+        // std::string sessionId = cookies.getCookie("sessionId");
+        // if (!sessionManager.sessionExist(sessionId))
+        // {
+        //     sessionId = sessionManager.createSessions();
+        //     cookies.setCookie("sessionId", sessionId);
+        // }
+
+        // std::map<std::string, std::string>& sessionData = sessionManager.getSession(sessionId);
+
+        HttpResponse response(request);
         response.setResourcePath(request);
+
+        // response.addHeader("Set-Cookie", cookies.getSetCookieHeader());
+
         std::string filePath = response.getFilePath();  
         if (filePath.find("cgi-bin/") == 0) 
         {
@@ -103,7 +121,7 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
     }
 }
 
-void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf)
+void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf, SessionManager &sessionManager)
 {
     /**
      * @brief
@@ -161,7 +179,7 @@ void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf)
                 } 
                 else if (reads > 0) 
                 {
-                    type_request_manager(&fd_client, &req, buff, &reads, server, &epoll);
+                    type_request_manager(&fd_client, &req, buff, &reads, server, &epoll, sessionManager);
                     Epoll::purgeTimeOutFds(conf, epoll.getFd());
                 } 
                 else 
@@ -179,6 +197,7 @@ int main(int ac, char **av)
 {
     std::string path;
     int fd_socket;
+    SessionManager sessionManager;
 
     /**
      * Conditions du path, si NULL, path par defaut
@@ -210,7 +229,7 @@ int main(int ac, char **av)
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(&fd_socket, &server, conf);
+    request_and_response_fd_manager(&fd_socket, &server, conf, sessionManager);
     close (fd_socket);
 
     return (0);
