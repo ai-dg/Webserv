@@ -2,6 +2,10 @@
 #include <iostream>
 #include <fstream>
 
+Conf::Conf()
+{
+}
+
 Conf::Conf(std::string& path) : path(path)
 {
     std::cout << "Initialize conf path" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 14:52:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 12:17:09 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 #include "includes.hpp"
 #include <map>
+#include <netinet/in.h>
+#include "Conf.hpp"
 
 class Server
 {
     private:
         int port;
-        int hostipv4[4];
+        struct in_addr host_ip;
+        Conf conf;
         std::string serverName;
         std::string *methods;
         int keepAlive;
@@ -31,9 +34,10 @@ class Server
     
     public:
         Server();
+        Server(Conf &c);
         Server(std::string path);
         void setPort(int port);
-        void getHostipv4();
+        std::string getHostipv4();
         int getPort(void);
 };
 
