@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/25 13:39:20 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 17:26:51 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void Server::setPort(int port)
 
 in_addr_t Server::getAddr()
 {
+    std::cout << inet_ntoa(host_ip) <<std::endl;
     return (host_ip.s_addr);
 }
 
