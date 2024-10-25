@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
+std::map<int, std::time_t> Epoll::timers; 
+
 Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
 {
     
@@ -17,6 +19,11 @@ Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
     events = new epoll_event[maxEvents];
 }
 
+int Epoll::getFd(void)
+{
+    return epollFd;
+}
+
 Epoll::~Epoll() 
 {
     
@@ -28,6 +35,13 @@ Epoll::~Epoll()
 
 bool Epoll::addFd(int fd, uint32_t eventsMask) 
 {
+    if (fd < 0)
+    {
+        perror("fail opening file socket");
+        return false;
+    }
+    std::time_t now = std::time(0);
+    Epoll::timers.insert(std::pair<int, std::time_t>(fd, now));
     struct epoll_event event;
     event.data.fd = fd;
     event.events = eventsMask;
@@ -40,8 +54,32 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 }
 
 
-bool Epoll::removeFd(int fd) 
+bool Epoll::purgeTimeOutFds(const Conf &conf, int epollFd)
+ {
+    std::time_t now = std::time(0);
+    int MAX_TIME = atoi(conf.getConfig("keepalive_timeout").c_str());
+    std::map<int, std::time_t>::iterator it;
+    for (it = Epoll::timers.begin(); it != Epoll::timers.end();)
+    {
+        if (now - it->second > MAX_TIME)
+        {
+            close(it->first);
+            if (epoll_ctl(epollFd, EPOLL_CTL_DEL, it->first, NULL) == -1) 
+            {
+                perror("epoll_ctl: removeFd");
+                return false;
+            }
+            Epoll::timers.erase(it++);
+        }
+        else
+            it++;
+    }
+    return true;
+ }
+
+bool Epoll::removeFd(int fd)
 {
+    Epoll::timers.erase(fd);
     if (epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, NULL) == -1) 
     {
         perror("epoll_ctl: removeFd");
