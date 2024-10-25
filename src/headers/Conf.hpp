@@ -3,12 +3,14 @@
 
 #include <map>
 #include <string>
+#include <vector>
 
 class Conf
 {
-    protected:
+    private:
         std::map<std::string, std::string> configMap;
         std::string path;
+        std::vector<std::string> listenPorts;
 
     public:
         Conf();
@@ -22,6 +24,8 @@ class Conf
         bool hasKey(std::string const& key) const;
         void printConfigs() const;
         void checkAndSetDefaultValues();
+
+        const std::vector<std::string>& getListenPorts() const;
 };
 
 

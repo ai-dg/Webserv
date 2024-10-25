@@ -1,6 +1,7 @@
 #include "../headers/Conf.hpp"
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 Conf::Conf()
 {
@@ -14,8 +15,9 @@ void Conf::operator=(Conf &conf)
 Conf::Conf(std::string& path) : path(path)
 {
     std::cout << "Initialize conf path" << std::endl;
+    listenPorts.clear();
 
-    configMap.insert(std::make_pair("listen", ""));
+    // configMap.insert(std::make_pair("listen", ""));
     configMap.insert(std::make_pair("host", ""));
     configMap.insert(std::make_pair("server_name", ""));
     configMap.insert(std::make_pair("error_page_404", ""));
@@ -46,6 +48,7 @@ Conf::Conf(std::string& path) : path(path)
 
     getValuesFromPath();
     checkAndSetDefaultValues();
+    printConfigs();
 }
 
 Conf::~Conf()
@@ -99,6 +102,12 @@ void Conf::getValuesFromPath()
             if (!value.empty() && value[value.length() - 1] == ';') 
             {
                 value.erase(value.length() - 1); 
+            }
+
+            if (key == "listen")
+            {
+                listenPorts.push_back(value);
+                continue;
             }
             
             if (!currentLocation.empty()) 
@@ -167,11 +176,22 @@ void Conf::printConfigs() const
         }
         std::cout << std::endl;
     }
+    std::cout << "Ports to listen on ";
+    std::cout << listenPorts.size() << ": ";
+    for(size_t i = 0; i < listenPorts.size(); ++i)
+    {
+        std::cout << listenPorts[i] << " ";
+    }
+    std::cout << std::endl;
     std::cout << "--------------------------------------" << std::endl;
 }
 
 void Conf::checkAndSetDefaultValues()
 {
+    if (listenPorts.empty())
+    {
+        listenPorts.push_back("8080");
+    }
     std::map<std::string, std::string>::iterator it;
     for (it = configMap.begin(); it != configMap.end(); ++it) 
     {
@@ -271,4 +291,9 @@ void Conf::checkAndSetDefaultValues()
             }
         }
     }
+}
+
+const std::vector<std::string>& Conf::getListenPorts() const
+{
+    return this->listenPorts;
 }
