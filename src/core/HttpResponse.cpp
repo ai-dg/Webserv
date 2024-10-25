@@ -1,9 +1,30 @@
 #include "../headers/HttpResponse.hpp"
 
+// void HttpResponse::setResourcePath(const HttpRequest &req)
+// {
+//     /// "www/" a modifier en fonction du parsing de configuration du serveur 
+//     this->filePath = "www/html" + req.getURI();
+// }
+
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
-    /// "www/" a modifier en fonction du parsing de configuration du serveur 
-    this->filePath = "www/html" + req.getURI();
+    std::string uri = req.getURI();
+
+    if (uri.find("/cgi-bin/") != std::string::npos || uri.find(".py") != std::string::npos) 
+    {
+        this->filePath = "cgi-bin" + uri;
+    }
+    else 
+    {
+        this->filePath = "www/html" + uri;
+    }
+
+    std::cout << "File path set to: " << this->filePath << std::endl;
+}
+
+std::string HttpResponse::getFilePath() const
+{
+    return this->filePath;
 }
 
 void HttpResponse::setMineType(void)
