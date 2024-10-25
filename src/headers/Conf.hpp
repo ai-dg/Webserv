@@ -15,18 +15,11 @@ class Conf
         ~Conf();
 
         void getValuesFromPath();
-
         void setConf(std::string const& key, std::string const value);
-
         std::string getConfig(const std::string& key) const;
-
         bool hasKey(std::string const& key) const;
-
         void printConfigs() const;
-
-
         void checkAndSetDefaultValues();
-
 };
 
 

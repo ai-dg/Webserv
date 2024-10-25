@@ -13,21 +13,22 @@
 #ifndef INCLUDES_HPP
 #define INCLUDES_HPP
 
-#include <ctime>
-#include <cstring>
-#include <string>
-#include <sstream>
-#include <iostream>
-#include <fstream>
-#include <sys/socket.h>
-#include <unistd.h>
-#include "Server.hpp"
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <stdio.h>
-#include <errno.h>
-#include "colors.hpp"
-#include <cstdlib>
+// #include <ctime>
+// #include <cstring>
+// #include <string>
+// #include <sstream>
+// #include <iostream>
+// #include <fstream>
+// #include <sys/socket.h>
+// #include <unistd.h>
+// #include "Server.hpp"
+// #include <arpa/inet.h>
+// #include <netinet/in.h>
+// #include <stdio.h>
+// #include <errno.h>
+// #include "colors.hpp"
+// #include <cstdlib>
+// #include "Conf.hpp"
 
 #define CRLF "\r\n"
 #define FILENOTFOUND "FILE NOT FOUND"

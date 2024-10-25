@@ -6,7 +6,6 @@ Conf::Conf(std::string& path) : path(path)
 {
     std::cout << "Initialize conf path" << std::endl;
 
-    
     configMap.insert(std::make_pair("listen", ""));
     configMap.insert(std::make_pair("host", ""));
     configMap.insert(std::make_pair("server_name", ""));
@@ -17,32 +16,25 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("client_body_timeout", ""));
     configMap.insert(std::make_pair("client_header_timeout", ""));
 
-    
     configMap.insert(std::make_pair("location_/root", ""));
     configMap.insert(std::make_pair("location_/index", ""));
     configMap.insert(std::make_pair("location_/methods", ""));
 
-    
     configMap.insert(std::make_pair("location_/images/root", ""));
     configMap.insert(std::make_pair("location_/images/autoindex", ""));
-
     
     configMap.insert(std::make_pair("location_/upload/root", ""));
     configMap.insert(std::make_pair("location_/upload/methods", ""));
     configMap.insert(std::make_pair("location_/upload/upload_store", ""));
 
-    
     configMap.insert(std::make_pair("location_/cgi-bin/root", ""));
     configMap.insert(std::make_pair("location_/cgi-bin/cgi", ""));
     configMap.insert(std::make_pair("location_/cgi-bin/cgi_bin", ""));
     configMap.insert(std::make_pair("location_/cgi-bin/methods", ""));
     configMap.insert(std::make_pair("location_/cgi-bin/extension", ""));
-
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 }
-
-
 
 Conf::~Conf()
 {
@@ -64,13 +56,11 @@ void Conf::getValuesFromPath()
 
     while (std::getline(confFile, line)) 
     {
-        
         line.erase(0, line.find_first_not_of(" \t"));
         line.erase(line.find_last_not_of(" \t") + 1);
-
         
-        if (line.empty() || line[0] == '#') continue;
-
+        if (line.empty() || line[0] == '#') 
+            continue;
         
         if (line.find("location") == 0) 
         {
@@ -81,31 +71,26 @@ void Conf::getValuesFromPath()
             currentLocation.erase(currentLocation.find_last_not_of(" \t") + 1); 
             continue;
         }
-
         
         if (line == "}") 
         {
             currentLocation = ""; 
             continue;
         }
-
         
         size_t pos = line.find(' ');
         if (pos != std::string::npos) 
         {
             std::string key = line.substr(0, pos);
             std::string value = line.substr(pos + 1);
-
             
             if (!value.empty() && value[value.length() - 1] == ';') 
             {
                 value.erase(value.length() - 1); 
             }
-
             
             if (!currentLocation.empty()) 
-            {
-                
+            {   
                 if (currentLocation[currentLocation.length() - 1] != '/') 
                 {
                     key = "location_" + currentLocation + "/" + key;
@@ -114,16 +99,13 @@ void Conf::getValuesFromPath()
                 {
                     key = "location_" + currentLocation + key;
                 }
-
                 
                 key.erase(0, key.find_first_not_of(" \t")); 
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
-
             
             std::cout << "Key: " << key << ", Value: " << value << std::endl;
 
-            
             if (hasKey(key)) 
             {
                 setConf(key, value);
@@ -136,16 +118,13 @@ void Conf::getValuesFromPath()
     }
 }
 
-
-
 void Conf::setConf(const std::string& key, const std::string value)
 {
     configMap[key] = value; 
 }
 
 std::string Conf::getConfig(const std::string& key) const
-{
-    
+{  
     std::map<std::string, std::string>::const_iterator it = configMap.find(key);
     if (it != configMap.end()) 
     {
@@ -154,16 +133,13 @@ std::string Conf::getConfig(const std::string& key) const
     return ""; 
 }
 
-
 bool Conf::hasKey(std::string const& key) const
 {
     return configMap.find(key) != configMap.end();
 }
 
-
 void Conf::printConfigs() const
-{
-    
+{ 
     std::map<std::string, std::string>::const_iterator it;
     std::cout << "-------Config values from map---------" << std::endl;
     for (it = configMap.begin(); it != configMap.end(); ++it) 
@@ -182,16 +158,13 @@ void Conf::printConfigs() const
     std::cout << "--------------------------------------" << std::endl;
 }
 
-
 void Conf::checkAndSetDefaultValues()
 {
-    
     std::map<std::string, std::string>::iterator it;
     for (it = configMap.begin(); it != configMap.end(); ++it) 
     {
         if (it->second.empty()) 
-        {  
-            
+        {   
             if (it->first == "listen") 
             {
                 it->second = "8080"; 
@@ -227,8 +200,7 @@ void Conf::checkAndSetDefaultValues()
             else if (it->first == "client_header_timeout") 
             {
                 it->second = "10"; 
-            } 
-            
+            }   
             else if (it->first == "location_/root") 
             {
                 it->second = "/www/html"; 

@@ -13,9 +13,13 @@
 #ifndef PARSER_HPP
 #define PARSER_HPP
 
-#include "includes.hpp"
+#include "Server.hpp"
+#include "Conf.hpp"
+#include <string>
 
-void setServer(std::string path, Server *server);
+void setServer(Conf const& conf, Server *server);
 std::string trim(std::string str, char c);
+std::string searchValueInFile(std::string path, std::string index);
+void setPort(std::string listen, Server *server);
 
 #endif

@@ -19,12 +19,9 @@ Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
 
 Epoll::~Epoll() 
 {
-    
-    close(epollFd);
-    
+    close(epollFd); 
     delete[] events;
 }
-
 
 bool Epoll::addFd(int fd, uint32_t eventsMask) 
 {
@@ -39,7 +36,6 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
     return true;
 }
 
-
 bool Epoll::removeFd(int fd) 
 {
     if (epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, NULL) == -1) 
@@ -49,7 +45,6 @@ bool Epoll::removeFd(int fd)
     }
     return true;
 }
-
 
 int Epoll::wait(int timeout) 
 {
@@ -61,7 +56,6 @@ int Epoll::wait(int timeout)
     }
     return eventCount;
 }
-
 
 struct epoll_event Epoll::getEvent(int index) const 
 {

@@ -12,6 +12,8 @@
 
 #include "../headers/includes.hpp"
 #include "../headers/format.hpp"
+#include <string>
+#include <sstream>
  
 std::string format_num(int nb)
 {

@@ -14,6 +14,7 @@
 #define SERVER_HPP
 
 #include "includes.hpp"
+#include "Conf.hpp"
 #include <map>
 
 class Server
@@ -26,18 +27,20 @@ class Server
         int keepAlive;
         std::map<int, std::string> err;
         int maxBodySize;
+
         void setKeepAlive(std::string line);
-        void parseConfig(std::string line);
+        // void parseConfig(std::string line);
+        void parseConfig(Conf const& conf);
     
     public:
         Server();
-        Server(std::string path);
+        Server(Conf const& conf);
+        // Server(std::string path);
+        ~Server();
+
         void setPort(int port);
         void getHostipv4();
         int getPort(void);
 };
-
-#include "parser.hpp"
-
 
 #endif

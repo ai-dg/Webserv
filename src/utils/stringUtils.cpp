@@ -1,5 +1,5 @@
 #include "../headers/stringUtils.hpp"
-
+#include <string>
 
 std::string replaceBy(std::string original, std::string find, std::string replace)
 {

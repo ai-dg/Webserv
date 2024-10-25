@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../headers/format.hpp"
+#include <string>
+#include <iostream>
+#include <sstream>
 
 std::string numberToString(int number) {
     std::ostringstream oss;
@@ -25,4 +28,3 @@ std::string getCrlf(void)
     crlf[1] = 10;
     return (crlf);
 }
-
