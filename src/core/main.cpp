@@ -44,7 +44,7 @@ int setup_connection_socket(int fd_socket, Server *server)
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_port = htons(server->getPort());
-    addr.sin_addr.s_addr = htonl(server->getAddr());
+    addr.sin_addr.s_addr = server->getAddr();
 
     /**
      * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
@@ -179,7 +179,6 @@ void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf)
 int main(int ac, char **av)
 {
     std::string path;
-    Server *server;
     int fd_socket;
 
     /**
@@ -194,32 +193,26 @@ int main(int ac, char **av)
      * Extraire les informations dans le path
      */
     Conf conf(path);
-    conf.getValuesFromPath();
-    conf.printConfigs();
-    conf.checkAndSetDefaultValues();
-    conf.printConfigs();
-
+   
     /**
      * Server start
      */
-    server = new Server(conf);
-    server->getHostipv4();
-    setServer(conf, server);
-
+    Server server(conf);
+    
     /**
      * @brief Reglages des connexion et communication "Sockets"
      */
     if (socket_start(&fd_socket) > 0)
         return 1;
 
-    if (setup_connection_socket(fd_socket, server) > 0)
+    if (setup_connection_socket(fd_socket, &server) > 0)
         return 1;
     
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(&fd_socket, server, conf);
+    request_and_response_fd_manager(&fd_socket, &server, conf);
     close (fd_socket);
-    delete (server);
+
     return (0);
 }
