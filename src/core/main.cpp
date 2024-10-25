@@ -44,7 +44,7 @@ int setup_connection_socket(int fd_socket, Server *server)
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_port = htons(server->getPort());
-    addr.sin_addr.s_addr = htonl(server->getAddr());
+    addr.sin_addr.s_addr = server->getAddr();
 
     /**
      * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
@@ -194,9 +194,6 @@ int main(int ac, char **av)
      * Extraire les informations dans le path
      */
     Conf conf(path);
-    conf.getValuesFromPath();
-    conf.printConfigs();
-    conf.checkAndSetDefaultValues();
     conf.printConfigs();
 
     /**
@@ -204,7 +201,6 @@ int main(int ac, char **av)
      */
     server = new Server(conf);
     server->getHostipv4();
-    setServer(conf, server);
 
     /**
      * @brief Reglages des connexion et communication "Sockets"

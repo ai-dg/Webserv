@@ -12,7 +12,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
 
-    if (uri.find("/cgi-bin/") != std::string::npos || uri.find(".py") != std::string::npos) 
+    if (uri.find("/cgi-bin/") != std::string::npos || uri.find(".py") != std::string::npos || uri.find(".php") != std::string::npos) 
     {
         this->filePath = "cgi-bin" + uri;
     }
