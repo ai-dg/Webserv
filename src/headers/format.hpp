@@ -14,6 +14,7 @@
 #define FORMAT_HPP
 
 #include "includes.hpp"
+#include <string>
 
 std::string numberToString(int number);
 std::string getCrlf(void);

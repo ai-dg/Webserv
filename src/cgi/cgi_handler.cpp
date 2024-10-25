@@ -1,14 +1,9 @@
 #include "../headers/cgi_handler.hpp"
 #include <iostream>
-#include <unistd.h>     
-#include <sys/types.h>  
 #include <sys/wait.h>   
 #include <cstdlib>      
 #include <cstring>      
-#include <fcntl.h>      
 #include <cstdio>
-#include <fstream>
-#include <cstring>
 #include <sstream>
 
 Cgi_handler::Cgi_handler()
@@ -21,18 +16,17 @@ Cgi_handler::~Cgi_handler()
     std::cout << "CGI Handler destroyed" << std::endl;
 }
 
-void Cgi_handler::executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client) {
+void Cgi_handler::executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client) 
+{
     std::cout << "Execute without Fork" << std::endl;
 
-    char requestMethodEnv[] = "REQUEST_METHOD=POST";
-
-    
+    char requestMethodEnv[] = "REQUEST_METHOD=POST";    
     char queryStringEnv[256];
+    
     std::stringstream queryStringStream;
     queryStringStream << "QUERY_STRING=" << queryString;
     strncpy(queryStringEnv, queryStringStream.str().c_str(), sizeof(queryStringEnv) - 1);
     queryStringEnv[sizeof(queryStringEnv) - 1] = '\0';  
-
     char* const envp[] = {requestMethodEnv, queryStringEnv, NULL};
 
     std::cerr << "Environment variables set: REQUEST_METHOD=" << requestMethodEnv
@@ -45,12 +39,9 @@ void Cgi_handler::executeCGIWithoutFork(const std::string& scriptPath, const std
     };
 
     std::cerr << "About to execute script using execve" << std::endl;
-
     execve("/usr/bin/python3", argv, envp);
-
     perror("execve");
     std::cerr << "Failed to execute script: " << scriptPath << std::endl;
-
     exit(1);
 }
 
@@ -63,14 +54,12 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
     std::cout << "Fonction script..." << std::endl;
     std::cout << "Method: " << method << std::endl;
     std::cout << "Data: " << data << std::endl;  
-
-    
+ 
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
         perror("pipe");
         return;
     }
-
     
     pid = fork();
     if (pid < 0) 
@@ -81,10 +70,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 
     if (pid == 0) 
     { 
-        
         close(pipe_in[1]);  
         close(pipe_out[0]); 
-
         
         if (dup2(pipe_in[0], STDIN_FILENO) == -1) {
             perror("dup2 stdin");
@@ -94,12 +81,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
             perror("dup2 stdout");
             exit(1);
         }
-        
-        
-        
-        
 
-        
         char requestMethodEnv[256];
         std::stringstream requestMethodStream;
         requestMethodStream << "REQUEST_METHOD=" << method;
@@ -117,15 +99,11 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
             contentLengthEnv[0] = '\0'; 
         }
 
-        
-        char pythonWarningsEnv[] = "PYTHONWARNINGS=ignore";
-
-        
+        char pythonWarningsEnv[] = "PYTHONWARNINGS=ignore";        
         char* const envp[] = {requestMethodEnv, contentLengthEnv[0] ? contentLengthEnv : NULL, pythonWarningsEnv, NULL};
 
         std::cerr << "Child: Environment variables set: REQUEST_METHOD=" << requestMethodEnv
                   << ", CONTENT_LENGTH=" << contentLengthEnv << std::endl;
-
         
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -136,27 +114,21 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 
         std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
 
-        
-        execve("/usr/bin/env", argv, envp);
-
-        
+        execve("/usr/bin/env", argv, envp);     
         perror("execve");
         std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;
         exit(1);
     } 
     else 
     { 
-        
         close(pipe_in[0]);  
         close(pipe_out[1]); 
-
         
         if (!data.empty()) 
         {
             write(pipe_in[1], data.c_str(), data.size());
         }
         close(pipe_in[1]); 
-
         
         std::cout << "Parent waiting..." << std::endl;
         int status;
@@ -181,7 +153,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
                 std::cerr << "Parent: Child ended abnormally" << std::endl;
             }
         }
-
         
         char buffer[2048];
         bzero(buffer, 2048);

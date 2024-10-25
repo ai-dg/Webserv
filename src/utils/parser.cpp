@@ -13,9 +13,21 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
-
-
 #include "../headers/parser.hpp"
+#include "../headers/Server.hpp"
+#include <iostream>
+
+void setServer(Conf const& conf, Server *server)
+{
+	
+	setPort(conf.getConfig("listen"), server);
+	
+	
+	// std::ifstream config(path.c_str());	
+	// setPort(searchValueInFile(path, "listen"), server);
+	std::cout << "parsing server config..." << std::endl;	
+	std::cout << "done..." << std::endl;
+}
 
 std::string trim(std::string str, char c)
 {
@@ -52,13 +64,4 @@ void setPort(std::string listen, Server *server)
 	if (num >= 1024 && num <= 49151)
 		port = num;		
 	server->setPort(port);	
-}
-
-void setServer(std::string path, Server *server)
-{
-	std::ifstream config(path.c_str());	
-	
-	setPort(searchValueInFile(path, "listen"), server);
-	std::cout << "parsing server config..." << std::endl;	
-	std::cout << "done..." << std::endl;
 }

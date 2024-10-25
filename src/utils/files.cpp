@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../headers/files.hpp"
+#include <string>
+#include <fstream>
+#include <iostream>
 
 std::string getMime(const std::string& mime)
 {

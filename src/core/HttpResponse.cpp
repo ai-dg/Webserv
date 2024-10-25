@@ -1,4 +1,6 @@
 #include "../headers/HttpResponse.hpp"
+#include "../headers/colors.hpp"
+#include <unistd.h>
 
 // void HttpResponse::setResourcePath(const HttpRequest &req)
 // {

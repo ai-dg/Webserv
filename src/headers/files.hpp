@@ -15,6 +15,7 @@
 #define FILES_HPP
 
 #include "includes.hpp"
+#include <string>
 
 std::string checkMimeType(const std::string& path);
 std::string getMime(const std::string& mime);
