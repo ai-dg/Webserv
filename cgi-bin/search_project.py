@@ -5,36 +5,27 @@ import os
 
 cgitb.enable()
 
-
 projects_file_path = "./sessions/projects.txt"
 template_path = "./www/html/find_results.html"
 
-
 request_method = os.getenv("REQUEST_METHOD", "")
 content_length = os.getenv("CONTENT_LENGTH", "")
-
 
 form = None
 if request_method == "POST" and content_length and int(content_length) > 0:
     form = cgi.FieldStorage()
 
-
 search_results = []
-
 
 if form:
     project_name_search = form.getvalue("projectName", "").strip().lower()
 
-    
     try:
         with open(projects_file_path, "r") as file:
             project = {}
             for line in file:
                 line = line.strip()
-
-                
                 if line == "----------------------------------------":
-                    
                     if project.get("Nom du projet", "").lower() == project_name_search:
                         search_results.append(project)
                     project = {}
@@ -43,7 +34,6 @@ if form:
                     project[key] = value
     except FileNotFoundError:
         search_results.append({"error": "Fichier projects.txt introuvable."})
-
 
 results_html = ""
 if search_results:
@@ -85,11 +75,11 @@ except FileNotFoundError:
     </html>
     """
 
-
 html_output = template_content.replace("{{search_results}}", results_html)
-
+content_length = len(html_output.encode('utf-8'))
 
 print("HTTP/1.1 200 OK")
+print(f"Content-Length: {content_length}")
 print("Content-Type: text/html")
 print()
 print(html_output)

@@ -25,7 +25,6 @@ std::string Cookies::getCookie(std::string const& name)
         return it->second;
     }
     return "";
-
 }
 
 void Cookies::setCookie(std::string const& name, std::string const& value) 
@@ -59,9 +58,10 @@ void Cookies::parseCookies(std::string const& cookieHeader)
             std::string name = token.substr(0, pos);
             std::string value = token.substr(pos + 1);
             
-            // Supprime les espaces en début et fin de chaîne
             name.erase(0, name.find_first_not_of(" "));
+            name.erase(name.find_last_not_of(" ") + 1);
             value.erase(0, value.find_first_not_of(" "));
+            value.erase(value.find_last_not_of(" ") + 1);
 
             cookies[name] = value;
         }

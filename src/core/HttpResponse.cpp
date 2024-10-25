@@ -8,6 +8,61 @@
 //     this->filePath = "www/html" + req.getURI();
 // }
 
+HttpResponse::HttpResponse(const HttpRequest &req)
+{
+    this->setResourcePath(req);
+    this-> setMineType();
+}
+
+HttpResponse::~HttpResponse()
+{
+
+}
+
+void HttpResponse::send(int fd_client)
+{
+    std::string resFile = getFile(this->filePath);
+    if (resFile == FILENOTFOUND)
+        this->statusCode = 404;
+    else
+        this->statusCode = 200;
+
+    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\n";
+
+    for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
+        res += it->first + ": " + it->second + "\r\n";
+    }
+
+
+    res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n" + 
+           "Connection: keep-alive\r\n" + 
+           "Content-Length: " + numberToString(resFile.size()) + "\r\n" +
+           "Date: " + get_current_date() + "\r\n\r\n" + 
+           resFile;
+
+    write(fd_client, res.c_str(), res.size());    
+    std::cout << RED << "Response sent with status: " << this->statusCode << RESET << std::endl;
+}
+
+
+// void HttpResponse::send(int fd_client)
+// {
+//     std::string resFile = getFile(this->filePath);
+//     if (resFile == FILENOTFOUND)
+//         this->statusCode = 404;
+//     else
+//         this->statusCode = 200;
+//     std::cout << "status : " << this->statusCode << std::endl;
+//     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
+//             "\r\nConnection: keep-alive" + 
+//             "\r\nContent-Length: " + numberToString(resFile.size()) +
+//             "\r\nDate: " + get_current_date() + 
+//             "\r\n\r\n" + resFile;   
+//     write(fd_client, res.c_str(), res.size());    
+//     std::cout << RED << "done" << RESET << std::endl;
+// }
+
+
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
@@ -29,36 +84,14 @@ std::string HttpResponse::getFilePath() const
     return this->filePath;
 }
 
+void HttpResponse::addHeader(const std::string &key, const std::string &value)
+{
+    headers[key] = value;
+}
+
 void HttpResponse::setMineType(void)
 {
     // protections et verifications a faires/// tests a faire avec netcat et telnet en envoyant des demandes erronées pour les fichiers
     this->mimeType = checkMimeType(this->filePath);
 }
 
-void HttpResponse::send(int fd_client)
-{
-    std::string resFile = getFile(this->filePath);
-    if (resFile == FILENOTFOUND)
-        this->statusCode = 404;
-    else
-        this->statusCode = 200;
-    std::cout << "status : " << this->statusCode << std::endl;
-    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
-            "\r\nConnection: keep-alive" + 
-            "\r\nContent-Length: " + numberToString(resFile.size()) +
-            "\r\nDate: " + get_current_date() + 
-            "\r\n\r\n" + resFile;   
-    write(fd_client, res.c_str(), res.size());    
-    std::cout << RED << "done" << RESET << std::endl;
-}
-
-HttpResponse::HttpResponse(const HttpRequest &req)
-{
-    this->setResourcePath(req);
-    this-> setMineType();
-}
-
-HttpResponse::~HttpResponse()
-{
-
-}

@@ -23,12 +23,13 @@ class HttpResponse
         void setMineType(void);
         
     public :
+        HttpResponse(const HttpRequest &req);
+        ~HttpResponse();
 
         void send(int fd_client);
         void setResourcePath(const HttpRequest &req);
         std::string getFilePath() const;
-        HttpResponse(const HttpRequest &req);
-        ~HttpResponse();
+        void addHeader(const std::string &key, const std::string &value);
 
 };
 
