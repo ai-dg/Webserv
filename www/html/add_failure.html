@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <script src="index.js"></script>
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Ajouter un projet</title>
+    <title>Erreur de soumission du projet</title>
 </head>
 
 <body>
@@ -38,53 +38,8 @@
     </nav>
 
     <div class="custom-margin-top">
-        <h2>Ajouter un nouveau projet</h2>
-        <form action="submit_project.py" method="POST">
-            
-            <div class="form-group">
-                <label for="projectName">Nom du projet :</label>
-                <input type="text" class="form-control" id="projectName" name="projectName" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="projectGrade">Note du projet :</label>
-                <input type="number" class="form-control" id="projectGrade" name="projectGrade" min="0" max="125" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="expectedTime">Temps prévu (en heures) :</label>
-                <input type="number" class="form-control" id="expectedTime" name="expectedTime" min="0" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="realTime">Temps réel de réalisation (en heures) :</label>
-                <input type="number" class="form-control" id="realTime" name="realTime" min="0" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="experience">Experience :</label>
-                <textarea class="form-control" id="experience" name="experience" rows="3" required></textarea>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="satisfaction">Note de satisfaction (1-5) :</label>
-                <input type="number" class="form-control" id="satisfaction" name="satisfaction" min="1" max="5" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="comments">Commentaires de l'amélioration du sujet :</label>
-                <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
-            </div>
-
-            
-            <button type="submit" class="btn btn-primary">Ajouter le projet</button>
-        </form>
+        <h2>Erreur lors de la soumission du projet</h2>
+        <p>Il semble qu'il y ait eu une erreur avec les informations soumises. Veuillez vérifier les détails et essayer de nouveau.</p>
     </div>
 
     <script src="script.js"></script>

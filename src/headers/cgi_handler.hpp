@@ -13,7 +13,8 @@ class Cgi_handler
     public:
         Cgi_handler();
         ~Cgi_handler();
-        void executeCGI(std::string const& scriptPath, std::string const& queryString, int fd_client);
+        void executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client);
+        void executeCGI(std::string const& scriptPath, std::string const& queryString, std::string const& method, int fd_client);
 
 };
 

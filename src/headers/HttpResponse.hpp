@@ -20,12 +20,13 @@ class HttpResponse
         std::string mimeType;
         std::string filePath;
         int statusCode;
-        void setResourcePath(const HttpRequest &req);
         void setMineType(void);
         
     public :
 
         void send(int fd_client);
+        void setResourcePath(const HttpRequest &req);
+        std::string getFilePath() const;
         HttpResponse(const HttpRequest &req);
         ~HttpResponse();
 
