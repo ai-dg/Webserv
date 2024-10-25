@@ -80,7 +80,6 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
         std::string filePath = response.getFilePath();  
         if (filePath.find("cgi-bin/") == 0) 
         {
-            
             Cgi_handler cgiHandler;
             std::cout << "Executing script..." << std::endl;
             if (request.getMethod() == "POST") 

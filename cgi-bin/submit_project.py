@@ -76,13 +76,19 @@ if form:
         f.write(f"Commentaires: {comments}\n")
         f.write("-" * 40 + "\n")
 
+    characters = len(html_success_template)
+
     print("HTTP/1.1 200 OK")
     print("Content-Type: text/html")
+    print(f"Content-Length: {len(html_success_template)}")
     print()
     print(html_success_template)
 
 else:
+    
+    characters = len(html_failure_template)
     print("HTTP/1.1 400 Bad Request")
     print("Content-Type: text/html")
+    print(f"Content-Length: {len(html_failure_template)}")
     print()
     print(html_failure_template)
