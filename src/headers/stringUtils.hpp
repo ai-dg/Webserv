@@ -5,5 +5,6 @@
 #include <string>
 
 std::string replaceBy(std::string original, std::string find, std::string replace);
+std::pair<std::string, std::string> split(std::string const& str, char delimiter);
 
 #endif
