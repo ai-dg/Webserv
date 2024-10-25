@@ -1,12 +1,12 @@
 SRC = src/core/main.cpp \
 	  src/core/Conf.cpp \
       src/core/Server.cpp \
+	  src/utils/Log.cpp \
 	  src/core/HttpRequest.cpp \
 	  src/core/HttpResponse.cpp \
       src/core/handler.cpp \
 	  src/core/Epoll.cpp \
       src/cgi/cgi_handler.cpp \
-      src/utils/logger.cpp \
 	  src/utils/date.cpp \
 	  src/utils/format.cpp \
 	  src/utils/debugTools.cpp \
@@ -21,7 +21,7 @@ NAME = webserv
 
 CXX = c++
 #CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
-CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -lz -g
+CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -g
 
 all: $(NAME)
 

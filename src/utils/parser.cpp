@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:32:55 by calbor-p          #+#    #+#             */
-/*   Updated: 2024/10/24 14:47:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 13:30:34 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,4 @@ std::string searchValueInFile(std::string path, std::string index)
 	};
 	config.close();
 	return "";
-}
-
-void setPort(std::string listen, Server *server)
-{
-	int port = 8080;
-	listen = trim(listen, ' ');
-	int num = atoi((listen.substr(listen.find(" ") + 1, std::string::npos)).c_str());
-	if (num >= 1024 && num <= 49151)
-		port = num;		
-	server->setPort(port);	
 }

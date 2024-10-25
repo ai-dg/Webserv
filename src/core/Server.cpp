@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 14:55:29 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 13:39:20 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,50 +15,33 @@
 #include "../headers/parser.hpp"
 #include <iostream>
 #include <cstdlib>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 /**
  * @brief Public:
  */
 Server::Server()
 {
-    std::cout << "Server on" << std::endl;
-    hostipv4[0] = 0;
-    hostipv4[1] = 0;
-    hostipv4[2] = 0;
-    hostipv4[3] = 0;
+    std::cout << "server on" << std::endl;    
+    host_ip.s_addr = htonl(INADDR_LOOPBACK);
 }
 
-Server::Server(Conf const& conf)
+Server::Server(Conf &c)
 {
-    std::string values = conf.getConfig("host");
-    size_t start = 0;
-    size_t end;
-    int index = 0;
-
-    while ((end = values.find('.', start)) != std::string::npos && index < 4) {
-        hostipv4[index++] = std::atoi(values.substr(start, end - start).c_str());
-        start = end + 1;
+    this->conf = c;
+    port = atoi(conf.getConfig("listen").c_str());    
+    if (inet_pton(AF_INET, (conf.getConfig("host")).c_str(), &host_ip) < 0)
+    {
+        perror("invalid host");
+        Log::error("Invalid host : check your configuration file");
     }
-    // Dernier segment
-    if (index < 4) {
-        hostipv4[index] = std::atoi(values.substr(start).c_str());
-    }
+    else
+    {
+        std::cout << "server on" << std::endl;    
+        std::cout << "listening " << conf.getConfig("host") << " on port " << port << std::endl;
+    } 
 
-
-    // (void) path;
-
-    // std::string line;
-    // std::cout << "param server on" << std::endl;
-    // std::ifstream config(path.c_str());
-    // if (!config.is_open())
-    //     return; /////////////////// wrong way ----- have to getout properly...
-    // while (std::getline(config, line))
-    // {
-    //     parseConfig(line);
-    //     //std::cout << line << std::endl;
-    // }
-    // config.close();
-    
 }
 
 Server::~Server()
@@ -72,18 +55,21 @@ void Server::setPort(int port)
     std::cout << "listening on port " << this->port << std::endl;    
 }
 
-void Server::getHostipv4()
-{
-    int i = 0;
-    while (i < 4)
-    {
-        if (i == 3)
-            std::cout << this->hostipv4[i] << std::endl;
-        else
-            std::cout << this->hostipv4[i] << ".";
-        i++;
-    }
 
+in_addr_t Server::getAddr()
+{
+    return (host_ip.s_addr);
+}
+
+std::string Server::getHostipv4()
+{
+    return std::string(inet_ntoa(host_ip));
+}
+
+void Server::setPort(int port)
+{
+    this->port = port;
+    std::cout << "listening on port " << this->port << std::endl;    
 }
 
 int Server::getPort(void)
@@ -91,29 +77,3 @@ int Server::getPort(void)
     return (this->port);
 }
 
-/**
- * @brief Private:
- */
-void Server::setKeepAlive(std::string line)
-{
-    line = trim(line, ' ');
-    int spacePos = line.find(" ");
-    std::string str_time;
-    if (spacePos != std::string::npos)
-    {
-        //a proteger...
-        str_time = line.substr(spacePos + 1, std::string::npos);
-        char* end;
-        this->keepAlive = std::strtol(str_time.c_str(), &end, 10);
-    }      
-    else
-        this->keepAlive = 60;
-}
-
-void Server::parseConfig(Conf const& conf)
-{
-    this->setKeepAlive(conf.getConfig("keepalive_timeout"));
-
-    // if (line.find("keepalive_timeout") != std::string::npos)
-    //     this->setKeepAlive(line);
-}
