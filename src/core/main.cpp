@@ -3,6 +3,7 @@
 #include <cstring>
 #include <cstdio>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 #include "../headers/Server.hpp"
 #include "../headers/files.hpp"
 #include "../headers/parser.hpp"
@@ -11,6 +12,9 @@
 #include "../headers/Conf.hpp"
 #include "../headers/cgi_handler.hpp"
 #include "../headers/Epoll.hpp"
+#include "../headers/Log.hpp"
+#include "../headers/ipTools.hpp"
+
 #define BUFFER_SIZE 2048
 
 int socket_start(int *fd_socket)
@@ -40,7 +44,7 @@ int setup_connection_socket(int fd_socket, Server *server)
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_port = htons(server->getPort());
-    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    addr.sin_addr.s_addr = htonl(server->getAddr());
 
     /**
      * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
@@ -100,7 +104,7 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
     }
 }
 
-void request_and_response_fd_manager(int *fd_socket, Server *server)
+void request_and_response_fd_manager(int *fd_socket, Server *server, Conf &conf)
 {
     /**
      * @brief
@@ -132,11 +136,13 @@ void request_and_response_fd_manager(int *fd_socket, Server *server)
             {
                 client_addr_len = sizeof(client_addr);
                 fd_client = accept(*fd_socket, (struct sockaddr*)&client_addr, &client_addr_len);
+                Log::access(get_current_date() + " : Ip " + std::string(inet_ntoa(client_addr.sin_addr)));
                 if (fd_client == -1) 
                 {
+                    Log::error(get_current_date() + " connection failed");
                     perror("accept");
                     continue;
-                }              
+                }
                 epoll.makeSocketNonBlocking(fd_client);
                 epoll.addFd(fd_client, EPOLLIN | EPOLLET);
             }
@@ -157,6 +163,7 @@ void request_and_response_fd_manager(int *fd_socket, Server *server)
                 else if (reads > 0) 
                 {
                     type_request_manager(&fd_client, &req, buff, &reads, server, &epoll);
+                    Epoll::purgeTimeOutFds(conf, epoll.getFd());
                 } 
                 else 
                 { 
@@ -211,7 +218,7 @@ int main(int ac, char **av)
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(&fd_socket, server);
+    request_and_response_fd_manager(&fd_socket, server, conf);
     close (fd_socket);
     delete (server);
     return (0);

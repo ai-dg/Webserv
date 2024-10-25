@@ -2,6 +2,15 @@
 #include <iostream>
 #include <fstream>
 
+Conf::Conf()
+{
+}
+
+void Conf::operator=(Conf &conf)
+{
+    this->configMap = conf.configMap;
+}
+
 Conf::Conf(std::string& path) : path(path)
 {
     std::cout << "Initialize conf path" << std::endl;
@@ -34,6 +43,9 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("location_/cgi-bin/extension", ""));
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
+
+    getValuesFromPath();
+    checkAndSetDefaultValues();
 }
 
 Conf::~Conf()
