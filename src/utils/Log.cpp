@@ -2,6 +2,7 @@
 
 std::map<std::string, std::string> Log::files;
 std::string Log::err_file = "logs/error.log";
+std::string Log::debug_file = "logs/debug.log";
 std::string Log::access_file = "logs/access.log";
 
 Log::Log()
@@ -21,7 +22,7 @@ Log::~Log()
 
 void Log::purgeLog(std::string filename)
 {
-    if (filename != "error" && filename != "access")
+    if (filename != "error" && filename != "access"  && filename != "debug")
         return;
     std::ofstream file;
     file.open(Log::files[filename].c_str());
@@ -30,6 +31,7 @@ void Log::purgeLog(std::string filename)
 
 void Log::init()
 {
+    Log::files.insert(std::make_pair("debug", Log::debug_file));
     Log::files.insert(std::make_pair("error", Log::err_file));
     Log::files.insert(std::make_pair("access", Log::access_file));
 }
@@ -53,6 +55,11 @@ void Log::init(std::string err, std::string access)
  void Log::access(std::string message)
  {
     Log::log(Log::access_file, message);
+ }
+
+ void Log::debug(std::string message)
+ {
+    Log::log(Log::debug_file, message);
  }
 
  void Log::error(std::string error)
