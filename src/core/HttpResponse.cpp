@@ -98,7 +98,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         this->filePath = "www/html" + uri;
     }
 
-    std::cout << "File path set to: " << this->filePath << std::endl;
+    std::cout << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
 std::string HttpResponse::getFilePath() const

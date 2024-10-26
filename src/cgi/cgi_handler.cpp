@@ -5,6 +5,7 @@
 #include <cstring>      
 #include <cstdio>
 #include "../headers/Log.hpp"
+#include "../headers/colors.hpp"
 #include <sstream>
 
 Cgi_handler::Cgi_handler()
@@ -15,6 +16,22 @@ Cgi_handler::Cgi_handler()
 Cgi_handler::~Cgi_handler()
 {
     std::cout << "CGI Handler destroyed" << std::endl;
+}
+
+std::string Cgi_handler::getExeContext(std::string file)
+{
+    if (file.find(".") == std::string::npos)
+        return "bash";
+    if (file.find(".php") != std::string::npos)
+        return "php";
+    if (file.find(".py") != std::string::npos)
+        return "python3";
+    if (file.find(".pl") != std::string::npos)
+        return "pl";
+    if (file.find(".pl") != std::string::npos)
+        return "bash";
+    return "";
+
 }
 
 void Cgi_handler::executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client) 
@@ -187,6 +204,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
     int pipe_in[2]; 
     int pipe_out[2];
 
+    std::cout << BOLD_VIOLET << scriptPath << RESET << std::endl;
     std::cout << "Fonction script..." << std::endl;
     std::cout << "Method: " << method << std::endl;
     std::cout << "Data: " << data << std::endl;  
@@ -220,6 +238,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 
         std::string requestMethodEnv = "REQUEST_METHOD=" + method;
         std::string contentLengthEnv;
+        std::cout << BOLD_TURQUOISE << data << RESET << std::endl;
 
         if (method == "POST") 
         {
@@ -236,10 +255,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 
         std::cerr << "Child: Environment variables set: REQUEST_METHOD=" << requestMethodEnv
                   << ", CONTENT_LENGTH=" << contentLengthEnv << std::endl;
-        
+ 
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
-            const_cast<char*>("python3"),       
+            const_cast<char*>(getExeContext(scriptPath).c_str()),       
             const_cast<char*>(scriptPath.c_str()), 
             NULL
         };
