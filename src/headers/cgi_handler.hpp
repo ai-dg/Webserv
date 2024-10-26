@@ -10,6 +10,7 @@ class Cgi_handler
         std::string scriptPath;
         std::string queryString;
         int fd_client;
+        std::string getExeContext(std::string file);
 
     public:
         Cgi_handler();

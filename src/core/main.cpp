@@ -282,11 +282,10 @@ int main(int ac, char **av)
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    std::vector<int>::iterator it;
     request_and_response_fd_manager(fd_sockets, &server, conf, sessionManager);
-    for (it = fd_sockets.begin(); it != fd_sockets.end() ; it++)
+    for (int i = 0; i < fd_sockets.size() ; ++i)
     {
-        close(*it);
+        close(fd_sockets[i]);
     }
     return (0);
 }

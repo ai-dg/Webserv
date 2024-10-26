@@ -1,4 +1,5 @@
 #include "../headers/HttpRequest.hpp"
+#include "../headers/colors.hpp"
 
 /**
  * @brief Public:
@@ -198,7 +199,7 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
-    std::cout << "-----------Extracted URI: " << this->URI << std::endl;
+    std::cout << req << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
 // void HttpRequest::addToHeaders(std::string line)
