@@ -184,8 +184,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& data, const std::string& method, int fd_client) 
 {
     pid_t pid;
-    int pipe_in[2];  
-    int pipe_out[2]; 
+    int pipe_in[2]; 
+    int pipe_out[2];
 
     std::cout << "Fonction script..." << std::endl;
     std::cout << "Method: " << method << std::endl;
@@ -219,13 +219,11 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
         }
 
         std::string requestMethodEnv = "REQUEST_METHOD=" + method;
-        std::string contentLengthEnv = "" ;//= itos(data.size());
+        std::string contentLengthEnv;
 
         if (method == "POST") 
         {
             contentLengthEnv =  "CONTENT_LENGTH=" + itos(data.size());
-            Log::debug(contentLengthEnv);
-            //std::cout << data.size() << " str :: " << itos(data.size()) << std::endl;
         }
         else
             contentLengthEnv = ""; 
