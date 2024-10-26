@@ -1,6 +1,7 @@
 #include "../headers/HttpResponse.hpp"
 #include "../headers/colors.hpp"
 #include <unistd.h>
+#include <sstream>
 
 // void HttpResponse::setResourcePath(const HttpRequest &req)
 // {
@@ -30,9 +31,19 @@ void HttpResponse::send(int fd_client)
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\n";
 
     for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
-        res += it->first + ": " + it->second + "\r\n";
+        res += it->first + ": " + it->second ;
     }
+    
+    res += "\r";
 
+    std::cout << "---------- res by line ----------" << std::endl;
+    std::istringstream ss(res);
+    std::string line;
+    while (std::getline(ss, line)) 
+    {
+        std::cout << line << std::endl;
+    }
+    std::cout << "---------------------------------" << std::endl;
 
     res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n" + 
            "Connection: keep-alive\r\n" + 
@@ -40,8 +51,19 @@ void HttpResponse::send(int fd_client)
            "Date: " + get_current_date() + "\r\n\r\n" + 
            resFile;
 
-    write(fd_client, res.c_str(), res.size());    
-    std::cout << RED << "Response sent with status: " << this->statusCode << RESET << std::endl;
+    write(fd_client, res.c_str(), res.size());
+    std::ofstream file("./sessions/fd_client.txt"); // Chemin du fichier pour l'écriture
+    if (file.is_open()) 
+    {
+        file << res;
+        file.close();
+        std::cout << "----------fd_client enregistré dans fd_client.txt---------------" << std::endl;
+    } 
+    else 
+    {
+        std::cerr << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
+    } 
+    std::cout << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
 }
 
 
@@ -87,6 +109,11 @@ std::string HttpResponse::getFilePath() const
 void HttpResponse::addHeader(const std::string &key, const std::string &value)
 {
     headers[key] = value;
+    std::cout << "-------------Header added: " << key << " = " << value << std::endl;
+    std::cout << "-------------Current headers in response:" << std::endl;
+    for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
+        std::cout << it->first << ": " << it->second << std::endl;
+    }
 }
 
 void HttpResponse::setMineType(void)

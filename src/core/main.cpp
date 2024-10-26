@@ -52,25 +52,15 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
     int count;
     int* ports = server->getPort(count);
 
-    /**
-     * struct sockaddr_in afin de configurer le socket
-     */
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = server->getAddr();
 
-    /**
-     * Redemarre le serveur en cas de crash pour pouvoir reutiliser le port
-     */
-
     for (int i = 0; i < count; i++)
     {
         int fd_socket = fd_sockets[i];
-
         int opt = 1;
         setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
-
-
         addr.sin_port = htons(ports[i]);
 
         if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
@@ -79,11 +69,6 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
             close(fd_socket);
             return (1);
         }
-
-        /**
-         * Mets en ecoute les connections du socket et 
-         * un nombre maximal de connections simultannees, il refuse les autres
-         */
         if (listen(fd_socket, 10) < 0)
         {
             std::cout << "fail listening socket on port " << ports[i] << std::endl;
@@ -92,60 +77,88 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
         }
         std::cout << "Listening on port: " << ports[i] << std::endl;
     }
-
     return 0;
 }
 
 void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager)
 {
-    (void)sessionManager;
+    std::cout << "-------------------------Entering type_request_manager..." << std::endl;
     *req += std::string(buff, *reads);
     if ((*req).find("\r\n\r\n") != std::string::npos) 
     {
+        std::cout << "Request headers detected, parsing request..." << std::endl;
         HttpRequest request(*req, server);
 
-        // std::string cookieHeader = request.getHeader("Cookie");
-        // Cookies cookies(cookieHeader);
+        std::string cookieHeader = request.getHeader("Cookie");
+        std::cout << "Cookie header: " << cookieHeader << std::endl;
 
-        // std::string sessionId = cookies.getCookie("sessionId");
-        // if (!sessionManager.sessionExist(sessionId))
-        // {
-        //     sessionId = sessionManager.createSessions();
-        //     cookies.setCookie("sessionId", sessionId);
-        // }
+        Cookies cookies(cookieHeader);
+        std::string sessionId = cookies.getCookie("sessionId");
+        std::cout << "Session ID from cookies: " << sessionId << std::endl;
 
-        // std::map<std::string, std::string>& sessionData = sessionManager.getSession(sessionId);
+        if (!sessionManager.sessionExist(sessionId) || sessionId.empty())
+        {
+            std::cout << "Session ID not found, creating a new session..." << std::endl;
+            sessionId = sessionManager.createSessions();
+            cookies.setCookie("sessionId", sessionId);
+            std::cout << "New session created with ID: " << sessionId << std::endl;
+        }
+        else
+        {
+            std::cout << "Session ID exists: " << sessionId << std::endl;
+        }
+
+        std::map<std::string, std::string>& sessionData = sessionManager.getSession(sessionId);
+        std::cout << "Retrieved session data for session ID: " << sessionId << std::endl;
 
         HttpResponse response(request);
         response.setResourcePath(request);
 
-        // response.addHeader("Set-Cookie", cookies.getSetCookieHeader());
+        std::string setCookieHeader = cookies.getSetCookieHeader();
+        std::cout << "Set-Cookie header: " << setCookieHeader << std::endl;
+
+        std::cout << "Exact Set-Cookie value before adding: [" << setCookieHeader << "]" << std::endl;
+        response.addHeader("Set-Cookie", setCookieHeader.substr(12));
+
 
         std::string filePath = response.getFilePath();  
+        std::cout << "File path for response: " << filePath << std::endl;
+
         if (filePath.find("cgi-bin/") == 0) 
         {
             Cgi_handler cgiHandler;
-            std::cout << "Executing script..." << std::endl;
+            std::cout << "Executing CGI script..." << std::endl;
             if (request.getMethod() == "POST") 
             {
                 std::string postBody = request.getBody();
                 cgiHandler.executeCGI(filePath, postBody, "POST", *fd_client);
             } 
             else if (request.getMethod() == "GET") 
+            {
                 cgiHandler.executeCGI(filePath, request.getQueryString(), "GET", *fd_client);
+            }
             else if (request.getMethod() == "DELETE") 
+            {
                 cgiHandler.executeCGI(filePath, "", "DELETE", *fd_client);
+            }
         } 
         else 
+        {
             response.send(*fd_client);
+            std::cout << "Response sent to client" << std::endl;
+        }
+        
         *req = "";
         if (request.getHeader("Connection") != "keep-alive") 
         {
             close(*fd_client);
             epoll->removeFd(*fd_client);
+            std::cout << "Closed client connection" << std::endl;
         }
+        sessionManager.saveSessionsToFile();
     }
 }
+
 
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *server, Conf &conf, SessionManager &sessionManager)
 {
@@ -189,7 +202,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
                     break;
                 }
             }
-            
             if (isServerSocket)
             {
                 client_addr_len = sizeof(client_addr);
@@ -209,7 +221,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
              */
             else if (event.events & EPOLLIN) 
             {
-                
                 fd_client = event.data.fd;
                 bzero(buff, BUFFER_SIZE);
                 reads = read(fd_client, buff, BUFFER_SIZE);

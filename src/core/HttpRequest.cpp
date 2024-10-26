@@ -19,7 +19,7 @@ HttpRequest::HttpRequest(std::string req, Server *server)
 
 HttpRequest::~HttpRequest()
 {    
-    //std::cout << "end req" << std::endl;
+    std::cout << "end req" << std::endl;
 }
 
 std::string HttpRequest::getRequestedFile() const
