@@ -2,6 +2,7 @@
 #define CGI_HANDLER_HPP
 
 #include <string>
+#include "stringUtils.hpp"
 
 class Cgi_handler
 {
