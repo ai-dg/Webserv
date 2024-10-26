@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/10/25 13:39:14 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/26 08:24:29 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,20 @@
 #include "Conf.hpp"
 #include "Log.hpp"
 #include <string>
+#include "stringUtils.hpp"
 
 class Server
 {
     private:
-        int port[65535];
-        int numPorts;
+        //int port[65535];
+        //int numPorts;
         struct in_addr host_ip;
         Conf conf;
         std::string serverName;
         std::string *methods;
         int keepAlive;
         std::map<int, std::string> err;
+        std::vector<int> ports;
         int maxBodySize;
     
     public:
@@ -41,7 +43,8 @@ class Server
         void addPort(int port);
         in_addr_t getAddr();
         std::string getHostipv4();
-        int* getPort(int& count);
+        std::vector<int>getPorts();
+        //int* getPorts(int& count);
         int getNumPorts() const;
 };
 

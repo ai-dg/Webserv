@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/25 17:26:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/10/26 08:28:00 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ Server::Server(Conf const& c) : conf(c)
         int portNumber = atoi(listenPorts[i].c_str());
         if (portNumber >= 1 && portNumber <= 65535) 
         {
-            port[numPorts++] = portNumber;
+            //port[numPorts++] = portNumber;
+            ports.push_back(portNumber);
         } 
         else 
         {
@@ -56,10 +57,15 @@ Server::Server(Conf const& c) : conf(c)
     {
         std::cout << "server on" << std::endl;
         std::cout << "listening " << conf.getConfig("host") << " on ports ";
-        for (int i = 0;  i < numPorts; i++)
+        std::vector<int>::iterator it;
+        for (it = ports.begin(); it != ports.end(); it++)
+        {
+            std::cout << *it << " ";
+        }
+        /*for (int i = 0;  i < numPorts; i++)
         {
             std::cout << port[i] << " ";
-        }
+        }*/
         std::cout << std::endl; 
     } 
 }
@@ -71,9 +77,11 @@ Server::~Server()
 
 void Server::addPort(int port)
 {
-    this->port[numPorts + 1] = port;
-    numPorts++;
-    std::cout << "listening on port " << this->port << std::endl;    
+    
+    ports.push_back(port);
+    //this->port[numPorts + 1] = port;
+    //numPorts++;
+    //std::cout << "listening on port " << this->port << std::endl;    
 }
 
 in_addr_t Server::getAddr()
@@ -87,13 +95,19 @@ std::string Server::getHostipv4()
     return std::string(inet_ntoa(host_ip));
 }
 
-int* Server::getPort(int& count)
+std::vector<int>Server::getPorts()
+{
+    return ports;
+}
+
+/*
+int* Server::getPorts(int& count)
 {
     count = this->numPorts;
     return this->port;
-}
-
+}*/
+/*
 int Server::getNumPorts() const
 {
     return this->numPorts;
-}
+}*/

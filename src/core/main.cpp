@@ -31,10 +31,11 @@ int socket_start(std::vector<int>& fd_sockets, Server *server)
     *    et intégrant un mécanisme pour les transmissions de données hors-bande. )
     */
 
-    int count  = server->getNumPorts();
+    //int count  = server->getNumPorts();
+    std::vector<int>::iterator it;
 
     fd_sockets.clear();
-    for (int i = 0; i < count; i++)
+    for (it = server->getPorts().begin(); it != server->getPorts().end() ; it++)
     {
         int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
         if (fd_socket == -1)
@@ -49,19 +50,22 @@ int socket_start(std::vector<int>& fd_sockets, Server *server)
 
 int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
 {
-    int count;
-    int* ports = server->getPort(count);
+    /*int count = 0;
+    int* ports = server->getPorts(count);
+    std::cout << "count : " << count << std::endl;*/
 
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = server->getAddr();
 
-    for (int i = 0; i < count; i++)
+    std::vector<int>::iterator it;
+    int count = 0;
+    for (it = server->getPorts().begin(); it != server->getPorts().end(); it++)
     {
-        int fd_socket = fd_sockets[i];
+        int fd_socket = fd_sockets[count];
         int opt = 1;
         setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
-        addr.sin_port = htons(ports[i]);
+        addr.sin_port = htons(*it);
 
         if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
         {
@@ -71,11 +75,12 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
         }
         if (listen(fd_socket, 10) < 0)
         {
-            std::cout << "fail listening socket on port " << ports[i] << std::endl;
+            std::cout << "fail listening socket on port " << *it << std::endl;
             close(fd_socket);
             return(1);        
         }
-        std::cout << "Listening on port: " << ports[i] << std::endl;
+        count++;
+        //std::cout << "Listening on port: " << ports[i] << std::endl;
     }
     return 0;
 }
@@ -270,7 +275,7 @@ int main(int ac, char **av)
      * Server start
      */
     Server server(conf);
-    count = server.getNumPorts();
+    //count = server.getNumPorts();
     /**
      * @brief Reglages des connexion et communication "Sockets"
      */
@@ -283,10 +288,11 @@ int main(int ac, char **av)
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
+    std::vector<int>::iterator it;
     request_and_response_fd_manager(fd_sockets, &server, conf, sessionManager);
-    for (size_t i = 0; i < count; i++)
+    for (it = fd_sockets.begin(); it != fd_sockets.end() ; it++)
     {
-        close(fd_sockets[i]);
+        close(*it);
     }
     return (0);
 }
