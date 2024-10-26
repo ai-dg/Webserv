@@ -223,7 +223,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
 
         if (method == "POST") 
         {
-            contentLengthEnv = itos(data.size());
+            contentLengthEnv =  "CONTENT_LENGTH=" + itos(data.size());
             Log::debug(contentLengthEnv);
             //std::cout << data.size() << " str :: " << itos(data.size()) << std::endl;
         }
