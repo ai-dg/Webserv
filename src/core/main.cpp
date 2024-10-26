@@ -34,7 +34,6 @@ int socket_start(std::vector<int>& fd_sockets, Server *server)
     fd_sockets.clear();
     for (int i = 0; i < server->getPorts().size(); ++i)
     {
-        std::cout << "crashtest....";
         int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
         if (fd_socket == -1)
         {
