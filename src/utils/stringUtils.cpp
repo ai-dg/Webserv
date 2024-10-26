@@ -1,4 +1,5 @@
 #include "../headers/stringUtils.hpp"
+#include <sstream>
 #include <string>
 #include <map>
 
@@ -14,4 +15,11 @@ std::pair<std::string, std::string> split(std::string const& str, char delimiter
 {
     size_t pos = str.find(delimiter);
     return std::pair<std::string, std::string>(str.substr(0, pos), str.substr(pos + 1));
+}
+
+std::string itos(int number)
+{
+    std::stringstream ss;
+    ss << number;
+    return ss.str();
 }
