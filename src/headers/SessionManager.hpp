@@ -13,9 +13,12 @@ class SessionManager
     public:
         SessionManager();
         ~SessionManager();
+        
         std::string createSessions();
         bool sessionExist(std::string const& sessionId);
         std::map<std::string, std::string>& getSession(std::string const& sessionId);
+        void saveSessionsToFile();
+        void loadSessionsFromFile();
 };
 
 #endif
