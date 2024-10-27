@@ -13,39 +13,19 @@ Cgi_handler::Cgi_handler()
     std::cout << "CGI Handler created" << std::endl;
 }
 
+void Cgi_handler::addToEnvironment(const char * env)
+{
+    environment.push_back(const_cast<char *>(env));
+}
+
+void Cgi_handler::addToEnvironment(std::string env)
+{
+    environment.push_back(const_cast<char*>(env.c_str()));
+}
+
 Cgi_handler::~Cgi_handler()
 {
     std::cout << "CGI Handler destroyed" << std::endl;
-}
-
-
-void Cgi_handler::executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client) 
-{
-    std::cout << "Execute without Fork" << std::endl;
-
-    char requestMethodEnv[] = "REQUEST_METHOD=POST";    
-    char queryStringEnv[256];
-    
-    std::stringstream queryStringStream;
-    queryStringStream << "QUERY_STRING=" << queryString;
-    strncpy(queryStringEnv, queryStringStream.str().c_str(), sizeof(queryStringEnv) - 1);
-    queryStringEnv[sizeof(queryStringEnv) - 1] = '\0';  
-    char* const envp[] = {requestMethodEnv, queryStringEnv, NULL};
-
-    std::cerr << "Environment variables set: REQUEST_METHOD=" << requestMethodEnv
-              << ", QUERY_STRING=" << queryStringEnv << std::endl;
-
-    char* const argv[] = {
-        const_cast<char*>("/usr/bin/python3"), 
-        const_cast<char*>(scriptPath.c_str()), 
-        NULL
-    };
-
-    std::cerr << "About to execute script using execve" << std::endl;
-    execve("/usr/bin/python3", argv, envp);
-    perror("execve");
-    std::cerr << "Failed to execute script: " << scriptPath << std::endl;
-    exit(1);
 }
 
 std::string Cgi_handler::getExeContext(std::string file)
@@ -57,8 +37,8 @@ std::string Cgi_handler::getExeContext(std::string file)
     if (file.find(".py") != std::string::npos)
         return "python3";
     if (file.find(".pl") != std::string::npos)
-        return "pl";
-    if (file.find(".pl") != std::string::npos)
+        return "perl";
+    if (file.find(".sh") != std::string::npos)
         return "bash";
     return "";
 
@@ -111,50 +91,23 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
         }
         else
             contentLengthEnv = ""; 
+    
+        addToEnvironment(requestMethodEnv);
+        addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
 
-        
-       /*if (getExeContext(scriptPath) == "php-cgi")
-        {*/
-            std::string scriptName = "SCRIPT_NAME=" + scriptPath;
-            std::string scriptFilename = "SCRIPT_FILENAME=" + scriptPath;
-            std::string contentType = "CONTENT_TYPE=application/x-www-form-urlencoded";
-            std::string gatewayInterface = "GATEWAY_INTERFACE=CGI/1.1";
-std::string serverProtocol = "SERVER_PROTOCOL=HTTP/1.1";
-std::string serverSoftware = "SERVER_SOFTWARE=WebServ/1.0";
-std::string documentRoot = "DOCUMENT_ROOT=/cgi-bin/"; //getDocumentRoot(); // Fonction à implémenter selon votre configuration
-std::string phpSelf = "PHP_SELF=" + scriptPath;
-
-    char* const envp[] = {
-        const_cast<char*>(requestMethodEnv.c_str()),
-        const_cast<char*>(contentType.c_str()),
-        const_cast<char*>(scriptName.c_str()),
-        const_cast<char*>(scriptFilename.c_str()),
-        const_cast<char*>(gatewayInterface.c_str()),
-        const_cast<char*>(serverProtocol.c_str()),
-        const_cast<char*>(serverSoftware.c_str()),
-        const_cast<char*>(documentRoot.c_str()),
-        const_cast<char*>(phpSelf.c_str()),
-        contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL,
-        const_cast<char*>("REDIRECT_STATUS=1"),
-        NULL
-    };
-        
-
-       /* }else
+        if (getExeContext(scriptPath) == "php-cgi")
         {
-
-            char pythonWarningsEnv[] = "PYTHONWARNINGS=ignore";        
-            char* const envp[] = {const_cast<char *>(requestMethodEnv.c_str()), 
-                contentLengthEnv[0] ? const_cast<char *>(contentLengthEnv.c_str()) : NULL, 
-                pythonWarningsEnv, 
-                const_cast<char *>("REDIRECT_STATUS=1"),
-                NULL};
-        }*/
-
-
-
-        std::cerr << "Child: Environment variables set: REQUEST_METHOD=" << requestMethodEnv
-                  << ", CONTENT_LENGTH=" << contentLengthEnv << std::endl;
+            addToEnvironment("CONTENT_TYPE=application/x-www-form-urlencoded");
+            addToEnvironment("REDIRECT_STATUS=1");
+            addToEnvironment("SCRIPT_NAME=" + scriptPath);
+            addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
+        }else
+        {
+            addToEnvironment("PYTHONWARNINGS=ignore");
+        }
+        addToEnvironment(NULL);
+        std::cerr << "Child: Environment variables set: " << requestMethodEnv
+                  << ", " << contentLengthEnv << std::endl;
  
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -165,7 +118,7 @@ std::string phpSelf = "PHP_SELF=" + scriptPath;
 
         std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
 
-        execve("/usr/bin/env", argv, envp);     
+        execve("/usr/bin/env", argv, environment.data());     
         perror("execve");
         std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;
         exit(1);
@@ -208,8 +161,8 @@ std::string phpSelf = "PHP_SELF=" + scriptPath;
         char buffer[2048];
         bzero(buffer, 2048);
         int bytesRead = 0;
-    
-        if (getExeContext(scriptPath) == "php-cgi")
+        std::string context = getExeContext(scriptPath);
+        if (context == "php-cgi" || context =="perl" || context =="bash")
         {
             std::string res = "HTTP/1.1 200 OK\r\n";
             write(fd_client, res.c_str(), res.size());
