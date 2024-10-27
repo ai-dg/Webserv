@@ -82,7 +82,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
             exit(1);
         }
 
-        std::string requestMethodEnv = "REQUEST_METHOD=" + method;
+        std::string requestMethodEnv = "REQUEST_METHOD=" + method;    //void executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client);
         std::string contentLengthEnv;
 
         if (method == "POST") 
@@ -186,7 +186,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
             perror("read from pipe");
             std::cerr << "Parent: Failed to read from pipe." << std::endl;
         }
-
         close(pipe_out[0]); 
     }
 }
