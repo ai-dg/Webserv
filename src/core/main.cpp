@@ -127,19 +127,7 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
         {
             Cgi_handler cgiHandler;
             std::cout << "Executing CGI script..." << std::endl;
-            if (request.getMethod() == "POST") 
-            {
-                std::string postBody = request.getBody();
-                cgiHandler.executeCGI(filePath, postBody, "POST", *fd_client);
-            } 
-            else if (request.getMethod() == "GET") 
-            {
-                cgiHandler.executeCGI(filePath, request.getQueryString(), "GET", *fd_client);
-            }
-            else if (request.getMethod() == "DELETE") 
-            {
-                cgiHandler.executeCGI(filePath, "", "DELETE", *fd_client);
-            }
+            cgiHandler.executeCGI(filePath, request, *fd_client);           
         } 
         else 
         {

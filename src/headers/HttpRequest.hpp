@@ -14,6 +14,7 @@ class HttpRequest
     private :
         std::map<std::string, std::string> headers;
         std::string method;
+        std::string postbody;
         std::string host;
         std::string URI;
         std::string body;
