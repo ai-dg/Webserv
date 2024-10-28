@@ -16,7 +16,7 @@ HttpRequest::HttpRequest(std::string req, Server *server)
     std::cout << req << std::endl;
     parseRequest(req);
     this->server = server;
-    this->postbody = getBody();
+    //this->postbody = getBody();
     //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
@@ -66,6 +66,17 @@ std::string HttpRequest::getHeader(std::string key)
     return this->headers[key];
 }
 
+std::string HttpRequest::getFormatedHeader(std::string key)
+{
+
+    return "HTTP_" + upperCaseMe(key) + ": " + this->headers[key];
+}
+
+std::map<std::string, std::string> HttpRequest::getHeaders() const
+{
+    return headers;
+}
+
 std::string HttpRequest::getMethod() const
 {
     return this->method;
@@ -73,13 +84,15 @@ std::string HttpRequest::getMethod() const
 
 std::string HttpRequest::getBody() const
 {
-    if (getMethod() == "POST") 
-        return postbody;
-    else if (getMethod() == "GET") 
+
+    std::cerr << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
+    if (method == "POST") 
+        return "";//body;
+    else if (method == "GET") 
         return getQueryString();
-    else if (getMethod() == "DELETE") 
+    else if (method == "DELETE") 
         return "";
-    return "";
+    return "";//body;
 }
 
 /**
@@ -156,6 +169,7 @@ void HttpRequest::setBody(std::string req)
     
 // }
 
+
 void HttpRequest::parseRequest(std::string req)
 {
     this->setMethod(req);
@@ -169,7 +183,7 @@ void HttpRequest::parseRequest(std::string req)
         if (bodyStartPos != std::string::npos)
         {
             this->body = req.substr(bodyStartPos + 4);
-            std::cout << "-------Parsed Body: " << this->body << std::endl;
+            std::cerr << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
         }
     }
 }
