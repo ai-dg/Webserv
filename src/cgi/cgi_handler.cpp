@@ -5,6 +5,7 @@
 #include <cstdlib>      
 #include <cstring>      
 #include <cstdio>
+#include <map>
 #include "../headers/Log.hpp"
 #include "../headers/colors.hpp"
 #include <sstream>
@@ -22,6 +23,21 @@ void Cgi_handler::addToEnvironment(const char * env)
 void Cgi_handler::addToEnvironment(std::string env)
 {
     environment.push_back(const_cast<char*>(env.c_str()));
+}
+
+
+void Cgi_handler::debugEnvironment()
+{
+    std::cerr << BOLD_VIOLET ;
+    std::cerr << "start printing env -------------------------------------------------" << std::endl;
+    int i = 0;
+    while (environment[i])
+    {
+        std::cerr << environment[i] << std::endl;
+        i++;
+    }
+    std::cerr << "end printing env ---------------------------------------------------" << std::endl;
+    std::cerr << RESET;
 }
 
 Cgi_handler::~Cgi_handler()
@@ -42,7 +58,45 @@ std::string Cgi_handler::getExeContext(std::string file)
     if (file.find(".sh") != std::string::npos)
         return "bash";
     return "";
+}
 
+void Cgi_handler::setEnvironment(HttpRequest req)
+{
+    std::map<std::string, std::string> headers = req.getHeaders();
+    std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
+    std::string contentLengthEnv;
+
+    if (req.getMethod() == "POST") 
+    {
+        contentLengthEnv =  "CONTENT_LENGTH=" + itos(req.getBody().size());
+    }
+    else
+        contentLengthEnv = ""; 
+
+    addToEnvironment(requestMethodEnv);
+    addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
+        
+    /*std::map<std::string, std::string>::iterator it;
+    for (it = headers.begin(); it != headers.end(); ++it)
+    {
+        addToEnvironment(req.getFormatedHeader(it->first));
+    }   */   
+
+    if (getExeContext(scriptPath) == "php-cgi")
+    {
+        addToEnvironment("CONTENT_TYPE=application/x-www-form-urlencoded");
+        addToEnvironment("REDIRECT_STATUS=1");
+        addToEnvironment("SCRIPT_NAME=" + scriptPath);
+        addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
+    }else
+    {
+        addToEnvironment("PYTHONWARNINGS=ignore");
+    }
+        addToEnvironment(NULL);   
+
+    std::cerr << "Child: Environment variables set: " << requestMethodEnv
+            << ", " << contentLengthEnv << std::endl;
+    debugEnvironment();
 }
 
 void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int fd_client) 
@@ -52,10 +106,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int
     int pipe_out[2];
     std::string data = req.getBody();
 
-    std::cout << BOLD_VIOLET << scriptPath << RESET << std::endl;
-    std::cout << "Fonction script..." << std::endl;
-    std::cout << "Method: " << req.getMethod() << std::endl;
-    std::cout << "Data: " << data << std::endl;  
+    std::cerr << BOLD_TURQUOISE << scriptPath << std::endl;
+    std::cerr << "Fonction script..." << std::endl;
+    std::cerr << "Method: " << req.getMethod() << std::endl;
+    std::cerr << "Data: " << req.getBody() <<  RESET << std::endl;
  
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -84,32 +138,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int
             exit(1);
         }
 
-        std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
-        std::string contentLengthEnv;
-
-        if ( req.getMethod() == "POST") 
-        {
-            contentLengthEnv =  "CONTENT_LENGTH=" + itos(data.size());
-        }
-        else
-            contentLengthEnv = ""; 
-    
-        addToEnvironment(requestMethodEnv);
-        addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
-
-        if (getExeContext(scriptPath) == "php-cgi")
-        {
-            addToEnvironment("CONTENT_TYPE=application/x-www-form-urlencoded");
-            addToEnvironment("REDIRECT_STATUS=1");
-            addToEnvironment("SCRIPT_NAME=" + scriptPath);
-            addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
-        }else
-        {
-            addToEnvironment("PYTHONWARNINGS=ignore");
-        }
-        addToEnvironment(NULL);
-        std::cerr << "Child: Environment variables set: " << requestMethodEnv
-                  << ", " << contentLengthEnv << std::endl;
+        setEnvironment(req);
+        debugEnvironment();
  
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -120,6 +150,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int
 
         std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
 
+        //
         execve("/usr/bin/env", argv, environment.data());     
         perror("execve");
         std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;

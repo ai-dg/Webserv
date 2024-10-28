@@ -23,3 +23,16 @@ std::string itos(int number)
     ss << number;
     return ss.str();
 }
+
+std::string upperCaseMe(std::string str)
+{
+    int i = 0;
+    std::string cpy(str);
+
+	while (cpy[i] != '\0')
+	{
+		char c = toupper(cpy[i]);
+        i++;
+	}
+    return cpy;
+}

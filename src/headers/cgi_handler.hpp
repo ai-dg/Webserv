@@ -15,6 +15,8 @@ class Cgi_handler
         int fd_client;
         std::vector<char *> environment;
         std::string getExeContext(std::string file);
+        void setEnvironment(HttpRequest req);
+        void debugEnvironment();
         void addToEnvironment(std::string env);
         void addToEnvironment(const char * env);
  
