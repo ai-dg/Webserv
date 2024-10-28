@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "stringUtils.hpp"
+#include "HttpRequest.hpp"
 
 
 class Cgi_handler
@@ -20,7 +21,7 @@ class Cgi_handler
     public:
         Cgi_handler();
         ~Cgi_handler();
-        void executeCGI(std::string const& scriptPath, std::string const& queryString, std::string const& method, int fd_client);
+        void executeCGI(std::string const& scriptPath, HttpRequest req, int fd_client);
 
 };
 

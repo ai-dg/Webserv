@@ -55,6 +55,15 @@ if form:
     satisfaction = form.getvalue("satisfaction", "N/A")
     comments = form.getvalue("comments", "N/A")
 
+        # Gestion de l'upload de fichier
+    uploaded_file = form["file"] if "file" in form else None
+    if uploaded_file and uploaded_file.filename:
+        file_path = os.path.join(image_upload_dir, os.path.basename(uploaded_file.filename))
+        
+        # Écriture du fichier dans le répertoire des images
+        with open(file_path, "wb") as output_file:
+            shutil.copyfileobj(uploaded_file.file, output_file)
+
     
     html_success_template = html_success_template.replace("{{project_name}}", project_name)
     html_success_template = html_success_template.replace("{{project_grade}}", project_grade)
@@ -74,6 +83,8 @@ if form:
         f.write(f"Expérience: {experience}\n")
         f.write(f"Satisfaction: {satisfaction}/5\n")
         f.write(f"Commentaires: {comments}\n")
+        if uploaded_file and uploaded_file.filename:
+            f.write(f"Fichier image: {file_path}\n")
         f.write("-" * 40 + "\n")
 
     characters = len(html_success_template)

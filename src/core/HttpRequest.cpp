@@ -12,9 +12,11 @@ HttpRequest::HttpRequest(std::string req)
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
+
     std::cout << req << std::endl;
     parseRequest(req);
     this->server = server;
+    this->postbody = getBody();
     //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
@@ -71,7 +73,13 @@ std::string HttpRequest::getMethod() const
 
 std::string HttpRequest::getBody() const
 {
-    return this->body;
+    if (getMethod() == "POST") 
+        return postbody;
+    else if (getMethod() == "GET") 
+        return getQueryString();
+    else if (getMethod() == "DELETE") 
+        return "";
+    return "";
 }
 
 /**

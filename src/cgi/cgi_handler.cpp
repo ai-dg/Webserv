@@ -1,4 +1,5 @@
 #include "../headers/cgi_handler.hpp"
+#include "../headers/HttpRequest.hpp"
 #include <iostream>
 #include <sys/wait.h>   
 #include <cstdlib>      
@@ -44,15 +45,16 @@ std::string Cgi_handler::getExeContext(std::string file)
 
 }
 
-void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& data, const std::string& method, int fd_client) 
+void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int fd_client) 
 {
     pid_t pid;
     int pipe_in[2]; 
     int pipe_out[2];
+    std::string data = req.getBody();
 
     std::cout << BOLD_VIOLET << scriptPath << RESET << std::endl;
     std::cout << "Fonction script..." << std::endl;
-    std::cout << "Method: " << method << std::endl;
+    std::cout << "Method: " << req.getMethod() << std::endl;
     std::cout << "Data: " << data << std::endl;  
  
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
@@ -82,10 +84,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, const std::string& d
             exit(1);
         }
 
-        std::string requestMethodEnv = "REQUEST_METHOD=" + method;    //void executeCGIWithoutFork(const std::string& scriptPath, const std::string& queryString, int fd_client);
+        std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
         std::string contentLengthEnv;
 
-        if (method == "POST") 
+        if ( req.getMethod() == "POST") 
         {
             contentLengthEnv =  "CONTENT_LENGTH=" + itos(data.size());
         }
