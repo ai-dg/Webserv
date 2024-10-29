@@ -82,7 +82,7 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
 void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager)
 {
     std::cout << "-------------------------Entering type_request_manager..." << std::endl;
-    *req += std::string(buff, *reads);
+    //*req += std::string(buff, *reads);
     if ((*req).find("\r\n\r\n") != std::string::npos) 
     {
         std::cout << "Request headers detected, parsing request..." << std::endl;
@@ -217,17 +217,31 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
                     close(fd_client);
                     epoll.removeFd(fd_client);
                 } 
-                else if (reads > 0) 
-                {
-                    type_request_manager(&fd_client, &req, buff, &reads, server, &epoll, sessionManager);
-                    Epoll::purgeTimeOutFds(conf, epoll.getFd());
-                } 
-                else 
+                if (reads < 0)
                 { 
                     perror("read");
                     close(fd_client);
                     epoll.removeFd(fd_client);
                 }
+                else
+                {
+                    while (reads > 0) 
+                    {                        
+                        req += buff;
+                        bzero(buff, BUFFER_SIZE);
+                        reads = read(fd_client, buff, BUFFER_SIZE);
+                        if (reads < BUFFER_SIZE)
+                        {
+                            req += buff;
+                            bzero(buff, BUFFER_SIZE);
+                            break;
+                        }
+                    } 
+                    type_request_manager(&fd_client, &req, buff, &reads, server, &epoll, sessionManager);
+                    Epoll::purgeTimeOutFds(conf, epoll.getFd());
+
+                } 
+            
             }
         }
     }

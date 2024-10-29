@@ -6,14 +6,13 @@
  */
 HttpRequest::HttpRequest(std::string req)
 {
-    std::cout << req << std::endl;
+    std::cout << std::endl << BOLD_YELLOW << req << RESET << std::endl;
     parseRequest(req);
 }
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
-
-    std::cout << req << std::endl;
+    std::cout << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
     parseRequest(req);
     this->server = server;
     //this->postbody = getBody();
@@ -168,7 +167,6 @@ void HttpRequest::setBody(std::string req)
     
 // }
 
-
 void HttpRequest::parseRequest(std::string req)
 {
     this->setMethod(req);
@@ -220,7 +218,7 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
-    std::cout << req << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
+    std::cout << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
 // void HttpRequest::addToHeaders(std::string line)
