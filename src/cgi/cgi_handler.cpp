@@ -78,7 +78,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
 
     if (req.getMethod() == "POST") 
     {
-        contentLengthEnv =  "CONTENT_LENGTH=" + itos(req.getBody().size());
+        contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
     }
     else
         contentLengthEnv = ""; 
