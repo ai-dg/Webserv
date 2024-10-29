@@ -9,6 +9,8 @@
 #include "../headers/Log.hpp"
 #include "../headers/colors.hpp"
 #include <sstream>
+#include <cstring>
+
 
 Cgi_handler::Cgi_handler()
 {
@@ -17,12 +19,15 @@ Cgi_handler::Cgi_handler()
 
 void Cgi_handler::addToEnvironment(const char * env)
 {
-    environment.push_back(const_cast<char *>(env));
+    if (env)
+        environment.push_back(strdup(const_cast<char *>(env)));
+    else
+        environment.push_back(NULL);
 }
 
 void Cgi_handler::addToEnvironment(std::string env)
 {
-    environment.push_back(const_cast<char*>(env.c_str()));
+    environment.push_back(strdup(const_cast<char*>(env.c_str())));
 }
 
 
@@ -41,7 +46,12 @@ void Cgi_handler::debugEnvironment()
 }
 
 Cgi_handler::~Cgi_handler()
-{
+{    
+    for (int i = 0; i < environment.size(); ++i)
+    {
+        delete environment[i];
+    }
+    environment.clear();
     std::cout << "CGI Handler destroyed" << std::endl;
 }
 
@@ -60,7 +70,7 @@ std::string Cgi_handler::getExeContext(std::string file)
     return "";
 }
 
-void Cgi_handler::setEnvironment(HttpRequest req)
+void Cgi_handler::setEnvironment(HttpRequest &req)
 {
     std::map<std::string, std::string> headers = req.getHeaders();
     std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
@@ -76,11 +86,11 @@ void Cgi_handler::setEnvironment(HttpRequest req)
     addToEnvironment(requestMethodEnv);
     addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
         
-    /*std::map<std::string, std::string>::iterator it;
+    std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
     {
         addToEnvironment(req.getFormatedHeader(it->first));
-    }   */   
+    }      
 
     if (getExeContext(scriptPath) == "php-cgi")
     {
@@ -96,20 +106,17 @@ void Cgi_handler::setEnvironment(HttpRequest req)
 
     std::cerr << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
-    debugEnvironment();
 }
 
-void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int fd_client) 
+void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) 
 {
     pid_t pid;
     int pipe_in[2]; 
     int pipe_out[2];
+
     std::string data = req.getBody();
 
-    std::cerr << BOLD_TURQUOISE << scriptPath << std::endl;
-    std::cerr << "Fonction script..." << std::endl;
-    std::cerr << "Method: " << req.getMethod() << std::endl;
-    std::cerr << "Data: " << req.getBody() <<  RESET << std::endl;
+    std::cout << data <<  RESET << std::endl;
  
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -205,12 +212,12 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest req, int
         {
             //std::cerr << BOLD_RED << "CGI Output:" << std::string(buffer, bytesRead) << RESET << std::endl;
             //std::cerr << "Parent: Read " << bytesRead << " bytes from the pipe." << std::endl;
-            std::cerr << "-----------fd_client content---------" << std::endl;
+            //std::cerr << "-----------fd_client content---------" << std::endl;
             write(fd_client, buffer, bytesRead);
-            std::cerr << "-----------end fd_client ---------" << std::endl;
-            std::cerr << "----------   stdout   ------------" << std::endl;
+            //std::cerr << "-----------end fd_client ---------" << std::endl;
+            /*std::cerr << "----------   stdout   ------------" << std::endl;
             write(STDIN_FILENO, buffer, bytesRead); 
-            std::cerr << "------------   end  --------------" << std::endl;
+            std::cerr << "------------   end  --------------" << std::endl;*/
             bzero(buffer, 2048);
         }
 
