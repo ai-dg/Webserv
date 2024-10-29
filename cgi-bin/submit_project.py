@@ -2,6 +2,7 @@
 import cgi
 import cgitb
 import os
+import shutil 
 
 cgitb.enable()
 
@@ -56,8 +57,10 @@ if form:
     comments = form.getvalue("comments", "N/A")
 
         # Gestion de l'upload de fichier
-    uploaded_file = form["file"] if "file" in form else None
+    uploaded_file = form["image"] if "image" in form else None
     if uploaded_file and uploaded_file.filename:
+        image_upload_dir = "./www/html/images"  # Assure-toi que ce chemin est correct
+        os.makedirs(image_upload_dir, exist_ok=True)
         file_path = os.path.join(image_upload_dir, os.path.basename(uploaded_file.filename))
         
         # Écriture du fichier dans le répertoire des images
