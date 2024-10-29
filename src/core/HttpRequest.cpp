@@ -122,11 +122,12 @@ void HttpRequest::setMethod(std::string req)
 
 void HttpRequest::setHeaders(std::string req)
 {
-    size_t crlfPos = req.find(CRLF);
+    size_t crlfPos = req.find(CRLF); 
+
     size_t start = crlfPos + 2;
-    std::string headersPart = req.substr(start);
+    std::string headersPart = req.substr(start, req.find("\r\n\r\n"));
     while ((crlfPos = headersPart.find(CRLF)) != std::string::npos)
-    {
+    {       
         std::string line = headersPart.substr(0, crlfPos);
         this->addToHeaders(line);
         headersPart.erase(0, crlfPos + 2);

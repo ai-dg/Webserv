@@ -4,38 +4,9 @@ import cgitb
 import os
 import shutil 
 import sys
-import mimetypes
-from pathlib import Path
 
 # Active le débogage CGI
 cgitb.enable()
-
-# Configuration pour les images
-UPLOAD_DIR = "./www/html/images"
-ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif'}
-MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
-
-def is_valid_image(fileitem):
-    """Vérifie si le fichier est une image valide"""
-    if not fileitem.filename:
-        return False
-    
-    # Vérifie l'extension
-    file_ext = os.path.splitext(fileitem.filename)[1].lower()
-    if file_ext not in ALLOWED_EXTENSIONS:
-        return False
-    
-    # Vérifie le type MIME
-    mime_type = mimetypes.guess_type(fileitem.filename)[0]
-    if not mime_type or not mime_type.startswith('image/'):
-        return False
-    
-    return True
-
-def sanitize_filename(filename):
-    """Nettoie le nom de fichier pour le rendre sûr"""
-    filename = os.path.basename(filename)
-    return ''.join(c for c in filename if c.isalnum() or c in '._-')
 
 # Récupération des variables d'environnement
 request_method = os.getenv("REQUEST_METHOD", "")
@@ -62,7 +33,7 @@ except FileNotFoundError:
     print("<html><body><h1>Erreur: Template HTML introuvable</h1></body></html>")
     exit(1)
 
-# Débogage - affichage des données du formulaire
+# Fonction de débogage pour afficher les données du formulaire
 for key in form.keys() if form else []:
     print(f"{key}: {form.getvalue(key)}", file=sys.stderr)
 
@@ -93,49 +64,16 @@ if form:
 
     # Gestion de l'upload de fichier
     file_path = None
-    upload_error = None
     if "image" in form:
         uploaded_file = form["image"]
-        # Débogage modifié pour éviter l'erreur fileno
-        print(f"Nom du fichier: {uploaded_file.filename}", file=sys.stderr)
-        print(f"Type du fichier: {uploaded_file.type}", file=sys.stderr)
-        
         if isinstance(uploaded_file, cgi.FieldStorage) and uploaded_file.file:
-            try:
-                # Vérifie si c'est une image valide
-                if not is_valid_image(uploaded_file):
-                    upload_error = "Format de fichier non valide"
-                else:
-                    # Crée le répertoire si nécessaire
-                    os.makedirs(UPLOAD_DIR, exist_ok=True)
-                    
-                    # Nettoie et sécurise le nom de fichier
-                    safe_filename = sanitize_filename(uploaded_file.filename)
-                    
-                    # Ajoute un timestamp si le fichier existe déjà
-                    base, ext = os.path.splitext(safe_filename)
-                    if os.path.exists(os.path.join(UPLOAD_DIR, safe_filename)):
-                        import time
-                        safe_filename = f"{base}_{int(time.time())}{ext}"
-                    
-                    file_path = os.path.join(UPLOAD_DIR, safe_filename)
-                    
-                    # Écriture du fichier avec gestion du buffer
-                    with open(file_path, "wb") as output_file:
-                        while True:
-                            chunk = uploaded_file.file.read(8192)
-                            if not chunk:
-                                break
-                            output_file.write(chunk)
-                    
-                    if not os.path.exists(file_path):
-                        upload_error = "Erreur lors de l'écriture du fichier"
-                        file_path = None
-                    
-            except Exception as e:
-                upload_error = f"Erreur lors de l'upload: {str(e)}"
-                file_path = None
-                print(f"Erreur d'upload: {str(e)}", file=sys.stderr)
+            image_upload_dir = "./www/html/images"
+            os.makedirs(image_upload_dir, exist_ok=True)
+            file_path = os.path.join(image_upload_dir, os.path.basename(uploaded_file.filename))
+            
+            # Écriture du fichier
+            with open(file_path, "wb") as output_file:
+                shutil.copyfileobj(uploaded_file.file, output_file)
 
     # Remplacement des variables dans le template
     html_success_template = html_success_template.replace("{{project_name}}", project_name)
@@ -158,8 +96,6 @@ if form:
         f.write(f"Commentaires: {comments}\n")
         if file_path:
             f.write(f"Fichier image: {file_path}\n")
-        if upload_error:
-            f.write(f"Erreur upload: {upload_error}\n")
         f.write("-" * 40 + "\n")
 
     # Envoi de la réponse HTTP

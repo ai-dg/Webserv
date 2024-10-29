@@ -91,10 +91,10 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     {
         addToEnvironment(req.getFormatedHeader(it->first));
     }      
-
+    addToEnvironment("CONTENT_TYPE="+req.getHeader("Content-Type"));
     if (getExeContext(scriptPath) == "php-cgi")
     {
-        addToEnvironment("CONTENT_TYPE=application/x-www-form-urlencoded");
+        
         addToEnvironment("REDIRECT_STATUS=1");
         addToEnvironment("SCRIPT_NAME=" + scriptPath);
         addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
@@ -116,7 +116,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
     std::string data = req.getBody();
 
-    std::cout << data <<  RESET << std::endl;
+    std::cout << data  << std::endl;
+    std::cout << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
  
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -215,9 +216,9 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             //std::cerr << "-----------fd_client content---------" << std::endl;
             write(fd_client, buffer, bytesRead);
             //std::cerr << "-----------end fd_client ---------" << std::endl;
-            /*std::cerr << "----------   stdout   ------------" << std::endl;
+            std::cerr << "----------   stdout   ------------" << std::endl;
             write(STDIN_FILENO, buffer, bytesRead); 
-            std::cerr << "------------   end  --------------" << std::endl;*/
+            std::cerr << "------------   end  --------------" << std::endl;
             bzero(buffer, 2048);
         }
 
