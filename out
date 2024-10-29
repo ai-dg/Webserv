@@ -1,0 +1,59 @@
+Sessions loaded from file.
+SessionManager created
+Initialize conf path
+Key: server, Value: {
+Key not found: server
+Key: host, Value: 127.0.0.1
+Key: server_name, Value: myserver.local
+Key: error_page_404, Value: /error_pages/404.html
+Key: error_page_500, Value: /error_pages/500.html
+Key: client_max_body_size, Value: 4M
+Key: keepalive_timeout, Value: 65
+Key: client_body_timeout, Value: 60
+Key: client_header_timeout, Value: 10
+Key: location_/root, Value: /www/html
+Key: location_/index, Value: index.html
+Key: location_/methods, Value: GET POST
+Key: location_/images/root, Value: /www/images
+Key: location_/images/autoindex, Value: on
+Key: location_/upload/root, Value: /www/uploads
+Key: location_/upload/methods, Value: POST
+Key: location_/upload/upload_store, Value: /uploads/
+Key: location_/cgi-bin/root, Value: /www/cgi-bin
+Key: location_/cgi-bin/cgi, Value: on
+Key: location_/cgi-bin/cgi_bin, Value: /cgi-bin/
+Key: location_/cgi-bin/methods, Value: GET POST
+Key: location_/cgi-bin/extension, Value: .py
+Key: location_/old-page/return, Value: 301 /new-page
+-------Config values from map---------
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 4M
+error_page_404: /error_pages/404.html
+error_page_500: /error_pages/500.html
+host: 127.0.0.1
+keepalive_timeout: 65
+location_/cgi-bin/cgi: on
+location_/cgi-bin/cgi_bin: /cgi-bin/
+location_/cgi-bin/extension: .py
+location_/cgi-bin/methods: GET POST
+location_/cgi-bin/root: /www/cgi-bin
+location_/images/autoindex: on
+location_/images/root: /www/images
+location_/index: index.html
+location_/methods: GET POST
+location_/old-page/return: 301 /new-page
+location_/root: /www/html
+location_/upload/methods: POST
+location_/upload/root: /www/uploads
+location_/upload/upload_store: /uploads/
+server_name: myserver.local
+Ports to listen on 3: 8080 8090 9090 
+--------------------------------------
+Nbr de ports : 3
+server on
+listening 127.0.0.1 on ports 8080 8090 9090 
+127.0.0.1
+Listening on port: 8080
+Listening on port: 8090
+Listening on port: 9090

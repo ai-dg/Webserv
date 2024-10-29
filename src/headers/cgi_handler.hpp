@@ -15,7 +15,7 @@ class Cgi_handler
         int fd_client;
         std::vector<char *> environment;
         std::string getExeContext(std::string file);
-        void setEnvironment(HttpRequest req);
+        void setEnvironment(HttpRequest &req);
         void debugEnvironment();
         void addToEnvironment(std::string env);
         void addToEnvironment(const char * env);
@@ -23,7 +23,7 @@ class Cgi_handler
     public:
         Cgi_handler();
         ~Cgi_handler();
-        void executeCGI(std::string const& scriptPath, HttpRequest req, int fd_client);
+        void executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client);
 
 };
 

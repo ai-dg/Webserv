@@ -68,7 +68,6 @@ std::string HttpRequest::getHeader(std::string key)
 
 std::string HttpRequest::getFormatedHeader(std::string key)
 {
-
     return "HTTP_" + upperCaseMe(key) + ": " + this->headers[key];
 }
 
@@ -87,7 +86,7 @@ std::string HttpRequest::getBody() const
 
     std::cerr << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST") 
-        return "";//body;
+        return body;
     else if (method == "GET") 
         return getQueryString();
     else if (method == "DELETE") 

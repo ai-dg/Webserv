@@ -31,7 +31,7 @@ std::string upperCaseMe(std::string str)
 
 	while (cpy[i] != '\0')
 	{
-		char c = toupper(cpy[i]);
+		cpy[i] = toupper(cpy[i]);
         i++;
 	}
     return cpy;
