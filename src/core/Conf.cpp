@@ -14,7 +14,7 @@ void Conf::operator=(Conf &conf)
 
 Conf::Conf(std::string& path) : path(path)
 {
-    std::cout << "Initialize conf path" << std::endl;
+    //std::cout << "Initialize conf path" << std::endl;
     listenPorts.clear();
 
     // configMap.insert(std::make_pair("listen", ""));
@@ -48,7 +48,7 @@ Conf::Conf(std::string& path) : path(path)
 
     getValuesFromPath();
     checkAndSetDefaultValues();
-    printConfigs();
+    //printConfigs();
 }
 
 Conf::~Conf()
@@ -125,7 +125,7 @@ void Conf::getValuesFromPath()
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
             
-            std::cout << "Key: " << key << ", Value: " << value << std::endl;
+            // std::cout << "Key: " << key << ", Value: " << value << std::endl;
 
             if (hasKey(key)) 
             {

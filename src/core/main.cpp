@@ -74,7 +74,7 @@ int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
             close(fd_socket);
             return(1);        
         }
-        std::cout << "Listening on port: " << server->getPorts()[i] << std::endl;
+        //std::cout << "Listening on port: " << server->getPorts()[i] << std::endl;
     }
     return 0;
 }

@@ -13,6 +13,7 @@
 #include "../headers/Server.hpp"
 #include "../headers/Conf.hpp"
 #include "../headers/parser.hpp"
+#include "../headers/colors.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <netinet/in.h>
@@ -32,7 +33,7 @@ Server::Server(Conf const& c) : conf(c)
 {
     std::vector<std::string> listenPorts = conf.getListenPorts();
 
-    std::cout << "Nbr de ports : " << listenPorts.size() << std::endl;
+    //std::cout << "Nbr de ports : " << listenPorts.size() << std::endl;
 
     for (size_t i = 0; i < listenPorts.size(); ++i) 
     {
@@ -55,7 +56,7 @@ Server::Server(Conf const& c) : conf(c)
     }
     else
     {
-        std::cout << "server on" << std::endl;
+        std::cout << BOLD_GREEN << "Server on" << RESET << std::endl;
         std::cout << "listening " << conf.getConfig("host") << " on ports ";
         std::vector<int>::iterator it;
         for (it = ports.begin(); it != ports.end(); it++)
@@ -86,7 +87,6 @@ void Server::addPort(int port)
 
 in_addr_t Server::getAddr()
 {
-    std::cout << inet_ntoa(host_ip) <<std::endl;
     return (host_ip.s_addr);
 }
 
