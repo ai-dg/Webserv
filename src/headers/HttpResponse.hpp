@@ -12,6 +12,8 @@
 #include "../headers/date.hpp"
 #include "../headers/includes.hpp"
 
+#define AUTO 200
+
 
 class HttpResponse
 {
@@ -25,7 +27,9 @@ class HttpResponse
     public :
         HttpResponse(const HttpRequest &req);
         ~HttpResponse();
+        void setStatusCode(int stat);
         void setRedirection(std::string newPath);
+        void setRedirection(int status);
         void setRedirection(std::string newPath, int status);
         void send(int fd_client);
         void setResourcePath(const HttpRequest &req);

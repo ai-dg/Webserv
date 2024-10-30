@@ -31,8 +31,6 @@ void HttpResponse::send(int fd_client)
     std::string resFile = getFile(this->filePath);
     if (resFile == FILENOTFOUND)
         this->statusCode = 404;
-    else
-        this->statusCode = 200;
 
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + "\r\n";
 
@@ -95,10 +93,30 @@ void HttpResponse::setRedirection(std::string newPath)
     filePath = newPath;
 }
 
+void HttpResponse::setRedirection(int status)
+{
+    setStatusCode(status);
+    if (status == 403)
+        filePath = "www/error_pages/403.html";
+}
+
 void HttpResponse::setRedirection(std::string newPath, int status)
 {
     filePath = newPath;
-    statusCode = status;
+    setStatusCode(status);
+}
+
+void HttpResponse::setStatusCode(int stat)
+{
+    if (stat == AUTO)
+    {
+        if (getFile(this->filePath) == FILENOTFOUND)
+            statusCode = 404;
+        else
+            this->statusCode = 200;
+    }
+    else
+        statusCode = stat;
 }
 
 void HttpResponse::setResourcePath(const HttpRequest &req)
@@ -117,8 +135,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         this->filePath = "www/html" + uri;
     }
-
-    std::cout << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
+    setStatusCode(AUTO);
+    //std::cout << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
 std::string HttpResponse::getFilePath() const
