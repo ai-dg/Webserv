@@ -133,7 +133,8 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
         }
         else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
         {
-            response.setRedirection("www/html/error_pages/403.hml");
+            response.setRedirection(403);
+            response.send(*fd_client);
         }
         else 
         {
