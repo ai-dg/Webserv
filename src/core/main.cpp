@@ -6,6 +6,7 @@
 #include <arpa/inet.h>
 #include <vector>
 #include "../headers/Server.hpp"
+#include "../headers/colors.hpp"
 #include "../headers/files.hpp"
 #include "../headers/parser.hpp"
 #include "../headers/HttpRequest.hpp"
@@ -121,15 +122,19 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
 
 
         std::string filePath = response.getFilePath();  
-        std::cout << "File path for response: " << filePath << std::endl;
+        std::cout << BOLD_VIOLET << "File path for response: " << filePath << RESET << std::endl;
 
-        if (filePath.find("cgi-bin/") == 0) 
+        if (filePath.find("cgi-bin/") == 0 && server->getCgiStatus()) 
         {
             Cgi_handler cgiHandler;
             std::cout << "Executing CGI script..." << std::endl;
             cgiHandler.executeCGI(filePath, request, *fd_client);     
              std::cout << "EXECUTECGI-OUT" << std::endl;      
-        } 
+        }
+        else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
+        {
+            response.setRedirection("www/html/error_pages/403.hml");
+        }
         else 
         {
             response.send(*fd_client);

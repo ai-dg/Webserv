@@ -1,5 +1,6 @@
 #include "../headers/HttpResponse.hpp"
 #include "../headers/colors.hpp"
+#include "../headers/Status.hpp"
 #include <unistd.h>
 #include <sstream>
 
@@ -20,6 +21,11 @@ HttpResponse::~HttpResponse()
 
 }
 
+// void HttpResponse::send(int fd_client, int statusCode)
+// {
+
+// }
+
 void HttpResponse::send(int fd_client)
 {
     std::string resFile = getFile(this->filePath);
@@ -28,7 +34,7 @@ void HttpResponse::send(int fd_client)
     else
         this->statusCode = 200;
 
-    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\n";
+    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + "\r\n";
 
     for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
         res += it->first + ": " + it->second ;
@@ -84,6 +90,16 @@ void HttpResponse::send(int fd_client)
 //     std::cout << RED << "done" << RESET << std::endl;
 // }
 
+void HttpResponse::setRedirection(std::string newPath)
+{
+    filePath = newPath;
+}
+
+void HttpResponse::setRedirection(std::string newPath, int status)
+{
+    filePath = newPath;
+    statusCode = status;
+}
 
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
