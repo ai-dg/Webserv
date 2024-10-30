@@ -1,7 +1,7 @@
 Finir les pb avec l'upload d'images et autre types
 factoriser le code cgi_handler.cpp
 harmoniser css(média queries)
-bugs du servers lors du plantage des scripts
+
 
 completer les receptions/envoie d'entetes http
     date, nom du serveur, compression (ou non)...
