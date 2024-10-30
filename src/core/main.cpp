@@ -145,8 +145,8 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
         *req = "";
         if (request.getHeader("Connection") != "keep-alive") 
         {
-            close(*fd_client);
             epoll->removeFd(*fd_client);
+            close(*fd_client);
             std::cout << "Closed client connection" << std::endl;
         }
         sessionManager.saveSessionsToFile();
@@ -220,14 +220,14 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
                 reads = read(fd_client, buff, BUFFER_SIZE);
                 if (reads == 0) 
                 {
-                    close(fd_client);
                     epoll.removeFd(fd_client);
+                    close(fd_client);
                 } 
                 if (reads < 0)
                 { 
                     perror("read");
-                    close(fd_client);
                     epoll.removeFd(fd_client);
+                    close(fd_client);
                 }
                 else
                 {

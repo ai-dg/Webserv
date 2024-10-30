@@ -26,7 +26,8 @@ int Epoll::getFd(void)
 
 Epoll::~Epoll() 
 {
-    close(epollFd); 
+    close(epollFd);
+    timers.clear();
     delete[] events;
 }
 

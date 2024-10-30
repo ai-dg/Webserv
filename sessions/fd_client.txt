@@ -1,22 +1,8 @@
-HTTP/1.1 403 Forbidden
+HTTP/1.1 404 Not Found
 Set-Cookie: sessionId=8387ec4e1f397bbd; Path=/; HttpOnly
-Content-Type: ; charset=UTF-8
+Content-Type: text/css; charset=UTF-8
 Connection: keep-alive
-Content-Length: 396
-Date: Wed, 30 Oct 2024 14:16:34 GMT
+Content-Length: 14
+Date: Wed, 30 Oct 2024 14:51:43 GMT
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>403 Forbidden</title>
-</head>
-<body>
-    <div style="text-align: center; position: absolute; top:10%; left:50%; transform: translateX(-50%);">
-        <h1 style="font-size: 64px;">
-            403 FORBIDDEN
-        </h1>
-</div>
-</body>
-</html>
+FILE NOT FOUND
