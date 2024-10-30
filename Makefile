@@ -7,6 +7,7 @@ SRC = src/core/main.cpp \
       src/core/handler.cpp \
 	  src/core/Epoll.cpp \
 	  src/core/Cookies.cpp \
+	  src/core/Status.cpp \
 	  src/core/SessionManager.cpp \
       src/cgi/cgi_handler.cpp \
 	  src/utils/date.cpp \

@@ -13,7 +13,7 @@ cgitb.enable()
 # Configuration pour les images
 UPLOAD_DIR = "./www/html/images"
 ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif'}
-MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
+MAX_FILE_SIZE = 8 * 1024 * 1024  # 5 MB
 
 def is_valid_image(fileitem):
     """Vérifie si le fichier est une image valide"""

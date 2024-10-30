@@ -44,6 +44,9 @@ class Server
         in_addr_t getAddr();
         std::string getHostipv4();
         std::vector<int>getPorts();
+        bool getCgiStatus();
+        
+
         //int* getPorts(int& count);
         int getNumPorts() const;
 };

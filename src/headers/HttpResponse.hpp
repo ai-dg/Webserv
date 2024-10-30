@@ -25,7 +25,8 @@ class HttpResponse
     public :
         HttpResponse(const HttpRequest &req);
         ~HttpResponse();
-
+        void setRedirection(std::string newPath);
+        void setRedirection(std::string newPath, int status);
         void send(int fd_client);
         void setResourcePath(const HttpRequest &req);
         std::string getFilePath() const;

@@ -77,6 +77,15 @@ Server::~Server()
     std::cout << "Server destroyed" << std::endl;
 }
 
+
+
+bool Server::getCgiStatus()
+{
+    if (conf.getConfig("location_/cgi-bin/cgi") == "on" )
+        return true;
+    return false;
+}
+
 void Server::addPort(int port)
 {
     
