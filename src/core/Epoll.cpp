@@ -59,12 +59,12 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epollFd)
     {
         if (now - it->second > MAX_TIME)
         {
-            close(it->first);
             if (epoll_ctl(epollFd, EPOLL_CTL_DEL, it->first, NULL) == -1) 
             {
                 perror("epoll_ctl: removeFd");
                 return false;
             }
+            close(it->first);
             Epoll::timers.erase(it++);
         }
         else
@@ -75,12 +75,12 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epollFd)
 
 bool Epoll::removeFd(int fd)
 {
-    Epoll::timers.erase(fd);
     if (epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, NULL) == -1) 
     {
         perror("epoll_ctl: removeFd");
         return false;
     }
+    Epoll::timers.erase(fd);
     return true;
 }
 
