@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "../headers/colors.hpp"
 
 Conf::Conf()
 {
@@ -48,7 +49,21 @@ Conf::Conf(std::string& path) : path(path)
 
     getValuesFromPath();
     checkAndSetDefaultValues();
-    //printConfigs();
+    init();//printConfigs();
+}
+
+void Conf::printStatus(bool status, std::string text)
+{
+    if (status)    
+        std::cout << "[  "<< GREEN << "on" << RESET << "   ]  "<< text  << std::endl;
+    else
+        std::cout << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
+}
+
+void Conf::init()
+{
+    printStatus(getConfig("location_/cgi-bin/cgi") == "on", "enable Cgi");
+
 }
 
 Conf::~Conf()
