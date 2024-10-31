@@ -7,5 +7,7 @@
 std::string replaceBy(std::string original, std::string find, std::string replace);
 std::pair<std::string, std::string> split(std::string const& str, char delimiter);
 std::string itos(int number);
+std::string trim(std::string str);
+std::string upperCaseMe(std::string);
 std::string upperCaseMe(std::string);
 #endif

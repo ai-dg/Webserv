@@ -20,6 +20,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <string>
+#include <sstream>
 
 
 /**
@@ -38,9 +39,11 @@ size_t Server::getMaxBodySize()
 
 void Server::setMaxBodySize()
 {
+    std::stringstream stream;
     maxBodySize = 2048;
     int multi = 1;
-    std::string mbs = conf.getConfig("client_max_body_size");
+    std::string mbs = trim(conf.getConfig("client_max_body_size"));
+    stream << mbs;
     try {
         if (mbs[mbs.size() - 1] == 'M')
             multi = 1024;
@@ -48,7 +51,8 @@ void Server::setMaxBodySize()
             multi = 1;
         else
             throw InvalidArgException();
-        int max = atoi((conf.getConfig("client_max_body_size")).c_str());
+        int max ;
+        stream >> max;
         maxBodySize = max * multi;
         char unit = 'K';
         if (multi > 1)
