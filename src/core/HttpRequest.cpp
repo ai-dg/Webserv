@@ -152,6 +152,16 @@ void HttpRequest::setBody(std::string req)
     }
 }
 
+bool HttpRequest::isValidBodySize() const
+{
+    size_t size = body.size();
+    if (size <= server->getMaxBodySize())
+        return true;
+    return false;
+}
+
+
+
 // void HttpRequest::parseRequest(std::string req)
 // {
     

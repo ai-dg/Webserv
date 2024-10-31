@@ -2,6 +2,7 @@
 #include "../headers/colors.hpp"
 #include "../headers/Status.hpp"
 #include <unistd.h>
+#include <cstdlib>
 #include <sstream>
 
 // void HttpResponse::setResourcePath(const HttpRequest &req)
@@ -12,8 +13,13 @@
 
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
-    this->setResourcePath(req);
-    this-> setMineType();
+    setResourcePath(req);
+    setMineType();
+    std::cout << "is valid body size : " << req.isValidBodySize() << std::endl;
+    if (!req.isValidBodySize())
+    {
+        setRedirection(413);
+    }
 }
 
 HttpResponse::~HttpResponse()
@@ -27,7 +33,7 @@ HttpResponse::~HttpResponse()
 // }
 
 void HttpResponse::send(int fd_client)
-{
+{   
     std::string resFile = getFile(this->filePath);
     if (resFile == FILENOTFOUND)
         this->statusCode = 404;
@@ -61,7 +67,7 @@ void HttpResponse::send(int fd_client)
     {
         file << res;
         file.close();
-        std::cout << "----------fd_client enregistré dans fd_client.txt---------------" << std::endl;
+        //std::cout << "----------fd_client enregistré dans fd_client.txt---------------" << std::endl;
     } 
     else 
     {
@@ -95,9 +101,18 @@ void HttpResponse::setRedirection(std::string newPath)
 
 void HttpResponse::setRedirection(int status)
 {
+    std::stringstream fp;
+    switch (status)
+    {
+        case 403:
+        case 404:
+        case 413:
+        case 500: fp << "www/error_pages/" << status <<".html";
+                    filePath = fp.str(); break;   
+        default: break;
+    }  
     setStatusCode(status);
-    if (status == 403)
-        filePath = "www/error_pages/403.html";
+    
 }
 
 void HttpResponse::setRedirection(std::string newPath, int status)
