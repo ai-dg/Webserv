@@ -19,6 +19,8 @@ class Conf
         ~Conf();
 
         void getValuesFromPath();
+        void init();
+        void printStatus(bool status, std::string text);
         void setConf(std::string const& key, std::string const value);
         std::string getConfig(const std::string& key) const;
         bool hasKey(std::string const& key) const;

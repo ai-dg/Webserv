@@ -47,7 +47,7 @@ Server::Server(Conf const& c) : conf(c)
         else 
         {
             std::cerr << "Port invalide dans la configuration : " << portNumber << std::endl;
-        }
+        }        
     }
     
     if (inet_pton(AF_INET, (conf.getConfig("host")).c_str(), &host_ip) < 0)
@@ -76,8 +76,6 @@ Server::~Server()
 {
     std::cout << "Server destroyed" << std::endl;
 }
-
-
 
 bool Server::getCgiStatus()
 {
