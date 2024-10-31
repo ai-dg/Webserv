@@ -34,7 +34,8 @@ class Server
         int keepAlive;
         std::map<int, std::string> err;
         std::vector<int> ports;
-        int maxBodySize;
+        size_t maxBodySize;
+        void setMaxBodySize();
     
     public:
         Server();
@@ -42,6 +43,7 @@ class Server
         ~Server();
         void addPort(int port);
         in_addr_t getAddr();
+        size_t getMaxBodySize();
         std::string getHostipv4();
         std::vector<int>getPorts();
         bool getCgiStatus();

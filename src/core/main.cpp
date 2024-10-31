@@ -126,10 +126,17 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
 
         if (filePath.find("cgi-bin/") == 0 && server->getCgiStatus()) 
         {
-            Cgi_handler cgiHandler;
-            std::cout << "Executing CGI script..." << std::endl;
-            cgiHandler.executeCGI(filePath, request, *fd_client);     
-             std::cout << "EXECUTECGI-OUT" << std::endl;      
+            if (request.isValidBodySize())
+            {
+                Cgi_handler cgiHandler;
+                std::cout << "Executing CGI script..." << std::endl;
+                cgiHandler.executeCGI(filePath, request, *fd_client);
+            }
+            else 
+            {
+                response.setRedirection(413);
+                response.send(*fd_client);
+            }
         }
         else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
         {

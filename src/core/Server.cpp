@@ -14,6 +14,7 @@
 #include "../headers/Conf.hpp"
 #include "../headers/parser.hpp"
 #include "../headers/colors.hpp"
+#include "../headers/InvalidArgException.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <netinet/in.h>
@@ -28,7 +29,38 @@ Server::Server()
 {
     std::cout << "server on" << std::endl;    
     host_ip.s_addr = htonl(INADDR_LOOPBACK);
-}        
+}
+
+size_t Server::getMaxBodySize()
+{
+    return maxBodySize;
+}
+
+void Server::setMaxBodySize()
+{
+    maxBodySize = 2048;
+    int multi = 1;
+    std::string mbs = conf.getConfig("client_max_body_size");
+    try {
+        if (mbs[mbs.size() - 1] == 'M')
+            multi = 1024;
+        else if (mbs[mbs.size() - 1] == 'K')
+            multi = 1;
+        else
+            throw InvalidArgException();
+        int max = atoi((conf.getConfig("client_max_body_size")).c_str());
+        maxBodySize = max * multi;
+        char unit = 'K';
+        if (multi > 1)
+            unit = 'M';
+        std::cout << "MAX BODY SIZE SET TO : " << maxBodySize << unit << std::endl;
+    }
+    catch (const InvalidArgException &e)
+    {
+        std::cout << e.what() << " Default value set to 3072" << std::endl;
+    }
+    
+}
 
 Server::Server(Conf const& c) : conf(c)
 {
@@ -68,8 +100,10 @@ Server::Server(Conf const& c) : conf(c)
         {
             std::cout << port[i] << " ";
         }*/
+
         std::cout << std::endl; 
     } 
+    setMaxBodySize();
 }
 
 Server::~Server()

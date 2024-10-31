@@ -34,6 +34,7 @@ class HttpRequest
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
 
+        bool isValidBodySize() const;
         std::string getRequestedFile() const;
         std::string getQueryString() const;
         std::string getURI() const;
