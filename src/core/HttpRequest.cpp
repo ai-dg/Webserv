@@ -19,6 +19,21 @@ HttpRequest::HttpRequest(std::string req, Server *server)
     //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
+HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
+{
+    parseRequest(req);
+   // headers["Host"];
+    std::vector<Server>::iterator it;
+    for (it = Servers.begin(); it != Servers.end(); ++it)
+    {
+        if (it->foundHostName(headers["Host"]))
+            server = &(*it);
+    }
+    //this->server = server;
+    //this->postbody = getBody();
+    //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
+}
+
 HttpRequest::~HttpRequest()
 {    
     std::cout << "end req" << std::endl;

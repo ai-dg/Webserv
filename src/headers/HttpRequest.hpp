@@ -31,6 +31,7 @@ class HttpRequest
         
     public :
         HttpRequest(std::string req);
+        HttpRequest(std::string req, std::vector<Server> Servers);
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
 

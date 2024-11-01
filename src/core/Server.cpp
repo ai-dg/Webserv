@@ -136,7 +136,8 @@ void Server::setHostNames()
                 std::cout <<host_names << std::endl;
                 spacepos = host_names.find_first_of(" \t");
                 if (spacepos == std::string::npos)
-                {                    Hosts.push_back(host_names);
+                {   
+                    Hosts.push_back(host_names);
                     break;
 
                 }
@@ -146,6 +147,17 @@ void Server::setHostNames()
     std::cout << "BUG" << std::endl;
     std::cout << BOLD_RED << "HOST NAMES ::::::::::::::::::::::::::::: " << RESET << std::endl;
     printContenerValues(Hosts, BOLD_RED);    
+}
+
+bool Server::foundHostName(std::string hostname)
+{
+    std::vector<std::string>::iterator it;
+    for (it = Hosts.begin(); it != Hosts.end(); ++it)
+    {
+        if (*it == hostname)
+            return true;
+    }
+    return false;
 }
 
 Server::~Server()
@@ -182,6 +194,11 @@ std::string Server::getHostipv4()
 std::vector<int>Server::getPorts()
 {
     return ports;
+}
+
+Conf Server::getConf() const
+{
+    return this->conf;
 }
 
 /*
