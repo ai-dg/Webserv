@@ -28,7 +28,6 @@ class Server
         //int port[65535];
         //int numPorts;
         struct in_addr host_ip;
-        Conf conf;
         std::vector<std::string> Hosts;
         std::string *methods;
         int keepAlive;
@@ -37,12 +36,14 @@ class Server
         size_t maxBodySize;
         void setMaxBodySize();
         void setHostNames();
+        Conf conf;
     
     public:
         Server();
         Server(Conf const& c);
         ~Server();
         void addPort(int port);
+        bool foundHostName(std::string hostname);
         in_addr_t getAddr();
         size_t getMaxBodySize();
         std::string getHostipv4();
@@ -51,6 +52,7 @@ class Server
         
 
         //int* getPorts(int& count);
+        Conf getConf() const;
         int getNumPorts() const;
 };
 

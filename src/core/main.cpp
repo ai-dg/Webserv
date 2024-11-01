@@ -6,6 +6,8 @@
 #include <arpa/inet.h>
 #include <vector>
 #include <map>
+#include <algorithm>
+#include <sstream>
 #include "../headers/Server.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/files.hpp"
@@ -22,7 +24,7 @@
 
 #define BUFFER_SIZE 2048
 
-int socket_start(std::vector<int>& fd_sockets, Server *server)
+int socket_start(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
 {
     /**
     *    int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
@@ -34,7 +36,7 @@ int socket_start(std::vector<int>& fd_sockets, Server *server)
     */
 
     fd_sockets.clear();
-    for (int i = 0; i < server->getPorts().size(); ++i)
+    for (int i = 0; i < listPorts.size(); ++i)
     {
         int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
         if (fd_socket == -1)
@@ -45,51 +47,157 @@ int socket_start(std::vector<int>& fd_sockets, Server *server)
         fd_sockets.push_back(fd_socket);
     }
     return 0;
+    
 }
 
-int setup_connection_socket(std::vector<int>& fd_sockets, Server *server)
-{
-    /*int count = 0;
-    int* ports = server->getPorts(count);
-    std::cout << "count : " << count << std::endl;*/
+// int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
+// {
+//     /*int count = 0;
+//     int* ports = server->getPorts(count);
+//     std::cout << "count : " << count << std::endl;*/
 
+//     for (std::vector<Server>::iterator it = Servers.begin(); it != Servers.end(); ++it)
+//     {
+//         struct sockaddr_in addr;
+//         addr.sin_family = AF_INET;
+//         addr.sin_addr.s_addr = it->getAddr();
+
+//         for (int i = 0; i< it->getPorts().size(); ++i)
+//         {
+//             int fd_socket = fd_sockets[i];
+//             int opt = 1;
+//             setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
+//             addr.sin_port = htons(it->getPorts()[i]);
+
+//             if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
+//             {
+//                 perror("binding failed");
+//                 close(fd_socket);
+//                 return (1);
+//             }
+//             if (listen(fd_socket, 10) < 0)
+//             {
+//                 std::cout << "fail listening socket on port " << it->getPorts()[i] << std::endl;
+//                 close(fd_socket);
+//                 return(1);        
+//             }
+//             //std::cout << "Listening on port: " << server->getPorts()[i] << std::endl;
+//         }
+//     }
+//     return 0;
+// }
+
+int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& listPorts) 
+{
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = server->getAddr();
+    addr.sin_addr.s_addr = INADDR_ANY;  
+    // addr.sin_addr.s_addr = inet_addr("127.0.0.2");  // Forcer l'écoute uniquement sur 127.0.0.2
 
-    for (int i = 0; i< server->getPorts().size(); ++i)
+
+
+    for (size_t i = 0; i < listPorts.size(); ++i) 
     {
         int fd_socket = fd_sockets[i];
         int opt = 1;
-        setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
-        addr.sin_port = htons(server->getPorts()[i]);
+        
+        
+        if (setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int)) < 0) 
+        {
+            perror("setsockopt failed");
+            close(fd_socket);
+            return 1;
+        }
 
-        if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
+        
+        addr.sin_port = htons(listPorts[i]);
+
+        
+        if (bind(fd_socket, (struct sockaddr*)&addr, sizeof(addr)) < 0) 
         {
             perror("binding failed");
             close(fd_socket);
-            return (1);
+            return 1;
         }
-        if (listen(fd_socket, 10) < 0)
+
+        
+        if (listen(fd_socket, 10) < 0) 
         {
-            std::cout << "fail listening socket on port " << server->getPorts()[i] << std::endl;
+            std::cerr << "Failed to listen on port " << listPorts[i] << std::endl;
             close(fd_socket);
-            return(1);        
+            return 1;
         }
-        //std::cout << "Listening on port: " << server->getPorts()[i] << std::endl;
+
+        std::cout << "Listening on port: " << listPorts[i] << std::endl;
     }
     return 0;
 }
 
-void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager)
+
+int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers, std::vector<Conf>& Configs)
 {
+    int numServers = 0;
+    std::vector<int> listPorts;
+
+
+    for (std::vector<Conf>::iterator it = Configs.begin(); it != Configs.end(); ++it)
+    {
+        numServers++;
+    }
+
+    std::cout << "numServers: " << numServers << std::endl;
+    
+
+    for (int i = 0; i < numServers; i++)
+    {
+        /**
+         * Server start
+         */
+        Server server(Configs[i]);
+        Servers.push_back(server);
+
+        for (int j = 0; j < server.getPorts().size(); j++)
+        {
+            int port = server.getPorts()[j];
+            std::cout << "Port: " << port << std::endl;
+            if (std::find(listPorts.begin(), listPorts.end(), port) == listPorts.end())
+            {
+                listPorts.push_back(port);
+
+            }
+        }
+        
+    }
+
+    for (std::vector<int>::iterator it = listPorts.begin(); it != listPorts.end(); ++it)
+    {
+        std::cout << "ListPorts : " << *it << std::endl;
+    }
+
+
+    /**
+     * @brief Reglages des connexion et communication "Sockets"
+     */
+    if (socket_start(fd_sockets, listPorts) > 0)
+        return 1;
+
+    if (setup_connection_socket(fd_sockets, listPorts) > 0)
+        return 1;
+
+    // std::cout << "Return" << std::endl;
+    return 0;
+}
+
+void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager, std::vector<Server>& Servers)
+{
+    (void)Servers;
     std::cout << "-------------------------Entering type_request_manager..." << std::endl;
     //*req += std::string(buff, *reads);
     if ((*req).find("\r\n\r\n") != std::string::npos) 
     {
         std::cout << "Request headers detected, parsing request..." << std::endl;
         HttpRequest request(*req, server);
-
+    //    HttpRequest request(*req, Servers);
         std::string cookieHeader = request.getHeader("Cookie");
         std::cout << "Cookie header: " << cookieHeader << std::endl;
 
@@ -161,8 +269,67 @@ void type_request_manager(int *fd_client, std::string *req, char *buff, int *rea
     }
 }
 
+int findServerIndex(std::string const& request, std::vector<Server>& Servers) 
+{
+    std::string host;
+    int port = 8080; 
 
-void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *server, Conf &conf, SessionManager &sessionManager)
+    
+    size_t hostPos = request.find("Host: ");
+    if (hostPos != std::string::npos) 
+    {
+        hostPos += 6;  
+        size_t endPos = request.find("\r\n", hostPos);
+        std::string hostPort = request.substr(hostPos, endPos - hostPos);
+
+        
+        size_t colonPos = hostPort.find(":");
+        if (colonPos != std::string::npos) 
+        {
+            host = hostPort.substr(0, colonPos);
+            
+            
+            std::istringstream iss(hostPort.substr(colonPos + 1));
+            iss >> port;
+        } 
+        else 
+        {
+            host = hostPort;
+        }
+    }
+
+    
+    std::cout << "Request Host: " << host << ", Port: " << port << std::endl;
+
+    
+    for (size_t i = 0; i < Servers.size(); ++i) 
+    {
+        std::cout << "Checking Server index " << i << std::endl;
+        std::cout << "Server Host: " << Servers[i].getConf().getConfig("host") << ", Ports: ";
+        
+        
+        const std::vector<int>& serverPorts = Servers[i].getPorts();
+        for (std::vector<int>::const_iterator it = serverPorts.begin(); it != serverPorts.end(); ++it)
+            std::cout << *it << " ";
+        std::cout << std::endl;
+        
+        
+        if (Servers[i].getConf().getConfig("host") == host && 
+            std::find(serverPorts.begin(), serverPorts.end(), port) != serverPorts.end()) 
+        {
+            std::cout << "Match found at index " << i << std::endl;
+            return i; 
+        }
+    }
+
+    
+    std::cout << "No match found, defaulting to index 0" << std::endl;
+    std::cout << Servers[0].getConf().getConfig("host") << std::endl;
+    return 0;
+}
+
+
+void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server>& Servers, Conf &conf, SessionManager &sessionManager)
 {
     /**
      * @brief
@@ -170,6 +337,10 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
      * methode plus effiface en comparaison de poll() et select(), pas besoin d'examiner chaque descripteur
      * de chaque appel.
      */
+    for (int i = 0; i < fd_sockets.size() ; ++i)
+    {
+        std::cout << "fd_sockets: " << fd_sockets[i] << std::endl;
+    }
     Epoll epoll(10);
     for (size_t i = 0; i < fd_sockets.size(); ++i)
     {
@@ -250,8 +421,22 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
                             bzero(buff, BUFFER_SIZE);
                             break;
                         }
-                    } 
-                    type_request_manager(&fd_client, &req, buff, &reads, server, &epoll, sessionManager);
+                    }
+                    std::ofstream outfile("./sessions/fd_client2.txt");
+                    if (!outfile.is_open())
+                    {
+                        std::cout << "File cannot be open" << std::endl;
+                        exit(EXIT_FAILURE);
+                    }
+
+                    outfile << req << std::endl;
+                    outfile.close();
+
+                    int serverIndex = findServerIndex(req, Servers);
+
+                    std::cout << "!!!!!!!!!!!!!!!!Index: " << serverIndex << std::endl;
+
+                    type_request_manager(&fd_client, &req, buff, &reads, &Servers[serverIndex], &epoll, sessionManager, Servers);
                     Epoll::purgeTimeOutFds(conf, epoll.getFd());
 
                 } 
@@ -261,7 +446,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
     }
 }
 
-void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) 
+void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs) 
 {
     std::ifstream file(path.c_str());
     if (!file.is_open()) 
@@ -363,6 +548,7 @@ int main(int ac, char **av)
     int count;
     SessionManager sessionManager;
     std::vector<Conf> Configs;
+    std::vector<Server> Servers;
 
     /**
      * Conditions du path, si NULL, path par defaut
@@ -378,24 +564,26 @@ int main(int ac, char **av)
     // Conf conf(path);
     get_all_server_conf(path, Configs);
    
-    /**
-     * Server start
-     */
-    Server server(Configs[0]);
-    //count = server.getNumPorts();
-    /**
-     * @brief Reglages des connexion et communication "Sockets"
-     */
-    if (socket_start(fd_sockets, &server) > 0)
+    if (start_all_servers(fd_sockets, Servers, Configs) == 1)
         return 1;
+    // /**
+    //  * Server start
+    //  */
+    // Server server(Configs[0]);
+    // //count = server.getNumPorts();
+    // /**
+    //  * @brief Reglages des connexion et communication "Sockets"
+    //  */
+    // if (socket_start(fd_sockets, &server) > 0)
+    //     return 1;
 
-    if (setup_connection_socket(fd_sockets, &server) > 0)
-        return 1;
+    // if (setup_connection_socket(fd_sockets, &server) > 0)
+    //     return 1;
     
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(fd_sockets, &server, Configs[0], sessionManager);
+    request_and_response_fd_manager(fd_sockets, Servers, Configs[0], sessionManager);
     for (int i = 0; i < fd_sockets.size() ; ++i)
     {
         close(fd_sockets[i]);

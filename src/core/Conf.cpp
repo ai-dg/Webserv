@@ -143,7 +143,7 @@ void Conf::getValuesFromPath()
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
             
-            std::cout << "Key: " << key << ", Value: " << value << std::endl;
+            // std::cout << "Key: " << key << ", Value: " << value << std::endl;
 
             if (hasKey(key)) 
             {
