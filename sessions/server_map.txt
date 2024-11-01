@@ -1,3 +1,4 @@
+map #0: 
 server {
     listen 8080;
     listen 8090;
@@ -23,32 +24,7 @@ server {
         methods GET POST;
     }
 
-    location /images/ {
-        root /www/images;
-        extension .png .jpg .gif .jpeg;
-        methods GET;
-        autoindex on
-    }
-
-    location /upload {
-        root /www/uploads;
-        methods POST
-        upload_store /uploads/
-    }
-
-    location /cgi-bin/ {
-        root /www/cgi-bin;
-        cgi on;
-        cgi_bin /cgi-bin/;
-        methods GET POST;
-        extension .py .pl .sh .php;
-    }
-
-    location /old-page {
-        return 301 /new-page;
-    }
-}
-
+map #1: 
 server {
     listen 8080;
     listen 8090;

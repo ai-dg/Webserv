@@ -152,6 +152,7 @@ void Conf::getValuesFromPath()
             }
         }
     }
+    confFile.close();
 }
 
 void Conf::setConf(const std::string& key, const std::string value)
@@ -174,31 +175,31 @@ bool Conf::hasKey(std::string const& key) const
     return configMap.find(key) != configMap.end();
 }
 
-void Conf::printConfigs() const
+void Conf::printConfigs(std::ofstream& out) const
 { 
     std::map<std::string, std::string>::const_iterator it;
-    std::cout << "-------Config values from map---------" << std::endl;
+    out << "-------Config values from map---------" << std::endl;
     for (it = configMap.begin(); it != configMap.end(); ++it) 
     {
-        std::cout << it->first << ": ";
+        out << it->first << ": ";
         if (it->second.empty()) 
         {
-            std::cout << "NULL";
+            out << "NULL";
         } 
         else 
         {
-            std::cout << it->second;
+            out << it->second;
         }
-        std::cout << std::endl;
+        out << std::endl;
     }
-    std::cout << "Ports to listen on ";
-    std::cout << listenPorts.size() << ": ";
+    out << "Ports to listen on ";
+    out << listenPorts.size() << ": ";
     for(size_t i = 0; i < listenPorts.size(); ++i)
     {
-        std::cout << listenPorts[i] << " ";
+        out << listenPorts[i] << " ";
     }
-    std::cout << std::endl;
-    std::cout << "--------------------------------------" << std::endl;
+    out << std::endl;
+    out << "--------------------------------------" << std::endl;
 }
 
 void Conf::checkAndSetDefaultValues()

@@ -24,7 +24,7 @@ class Conf
         void setConf(std::string const& key, std::string const value);
         std::string getConfig(const std::string& key) const;
         bool hasKey(std::string const& key) const;
-        void printConfigs() const;
+        void printConfigs(std::ofstream& out) const;
         void checkAndSetDefaultValues();
         const std::vector<std::string>& getListenPorts() const;
 };
