@@ -261,9 +261,11 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
     }
 }
 
-void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) {
+void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) 
+{
     std::ifstream file(path.c_str());
-    if (!file.is_open()) {
+    if (!file.is_open()) 
+    {
         std::cerr << "Unable to open file: " << path << std::endl;
         return;
     }
@@ -276,12 +278,14 @@ void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) {
     
     while (std::getline(file, line)) {
         
-        if (line.find("server {") != std::string::npos) {
+        if (line.find("server {") != std::string::npos) 
+        {
             in_server_block = true;
             server_block = line + "\n";
         } 
         
-        else if (in_server_block && line.find("}") != std::string::npos) {
+        else if (in_server_block && line.find("}") != std::string::npos) 
+        {
             server_block += line + "\n";
             map_conf[server_index++] = server_block;  
             in_server_block = false;
@@ -321,11 +325,11 @@ void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) {
         std::ofstream temp_file("./config/temp_server_block.conf");
         std::string temp_file_path = "./config/temp_server_block.conf";
         temp_file << it->second;
+        temp_file.close();
         
         
         Conf conf(temp_file_path);
         Configs.push_back(conf);
-        temp_file.close();
         remove("./config/temp_server_block.conf");
         index++;
     }
