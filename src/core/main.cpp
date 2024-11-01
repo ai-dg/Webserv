@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <vector>
+#include <map>
 #include "../headers/Server.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/files.hpp"
@@ -260,6 +261,96 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, Server *serve
     }
 }
 
+void get_all_server_conf(const std::string& path, std::vector<Conf>& Configs) {
+    std::ifstream file(path.c_str());
+    if (!file.is_open()) {
+        std::cerr << "Unable to open file: " << path << std::endl;
+        return;
+    }
+    
+    std::map<int, std::string> map_conf;
+    std::string line;
+    std::string server_block;
+    bool in_server_block = false;
+    int server_index = 0;
+    
+    while (std::getline(file, line)) {
+        
+        if (line.find("server {") != std::string::npos) {
+            in_server_block = true;
+            server_block = line + "\n";
+        } 
+        
+        else if (in_server_block && line.find("}") != std::string::npos) {
+            server_block += line + "\n";
+            map_conf[server_index++] = server_block;  
+            in_server_block = false;
+            server_block.clear();
+        } 
+        
+        else if (in_server_block) {
+            server_block += line + "\n";
+        }
+    }
+
+    file.close();
+
+    std::ofstream outfile_map("./sessions/server_map.txt");
+    if (!outfile_map.is_open())
+    {
+        std::cerr << "Unable to open output file: sessions/server_map.txt" << std::endl;
+        return;
+    }
+
+    int index = 0;
+    for (std::map<int, std::string>::iterator it = map_conf.begin(); it != map_conf.end(); ++it)
+    {
+        outfile_map << "map #" << index << ": " << std::endl << it->second << std::endl;
+        index++;
+    }
+    std::cout << "index: " << index << std::endl;
+
+
+    outfile_map.close();
+
+    index = 0;
+    
+    for (std::map<int, std::string>::iterator it = map_conf.begin(); it != map_conf.end(); ++it)
+    {
+        
+        std::ofstream temp_file("./config/temp_server_block.conf");
+        std::string temp_file_path = "./config/temp_server_block.conf";
+        temp_file << it->second;
+        
+        
+        Conf conf(temp_file_path);
+        Configs.push_back(conf);
+        temp_file.close();
+        remove("./config/temp_server_block.conf");
+        index++;
+    }
+    std::cout << "index: " << index << std::endl;
+
+    
+
+    
+    std::ofstream outfile("./sessions/server_map_conf.txt");
+    if (!outfile.is_open()) {
+        std::cerr << "Unable to open output file: sessions/server_map_conf.txt" << std::endl;
+        return;
+    }
+
+    for (size_t i = 0; i < Configs.size(); ++i) {
+        outfile << "Configuration du serveur " << i << " :" << std::endl;
+        Configs[i].printConfigs(outfile);
+        outfile << std::endl;
+    }
+    std::cout << "Size Conf: " << Configs.size() << std::endl;
+    std::cout << "Host Conf: " << Configs[0].getConfig("host") << std::endl; 
+    std::cout << "Host Conf: " << Configs[1].getConfig("host") << std::endl;
+    outfile.close();
+}
+
 int main(int ac, char **av)
 {
     std::string path;
@@ -267,6 +358,7 @@ int main(int ac, char **av)
     std::vector<int> fd_sockets;
     int count;
     SessionManager sessionManager;
+    std::vector<Conf> Configs;
 
     /**
      * Conditions du path, si NULL, path par defaut
@@ -279,12 +371,13 @@ int main(int ac, char **av)
     /**
      * Extraire les informations dans le path
      */
-    Conf conf(path);
+    // Conf conf(path);
+    get_all_server_conf(path, Configs);
    
     /**
      * Server start
      */
-    Server server(conf);
+    Server server(Configs[0]);
     //count = server.getNumPorts();
     /**
      * @brief Reglages des connexion et communication "Sockets"
@@ -298,7 +391,7 @@ int main(int ac, char **av)
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
-    request_and_response_fd_manager(fd_sockets, &server, conf, sessionManager);
+    request_and_response_fd_manager(fd_sockets, &server, Configs[0], sessionManager);
     for (int i = 0; i < fd_sockets.size() ; ++i)
     {
         close(fd_sockets[i]);
