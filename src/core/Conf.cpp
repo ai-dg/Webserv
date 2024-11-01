@@ -48,6 +48,9 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 
     getValuesFromPath();
+    std::cout << "path: " << this->path;
+    std::ofstream file("./test.txt");
+    printConfigs(file);
     checkAndSetDefaultValues();
     init();//printConfigs();
 }
@@ -140,7 +143,7 @@ void Conf::getValuesFromPath()
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
             
-            // std::cout << "Key: " << key << ", Value: " << value << std::endl;
+            std::cout << "Key: " << key << ", Value: " << value << std::endl;
 
             if (hasKey(key)) 
             {
