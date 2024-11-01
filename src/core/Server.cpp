@@ -14,7 +14,9 @@
 #include "../headers/Conf.hpp"
 #include "../headers/parser.hpp"
 #include "../headers/colors.hpp"
+#include "../headers/defines.hpp"
 #include "../headers/InvalidArgException.hpp"
+#include "../headers/debugTools.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <netinet/in.h>
@@ -39,9 +41,8 @@ size_t Server::getMaxBodySize()
 
 void Server::setMaxBodySize()
 {
+    int multi = 1;   
     std::stringstream stream;
-    maxBodySize = 2048;
-    int multi = 1;
     std::string mbs = trim(conf.getConfig("client_max_body_size"));
     stream << mbs;
     try {
@@ -61,7 +62,8 @@ void Server::setMaxBodySize()
     }
     catch (const InvalidArgException &e)
     {
-        std::cout << e.what() << " Default value set to 3072" << std::endl;
+        maxBodySize = 2048;
+        std::cout << e.what() << ": client_max_body_size value set to " << maxBodySize << std::endl;
     }
     
 }
@@ -108,6 +110,42 @@ Server::Server(Conf const& c) : conf(c)
         std::cout << std::endl; 
     } 
     setMaxBodySize();
+    setHostNames();
+}
+
+void Server::setHostNames()
+{
+    std::string host_names = conf.getConfig(HOST_NAMES);
+    host_names = trim(host_names);
+
+    if (host_names.size() == 0)
+    {
+        Hosts.push_back(DEFAULT_SERVER);
+    }
+    else
+    {
+        int spacepos = host_names.find_first_of(" \t");
+        if (spacepos == std::string::npos)
+            Hosts.push_back(host_names);
+        else
+        {
+            while (spacepos != std::string::npos)
+            {
+                Hosts.push_back(host_names.substr(0, spacepos));
+                host_names.erase(0, spacepos+1);
+                std::cout <<host_names << std::endl;
+                spacepos = host_names.find_first_of(" \t");
+                if (spacepos == std::string::npos)
+                {                    Hosts.push_back(host_names);
+                    break;
+
+                }
+            }
+        }
+    }
+    std::cout << "BUG" << std::endl;
+    std::cout << BOLD_RED << "HOST NAMES ::::::::::::::::::::::::::::: " << RESET << std::endl;
+    printContenerValues(Hosts, BOLD_RED);    
 }
 
 Server::~Server()
@@ -157,3 +195,4 @@ int Server::getNumPorts() const
 {
     return this->numPorts;
 }*/
+

@@ -29,13 +29,14 @@ class Server
         //int numPorts;
         struct in_addr host_ip;
         Conf conf;
-        std::string serverName;
+        std::vector<std::string> Hosts;
         std::string *methods;
         int keepAlive;
         std::map<int, std::string> err;
         std::vector<int> ports;
         size_t maxBodySize;
         void setMaxBodySize();
+        void setHostNames();
     
     public:
         Server();
