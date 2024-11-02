@@ -26,7 +26,7 @@ std::string SessionManager::createSessions()
 {
     std::string sessionId = generateSessionsId();
     sessions[sessionId] = std::map<std::string, std::string>();
-    std::cout << "New session created with ID: " << sessionId << " and added to session map." << std::endl;
+    // std::cout << "New session created with ID: " << sessionId << " and added to session map." << std::endl;
 
     if (sessions.find(sessionId) != sessions.end()) 
     {
@@ -43,7 +43,7 @@ std::string SessionManager::createSessions()
 bool SessionManager::sessionExist(std::string const& sessionId) 
 {
     bool exists = sessions.find(sessionId) != sessions.end();
-    std::cout << "Session exists check for ID " << sessionId << ": ";
+    // std::cout << "Session exists check for ID " << sessionId << ": ";
     if (exists)
     {
         std::cout << "Yes" << std::endl;
@@ -51,7 +51,7 @@ bool SessionManager::sessionExist(std::string const& sessionId)
     else 
     {
         std::cout << "No" << std::endl;
-        std::cout << "Reason: session ID " << sessionId << " not found in session map." << std::endl;
+        // std::cout << "Reason: session ID " << sessionId << " not found in session map." << std::endl;
     }
     return exists;
 }
@@ -60,7 +60,7 @@ std::map<std::string, std::string>& SessionManager::getSession(std::string const
 {
     if (sessions.find(sessionId) == sessions.end()) 
     {
-        std::cout << "Creating empty session data for session ID: " << sessionId << std::endl;
+        // std::cout << "Creating empty session data for session ID: " << sessionId << std::endl;
         sessions[sessionId] = std::map<std::string, std::string>();
     } 
     else 
@@ -82,7 +82,7 @@ std::string SessionManager::generateSessionsId()
         ss << std::hex << randomValue;
     }
     std::string sessionId = ss.str();
-    std::cout << "Generated session ID: " << sessionId << std::endl;
+    // std::cout << "Generated session ID: " << sessionId << std::endl;
     return sessionId;
 }
 
@@ -105,7 +105,7 @@ void SessionManager::saveSessionsToFile()
         file << "---\n";
     }
     file.close();
-    std::cout << "Sessions saved to file." << std::endl;
+    // std::cout << "Sessions saved to file." << std::endl;
 }
 
 void SessionManager::loadSessionsFromFile()
@@ -142,5 +142,5 @@ void SessionManager::loadSessionsFromFile()
         }
     }
     file.close();
-    std::cout << "Sessions loaded from file." << std::endl;
+    // std::cout << "Sessions loaded from file." << std::endl;
 }

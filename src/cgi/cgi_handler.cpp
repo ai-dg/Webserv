@@ -1,6 +1,7 @@
 #include "../headers/cgi_handler.hpp"
 #include "../headers/HttpRequest.hpp"
 #include <iostream>
+#include <ostream>
 #include <sys/wait.h>   
 #include <cstdlib>      
 #include <cstring>      
@@ -168,11 +169,16 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     { 
         close(pipe_in[0]);  
         close(pipe_out[1]); 
+
+        std::ofstream outfile("./logs/data_cgi.log");
         
         if (!data.empty()) 
         {
             write(pipe_in[1], data.c_str(), data.size());
         }
+        outfile << data;
+        outfile.close();
+
         close(pipe_in[1]); 
         
         std::cerr << "Parent waiting..." << std::endl;
@@ -217,7 +223,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             write(fd_client, buffer, bytesRead);
             //std::cerr << "-----------end fd_client ---------" << std::endl;
             std::cerr << "----------   stdout   ------------" << std::endl;
-            write(STDIN_FILENO, buffer, bytesRead); 
+            // write(STDIN_FILENO, buffer, bytesRead); 
             std::cerr << "------------   end  --------------" << std::endl;
             bzero(buffer, 2048);
         }

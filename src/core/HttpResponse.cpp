@@ -146,10 +146,17 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         this->filePath = "cgi-bin" + uri;
     }
-    else 
+    else if (uri.find(".jpg") != std::string::npos
+        || uri.find(".png") != std::string::npos
+        || uri.find(".svg") != std::string::npos)
+    {
+        this->filePath = uri;
+    }
+    else
     {
         this->filePath = "www/html" + uri;
     }
+
     setStatusCode(AUTO);
     //std::cout << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }

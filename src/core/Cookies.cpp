@@ -20,14 +20,14 @@ Cookies::~Cookies()
 
 std::string Cookies::getCookie(std::string const& name) 
 {
-    std::cout << "Retrieving cookie with name: " << name << std::endl;
+    // std::cout << "Retrieving cookie with name: " << name << std::endl;
     std::map<std::string, std::string>::iterator it = cookies.find(name);
     if (it != cookies.end()) 
     {
-        std::cout << "Cookie found: " << name << " = " << it->second << std::endl;
+        // std::cout << "Cookie found: " << name << " = " << it->second << std::endl;
         return it->second;
     }
-    std::cout << "Cookie not found: " << name << std::endl;
+    // std::cout << "Cookie not found: " << name << std::endl;
     return "";
 }
 
@@ -47,12 +47,12 @@ std::string Cookies::getSetCookieHeader()
         if (uniqueCookies.find(it->first) == uniqueCookies.end()) 
         {
             std::string singleSetCookie = "Set-Cookie: " + it->first + "=" + it->second + "; Path=/; HttpOnly\r\n";
-            std::cout << "Adding to Set-Cookie header: " << singleSetCookie << std::endl;
+            // std::cout << "Adding to Set-Cookie header: " << singleSetCookie << std::endl;
             header += singleSetCookie;
             uniqueCookies[it->first] = it->second;
         }
     }
-    std::cout << "Generated Set-Cookie header: " << header << std::endl;
+    // std::cout << "Generated Set-Cookie header: " << header << std::endl;
     return header;
 }
 
@@ -61,13 +61,13 @@ std::string Cookies::getSetCookieHeader()
  */
 void Cookies::parseCookies(std::string const& cookieHeader) 
 {
-    std::cout << "Parsing cookies from header: " << cookieHeader << std::endl;
+    // std::cout << "Parsing cookies from header: " << cookieHeader << std::endl;
     std::istringstream stream(cookieHeader);
     std::string token;
 
     while (std::getline(stream, token, ';')) 
     {
-        std::cout << "Raw token from cookie header: " << token << std::endl;
+        // std::cout << "Raw token from cookie header: " << token << std::endl;
         
         size_t pos = token.find('=');
         if (pos != std::string::npos) 
@@ -82,13 +82,13 @@ void Cookies::parseCookies(std::string const& cookieHeader)
 
             if (name.find("Set-Cookie:") == 0 || name.find("Set-Cookie") != std::string::npos) 
             {
-                std::cout << "Ignoring invalid cookie entry: " << name << std::endl;
+                // std::cout << "Ignoring invalid cookie entry: " << name << std::endl;
                 continue;
             }
 
             cookies[name] = value;
-            std::cout << "Parsed cookie: " << name << " = " << value << std::endl;
+            // std::cout << "Parsed cookie: " << name << " = " << value << std::endl;
         }
     }
-    std::cout << "Finished parsing cookies." << std::endl;
+    // std::cout << "Finished parsing cookies." << std::endl;
 }
