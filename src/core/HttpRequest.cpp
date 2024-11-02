@@ -198,6 +198,10 @@ void HttpRequest::parseRequest(std::string req)
     this->setMethod(req);
     this->setURI(req);
     this->setHeaders(req);
+
+    // std::cerr << "------------Method: " << this->method << std::endl;
+    // std::cerr << "--------********************req: " << req << std::endl;
+    // std::cerr << "--------*************************" << std::endl;
    
     if (this->method == "POST")
     {

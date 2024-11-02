@@ -50,49 +50,13 @@ int socket_start(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
     
 }
 
-// int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
-// {
-//     /*int count = 0;
-//     int* ports = server->getPorts(count);
-//     std::cout << "count : " << count << std::endl;*/
-
-//     for (std::vector<Server>::iterator it = Servers.begin(); it != Servers.end(); ++it)
-//     {
-//         struct sockaddr_in addr;
-//         addr.sin_family = AF_INET;
-//         addr.sin_addr.s_addr = it->getAddr();
-
-//         for (int i = 0; i< it->getPorts().size(); ++i)
-//         {
-//             int fd_socket = fd_sockets[i];
-//             int opt = 1;
-//             setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int));
-//             addr.sin_port = htons(it->getPorts()[i]);
-
-//             if (bind(fd_socket,(struct sockaddr*) &addr, sizeof(addr)) < 0)
-//             {
-//                 perror("binding failed");
-//                 close(fd_socket);
-//                 return (1);
-//             }
-//             if (listen(fd_socket, 10) < 0)
-//             {
-//                 std::cout << "fail listening socket on port " << it->getPorts()[i] << std::endl;
-//                 close(fd_socket);
-//                 return(1);        
-//             }
-//             //std::cout << "Listening on port: " << server->getPorts()[i] << std::endl;
-//         }
-//     }
-//     return 0;
-// }
 
 int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& listPorts) 
 {
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = INADDR_ANY;  
-    // addr.sin_addr.s_addr = inet_addr("127.0.0.2");  // Forcer l'écoute uniquement sur 127.0.0.2
+    // addr.sin_addr.s_addr = inet_addr("127.0.0.2");
 
 
 
@@ -188,86 +152,6 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers
     return 0;
 }
 
-void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager, std::vector<Server>& Servers)
-{
-    (void)Servers;
-    std::cout << "-------------------------Entering type_request_manager..." << std::endl;
-    //*req += std::string(buff, *reads);
-    if ((*req).find("\r\n\r\n") != std::string::npos) 
-    {
-        std::cout << "Request headers detected, parsing request..." << std::endl;
-        HttpRequest request(*req, server);
-    //    HttpRequest request(*req, Servers);
-        std::string cookieHeader = request.getHeader("Cookie");
-        std::cout << "Cookie header: " << cookieHeader << std::endl;
-
-        Cookies cookies(cookieHeader);
-        std::string sessionId = cookies.getCookie("sessionId");
-        std::cout << "Session ID from cookies: " << sessionId << std::endl;
-
-        if (!sessionManager.sessionExist(sessionId) || sessionId.empty())
-        {
-            std::cout << "Session ID not found, creating a new session..." << std::endl;
-            sessionId = sessionManager.createSessions();
-            cookies.setCookie("sessionId", sessionId);
-            std::cout << "New session created with ID: " << sessionId << std::endl;
-        }
-        else
-        {
-            std::cout << "Session ID exists: " << sessionId << std::endl;
-        }
-
-        std::map<std::string, std::string>& sessionData = sessionManager.getSession(sessionId);
-        std::cout << "Retrieved session data for session ID: " << sessionId << std::endl;
-
-        HttpResponse response(request);
-        response.setResourcePath(request);
-
-        std::string setCookieHeader = cookies.getSetCookieHeader();
-        std::cout << "Set-Cookie header: " << setCookieHeader << std::endl;
-
-        std::cout << "Exact Set-Cookie value before adding: [" << setCookieHeader << "]" << std::endl;
-        response.addHeader("Set-Cookie", setCookieHeader.substr(12));
-
-
-        std::string filePath = response.getFilePath();  
-        std::cout << BOLD_VIOLET << "File path for response: " << filePath << RESET << std::endl;
-
-        if (filePath.find("cgi-bin/") == 0 && server->getCgiStatus()) 
-        {
-            if (request.isValidBodySize())
-            {
-                Cgi_handler cgiHandler;
-                std::cout << "Executing CGI script..." << std::endl;
-                cgiHandler.executeCGI(filePath, request, *fd_client);
-            }
-            else 
-            {
-                response.setRedirection(413);
-                response.send(*fd_client);
-            }
-        }
-        else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
-        {
-            response.setRedirection(403);
-            response.send(*fd_client);
-        }
-        else 
-        {
-            response.send(*fd_client);
-            std::cout << "Response sent to client" << std::endl;
-        }
-        
-        *req = "";
-        if (request.getHeader("Connection") != "keep-alive") 
-        {
-            epoll->removeFd(*fd_client);
-            close(*fd_client);
-            std::cout << "Closed client connection" << std::endl;
-        }
-        sessionManager.saveSessionsToFile();
-    }
-}
 
 int findServerIndex(std::string const& request, std::vector<Server>& Servers) 
 {
@@ -328,27 +212,93 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
     return 0;
 }
 
+void type_request_manager(int *fd_client, std::string *req, char *buff, int *reads, Server *server, Epoll *epoll, SessionManager &sessionManager, std::vector<Server>& Servers)
+{
+    
+    std::ofstream outfile("./sessions/fd_client2.txt", std::ios::app);
+    if (outfile.is_open())
+    {
+        outfile << "**************************" << std::endl;
+        outfile << "Requête complète : " << std::endl;
+        outfile << *req << std::endl;
+        outfile << "*************************************" << std::endl;
+        outfile.close();
+    }
+    else
+    {
+        std::cerr << "Impossible d'ouvrir le fichier fd_client2.txt" << std::endl;
+    }
+
+    
+    size_t headerEnd = req->find("\r\n\r\n");
+    if (headerEnd != std::string::npos) 
+    {
+        HttpRequest request(*req, server);
+        std::string cookieHeader = request.getHeader("Cookie");
+        Cookies cookies(cookieHeader);
+        std::string sessionId = cookies.getCookie("sessionId");
+
+        if (!sessionManager.sessionExist(sessionId) || sessionId.empty())
+        {
+            sessionId = sessionManager.createSessions();
+            cookies.setCookie("sessionId", sessionId);
+        }
+
+        HttpResponse response(request);
+        response.setResourcePath(request);
+        response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
+        
+        std::string filePath = response.getFilePath();
+        if (filePath.find("cgi-bin/") == 0 && server->getCgiStatus()) 
+        {
+            // if (request.isValidBodySize())
+            // {
+                Cgi_handler cgiHandler;
+                cgiHandler.executeCGI(filePath, request, *fd_client);
+            // }
+            // else 
+            // {
+            //     response.setRedirection(413);
+            //     response.send(*fd_client);
+            // }
+        }
+        else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
+        {
+            response.setRedirection(403);
+            response.send(*fd_client);
+        }
+        else 
+        {
+            response.send(*fd_client);
+        }
+
+        std::string connectionHeader = request.getHeader("Connection");
+        if (connectionHeader != "keep-alive") 
+        {
+            epoll->removeFd(*fd_client);
+            close(*fd_client);
+        }
+        sessionManager.saveSessionsToFile();
+        req->clear();
+    }
+    else
+    {
+        std::cerr << "Requête incomplète : en attente de plus de données." << std::endl;
+    }
+}
 
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server>& Servers, Conf &conf, SessionManager &sessionManager)
 {
-    /**
-     * @brief
-     * Creation de la classe Epoll, une API pour gerer les evenements d'entree/sortie sur plusieurs FD,
-     * methode plus effiface en comparaison de poll() et select(), pas besoin d'examiner chaque descripteur
-     * de chaque appel.
-     */
-    for (int i = 0; i < fd_sockets.size() ; ++i)
-    {
-        std::cout << "fd_sockets: " << fd_sockets[i] << std::endl;
-    }
+    std::map<int, std::string> requestMap;
     Epoll epoll(10);
+
     for (size_t i = 0; i < fd_sockets.size(); ++i)
     {
         epoll.addFd(fd_sockets[i], EPOLLIN);  
         epoll.makeSocketNonBlocking(fd_sockets[i]);  
     }
+
     char buff[BUFFER_SIZE];
-    std::string req;
     int fd_client;
     int reads;
     struct epoll_event event;
@@ -361,10 +311,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         for (int i = 0; i < eventCount; ++i) 
         {
             event = epoll.getEvent(i);
-            /**
-             * @brief Detecte s'il y a une connexion entrant dans le serveur
-             */
-
             bool isServerSocket = false;
 
             for (size_t j = 0; j < fd_sockets.size(); ++j)
@@ -375,72 +321,67 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     break;
                 }
             }
+
             if (isServerSocket)
             {
                 client_addr_len = sizeof(client_addr);
                 fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
-                Log::access(get_current_date() + " : Ip " + std::string(inet_ntoa(client_addr.sin_addr)));
                 if (fd_client == -1) 
                 {
-                    Log::error(get_current_date() + " connection failed");
                     perror("accept");
                     continue;
                 }
                 epoll.makeSocketNonBlocking(fd_client);
                 epoll.addFd(fd_client, EPOLLIN | EPOLLET);
             }
-            /**
-             * @brief Une fois detecte il va traiter la demande du client
-             */
             else if (event.events & EPOLLIN) 
             {
                 fd_client = event.data.fd;
-                bzero(buff, BUFFER_SIZE);
-                reads = read(fd_client, buff, BUFFER_SIZE);
+                while ((reads = read(fd_client, buff, BUFFER_SIZE)) > 0) 
+                {
+                    requestMap[fd_client] += std::string(buff, reads);
+                    bzero(buff, BUFFER_SIZE);
+                }
+
+                std::string& req = requestMap[fd_client];
+                size_t headerEndPos = req.find("\r\n\r\n");
+                ssize_t contentLength = -1;
+
+                
+                if (headerEndPos != std::string::npos) 
+                {
+                    size_t contentLengthPos = req.find("Content-Length: ");
+                    if (contentLengthPos != std::string::npos) 
+                    {
+                        contentLengthPos += 16;
+                        size_t endPos = req.find("\r\n", contentLengthPos);
+                        std::string contentLengthStr = req.substr(contentLengthPos, endPos - contentLengthPos);
+                        std::istringstream iss(contentLengthStr);
+                        iss >> contentLength;
+                    }
+
+                    ssize_t totalRead = req.size();
+
+                    
+                    if (contentLength == -1 || totalRead >= headerEndPos + 4 + contentLength) 
+                    {
+                        int serverIndex = findServerIndex(req, Servers);
+
+                        
+                        type_request_manager(&fd_client, &req, buff, &reads, &Servers[serverIndex], &epoll, sessionManager, Servers);
+
+                        
+                        requestMap.erase(fd_client);
+                    }
+                }
+
+                
                 if (reads == 0) 
                 {
                     epoll.removeFd(fd_client);
                     close(fd_client);
-                } 
-                if (reads < 0)
-                { 
-                    perror("read");
-                    epoll.removeFd(fd_client);
-                    close(fd_client);
+                    requestMap.erase(fd_client);
                 }
-                else
-                {
-                    while (reads > 0) 
-                    {                        
-                        req += buff;
-                        bzero(buff, BUFFER_SIZE);
-                        reads = read(fd_client, buff, BUFFER_SIZE);
-                        if (reads < BUFFER_SIZE)
-                        {
-                            req += buff;
-                            bzero(buff, BUFFER_SIZE);
-                            break;
-                        }
-                    }
-                    std::ofstream outfile("./sessions/fd_client2.txt");
-                    if (!outfile.is_open())
-                    {
-                        std::cout << "File cannot be open" << std::endl;
-                        exit(EXIT_FAILURE);
-                    }
-
-                    outfile << req << std::endl;
-                    outfile.close();
-
-                    int serverIndex = findServerIndex(req, Servers);
-
-                    std::cout << "!!!!!!!!!!!!!!!!Index: " << serverIndex << std::endl;
-
-                    type_request_manager(&fd_client, &req, buff, &reads, &Servers[serverIndex], &epoll, sessionManager, Servers);
-                    Epoll::purgeTimeOutFds(conf, epoll.getFd());
-
-                } 
-            
             }
         }
     }
@@ -566,19 +507,6 @@ int main(int ac, char **av)
    
     if (start_all_servers(fd_sockets, Servers, Configs) == 1)
         return 1;
-    // /**
-    //  * Server start
-    //  */
-    // Server server(Configs[0]);
-    // //count = server.getNumPorts();
-    // /**
-    //  * @brief Reglages des connexion et communication "Sockets"
-    //  */
-    // if (socket_start(fd_sockets, &server) > 0)
-    //     return 1;
-
-    // if (setup_connection_socket(fd_sockets, &server) > 0)
-    //     return 1;
     
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)

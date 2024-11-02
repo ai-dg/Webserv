@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 std::string getMime(const std::string& mime)
 {
@@ -51,13 +52,55 @@ std::string checkMimeType(const std::string& path)
     return getMime(mime);
 }
 
+
+std::string urlDecode(const std::string& encoded)
+{
+    std::string decoded;
+    char hex[3];
+    hex[2] = '\0';
+
+    for (size_t i = 0; i < encoded.length(); ++i) 
+    {
+        if (encoded[i] == '%' && i + 2 < encoded.length()) 
+        {
+            hex[0] = encoded[i + 1];
+            hex[1] = encoded[i + 2];
+            std::istringstream iss(hex);
+            int value;
+            iss >> std::hex >> value;
+            decoded += static_cast<char>(value);
+            i += 2;
+        } 
+        else if (encoded[i] == '+') 
+        {
+            decoded += ' ';
+        } 
+        else 
+        {
+            decoded += encoded[i];
+        }
+    }
+    
+    return decoded;
+}
+
 std::string getFile(const std::string& path)
 {
-    std::string local = path;
+    std::string decodedPath = urlDecode(path);
+    std::string local;
+
+    if (!path.empty() && path[0] == '/') 
+    {
+        local = "." + decodedPath;  
+    } 
+    else 
+    {
+        local = "./" + decodedPath; 
+    }
     
-    if (path.size() < 10)
+    if (decodedPath.size() < 10)
         local += "index.html";
-    std::cout << "local 2 " << local << " - path size : " << path.size() << std::endl;
+    std::cout << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
     std::ifstream file(local.c_str());
     std::string content;
     std::string line;

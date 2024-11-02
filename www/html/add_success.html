@@ -36,7 +36,7 @@
         </div>
     </nav>
 
-    <div class="custom-margin-top">
+    <!-- <div class="custom-margin-top">
         <h2>Projet soumis avec succès !</h2>
         <p>Nom du projet : {{project_name}}</p>
         <p>Note : {{project_grade}}</p>
@@ -45,7 +45,22 @@
         <p>Expérience : {{experience}}</p>
         <p>Satisfaction : {{satisfaction}}/5</p>
         <p>Commentaires : {{comments}}</p>
+    </div> -->
+
+    <div class="custom-margin-top">
+        <h2>Projet soumis avec succès !</h2>
+        <div class="project-image">
+            <img src="{{image_url}}" alt="Image du projet" style="max-width: 400px; height: 300px;">
+        </div>
+        <p><strong>Nom du projet :</strong> {{project_name}}</p>
+        <p><strong>Note :</strong> {{project_grade}}</p>
+        <p><strong>Temps prévu :</strong> {{expected_time}} heures</p>
+        <p><strong>Temps réel :</strong> {{real_time}} heures</p>
+        <p><strong>Expérience :</strong> {{experience}}</p>
+        <p><strong>Satisfaction :</strong> {{satisfaction}}/5</p>
+        <p><strong>Commentaires :</strong> {{comments}}</p>
     </div>
+    
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

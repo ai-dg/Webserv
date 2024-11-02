@@ -42,6 +42,12 @@ if search_results:
         if "error" in project:
             results_html += f"<p class='text-danger'>{project['error']}</p>"
         else:
+            image_url = project.get("Image_URL", "./www/html/images/Default.jpg")  # Chemin par défaut si aucune image n'est fournie
+            results_html += f"""
+            <div class="project-image">
+                <img src="{image_url}" alt="Image du projet" style="max-width: 400px; height: 300px;">
+            </div>
+            """
             results_html += f"<p><strong>Nom du projet</strong>: {project.get('Nom du projet', 'N/A')}</p>"
             results_html += f"<p><strong>Note</strong>: {project.get('Note', 'N/A')}</p>"
             results_html += f"<p><strong>Temps prévu</strong>: {project.get('Temps prévu', 'N/A')}</p>"
