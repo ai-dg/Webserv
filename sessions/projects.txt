@@ -1,33 +1,3 @@
-ID: 2
-Nom du projet: adasd
-Note: 123
-Temps prévu: 13 heures
-Temps réel: 123 heures
-Expérience: asdad
-Satisfaction: 2/5
-Commentaires: asdasdasd
-Image_URL: ./www/images/Default.jpg
-----------------------------------------
-ID: 3
-Nom du projet: adasd
-Note: 123
-Temps prévu: 13 heures
-Temps réel: 123 heures
-Expérience: asdad
-Satisfaction: 2/5
-Commentaires: asdasdasd
-Image_URL: ./www/images/Default.jpg
-----------------------------------------
-ID: 4
-Nom du projet: adasd
-Note: 123
-Temps prévu: 13 heures
-Temps réel: 123 heures
-Expérience: asdad
-Satisfaction: 2/5
-Commentaires: asdasdasd
-Image_URL: ./www/images/Default.jpg
-----------------------------------------
 ID: 6
 Nom du projet: test
 Note: 12
@@ -97,4 +67,24 @@ Expérience: sadf
 Satisfaction: 2/5
 Commentaires: asd
 Image_URL: ./www/images/Default.jpg
+----------------------------------------
+ID: 13
+Nom du projet: asd
+Note: 123
+Temps prévu: 123 heures
+Temps réel: 123 heures
+Expérience: sdasd
+Satisfaction: 2/5
+Commentaires: asdasd
+Image_URL: ./www/images/Default.jpg
+----------------------------------------
+ID: 14
+Nom du projet: asd
+Note: 123
+Temps prévu: 123 heures
+Temps réel: 123 heures
+Expérience: sdasd
+Satisfaction: 2/5
+Commentaires: asdasd
+Image_URL: ./uploads/docker-compose.png
 ----------------------------------------
