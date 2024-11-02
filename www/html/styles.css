@@ -1,31 +1,26 @@
-.blue-button:hover {
+.blue-button:hover 
+{
     color: blue !important;
 }
 
-.white-button:hover {
+.white-button:hover 
+{
     color: white !important;
 }
 
-.red-button:hover {
+.red-button:hover 
+{
     color: red !important;
 }
 
-.font-size-button {
+.font-size-button 
+{
     font-size: 10px;
 }
 
-/* .font-container-text {
-    display: flex;
-    text-align: justify;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 18px;
 
-} */
-
-.font-container-text {
+.font-container-text 
+{
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -35,7 +30,8 @@
     max-width: 800px;
 }
 
-.font-container-text-2 {
+.font-container-text-2 
+{
     text-align: justify;
     padding-left: 50px;
     padding-right: 20px;
@@ -45,11 +41,15 @@
     max-width: 800px;
 }
 
-.image-container {
+
+.image-container 
+{
     display: inline-block;
 }
 
-.zone-rectangulaire {
+
+.zone-rectangulaire 
+{
     width: 300px;
     height: 212px;
     border: 1px solid #000;
@@ -58,27 +58,43 @@
     gap: 10px;
 }
 
-.carreau {
+.carreau 
+{
     width: 100%;
     height: 100px;
     object-fit: cover;
 }
 
-.container {
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
     text-align: center;
-    margin-bottom: 0vh;
 }
 
-.container-void {
+
+.container-void 
+{
     height: 1vh;
 }
 
-.container-2 {
+
+.container-2 
+{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,10 +106,43 @@
 }
 
 
-.custom-margin-top {
+.custom-margin-top 
+{
     margin-top: 50px;
     justify-content: center;
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
 }
