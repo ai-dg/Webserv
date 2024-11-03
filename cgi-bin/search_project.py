@@ -5,7 +5,7 @@ import os
 
 cgitb.enable()
 
-projects_file_path = "./sessions/projects.txt"
+projects_file_path = "./database/projects.txt"
 template_path = "./www/html/find_results.html"
 
 request_method = os.getenv("REQUEST_METHOD", "")

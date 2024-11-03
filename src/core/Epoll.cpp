@@ -1,4 +1,5 @@
 #include "../headers/Epoll.hpp"
+#include "../headers/Log.hpp"
 #include <cstdio>
 #include <unistd.h>
 #include <stdlib.h>
@@ -12,7 +13,7 @@ Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
     epollFd = epoll_create(maxEvents);
     if (epollFd == -1) 
     {
-        perror("epoll_create");
+        Log::error("epoll_create");
         exit(EXIT_FAILURE);
     }
     
@@ -35,7 +36,7 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 {
     if (fd < 0)
     {
-        perror("fail opening file socket");
+        Log::error("fail opening file socket");
         return false;
     }
     std::time_t now = std::time(0);
@@ -45,7 +46,7 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
     event.events = eventsMask;
     if (epoll_ctl(epollFd, EPOLL_CTL_ADD, fd, &event) == -1) 
     {
-        perror("epoll_ctl: addFd");
+        Log::error("epoll_ctl: addFd");
         return false;
     }
     return true;
@@ -62,7 +63,7 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epollFd)
         {
             if (epoll_ctl(epollFd, EPOLL_CTL_DEL, it->first, NULL) == -1) 
             {
-                perror("epoll_ctl: removeFd");
+                Log::error("epoll_ctl: removeFd");
                 return false;
             }
             close(it->first);
@@ -78,7 +79,7 @@ bool Epoll::removeFd(int fd)
 {
     if (epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, NULL) == -1) 
     {
-        perror("epoll_ctl: removeFd");
+        Log::error("epoll_ctl: removeFd");
         return false;
     }
     Epoll::timers.erase(fd);
@@ -90,7 +91,7 @@ int Epoll::wait(int timeout)
     int eventCount = epoll_wait(epollFd, events, maxEvents, timeout);
     if (eventCount == -1) 
     {
-        perror("epoll_wait");
+        Log::error("epoll_wait");
         exit(EXIT_FAILURE);
     }
     return eventCount;
@@ -110,13 +111,13 @@ int Epoll::makeSocketNonBlocking(int fd)
     int flags = fcntl(fd, F_GETFL, 0);
     if (flags == -1) 
     {
-        perror("fcntl");
+        Log::error("fcntl");
         return -1;
     }
     flags |= O_NONBLOCK;
     if (fcntl(fd, F_SETFL, flags) == -1) 
     {
-        perror("fcntl");
+        Log::error("fcntl");
         return -1;
     }
     return 0;

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 
-projects_file = "./sessions/projects.txt"
+projects_file = "./database/projects.txt"
 
 
 html_template = """

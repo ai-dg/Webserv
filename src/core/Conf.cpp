@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include "../headers/colors.hpp"
+#include "../headers/Log.hpp"
 
 Conf::Conf()
 {
@@ -15,7 +16,6 @@ void Conf::operator=(Conf &conf)
 
 Conf::Conf(std::string& path) : path(path)
 {
-    //std::cout << "Initialize conf path" << std::endl;
     listenPorts.clear();
 
     // configMap.insert(std::make_pair("listen", ""));
@@ -48,7 +48,7 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 
     getValuesFromPath();
-    std::cout << "path: " << this->path;
+    Log::output("./sessions/Conf.txt") << "path: " << this->path;
     std::ofstream file("./test.txt");
     printConfigs(file);
     checkAndSetDefaultValues();
@@ -58,9 +58,9 @@ Conf::Conf(std::string& path) : path(path)
 void Conf::printStatus(bool status, std::string text)
 {
     if (status)    
-        std::cout << "[  "<< GREEN << "on" << RESET << "   ]  "<< text  << std::endl;
+        Log::output("./sessions/Conf.txt") << "[  "<< GREEN << "on" << RESET << "   ]  "<< text  << std::endl;
     else
-        std::cout << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
+        Log::output("./sessions/Conf.txt") << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
 }
 
 void Conf::init()
@@ -71,7 +71,7 @@ void Conf::init()
 
 Conf::~Conf()
 {
-    std::cout << "Conf malloc destroyed" << std::endl;
+    Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
 
 }
 
@@ -83,7 +83,7 @@ void Conf::getValuesFromPath()
 
     if (!confFile.is_open()) 
     {
-        std::cerr << "Unable to open configuration file: " << path << std::endl;
+        Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
         return;
     }
 
@@ -143,7 +143,7 @@ void Conf::getValuesFromPath()
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
             
-            // std::cout << "Key: " << key << ", Value: " << value << std::endl;
+            // Log::output("./sessions/Conf.txt") << "Key: " << key << ", Value: " << value << std::endl;
 
             if (hasKey(key)) 
             {
@@ -151,7 +151,7 @@ void Conf::getValuesFromPath()
             } 
             else 
             {
-                std::cout << "Key not found: " << key << std::endl; 
+                Log::output("./sessions/Conf.txt") << "Key not found: " << key << std::endl; 
             }
         }
     }

@@ -30,7 +30,7 @@
  */
 Server::Server()
 {
-    std::cout << "server on" << std::endl;    
+    Log::output("./sessions/Server.txt") << "server on" << std::endl;    
     host_ip.s_addr = htonl(INADDR_LOOPBACK);
 }
 
@@ -58,12 +58,12 @@ void Server::setMaxBodySize()
         char unit = 'K';
         if (multi > 1)
             unit = 'M';
-        std::cout << "MAX BODY SIZE SET TO : " << maxBodySize << unit << std::endl;
+        Log::output("./sessions/Server.txt") << "MAX BODY SIZE SET TO : " << maxBodySize << unit << std::endl;
     }
     catch (const InvalidArgException &e)
     {
         maxBodySize = 2048;
-        std::cout << e.what() << ": client_max_body_size value set to " << maxBodySize << std::endl;
+        Log::output("./sessions/Server.txt") << e.what() << ": client_max_body_size value set to " << maxBodySize << std::endl;
     }
     
 }
@@ -72,7 +72,7 @@ Server::Server(Conf const& c) : conf(c)
 {
     std::vector<std::string> listenPorts = conf.getListenPorts();
 
-    //std::cout << "Nbr de ports : " << listenPorts.size() << std::endl;
+    //Log::output("./sessions/Server.txt") << "Nbr de ports : " << listenPorts.size() << std::endl;
 
     for (size_t i = 0; i < listenPorts.size(); ++i) 
     {
@@ -84,7 +84,7 @@ Server::Server(Conf const& c) : conf(c)
         } 
         else 
         {
-            std::cerr << "Port invalide dans la configuration : " << portNumber << std::endl;
+            Log::output("./logs/error.log") << "Port invalide dans la configuration : " << portNumber << std::endl;
         }        
     }
     
@@ -95,19 +95,19 @@ Server::Server(Conf const& c) : conf(c)
     }
     else
     {
-        std::cout << BOLD_GREEN << "Server on" << RESET << std::endl;
-        std::cout << "listening " << conf.getConfig("host") << " on ports ";
+        Log::output("./sessions/Server.txt") << BOLD_GREEN << "Server on" << RESET << std::endl;
+        Log::output("./sessions/Server.txt") << "listening " << conf.getConfig("host") << " on ports ";
         std::vector<int>::iterator it;
         for (it = ports.begin(); it != ports.end(); it++)
         {
-            std::cout << *it << " ";
+            Log::output("./sessions/Server.txt") << *it << " ";
         }
         /*for (int i = 0;  i < numPorts; i++)
         {
-            std::cout << port[i] << " ";
+            Log::output("./sessions/Server.txt") << port[i] << " ";
         }*/
 
-        std::cout << std::endl; 
+        Log::output("./sessions/Server.txt") << std::endl; 
     } 
     setMaxBodySize();
     setHostNames();
@@ -124,7 +124,7 @@ void Server::setHostNames()
     }
     else
     {
-        int spacepos = host_names.find_first_of(" \t");
+        size_t spacepos = host_names.find_first_of(" \t");
         if (spacepos == std::string::npos)
             Hosts.push_back(host_names);
         else
@@ -133,7 +133,7 @@ void Server::setHostNames()
             {
                 Hosts.push_back(host_names.substr(0, spacepos));
                 host_names.erase(0, spacepos+1);
-                std::cout <<host_names << std::endl;
+                Log::output("./sessions/Server.txt") <<host_names << std::endl;
                 spacepos = host_names.find_first_of(" \t");
                 if (spacepos == std::string::npos)
                 {   
@@ -144,8 +144,8 @@ void Server::setHostNames()
             }
         }
     }
-    std::cout << "BUG" << std::endl;
-    std::cout << BOLD_RED << "HOST NAMES ::::::::::::::::::::::::::::: " << RESET << std::endl;
+    Log::output("./sessions/Server.txt") << "BUG" << std::endl;
+    Log::output("./sessions/Server.txt") << BOLD_RED << "HOST NAMES ::::::::::::::::::::::::::::: " << RESET << std::endl;
     printContenerValues(Hosts, BOLD_RED);    
 }
 
@@ -162,7 +162,7 @@ bool Server::foundHostName(std::string hostname)
 
 Server::~Server()
 {
-    std::cout << "Server destroyed" << std::endl;
+    Log::output("./sessions/Server.txt") << "Server destroyed" << std::endl;
 }
 
 bool Server::getCgiStatus()
@@ -178,7 +178,7 @@ void Server::addPort(int port)
     ports.push_back(port);
     //this->port[numPorts + 1] = port;
     //numPorts++;
-    //std::cout << "listening on port " << this->port << std::endl;    
+    //Log::output("./sessions/Server.txt") << "listening on port " << this->port << std::endl;    
 }
 
 in_addr_t Server::getAddr()

@@ -1,22 +1,23 @@
 #include "../headers/HttpRequest.hpp"
 #include "../headers/colors.hpp"
+#include "../headers/Log.hpp"
 
 /**
  * @brief Public:
  */
 HttpRequest::HttpRequest(std::string req)
 {
-    std::cout << std::endl << BOLD_YELLOW << req << RESET << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << std::endl << BOLD_YELLOW << req << RESET << std::endl;
     parseRequest(req);
 }
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
-    std::cout << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
     parseRequest(req);
     this->server = server;
     //this->postbody = getBody();
-    //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
+    //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
@@ -31,12 +32,12 @@ HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
     }
     //this->server = server;
     //this->postbody = getBody();
-    //std::cout << "Test map : " << this->headers["Connection"] << std::endl;
+    //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::~HttpRequest()
 {    
-    std::cout << "end req" << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << "end req" << std::endl;
 }
 
 std::string HttpRequest::getRequestedFile() const
@@ -56,16 +57,16 @@ std::string HttpRequest::getRequestedFile() const
 std::string HttpRequest::getQueryString() const
 {
     size_t pos = this->URI.find("?");
-    std::cout << "-----------URI: " << this->URI << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << "-----------URI: " << this->URI << std::endl;
     if (pos != std::string::npos && pos + 1 < this->URI.size())
     {
         std::string queryString = this->URI.substr(pos + 1);
-        std::cout << "------------Extracted Query String: " << queryString << std::endl; 
+        Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
         return queryString;
     }
     else
     {
-        std::cout << "-----------No query string found in URI." << std::endl;
+        Log::output("./sessions/HttpRequest.txt") << "-----------No query string found in URI." << std::endl;
     }
     return "";
 }
@@ -98,7 +99,7 @@ std::string HttpRequest::getMethod() const
 std::string HttpRequest::getBody() const
 {
 
-    std::cerr << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST") 
         return body;
     else if (method == "GET") 
@@ -186,8 +187,8 @@ bool HttpRequest::isValidBodySize() const
    
 //     this->setHeaders(req);
    
-//    // std::cout << "method : " << this->method << std::endl;
-//     //std::cout << "URI : " << this->URI << std::endl;
+//    // Log::output("./sessions/HttpRequest.txt") << "method : " << this->method << std::endl;
+//     //Log::output("./sessions/HttpRequest.txt") << "URI : " << this->URI << std::endl;
 
 //     // Parser la methode - verifier si elle est acceptée par le serveur (voir le parsing du fichier server.conf et stocker ces informations dans un tableau)
     
@@ -199,9 +200,9 @@ void HttpRequest::parseRequest(std::string req)
     this->setURI(req);
     this->setHeaders(req);
 
-    // std::cerr << "------------Method: " << this->method << std::endl;
-    // std::cerr << "--------********************req: " << req << std::endl;
-    // std::cerr << "--------*************************" << std::endl;
+    // Log::output("./logs/error.log") << "------------Method: " << this->method << std::endl;
+    // Log::output("./logs/error.log") << "--------********************req: " << req << std::endl;
+    // Log::output("./logs/error.log") << "--------*************************" << std::endl;
    
     if (this->method == "POST")
     {
@@ -210,7 +211,7 @@ void HttpRequest::parseRequest(std::string req)
         if (bodyStartPos != std::string::npos)
         {
             this->body = req.substr(bodyStartPos + 4);
-            std::cerr << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
+            Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
         }
     }
 }
@@ -226,7 +227,7 @@ void HttpRequest::parseRequest(std::string req)
 //     else
 //         this->URI = "";
 //     //this->filePath = "www" + this->URI;
-//     //std::cout << "space : " << spacePos << " - / : " << backPos << std::endl;
+//     //Log::output("./sessions/HttpRequest.txt") << "space : " << spacePos << " - / : " << backPos << std::endl;
 // }
 
 void HttpRequest::setURI(std::string req)
@@ -248,7 +249,7 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
-    std::cout << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
+    Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
 // void HttpRequest::addToHeaders(std::string line)
@@ -261,7 +262,7 @@ void HttpRequest::setURI(std::string req)
 //         first = line.substr(0, pos);
 //         second = line.substr(pos + 2, std::string::npos);
 //         this->headers[first] = second;
-//         //std::cout << "keyval : " << first << " - " << second << std::endl;
+//         //Log::output("./sessions/HttpRequest.txt") << "keyval : " << first << " - " << second << std::endl;
 //     }
 //     else 
 //         this->setBody(line);
