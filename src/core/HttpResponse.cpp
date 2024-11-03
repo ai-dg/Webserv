@@ -15,7 +15,7 @@ HttpResponse::HttpResponse(const HttpRequest &req)
 {
     setResourcePath(req);
     setMineType();
-    std::cout << "is valid body size : " << req.isValidBodySize() << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
     if (!req.isValidBodySize())
     {
         setRedirection(413);
@@ -46,14 +46,14 @@ void HttpResponse::send(int fd_client)
     
     res += "\r";
 
-    std::cout << "---------- res by line ----------" << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << "---------- res by line ----------" << std::endl;
     std::istringstream ss(res);
     std::string line;
     while (std::getline(ss, line)) 
     {
-        std::cout << line << std::endl;
+        Log::output("./sessions/HttpResponse.txt") << line << std::endl;
     }
-    std::cout << "---------------------------------" << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << "---------------------------------" << std::endl;
 
     res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n" + 
            "Connection: keep-alive\r\n" + 
@@ -67,13 +67,13 @@ void HttpResponse::send(int fd_client)
     {
         file << res;
         file.close();
-        //std::cout << "----------fd_client enregistré dans fd_client.txt---------------" << std::endl;
+        //Log::output("./sessions/HttpResponse.txt") << "----------fd_client enregistré dans fd_client.txt---------------" << std::endl;
     } 
     else 
     {
-        std::cerr << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
+        Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
     } 
-    std::cout << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
 }
 
 
@@ -84,14 +84,14 @@ void HttpResponse::send(int fd_client)
 //         this->statusCode = 404;
 //     else
 //         this->statusCode = 200;
-//     std::cout << "status : " << this->statusCode << std::endl;
+//     Log::output("./sessions/HttpResponse.txt") << "status : " << this->statusCode << std::endl;
 //     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
 //             "\r\nConnection: keep-alive" + 
 //             "\r\nContent-Length: " + numberToString(resFile.size()) +
 //             "\r\nDate: " + get_current_date() + 
 //             "\r\n\r\n" + resFile;   
 //     write(fd_client, res.c_str(), res.size());    
-//     std::cout << RED << "done" << RESET << std::endl;
+//     Log::output("./sessions/HttpResponse.txt") << RED << "done" << RESET << std::endl;
 // }
 
 void HttpResponse::setRedirection(std::string newPath)
@@ -158,7 +158,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     }
 
     setStatusCode(AUTO);
-    //std::cout << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
+    //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
 std::string HttpResponse::getFilePath() const
@@ -169,10 +169,10 @@ std::string HttpResponse::getFilePath() const
 void HttpResponse::addHeader(const std::string &key, const std::string &value)
 {
     headers[key] = value;
-    std::cout << "-------------Header added: " << key << " = " << value << std::endl;
-    std::cout << "-------------Current headers in response:" << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << "-------------Header added: " << key << " = " << value << std::endl;
+    Log::output("./sessions/HttpResponse.txt") << "-------------Current headers in response:" << std::endl;
     for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
-        std::cout << it->first << ": " << it->second << std::endl;
+        Log::output("./sessions/HttpResponse.txt") << it->first << ": " << it->second << std::endl;
     }
 }
 

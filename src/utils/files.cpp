@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../headers/files.hpp"
+#include "../headers/Log.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -42,9 +43,9 @@ std::string getMime(const std::string& mime)
 std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
-    std::cout << "path : " << path << std::endl;
+    Log::output("./sessions/files.txt") << "path : " << path << std::endl;
     local.erase(0,8);
-    std::cout << "local : " << local << std::endl;
+    Log::output("./sessions/files.txt") << "local : " << local << std::endl;
     if (local == "/")
         return "text/html";
     
@@ -100,7 +101,7 @@ std::string getFile(const std::string& path)
     
     if (decodedPath.size() < 10)
         local += "index.html";
-    std::cout << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
+    Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
     std::ifstream file(local.c_str());
     std::string content;
     std::string line;
@@ -112,11 +113,11 @@ std::string getFile(const std::string& path)
                 content += "\n";
             content += line;
         }
-       // std::cout << "test getfile : " << content << std::endl;
+       // Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
         return content;
     }
     else
-        std::cout << "file not found ! " << std::endl;
+        Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
     return FILENOTFOUND;
 }

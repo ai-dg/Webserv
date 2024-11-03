@@ -15,7 +15,7 @@
 
 Cgi_handler::Cgi_handler()
 {
-    std::cout << "CGI Handler created" << std::endl;
+    Log::output("./sessions/cgi_handler.txt") << "CGI Handler created" << std::endl;
 }
 
 void Cgi_handler::addToEnvironment(const char * env)
@@ -48,12 +48,12 @@ void Cgi_handler::debugEnvironment()
 
 Cgi_handler::~Cgi_handler()
 {    
-    for (int i = 0; i < environment.size(); ++i)
+    for (size_t i = 0; i < environment.size(); ++i)
     {
         delete environment[i];
     }
     environment.clear();
-    std::cout << "CGI Handler destroyed" << std::endl;
+    Log::output("./sessions/cgi_handler.txt") << "CGI Handler destroyed" << std::endl;
 }
 
 std::string Cgi_handler::getExeContext(std::string file)
@@ -105,7 +105,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     }
         addToEnvironment(NULL);   
 
-    std::cerr << "Child: Environment variables set: " << requestMethodEnv
+    Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
 }
 
@@ -117,8 +117,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
     std::string data = req.getBody();
 
-    std::cout << data  << std::endl;
-    std::cout << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
+    Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
+    Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
  
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -148,7 +148,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         }
 
         setEnvironment(req);
-        debugEnvironment();
+        // debugEnvironment();
  
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -157,7 +157,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             NULL
         };
 
-        std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
+        // std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
 
         //
         execve("/usr/bin/env", argv, environment.data());     
@@ -181,27 +181,27 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
         close(pipe_in[1]); 
         
-        std::cerr << "Parent waiting..." << std::endl;
+        Log::output("./sessions/cgi_handler.txt") << "Parent waiting..." << std::endl;
         int status;
         pid_t wpid = waitpid(pid, &status, 0);
         if (wpid == -1) 
         {
             perror("waitpid");
-            std::cerr << "Parent: Failed to wait for child process." << std::endl;
+            Log::output("./logs/error.log") << "Parent: Failed to wait for child process." << std::endl;
         } 
         else 
         {
             if (WIFEXITED(status)) 
             {
-                std::cerr << "Parent: Child exited with status: " << WEXITSTATUS(status) << std::endl;
+                Log::output("./sessions/cgi_handler.txt") << "Parent: Child exited with status: " << WEXITSTATUS(status) << std::endl;
             } 
             else if (WIFSIGNALED(status)) 
             {
-                std::cerr << "Parent: Child killed by signal: " << WTERMSIG(status) << std::endl;
+                Log::output("./sessions/cgi_handler.txt") << "Parent: Child killed by signal: " << WTERMSIG(status) << std::endl;
             } 
             else 
             {
-                std::cerr << "Parent: Child ended abnormally" << std::endl;
+                Log::output("./sessions/cgi_handler.txt") << "Parent: Child ended abnormally" << std::endl;
             }
         }
         
@@ -214,7 +214,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             std::string res = "HTTP/1.1 200 OK\r\n";
             write(fd_client, res.c_str(), res.size());
         }
-        std::cerr << "Parent: Reading from pipe to get script output..." << std::endl;
+        Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {
             //std::cerr << BOLD_RED << "CGI Output:" << std::string(buffer, bytesRead) << RESET << std::endl;
@@ -222,16 +222,16 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             //std::cerr << "-----------fd_client content---------" << std::endl;
             write(fd_client, buffer, bytesRead);
             //std::cerr << "-----------end fd_client ---------" << std::endl;
-            std::cerr << "----------   stdout   ------------" << std::endl;
+            // std::cerr << "----------   stdout   ------------" << std::endl;
             // write(STDIN_FILENO, buffer, bytesRead); 
-            std::cerr << "------------   end  --------------" << std::endl;
+            // std::cerr << "------------   end  --------------" << std::endl;
             bzero(buffer, 2048);
         }
 
         if (bytesRead == -1) 
         {
-            perror("read from pipe");
-            std::cerr << "Parent: Failed to read from pipe." << std::endl;
+            Log::error("read from pipe");
+            Log::output("./logs/error.log") << "Parent: Failed to read from pipe." << std::endl;
         }
         close(pipe_out[0]); 
     }

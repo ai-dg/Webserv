@@ -32,5 +32,6 @@
 
 #define CRLF "\r\n"
 #define FILENOTFOUND "FILE NOT FOUND"
+#define BUFFER_SIZE 2048
 
 #endif

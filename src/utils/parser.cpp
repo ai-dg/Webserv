@@ -19,14 +19,15 @@
 
 void setServer(Conf const& conf, Server *server)
 {
-	
+	(void)conf;
+	(void)server;
 	// server->setPort(conf.getConfig("listen"), server);
 	
 	
 	// std::ifstream config(path.c_str());	
 	// setPort(searchValueInFile(path, "listen"), server);
-	std::cout << "parsing server config..." << std::endl;	
-	std::cout << "done..." << std::endl;
+	Log::output("./sessions/parser.txt") << "parsing server config..." << std::endl;	
+	Log::output("./sessions/parser.txt") << "done..." << std::endl;
 }
 
 std::string trim(std::string str, char c)

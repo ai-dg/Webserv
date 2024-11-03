@@ -1,4 +1,5 @@
 #include "../headers/SessionManager.hpp"
+#include "../headers/Log.hpp"
 #include <cstdlib>
 #include <ctime>
 #include <sstream>
@@ -14,27 +15,27 @@ SessionManager::SessionManager()
 {
     std::srand(std::time(0));
     loadSessionsFromFile();
-    std::cout << "SessionManager created" << std::endl;
+    Log::output("./sessions/SessionManager.txt") << "SessionManager created" << std::endl;
 }
 
 SessionManager::~SessionManager() 
 {
-    std::cout << "SessionManager destroyed" << std::endl;
+    Log::output("./sessions/SessionManager.txt") << "SessionManager destroyed" << std::endl;
 }
 
 std::string SessionManager::createSessions() 
 {
     std::string sessionId = generateSessionsId();
     sessions[sessionId] = std::map<std::string, std::string>();
-    // std::cout << "New session created with ID: " << sessionId << " and added to session map." << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "New session created with ID: " << sessionId << " and added to session map." << std::endl;
 
     if (sessions.find(sessionId) != sessions.end()) 
     {
-        std::cout << "Session successfully added to map." << std::endl;
+        Log::output("./sessions/SessionManager.txt") << "Session successfully added to map." << std::endl;
     } 
     else 
     {
-        std::cout << "Error: Session was not added to map." << std::endl;
+        Log::output("./sessions/SessionManager.txt") << "Error: Session was not added to map." << std::endl;
     }
     
     return sessionId;
@@ -43,15 +44,15 @@ std::string SessionManager::createSessions()
 bool SessionManager::sessionExist(std::string const& sessionId) 
 {
     bool exists = sessions.find(sessionId) != sessions.end();
-    // std::cout << "Session exists check for ID " << sessionId << ": ";
+    // Log::output("./sessions/SessionManager.txt") << "Session exists check for ID " << sessionId << ": ";
     if (exists)
     {
-        std::cout << "Yes" << std::endl;
+        Log::output("./sessions/SessionManager.txt") << "Yes" << std::endl;
     } 
     else 
     {
-        std::cout << "No" << std::endl;
-        // std::cout << "Reason: session ID " << sessionId << " not found in session map." << std::endl;
+        Log::output("./sessions/SessionManager.txt") << "No" << std::endl;
+        // Log::output("./sessions/SessionManager.txt") << "Reason: session ID " << sessionId << " not found in session map." << std::endl;
     }
     return exists;
 }
@@ -60,12 +61,12 @@ std::map<std::string, std::string>& SessionManager::getSession(std::string const
 {
     if (sessions.find(sessionId) == sessions.end()) 
     {
-        // std::cout << "Creating empty session data for session ID: " << sessionId << std::endl;
+        // Log::output("./sessions/SessionManager.txt") << "Creating empty session data for session ID: " << sessionId << std::endl;
         sessions[sessionId] = std::map<std::string, std::string>();
     } 
     else 
     {
-        std::cout << "Session data found for session ID: " << sessionId << std::endl;
+        Log::output("./sessions/SessionManager.txt") << "Session data found for session ID: " << sessionId << std::endl;
     }
     return sessions[sessionId];
 }
@@ -82,7 +83,7 @@ std::string SessionManager::generateSessionsId()
         ss << std::hex << randomValue;
     }
     std::string sessionId = ss.str();
-    // std::cout << "Generated session ID: " << sessionId << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "Generated session ID: " << sessionId << std::endl;
     return sessionId;
 }
 
@@ -91,7 +92,7 @@ void SessionManager::saveSessionsToFile()
     std::ofstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
     {
-        std::cerr << "Error opening session file for saving: " << SESSION_FILE_PATH << std::endl;
+        Log::output("./logs/error.log") << "Error opening session file for saving: " << SESSION_FILE_PATH << std::endl;
         return;
     }
 
@@ -105,7 +106,7 @@ void SessionManager::saveSessionsToFile()
         file << "---\n";
     }
     file.close();
-    // std::cout << "Sessions saved to file." << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "Sessions saved to file." << std::endl;
 }
 
 void SessionManager::loadSessionsFromFile()
@@ -113,7 +114,7 @@ void SessionManager::loadSessionsFromFile()
     std::ifstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
     {
-        std::cerr << "No existing session file found: " << SESSION_FILE_PATH << std::endl;
+        Log::output("./logs/error.log") << "No existing session file found: " << SESSION_FILE_PATH << std::endl;
         return;
     }
 
@@ -142,5 +143,5 @@ void SessionManager::loadSessionsFromFile()
         }
     }
     file.close();
-    // std::cout << "Sessions loaded from file." << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "Sessions loaded from file." << std::endl;
 }

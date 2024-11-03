@@ -10,7 +10,7 @@ cgitb.enable()
 
 logging.basicConfig(
     filename='./logs/error_python.log',
-    level=logging.DEBUG,
+    level=logging.ERROR,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
@@ -76,7 +76,7 @@ if form:
 def get_next_project_id():
     """Récupère le prochain ID de projet disponible"""
     try:
-        with open("./sessions/projects.txt", "r") as f:
+        with open("./database/projects.txt", "r") as f:
             lines = f.readlines()
             id_lines = [line for line in lines if line.startswith("ID:")]
             if id_lines:
@@ -114,7 +114,7 @@ if form:
         html_success_template = html_success_template.replace("{{image_url}}", image_url)
 
         
-        with open("./sessions/projects.txt", "a") as f:
+        with open("./database/projects.txt", "a") as f:
             f.write(f"ID: {project_id}\n")
             f.write(f"Nom du projet: {project_name}\n")
             f.write(f"Note: {project_grade}\n")

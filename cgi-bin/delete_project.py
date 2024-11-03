@@ -31,10 +31,10 @@ if form:
 
     if project_id:
         try:
-            with open("./sessions/projects.txt", "r") as f:
+            with open("./database/projects.txt", "r") as f:
                 lines = f.readlines()
 
-            with open("./sessions/projects.txt", "w") as f:
+            with open("./database/projects.txt", "w") as f:
                 skip = False
                 for line in lines:
                     if line.startswith(f"ID: {project_id}"):
