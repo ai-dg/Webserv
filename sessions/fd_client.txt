@@ -1,8 +1,40 @@
-HTTP/1.1 404 Not Found
-Set-Cookie: sessionId=bff680c606fa6079; Path=/; HttpOnly
-Content-Type: image/x-icon; charset=UTF-8
+HTTP/1.1 200 OK
+Set-Cookie: sessionId=f99221dd0819a079; Path=/; HttpOnly
+Content-Type: text/javascript; charset=UTF-8
 Connection: keep-alive
-Content-Length: 14
-Date: Mon, 04 Nov 2024 08:32:37 GMT
+Content-Length: 621
+Date: Mon, 04 Nov 2024 08:52:20 GMT
 
-FILE NOT FOUND
+console.log('script.js');
+
+home = document.getElementById('home')
+page1 = document.getElementById('page1')
+page2 = document.getElementById('page2')
+
+if (home)
+{
+    home.addEventListener('click', () => {
+        document.location.href = 'index.html';
+    })
+}
+
+if (page1)
+{
+    page1.addEventListener('click', () => {
+        document.location.href = 'page1.html';
+    })
+}
+
+if (page2)
+{
+    page2.addEventListener('click', () => {
+        document.location.href = 'page2.html';
+    })
+}
+
+if (page3)
+    {
+        page2.addEventListener('click', () => {
+            document.location.href = 'page3.html';
+        })
+    }

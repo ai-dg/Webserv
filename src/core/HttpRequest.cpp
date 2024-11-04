@@ -156,6 +156,11 @@ void HttpRequest::setHeaders(std::string req)
     }
 }
 
+void HttpRequest::getHostByName() const
+{
+    
+}
+
 // void HttpRequest::setBody(std::string req)
 // {
 //     this->body = req;
