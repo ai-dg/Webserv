@@ -1,8 +1,155 @@
-HTTP/1.1 404 Not Found
-Set-Cookie: sessionId=526491d7ee6a89c9; Path=/; HttpOnly
-Content-Type: image/x-icon; charset=UTF-8
+HTTP/1.1 200 OK
+Set-Cookie: sessionId=8b388d708241b6f8; Path=/; HttpOnly
+Content-Type: text/css; charset=UTF-8
 Connection: keep-alive
-Content-Length: 14
-Date: Mon, 04 Nov 2024 13:28:37 GMT
+Content-Length: 2015
+Date: Mon, 04 Nov 2024 18:49:38 GMT
 
-FILE NOT FOUND
+.blue-button:hover 
+{
+    color: blue !important;
+}
+
+.white-button:hover 
+{
+    color: white !important;
+}
+
+.red-button:hover 
+{
+    color: red !important;
+}
+
+.font-size-button 
+{
+    font-size: 10px;
+}
+
+
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}

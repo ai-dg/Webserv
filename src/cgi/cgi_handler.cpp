@@ -93,10 +93,10 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         addToEnvironment(req.getFormatedHeader(it->first));
     }      
     addToEnvironment("CONTENT_TYPE="+req.getHeader("Content-Type"));
+        addToEnvironment("REDIRECT_STATUS=1");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         
-        addToEnvironment("REDIRECT_STATUS=1");
         addToEnvironment("SCRIPT_NAME=" + scriptPath);
         addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
     }else
@@ -157,13 +157,14 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             NULL
         };
 
-        // std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
+        //std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
 
         //
         execve("/usr/bin/env", argv, environment.data());     
         perror("execve");
         std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;
         exit(1);
+        
     } 
     else 
     { 
