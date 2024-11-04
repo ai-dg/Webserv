@@ -38,6 +38,7 @@ class HttpRequest
         bool isValidBodySize() const;
         std::string getRequestedFile() const;
         std::string getQueryString() const;
+        void getHostByName() const;
         std::string getURI() const;
         void printConf(std::string) const;
         std::string getHeader(std::string key) const;

@@ -20,6 +20,6 @@ location_/root: NULL
 location_/upload/methods: NULL
 location_/upload/root: NULL
 location_/upload/upload_store: NULL
-server_name: default_server projects.42.fr
+server_name: projects.42.fr
 Ports to listen on 1: 8080 
 --------------------------------------
