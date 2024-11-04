@@ -26,12 +26,14 @@ map #1:
 server {
 
     listen 9000;
-    host 127.0.0.3;
+    host 127.0.0.5;
+    server_name test.42.fr;
 
-    server_name default_server projects.42.fr;
-
-
-}
+    location / {
+        root /www/html/site2;
+        index index.html;
+        methods GET POST;
+    }
 
 map #2: 
 server {

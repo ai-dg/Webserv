@@ -1,6 +1,7 @@
 #include "../headers/HttpRequest.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/Log.hpp"
+#include "../headers/defines.hpp"
 
 /**
  * @brief Public:
@@ -18,6 +19,11 @@ HttpRequest::HttpRequest(std::string req, Server *server)
     this->server = server;
     //this->postbody = getBody();
     //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
+}
+
+void HttpRequest::printConf(std::string config) const
+{
+    std::cout << this->server->getConf().getConfig(config);
 }
 
 HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
@@ -76,9 +82,9 @@ std::string HttpRequest::getURI() const
     return this->URI;
 }
 
-std::string HttpRequest::getHeader(std::string key)
+std::string HttpRequest::getHeader(std::string key) const
 {
-    return this->headers[key];
+    return this->server->getConf().getConfig(key);
 }
 
 std::string HttpRequest::getFormatedHeader(std::string key)

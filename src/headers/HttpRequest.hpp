@@ -39,7 +39,8 @@ class HttpRequest
         std::string getRequestedFile() const;
         std::string getQueryString() const;
         std::string getURI() const;
-        std::string getHeader(std::string key);
+        void printConf(std::string) const;
+        std::string getHeader(std::string key) const;
         std::string getFormatedHeader(std::string key);
         std::map<std::string, std::string> getHeaders() const;
         std::string getMethod() const;
