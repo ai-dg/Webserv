@@ -34,9 +34,7 @@ if request_method == "POST" and content_length and int(content_length) > 0:
 else:
     logging.warning("No POST request or content length is missing.")
 
-
 image_url = default_image_url
-
 
 if form and 'image' in form:
     image_field = form['image']
@@ -50,7 +48,6 @@ if form and 'image' in form:
             logging.debug(f"Image saved successfully at: {image_path}")
         except Exception as img_err:
             logging.error(f"Error saving image: {img_err}")
-
 
 template_success_path = "./www/html/projects42/add_success.html"
 template_failure_path = "./www/html/projects42/add_failure.html"

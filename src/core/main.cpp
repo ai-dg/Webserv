@@ -1,5 +1,6 @@
 #include <vector>
 #include <string>
+#include <csignal>
 #include "../headers/Server.hpp"
 #include "../headers/Conf.hpp"
 #include "../headers/SessionManager.hpp"
@@ -13,6 +14,8 @@ int main(int ac, char **av)
     SessionManager sessionManager;
     std::vector<Conf> Configs;
     std::vector<Server> Servers;
+
+    signal(SIGPIPE, SIG_IGN);
 
     /**
      * Conditions du path, si NULL, path par defaut
