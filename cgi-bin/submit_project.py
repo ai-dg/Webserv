@@ -53,7 +53,7 @@ if form and 'image' in form:
 
 
 template_success_path = "./www/html/projects42/add_success.html"
-template_failure_path = "./www/html/projetcs42/add_failure.html"
+template_failure_path = "./www/html/projects42/add_failure.html"
 
 try:
     with open(template_success_path, 'r') as file:
