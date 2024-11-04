@@ -1,6 +1,7 @@
 #include "../headers/HttpResponse.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/Status.hpp"
+#include "../headers/defines.hpp"
 #include <unistd.h>
 #include <cstdlib>
 #include <sstream>
@@ -154,10 +155,17 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     }
     else
     {
-        this->filePath = "www/html" + uri;
+        if (uri =="/")
+            uri += req.getHeader(LOCATION_ROOT_INDEX);
+        this->filePath = req.getHeader(LOCATION_ROOT) + uri;
     }
 
     setStatusCode(AUTO);
+    //req.printConf(LOCATION_ROOT);
+
+    //std::cout << "path / : " << this->filePath  << std::endl;
+    
+    
     //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 

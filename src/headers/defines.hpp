@@ -10,9 +10,9 @@
 #define KEEPALIVE "keepalive_timeout"
 #define CLIENT_BODY_TIMEOUT "client_body_timeout"
 #define CLIENT_HEADER_TIMEOUT "client_header_timeout"
+#define LOCATION_ROOT "location_/root"
+#define LOCATION_ROOT_INDEX "location_/index"
 /*
-#define "location_/root"
-#define "location_/index"
 #define "location_/methods"
 
 #define "location_/images/root"

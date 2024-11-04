@@ -1,12 +1,8 @@
-HTTP/1.1 200 OK
-Set-Cookie: sessionId=12d767200233fce9; Path=/; HttpOnly
-Content-Type: text/javascript; charset=UTF-8
+HTTP/1.1 404 Not Found
+Set-Cookie: sessionId=bff680c606fa6079; Path=/; HttpOnly
+Content-Type: image/x-icon; charset=UTF-8
 Connection: keep-alive
-Content-Length: 140
-Date: Sun, 03 Nov 2024 03:14:29 GMT
+Content-Length: 14
+Date: Mon, 04 Nov 2024 08:32:37 GMT
 
-var nameNode = document.getElementById("textclick");
-nameNode.addEventListener("click", function() 
-{
-    alert("Welcome to 42 library")
-});
+FILE NOT FOUND
