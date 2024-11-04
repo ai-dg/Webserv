@@ -44,7 +44,7 @@ location_/images/root: /www/images
 location_/index: index.html
 location_/methods: GET POST
 location_/old-page/return: 301 /new-page
-location_/root: /www/html
+location_/root: /www/html/projects42
 location_/upload/methods: POST
 location_/upload/root: /www/uploads
 location_/upload/upload_store: /uploads/
