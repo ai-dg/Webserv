@@ -156,8 +156,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     else
     {
         if (uri =="/")
-            uri += req.getHeader(LOCATION_ROOT_INDEX);
-        this->filePath = req.getHeader(LOCATION_ROOT) + uri;
+            uri += req.getConf(LOCATION_ROOT_INDEX);
+        this->filePath = req.getConf(LOCATION_ROOT) + uri;
     }
 
     setStatusCode(AUTO);
