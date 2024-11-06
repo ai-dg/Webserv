@@ -82,9 +82,16 @@ std::string HttpRequest::getURI() const
     return this->URI;
 }
 
-std::string HttpRequest::getHeader(std::string key) const
+std::string HttpRequest::getConf(std::string key) const
 {
     return this->server->getConf().getConfig(key);
+}
+
+std::string HttpRequest::getHeader(std::string key) const
+{
+    if (headers.find(key) != headers.end())
+        return headers.find(key)->second;
+    return "";
 }
 
 std::string HttpRequest::getFormatedHeader(std::string key)

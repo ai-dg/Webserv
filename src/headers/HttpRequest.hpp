@@ -41,6 +41,7 @@ class HttpRequest
         void getHostByName() const;
         std::string getURI() const;
         void printConf(std::string) const;
+        std::string getConf(std::string key) const;
         std::string getHeader(std::string key) const;
         std::string getFormatedHeader(std::string key);
         std::map<std::string, std::string> getHeaders() const;
