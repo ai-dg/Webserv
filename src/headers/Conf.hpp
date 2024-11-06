@@ -4,11 +4,13 @@
 #include <map>
 #include <string>
 #include <vector>
+#include "../headers/Location.hpp"
 
 class Conf
 {
     private:
         std::map<std::string, std::string> configMap;
+        std::map<std::string, Location*> routes;
         std::string path;
         std::vector<std::string> listenPorts;
 

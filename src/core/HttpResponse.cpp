@@ -135,6 +135,12 @@ void HttpResponse::setStatusCode(int stat)
         statusCode = stat;
 }
 
+void HttpResponse::checkRedirection(const HttpRequest &req)
+{
+    (void) req;
+    //req.server->getConf();
+}
+
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
