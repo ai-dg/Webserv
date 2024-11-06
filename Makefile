@@ -9,6 +9,7 @@ SRC = src/core/main.cpp \
       src/core/handler.cpp \
 	  src/core/Epoll.cpp \
 	  src/core/Cookies.cpp \
+	  src/core/Location.cpp \
 	  src/core/Status.cpp \
 	  src/core/SessionManager.cpp \
 	  src/core/InvalidArgException.cpp \
