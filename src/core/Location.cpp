@@ -21,6 +21,7 @@
     {
         (void) loc;
         init();
+        
         /*ici la logique pour récupérer les différentes valeurs...*/
     }
 
