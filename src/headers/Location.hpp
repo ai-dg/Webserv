@@ -16,12 +16,20 @@ class Location
         std::string _cgi_bin;
         std::string _return;
         void extractField(std::string field);
-    public : 
+    public :
         Location();
         Location(std::string &loc);
         void debugValues();
         Location &operator=(Location const &loc);
         void init();
+        std::string redirection();
+        std::string cgi();
+        std::string cgi_bin();
+        std::string upload_store();
+        std::string autoindex();
+        std::string methods();
+        std::string extensions();
+        std::string root();
         Location(Location const &loc);
         ~Location();
 };

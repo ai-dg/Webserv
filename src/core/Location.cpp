@@ -39,6 +39,39 @@
             std::cerr << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
     }
 
+        std::string Location::redirection()
+        {
+            return _return;
+        }
+        std::string Location::cgi()
+        {
+            return _cgi;
+        }
+        std::string Location::cgi_bin()
+        {
+            return _cgi_bin;
+        }
+        std::string Location::upload_store()
+        {
+            return _upload_store;
+        }
+        std::string Location::autoindex()
+        {
+            return _autoindex;
+        }
+        std::string Location::methods()
+        {
+            return _methods;
+        }
+        std::string Location::extensions()
+        {
+            return _extensions;
+        }
+        std::string Location::root()
+        {
+            return _root;
+        }
+
     void Location::extractField(std::string param)
     {
         std::string field;

@@ -67,9 +67,14 @@ void Conf::printStatus(bool status, std::string text)
 
 Location *Conf::checkRoute(std::string route)
 {
+    std::cerr << BLUE << "asked route : " << route << RESET << std::endl;
     std::map<std::string, Location*>::iterator it = routes.begin();
-    (void) it;
-    (void) route;
+    for (;it != routes.end(); ++it)
+    {
+        if (route == it->first)
+            return it->second;
+    }
+    std::cerr << BLUE << "unknown route " << route << RESET << std::endl;
     return NULL;
     
 }
