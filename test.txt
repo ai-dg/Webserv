@@ -1,11 +1,11 @@
 -------Config values from map---------
-client_body_timeout: NULL
-client_header_timeout: NULL
-client_max_body_size: NULL
-error_page_404: NULL
-error_page_500: NULL
-host: 127.0.0.1
-keepalive_timeout: NULL
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 1000M
+error_page_404: /default/error_pages/404.html
+error_page_500: /default/error_pages/500.html
+host: 127.0.0.2
+keepalive_timeout: 65
 location_/cgi-bin/cgi: NULL
 location_/cgi-bin/cgi_bin: NULL
 location_/cgi-bin/extension: NULL
@@ -21,5 +21,5 @@ location_/upload/methods: NULL
 location_/upload/root: NULL
 location_/upload/upload_store: NULL
 server_name: projects.42.fr
-Ports to listen on 1: 8080 
+Ports to listen on 1: 8090 
 --------------------------------------
