@@ -6,6 +6,7 @@
 #include "../headers/Conf.hpp"
 #include "../headers/SessionManager.hpp"
 #include "../headers/Sockets.hpp"
+#include "../headers/cleanup.hpp"
 #include "../headers/RarManager.hpp"
 
 
@@ -41,6 +42,7 @@ int main(int ac, char **av)
     
     request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
     std::cerr << "Clean memory..."<<std::endl ;
+    clearMemory(Configs);
     for (size_t i = 0; i < fd_sockets.size() ; ++i)
     {
         close(fd_sockets[i]);

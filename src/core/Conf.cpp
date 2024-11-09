@@ -74,13 +74,8 @@ void Conf::init()
 Conf::~Conf()
 {
     std::map<std::string, Location*>::iterator it;
-    std::cerr << BLUE << "new call : " << RESET << std::endl;
-    static int cout = 1;
    for (it = routes.begin(); it != routes.end(); ++it)
     {
-        std::cerr << "loop : " << cout << std::endl;
-        cout++;
-
         if (it != routes.end() && it->second)
         {
             delete it->second;
