@@ -78,8 +78,7 @@
             loc.erase(0,loc.find_first_of("\n") + 1);
         }
         debugValues();
-        /*ici la logique pour récupérer les différentes valeurs...*/
-        std::cerr << VIOLET << loc << RESET << std::endl;
+        //std::cerr << VIOLET << loc << RESET << std::endl;
 
     }
 

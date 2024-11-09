@@ -74,10 +74,13 @@ void Conf::init()
 Conf::~Conf()
 {
     std::map<std::string, Location*>::iterator it;
-   /* for (it = routes.begin(); it != routes.end(); ++it)
+   /*for (it = routes.begin(); it != routes.end(); ++it)
     {
-        if (it->second)
+        if (it != routes.end() && it->second)
+        {
             delete it->second;
+            it->second = NULL;
+        }
     }*/
     routes.clear();
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
