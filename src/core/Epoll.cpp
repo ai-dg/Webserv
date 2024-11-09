@@ -91,6 +91,8 @@ int Epoll::wait(int timeout)
     int eventCount = epoll_wait(epollFd, events, maxEvents, timeout);
     if (eventCount == -1) 
     {
+        if (errno == EINTR) 
+            return -1;
         Log::error("epoll_wait");
         exit(EXIT_FAILURE);
     }
