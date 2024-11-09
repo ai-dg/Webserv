@@ -22,21 +22,21 @@
     void Location::debugValues()
     {
         if (_root != "")
-            std::cerr << BOLD_WHITE << _root << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _root << RESET << std::endl;
         if (_extensions != "")
-            std::cerr << BOLD_WHITE << _extensions << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _extensions << RESET << std::endl;
         if (_methods != "")
-            std::cerr << BOLD_WHITE << _methods << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _methods << RESET << std::endl;
         if (_autoindex != "")
-            std::cerr << BOLD_WHITE << _autoindex << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _autoindex << RESET << std::endl;
         if (_upload_store != "")
-              std::cerr << BOLD_WHITE << _upload_store << RESET << std::endl;
+              std::cerr << "\t\t" << BOLD_WHITE << _upload_store << RESET << std::endl;
         if (_cgi_bin != "")
-            std::cerr << BOLD_WHITE << _cgi_bin << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _cgi_bin << RESET << std::endl;
         if (_cgi != "")
-            std::cerr << BOLD_WHITE << _cgi << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
         if (_return != "")
-            std::cerr << BOLD_WHITE << _return << RESET << std::endl;
+            std::cerr << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
     }
 
     void Location::extractField(std::string param)
@@ -77,7 +77,7 @@
             extractField(currentLine);
             loc.erase(0,loc.find_first_of("\n") + 1);
         }
-        debugValues();
+        //debugValues();
         //std::cerr << VIOLET << loc << RESET << std::endl;
 
     }

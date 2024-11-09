@@ -41,7 +41,7 @@ int main(int ac, char **av)
      */
     
     request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
-    std::cerr << "Clean memory..."<<std::endl ;
+    std::cerr << std::endl << "Clear memory..."<<std::endl ;
     clearMemory(Configs);
     for (size_t i = 0; i < fd_sockets.size() ; ++i)
     {
