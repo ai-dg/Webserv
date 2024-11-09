@@ -21,6 +21,7 @@ SRC = src/core/main.cpp \
 	  src/utils/files.cpp \
 	  src/utils/parser.cpp \
 	  src/utils/stringUtils.cpp \
+	  src/utils/cleanup.cpp \
 
 
 OBJ = $(SRC:.cpp=.o)
