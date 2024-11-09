@@ -47,7 +47,11 @@ Conf::Conf(std::string& path) : path(path)
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 
+   // printFile();
     getValuesFromPath();
+   // printFile();
+    setLocations();
+   // printFile();
     Log::output("./sessions/Conf.txt") << "path: " << this->path;
     std::ofstream file("./test.txt");
     printConfigs(file);
@@ -72,21 +76,49 @@ void Conf::init()
 Conf::~Conf()
 {
     std::map<std::string, Location*>::iterator it;
-    for (it = routes.begin(); it != routes.end(); ++it)
+   /* for (it = routes.begin(); it != routes.end(); ++it)
     {
         if (it->second)
             delete it->second;
-    }
+    }*/
     routes.clear();
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
 
 }
 
-void Conf::getValuesFromPath()
+void Conf::debugFile()
+{
+
+}
+
+void Conf::printFile()
+{
+    std::ifstream confFile(path.c_str());
+    std::string line;
+
+    if (!confFile.is_open()) 
+    {
+        Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
+        return;
+    }
+
+    while (std::getline(confFile, line)) 
+    {
+    
+        std::cerr <<BOLD_BLUE << line  << RESET << std::endl;
+        
+    
+    }
+    confFile.close();
+}
+
+void Conf::setLocations()
 {
     std::ifstream confFile(path.c_str());
     std::string line;
     std::string currentLocation = ""; 
+    bool locationstatus = false;
+    std::string routePath;
 
     if (!confFile.is_open()) 
     {
@@ -98,23 +130,75 @@ void Conf::getValuesFromPath()
     {
         line.erase(0, line.find_first_not_of(" \t"));
         line.erase(line.find_last_not_of(" \t") + 1);
+        //std::cerr <<BOLD_GREEN << line  << RESET << std::endl;
+
+        if (line.empty() || line[0] == '#') 
+            continue;
+        
+        if (line.find("location") != std::string::npos) 
+        {
+            currentLocation.clear();
+            size_t pos = line.find(" ") + 1;
+            routePath = line.substr(pos, line.find_last_of(" \t") - pos);
+            //std::cerr << RED << routePath << " : " << std::endl;
+            std::getline(confFile, line);
+            //std::cerr <<BOLD_GREY << line  << RESET << std::endl;
+            locationstatus = true;
+            while (locationstatus)
+            {
+                currentLocation += line;
+                //std::cerr << RED << " IN : " << currentLocation << RESET << std::endl;
+                std::getline(confFile, line);
+                // std::cerr <<BOLD_YELLOW << line  << RESET << std::endl;
+                if (line.find("}") != std::string::npos)
+                    locationstatus = false;
+            }
+            routes.insert(std::make_pair(routePath, new Location(currentLocation)));
+            continue;
+        }
+        
+    
+    }
+    confFile.close();
+}
+
+void Conf::getValuesFromPath()
+{
+    std::ifstream confFile(path.c_str());
+    std::string line;
+    std::string currentLocation = ""; 
+    //bool locationstatus = false;
+    std::string routPath;
+
+    if (!confFile.is_open()) 
+    {
+        Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
+        return;
+    }
+
+    while (std::getline(confFile, line)) 
+    {
+        line.erase(0, line.find_first_not_of(" \t"));
+        line.erase(line.find_last_not_of(" \t") + 1);
+
         
         if (line.empty() || line[0] == '#') 
             continue;
         
-        if (line.find("location") == 0) 
+        if (line.find("location") != std::string::npos) 
         {
-            size_t pos = line.find(" ");
-            currentLocation = line.substr(pos + 1); 
-            currentLocation = currentLocation.substr(0, currentLocation.find("{")); 
-            currentLocation.erase(0, currentLocation.find_first_not_of(" \t")); 
-            currentLocation.erase(currentLocation.find_last_not_of(" \t") + 1); 
+            std::getline(confFile, line);
+            while (line.find_first_of("}") == std::string::npos)
+            {
+                std::getline(confFile, line);
+            }        
             continue;
         }
         
         if (line == "}") 
         {
-            currentLocation = ""; 
+            currentLocation = "";
+
             continue;
         }
         

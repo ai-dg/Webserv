@@ -22,6 +22,9 @@ class Conf
 
         void getValuesFromPath();
         void init();
+        void setLocations();
+        void printFile();
+        void debugFile();
         void printStatus(bool status, std::string text);
         void setConf(std::string const& key, std::string const value);
         std::string getConfig(const std::string& key) const;

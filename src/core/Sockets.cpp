@@ -15,6 +15,7 @@ void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs)
     std::string line;
     std::string server_block;
     bool in_server_block = false;
+    bool in_location_block = false;
     int server_index = 0;
     int index;
 
@@ -45,13 +46,27 @@ void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs)
             in_server_block = true;
             server_block = line + "\n";
         } 
+        else if (line.find("location") != std::string::npos)
+        {
+            in_location_block = true;
+            server_block += line + "\n";
+        }
         
         else if (in_server_block && line.find("}") != std::string::npos) 
         {
-            server_block += line + "\n";
-            map_conf[server_index++] = server_block;  
-            in_server_block = false;
-            server_block.clear();
+            if (in_location_block)
+            {
+                server_block += line + "\n";
+                in_location_block = false;
+                continue;
+            }
+            else
+            {
+                server_block += line + "\n";
+                map_conf[server_index++] = server_block;  
+                in_server_block = false;
+                server_block.clear();
+            }
         } 
         
         else if (in_server_block) {

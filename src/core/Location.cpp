@@ -1,4 +1,5 @@
 #include "../headers/Location.hpp"
+#include "../headers/colors.hpp"
 
 
 
@@ -21,8 +22,9 @@
     {
         (void) loc;
         init();
-        
+        std::cerr << "called : ";
         /*ici la logique pour récupérer les différentes valeurs...*/
+        std::cerr << VIOLET << loc << RESET << std::endl;
     }
 
     Location &Location::operator=(Location const &loc)
