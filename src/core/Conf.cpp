@@ -4,6 +4,7 @@
 #include <vector>
 #include "../headers/colors.hpp"
 #include "../headers/Log.hpp"
+#include "../headers/stringUtils.hpp"
 
 Conf::Conf()
 {
@@ -47,7 +48,7 @@ Conf::Conf(std::string& path) : path(path)
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 
-    //setLocations();
+    setLocations();
     getValuesFromPath();
     Log::output("./sessions/Conf.txt") << "path: " << this->path;
     std::ofstream file("./test.txt");
@@ -125,28 +126,21 @@ void Conf::setLocations()
 
     while (std::getline(confFile, line)) 
     {
-        line.erase(0, line.find_first_not_of(" \t"));
-        line.erase(line.find_last_not_of(" \t") + 1);
-        //std::cerr <<BOLD_GREEN << line  << RESET << std::endl;
-
+        line = trim(line);
         if (line.empty() || line[0] == '#') 
-            continue;
-        
+            continue;  
         if (line.find("location") != std::string::npos) 
         {
             currentLocation.clear();
             size_t pos = line.find(" ") + 1;
             routePath = line.substr(pos, line.find_last_of(" \t") - pos);
-            //std::cerr << RED << routePath << " : " << std::endl;
+            std::cerr << RED << routePath << " : " << RESET << std::endl;
             std::getline(confFile, line);
-            //std::cerr <<BOLD_GREY << line  << RESET << std::endl;
             locationstatus = true;
             while (locationstatus)
             {
-                currentLocation += line;
-                //std::cerr << RED << " IN : " << currentLocation << RESET << std::endl;
+                currentLocation += trim(line) + "\n";
                 std::getline(confFile, line);
-                // std::cerr <<BOLD_YELLOW << line  << RESET << std::endl;
                 if (line.find("}") != std::string::npos)
                     locationstatus = false;
             }
@@ -175,10 +169,7 @@ void Conf::getValuesFromPath()
 
     while (std::getline(confFile, line)) 
     {
-        line.erase(0, line.find_first_not_of(" \t"));
-        line.erase(line.find_last_not_of(" \t") + 1);
-
-        
+        line = trim(line);
         if (line.empty() || line[0] == '#') 
             continue;
         
