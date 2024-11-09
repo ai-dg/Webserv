@@ -21,5 +21,6 @@ void setServer(Conf const& conf, Server *server);
 std::string trim(std::string str, char c);
 std::string searchValueInFile(std::string path, std::string index);
 void setPort(std::string listen, Server *server);
+bool isValidConfFile(std::string path);
 
 #endif

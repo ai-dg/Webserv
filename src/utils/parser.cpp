@@ -56,3 +56,17 @@ std::string searchValueInFile(std::string path, std::string index)
 	config.close();
 	return "";
 }
+
+bool isValidConfFile(std::string path)
+{
+	std::ifstream file(path.c_str());
+	(void) file;
+	return true;
+	// verifier que le fichier existe...
+	// verifier qu'il n'est pas vide
+	// verifier qu'il y a au moins un bloc server
+	// verifier que les port sont dans les normes...
+	// vérifier la cohérences des accolades...
+	// verifier qu'il y a autant d'accolades que de server et location
+	// vérifier qu'au moins une location est set par server ???? a voir avec le sujet
+}
