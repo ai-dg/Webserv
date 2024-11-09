@@ -1,8 +1,8 @@
 SRC = src/core/main.cpp \
 	  src/core/RarManager.cpp \
-	  src/core/Sockets.cpp \
 	  src/core/Conf.cpp \
       src/core/Server.cpp \
+	  src/core/Sockets.cpp \
 	  src/utils/Log.cpp \
 	  src/core/HttpRequest.cpp \
 	  src/core/HttpResponse.cpp \
@@ -27,7 +27,7 @@ OBJ = $(SRC:.cpp=.o)
 NAME = webserv
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -g
 # CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -g
 
 all: $(NAME)

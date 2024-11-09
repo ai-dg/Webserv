@@ -28,7 +28,7 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("keepalive_timeout", ""));
     configMap.insert(std::make_pair("client_body_timeout", ""));
     configMap.insert(std::make_pair("client_header_timeout", ""));
-
+/*
     configMap.insert(std::make_pair("location_/root", ""));
     configMap.insert(std::make_pair("location_/index", ""));
     configMap.insert(std::make_pair("location_/methods", ""));
@@ -47,7 +47,7 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("location_/cgi-bin/extension", ""));
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
-
+*/
     setLocations();
     getValuesFromPath();
     Log::output("./sessions/Conf.txt") << "path: " << this->path;
@@ -74,14 +74,19 @@ void Conf::init()
 Conf::~Conf()
 {
     std::map<std::string, Location*>::iterator it;
-   /*for (it = routes.begin(); it != routes.end(); ++it)
+    std::cerr << BLUE << "new call : " << RESET << std::endl;
+    static int cout = 1;
+   for (it = routes.begin(); it != routes.end(); ++it)
     {
+        std::cerr << "loop : " << cout << std::endl;
+        cout++;
+
         if (it != routes.end() && it->second)
         {
-            delete it->second;
-            it->second = NULL;
+            //delete it->second;
+            //it->second = NULL;
         }
-    }*/
+    }
     routes.clear();
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
 
@@ -150,8 +155,6 @@ void Conf::setLocations()
             routes.insert(std::make_pair(routePath, new Location(currentLocation)));
             continue;
         }
-        
-    
     }
     confFile.close();
 }

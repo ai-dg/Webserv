@@ -6,20 +6,6 @@ error_page_404: NULL
 error_page_500: NULL
 host: 127.0.0.1
 keepalive_timeout: NULL
-location_/cgi-bin/cgi: NULL
-location_/cgi-bin/cgi_bin: NULL
-location_/cgi-bin/extension: NULL
-location_/cgi-bin/methods: NULL
-location_/cgi-bin/root: NULL
-location_/images/autoindex: NULL
-location_/images/root: NULL
-location_/index: NULL
-location_/methods: NULL
-location_/old-page/return: NULL
-location_/root: NULL
-location_/upload/methods: NULL
-location_/upload/root: NULL
-location_/upload/upload_store: NULL
 server_name: projects.42.fr
 Ports to listen on 1: 8080 
 --------------------------------------

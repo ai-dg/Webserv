@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/10/26 08:24:29 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:51:38 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ class Server
         size_t maxBodySize;
         void setMaxBodySize();
         void setHostNames();
-        Conf conf;
+        Conf *conf;
     
     public:
         Server();
-        Server(Conf const& c);
+        Server(Conf *c);
         ~Server();
         void addPort(int port);
         bool foundHostName(std::string hostname);
@@ -52,7 +52,7 @@ class Server
         
 
         //int* getPorts(int& count);
-        Conf getConf() const;
+        Conf *getConf() const;
         int getNumPorts() const;
 };
 

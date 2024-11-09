@@ -4,12 +4,12 @@
 #include <map>
 #include <algorithm>
 #include <sstream>
-#include "../headers/Sockets.hpp"
 #include "../headers/Conf.hpp"
+#include "../headers/Sockets.hpp"
 #include "../headers/Server.hpp"
 #include "../headers/Log.hpp"
 
-void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs) 
+void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs) 
 {
     std::map<int, std::string> map_conf;
     std::string line;
@@ -90,9 +90,8 @@ void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs)
         temp_file << it->second;
         temp_file.close();
         
-        
-        Conf conf(temp_file_path);
-        Configs.push_back(conf);
+        //Conf *conf = new Conf(temp_file_path);
+        Configs.push_back(new Conf(temp_file_path));
         remove("./config/temp_server_block.conf");
         index++;
     }
@@ -100,7 +99,7 @@ void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs)
     for (size_t i = 0; i < Configs.size(); ++i) 
     {
         outfile << "Configuration du serveur " << i << " :" << std::endl;
-        Configs[i].printConfigs(outfile);
+        Configs[i]->printConfigs(outfile);
         outfile << std::endl;
     }
     file.close();
@@ -108,21 +107,23 @@ void get_all_server_conf(std::string const& path, std::vector<Conf>& Configs)
     outfile.close();
 }
 
-int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers, std::vector<Conf>& Configs)
+int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers, std::vector<Conf *>& Configs)
 {
     int numServers = 0;
     std::vector<int> listPorts;
 
 
-    for (std::vector<Conf>::iterator it = Configs.begin(); it != Configs.end(); ++it)
+    for (std::vector<Conf*>::iterator it = Configs.begin(); it != Configs.end(); ++it)
     {
         numServers++;
     }    
+    
     for (int i = 0; i < numServers; i++)
     {
         /**
          * Server start
          */
+        std::cerr <<"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa" <<std::endl;
         Server server(Configs[i]);
         Servers.push_back(server);
 
@@ -137,6 +138,7 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers
             }
         }
     }
+  
     /**
      * @brief Reglages des connexion et communication "Sockets"
      */
@@ -145,7 +147,6 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers
 
     if (setup_connection_socket(fd_sockets, listPorts) > 0)
         return 1;
-
     return 0;
 }
 

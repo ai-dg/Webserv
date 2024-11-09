@@ -50,7 +50,7 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
     for (size_t i = 0; i < Servers.size(); ++i) 
     {
         Log::output("./sessions/find_server_index.txt") << "Checking Server index " << i << std::endl;
-        Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i].getConf().getConfig("host") << ", Ports: ";
+        Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i].getConf()->getConfig("host") << ", Ports: ";
         
         
         const std::vector<int>& serverPorts = Servers[i].getPorts();
@@ -59,7 +59,7 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
         Log::output("./sessions/find_server_index.txt") << std::endl;
         
         
-        if (Servers[i].getConf().getConfig("host") == host && 
+        if (Servers[i].getConf()->getConfig("host") == host && 
             std::find(serverPorts.begin(), serverPorts.end(), port) != serverPorts.end()) 
         {
             Log::output("./sessions/find_server_index.txt") << "Match found at index " << i << std::endl;
@@ -69,7 +69,7 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
 
     
     Log::output("./sessions/find_server_index.txt") << "No match found, defaulting to index 0" << std::endl;
-    Log::output("./sessions/find_server_index.txt") << Servers[0].getConf().getConfig("host") << std::endl;
+    Log::output("./sessions/find_server_index.txt") << Servers[0].getConf()->getConfig("host") << std::endl;
     return 0;
 }
 
