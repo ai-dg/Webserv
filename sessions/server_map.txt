@@ -6,7 +6,6 @@ server {
     server_name default.42.fr;
 
     location / {
-        1;
         root /www/html/default;
         index index.html;
         methods GET;
@@ -32,14 +31,12 @@ server {
     client_header_timeout 10;
 
     location / {
-        2;
         root /www/html/projects42;
         index index.html;
         methods GET POST;
     }
 
     location /images/ {
-        3;
         root /www/images;
         extension .png .jpg .gif .jpeg;
         methods GET;
@@ -47,14 +44,12 @@ server {
     }
 
     location /upload {
-        4;
         root /www/uploads;
         methods POST;
         upload_store /uploads/;
     }
 
     location /cgi-bin/ {
-        5;
         root /www/cgi-bin;
         cgi on;
         cgi_bin /cgi-bin/;
@@ -63,12 +58,10 @@ server {
     }
 
     location /test {
-        6;
         return 301 www.google.fr;
     }
 
     location /old-page {
-        7;
         return 301 /new-page;
     }
 }
@@ -81,7 +74,6 @@ server {
     server_name test.42.fr;
 
     location / {
-        8;
         root /www/html/site2;
         index index.html;
         methods GET POST;

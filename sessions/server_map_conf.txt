@@ -1,0 +1,108 @@
+Configuration du serveur 0 :
+-------Config values from map---------
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 4M
+error_page_404: /error_pages/404.html
+error_page_500: /error_pages/500.html
+host: 127.0.0.1
+keepalive_timeout: 65
+location_/cgi-bin/cgi: on
+location_/cgi-bin/cgi_bin: /cgi-bin/
+location_/cgi-bin/extension: .php
+location_/cgi-bin/methods: GET POST
+location_/cgi-bin/root: /www/cgi-bin
+location_/images/autoindex: on
+location_/images/root: /www/images
+location_/index: index.html
+location_/methods: GET POST
+location_/old-page/return: 301 /new-page
+location_/root: /www/html
+location_/upload/methods: POST
+location_/upload/root: /www/uploads
+location_/upload/upload_store: /uploads/
+server_name: default.42.fr
+Ports to listen on 1: 8000 
+--------------------------------------
+
+Configuration du serveur 1 :
+-------Config values from map---------
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 1000M
+error_page_404: /default/error_pages/404.html
+error_page_500: /default/error_pages/500.html
+host: 127.0.0.2
+keepalive_timeout: 65
+location_/cgi-bin/cgi: on
+location_/cgi-bin/cgi_bin: /cgi-bin/
+location_/cgi-bin/extension: .php
+location_/cgi-bin/methods: GET POST
+location_/cgi-bin/root: /www/cgi-bin
+location_/images/autoindex: on
+location_/images/root: /www/images
+location_/index: index.html
+location_/methods: GET POST
+location_/old-page/return: 301 /new-page
+location_/root: /www/html
+location_/upload/methods: POST
+location_/upload/root: /www/uploads
+location_/upload/upload_store: /uploads/
+server_name: projects.42.fr
+Ports to listen on 1: 8090 
+--------------------------------------
+
+Configuration du serveur 2 :
+-------Config values from map---------
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 4M
+error_page_404: /error_pages/404.html
+error_page_500: /error_pages/500.html
+host: 127.0.0.5
+keepalive_timeout: 65
+location_/cgi-bin/cgi: on
+location_/cgi-bin/cgi_bin: /cgi-bin/
+location_/cgi-bin/extension: .php
+location_/cgi-bin/methods: GET POST
+location_/cgi-bin/root: /www/cgi-bin
+location_/images/autoindex: on
+location_/images/root: /www/images
+location_/index: index.html
+location_/methods: GET POST
+location_/old-page/return: 301 /new-page
+location_/root: /www/html
+location_/upload/methods: POST
+location_/upload/root: /www/uploads
+location_/upload/upload_store: /uploads/
+server_name: test.42.fr
+Ports to listen on 1: 9000 
+--------------------------------------
+
+Configuration du serveur 3 :
+-------Config values from map---------
+client_body_timeout: 60
+client_header_timeout: 10
+client_max_body_size: 4M
+error_page_404: /error_pages/404.html
+error_page_500: /error_pages/500.html
+host: 127.0.0.1
+keepalive_timeout: 65
+location_/cgi-bin/cgi: on
+location_/cgi-bin/cgi_bin: /cgi-bin/
+location_/cgi-bin/extension: .php
+location_/cgi-bin/methods: GET POST
+location_/cgi-bin/root: /www/cgi-bin
+location_/images/autoindex: on
+location_/images/root: /www/images
+location_/index: index.html
+location_/methods: GET POST
+location_/old-page/return: 301 /new-page
+location_/root: /www/html
+location_/upload/methods: POST
+location_/upload/root: /www/uploads
+location_/upload/upload_store: /uploads/
+server_name: projects.42.fr
+Ports to listen on 1: 8080 
+--------------------------------------
+

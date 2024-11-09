@@ -47,11 +47,8 @@ Conf::Conf(std::string& path) : path(path)
     
     configMap.insert(std::make_pair("location_/old-page/return", ""));
 
-   // printFile();
+    //setLocations();
     getValuesFromPath();
-   // printFile();
-    setLocations();
-   // printFile();
     Log::output("./sessions/Conf.txt") << "path: " << this->path;
     std::ofstream file("./test.txt");
     printConfigs(file);
