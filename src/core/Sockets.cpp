@@ -109,24 +109,16 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
 
 int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers, std::vector<Conf *>& Configs)
 {
-    int numServers = 0;
     std::vector<int> listPorts;
 
-
-    for (std::vector<Conf*>::iterator it = Configs.begin(); it != Configs.end(); ++it)
-    {
-        numServers++;
-    }    
-    
-    for (int i = 0; i < numServers; i++)
+    std::vector<Conf*>::iterator it ;
+    for (it = Configs.begin(); it != Configs.end(); ++it)
     {
         /**
          * Server start
          */
-        std::cerr <<"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa" <<std::endl;
-        Server server(Configs[i]);
+        Server server(*it);        
         Servers.push_back(server);
-
         for (size_t j = 0; j < server.getPorts().size(); j++)
         {
             int port = server.getPorts()[j];

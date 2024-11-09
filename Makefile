@@ -15,6 +15,7 @@ SRC = src/core/main.cpp \
 	  src/core/InvalidArgException.cpp \
       src/cgi/cgi_handler.cpp \
 	  src/utils/date.cpp \
+	  src/utils/signals.cpp \
 	  src/utils/format.cpp \
 	  src/utils/debugTools.cpp \
 	  src/utils/files.cpp \

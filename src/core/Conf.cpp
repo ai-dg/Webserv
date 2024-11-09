@@ -83,8 +83,8 @@ Conf::~Conf()
 
         if (it != routes.end() && it->second)
         {
-            //delete it->second;
-            //it->second = NULL;
+            delete it->second;
+            it->second = NULL;
         }
     }
     routes.clear();

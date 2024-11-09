@@ -14,7 +14,10 @@
 #include "../headers/HttpResponse.hpp"
 #include "../headers/cgi_handler.hpp"
 #include "../headers/Cookies.hpp"
+#include "../headers/signals.hpp"
 #include "../headers/Log.hpp"
+
+volatile sig_atomic_t sig_g = 0;
 
 int findServerIndex(std::string const& request, std::vector<Server>& Servers) 
 {
@@ -154,7 +157,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         epoll.makeSocketNonBlocking(fd_sockets[i]);  
     }
 
-    while (true) 
+    while (sig_g != SIGINT) 
     {
         int eventCount = epoll.wait(-1);
         for (int i = 0; i < eventCount; ++i) 
