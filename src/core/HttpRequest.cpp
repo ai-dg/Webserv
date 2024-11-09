@@ -23,7 +23,7 @@ HttpRequest::HttpRequest(std::string req, Server *server)
 
 void HttpRequest::printConf(std::string config) const
 {
-    std::cout << this->server->getConf().getConfig(config);
+    std::cout << server->getConf()->getConfig(config);
 }
 
 HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
@@ -84,7 +84,7 @@ std::string HttpRequest::getURI() const
 
 std::string HttpRequest::getConf(std::string key) const
 {
-    return this->server->getConf().getConfig(key);
+    return this->server->getConf()->getConfig(key);
 }
 
 std::string HttpRequest::getHeader(std::string key) const

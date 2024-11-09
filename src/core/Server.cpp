@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/10/26 08:28:00 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:51:30 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void Server::setMaxBodySize()
 {
     int multi = 1;   
     std::stringstream stream;
-    std::string mbs = trim(conf.getConfig("client_max_body_size"));
+    std::string mbs = trim(conf->getConfig("client_max_body_size"));
     stream << mbs;
     try {
         if (mbs[mbs.size() - 1] == 'M')
@@ -68,10 +68,11 @@ void Server::setMaxBodySize()
     
 }
 
-Server::Server(Conf const& c) : conf(c)
+Server::Server(Conf *c)
 {
-    std::vector<std::string> listenPorts = conf.getListenPorts();
-
+    std::vector<std::string> listenPorts = conf->getListenPorts();
+    conf = c;
+    
     //Log::output("./sessions/Server.txt") << "Nbr de ports : " << listenPorts.size() << std::endl;
 
     for (size_t i = 0; i < listenPorts.size(); ++i) 
@@ -88,7 +89,7 @@ Server::Server(Conf const& c) : conf(c)
         }        
     }
     
-    if (inet_pton(AF_INET, (conf.getConfig("host")).c_str(), &host_ip) < 0)
+    if (inet_pton(AF_INET, (conf->getConfig("host")).c_str(), &host_ip) < 0)
     {
         perror("invalid host");
         Log::error("Invalid host : check your configuration file");
@@ -96,7 +97,7 @@ Server::Server(Conf const& c) : conf(c)
     else
     {
         Log::output("./sessions/Server.txt") << BOLD_GREEN << "Server on" << RESET << std::endl;
-        Log::output("./sessions/Server.txt") << "listening " << conf.getConfig("host") << " on ports ";
+        Log::output("./sessions/Server.txt") << "listening " << conf->getConfig("host") << " on ports ";
         std::vector<int>::iterator it;
         for (it = ports.begin(); it != ports.end(); it++)
         {
@@ -115,7 +116,7 @@ Server::Server(Conf const& c) : conf(c)
 
 void Server::setHostNames()
 {
-    std::string host_names = conf.getConfig(HOST_NAMES);
+    std::string host_names = conf->getConfig(HOST_NAMES);
     host_names = trim(host_names);
 
     if (host_names.size() == 0)
@@ -167,7 +168,7 @@ Server::~Server()
 
 bool Server::getCgiStatus()
 {
-    if (conf.getConfig("location_/cgi-bin/cgi") == "on" )
+    if (conf->getConfig("location_/cgi-bin/cgi") == "on" )
         return true;
     return false;
 }
@@ -196,9 +197,9 @@ std::vector<int>Server::getPorts()
     return ports;
 }
 
-Conf Server::getConf() const
+Conf *Server::getConf() const
 {
-    return this->conf;
+    return conf;
 }
 
 /*
