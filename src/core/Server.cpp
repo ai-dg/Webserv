@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/09 17:07:32 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/09 18:31:11 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void Server::setMaxBodySize()
 
 Server::Server(Conf *c)
 {
+    static int serverNumber = 1;
     conf = c;
     std::vector<std::string> listenPorts = conf->getListenPorts();
     //Log::output("./sessions/Server.txt") << "Nbr de ports : " << listenPorts.size() << std::endl;
@@ -111,6 +112,8 @@ Server::Server(Conf *c)
     } 
     setMaxBodySize();
     setHostNames();
+    
+    conf->printRoutesConfig(serverNumber++);
 }
 
 void Server::setHostNames()

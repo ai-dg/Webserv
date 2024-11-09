@@ -20,6 +20,8 @@ class Conf
         Conf(std::string& path);
         ~Conf();
 
+        Location *checkRoute(std::string route);
+        void printRoutesConfig(int servNb);
         void getValuesFromPath();
         void init();
         void setLocations();

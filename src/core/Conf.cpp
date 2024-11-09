@@ -65,6 +65,15 @@ void Conf::printStatus(bool status, std::string text)
         Log::output("./sessions/Conf.txt") << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
 }
 
+Location *Conf::checkRoute(std::string route)
+{
+    std::map<std::string, Location*>::iterator it = routes.begin();
+    (void) it;
+    (void) route;
+    return NULL;
+    
+}
+
 void Conf::init()
 {
     printStatus(getConfig("location_/cgi-bin/cgi") == "on", "enable Cgi");
@@ -90,6 +99,17 @@ Conf::~Conf()
 void Conf::debugFile()
 {
 
+}
+
+void Conf::printRoutesConfig(int servNb)
+{
+    std::cerr << RED << "server " << servNb << RESET << std::endl;
+    std::map<std::string, Location*>::iterator it;
+   for (it = routes.begin(); it != routes.end(); ++it)
+    {
+        std::cerr << RED << "\troute : " << it->first << RESET <<std::endl;
+        it->second->debugValues();
+    }
 }
 
 void Conf::printFile()
@@ -137,7 +157,7 @@ void Conf::setLocations()
             currentLocation.clear();
             size_t pos = line.find(" ") + 1;
             routePath = line.substr(pos, line.find_last_of(" \t") - pos);
-            std::cerr << RED << routePath << " : " << RESET << std::endl;
+            //std::cerr << RED << routePath << " : " << RESET << std::endl;
             std::getline(confFile, line);
             locationstatus = true;
             while (locationstatus)
