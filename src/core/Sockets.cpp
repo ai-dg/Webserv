@@ -107,7 +107,7 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
     outfile.close();
 }
 
-int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers, std::vector<Conf *>& Configs)
+int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server *>& Servers, std::vector<Conf *>& Configs)
 {
     std::vector<int> listPorts;
 
@@ -117,11 +117,11 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server>& Servers
         /**
          * Server start
          */
-        Server server(*it);        
+        Server *server = new Server(*it);        
         Servers.push_back(server);
-        for (size_t j = 0; j < server.getPorts().size(); j++)
+        for (size_t j = 0; j < server->getPorts().size(); j++)
         {
-            int port = server.getPorts()[j];
+            int port = server->getPorts()[j];
             Log::output("./sessions/Sockets.txt") << "Port: " << port << std::endl;
             if (std::find(listPorts.begin(), listPorts.end(), port) == listPorts.end())
             {

@@ -16,7 +16,7 @@ int main(int ac, char **av)
     std::vector<int> fd_sockets;
     SessionManager sessionManager;
     std::vector<Conf *> Configs;
-    std::vector<Server> Servers;
+    std::vector<Server *> Servers;
 
     signal(SIGPIPE, SIG_IGN);
     signal(SIGINT, handle_sig);

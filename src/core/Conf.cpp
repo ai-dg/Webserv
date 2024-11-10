@@ -13,6 +13,9 @@ Conf::Conf()
 void Conf::operator=(Conf &conf)
 {
     this->configMap = conf.configMap;
+     this->routes = conf.routes;
+     this->path = conf.path;
+     this->listenPorts = conf.listenPorts;
 }
 
 Conf::Conf(std::string& path) : path(path)
@@ -54,7 +57,7 @@ Conf::Conf(std::string& path) : path(path)
     std::ofstream file("./test.txt");
     printConfigs(file);
     checkAndSetDefaultValues();
-    init();//printConfigs();
+    //init();//printConfigs();
 }
 
 void Conf::printStatus(bool status, std::string text)
@@ -65,16 +68,18 @@ void Conf::printStatus(bool status, std::string text)
         Log::output("./sessions/Conf.txt") << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
 }
 
-Location *Conf::checkRoute(std::string route)
+Location *Conf::checkRoute(std::string const & routePath)
 {
-    std::cerr << BLUE << "asked route : " << route << RESET << std::endl;
+    
+    std::cerr << "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << std::endl;
+    std::cerr << BLUE << "asked route : " << routePath << RESET << std::endl;
     std::map<std::string, Location*>::iterator it = routes.begin();
     for (;it != routes.end(); ++it)
     {
-        if (route == it->first)
+        if (routePath == it->first)
             return it->second;
     }
-    std::cerr << BLUE << "unknown route " << route << RESET << std::endl;
+    std::cerr << BLUE << "unknown route " << routePath << RESET << std::endl;
     return NULL;
     
 }
@@ -87,6 +92,7 @@ void Conf::init()
 
 Conf::~Conf()
 {
+    std::cerr << "Conf destructor called !!!! " << std::endl;
     std::map<std::string, Location*>::iterator it;
    for (it = routes.begin(); it != routes.end(); ++it)
     {

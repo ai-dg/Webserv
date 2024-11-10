@@ -275,8 +275,17 @@ void HttpRequest::setURI(std::string req)
 
 void HttpRequest::setAskedFile()
 {
-    if (URI.size() == 1 && URI =="/")
-        askedFile = getRouteConf("/")->index();
+    Location *Route = NULL;
+    if (URI.size() == 1 && URI == "/")
+    {
+        std::cerr << "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest" << std::endl;
+        Route = getRouteConf(URI);
+        if (!Route)
+            return ;
+        askedFile = "index.html";//Route->index();
+        std::cerr << askedFile  << std::endl;
+
+    }
     else 
     {
         askedFile = URI.substr(URI.find_last_of("/") + 1, URI.size() - URI.find_last_of("/") - 1 );
@@ -311,8 +320,9 @@ void HttpRequest::setRoute()
     std::cerr << "URI :: " << this->URI << " --- Route : " << route << std::endl;
 }
 
-Location *HttpRequest::getRouteConf(std::string route) const
+Location *HttpRequest::getRouteConf(std::string const & route) const
 {
+    std::cerr << "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" << std::endl;
     return server->getRoute(route);
 }
 

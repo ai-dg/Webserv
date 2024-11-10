@@ -19,7 +19,7 @@
 
 volatile sig_atomic_t sig_g = 0;
 
-int findServerIndex(std::string const& request, std::vector<Server>& Servers) 
+int findServerIndex(std::string const& request, std::vector<Server *>& Servers) 
 {
     std::string host;
     int port = 8080; 
@@ -53,16 +53,16 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
     for (size_t i = 0; i < Servers.size(); ++i) 
     {
         Log::output("./sessions/find_server_index.txt") << "Checking Server index " << i << std::endl;
-        Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i].getConf()->getConfig("host") << ", Ports: ";
+        Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i]->getConf()->getConfig("host") << ", Ports: ";
         
         
-        const std::vector<int>& serverPorts = Servers[i].getPorts();
+        const std::vector<int>& serverPorts = Servers[i]->getPorts();
         for (std::vector<int>::const_iterator it = serverPorts.begin(); it != serverPorts.end(); ++it)
             Log::output("./sessions/find_server_index.txt") << *it << " ";
         Log::output("./sessions/find_server_index.txt") << std::endl;
         
         
-        if (Servers[i].getConf()->getConfig("host") == host && 
+        if (Servers[i]->getConf()->getConfig("host") == host && 
             std::find(serverPorts.begin(), serverPorts.end(), port) != serverPorts.end()) 
         {
             Log::output("./sessions/find_server_index.txt") << "Match found at index " << i << std::endl;
@@ -72,7 +72,7 @@ int findServerIndex(std::string const& request, std::vector<Server>& Servers)
 
     
     Log::output("./sessions/find_server_index.txt") << "No match found, defaulting to index 0" << std::endl;
-    Log::output("./sessions/find_server_index.txt") << Servers[0].getConf()->getConfig("host") << std::endl;
+    Log::output("./sessions/find_server_index.txt") << Servers[0]->getConf()->getConfig("host") << std::endl;
     return 0;
 }
 
@@ -102,11 +102,13 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
         
         std::string filePath = response.getFilePath();
-        if (filePath.find("cgi-bin/") == 0 && server->getCgiStatus()) 
+        std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
+        if (filePath.find("cgi-bin/") != std::string::npos && server->getCgiStatus()) 
         {
             // if (request.isValidBodySize())
             // {
                 Cgi_handler cgiHandler;
+                std::cerr << "  - 1 " << std::endl;
                 cgiHandler.executeCGI(filePath, request, *fd_client);
             // }
             // else 
@@ -115,13 +117,15 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
             //     response.send(*fd_client);
             // }
         }
-        else if (filePath.find("cgi-bin/") == 0 && !server->getCgiStatus())
+        else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
+            std::cerr << "  - 2 " << std::endl;
             response.setRedirection(403);
             response.send(*fd_client);
         }
         else 
         {
+            std::cerr << "  - 3 " << std::endl;
             response.send(*fd_client);
         }
 
@@ -140,7 +144,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     }
 }
 
-void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server>& Servers, SessionManager &sessionManager)
+void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
 {
     std::map<int, std::string> requestMap;
     Epoll epoll(10);
@@ -213,7 +217,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     if (contentLength == -1 || totalRead >= (ssize_t)headerEndPos + 4 + contentLength) 
                     {
                         int serverIndex = findServerIndex(req, Servers);                        
-                        type_request_manager(&fd_client, &req, &Servers[serverIndex], &epoll, sessionManager);                        
+                        type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
                         requestMap.erase(fd_client);
                     }
                 }

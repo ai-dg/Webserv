@@ -39,7 +39,7 @@ class HttpRequest
         HttpRequest(std::string req, std::vector<Server> Servers);
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
-        Location *getRouteConf(std::string route) const;
+        Location *getRouteConf(std::string const & route) const;
         std::string getRoute() const;
         bool isValidBodySize() const;
         std::string getRequestedFile() const;
