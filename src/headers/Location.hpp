@@ -35,6 +35,10 @@ class Location
         std::string extensions();
         std::string index();
         std::string root();
+        int getRedirectionStatus();  
+        void setRedirectionStatus();
+        std::string getRedirectionPath();
+        void setRedirectionPath();
         Location(Location const &loc);
         ~Location();
 };

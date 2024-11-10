@@ -24,6 +24,15 @@ std::string itos(int number)
     return ss.str();
 }
 
+int stoi(std::string str)
+{
+    int number;
+    std::stringstream ss;
+    ss << str;
+    ss >> number;
+    return number;
+}
+
 std::string trim(std::string str)
 {
     size_t first = str.find_first_not_of(" \t\n\r\f\v");
