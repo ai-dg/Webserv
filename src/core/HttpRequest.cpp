@@ -214,9 +214,11 @@ bool HttpRequest::isValidBodySize() const
 
 void HttpRequest::parseRequest(std::string req)
 {
-    this->setMethod(req);
-    this->setURI(req);
-    this->setHeaders(req);
+    setMethod(req);
+    setURI(req);
+    setRoute();
+    setAskedFile();
+    setHeaders(req);
 
     // Log::output("./logs/error.log") << "------------Method: " << this->method << std::endl;
     // Log::output("./logs/error.log") << "--------********************req: " << req << std::endl;
@@ -267,8 +269,23 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
-    setRoute();
+
     Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
+}
+
+void HttpRequest::setAskedFile()
+{
+    if (URI.size() == 1 && URI =="/")
+        askedFile = getRouteConf("/")->index();
+    else 
+    {
+        askedFile = URI.substr(URI.find_last_of("/") + 1, URI.size() - URI.find_last_of("/") - 1 );
+    }
+}
+
+std::string HttpRequest::getAskedFile() const
+{
+    return askedFile;
 }
 
 void HttpRequest::setRoute()
@@ -277,13 +294,20 @@ void HttpRequest::setRoute()
     {
         if (URI[URI.size() - 1] != '/')
         {
-            route = URI.substr(0, URI.find_last_of("/") - 1);
+            route = URI.substr(0, URI.find_last_of("/") + 1);
+            std::cerr << "1 - " << URI.find_last_of('/') + 1<< " - " ;
         }
         else
+        {
             route = URI;
+            std::cerr << "2 -" ;
+        }
     }
     else
+    {
         route = URI;
+        std::cerr << "3 -" ;
+    }
     std::cerr << "URI :: " << this->URI << " --- Route : " << route << std::endl;
 }
 
@@ -292,10 +316,9 @@ Location *HttpRequest::getRouteConf(std::string route) const
     return server->getRoute(route);
 }
 
-std::string HttpRequest::getRoute()
+std::string HttpRequest::getRoute() const
 {
     return route;
-
 }
 
 // void HttpRequest::addToHeaders(std::string line)

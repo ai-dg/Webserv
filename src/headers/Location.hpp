@@ -15,6 +15,7 @@ class Location
         std::string _cgi;
         std::string _cgi_bin;
         std::string _return;
+        std::string _index;
         void extractField(std::string field);
     public :
         Location();
@@ -29,6 +30,7 @@ class Location
         std::string autoindex();
         std::string methods();
         std::string extensions();
+        std::string index();
         std::string root();
         Location(Location const &loc);
         ~Location();

@@ -37,7 +37,7 @@ server {
     }
 
     location /images/ {
-        root /www/images;
+        root /www/html/projects42/images;
         extension .png .jpg .gif .jpeg;
         methods GET;
         autoindex on;
@@ -50,7 +50,7 @@ server {
     }
 
     location /cgi-bin/ {
-        root /www/cgi-bin;
+        root /cgi-bin;
         cgi on;
         cgi_bin /cgi-bin/;
         methods GET POST;

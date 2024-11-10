@@ -12,6 +12,7 @@
         std::string _upload_store ;
         std::string _cgi;
         std::string _cgi_bin;
+        std::string _index;
         std::string _return;*/
 
     Location::Location()
@@ -37,8 +38,13 @@
             std::cerr << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
         if (_return != "")
             std::cerr << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
+        if (_index != "")
+            std::cerr << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
     }
-
+        std::string Location::index()
+        {
+            return _index;
+        }
         std::string Location::redirection()
         {
             return _return;
@@ -77,10 +83,12 @@
         std::string field;
         std::string value;
 
-        value = param.substr(param.find_first_of(" \t") + 1, std::string::npos);
+        value = param.substr(param.find_first_of(" \t") + 1, param.find_last_of(";") - param.find_first_of(" \t") - 1);
         field = param.substr(0, param.find_first_of(" \t"));
         if (field == "root")
             _root = value;
+        if (field == "index")
+            _index = value;
         if (field == "extensions")
             _extensions = value;
         if (field == "methods")
@@ -124,8 +132,9 @@
         _upload_store = loc._upload_store;
         _cgi= loc._cgi;
         _cgi_bin= loc._cgi_bin;
-        _return= loc._return;    
-        return *this;
+        _return= loc._return;   
+        _index= loc._index; 
+        return *this; 
     }
 
     void Location::init()
@@ -138,6 +147,7 @@
         _cgi = "";
         _cgi_bin = "";
         _return = "";
+        _index = "";
     }
 
 
