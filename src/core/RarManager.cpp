@@ -102,13 +102,13 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
 
         std::string filePath = response.getFilePath();
-        std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
+        //std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
         if (filePath.find("cgi-bin/") != std::string::npos && server->getCgiStatus()) 
         {
             // if (request.isValidBodySize())
             // {
                 Cgi_handler cgiHandler;
-                std::cerr << "  - 1 " << std::endl;
+               // std::cerr << "  - 1 " << std::endl;
                 cgiHandler.executeCGI(filePath, request, *fd_client);
             // }
             // else 
@@ -119,13 +119,13 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
-            std::cerr << "  - 2 " << std::endl;
+           // std::cerr << "  - 2 " << std::endl;
             response.setRedirection(403);
             response.send(*fd_client);
         }
         else 
         {
-            std::cerr << "  - 3 " << std::endl;
+            //std::cerr << "  - 3 " << std::endl;
             response.send(*fd_client);
         }
 

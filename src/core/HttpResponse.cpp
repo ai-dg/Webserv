@@ -154,7 +154,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     }
     if (Route->redirection() != "")
     {
-
+        getRedirectionStatus(Route->redirection());
+        getRedirectionUrl(Route->redirection());
         //setRedirection(newPath, 301);
         return;
     }

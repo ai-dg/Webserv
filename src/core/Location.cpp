@@ -102,7 +102,11 @@
         if (field == "cgi")
             _cgi = value;
         if (field == "return")
+        {
             _return = value;
+            setRedirectionStatus();
+            setRedirectionPath();
+        }
         
         //std::cerr << BOLD_WHITE << "extracted :: " <<  field << " - " << value << RESET << std::endl;
     }
@@ -133,7 +137,9 @@
         _cgi= loc._cgi;
         _cgi_bin= loc._cgi_bin;
         _return= loc._return;   
-        _index= loc._index; 
+        _index= loc._index;
+        redirectionPath = loc.redirectionPath;
+        redirectionStatus = loc.redirectionStatus;
         return *this; 
     }
 
@@ -148,6 +154,8 @@
         _cgi_bin = "";
         _return = "";
         _index = "";
+        redirectionPath = "";
+        redirectionStatus = 0;
     }
 
 
