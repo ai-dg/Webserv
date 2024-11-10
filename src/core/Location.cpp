@@ -1,6 +1,7 @@
 #include "../headers/Location.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/stringUtils.hpp"
+#include  <sstream>
 
 
 
@@ -77,6 +78,27 @@
         {
             return _root;
         }
+    
+
+    int Location::getRedirectionStatus()
+    {
+        return redirectionStatus;
+    }
+
+    void Location::setRedirectionStatus()
+    {
+        redirectionStatus = stoi(_return.substr(0,_return.find(" ")).c_str());
+    }
+
+    std::string Location::getRedirectionPath()
+    {
+        return redirectionPath;
+    }
+
+    void Location::setRedirectionPath()
+    {
+        redirectionPath = _return.substr(_return.find(" "), std::string::npos);
+    }
 
     void Location::extractField(std::string param)
     {
