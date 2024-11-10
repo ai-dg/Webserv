@@ -144,7 +144,21 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
-    Location *Route = req.getRouteConf(uri);
+    std::cerr << "URI :::: " << uri << std::endl;
+    Location *Route = req.getRouteConf(req.getRoute());
+    if (!Route)
+    {
+        setRedirection(403);
+        std::cerr << "NO ROUTE FOUND" << std::endl;
+        return;
+    }
+    if (Route->redirection() != "")
+    {
+
+        //setRedirection(newPath, 301);
+        return;
+    }
+
     std::cerr << "this one :::: ???? : " << Route->root() << std::endl;
 
     if (uri.find("/cgi-bin/") != std::string::npos
@@ -153,25 +167,35 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         || uri.find(".sh") != std::string::npos
         || uri.find(".php") != std::string::npos) 
     {
-        this->filePath = "cgi-bin" + uri;
+        Route = req.getRouteConf("/cgi-bin/");
+        //this->filePath = Route->root() + uri;
+         this->filePath = Route->root() + "/" + req.getAskedFile();
     }
-    else if (uri.find(".jpg") != std::string::npos
+    /*else if (uri.find(".jpg") != std::string::npos
         || uri.find(".png") != std::string::npos
         || uri.find(".svg") != std::string::npos)
     {
         this->filePath = uri;
-    }
+    }*/
     else
     {
         if (uri =="/")
-            uri += req.getConf(LOCATION_ROOT_INDEX);
-        this->filePath = req.getConf(LOCATION_ROOT) + uri;
+            uri += Route->index(); ///// attention... si plusieurs index.... faire une fonction avec access pour vérifier qu'au moins un des chemins existe
+        
+        this->filePath = Route->root() + "/" + req.getAskedFile();
+    }
+    
+    if(Route->methods().find(req.getMethod()) == std::string::npos)
+    {
+        std::cerr << "NO METHOD MATCH" << std::endl;
+        setRedirection(403);
+        return ;
     }
 
     setStatusCode(AUTO);
     //req.printConf(LOCATION_ROOT);
 
-    //std::cout << "path / : " << this->filePath  << std::endl;
+    std::cerr << "path / : " << this->filePath  << std::endl;
     
     
     //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;

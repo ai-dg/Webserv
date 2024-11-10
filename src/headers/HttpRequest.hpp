@@ -18,6 +18,7 @@ class HttpRequest
         std::string host;
         std::string URI;
         std::string route;
+        std::string askedFile;
         std::string body;
         int port;
         Server *server;
@@ -27,6 +28,7 @@ class HttpRequest
         void setHeaders(std::string req);
         void setBody(std::string req);
         void setRoute();
+        void setAskedFile();
         void parseRequest(std::string req);
         void setURI(std::string req);
         void addToHeaders(std::string line);
@@ -38,12 +40,13 @@ class HttpRequest
         HttpRequest(std::string req, Server *server);
         ~HttpRequest();
         Location *getRouteConf(std::string route) const;
-        std::string getRoute();
+        std::string getRoute() const;
         bool isValidBodySize() const;
         std::string getRequestedFile() const;
         std::string getQueryString() const;
         void getHostByName() const;
         std::string getURI() const;
+        std::string getAskedFile() const;
         void printConf(std::string) const;
         std::string getConf(std::string key) const;
         std::string getHeader(std::string key) const;
