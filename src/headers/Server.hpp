@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/11/09 18:58:49 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 12:18:48 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Server
         bool foundHostName(std::string hostname);
         in_addr_t getAddr();
         size_t getMaxBodySize();
-        Location *getRoute(std::string route);
+        Location *getRoute(std::string const & route) const;
         std::string getHostipv4();
         std::vector<int>getPorts();
         bool getCgiStatus();

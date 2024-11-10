@@ -169,7 +169,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         Route = req.getRouteConf("/cgi-bin/");
         //this->filePath = Route->root() + uri;
-         this->filePath = Route->root() + "/" + req.getAskedFile();
+         this->filePath = Route->root().substr(1, std::string::npos) + "/" + req.getAskedFile();
     }
     /*else if (uri.find(".jpg") != std::string::npos
         || uri.find(".png") != std::string::npos

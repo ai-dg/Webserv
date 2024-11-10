@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/10 07:49:18 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 14:03:57 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@
 /**
  * @brief Public:
  */
+/*
 Server::Server()
 {
     Log::output("./sessions/Server.txt") << "server on" << std::endl;    
     host_ip.s_addr = htonl(INADDR_LOOPBACK);
-}
+}*/
 
 size_t Server::getMaxBodySize()
 {
@@ -68,10 +69,10 @@ void Server::setMaxBodySize()
     
 }
 
-Server::Server(Conf *c)
+Server::Server(Conf *c):conf(c)
 {
     static int serverNumber = 1;
-    conf = c;
+    //conf = c;
     std::vector<std::string> listenPorts = conf->getListenPorts();
     //Log::output("./sessions/Server.txt") << "Nbr de ports : " << listenPorts.size() << std::endl;
 
@@ -116,9 +117,18 @@ Server::Server(Conf *c)
     conf->printRoutesConfig(serverNumber++);
 }
 
-Location *Server::getRoute(std::string route)
+Location *Server::getRoute(std::string const &routePath) const
 {
-    return conf->checkRoute(route);
+    std::cerr << routePath ;
+    std::cerr << "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ" << std::endl;
+    if (!this->conf)
+    {
+        return NULL;
+    }
+    /*Location *Route = this->conf->checkRoute(routePath);*/
+    std::cerr << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzzzzz" << std::endl;        
+   /* return Route;*/
+    return NULL;
 }
 
 void Server::setHostNames()
@@ -170,12 +180,17 @@ bool Server::foundHostName(std::string hostname)
 
 Server::~Server()
 {
+    std::cerr << "Server ended" << std::endl;
     Log::output("./sessions/Server.txt") << "Server destroyed" << std::endl;
 }
 
 bool Server::getCgiStatus()
 {
-    if (conf->getConfig("location_/cgi-bin/cgi") == "on" )
+    std::string cgiLabel = "/cgi-bin";
+    Location *Route = getRoute(cgiLabel);
+    if (!Route)
+        return false;
+    if (Route->cgi() == "on" )
         return true;
     return false;
 }
