@@ -267,7 +267,35 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
+    setRoute();
     Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
+}
+
+void HttpRequest::setRoute()
+{
+    if(URI.size() > 1 && URI !="/")
+    {
+        if (URI[URI.size() - 1] != '/')
+        {
+            route = URI.substr(0, URI.find_last_of("/") - 1);
+        }
+        else
+            route = URI;
+    }
+    else
+        route = URI;
+    std::cerr << "URI :: " << this->URI << " --- Route : " << route << std::endl;
+}
+
+Location *HttpRequest::getRouteConf(std::string route) const
+{
+    return server->getRoute(route);
+}
+
+std::string HttpRequest::getRoute()
+{
+    return route;
+
 }
 
 // void HttpRequest::addToHeaders(std::string line)

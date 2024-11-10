@@ -144,6 +144,8 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
+    Location *Route = req.getRouteConf(uri);
+    std::cerr << "this one :::: ???? : " << Route->root() << std::endl;
 
     if (uri.find("/cgi-bin/") != std::string::npos
         || uri.find(".py") != std::string::npos

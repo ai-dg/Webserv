@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/09 18:58:29 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 07:49:18 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ Server::Server(Conf *c)
     } 
     setMaxBodySize();
     setHostNames();
-    conf->checkRoute("toto")->root();
+    //conf->checkRoute("toto")->root(); crash....
     conf->printRoutesConfig(serverNumber++);
 }
 
