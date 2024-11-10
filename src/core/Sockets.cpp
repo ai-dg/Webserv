@@ -90,8 +90,8 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
         temp_file << it->second;
         temp_file.close();
         
-        //Conf *conf = new Conf(temp_file_path);
-        Configs.push_back(new Conf(temp_file_path));
+        Conf *conf = new Conf(temp_file_path);
+        Configs.push_back(conf);
         remove("./config/temp_server_block.conf");
         index++;
     }

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/11/10 12:18:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:51:34 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Server
     private:
         //int port[65535];
         //int numPorts;
+        int id;
         struct in_addr host_ip;
         std::vector<std::string> Hosts;
         std::string *methods;
@@ -39,13 +40,14 @@ class Server
         Conf *conf;
     
     public:
-        Server();
+        //Server();
         Server(Conf *c);
         ~Server();
         void addPort(int port);
         bool foundHostName(std::string hostname);
         in_addr_t getAddr();
         size_t getMaxBodySize();
+        int getId();
         Location *getRoute(std::string const & route) const;
         std::string getHostipv4();
         std::vector<int>getPorts();

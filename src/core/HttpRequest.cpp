@@ -10,15 +10,17 @@ HttpRequest::HttpRequest(std::string req)
 {
     Log::output("./sessions/HttpRequest.txt") << std::endl << BOLD_YELLOW << req << RESET << std::endl;
     parseRequest(req);
+    
 }
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
+    this->server = server;
     Log::output("./sessions/HttpRequest.txt") << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
     parseRequest(req);
-    this->server = server;
     //this->postbody = getBody();
     //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
+
 }
 
 void HttpRequest::printConf(std::string config) const
@@ -26,19 +28,20 @@ void HttpRequest::printConf(std::string config) const
     std::cout << server->getConf()->getConfig(config);
 }
 
-HttpRequest::HttpRequest(std::string req, std::vector<Server> Servers)
+HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
 {
     parseRequest(req);
    // headers["Host"];
-    std::vector<Server>::iterator it;
+    std::vector<Server *>::iterator it;
     for (it = Servers.begin(); it != Servers.end(); ++it)
     {
-        if (it->foundHostName(headers["Host"]))
-            server = &(*it);
+        if ((*it)->foundHostName(headers["Host"]))
+            server = (*it);
     }
     //this->server = server;
     //this->postbody = getBody();
     //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
+    //std::cerr << "Server : " << server->getId() << "  -  " << "addr :  " << server << std::endl;
 }
 
 HttpRequest::~HttpRequest()
@@ -117,7 +120,7 @@ std::string HttpRequest::getBody() const
         return body;
     else if (method == "GET") 
         return getQueryString();
-    else if (method == "DELETE") 
+    else if (method == "DELETE") // not implemented yet !
         return "";
     return "";//body;
 }
@@ -234,6 +237,7 @@ void HttpRequest::parseRequest(std::string req)
             Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
         }
     }
+    std::cerr << "Server : " << server->getId() << "  -  " << "addr :  " << server << std::endl;
 }
 
 // void HttpRequest::setURI(std::string req)
@@ -275,14 +279,13 @@ void HttpRequest::setURI(std::string req)
 
 void HttpRequest::setAskedFile()
 {
-    Location *Route = NULL;
+    Location *Rte = NULL;
     if (URI.size() == 1 && URI == "/")
     {
-        std::cerr << "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest" << std::endl;
-        Route = getRouteConf(URI);
-        if (!Route)
+        Rte = server->getRoute(URI);
+        if (!Rte)
             return ;
-        askedFile = "index.html";//Route->index();
+        askedFile = Rte->index();
         std::cerr << askedFile  << std::endl;
 
     }
@@ -322,7 +325,6 @@ void HttpRequest::setRoute()
 
 Location *HttpRequest::getRouteConf(std::string const & route) const
 {
-    std::cerr << "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" << std::endl;
     return server->getRoute(route);
 }
 

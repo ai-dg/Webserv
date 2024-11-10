@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/10 14:03:57 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 20:11:58 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,11 @@ void Server::setMaxBodySize()
     
 }
 
-Server::Server(Conf *c):conf(c)
+Server::Server(Conf *c)
 {
     static int serverNumber = 1;
-    //conf = c;
+    conf = c;
+    id = serverNumber;
     std::vector<std::string> listenPorts = conf->getListenPorts();
     //Log::output("./sessions/Server.txt") << "Nbr de ports : " << listenPorts.size() << std::endl;
 
@@ -115,20 +116,17 @@ Server::Server(Conf *c):conf(c)
     setHostNames();
     //conf->checkRoute("toto")->root(); crash....
     conf->printRoutesConfig(serverNumber++);
+    std::cerr << "\t\tconf addr : " <<  conf << "    -    c addr : " << c << std::endl;
+}
+
+int Server::getId()
+{
+    return id;
 }
 
 Location *Server::getRoute(std::string const &routePath) const
 {
-    std::cerr << routePath ;
-    std::cerr << "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ" << std::endl;
-    if (!this->conf)
-    {
-        return NULL;
-    }
-    /*Location *Route = this->conf->checkRoute(routePath);*/
-    std::cerr << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzzzzz" << std::endl;        
-   /* return Route;*/
-    return NULL;
+    return conf->checkRoute(routePath);
 }
 
 void Server::setHostNames()
@@ -221,6 +219,11 @@ std::vector<int>Server::getPorts()
 
 Conf *Server::getConf() const
 {
+    if(!conf)
+    {
+        std::cerr << "no conf..." <<std::endl;
+        return(NULL);
+    }
     return conf;
 }
 

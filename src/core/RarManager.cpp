@@ -100,7 +100,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         HttpResponse response(request);
         response.setResourcePath(request);
         response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
-        
+
         std::string filePath = response.getFilePath();
         std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
         if (filePath.find("cgi-bin/") != std::string::npos && server->getCgiStatus()) 

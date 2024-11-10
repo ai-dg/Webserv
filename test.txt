@@ -4,8 +4,8 @@ client_header_timeout: NULL
 client_max_body_size: NULL
 error_page_404: NULL
 error_page_500: NULL
-host: 127.0.0.1
+host: 127.0.0.5
 keepalive_timeout: NULL
-server_name: projects.42.fr
-Ports to listen on 1: 8080 
+server_name: test.42.fr
+Ports to listen on 1: 9000 
 --------------------------------------

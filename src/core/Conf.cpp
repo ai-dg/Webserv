@@ -13,9 +13,9 @@ Conf::Conf()
 void Conf::operator=(Conf &conf)
 {
     this->configMap = conf.configMap;
-     this->routes = conf.routes;
-     this->path = conf.path;
-     this->listenPorts = conf.listenPorts;
+    this->routes = conf.routes;
+    this->path = conf.path;
+    this->listenPorts = conf.listenPorts;
 }
 
 Conf::Conf(std::string& path) : path(path)
@@ -70,18 +70,17 @@ void Conf::printStatus(bool status, std::string text)
 
 Location *Conf::checkRoute(std::string const & routePath)
 {
-    
-    std::cerr << "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << std::endl;
-    std::cerr << BLUE << "asked route : " << routePath << RESET << std::endl;
     std::map<std::string, Location*>::iterator it = routes.begin();
     for (;it != routes.end(); ++it)
     {
         if (routePath == it->first)
+        {
+            std::cerr << BLUE << "asked route : " << routePath << RESET << std::endl;
             return it->second;
+        }
     }
     std::cerr << BLUE << "unknown route " << routePath << RESET << std::endl;
-    return NULL;
-    
+    return NULL;    
 }
 
 void Conf::init()
@@ -94,7 +93,7 @@ Conf::~Conf()
 {
     std::cerr << "Conf destructor called !!!! " << std::endl;
     std::map<std::string, Location*>::iterator it;
-   for (it = routes.begin(); it != routes.end(); ++it)
+  /* for (it = routes.begin(); it != routes.end(); ++it)
     {
         if (it != routes.end() && it->second)
         {
@@ -102,7 +101,7 @@ Conf::~Conf()
             it->second = NULL;
         }
     }
-    routes.clear();
+    routes.clear();*/
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
 
 }
