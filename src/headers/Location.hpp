@@ -16,6 +16,9 @@ class Location
         std::string _cgi_bin;
         std::string _return;
         std::string _index;
+        int redirectionStatus;
+        std::string redirectionPath;
+
         void extractField(std::string field);
     public :
         Location();

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/10 20:11:58 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/10 20:56:23 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,8 +184,7 @@ Server::~Server()
 
 bool Server::getCgiStatus()
 {
-    std::string cgiLabel = "/cgi-bin";
-    Location *Route = getRoute(cgiLabel);
+    Location *Route = getRoute("/cgi-bin/");
     if (!Route)
         return false;
     if (Route->cgi() == "on" )

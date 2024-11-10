@@ -1,816 +1,66 @@
 end req
 end req
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /error_pages/default.css HTTP/1.1
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m
---START--[1;33mGET /error_pages/default.css HTTP/1.1
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
--------end parsed body
--------end parsed body
--------Parsed Body: -----------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-
--------Parsed Body: -----------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-
--------Parsed Body: 
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------33631465771871396788416528195
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------33631465771871396788416528195
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------33631465771871396788416528195
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-[0m
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------33631465771871396788416528195
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------33631465771871396788416528195
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------33631465771871396788416528195--
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
--------end parsed body
--------end parsed body
--------Parsed Body: -----------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-
--------Parsed Body: -----------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-
--------Parsed Body: 
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------23085528131674074713170833442
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------23085528131674074713170833442
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------23085528131674074713170833442
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-[0m
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------23085528131674074713170833442
-Content-Length: 1043
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------23085528131674074713170833442
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------23085528131674074713170833442--
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/style.css[0m
------------Extracted URI: [34m/style.css[0m
------------Extracted URI: [34m/style.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
 
 
 --START--[1;33m
@@ -826,57 +76,125 @@ end req
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
@@ -894,67 +212,63 @@ end req
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=6a10f2aaf6e52701
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m--END--
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=6a10f2aaf6e52701
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m--END--
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=6a10f2aaf6e52701
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=6a10f2aaf6e52701
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 
 --START--[1;33m
@@ -962,71 +276,71 @@ Priority: u=0, i
 
 end req
 end req
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css[0m
------------Extracted URI: [34m/error_pages/default.css
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
+Cookie: sessionId=b0c102ead49c476f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
 
 [0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
+Cookie: sessionId=b0c102ead49c476f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
 
 [0m--END--
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
+Cookie: sessionId=b0c102ead49c476f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
 
 [0m
---START--[1;33mGET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
+Cookie: sessionId=b0c102ead49c476f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
 
 
 --START--[1;33m
@@ -1034,372 +348,67 @@ Priority: u=2
 
 end req
 end req
--------end parsed body
--------end parsed body
--------Parsed Body: -----------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-
--------Parsed Body: -----------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-
--------Parsed Body: 
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py[0m
------------Extracted URI: [34m/submit_project.py
+-----------Extracted URI: [34m/www/images/Default.jpg[0m
+-----------Extracted URI: [34m/www/images/Default.jpg[0m
+-----------Extracted URI: [34m/www/images/Default.jpg
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mPOST /submit_project.py HTTP/1.1
+--START--[1;33mGET /www/images/Default.jpg HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------168284807438648834522536179579
-Content-Length: 1052
-Origin: http://127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------168284807438648834522536179579
-Content-Length: 1052
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-[0m--END--
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------168284807438648834522536179579
-Content-Length: 1052
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-[0m
---START--[1;33mPOST /submit_project.py HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: multipart/form-data; boundary=---------------------------168284807438648834522536179579
-Content-Length: 1052
-Origin: http://127.0.0.2:8090
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectName"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="projectGrade"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="expectedTime"
-
-1
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="realTime"
-
-2
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="experience"
-
-3
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="satisfaction"
-
-4
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="comments"
-
-3213
------------------------------168284807438648834522536179579
-Content-Disposition: form-data; name="image"; filename=""
-Content-Type: application/octet-stream
-
-
------------------------------168284807438648834522536179579--
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
+--START--[1;33mGET /www/images/Default.jpg HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
+--START--[1;33mGET /www/images/Default.jpg HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 [0m
---START--[1;33mGET /styles.css HTTP/1.1
+--START--[1;33mGET /www/images/Default.jpg HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
 
 
 --START--[1;33m
@@ -1416,13 +425,13 @@ HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1430,13 +439,13 @@ Sec-Fetch-Site: same-origin
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1444,13 +453,13 @@ Sec-Fetch-Site: same-origin
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1458,14 +467,1250 @@ Sec-Fetch-Site: same-origin
 [0m
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+-------end parsed body
+-------end parsed body
+-------Parsed Body: -----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+
+-------Parsed Body: -----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------20681085203646326554723409498
+Content-Length: 1042
+Origin: http://127.0.0.2:8090
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------20681085203646326554723409498
+Content-Length: 1042
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------20681085203646326554723409498
+Content-Length: 1042
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+[0m
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------20681085203646326554723409498
+Content-Length: 1042
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------20681085203646326554723409498
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------20681085203646326554723409498--
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-------end parsed body
+-------end parsed body
+-------Parsed Body: -----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+
+-------Parsed Body: -----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------206697610623108326803300695111
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------206697610623108326803300695111
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------206697610623108326803300695111
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+[0m
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------206697610623108326803300695111
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------206697610623108326803300695111
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------206697610623108326803300695111--
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-------end parsed body
+-------end parsed body
+-------Parsed Body: -----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+
+-------Parsed Body: -----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------390778164124202396063666206601
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------390778164124202396063666206601
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------390778164124202396063666206601
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+[0m
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------390778164124202396063666206601
+Content-Length: 1051
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="projectGrade"
+
+2
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="expectedTime"
+
+3
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="realTime"
+
+5
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="experience"
+
+564
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="comments"
+
+1
+-----------------------------390778164124202396063666206601
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------390778164124202396063666206601--
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
@@ -1484,70 +1729,66 @@ HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /add.html HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m--END--
 --START--[1;33mGET /add.html HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m--END--
 --START--[1;33mGET /add.html HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 [0m
 --START--[1;33mGET /add.html HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
 Sec-Fetch-User: ?1
-Priority: u=0, i
 
 
 --START--[1;33m
@@ -1555,71 +1796,135 @@ Priority: u=0, i
 
 end req
 end req
------------Extracted URI: [34m/images/Projects.png[0m
------------Extracted URI: [34m/images/Projects.png[0m
------------Extracted URI: [34m/images/Projects.png
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /images/Projects.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5
 
 [0m--END--
---START--[1;33mGET /images/Projects.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5
 
 [0m--END--
---START--[1;33mGET /images/Projects.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5
 
 [0m
---START--[1;33mGET /images/Projects.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
 
 
 --START--[1;33m
@@ -1636,13 +1941,13 @@ HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1650,13 +1955,13 @@ Sec-Fetch-Site: same-origin
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1664,13 +1969,13 @@ Sec-Fetch-Site: same-origin
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1678,13 +1983,13 @@ Sec-Fetch-Site: same-origin
 [0m
 --START--[1;33mGET /script.js HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=1a11cfb93458bb7f
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -1692,309 +1997,3 @@ Sec-Fetch-Site: same-origin
 
 --START--[1;33m
 --START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/introduce.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/introduce.html[0m
------------Extracted URI: [34m/introduce.html[0m
------------Extracted URI: [34m/introduce.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.2:8090/index.html
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.2:8090/index.html
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.2:8090/index.html
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.2:8090/index.html
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/style.css[0m
------------Extracted URI: [34m/style.css[0m
------------Extracted URI: [34m/style.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /style.css HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.5:9000/
-Cookie: sessionId=6a10f2aaf6e52701
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.5:9000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
