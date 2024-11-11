@@ -127,13 +127,10 @@
 
     std::string Location::findIndex()
     {
-        /*if (indexes.size() < 1)
-            return "";*/
         std::vector<std::string>::iterator it;
         it = indexes.begin();
         for (; it != indexes.end(); ++it)
         {
-            std::cerr << *it << "     --     ";
             if (doesFileExist("./" +_root + "/" + *it))
                 return *it;
         }
