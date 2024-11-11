@@ -2,6 +2,8 @@
 #include "../headers/colors.hpp"
 #include "../headers/Status.hpp"
 #include "../headers/defines.hpp"
+#include "../headers/index.hpp"
+#include "../headers/directories.hpp"
 #include <unistd.h>
 #include <cstdlib>
 #include <sstream>
@@ -15,6 +17,7 @@
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
     setResourcePath(req);
+    body = "";
     setMineType();
     Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
     if (!req.isValidBodySize())
@@ -35,7 +38,11 @@ HttpResponse::~HttpResponse()
 
 void HttpResponse::send(int fd_client)
 {   
-    std::string resFile = getFile(this->filePath);
+    std::string resFile;
+    if (body.size() > 0)
+        resFile = body;
+    else 
+        resFile = getFile(this->filePath);
     if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302)
         this->statusCode = 404;
 
@@ -212,6 +219,11 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         setRedirection(403);
         return ;
     }
+    if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on")
+    {
+        std::cerr << RED << "IIIIIIIIIIIIIIIIIIIIIIIIIINNNNNN" <<std::endl;
+        setBody(getIndexFile("./" + Route->root() + "/"));
+    }
 
     setStatusCode(AUTO);
     //req.printConf(LOCATION_ROOT);
@@ -220,6 +232,11 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     
     
     //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
+}
+
+void HttpResponse::setBody(std::string content)
+{
+    body = content;
 }
 
 std::string HttpResponse::getFilePath() const

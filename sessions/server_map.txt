@@ -40,13 +40,13 @@ server {
         root /www/html/projects42/images;
         extension .png .jpg .gif .jpeg;
         methods GET;
-        autoindex on;
     }
 
     location /upload/ {
         root /www/uploads;
-        methods POST DELETE;
+        methods GET POST DELETE;
         upload_store /uploads/;
+        autoindex on;
     }
 
     location /cgi-bin/ {
@@ -63,6 +63,10 @@ server {
 
     location /test2/ {
         return 301 /;
+    }
+
+    location /test3/ {
+        return 301 http://127.0.0.5:9000;
     }
 }
 
