@@ -21,7 +21,9 @@ std::string getHtmlFooter()
 
 std::string getFormatedHtmlIndexLine(std::string path, char *name)
 {
-    return "<a href=\"" + path + name + "\">" + name + "</a><br>\n";
+    (void) path;
+    std::string filename(name);
+    return "<a href=\"" + filename + "\">" + filename + "</a><br>\n";
 }
 
 std::string getIndexFile(std::string path)
