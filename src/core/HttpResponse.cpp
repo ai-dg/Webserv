@@ -44,7 +44,10 @@ void HttpResponse::send(int fd_client)
     else 
         resFile = getFile(this->filePath);
     if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302)
+    {
         this->statusCode = 404;
+        resFile = getFile("./www/error_pages/404.html");
+    }
 
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();
@@ -157,8 +160,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     Location *Route = req.getRouteConf(req.getRoute());
     if (!Route)
     {
+        std::cerr << "No Route Match v2 !!" << std::endl;
         setRedirection(403);
-        std::cerr << "NO ROUTE FOUND" << std::endl;
+        return;
+    }
+    if (Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
+    {
+        std::cerr << RED << "NO WAY !!!"  <<  req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos) << RESET << std::endl;
+        setRedirection(403);
         return;
     }
     if (Route->redirection() != "")

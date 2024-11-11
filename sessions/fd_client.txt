@@ -1,8 +1,23 @@
-HTTP/1.1 404 Not Found
-Set-Cookie: sessionId=eed3cf178acb5f5e; Path=/; HttpOnly
-Content-Type: image/x-icon; charset=UTF-8
+HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=09886e5627fe0c04; Path=/; HttpOnly
+Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
-Date: Mon, 11 Nov 2024 12:45:59 GMT
-Content-Length: 14
+Date: Mon, 11 Nov 2024 18:43:02 GMT
+Content-Length: 363
 
-FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>403 Forbidden</title>
+</head>
+<body>
+    <div class ="error">
+        <h1 class="title">
+            403 FORBIDDEN
+        </h1>
+</div>
+</body>
+</html>

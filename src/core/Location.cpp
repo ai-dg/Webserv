@@ -104,7 +104,6 @@
     void Location::setAllowedIndexes()
     {
         std::string cpy = trim(_index);
-        std::cerr << BLUE << cpy << RESET << std::endl;
         if (_index == "")
             return ;
         size_t pos = cpy.find(" \t");

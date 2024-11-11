@@ -221,7 +221,7 @@ void HttpRequest::parseRequest(std::string req)
     setRoute();
     setAskedFile();
     setHeaders(req);
-
+    std::cerr << RED << req << std::endl;
     // Log::output("./logs/error.log") << "------------Method: " << this->method << std::endl;
     // Log::output("./logs/error.log") << "--------********************req: " << req << std::endl;
     // Log::output("./logs/error.log") << "--------*************************" << std::endl;
