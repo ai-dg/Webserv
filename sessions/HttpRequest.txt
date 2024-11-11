@@ -1,378 +1,74 @@
 end req
 end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
---START--[1;33mGET /test/ HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
---START--[1;33mGET /test/ HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m
---START--[1;33mGET /test/ HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 
 --START--[1;33m
@@ -389,1174 +85,66 @@ HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=6
 Pragma: no-cache
 Cache-Control: no-cache
 
 [0m--END--
 --START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=6
 Pragma: no-cache
 Cache-Control: no-cache
 
 [0m--END--
 --START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=6
 Pragma: no-cache
 Cache-Control: no-cache
 
 [0m
 --START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=6
-Pragma: no-cache
-Cache-Control: no-cache
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-Pragma: no-cache
-Cache-Control: no-cache
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-Pragma: no-cache
-Cache-Control: no-cache
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-Pragma: no-cache
-Cache-Control: no-cache
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-Pragma: no-cache
-Cache-Control: no-cache
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/error_pages/default.css[0m
------------Extracted URI: [34m/test/error_pages/default.css[0m
------------Extracted URI: [34m/test/error_pages/default.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /test/error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /test/error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /test/error_pages/default.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/test/
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/[0m
------------Extracted URI: [34m/test/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /test/ HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-[0m
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5, i
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5, i
-
-[0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5, i
-
-[0m
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/index.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: image
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=5, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html[0m
------------Extracted URI: [34m/index.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /index.html HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=15218d990d70f16b
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/add.html
-Cookie: sessionId=15218d990d70f16b
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
+Pragma: no-cache
+Cache-Control: no-cache
 
 
 --START--[1;33m
@@ -1564,347 +152,75 @@ Priority: u=2
 
 end req
 end req
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/images/42_Logo.svg.png
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: image/avif,image/webp,*/*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: image/avif,image/webp,*/*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: image/avif,image/webp,*/*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m
---START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+--START--[1;33mGET /favicon.ico HTTP/1.1
 Host: 127.0.0.2:8090
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
 Accept: image/avif,image/webp,*/*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.0.0.2:8090/
-Cookie: sessionId=1a11cfb93458bb7f
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=1a11cfb93458bb7f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=1a11cfb93458bb7f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=1a11cfb93458bb7f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.2:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=1a11cfb93458bb7f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-
---START--[1;33m
---START--
-
-end req
-end req
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: localhost:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=b0c102ead49c476f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: localhost:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=b0c102ead49c476f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: localhost:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=b0c102ead49c476f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m
---START--[1;33mGET / HTTP/1.1
-Host: localhost:8090
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Cookie: sessionId=b0c102ead49c476f
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
 
 
 --START--[1;33m
@@ -1927,10 +243,12 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=1a11cfb93458bb7f
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
 --START--[1;33mGET /www/images/Default.jpg HTTP/1.1
@@ -1941,10 +259,12 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=1a11cfb93458bb7f
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m--END--
 --START--[1;33mGET /www/images/Default.jpg HTTP/1.1
@@ -1955,10 +275,12 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=1a11cfb93458bb7f
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 [0m
 --START--[1;33mGET /www/images/Default.jpg HTTP/1.1
@@ -1969,10 +291,12 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=1a11cfb93458bb7f
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
 
 
 --START--[1;33m
@@ -1995,6 +319,1682 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Referer: http://127.0.0.2:8090/submit_project.py
-Cookie: sessionId=1a11cfb93458bb7f
+Cookie: sessionId=663da2fe981c2c40
 Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/submit_project.py
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+-------end parsed body
+-------end parsed body
+-------Parsed Body: -----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+
+-------Parsed Body: -----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py[0m
+-----------Extracted URI: [34m/submit_project.py
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------16620420241071320177511219460
+Content-Length: 1040
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------16620420241071320177511219460
+Content-Length: 1040
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+[0m--END--
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------16620420241071320177511219460
+Content-Length: 1040
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+[0m
+--START--[1;33mPOST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------16620420241071320177511219460
+Content-Length: 1040
+Origin: http://127.0.0.2:8090
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectName"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="projectGrade"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="expectedTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="realTime"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="experience"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="comments"
+
+2
+-----------------------------16620420241071320177511219460
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------16620420241071320177511219460--
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/add.html
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/add.html[0m
+-----------Extracted URI: [34m/add.html[0m
+-----------Extracted URI: [34m/add.html
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /add.html HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /add.html HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /add.html HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /add.html HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/images/42_Logo.svg.png
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.2:8090/
+Cookie: sessionId=663da2fe981c2c40
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/test/[0m
+-----------Extracted URI: [34m/test/[0m
+-----------Extracted URI: [34m/test/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /test/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /test/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+
+--START--[1;33m
+--START--
+
+end req
+end req
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/[0m
+-----------Extracted URI: [34m/test2/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m--END--
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+[0m
+--START--[1;33mGET /test2/ HTTP/1.1
+Host: 127.0.0.2:8090
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: sessionId=663da2fe981c2c40
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none

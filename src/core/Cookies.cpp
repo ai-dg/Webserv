@@ -47,7 +47,7 @@ std::string Cookies::getSetCookieHeader()
     {
         if (uniqueCookies.find(it->first) == uniqueCookies.end()) 
         {
-            std::string singleSetCookie = "Set-Cookie: " + it->first + "=" + it->second + "; Path=/; HttpOnly\r\n";
+            std::string singleSetCookie = "Set-Cookie: " + it->first + "=" + it->second + "; Path=/; HttpOnly";
             Log::output("./sessions/Cookies.txt") << "Adding to Set-Cookie header: " << singleSetCookie << std::endl;
             header += singleSetCookie;
             uniqueCookies[it->first] = it->second;
