@@ -219,10 +219,17 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         setRedirection(403);
         return ;
     }
-    if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on")
+    std::cerr << BOLD_VIOLET << req.getAskedFile() << RESET << std::endl;
+    if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
     {
         std::cerr << RED << "IIIIIIIIIIIIIIIIIIIIIIIIIINNNNNN" <<std::endl;
         setBody(getIndexFile("./" + Route->root() + "/"));
+        //// Content-Disposition.....
+    }
+    else if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
+    {
+        addHeader("Content-Disposition", "attachment; filename=\"" + req.getAskedFile() + "\"");
+        this->filePath = Route->root() + "/" + req.getAskedFile();
     }
 
     setStatusCode(AUTO);
