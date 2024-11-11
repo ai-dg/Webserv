@@ -76,7 +76,7 @@ void HttpResponse::send(int fd_client)
         res += "\r\n\r\n";
     }
 
-    std::cerr << RED << res << RESET << std::endl;
+    //std::cerr << RED << res << RESET << std::endl;
 
     write(fd_client, res.c_str(), res.size());
     std::ofstream file("./sessions/fd_client.txt"); // Chemin du fichier pour l'écriture
@@ -92,24 +92,6 @@ void HttpResponse::send(int fd_client)
     } 
     Log::output("./sessions/HttpResponse.txt") << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
 }
-
-
-// void HttpResponse::send(int fd_client)
-// {
-//     std::string resFile = getFile(this->filePath);
-//     if (resFile == FILENOTFOUND)
-//         this->statusCode = 404;
-//     else
-//         this->statusCode = 200;
-//     Log::output("./sessions/HttpResponse.txt") << "status : " << this->statusCode << std::endl;
-//     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + " OK\r\nContent-Type: "+ this->mimeType + "; charset=UTF-8 " + 
-//             "\r\nConnection: keep-alive" + 
-//             "\r\nContent-Length: " + numberToString(resFile.size()) +
-//             "\r\nDate: " + get_current_date() + 
-//             "\r\n\r\n" + resFile;   
-//     write(fd_client, res.c_str(), res.size());    
-//     Log::output("./sessions/HttpResponse.txt") << RED << "done" << RESET << std::endl;
-// }
 
 void HttpResponse::setRedirection(std::string newPath)
 {
@@ -171,7 +153,7 @@ std::string HttpResponse::getHeaders()
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
-    std::cerr << "URI :::: " << uri << std::endl;
+    //std::cerr << "URI :::: " << uri << std::endl;
     Location *Route = req.getRouteConf(req.getRoute());
     if (!Route)
     {
@@ -187,7 +169,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         return;
     }
 
-    std::cerr << "this one :::: ???? : " << Route->root() << std::endl;
+    std::cerr << "match root ::: " << Route->root() << std::endl;
 
     if (uri.find("/cgi-bin/") != std::string::npos
         || uri.find(".py") != std::string::npos
@@ -208,9 +190,18 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     else
     {
         if (uri =="/")
-            uri += Route->index(); ///// attention... si plusieurs index.... faire une fonction avec access pour vérifier qu'au moins un des chemins existe
-        
-        this->filePath = Route->root() + "/" + req.getAskedFile();
+        {
+            if (Route->findIndex() == "")
+            {
+                setRedirection(403);
+                return;
+            }
+            else
+                this->filePath = Route->root() + "/" + Route->findIndex();
+
+        }
+        else
+            this->filePath = Route->root() + "/" + req.getAskedFile();
     }
     
     if(Route->methods().find(req.getMethod()) == std::string::npos)
@@ -219,12 +210,10 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         setRedirection(403);
         return ;
     }
-    std::cerr << BOLD_VIOLET << req.getAskedFile() << RESET << std::endl;
+    //std::cerr << BOLD_VIOLET << req.getAskedFile() << RESET << std::endl;
     if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
     {
-        std::cerr << RED << "IIIIIIIIIIIIIIIIIIIIIIIIIINNNNNN" <<std::endl;
         setBody(getIndexFile("./" + Route->root() + "/"));
-        //// Content-Disposition.....
     }
     else if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
     {
@@ -235,7 +224,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     setStatusCode(AUTO);
     //req.printConf(LOCATION_ROOT);
 
-    std::cerr << "path / : " << this->filePath  << std::endl;
+    //std::cerr << "path / : " << this->filePath  << std::endl;
     
     
     //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;

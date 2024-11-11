@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/10 20:56:23 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:29:50 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,8 +115,8 @@ Server::Server(Conf *c)
     setMaxBodySize();
     setHostNames();
     //conf->checkRoute("toto")->root(); crash....
-    conf->printRoutesConfig(serverNumber++);
-    std::cerr << "\t\tconf addr : " <<  conf << "    -    c addr : " << c << std::endl;
+    /*conf->printRoutesConfig(serverNumber++);
+    std::cerr << "\t\tconf addr : " <<  conf << "    -    c addr : " << c << std::endl;*/
 }
 
 int Server::getId()

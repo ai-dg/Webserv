@@ -1,6 +1,7 @@
 #include "../headers/Location.hpp"
 #include "../headers/colors.hpp"
 #include "../headers/stringUtils.hpp"
+#include "../headers/directories.hpp"
 #include  <sstream>
 
 
@@ -100,6 +101,45 @@
         redirectionPath = _return.substr(_return.find(" ") + 1, std::string::npos);
     }
 
+    void Location::setAllowedIndexes()
+    {
+        std::string cpy = trim(_index);
+        std::cerr << BLUE << cpy << RESET << std::endl;
+        if (_index == "")
+            return ;
+        size_t pos = cpy.find(" \t");
+        if (pos == std::string::npos && cpy.size() > 0)
+        {
+            indexes.push_back(cpy);
+            return ;
+        }
+        while (pos != std::string::npos)
+        {       
+            indexes.push_back(cpy.substr(0, pos));
+            cpy.erase(0, pos + 1);
+            pos = cpy.find(" \t");
+            if (pos == std::string::npos && cpy.size() > 0)
+                indexes.push_back(cpy);
+
+        }
+        
+    }
+
+    std::string Location::findIndex()
+    {
+        /*if (indexes.size() < 1)
+            return "";*/
+        std::vector<std::string>::iterator it;
+        it = indexes.begin();
+        for (; it != indexes.end(); ++it)
+        {
+            std::cerr << *it << "     --     ";
+            if (doesFileExist("./" +_root + "/" + *it))
+                return *it;
+        }
+        return "";
+    }
+
     void Location::extractField(std::string param)
     {
         std::string field;
@@ -110,7 +150,10 @@
         if (field == "root")
             _root = value;
         if (field == "index")
+        {
             _index = value;
+            setAllowedIndexes();
+        }
         if (field == "extensions")
             _extensions = value;
         if (field == "methods")
