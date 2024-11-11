@@ -97,7 +97,7 @@
 
     void Location::setRedirectionPath()
     {
-        redirectionPath = _return.substr(_return.find(" "), std::string::npos);
+        redirectionPath = _return.substr(_return.find(" ") + 1, std::string::npos);
     }
 
     void Location::extractField(std::string param)

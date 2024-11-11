@@ -36,16 +36,16 @@ HttpResponse::~HttpResponse()
 void HttpResponse::send(int fd_client)
 {   
     std::string resFile = getFile(this->filePath);
-    if (resFile == FILENOTFOUND)
+    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302)
         this->statusCode = 404;
 
-    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + "\r\n";
-
-    for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
+    std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
+    res += getHeaders();
+    /*for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
         res += it->first + ": " + it->second ;
-    }
+    }*/
     
-    res += "\r";
+   /* res += "\r";*/
 
     Log::output("./sessions/HttpResponse.txt") << "---------- res by line ----------" << std::endl;
     std::istringstream ss(res);
@@ -58,9 +58,18 @@ void HttpResponse::send(int fd_client)
 
     res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n" + 
            "Connection: keep-alive\r\n" + 
-           "Content-Length: " + numberToString(resFile.size()) + "\r\n" +
-           "Date: " + get_current_date() + "\r\n\r\n" + 
-           resFile;
+           "Date: " + get_current_date() + CRLF;
+    if (statusCode != 301 && statusCode != 302)
+    {
+        res += "Content-Length: " + numberToString(resFile.size()) + CRLF + CRLF 
+         + resFile;
+    } 
+    else
+    {
+        res += "\r\n\r\n";
+    }
+
+    std::cerr << RED << res << RESET << std::endl;
 
     write(fd_client, res.c_str(), res.size());
     std::ofstream file("./sessions/fd_client.txt"); // Chemin du fichier pour l'écriture
@@ -141,6 +150,17 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
     //req.server->getConf();
 }
 
+std::string HttpResponse::getHeaders()
+{
+    std::string res = "";
+    std::map<std::string, std::string>::iterator it = headers.begin();
+    for (; it != headers.end(); ++it)
+    {
+        res += it->first + ": " + it->second + CRLF;
+    }
+    return res;
+}
+
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
@@ -156,6 +176,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         std::cerr << "Redirection : " << Route->getRedirectionPath() << "  -  "  << Route->getRedirectionStatus() << std::endl;
         setRedirection(Route->getRedirectionPath(), Route->getRedirectionStatus());
+        addHeader("Location", Route->getRedirectionPath());
         return;
     }
 
