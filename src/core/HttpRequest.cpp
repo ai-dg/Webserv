@@ -41,7 +41,6 @@ HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
     //this->server = server;
     //this->postbody = getBody();
     //Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
-    //std::cerr << "Server : " << server->getId() << "  -  " << "addr :  " << server << std::endl;
 }
 
 HttpRequest::~HttpRequest()
@@ -237,7 +236,6 @@ void HttpRequest::parseRequest(std::string req)
             Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
         }
     }
-    std::cerr << "Server : " << server->getId() << "  -  " << "addr :  " << server << std::endl;
 }
 
 // void HttpRequest::setURI(std::string req)
@@ -307,20 +305,16 @@ void HttpRequest::setRoute()
         if (URI[URI.size() - 1] != '/')
         {
             route = URI.substr(0, URI.find_last_of("/") + 1);
-            std::cerr << "1 - " << URI.find_last_of('/') + 1<< " - " ;
         }
         else
         {
             route = URI;
-            std::cerr << "2 -" ;
         }
     }
     else
     {
         route = URI;
-        std::cerr << "3 -" ;
     }
-    std::cerr << "URI :: " << this->URI << " --- Route : " << route << std::endl;
 }
 
 Location *HttpRequest::getRouteConf(std::string const & route) const

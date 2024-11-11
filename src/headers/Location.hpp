@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Location
 {
@@ -17,6 +18,7 @@ class Location
         std::string _return;
         std::string _index;
         int redirectionStatus;
+        std::vector<std::string> indexes;
         std::string redirectionPath;
 
         void extractField(std::string field);
@@ -37,6 +39,8 @@ class Location
         std::string root();
         int getRedirectionStatus();  
         void setRedirectionStatus();
+        void setAllowedIndexes();
+        std::string findIndex();
         std::string getRedirectionPath();
         void setRedirectionPath();
         Location(Location const &loc);
