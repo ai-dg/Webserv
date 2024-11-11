@@ -19,9 +19,7 @@ bool pathIsDir(std::string dirPath)
 
 bool doesFileExist(std::string filePath)
 {
-    std::cerr << "file to test ::" << filePath << std::endl;
     if (access(filePath.c_str(), R_OK) == 0)
         return true;    
-    std::cerr << "NONONONONONONONONO" << std::endl;
     return false; 
 }
