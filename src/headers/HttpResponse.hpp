@@ -21,6 +21,7 @@ class HttpResponse
         std::map<std::string, std::string> headers;
         std::string mimeType;
         std::string filePath;
+        std::string body;
         int statusCode;
         void setMineType(void);
         
@@ -34,6 +35,7 @@ class HttpResponse
         void checkRedirection(const HttpRequest &req);
         std::string getHeaders();
         void send(int fd_client);
+        void setBody(std::string);
         void setResourcePath(const HttpRequest &req);
         std::string getFilePath() const;
         void addHeader(const std::string &key, const std::string &value);

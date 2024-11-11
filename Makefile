@@ -11,6 +11,7 @@ SRC = src/core/main.cpp \
 	  src/core/Cookies.cpp \
 	  src/core/Location.cpp \
 	  src/core/Status.cpp \
+	  src/core/index.cpp \
 	  src/core/SessionManager.cpp \
 	  src/core/InvalidArgException.cpp \
       src/cgi/cgi_handler.cpp \
@@ -22,6 +23,7 @@ SRC = src/core/main.cpp \
 	  src/utils/parser.cpp \
 	  src/utils/stringUtils.cpp \
 	  src/utils/cleanup.cpp \
+	  src/utils/directories.cpp \
 
 
 OBJ = $(SRC:.cpp=.o)
