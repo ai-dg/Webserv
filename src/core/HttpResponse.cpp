@@ -113,8 +113,7 @@ void HttpResponse::setRedirection(int status)
                     filePath = fp.str(); break;   
         default: break;
     }  
-    setStatusCode(status);
-    
+    setStatusCode(status);    
 }
 
 void HttpResponse::setRedirection(std::string newPath, int status)
@@ -161,6 +160,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     if (!Route)
     {
         std::cerr << "No Route Match v2 !!" << std::endl;
+        this->filePath = "/" + req.getAskedFile();
         setRedirection(403);
         return;
     }
