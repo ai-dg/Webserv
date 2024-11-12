@@ -11,4 +11,7 @@ int stoi(std::string str);
 std::string trim(std::string str);
 std::string upperCaseMe(std::string);
 std::string upperCaseMe(std::string);
+std::string extractLastSegment(const std::string& path);
+std::string removeDuplicateSlashes(const std::string& path);
+
 #endif

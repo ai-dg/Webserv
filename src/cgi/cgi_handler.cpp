@@ -149,20 +149,25 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
         setEnvironment(req);
         // debugEnvironment();
- 
+
+        
+        std::string exe_context = getExeContext(scriptPath);
+
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
-            const_cast<char*>(getExeContext(scriptPath).c_str()),       
+            const_cast<char*>(exe_context.c_str()),       
             const_cast<char*>(scriptPath.c_str()), 
             NULL
         };
 
-        //std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
-
+        // std::cerr << "Child: About to execute script using /usr/bin/env: " << scriptPath << std::endl;
+        // std::cerr << "argv[0]: " << argv[0] << std::endl;
+        // std::cerr << "argv[1]: " << argv[1] << std::endl;
+        // std::cerr << "argv[2]: " << argv[2] << std::endl;
         //
         execve("/usr/bin/env", argv, environment.data());     
         perror("execve");
-        std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;
+        // std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;
         exit(1);
         
     } 
@@ -224,7 +229,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             write(fd_client, buffer, bytesRead);
             //std::cerr << "-----------end fd_client ---------" << std::endl;
             // std::cerr << "----------   stdout   ------------" << std::endl;
-            // write(STDIN_FILENO, buffer, bytesRead); 
+            // write(STDERR_FILENO, buffer, bytesRead); 
             // std::cerr << "------------   end  --------------" << std::endl;
             bzero(buffer, 2048);
         }

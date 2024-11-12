@@ -17,6 +17,7 @@
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
     setResourcePath(req);
+    removeDuplicateSlashes(this->filePath);
     body = "";
     setMineType();
     Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
@@ -43,6 +44,9 @@ void HttpResponse::send(int fd_client)
         resFile = body;
     else 
         resFile = getFile(this->filePath);
+
+
+    
     if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302)
     {
         this->statusCode = 404;
@@ -152,11 +156,13 @@ std::string HttpResponse::getHeaders()
     return res;
 }
 
+
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
-    //std::cerr << "URI :::: " << uri << std::endl;
+    // std::cerr << "URI :::: " << uri << std::endl;
     Location *Route = req.getRouteConf(req.getRoute());
+    // std::cerr << "Route = " << req.getRoute() << std::endl;
     if (!Route)
     {
         std::cerr << "No Route Match v2 !!" << std::endl;
@@ -228,6 +234,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         addHeader("Content-Disposition", "attachment; filename=\"" + req.getAskedFile() + "\"");
         this->filePath = Route->root() + "/" + req.getAskedFile();
+
     }
 
     setStatusCode(AUTO);
@@ -235,8 +242,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 
     //std::cerr << "path / : " << this->filePath  << std::endl;
     
-    
-    //Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
+    removeDuplicateSlashes(this->filePath);
+    Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
 void HttpResponse::setBody(std::string content)

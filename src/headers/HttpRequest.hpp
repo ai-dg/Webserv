@@ -20,7 +20,7 @@ class HttpRequest
         std::string route;
         std::string askedFile;
         std::string body;
-        int port;
+        // int port;
         Server *server;
 
 
