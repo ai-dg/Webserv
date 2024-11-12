@@ -109,6 +109,11 @@ server {
         methods GET;
     }
 
+    location /Gifs/ {
+        root /www/site3/Gifs;
+        methods GET;
+    }
+
     location /gifs/ {
         root /www/site3/Gifs;
         methods GET;
