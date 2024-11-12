@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:32:55 by calbor-p          #+#    #+#             */
-/*   Updated: 2024/10/25 13:30:34 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:42:53 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,3 +70,4 @@ bool isValidConfFile(std::string path)
 	// verifier qu'il y a autant d'accolades que de server et location
 	// vérifier qu'au moins une location est set par server ???? a voir avec le sujet
 }
+

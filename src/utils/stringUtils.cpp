@@ -55,3 +55,54 @@ std::string upperCaseMe(std::string str)
 	}
     return cpy;
 }
+
+std::string extractLastSegment(const std::string& path) 
+{
+    
+    size_t lastSlashPos = path.find_last_of('/');
+
+    
+    if (lastSlashPos == std::string::npos || lastSlashPos == 0) 
+    {
+        return path;  
+    }
+
+    
+    size_t secondLastSlashPos = path.find_last_of('/', lastSlashPos - 1);
+
+    
+    if (secondLastSlashPos != std::string::npos) 
+    {
+        return path.substr(secondLastSlashPos, lastSlashPos - secondLastSlashPos + 1);
+    } 
+    else 
+    {
+        
+        return path.substr(0, lastSlashPos + 1);
+    }
+}
+
+std::string removeDuplicateSlashes(const std::string& path) 
+{
+    std::string result;
+    bool lastWasSlash = false;
+
+    for (size_t i = 0; i < path.size(); ++i) 
+    {
+        if (path[i] == '/') 
+        {
+            if (!lastWasSlash) 
+            {
+                result += path[i];
+                lastWasSlash = true;
+            }
+        } 
+        else 
+        {
+            result += path[i];
+            lastWasSlash = false;
+        }
+    }
+
+    return result;
+}

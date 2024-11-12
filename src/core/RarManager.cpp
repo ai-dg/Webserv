@@ -16,6 +16,7 @@
 #include "../headers/Cookies.hpp"
 #include "../headers/signals.hpp"
 #include "../headers/Log.hpp"
+#include "../headers/colors.hpp"
 
 volatile sig_atomic_t sig_g = 0;
 
@@ -103,8 +104,12 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
 
         std::string filePath = response.getFilePath();
         //std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
-        if (filePath.find("cgi-bin/") != std::string::npos && server->getCgiStatus()) 
+        if (filePath.find("cgi") != std::string::npos && server->getCgiStatus()) 
         {
+            // std::cout << VIOLET << "Enter to script: " << filePath << std::endl;
+
+
+
             // if (request.isValidBodySize())
             // {
                 Cgi_handler cgiHandler;

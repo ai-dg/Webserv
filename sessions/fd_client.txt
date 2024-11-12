@@ -1,22 +1,20 @@
-HTTP/1.1 404 Not Found
-Set-Cookie: sessionId=09886e5627fe0c04; Path=/; HttpOnly
+HTTP/1.1 200 OK
+Set-Cookie: sessionId=f69b83892df0b769; Path=/; HttpOnly
 Content-Type: text/css; charset=UTF-8
 Connection: keep-alive
-Date: Mon, 11 Nov 2024 18:58:48 GMT
-Content-Length: 356
+Date: Thu, 12 Nov 2024 10:57:06 GMT
+Content-Length: 154
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-</head>
-<body>
-    <div class ="error">
-        <h1 class="title">
-            404 NOT FOUND
-        </h1>
-</body>
-</html>
+.error
+{
+    text-align: center;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translateX(-50%);   
+}
+
+.title
+{
+    font-size: 64px;
+}

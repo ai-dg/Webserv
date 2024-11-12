@@ -68,18 +68,25 @@ void Conf::printStatus(bool status, std::string text)
         Log::output("./sessions/Conf.txt") << "[  "<< RED << "off" << RESET << "  ]  "<< text  << std::endl;
 }
 
+
+
 Location *Conf::checkRoute(std::string const & routePath)
 {
     std::map<std::string, Location*>::iterator it = routes.begin();
+    
+    std::string routePath2 = extractLastSegment(routePath);
+
+    // std::cout << VIOLET << "RoutePath2: " << routePath2 << std::endl;
     for (;it != routes.end(); ++it)
     {
-        if (routePath == it->first)
+        std::cerr << BLUE << "asked route : " << routePath2 << RESET << std::endl;
+        std::cerr << VIOLET << "it->first route : " << it->first << RESET << std::endl;
+        if (routePath2 == it->first)
         {
-            std::cerr << BLUE << "asked route : " << routePath << RESET << std::endl;
             return it->second;
         }
     }
-    std::cerr << BLUE << "unknown route " << routePath << RESET << std::endl;
+    std::cerr << BLUE << "unknown route " << routePath2 << RESET << std::endl;
     return NULL;    
 }
 
