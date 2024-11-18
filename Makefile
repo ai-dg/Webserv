@@ -14,6 +14,7 @@ SRC = src/core/main.cpp \
 	  src/core/index.cpp \
 	  src/core/SessionManager.cpp \
 	  src/core/InvalidArgException.cpp \
+	  src/core/SignalHandler.cpp \
       src/cgi/cgi_handler.cpp \
 	  src/utils/date.cpp \
 	  src/utils/signals.cpp \

@@ -110,7 +110,7 @@ Conf::~Conf()
     }
     routes.clear();*/
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
-
+    Log::cleanup();
 }
 
 void Conf::debugFile()

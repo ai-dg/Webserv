@@ -8,44 +8,82 @@
 #include "../headers/Sockets.hpp"
 #include "../headers/cleanup.hpp"
 #include "../headers/RarManager.hpp"
-
+#include "../headers/SignalHandler.hpp"
 
 int main(int ac, char **av)
 {
-    std::string path;
-    std::vector<int> fd_sockets;
-    SessionManager sessionManager;
-    std::vector<Conf *> Configs;
-    std::vector<Server *> Servers;
+    // std::string path;
+    // std::vector<int> fd_sockets;
+    // SessionManager sessionManager;
+    // std::vector<Conf *> Configs;
+    // std::vector<Server *> Servers;
 
-    signal(SIGPIPE, SIG_IGN);
-    signal(SIGINT, handle_sig);
+    setupSignalHandler();
+    try
+    {
 
-    /**
-     * Conditions du path, si NULL, path par defaut
-     */
-    if (ac >= 2)
-        path.assign(av[1]);
-    else 
-        path = "config/server.conf";
+        std::string path;
+        std::vector<int> fd_sockets;
+        std::vector<Conf> Configs;
+        std::vector<Server> Servers;
 
-    /**
-     * Extraire les informations dans le path
-     */
-    get_all_server_conf(path, Configs);
-   
-    if (start_all_servers(fd_sockets, Servers, Configs) == 1)
+        /**
+         * Conditions du path, si NULL, path par defaut
+         */
+        if (ac >= 2)
+            path.assign(av[1]);
+        else 
+            path = "config/server.conf";
+
+          
+        /**
+         * Extraire les informations dans le path
+         */
+        get_all_server_conf(path, Configs);  
+
+        SessionManager sessionManager;
+
+        if (start_all_servers(fd_sockets, Servers, Configs) == 1)
+            return 1;
+            
+        /**
+         * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
+         */
+        request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
+
+        for (size_t i = 0; i < fd_sockets.size() ; ++i)
+        {
+            close(fd_sockets[i]);
+        }
+        Log::cleanup();
+    }
+    catch (SignalException const& e)
+    {
+        std::cerr << "SignalException caught in main: " << e.what() << std::endl;
+        Log::cleanup();
+        return 1;
+    }
+    catch (std::exception const& e)
+    {
+        std::cerr << "General exception caught in main: " << e.what() << std::endl;
+        Log::cleanup();
+        return 1;
+    }
+    catch (...)
+    {
+        std::cerr << "Unknown exception caught in main!" << std::endl;
+        Log::cleanup();
         return 1;
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
     
-    request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
-    std::cerr << std::endl << "Clear memory..."<<std::endl ;
-    clearMemory(Configs);
-    for (size_t i = 0; i < fd_sockets.size() ; ++i)
-    {
-        close(fd_sockets[i]);
-    }
+    // request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
+    // std::cerr << std::endl << "Clear memory..."<<std::endl ;
+    // clearMemory(Configs);
+    // for (size_t i = 0; i < fd_sockets.size() ; ++i)
+    // {
+    //     close(fd_sockets[i]);
+    // }
     return (0);
 }

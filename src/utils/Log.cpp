@@ -203,7 +203,8 @@ Log::LogStream& Log::output(const std::string& path)
 
 void Log::cleanup()
 {
-    for (std::map<std::string, LogStream*>::iterator it = logStreams.begin(); it != logStreams.end(); ++it) {
+    for (std::map<std::string, LogStream*>::iterator it = logStreams.begin(); it != logStreams.end(); ++it) 
+    {
         delete it->second;
     }
     logStreams.clear();
