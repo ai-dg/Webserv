@@ -5,7 +5,7 @@ client_header_timeout: 10
 client_max_body_size: 4M
 error_page_404: /error_pages/404.html
 error_page_500: /error_pages/500.html
-host: 127.0.0.1
+host: 127.0.0.2
 keepalive_timeout: 65
 location_/cgi-bin/cgi: on
 location_/cgi-bin/cgi_bin: /cgi-bin/
@@ -32,7 +32,7 @@ client_header_timeout: 10
 client_max_body_size: 1000M
 error_page_404: /default/error_pages/404.html
 error_page_500: /default/error_pages/500.html
-host: 127.0.0.2
+host: 127.0.0.1
 keepalive_timeout: 65
 location_/cgi-bin/cgi: on
 location_/cgi-bin/cgi_bin: /cgi-bin/
@@ -49,7 +49,7 @@ location_/upload/methods: POST
 location_/upload/root: /www/uploads
 location_/upload/upload_store: /uploads/
 server_name: projects.42.fr
-Ports to listen on 1: 8090 
+Ports to listen on 1: 9090 
 --------------------------------------
 
 Configuration du serveur 2 :
@@ -86,7 +86,7 @@ client_header_timeout: 10
 client_max_body_size: 4M
 error_page_404: /error_pages/404.html
 error_page_500: /error_pages/500.html
-host: 127.0.0.1
+host: 127.0.0.3
 keepalive_timeout: 65
 location_/cgi-bin/cgi: on
 location_/cgi-bin/cgi_bin: /cgi-bin/

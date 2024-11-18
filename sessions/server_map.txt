@@ -2,7 +2,7 @@ map #0:
 server {
 
     listen 8000;
-    host 127.0.0.1;
+    host 127.0.0.2;
     server_name default.42.fr;
 
     location / {
@@ -13,8 +13,8 @@ server {
 
 map #1: 
 server {
-    listen 8090;
-    host 127.0.0.2;
+    listen 9090;
+    host 127.0.0.1;
 
     server_name projects.42.fr;
 
@@ -52,7 +52,7 @@ map #3:
 server {
     
     listen 8080;
-    host 127.0.0.1;
+    host 127.0.0.3;
 
     server_name projects.42.fr;
 

@@ -163,6 +163,7 @@ bool Server::foundHostName(std::string hostname)
 Server::~Server()
 {
     Log::output("./sessions/Server.txt") << "Server destroyed" << std::endl;
+    Log::cleanup();
 }
 
 bool Server::getCgiStatus()

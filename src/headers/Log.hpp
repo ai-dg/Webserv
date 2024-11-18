@@ -54,9 +54,9 @@ class Log
         void operator=(const Log &cl);
         ~Log();
         static void log(std::string path, std::string message);
-        void cleanup();
 
     public :
+        static void cleanup();
         static void init();
         static void init(std::string err, std::string access);
         static void access(std::string message);

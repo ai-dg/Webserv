@@ -4,7 +4,7 @@ client_header_timeout: NULL
 client_max_body_size: NULL
 error_page_404: NULL
 error_page_500: NULL
-host: 127.0.0.1
+host: 127.0.0.3
 keepalive_timeout: NULL
 location_/cgi-bin/cgi: NULL
 location_/cgi-bin/cgi_bin: NULL

@@ -158,7 +158,7 @@ void Conf::init()
 Conf::~Conf()
 {
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
-
+    Log::cleanup();
 }
 
 void Conf::getValuesFromPath()

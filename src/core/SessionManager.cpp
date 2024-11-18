@@ -21,6 +21,7 @@ SessionManager::SessionManager()
 SessionManager::~SessionManager() 
 {
     Log::output("./sessions/SessionManager.txt") << "SessionManager destroyed" << std::endl;
+    Log::cleanup();
 }
 
 std::string SessionManager::createSessions() 
