@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <stdexcept>
 
 class Conf
 {
@@ -17,7 +18,8 @@ class Conf
         void operator=(Conf &conf);
         Conf(std::string& path);
         ~Conf();
-
+        
+        bool checkFormatOfConfig();
         void getValuesFromPath();
         void init();
         void printStatus(bool status, std::string text);
@@ -27,6 +29,13 @@ class Conf
         void printConfigs(std::ofstream& out) const;
         void checkAndSetDefaultValues();
         const std::vector<std::string>& getListenPorts() const;
+
+    class ConfNotCorrectFormat : public std::exception
+    {
+        public:
+            virtual const char* what() const throw();
+    };
+
 };
 
 
