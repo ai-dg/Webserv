@@ -1,1 +1,66 @@
+<<<<<<< HEAD
 
+=======
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+epoll_wait
+binding failed
+binding failed
+epoll_ctl: removeFd
+epoll_ctl: removeFd
+epoll_ctl: removeFd
+epoll_ctl: removeFd
+binding failed
+binding failed
+binding failed
+No existing session file found: ./sessions/session_data.txt
+No existing session file found: ./sessions/session_data.txt
+No existing session file found: 
+>>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)

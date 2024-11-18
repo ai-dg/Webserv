@@ -180,6 +180,7 @@ Server::~Server()
 {
     std::cerr << "Server ended" << std::endl;
     Log::output("./sessions/Server.txt") << "Server destroyed" << std::endl;
+    Log::cleanup();
 }
 
 bool Server::getCgiStatus()

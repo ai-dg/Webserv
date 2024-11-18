@@ -1,9 +1,18 @@
 HTTP/1.1 200 OK
+<<<<<<< HEAD
 Set-Cookie: sessionId=728b8460cd4ca104; Path=/; HttpOnly
 Content-Type: text/javascript; charset=UTF-8
+=======
+Set-Cookie: sessionId=2422ae8290dbb4ab; Path=/; HttpOnly
+Content-Type: text/javascript; charset=UTF-8
+>>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
 Connection: keep-alive
 Date: Wed, 13 Nov 2024 16:59:48 GMT
 Content-Length: 140
+<<<<<<< HEAD
+=======
+Date: Mon, 18 Nov 2024 18:48:55 GMT
+>>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
 
 var nameNode = document.getElementById("textclick");
 nameNode.addEventListener("click", function() 

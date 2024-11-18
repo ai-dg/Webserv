@@ -16,7 +16,7 @@
 #include "../headers/Cookies.hpp"
 #include "../headers/signals.hpp"
 #include "../headers/Log.hpp"
-#include "../headers/colors.hpp"
+#include "../headers/SignalHandler.hpp"
 
 volatile sig_atomic_t sig_g = 0;
 
@@ -151,88 +151,115 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
 
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
 {
-    std::map<int, std::string> requestMap;
-    Epoll epoll(10);
-    char buff[BUFFER_SIZE];
-    int fd_client;
-    int reads;
-    struct epoll_event event;
-    struct sockaddr_in client_addr;
-    socklen_t client_addr_len;
-
-    for (size_t i = 0; i < fd_sockets.size(); ++i)
+    try
     {
-        epoll.addFd(fd_sockets[i], EPOLLIN);  
-        epoll.makeSocketNonBlocking(fd_sockets[i]);  
-    }
+        std::map<int, std::string> requestMap;
+        Epoll epoll(10);
+        char buff[BUFFER_SIZE];
+        int fd_client;
+        int reads;
+        struct epoll_event event;
+        struct sockaddr_in client_addr;
+        socklen_t client_addr_len;
 
-    while (sig_g != SIGINT) 
-    {
-        int eventCount = epoll.wait(-1);
-        for (int i = 0; i < eventCount; ++i) 
+        for (size_t i = 0; i < fd_sockets.size(); ++i)
         {
-            event = epoll.getEvent(i);
-            bool isServerSocket = false;
+            epoll.addFd(fd_sockets[i], EPOLLIN);  
+            epoll.makeSocketNonBlocking(fd_sockets[i]);  
+        }
+        
+        epoll.addFd(signalPipeFd[0], EPOLLIN);
 
-            for (size_t j = 0; j < fd_sockets.size(); ++j)
+        while (!signalReceived) 
+        {
+            int eventCount = epoll.wait(-1);
+            if (eventCount == -1)
             {
-                if (event.data.fd == fd_sockets[j])
-                {
-                    isServerSocket = true;
-                    break;
-                }
+                Log::error("Fatal error during epoll_wait");
+                break;
             }
-            if (isServerSocket)
-            {
-                client_addr_len = sizeof(client_addr);
-                fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
-                if (fd_client == -1) 
-                {
-                    Log::error("accept");
-                    continue;
-                }
-                epoll.makeSocketNonBlocking(fd_client);
-                epoll.addFd(fd_client, EPOLLIN | EPOLLET);
-            }
-            else if (event.events & EPOLLIN) 
-            {
-                fd_client = event.data.fd;
-                while ((reads = read(fd_client, buff, BUFFER_SIZE)) > 0) 
-                {
-                    requestMap[fd_client] += std::string(buff, reads);
-                    bzero(buff, BUFFER_SIZE);
-                }
-                std::string& req = requestMap[fd_client];
-                size_t headerEndPos = req.find("\r\n\r\n");
-                ssize_t contentLength = -1;
 
-                if (headerEndPos != std::string::npos) 
+            if (eventCount == 0)
+            {
+                continue;
+            }
+
+            for (int i = 0; i < eventCount && !signalReceived; ++i) 
+            {
+                event = epoll.getEvent(i);
+                bool isServerSocket = false;
+
+                for (size_t j = 0; j < fd_sockets.size(); ++j)
                 {
-                    size_t contentLengthPos = req.find("Content-Length: ");
-                    if (contentLengthPos != std::string::npos) 
+                    if (event.data.fd == fd_sockets[j])
                     {
-                        contentLengthPos += 16;
-                        size_t endPos = req.find("\r\n", contentLengthPos);
-                        std::string contentLengthStr = req.substr(contentLengthPos, endPos - contentLengthPos);
-                        std::istringstream iss(contentLengthStr);
-                        iss >> contentLength;
+                        isServerSocket = true;
+                        break;
                     }
-                    ssize_t totalRead = req.size();
-                    
-                    if (contentLength == -1 || totalRead >= (ssize_t)headerEndPos + 4 + contentLength) 
+                }
+                if (isServerSocket)
+                {
+                    client_addr_len = sizeof(client_addr);
+                    fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
+                    if (fd_client == -1) 
                     {
-                        int serverIndex = findServerIndex(req, Servers);                        
-                        type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
+                        Log::error("accept");
+                        continue;
+                    }
+                    epoll.makeSocketNonBlocking(fd_client);
+                    epoll.addFd(fd_client, EPOLLIN | EPOLLET);
+                }
+                else if (event.events & EPOLLIN) 
+                {
+                    fd_client = event.data.fd;
+                    while ((reads = read(fd_client, buff, BUFFER_SIZE)) > 0) 
+                    {
+                        requestMap[fd_client] += std::string(buff, reads);
+                        bzero(buff, BUFFER_SIZE);
+                    }
+                    std::string& req = requestMap[fd_client];
+                    size_t headerEndPos = req.find("\r\n\r\n");
+                    ssize_t contentLength = -1;
+
+                    if (headerEndPos != std::string::npos) 
+                    {
+                        size_t contentLengthPos = req.find("Content-Length: ");
+                        if (contentLengthPos != std::string::npos) 
+                        {
+                            contentLengthPos += 16;
+                            size_t endPos = req.find("\r\n", contentLengthPos);
+                            std::string contentLengthStr = req.substr(contentLengthPos, endPos - contentLengthPos);
+                            std::istringstream iss(contentLengthStr);
+                            iss >> contentLength;
+                        }
+                        ssize_t totalRead = req.size();
+                        
+                        if (contentLength == -1 || totalRead >= (ssize_t)headerEndPos + 4 + contentLength) 
+                        {
+                            int serverIndex = findServerIndex(req, Servers);                        
+                            type_request_manager(&fd_client, &req, &Servers[serverIndex], &epoll, sessionManager);                        
+                            requestMap.erase(fd_client);
+                        }
+                    }
+                    if (reads == 0) 
+                    {
+                        epoll.removeFd(fd_client);
+                        close(fd_client);
                         requestMap.erase(fd_client);
                     }
                 }
-                if (reads == 0) 
-                {
-                    epoll.removeFd(fd_client);
-                    close(fd_client);
-                    requestMap.erase(fd_client);
-                }
             }
         }
+        if (signalReceived)
+        {
+            sessionManager.saveSessionsToFile();
+            Log::cleanup();
+            throw SignalException();
+        }
+
+    }
+    catch (std::exception& e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 }
