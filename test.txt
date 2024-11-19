@@ -4,11 +4,7 @@ client_header_timeout: NULL
 client_max_body_size: NULL
 error_page_404: NULL
 error_page_500: NULL
-<<<<<<< HEAD
 host: 127.0.0.6
-=======
-host: 127.0.0.3
->>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
 keepalive_timeout: NULL
 server_name: test.42.fr
 Ports to listen on 1: 8090 

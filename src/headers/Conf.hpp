@@ -20,6 +20,7 @@ class Conf
         Conf(std::string& path);
         ~Conf();
 
+        bool checkFormatOfConfig();
         Location *checkRoute(std::string const & route);
         void printRoutesConfig(int servNb);
         void getValuesFromPath();
@@ -34,6 +35,15 @@ class Conf
         void printConfigs(std::ofstream& out) const;
         void checkAndSetDefaultValues();
         const std::vector<std::string>& getListenPorts() const;
+
+
+    class ConfNotCorrectFormat : public std::exception
+    {
+        public:
+            virtual const char* what() const throw();
+    };
+
+
 };
 
 

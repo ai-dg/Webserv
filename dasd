@@ -1,0 +1,126 @@
+[33mae6b8a8[m[33m ([m[1;36mHEAD -> [m[1;32mfinal_version[m[33m)[m Leaks traitement and signals in epoll and SignalHandler
+[33m310f200[m[33m ([m[1;31morigin/final_version[m[33m)[m First push
+[33me634b37[m[33m ([m[1;31morigin/testsConfChris[m[33m, [m[1;32mtestsConfChris[m[33m)[m Troisieme site ajoute dans server.conf
+[33m37277e8[m Reparation temporaire de location
+[33mf857c2d[m minor debug clean
+[33m6b78b69[m nothing more
+[33m85da30f[m cleaning debug
+[33m87540cd[m testing indexes
+[33ma7f9297[m working downloading files
+[33m472a800[m autoindex almost working
+[33mde61137[m redirections ok
+[33m9f176c1[m redirection
+[33m935318b[m a
+[33m58d0b0d[m rar manager 105
+[33m5892dc7[m WTFFFFFF ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+[33md144027[m scripts ko
+[33m75ae54d[m pas sorti de l'auberge...
+[33m9d90832[m conf
+[33me851d5a[m searchValueInFile() in progress
+[33m73565cb[m getters for conf routing Location objects
+[33mc53dc6f[m signal SIGINT handled
+[33m5976628[m ok
+[33mbc2ba31[m handling signals
+[33m5e79ae1[m grrrrrrrrrrrrrrrrrrrrrrrrrrrrr ça m'enerrrrrrrrrrrve
+[33md96207e[m dfgjsdflkg
+[33mbcb95f9[m locations looks ok
+[33m02e427f[m save
+[33m7a87abe[m conf side ok... have to fix location side
+[33m6cbb3d0[m just to be sure
+[33m7b9cd38[m Location Object
+[33mfef849e[m[33m ([m[1;32mmain[m[33m)[m python ok
+[33me43e3ce[m half working
+[33m442fbc3[m half working
+[33mc5362b8[m trying to fix cgi
+[33mc33e3c9[m routes
+[33m56fe35e[m routes ok for url
+[33mb261987[m starting connecting routes
+[33m7fd488d[m Log and sessions completed
+[33ma11a2f8[m HTML repare lors des zooms
+[33m8a794d7[m Upload, ports, taille de fichier, etc
+[33m9e479d0[m Multi Servers implantes
+[33m6f826ab[m Vecteur Configs repare
+[33m0452833[m Vector Configs
+[33m1d98994[m Hosts name resolution
+[33m1df1f99[m fix
+[33mdc0dd97[m client max body size set
+[33m6c0e396[m cgi
+[33mfa6e465[m errpages
+[33m6c4502c[m badfd
+[33me3d50b7[m repaired fd pb
+[33mdac1ccd[m repaired fd pb
+[33mdd0f4ad[m working cgi off
+[33m1899610[m turn cgi on in configuration file for git repo
+[33m5c01170[m implemented static class Status with fonction Status::get(int code) to get status text from code, and working on cgi on/off not fully functionnal
+[33m704de8e[m add.html file
+[33m6fbb1d4[m Content-Length
+[33m5a05256[m merged
+[33m8e7cd70[m[33m ([m[1;31morigin/broked[m[33m)[m toooo haarrd
+[33m23b8698[m fixed, reads and buffer pb
+[33ma890921[m cleaning stdout
+[33m23c903f[m partially fixed
+[33ma2580e5[m broked
+[33m649e9d4[m executeCgi accept HttpRequestObject
+[33m3267eeb[m add.html accept images... handling python script
+[33m3de6b99[m html files
+[33m97e9b86[m todo chris notes
+[33mf42858d[m more scripting
+[33m97d3b7f[m testing php... not good code have to find a way to get response header from cgi and no hardcoded
+[33ma68ee04[m routing scripts
+[33m3c336f6[m cleaning change
+[33m699505e[m fixed
+[33m4366320[m understanding cgi...
+[33me812754[m cleaned
+[33m19a5b97[m[33m ([m[1;31morigin/testsChris[m[33m)[m fixed
+[33ma08328b[m testing
+[33m1ae1fcc[m Cookies and SessionManager finished
+[33m9deeb1c[m Cookies and SessionManager finished
+[33m66e6b78[m Le programme peut desormais accepter plusieurs ports
+[33m32fafdd[m CIdee de cookies sessionmanager
+[33m7efc01c[m Merge branch 'main' of github.com:diegoagudeloa/Webserv
+[33m05e465f[m Fixing main and Cookies and SessionManager created
+[33m31cc657[m fixing scripts
+[33m1b6aac4[m debugged
+[33maededc6[m Organisation generale du projet
+[33me97e817[m Merge branch 'main' of github.com:diegoagudeloa/Webserv
+[33m2f5a216[m Organisation generale du projet
+[33mde3fe0f[m Server3
+[33m0044597[m Server
+[33m26b4739[m modifing Server
+[33m7cacdac[m merging
+[33m64e514e[m handling timeout connexions and logs
+[33mab38965[m Scripts python POST GET and DELETE
+[33m1c006be[m Website modified
+[33m531dd3d[m Website modified
+[33me6b192c[m Website added
+[33md49d75c[m Epoll class
+[33m7b98fde[m Merge
+[33m4319b86[m CGI structure added and 2 fonctions in Httprequest
+[33mbd28db4[m .gitignore file
+[33mdc5397d[m keepalive values
+[33m529a0e4[m merging
+[33m262a9dd[m merging
+[33m1d04600[m Conf parsing finish
+[33mbab1f4c[m Merge branch 'main' of github.com:diegoagudeloa/Webserv
+[33mb449e39[m Conf parsing finish
+[33m5ae2061[m keepAlive-ok
+[33ma07fbf5[m paths
+[33m4be694a[m working js and css... next step, bind a timer to the server parsed value avec check if there is a timeout to close the connection single connection keep-alive for the moment
+[33mce0cf2e[m get css && js ok
+[33me3eabdb[m working on Content-Length header
+[33m5ee2da5[m parsing headers
+[33m9080d6d[m HttpRequest class
+[33md90fe13[m server parsing
+[33mbc28a0c[m all
+[33mde4f279[m mime_types
+[33mc3acb26[m test with files
+[33mf0aa85a[m server ok
+[33mfdbbad8[m tests again
+[33ma85cfe7[m reponse received
+[33mfb45675[m socket + listening port tests
+[33m1cce143[m tests
+[33md503055[m date
+[33m5620852[m date
+[33m8e8c77b[m First structure config Webserv
+[33mfcf7cf6[m First structure config Webserv
+[33me9c06c1[m Initial commit

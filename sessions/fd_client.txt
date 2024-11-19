@@ -1,21 +1,20 @@
 HTTP/1.1 200 OK
-<<<<<<< HEAD
-Set-Cookie: sessionId=728b8460cd4ca104; Path=/; HttpOnly
-Content-Type: text/javascript; charset=UTF-8
-=======
-Set-Cookie: sessionId=2422ae8290dbb4ab; Path=/; HttpOnly
-Content-Type: text/javascript; charset=UTF-8
->>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
+Set-Cookie: sessionId=ce6b71a2193f3779; Path=/; HttpOnly
+Content-Type: text/css; charset=UTF-8
 Connection: keep-alive
-Date: Wed, 13 Nov 2024 16:59:48 GMT
-Content-Length: 140
-<<<<<<< HEAD
-=======
-Date: Mon, 18 Nov 2024 18:48:55 GMT
->>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
+Date: Thu, 19 Nov 2024 14:06:32 GMT
+Content-Length: 154
 
-var nameNode = document.getElementById("textclick");
-nameNode.addEventListener("click", function() 
+.error
 {
-    alert("Welcome to 42 library")
-});
+    text-align: center;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translateX(-50%);   
+}
+
+.title
+{
+    font-size: 64px;
+}
