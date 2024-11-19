@@ -283,6 +283,13 @@ Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+path: ./config/temp_server_block.conf
+path: 
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: 
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -301,12 +308,19 @@ path:
 Key not found: server
 Key not found: server
 Key not found: 
+Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
+Conf malloc destroyed
+path: ./config/temp_server_block.conf
+path: 
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: 
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -331,6 +345,13 @@ Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+path: ./config/temp_server_block.conf
+path: 
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: 
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -355,6 +376,13 @@ Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+path: ./config/temp_server_block.conf
+path: 
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: server
+path: ./config/temp_server_block.confKey not found: 
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -1771,24 +1799,6 @@ Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
 Conf malloc destroyed
-path: ./config/temp_server_block.conf
-path: 
-path: ./config/temp_server_block.confKey not found: server
-path: ./config/temp_server_block.confKey not found: server
-path: ./config/temp_server_block.confKey not found: 
-path: ./config/temp_server_block.conf
-path: 
-Key not found: error_page_403
-Key not found: error_page_403
-Key not found: 
-path: ./config/temp_server_block.confKey not found: server
-path: ./config/temp_server_block.confKey not found: server
-path: ./config/temp_server_block.confKey not found: 
-path: ./config/temp_server_block.conf
-path: 
-Key not found: server
-Key not found: server
-Key not found: 
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -1903,12 +1913,6 @@ path:
 Key not found: server
 Key not found: server
 Key not found: 
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -1975,6 +1979,12 @@ path:
 Key not found: server
 Key not found: server
 Key not found: 
+Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
+Conf malloc destroyed
 path: ./config/temp_server_block.conf
 path: 
 path: ./config/temp_server_block.confKey not found: server
@@ -1988,13 +1998,3 @@ Key not found:
 path: ./config/temp_server_block.confKey not found: server
 path: ./config/temp_server_block.confKey not found: server
 path: ./config/temp_server_block.confKey not found: 
-path: ./config/temp_server_block.conf
-path: 
-Key not found: server
-Key not found: server
-Key not found: 
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
-Conf malloc destroyed
