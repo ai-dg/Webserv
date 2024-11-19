@@ -1,7 +1,47 @@
 *************************************
 *************************************
-GET /images/defending.jpg HTTP/1.1
-Host: 127.0.0.6:8090
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -11,14 +51,14 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
+Referer: http://127.0.0.2:8080/introduce.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /images/defending.jpg HTTP/1.1
-Host: 127.0.0.6:8090
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -28,10 +68,10 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
+Referer: http://127.0.0.2:8080/introduce.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -40,488 +80,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /images/she-said.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/she-said.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/once.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/once.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/forever-young.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/forever-young.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/lovepotion9.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/lovepotion9.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/love3.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/love3.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/love1.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/love1.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /Gifs/snow.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/romance.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /Gifs/snow.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/romance.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/love2.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/love2.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /Gifs/petals.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/romance.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /Gifs/petals.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/romance.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/titanic-main-xlarge_trans_NvBQzQNjv4Bqzcd--Xj9PJMVYU0p8x70SFqz9KkK9VrRB9X1d8OfXf0.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/titanic-main-xlarge_trans_NvBQzQNjv4Bqzcd--Xj9PJMVYU0p8x70SFqz9KkK9VrRB9X1d8OfXf0.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/love4.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/love4.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/romance.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /css/romance.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -531,14 +91,14 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/romance.html
+Referer: http://127.0.0.2:8080/introduce.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /css/romance.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -548,10 +108,10 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/romance.html
+Referer: http://127.0.0.2:8080/introduce.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -560,8 +120,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /romance.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -573,14 +133,14 @@ Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/home.html
+Referer: http://127.0.0.2:8080/submit_project.py
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /romance.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -592,10 +152,1492 @@ Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/home.html
+Referer: http://127.0.0.2:8080/submit_project.py
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /www/projects42/images/Default.jpg HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /www/projects42/images/Default.jpg HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/submit_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+Content-Length: 891
+Cache-Control: max-age=0
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.2:8080
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="projectName"
+
+1231
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="projectGrade"
+
+23
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="expectedTime"
+
+23
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="realTime"
+
+123
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="experience"
+
+123
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="satisfaction"
+
+2
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="comments"
+
+22222
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ--
+
+POST /submit_project.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+Content-Length: 891
+Cache-Control: max-age=0
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.2:8080
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="projectName"
+
+1231
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="projectGrade"
+
+23
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="expectedTime"
+
+23
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="realTime"
+
+123
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="experience"
+
+123
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="satisfaction"
+
+2
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="comments"
+
+22222
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundaryBYbmUVOB3YQ3sbfJ--
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /add.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /add.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /delete.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete_project.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST /delete_project.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+Content-Length: 12
+Cache-Control: max-age=0
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.2:8080
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+project_id=9
+POST /delete_project.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+Content-Length: 12
+Cache-Control: max-age=0
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.2:8080
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+project_id=9
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/show_projects.py
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/delete.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /delete.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/find.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /find.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /find.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/add.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /add.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /add.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/introduce.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET / HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -605,7 +1647,7 @@ Requête complète :
 *************************************
 *************************************
 GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.6:8090
+Host: 127.0.0.2:8090
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -615,14 +1657,14 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/Index.html
+Referer: http://127.0.0.2:8090/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.6:8090
+Host: 127.0.0.2:8090
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -632,10 +1674,10 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/Index.html
+Referer: http://127.0.0.2:8090/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -644,8 +1686,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /Index.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET / HTTP/1.1
+Host: 127.0.0.2:8090
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -653,18 +1695,17 @@ sec-ch-ua-platform: "Linux"
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/home.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /Index.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET / HTTP/1.1
+Host: 127.0.0.2:8090
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -672,14 +1713,13 @@ sec-ch-ua-platform: "Linux"
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/home.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -688,8 +1728,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /Gifs/snow.gif HTTP/1.1
-Host: 127.0.0.6:8090
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -699,14 +1739,14 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/home.css
+Referer: http://127.0.0.2:9000/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /Gifs/snow.gif HTTP/1.1
-Host: 127.0.0.6:8090
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -716,10 +1756,10 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/home.css
+Referer: http://127.0.0.2:9000/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -728,210 +1768,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /songs/home.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/home.html
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
-
-
-GET /songs/home.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/home.html
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/tv3.png HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/tv3.png HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/fun-time.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/fun-time.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/tomato1.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/tomato1.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/home.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /css/home.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -941,14 +1779,14 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/home.html
+Referer: http://127.0.0.2:9000/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /css/home.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -958,10 +1796,10 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/home.html
+Referer: http://127.0.0.2:9000/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -970,8 +1808,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /home.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET / HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -979,18 +1817,17 @@ sec-ch-ua-platform: "Linux"
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/fantasy.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /home.html HTTP/1.1
-Host: 127.0.0.6:8090
+GET / HTTP/1.1
+Host: 127.0.0.2:9000
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -998,14 +1835,13 @@ sec-ch-ua-platform: "Linux"
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/fantasy.html
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -1014,40 +1850,78 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /songs/fantasy.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,fr;q=0.8
+Cookie: sessionId=728b8460cd4ca104
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
+Connection: keep-alive
+sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 sec-ch-ua-platform: "Linux"
 Accept: */*
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/fantasy.html
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /songs/fantasy.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
+GET /script.js HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 sec-ch-ua-platform: "Linux"
 Accept: */*
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/fantasy.html
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.2:8080/
+Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -1056,8 +1930,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /images/edward.jpg HTTP/1.1
-Host: 127.0.0.6:8090
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -1067,14 +1941,14 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
+Referer: http://127.0.0.2:8080/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /images/edward.jpg HTTP/1.1
-Host: 127.0.0.6:8090
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -1084,10 +1958,10 @@ Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
+Referer: http://127.0.0.2:8080/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
 Requête complète : 
@@ -1096,648 +1970,8 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /images/beauty.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/beauty.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/hook.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/hook.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/the-crow.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/the-crow.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/princess-mononoke.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/princess-mononoke.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/the-fisher.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/the-fisher.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/army-of-darkness.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/army-of-darkness.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/the-witch.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/the-witch.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/watching8.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/watching8.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/watching5.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/watching5.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/watching7.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/watching7.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /Gifs/fantasy.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/fantasy.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /Gifs/fantasy.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/fantasy.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /gifs/audio.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /Gifs/background3.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/fantasy.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /Gifs/background3.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/css/fantasy.css
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/Batman-Returns-batman-returns-14752890-655-492.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/Batman-Returns-batman-returns-14752890-655-492.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/jumanji-main.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/jumanji-main.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /Gifs/fantasy2.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /Gifs/fantasy2.gif HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /css/fantasy.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -1747,14 +1981,14 @@ Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/fantasy.html
+Referer: http://127.0.0.2:8080/
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
+Cookie: sessionId=728b8460cd4ca104
 
 
-GET /css/fantasy.css HTTP/1.1
-Host: 127.0.0.6:8090
+GET /styles.css HTTP/1.1
+Host: 127.0.0.2:8080
 Connection: keep-alive
 sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
 sec-ch-ua-mobile: ?0
@@ -1763,238 +1997,4 @@ sec-ch-ua-platform: "Linux"
 Accept: text/css,*/*;q=0.1
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.6:8090/fantasy.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /fantasy.html HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Linux"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /fantasy.html HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Linux"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /songs/western.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/western.html
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
-
-
-GET /songs/western.mp3 HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-Accept-Encoding: identity;q=1, *;q=0
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: audio
-Referer: http://127.0.0.6:8090/western.html
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-Range: bytes=0-
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/Unforgiven-Clint-Eastwood.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/Unforgiven-Clint-Eastwood.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/dances-with-wolves1.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/dances-with-wolves1.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/kurt-russell-in-tombstone.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-GET /images/kurt-russell-in-tombstone.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /images/maverick-mel-gibson-jodie-foster.jpg HTTP/1.1
-Host: 127.0.0.6:8090
-Connection: keep-alive
-sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
-sec-ch-ua-platform: "Linux"
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.6:8090/western.html
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: en-US,en;q=0.9,fr;q=0.8
-Cookie: sessionId=f69b83892df0b769
-
+Sec-Fetch-Dest: style

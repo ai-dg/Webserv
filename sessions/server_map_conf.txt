@@ -21,7 +21,7 @@ error_page_500: /default/error_pages/500.html
 host: 127.0.0.2
 keepalive_timeout: 65
 server_name: projects.42.fr
-Ports to listen on 1: 8090 
+Ports to listen on 1: 8080 
 --------------------------------------
 
 Configuration du serveur 2 :
