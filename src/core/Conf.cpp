@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <stack>
 #include "../headers/colors.hpp"
 #include "../headers/Log.hpp"
 #include "../headers/stringUtils.hpp"
@@ -20,6 +21,11 @@ void Conf::operator=(Conf &conf)
 
 Conf::Conf(std::string& path) : path(path)
 {
+    // if (!checkFormatOfConfig())
+    // {
+        // throw ConfNotCorrectFormat();
+    // };
+
     listenPorts.clear();
 
     // configMap.insert(std::make_pair("listen", ""));
@@ -60,6 +66,85 @@ Conf::Conf(std::string& path) : path(path)
     //init();//printConfigs();
 }
 
+const char* Conf::ConfNotCorrectFormat::what() const throw()
+{
+    return "Configuration file is not in the correct format.";
+}
+
+
+bool Conf::checkFormatOfConfig()
+{
+    std::ifstream file(path.c_str());
+    if (!file.is_open())
+    {
+        std::cerr << "Unable to open the file." << std::endl;
+        return false;
+    }
+
+    std::string line;
+    std::stack<std::string> blocks; 
+    size_t lineNumber = 0;
+    
+    while (std::getline(file, line))
+    {
+        lineNumber++;
+        
+        line.erase(0, line.find_first_not_of(" \t"));
+        line.erase(line.find_last_not_of(" \t") + 1);
+
+        
+        if (line.empty() || line[0] == '#')
+            continue;
+
+        
+        if (line == "server {" || line == "location / {")
+        {
+            blocks.push("{");
+            continue;
+        }
+
+        
+        if (line == "}")
+        {
+            if (blocks.empty())
+            {
+                std::cerr << "Unmatched closing brace at line " << lineNumber << std::endl;
+                return false;
+            }
+            blocks.pop();
+            continue;
+        }
+
+        
+        size_t semicolon = line.find(';');
+        if (semicolon != std::string::npos)
+        {
+            std::string key = line.substr(0, line.find(' '));
+            if (key.empty())
+            {
+                std::cerr << "Invalid syntax at line " << lineNumber << ": Missing key before semicolon." << std::endl;
+                return false;
+            }
+            continue;
+        }
+
+        
+        std::cerr << "Invalid syntax at line " << lineNumber << ": " << line << std::endl;
+        return false;
+    }
+
+    
+    if (!blocks.empty())
+    {
+        std::cerr << "Unmatched opening brace(s) in the configuration file." << std::endl;
+        return false;
+    }
+
+    file.close();
+    return true;
+}
+
+
 void Conf::printStatus(bool status, std::string text)
 {
     if (status)    
@@ -99,19 +184,28 @@ void Conf::init()
 Conf::~Conf()
 {
     std::cerr << "Conf destructor called !!!! " << std::endl;
-    std::map<std::string, Location*>::iterator it;
-  /* for (it = routes.begin(); it != routes.end(); ++it)
+
+    
+    for (std::map<std::string, Location*>::iterator it = routes.begin(); it != routes.end(); ++it)
     {
-        if (it != routes.end() && it->second)
+        if (it->second) 
         {
-            delete it->second;
-            it->second = NULL;
+            delete it->second; 
+            it->second = NULL; 
         }
     }
-    routes.clear();*/
+    routes.clear(); 
+
+    
+    configMap.clear();         
+    listenPorts.clear();       
+    path.clear();              
+
+    
     Log::output("./sessions/Conf.txt") << "Conf malloc destroyed" << std::endl;
     Log::cleanup();
 }
+
 
 void Conf::debugFile()
 {

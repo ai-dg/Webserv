@@ -18,7 +18,6 @@
 #include "../headers/Log.hpp"
 #include "../headers/SignalHandler.hpp"
 
-volatile sig_atomic_t sig_g = 0;
 
 int findServerIndex(std::string const& request, std::vector<Server *>& Servers) 
 {
@@ -237,7 +236,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                         if (contentLength == -1 || totalRead >= (ssize_t)headerEndPos + 4 + contentLength) 
                         {
                             int serverIndex = findServerIndex(req, Servers);                        
-                            type_request_manager(&fd_client, &req, &Servers[serverIndex], &epoll, sessionManager);                        
+                            type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
                             requestMap.erase(fd_client);
                         }
                     }

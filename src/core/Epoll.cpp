@@ -166,12 +166,6 @@ int Epoll::wait(int timeout)
 
     if (eventCount == -1) 
     {
-<<<<<<< HEAD
-        if (errno == EINTR) 
-            return -1;
-        Log::error("epoll_wait");
-        exit(EXIT_FAILURE);
-=======
         if (errno == EINTR)
         {
             Log::debug("epoll_wait interrupted by a signal");
@@ -184,7 +178,6 @@ int Epoll::wait(int timeout)
             Log::error(errorMsg.str());
             return -1; // Erreur fatale
         }
->>>>>>> b833521 (Leaks traitement and signals in epoll and SignalHandler)
     }
 
     std::ostringstream successMsg;

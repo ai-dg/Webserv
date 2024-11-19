@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <csignal>
+#include <stdexcept>
 #include "../headers/Server.hpp"
 #include "../headers/signals.hpp"
 #include "../headers/Conf.hpp"
@@ -12,20 +13,15 @@
 
 int main(int ac, char **av)
 {
-    // std::string path;
-    // std::vector<int> fd_sockets;
-    // SessionManager sessionManager;
-    // std::vector<Conf *> Configs;
-    // std::vector<Server *> Servers;
-
+    
     setupSignalHandler();
     try
     {
-
         std::string path;
         std::vector<int> fd_sockets;
-        std::vector<Conf> Configs;
-        std::vector<Server> Servers;
+        std::vector<Conf *> Configs;
+        std::vector<Server *> Servers;
+
 
         /**
          * Conditions du path, si NULL, path par defaut
@@ -35,11 +31,14 @@ int main(int ac, char **av)
         else 
             path = "config/server.conf";
 
-          
+
+
         /**
          * Extraire les informations dans le path
          */
         get_all_server_conf(path, Configs);  
+
+          
 
         SessionManager sessionManager;
 
@@ -56,6 +55,9 @@ int main(int ac, char **av)
             close(fd_sockets[i]);
         }
         Log::cleanup();
+        clearMemory(Configs);
+        clearArray(Servers);
+        // clearArray(fd_sockets);
     }
     catch (SignalException const& e)
     {
@@ -74,13 +76,14 @@ int main(int ac, char **av)
         std::cerr << "Unknown exception caught in main!" << std::endl;
         Log::cleanup();
         return 1;
+    }
     /**
      * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
      */
     
     // request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
     // std::cerr << std::endl << "Clear memory..."<<std::endl ;
-    // clearMemory(Configs);
+    
     // for (size_t i = 0; i < fd_sockets.size() ; ++i)
     // {
     //     close(fd_sockets[i]);
