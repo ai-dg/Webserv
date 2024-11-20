@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>

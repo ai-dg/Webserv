@@ -82,14 +82,14 @@ Location *Conf::checkRoute(std::string const & routePath)
     // std::cout << VIOLET << "RoutePath2: " << routePath2 << std::endl;
     for (;it != routes.end(); ++it)
     {
-        std::cerr << BLUE << "asked route : " << routePath2 << RESET << std::endl;
-        std::cerr << VIOLET << "it->first route : " << it->first << RESET << std::endl;
+        // std::cerr << BLUE << "asked route : " << routePath2 << RESET << std::endl;
+        // std::cerr << VIOLET << "it->first route : " << it->first << RESET << std::endl;
         if (routePath2 == it->first)
         {
             return it->second;
         }
     }
-    std::cerr << BLUE << "unknown route " << routePath2 << RESET << std::endl;
+    // std::cerr << BLUE << "unknown route " << routePath2 << RESET << std::endl;
     return NULL;    
 }
 
@@ -136,7 +136,7 @@ void Conf::printRoutesConfig(int servNb)
     std::map<std::string, Location*>::iterator it;
    for (it = routes.begin(); it != routes.end(); ++it)
     {
-        std::cerr << RED << "\troute : " << it->first << RESET <<std::endl;
+        // std::cerr << RED << "\troute : " << it->first << RESET <<std::endl;
         it->second->debugValues();
     }
 }

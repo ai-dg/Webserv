@@ -115,12 +115,12 @@ std::string HttpRequest::getBody() const
 {
 
     Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
-    if (method == "POST") 
+    if (method == "POST" || method == "DELETE") 
         return body;
     else if (method == "GET") 
         return getQueryString();
-    else if (method == "DELETE") // not implemented yet !
-        return "";
+    // else if (method == "DELETE") // not implemented yet !
+    //     return "";
     return "";//body;
 }
 
@@ -135,6 +135,8 @@ void HttpRequest::setMethod(std::string req)
         this->method = req.substr(0, spacePos);
     else
         this->method = "";
+
+    // std::cerr << RED << "Method: " << this->method << RESET << std::endl;
 }
 
 // void HttpRequest::setHeaders(std::string req)
@@ -221,13 +223,13 @@ void HttpRequest::parseRequest(std::string req)
     setRoute();
     setAskedFile();
     setHeaders(req);
-    std::cerr << RED << req << std::endl;
-    std::cerr << GREEN << "route : " << route << RESET << std::endl;
+    // std::cerr << RED << req << std::endl;
+    // std::cerr << GREEN << "route : " << route << RESET << std::endl;
     // Log::output("./logs/error.log") << "------------Method: " << this->method << std::endl;
     // Log::output("./logs/error.log") << "--------********************req: " << req << std::endl;
     // Log::output("./logs/error.log") << "--------*************************" << std::endl;
    
-    if (this->method == "POST")
+    if (this->method == "POST" || this->method == "DELETE")
     {
         // Extraire le corps de la requête après les en-têtes
         size_t bodyStartPos = req.find("\r\n\r\n");
@@ -329,7 +331,7 @@ std::string HttpRequest::getAskedFile() const
 
 void HttpRequest::setRoute()
 {
-    std::cout << GREEN << "URI : " << URI << RESET << std::endl;
+    // std::cout << GREEN << "URI : " << URI << RESET << std::endl;
 
     
     size_t lastSlashPos = URI.find_last_of('/');
@@ -360,7 +362,7 @@ void HttpRequest::setRoute()
         }
     }
 
-    std::cout << GREEN << "route : " << route << RESET << std::endl;
+    // std::cout << GREEN << "route : " << route << RESET << std::endl;
 }
 
 

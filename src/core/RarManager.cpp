@@ -17,6 +17,7 @@
 #include "../headers/signals.hpp"
 #include "../headers/Log.hpp"
 #include "../headers/SignalHandler.hpp"
+#include "../headers/colors.hpp"
 
 
 int findServerIndex(std::string const& request, std::vector<Server *>& Servers) 
@@ -102,7 +103,8 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
 
         std::string filePath = response.getFilePath();
-        //std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus();
+        filePath = removeDuplicateSlashes(filePath);
+        // std::cerr << "before cgi : " << filePath <<  "   - cgi status " << server->getCgiStatus() << std::endl;
         if (filePath.find("cgi") != std::string::npos && server->getCgiStatus()) 
         {
             // std::cout << VIOLET << "Enter to script: " << filePath << std::endl;
