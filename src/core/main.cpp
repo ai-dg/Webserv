@@ -10,6 +10,7 @@
 #include "../headers/cleanup.hpp"
 #include "../headers/RarManager.hpp"
 #include "../headers/SignalHandler.hpp"
+#include "../headers/files.hpp"
 
 int main(int ac, char **av)
 {
@@ -31,6 +32,10 @@ int main(int ac, char **av)
         else 
             path = "config/server.conf";
 
+        if (!checkFormatOfConfig(path))
+        {
+            throw PathNotCorrectFormat();
+        };
 
 
         /**

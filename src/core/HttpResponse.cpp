@@ -161,8 +161,15 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
     // std::cerr << "URI :::: " << uri << std::endl;
-    Location *Route = req.getRouteConf(req.getRoute());
-    // std::cerr << "Route = " << req.getRoute() << std::endl;
+    std::string route = req.getRoute();
+    std::cerr << "Route = " << route << std::endl;
+    // if (!route.empty() && route[route.size() - 1] != '/')
+    // {
+    //     route + "/";
+    // }
+    Location *Route = req.getRouteConf(route);
+    std::cerr << "Route = " << req.getRoute() << std::endl;
+    
     if (!Route)
     {
         std::cerr << "No Route Match v2 !!" << std::endl;

@@ -222,6 +222,7 @@ void HttpRequest::parseRequest(std::string req)
     setAskedFile();
     setHeaders(req);
     std::cerr << RED << req << std::endl;
+    std::cerr << GREEN << "route : " << route << RESET << std::endl;
     // Log::output("./logs/error.log") << "------------Method: " << this->method << std::endl;
     // Log::output("./logs/error.log") << "--------********************req: " << req << std::endl;
     // Log::output("./logs/error.log") << "--------*************************" << std::endl;
@@ -271,6 +272,10 @@ void HttpRequest::setURI(std::string req)
 
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
 
+    // if (!this->URI.empty() && this->URI[this->URI.size() - 1] == '/')
+    // {
+    //     this->URI.erase(this->URI.size() - 1);
+    // }
 
     Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
@@ -298,24 +303,67 @@ std::string HttpRequest::getAskedFile() const
     return askedFile;
 }
 
+// void HttpRequest::setRoute()
+// {
+//     std::cout << GREEN << "URI : " << URI << std::endl;
+
+//     if(URI.size() > 1 && URI !="/")
+//     {
+//         if (URI[URI.size() - 1] != '/')
+//         {
+//             route = URI.substr(0, URI.find_last_of("/") + 1);
+//         }
+//         else
+//         {
+//             route = URI;
+//         }
+//     }
+//     else
+//     {
+//         route = URI;
+//     }
+
+
+//     std::cout << GREEN << "route : " << route << std::endl;
+// }
+
 void HttpRequest::setRoute()
 {
-    if(URI.size() > 1 && URI !="/")
+    std::cout << GREEN << "URI : " << URI << RESET << std::endl;
+
+    
+    size_t lastSlashPos = URI.find_last_of('/');
+    size_t lastDotPos = URI.find_last_of('.');
+
+    if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
     {
-        if (URI[URI.size() - 1] != '/')
+        
+        if (lastSlashPos == 0)
         {
-            route = URI.substr(0, URI.find_last_of("/") + 1);
+            route = "/"; 
         }
         else
         {
-            route = URI;
+            route = URI.substr(0, lastSlashPos + 1); 
         }
     }
     else
     {
-        route = URI;
+        
+        if (URI[URI.size() - 1] != '/')
+        {
+            route = URI + "/"; 
+        }
+        else
+        {
+            route = URI; 
+        }
     }
+
+    std::cout << GREEN << "route : " << route << RESET << std::endl;
 }
+
+
 
 Location *HttpRequest::getRouteConf(std::string const & route) const
 {
