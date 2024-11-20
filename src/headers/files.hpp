@@ -16,9 +16,18 @@
 
 #include "includes.hpp"
 #include <string>
+#include <stdexcept>
 
 std::string checkMimeType(const std::string& path);
 std::string getMime(const std::string& mime);
 std::string getFile(const std::string& path);
+bool checkFormatOfConfig(std::string const& path_file);
+bool checkFormatOfPaths(std::string const& path_file);
+
+class PathNotCorrectFormat : public std::exception
+{
+    public:
+        virtual const char* what() const throw();
+};
 
 #endif
