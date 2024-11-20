@@ -21,6 +21,8 @@ server {
 
     error_page_403 /default/error_pages/403.html;
     error_page_404 /default/error_pages/404.html;
+    error_page_405 /default/error_pages/405.html;
+    error_page_413 /default/error_pages/413.html;
     error_page_500 /default/error_pages/500.html;
 
 #   set (K)ilo-bytes (M)ega-bytes
@@ -58,7 +60,7 @@ server {
         root /www/projects42/cgi-bin/;
         cgi on;
         cgi_bin /cgi-bin/;
-        methods GET POST;
+        methods GET POST DELETE;
         extension .py .pl .sh .php;
     }
 

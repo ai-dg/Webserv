@@ -77,7 +77,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
     std::string contentLengthEnv;
 
-    if (req.getMethod() == "POST") 
+    if (req.getMethod() == "POST" || req.getMethod() == "DELETE")
     {
         contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
     }
@@ -86,14 +86,20 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
 
     addToEnvironment(requestMethodEnv);
     addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
-        
+    
+    size_t queryPos = scriptPath.find('?');
+    if (queryPos != std::string::npos) {
+        std::string queryString = scriptPath.substr(queryPos + 1);
+        addToEnvironment("QUERY_STRING=" + queryString);
+    }
+
     std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
     {
         addToEnvironment(req.getFormatedHeader(it->first));
     }      
     addToEnvironment("CONTENT_TYPE="+req.getHeader("Content-Type"));
-        addToEnvironment("REDIRECT_STATUS=1");
+    addToEnvironment("REDIRECT_STATUS=1");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         
@@ -115,7 +121,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_in[2]; 
     int pipe_out[2];
 
+    this->scriptPath = scriptPath;
     std::string data = req.getBody();
+
+    // std::cout << "Entering CGI Handler" << std::endl;
 
     Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
@@ -150,13 +159,19 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         setEnvironment(req);
         // debugEnvironment();
 
+        std::string scriptPathTemp = scriptPath;
+        size_t queryPos = scriptPathTemp.find('?');
+        if (queryPos != std::string::npos) {
+            scriptPathTemp = scriptPathTemp.substr(0, queryPos);
+        }
+
         
         std::string exe_context = getExeContext(scriptPath);
 
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
             const_cast<char*>(exe_context.c_str()),       
-            const_cast<char*>(scriptPath.c_str()), 
+            const_cast<char*>(scriptPathTemp.c_str()), 
             NULL
         };
 
@@ -164,7 +179,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         // std::cerr << "argv[0]: " << argv[0] << std::endl;
         // std::cerr << "argv[1]: " << argv[1] << std::endl;
         // std::cerr << "argv[2]: " << argv[2] << std::endl;
-        //
+        // //
         execve("/usr/bin/env", argv, environment.data());     
         perror("execve");
         // std::cerr << "Child: Failed to execute script: " << scriptPath << std::endl;

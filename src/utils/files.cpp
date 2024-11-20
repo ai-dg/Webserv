@@ -161,7 +161,7 @@ bool checkFormatOfConfig(std::string const& path_file)
     
     const char* validDirectives[] = {
         "listen", "host", "server_name", "root", "index", "methods",
-        "error_page_403", "error_page_404", "error_page_500",
+        "error_page_403", "error_page_404", "error_page_405", "error_page_413","error_page_500",
         "client_max_body_size", "keepalive_timeout", "client_body_timeout",
         "client_header_timeout", "autoindex", "cgi", "cgi_bin", "extension",
         "return"
@@ -249,7 +249,7 @@ bool checkFormatOfPaths(std::string const& path_file)
 
     
     const char* pathDirectives[] = { "root", "cgi_bin" };
-    const char* ignoredDirectives[] = { "error_page_403", "error_page_404", "error_page_500" };
+    const char* ignoredDirectives[] = { "error_page_403", "error_page_404", "error_page_405", "error_page_413", "error_page_500" };
     size_t pathDirectiveCount = sizeof(pathDirectives) / sizeof(pathDirectives[0]);
     size_t ignoredDirectiveCount = sizeof(ignoredDirectives) / sizeof(ignoredDirectives[0]);
 

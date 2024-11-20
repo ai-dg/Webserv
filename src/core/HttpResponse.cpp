@@ -86,6 +86,9 @@ void HttpResponse::send(int fd_client)
     //std::cerr << RED << res << RESET << std::endl;
 
     write(fd_client, res.c_str(), res.size());
+    // std::cerr << "Response sent with status: " << this->statusCode << std::endl;
+    // write(1, res.c_str(), res.size());
+    // std::cerr << "Response sent with status: " << this->statusCode << std::endl;
     std::ofstream file("./sessions/fd_client.txt"); // Chemin du fichier pour l'écriture
     if (file.is_open()) 
     {
@@ -112,6 +115,7 @@ void HttpResponse::setRedirection(int status)
     {
         case 403:
         case 404:
+        case 405:
         case 413:
         case 500: fp << "www/error_pages/" << status <<".html";
                     filePath = fp.str(); break;   
@@ -162,24 +166,24 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string uri = req.getURI();
     // std::cerr << "URI :::: " << uri << std::endl;
     std::string route = req.getRoute();
-    std::cerr << "Route = " << route << std::endl;
+    // std::cerr << "Route = " << route << std::endl;
     // if (!route.empty() && route[route.size() - 1] != '/')
     // {
     //     route + "/";
     // }
     Location *Route = req.getRouteConf(route);
-    std::cerr << "Route = " << req.getRoute() << std::endl;
+    // std::cerr << "Route = " << req.getRoute() << std::endl;
     
     if (!Route)
     {
-        std::cerr << "No Route Match v2 !!" << std::endl;
+        // std::cerr << "No Route Match v2 !!" << std::endl;
         this->filePath = "/" + req.getAskedFile();
         setRedirection(403);
         return;
     }
     if (Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
     {
-        std::cerr << RED << "NO WAY !!!"  <<  req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos) << RESET << std::endl;
+        // std::cerr << RED << "NO WAY !!!"  <<  req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos) << RESET << std::endl;
         setRedirection(403);
         return;
     }
@@ -191,7 +195,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         return;
     }
 
-    std::cerr << "match root ::: " << Route->root() << std::endl;
+    // std::cerr << "match root ::: " << Route->root() << std::endl;
 
     if (uri.find("/cgi-bin/") != std::string::npos
         || uri.find(".py") != std::string::npos
@@ -226,10 +230,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
             this->filePath = Route->root() + "/" + req.getAskedFile();
     }
     
+    // std::cout << "method : " << req.getMethod() << std::endl;
+    // std::cout << "Route methods : " << Route->methods() << std::endl;
+
     if(Route->methods().find(req.getMethod()) == std::string::npos)
     {
         std::cerr << "NO METHOD MATCH" << std::endl;
-        setRedirection(403);
+        setRedirection(405);
+        addHeader("Allow", Route->methods());
         return ;
     }
     //std::cerr << BOLD_VIOLET << req.getAskedFile() << RESET << std::endl;
@@ -249,7 +257,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 
     //std::cerr << "path / : " << this->filePath  << std::endl;
     
-    removeDuplicateSlashes(this->filePath);
+    filePath = removeDuplicateSlashes(this->filePath);
     Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
