@@ -1,3 +1,5 @@
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -9,20 +11,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -31,6 +33,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -39,6 +43,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -50,20 +56,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -72,6 +78,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -80,6 +88,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -91,20 +101,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -113,6 +123,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -121,6 +133,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -132,20 +146,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -154,6 +168,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -162,6 +178,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -173,199 +191,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: attachment; filename="docker-compose.png"
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png[0m
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png[0m
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="docker-compose.png"
--------------Header added: Content-Disposition = attachment; filename="docker-compose.png"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png[0m
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png[0m
-[1;32mFile path set to: /www/projects42/upload/docker-compose.png
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: attachment; filename="docker-compose.png"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="docker-compose.png"
--------------Header added: Content-Disposition = attachment; filename="docker-compose.png"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
--------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
--------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -374,6 +213,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -382,6 +223,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -393,113 +236,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/search_project.py
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -508,6 +258,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -516,6 +268,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -527,20 +281,110 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = 
+-------------Header added: Set-Cookie
+-------------Header added: 
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: 
+Set-Cookie
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = 
+-------------Header added: Set-Cookie
+-------------Header added: 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: 
+Set-Cookie
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -549,6 +393,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -557,6 +403,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -568,61 +416,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/html/find.html[0m
-[1;32mFile path set to: /www/projects42/html/find.html[0m
-[1;32mFile path set to: /www/projects42/html/find.html
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/find.html[0m
-[1;32mFile path set to: /www/projects42/html/find.html[0m
-[1;32mFile path set to: /www/projects42/html/find.html
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -631,6 +438,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -639,6 +448,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -650,20 +461,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -672,6 +483,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -680,6 +493,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -691,61 +506,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -754,6 +528,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -762,6 +538,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -773,20 +551,65 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = 
+-------------Header added: Set-Cookie
+-------------Header added: 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: 
+Set-Cookie
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -795,6 +618,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -803,6 +628,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -814,36 +641,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -855,60 +686,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -920,20 +731,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -942,6 +753,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -950,6 +763,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -961,36 +776,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1002,20 +821,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -1024,6 +843,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -1032,30 +853,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1067,36 +866,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1108,126 +911,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/html/delete.html[0m
-[1;32mFile path set to: /www/projects42/html/delete.html[0m
-[1;32mFile path set to: /www/projects42/html/delete.html
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/delete.html[0m
-[1;32mFile path set to: /www/projects42/html/delete.html[0m
-[1;32mFile path set to: /www/projects42/html/delete.html
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
-[1;32mFile path set to: 
-[1;32m
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63[0m
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63[0m
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63[0m
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63[0m
-[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=63
-[1;32mFile path set to: 
-[1;32m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -1236,6 +933,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -1244,6 +943,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1255,36 +956,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1296,20 +1001,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -1318,6 +1023,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -1326,30 +1033,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
-[1;32mFile path set to: 
-[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1361,20 +1046,65 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = 
+-------------Header added: Set-Cookie
+-------------Header added: 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: 
+Set-Cookie
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -1383,6 +1113,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -1391,6 +1123,8 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1402,36 +1136,40 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js[0m
-[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
 Response sent with status: 200[0m
 [31m
@@ -1443,20 +1181,20 @@ Response sent with status:
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
@@ -1465,6 +1203,8 @@ Set-Cookie
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
@@ -1473,529 +1213,788 @@ is valid body size :
 [1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
-Set-Cookie: sessionId=31d308429e98ac21; Path=/; HttpOnly
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=31d308429e98ac21; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
-[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: sessionId=9d12bec18024b02c; Path=/; HttpOnly
-Set-Cookie: sessionId=9d12bec18024b02c; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: sessionId=9d12bec18024b02c; Path=/; HttpOnly
-Set-Cookie: sessionId=9d12bec18024b02c; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=9d12bec18024b02c; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=9d12bec18024b02c; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=14470ab59b8a01ad; Path=/; HttpOnly
-Set-Cookie: sessionId=14470ab59b8a01ad; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=14470ab59b8a01ad; Path=/; HttpOnly
-Set-Cookie: sessionId=14470ab59b8a01ad; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=14470ab59b8a01ad; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=14470ab59b8a01ad; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=d8248eda5941cbee; Path=/; HttpOnly
-Set-Cookie: sessionId=d8248eda5941cbee; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=d8248eda5941cbee; Path=/; HttpOnly
-Set-Cookie: sessionId=d8248eda5941cbee; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=d8248eda5941cbee; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=d8248eda5941cbee; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=16666c645f031580; Path=/; HttpOnly
-Set-Cookie: sessionId=16666c645f031580; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=16666c645f031580; Path=/; HttpOnly
-Set-Cookie: sessionId=16666c645f031580; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=16666c645f031580; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=16666c645f031580; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=f80270c917cab37d; Path=/; HttpOnly
-Set-Cookie: sessionId=f80270c917cab37d; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=f80270c917cab37d; Path=/; HttpOnly
-Set-Cookie: sessionId=f80270c917cab37d; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=f80270c917cab37d; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=f80270c917cab37d; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=2ef84060d99ce255; Path=/; HttpOnly
-Set-Cookie: sessionId=2ef84060d99ce255; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=2ef84060d99ce255; Path=/; HttpOnly
-Set-Cookie: sessionId=2ef84060d99ce255; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=2ef84060d99ce255; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=2ef84060d99ce255; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
-Set-Cookie: sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
-Set-Cookie: sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=7d3a2f0a21b3846d; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=4d82661dbd39e599; Path=/; HttpOnly
-Set-Cookie: sessionId=4d82661dbd39e599; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=4d82661dbd39e599; Path=/; HttpOnly
-Set-Cookie: sessionId=4d82661dbd39e599; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=4d82661dbd39e599; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=4d82661dbd39e599; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=a24a35c573111793; Path=/; HttpOnly
-Set-Cookie: sessionId=a24a35c573111793; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=a24a35c573111793; Path=/; HttpOnly
-Set-Cookie: sessionId=a24a35c573111793; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=a24a35c573111793; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=a24a35c573111793; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
-Set-Cookie: sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
-Set-Cookie: sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=1d45d9ef75b5d120; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=2904f002227c9e58; Path=/; HttpOnly
-Set-Cookie: sessionId=2904f002227c9e58; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=2904f002227c9e58; Path=/; HttpOnly
-Set-Cookie: sessionId=2904f002227c9e58; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=2904f002227c9e58; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=2904f002227c9e58; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=f38b30592e7ce86c; Path=/; HttpOnly
-Set-Cookie: sessionId=f38b30592e7ce86c; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=f38b30592e7ce86c; Path=/; HttpOnly
-Set-Cookie: sessionId=f38b30592e7ce86c; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=f38b30592e7ce86c; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=f38b30592e7ce86c; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=ea34260c22259779; Path=/; HttpOnly
-Set-Cookie: sessionId=ea34260c22259779; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=ea34260c22259779; Path=/; HttpOnly
-Set-Cookie: sessionId=ea34260c22259779; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=ea34260c22259779; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=ea34260c22259779; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=08bec089529ea00a; Path=/; HttpOnly
-Set-Cookie: sessionId=08bec089529ea00a; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=08bec089529ea00a; Path=/; HttpOnly
-Set-Cookie: sessionId=08bec089529ea00a; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=08bec089529ea00a; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=08bec089529ea00a; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=0da9673cac262752; Path=/; HttpOnly
-Set-Cookie: sessionId=0da9673cac262752; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=0da9673cac262752; Path=/; HttpOnly
-Set-Cookie: sessionId=0da9673cac262752; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=0da9673cac262752; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=0da9673cac262752; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-Set-Cookie: sessionId=0839e459d5af9872; Path=/; HttpOnly
-Set-Cookie: sessionId=0839e459d5af9872; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-Set-Cookie: sessionId=0839e459d5af9872; Path=/; HttpOnly
-Set-Cookie: sessionId=0839e459d5af9872; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
 Set-Cookie: 
 Set-Cookie
 -------------Current headers in response:
 -------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=0839e459d5af9872; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=0839e459d5af9872; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
 -------------Header added: Set-Cookie = 
 -------------Header added: Set-Cookie
 -------------Header added: 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403[0m
+Response sent with status: 200[0m
 [31m
-Response sent with status: 403
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: 
+Set-Cookie
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = sessionId=8bc0822286147d0e; Path=/; HttpOnly
+-------------Header added: Set-Cookie = 
+-------------Header added: Set-Cookie
+-------------Header added: 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+Set-Cookie: sessionId=8bc0822286147d0e; Path=/; HttpOnly
