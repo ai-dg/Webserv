@@ -1,30 +1,37 @@
-SRC = src/core/main.cpp \
-	  src/core/RarManager.cpp \
-	  src/core/Conf.cpp \
-      src/core/Server.cpp \
-	  src/core/Sockets.cpp \
-	  src/utils/Log.cpp \
-	  src/core/HttpRequest.cpp \
-	  src/core/HttpResponse.cpp \
-      src/core/handler.cpp \
-	  src/core/Epoll.cpp \
-	  src/core/Cookies.cpp \
-	  src/core/Location.cpp \
-	  src/core/Status.cpp \
-	  src/core/index.cpp \
-	  src/core/SessionManager.cpp \
-	  src/core/InvalidArgException.cpp \
-	  src/core/SignalHandler.cpp \
-      src/cgi/cgi_handler.cpp \
-	  src/utils/date.cpp \
-	  src/utils/signals.cpp \
-	  src/utils/format.cpp \
-	  src/utils/debugTools.cpp \
-	  src/utils/files.cpp \
-	  src/utils/parser.cpp \
-	  src/utils/stringUtils.cpp \
-	  src/utils/cleanup.cpp \
-	  src/utils/directories.cpp \
+# Core src files
+SRC = src/01-core/Conf.cpp \
+	  src/01-core/Cookies.cpp \
+	  src/01-core/Epoll.cpp \
+	  src/01-core/HttpRequest.cpp \
+	  src/01-core/HttpResponse.cpp \
+	  src/01-core/index.cpp \
+	  src/01-core/Location.cpp \
+	  src/01-core/main.cpp \
+	  src/01-core/RarManager.cpp \
+      src/01-core/Server.cpp \
+	  src/01-core/SessionManager.cpp \
+	  src/01-core/SignalHandler.cpp \
+	  src/01-core/Sockets.cpp \
+	  src/01-core/Status.cpp \
+
+# Utils src files
+SRC += src/02-utils/cleanup.cpp \
+	  src/02-utils/date.cpp \
+	  src/02-utils/debugTools.cpp \
+	  src/02-utils/directories.cpp \
+	  src/02-utils/files.cpp \
+	  src/02-utils/format.cpp \
+	  src/02-utils/ipTools.cpp \
+	  src/02-utils/Log.cpp \
+	  src/02-utils/signals.cpp \
+	  src/02-utils/parser.cpp \
+	  src/02-utils/stringUtils.cpp \
+
+# CGI src files
+SRC += src/03-cgi/cgi_handler.cpp
+
+# Exceptions src files
+SRC += src/04-exceptions/InvalidArgException.cpp
 
 
 OBJ = $(SRC:.cpp=.o)

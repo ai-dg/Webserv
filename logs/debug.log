@@ -2,8 +2,44 @@ epoll_wait interrupted by a signal
 Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 1 events
 Starting epoll_wait...
 epoll_wait returned with 1 events
@@ -17,24 +53,180 @@ Starting epoll_wait...
 File descriptor added to epoll successfully
 epoll_wait returned with 1 events
 Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
-File descriptor closed successfully
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 1 events
 Starting epoll_wait...
 epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
 Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
@@ -42,41 +234,173 @@ File descriptor added to epoll successfully
 epoll_wait returned with 3 events
 Starting epoll_wait...
 File descriptor closed successfully
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-File descriptor added to epoll successfully
 epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor added to epoll successfully
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-File descriptor closed successfully
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
-Starting epoll_wait...
-File descriptor closed successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-epoll_wait returned with 1 events
 Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
 File descriptor added to epoll successfully
 epoll_wait returned with 3 events
 Starting epoll_wait...
-File descriptor closed successfully
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 3 events
 Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
@@ -85,12 +409,64 @@ Starting epoll_wait...
 File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
 File descriptor added to epoll successfully
 epoll_wait returned with 1 events
 Starting epoll_wait...
+File descriptor added to epoll successfully
 epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+File descriptor added to epoll successfully
+epoll_wait interrupted by a signal
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 2 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+epoll_wait returned with 1 events
+Starting epoll_wait...
+File descriptor added to epoll successfully
+epoll_wait returned with 2 events
+Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
 File descriptor added to epoll successfully
@@ -107,1894 +483,93 @@ File descriptor added to epoll successfully
 File descriptor added to epoll successfully
 epoll_wait interrupted by a signal
 Starting epoll_wait...
-File descriptor closed successfully
+epoll_wait returned with 3 events
+Starting epoll_wait...
 epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 3 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait interrupted by a signal
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 3 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait interrupted by a signal
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 3 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait interrupted by a signal
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
 epoll_wait returned with 2 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
-File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
+epoll_wait returned with 1 events
 Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
-File descriptor closed successfully
 File descriptor added to epoll successfully
-epoll_wait returned with 2 events
-Starting epoll_wait...
