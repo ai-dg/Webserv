@@ -35,19 +35,24 @@ std::string Cgi_handler::getExeContext(std::string file)
 
 void Cgi_handler::addToEnvironment(const char * env)
 {
+    std::cerr << "addToEnvironment A" << std::endl;
     if (env)
-        environment.push_back(strdup(const_cast<char *>(env)));
-    else
-        environment.push_back(NULL);
+    {
+        this->environment.push_back(strdup(const_cast<char *>(env)));
+        std::cerr << env << std::endl;
+    }
 }
 
 void Cgi_handler::addToEnvironment(std::string env)
 {
-    environment.push_back(strdup(const_cast<char*>(env.c_str())));
+    std::cerr << "addToEnvironment B" << std::endl;
+    this->environment.push_back(strdup(const_cast<char*>(env.c_str())));
+    std::cerr << env << std::endl;
 }
 
 void Cgi_handler::setEnvironment(HttpRequest &req)
 {
+   
     std::map<std::string, std::string> headers = req.getHeaders();
     std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
     std::string contentLengthEnv;
@@ -56,29 +61,36 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
     else
         contentLengthEnv = ""; 
-    addToEnvironment(requestMethodEnv);
-    addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
+    this->addToEnvironment(requestMethodEnv);
+    this->addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
     
     size_t queryPos = scriptPath.find('?');
     if (queryPos != std::string::npos) {
         std::string queryString = scriptPath.substr(queryPos + 1);
-        addToEnvironment("QUERY_STRING=" + queryString);
+        this->addToEnvironment("QUERY_STRING=" + queryString);
     }
 
     std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
-        addToEnvironment(req.getFormatedHeader(it->first));
-    addToEnvironment("CONTENT_TYPE="+req.getHeader("Content-Type"));
-    addToEnvironment("REDIRECT_STATUS=1");
+    {
+        this->addToEnvironment(req.getFormatedHeader(it->first));  
+    }
+    std::cerr << "inn"<< std::endl;
+    this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
+    std::cerr << "inn1"<< std::endl;
+    std::string redir("REDIRECT_STATUS=1");
+    this->addToEnvironment(redir);
+    std::cerr << "inn2"<< std::endl;
     if (getExeContext(scriptPath) == "php-cgi")
     {
-        addToEnvironment("SCRIPT_NAME=" + scriptPath);
-        addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
+        std::cerr << "inn3"<< std::endl;
+        this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
+        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
     }
     else
-        addToEnvironment("PYTHONWARNINGS=ignore");
-    addToEnvironment(NULL);   
-
+        this->addToEnvironment("PYTHONWARNINGS=ignore");
+    std::cerr << "inn4"<< std::endl;
+    environment.push_back(NULL);
     Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
 }
@@ -146,6 +158,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_out[2];
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
+    std::cerr << VIOLET << scriptPath << RESET << std::endl;
 
     Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
@@ -173,6 +186,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             exit(1);
         }
         setEnvironment(req);
+        debugEnvironment();
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
