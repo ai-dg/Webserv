@@ -271,7 +271,13 @@ std::string HttpRequest::getBody() const
 
 void HttpRequest::getHostByName() const
 {
-    
+    std::ifstream hosts("/etc/hosts");
+    std::string line;
+    while (std::getline(hosts, line))
+    {
+        std::cout << line << std::endl;
+    }
+    hosts.close();
 }
 
 Location *HttpRequest::getRouteConf(std::string const & route) const
@@ -287,6 +293,47 @@ std::map<std::string, std::string> HttpRequest::getHeaders() const
 /**
  * @brief Validators
  */
+
+bool HttpRequest::isStatic() const
+{
+    std::cout << RED << "URI : " << URI << RESET << std::endl;
+    std::vector<std::string> extensions;
+        extensions.push_back(".js");
+        extensions.push_back(".html");
+        extensions.push_back(".htm");
+        extensions.push_back(".css");
+        extensions.push_back(".jpg");
+        extensions.push_back(".jpeg");
+        extensions.push_back(".gif");
+        extensions.push_back(".png");
+        extensions.push_back(".ico");
+        extensions.push_back(".pdf");
+        extensions.push_back(".ttf");
+    std::vector<std::string>::iterator it;
+    for (it = extensions.begin(); it != extensions.end(); ++it)
+    {
+        if (URI.find(*it) != std::string::npos)
+            return true;
+    }
+    std::cout << RED << "URI2 : " << URI << RESET << std::endl;
+    Location *route = getRouteConf("/");
+    if (URI.find(".php") != std::string::npos)
+    {
+        return false;
+    }
+    
+    if (URI == "/" && route->index().find(".php") != std::string::npos)
+    {
+
+        std::cout << RED << "in false URI3 route->index(): " << route->index() << RESET << std::endl;
+        return false;
+    }
+    else
+        return true;
+    std::cout << RED << "URI4: " << URI << RESET << std::endl;
+    return false;
+}
+
 bool HttpRequest::isValidBodySize() const
 {
     size_t size = body.size();

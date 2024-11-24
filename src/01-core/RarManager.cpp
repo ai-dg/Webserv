@@ -73,21 +73,26 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     if (headerEnd != std::string::npos) 
     {
         HttpRequest request(*req, server);
-        std::string cookieHeader = request.getHeader("Cookie");
-        Cookies cookies(cookieHeader);
-        std::string sessionId = cookies.getCookie("sessionId");
-        if (!sessionManager.sessionExist(sessionId) || sessionId.empty())
-        {
-            sessionId = sessionManager.createSessions();
-            cookies.setCookie("sessionId", sessionId);
-        }
         HttpResponse response(request);
         response.setResourcePath(request);
-        response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
+        if (!request.isStatic())
+        {
+            std::string cookieHeader = request.getHeader("Cookie");
+            std::cout << "cookieHeader : " << cookieHeader << std::endl;
+            Cookies cookies(cookieHeader);
+            std::string sessionId = cookies.getCookie("sessionId");
+            if ((!sessionManager.sessionExist(sessionId) || sessionId.empty()))
+            {
+                sessionId = sessionManager.createSessions();
+                cookies.setCookie("sessionId", sessionId);
+            }
+            response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
+        }
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);
-        if (filePath.find("cgi") != std::string::npos && server->getCgiStatus()) 
+        if ((filePath.find("cgi") != std::string::npos || filePath.find(".php") != std::string::npos) && server->getCgiStatus()) 
         {
+            std::cout << BLUE << filePath << RESET << std::endl;
             Cgi_handler cgiHandler;
             cgiHandler.executeCGI(filePath, request, *fd_client);
         }
@@ -213,7 +218,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         }
         if (signalReceived)
         {
-            sessionManager.saveSessionsToFile();
+            //sessionManager.saveSessionsToFile();
             Log::cleanup();
             throw SignalException();
         }

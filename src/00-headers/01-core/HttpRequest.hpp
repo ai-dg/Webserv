@@ -75,6 +75,7 @@ class HttpRequest
         /**
          * @brief Validators
          */
+        bool isStatic() const;
         bool isValidBodySize() const;
 
         /**

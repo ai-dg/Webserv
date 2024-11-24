@@ -1,0 +1,16 @@
+REQUEST_METHOD: DELETE
+QUERY_STRING: project_id=1
+Extracted project_id: 1
+Project with ID 1 successfully deleted.
+REQUEST_METHOD: DELETE
+QUERY_STRING: project_id=2
+Extracted project_id: 2
+Project with ID 2 successfully deleted.
+REQUEST_METHOD: DELETE
+QUERY_STRING: project_id=3
+Extracted project_id: 3
+Project with ID 3 successfully deleted.
+REQUEST_METHOD: DELETE
+QUERY_STRING: project_id=1
+Extracted project_id: 1
+Project with ID 1 successfully deleted.

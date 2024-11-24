@@ -123,10 +123,12 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         || uri.find(".py") != std::string::npos
         || uri.find(".pl") != std::string::npos
         || uri.find(".sh") != std::string::npos
-        || uri.find(".php") != std::string::npos) 
+        || uri.find(".php") != std::string::npos || 
+        (uri == "/" && Route->index().find(".php") != std::string::npos))
     {
         Route = req.getRouteConf("/cgi-bin/");
-         this->filePath = Route->root().substr(1, std::string::npos) + "/" + req.getAskedFile();
+        this->filePath = Route->root().substr(1, std::string::npos) + "/" + req.getAskedFile();
+        std::cout << GREEN <<this->filePath << RESET << std::endl;
     }
     else
     {
