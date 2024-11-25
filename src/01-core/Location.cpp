@@ -227,21 +227,44 @@ std::string Location::findIndex()
 void Location::debugValues()
 {
     if (_root != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _root << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _root << RESET << std::endl;
     if (_extensions != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _extensions << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _extensions << RESET << std::endl;
     if (_methods != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _methods << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _methods << RESET << std::endl;
     if (_autoindex != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _autoindex << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _autoindex << RESET << std::endl;
     if (_upload_store != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _upload_store << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _upload_store << RESET << std::endl;
     if (_cgi_bin != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi_bin << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _cgi_bin << RESET << std::endl;
     if (_cgi != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
     if (_return != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
     if (_index != "")
-        Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
+        std::cerr << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
 }
+
+
+// void Location::debugValues()
+// {
+//     if (_root != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _root << RESET << std::endl;
+//     if (_extensions != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _extensions << RESET << std::endl;
+//     if (_methods != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _methods << RESET << std::endl;
+//     if (_autoindex != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _autoindex << RESET << std::endl;
+//     if (_upload_store != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _upload_store << RESET << std::endl;
+//     if (_cgi_bin != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi_bin << RESET << std::endl;
+//     if (_cgi != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
+//     if (_return != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
+//     if (_index != "")
+//         Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
+// }

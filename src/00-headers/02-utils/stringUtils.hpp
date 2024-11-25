@@ -14,6 +14,7 @@
 
 #include "../00-shared/includes.hpp"
 
+std::string getExtension(std::string filePath);
 std::string replaceBy(std::string original, std::string find, std::string replace);
 std::pair<std::string, std::string> split(std::string const& str, char delimiter);
 std::string itos(int number);

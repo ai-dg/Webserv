@@ -12,226 +12,6 @@ Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.3
-Key: host, Value: 127.0.0.3
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.6
-Key: host, Value: 127.0.0.6
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.5
-Key: host, Value: 127.0.0.5
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: testSession.42.fr
-Key: server_name, Value: testSession.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.10
-Key: host, Value: 127.0.0.10
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: client_header_timeout, Value: 10
-Key: client_header_timeout, Value: 10
-Key: client_header_timeout, Value: 
-Key: client_header_timeout
-Key: 
-Key: client_body_timeout, Value: 60
-Key: client_body_timeout, Value: 60
-Key: client_body_timeout, Value: 
-Key: client_body_timeout
-Key: 
-Key: keepalive_timeout, Value: 65
-Key: keepalive_timeout, Value: 65
-Key: keepalive_timeout, Value: 
-Key: keepalive_timeout
-Key: 
-Key: client_max_body_size, Value: 1000M
-Key: client_max_body_size, Value: 1000M
-Key: client_max_body_size, Value: 
-Key: client_max_body_size
-Key: 
-Key: error_page_500, Value: /default/error_pages/500.html
-Key: error_page_500, Value: /default/error_pages/500.html
-Key: error_page_500, Value: 
-Key: error_page_500
-Key: 
-Key not found: error_page_413
-Key not found: error_page_413
-Key not found: 
-Key: error_page_413, Value: /default/error_pages/413.html
-Key: error_page_413, Value: /default/error_pages/413.html
-Key: error_page_413, Value: 
-Key: error_page_413
-Key: 
-Key not found: error_page_405
-Key not found: error_page_405
-Key not found: 
-Key: error_page_405, Value: /default/error_pages/405.html
-Key: error_page_405, Value: /default/error_pages/405.html
-Key: error_page_405, Value: 
-Key: error_page_405
-Key: 
-Key: error_page_404, Value: /default/error_pages/404.html
-Key: error_page_404, Value: /default/error_pages/404.html
-Key: error_page_404, Value: 
-Key: error_page_404
-Key: 
-Key not found: error_page_403
-Key not found: error_page_403
-Key not found: 
-Key: error_page_403, Value: /default/error_pages/403.html
-Key: error_page_403, Value: /default/error_pages/403.html
-Key: error_page_403, Value: 
-Key: error_page_403
-Key: 
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.1
-Key: host, Value: 127.0.0.1
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: musicaltheory.42.fr
-Key: server_name, Value: musicaltheory.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.9
-Key: host, Value: 127.0.0.9
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: default.42.fr
-Key: server_name, Value: default.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.2
-Key: host, Value: 127.0.0.2
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 path: ./config/temp_server_block.confConf class object has been created
@@ -402,6 +182,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -442,6 +283,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -624,6 +467,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -664,6 +568,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -846,6 +752,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -886,6 +853,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -1068,6 +1037,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -1108,6 +1138,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -1290,6 +1322,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -1330,6 +1423,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -1512,6 +1607,67 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: /default/error_pages/500.html
+Key: error_page_500, Value: 
+Key: error_page_500
+Key: 
+Key not found: error_page_413
+Key not found: error_page_413
+Key not found: 
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: /default/error_pages/413.html
+Key: error_page_413, Value: 
+Key: error_page_413
+Key: 
+Key not found: error_page_405
+Key not found: error_page_405
+Key not found: 
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: /default/error_pages/405.html
+Key: error_page_405, Value: 
+Key: error_page_405
+Key: 
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: /default/error_pages/404.html
+Key: error_page_404, Value: 
+Key: error_page_404
+Key: 
+Key not found: error_page_403
+Key not found: error_page_403
+Key not found: 
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: /default/error_pages/403.html
+Key: error_page_403, Value: 
+Key: error_page_403
+Key: 
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: 
+Key: server_name
+Key: 
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 
+Key: host
+Key: 
+Key not found: server
+Key not found: server
+Key not found: 
+Key: server, Value: {
+Key: server, Value: {
+Key: server, Value: 
+Key: server
+Key: 
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.confConf class object has been created
+path: ./config/temp_server_block.conf
+path: 
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: musicaltheory.42.fr
 Key: server_name, Value: 
@@ -1552,6 +1708,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed
@@ -1734,172 +1892,6 @@ path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.confConf class object has been created
 path: ./config/temp_server_block.conf
 path: 
-Key: server_name, Value: musicaltheory.42.fr
-Key: server_name, Value: musicaltheory.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.9
-Key: host, Value: 127.0.0.9
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: default.42.fr
-Key: server_name, Value: default.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.2
-Key: host, Value: 127.0.0.2
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-Conf class object has been destroyed
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.3
-Key: host, Value: 127.0.0.3
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.6
-Key: host, Value: 127.0.0.6
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: test.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.5
-Key: host, Value: 127.0.0.5
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: server_name, Value: testSession.42.fr
-Key: server_name, Value: testSession.42.fr
-Key: server_name, Value: 
-Key: server_name
-Key: 
-Key: host, Value: 127.0.0.10
-Key: host, Value: 127.0.0.10
-Key: host, Value: 
-Key: host
-Key: 
-Key not found: server
-Key not found: server
-Key not found: 
-Key: server, Value: {
-Key: server, Value: {
-Key: server, Value: 
-Key: server
-Key: 
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.confConf class object has been created
-path: ./config/temp_server_block.conf
-path: 
-Key: client_header_timeout, Value: 10
-Key: client_header_timeout, Value: 10
-Key: client_header_timeout, Value: 
-Key: client_header_timeout
-Key: 
-Key: client_body_timeout, Value: 60
-Key: client_body_timeout, Value: 60
-Key: client_body_timeout, Value: 
-Key: client_body_timeout
-Key: 
-Key: keepalive_timeout, Value: 65
-Key: keepalive_timeout, Value: 65
-Key: keepalive_timeout, Value: 
-Key: keepalive_timeout
-Key: 
-Key: client_max_body_size, Value: 1000M
-Key: client_max_body_size, Value: 1000M
-Key: client_max_body_size, Value: 
-Key: client_max_body_size
-Key: 
 Key: error_page_500, Value: /default/error_pages/500.html
 Key: error_page_500, Value: /default/error_pages/500.html
 Key: error_page_500, Value: 
@@ -1934,13 +1926,18 @@ Key: error_page_403, Value: /default/error_pages/403.html
 Key: error_page_403, Value: 
 Key: error_page_403
 Key: 
-Key: server_name, Value: projects.42.fr
-Key: server_name, Value: projects.42.fr
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 100K
+Key: client_max_body_size, Value: 
+Key: client_max_body_size
+Key: 
+Key: server_name, Value: server_test.42.fr
+Key: server_name, Value: server_test.42.fr
 Key: server_name, Value: 
 Key: server_name
 Key: 
-Key: host, Value: 127.0.0.1
-Key: host, Value: 127.0.0.1
+Key: host, Value: 127.1.1.1
+Key: host, Value: 127.1.1.1
 Key: host, Value: 
 Key: host
 Key: 
@@ -1996,5 +1993,8 @@ Key: server, Value: {
 Key: server, Value: 
 Key: server
 Key: 
+Conf class object has been destroyed
+Conf class object has been destroyed
+Conf class object has been destroyed
 Conf class object has been destroyed
 Conf class object has been destroyed

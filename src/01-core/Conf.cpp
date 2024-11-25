@@ -86,7 +86,10 @@ void Conf::printRoutesConfig(int servNb)
     std::cerr << RED << "server " << servNb << RESET << std::endl;
     std::map<std::string, Location*>::iterator it;
     for (it = routes.begin(); it != routes.end(); ++it)
+    {
+        std::cerr << GREEN << "\t" << it->first << RESET << std::endl;
         it->second->debugValues();
+    }
 }
 
 void Conf::printStatus(bool status, std::string text)

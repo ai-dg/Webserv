@@ -181,3 +181,885 @@
 [2024-11-25 10:03:56] Session active pour l'utilisateur : asdasd
 [2024-11-25 10:03:56] Envoi des en-têtes HTTP pour le cache.
 [2024-11-25 10:03:56] Fin du script PHP.
+[2024-11-25 09:07:43] PHPSESSID trouvé dans l'environnement : mtumnardqs2omn7e0l3cggcle6
+[2024-11-25 09:07:43] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => mtumnardqs2omn7e0l3cggcle6
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732525663.9173
+    [REQUEST_TIME] => 1732525663
+)
+
+[2024-11-25 09:07:43] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => mtumnardqs2omn7e0l3cggcle6
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:07:43] Fichier de session introuvable : /var/lib/php/sessions/sess_mtumnardqs2omn7e0l3cggcle6
+[2024-11-25 09:07:43] Démarrage de session...
+[2024-11-25 09:07:43] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:07:43] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 09:07:43] Utilisateur connecté : test
+[2024-11-25 09:07:43] Session active pour l'utilisateur : test
+[2024-11-25 09:07:43] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:07:43] Fin du script PHP.
+[2024-11-25 09:07:50] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:07:50] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732525670.9605
+    [REQUEST_TIME] => 1732525670
+)
+
+[2024-11-25 09:07:50] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:07:50] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:07:50] Démarrage de session...
+[2024-11-25 09:07:50] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:07:50] Session active pour l'utilisateur : test
+[2024-11-25 09:07:50] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:07:50] Fin du script PHP.
+[2024-11-25 09:12:31] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:31] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732525951.4655
+    [REQUEST_TIME] => 1732525951
+)
+
+[2024-11-25 09:12:31] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:12:31] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:31] Démarrage de session...
+[2024-11-25 09:12:31] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:31] Session active pour l'utilisateur : test
+[2024-11-25 09:12:31] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:12:31] Fin du script PHP.
+[2024-11-25 09:12:36] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:36] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732525956.0292
+    [REQUEST_TIME] => 1732525956
+)
+
+[2024-11-25 09:12:36] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:12:36] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:36] Démarrage de session...
+[2024-11-25 09:12:36] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:12:36] Session active pour l'utilisateur : test
+[2024-11-25 09:12:36] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:12:36] Fin du script PHP.
+[2024-11-25 09:19:50] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:50] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526390.7419
+    [REQUEST_TIME] => 1732526390
+)
+
+[2024-11-25 09:19:50] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:19:50] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:50] Démarrage de session...
+[2024-11-25 09:19:50] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:50] Session active pour l'utilisateur : test
+[2024-11-25 09:19:50] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:19:50] Fin du script PHP.
+[2024-11-25 09:19:53] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:53] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526393.5671
+    [REQUEST_TIME] => 1732526393
+)
+
+[2024-11-25 09:19:53] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:19:53] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:53] Démarrage de session...
+[2024-11-25 09:19:53] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:19:53] Session active pour l'utilisateur : test
+[2024-11-25 09:19:53] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:19:53] Fin du script PHP.
+[2024-11-25 09:20:39] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:39] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526439.0679
+    [REQUEST_TIME] => 1732526439
+)
+
+[2024-11-25 09:20:39] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:20:39] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:39] Démarrage de session...
+[2024-11-25 09:20:39] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:39] Session active pour l'utilisateur : test
+[2024-11-25 09:20:39] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:20:39] Fin du script PHP.
+[2024-11-25 09:20:44] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:44] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526444.126
+    [REQUEST_TIME] => 1732526444
+)
+
+[2024-11-25 09:20:44] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:20:44] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:44] Démarrage de session...
+[2024-11-25 09:20:44] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:44] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 09:20:44] Utilisateur connecté : test
+[2024-11-25 09:20:44] Session active pour l'utilisateur : test
+[2024-11-25 09:20:44] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:20:44] Fin du script PHP.
+[2024-11-25 09:20:46] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:46] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526446.0988
+    [REQUEST_TIME] => 1732526446
+)
+
+[2024-11-25 09:20:46] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:20:46] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:46] Démarrage de session...
+[2024-11-25 09:20:46] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:20:46] Session active pour l'utilisateur : test
+[2024-11-25 09:20:46] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:20:46] Fin du script PHP.
+[2024-11-25 09:29:10] PHPSESSID trouvé dans l'environnement : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:29:10] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732526950.2395
+    [REQUEST_TIME] => 1732526950
+)
+
+[2024-11-25 09:29:10] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => 9gk5ear5be9fp6ldns4mupfpme
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 09:29:10] Fichier de session trouvé : /var/lib/php/sessions/sess_9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:29:10] Démarrage de session...
+[2024-11-25 09:29:10] ID de session actuel : 9gk5ear5be9fp6ldns4mupfpme
+[2024-11-25 09:29:10] Déconnexion demandée.
+[2024-11-25 09:29:10] Session détruite.
+[2024-11-25 09:29:10] Aucune session utilisateur active.
+[2024-11-25 09:29:10] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 09:29:10] Fin du script PHP.
+[2024-11-25 17:56:11] Aucun PHPSESSID trouvé.
+[2024-11-25 17:56:11] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732557371.1897
+    [REQUEST_TIME] => 1732557371
+)
+
+[2024-11-25 17:56:11] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 17:56:11] Fichier de session introuvable : /var/lib/php/sessions/sess_
+[2024-11-25 17:56:11] Démarrage de session...
+[2024-11-25 17:56:11] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 17:56:11] Aucune session utilisateur active.
+[2024-11-25 17:56:11] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 17:56:11] Fin du script PHP.
+[2024-11-25 17:59:03] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 17:59:03] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732557543.7644
+    [REQUEST_TIME] => 1732557543
+)
+
+[2024-11-25 17:59:03] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 17:59:03] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 17:59:03] Démarrage de session...
+[2024-11-25 17:59:03] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 17:59:03] Aucune session utilisateur active.
+[2024-11-25 17:59:03] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 17:59:03] Fin du script PHP.
+[2024-11-25 18:03:22] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:03:22] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732557802.4563
+    [REQUEST_TIME] => 1732557802
+)
+
+[2024-11-25 18:03:22] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:03:22] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:03:22] Démarrage de session...
+[2024-11-25 18:03:22] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:03:22] Aucune session utilisateur active.
+[2024-11-25 18:03:22] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:03:22] Fin du script PHP.
+[2024-11-25 18:08:41] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:08:41] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732558121.7701
+    [REQUEST_TIME] => 1732558121
+)
+
+[2024-11-25 18:08:41] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:08:41] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:08:41] Démarrage de session...
+[2024-11-25 18:08:41] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:08:41] Aucune session utilisateur active.
+[2024-11-25 18:08:41] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:08:41] Fin du script PHP.
+[2024-11-25 18:09:45] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:45] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732558185.1452
+    [REQUEST_TIME] => 1732558185
+)
+
+[2024-11-25 18:09:45] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:09:45] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:45] Démarrage de session...
+[2024-11-25 18:09:45] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:45] Aucune session utilisateur active.
+[2024-11-25 18:09:45] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:09:45] Fin du script PHP.
+[2024-11-25 18:09:48] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:48] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732558188.9119
+    [REQUEST_TIME] => 1732558188
+)
+
+[2024-11-25 18:09:48] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:09:48] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:48] Démarrage de session...
+[2024-11-25 18:09:48] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:09:48] Aucune session utilisateur active.
+[2024-11-25 18:09:48] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:09:48] Fin du script PHP.
+[2024-11-25 18:27:36] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:27:36] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732559256.7907
+    [REQUEST_TIME] => 1732559256
+)
+
+[2024-11-25 18:27:36] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:27:36] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:27:36] Démarrage de session...
+[2024-11-25 18:27:36] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:27:36] Aucune session utilisateur active.
+[2024-11-25 18:27:36] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:27:36] Fin du script PHP.
+[2024-11-25 18:28:28] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:28:28] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732559308.1547
+    [REQUEST_TIME] => 1732559308
+)
+
+[2024-11-25 18:28:28] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:28:28] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:28:28] Démarrage de session...
+[2024-11-25 18:28:28] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:28:28] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 18:28:28] Utilisateur connecté : test
+[2024-11-25 18:28:28] Session active pour l'utilisateur : test
+[2024-11-25 18:28:28] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:28:28] Fin du script PHP.
+[2024-11-25 18:34:16] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:34:16] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732559656.6456
+    [REQUEST_TIME] => 1732559656
+)
+
+[2024-11-25 18:34:16] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:34:16] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:34:16] Démarrage de session...
+[2024-11-25 18:34:16] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:34:16] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 18:34:16] Utilisateur connecté : test
+[2024-11-25 18:34:16] Session active pour l'utilisateur : test
+[2024-11-25 18:34:16] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:34:16] Fin du script PHP.
+[2024-11-25 18:35:44] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:35:44] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732559744.3317
+    [REQUEST_TIME] => 1732559744
+)
+
+[2024-11-25 18:35:44] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:35:44] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:35:44] Démarrage de session...
+[2024-11-25 18:35:44] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:35:44] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 18:35:44] Utilisateur connecté : test
+[2024-11-25 18:35:44] Session active pour l'utilisateur : test
+[2024-11-25 18:35:44] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:35:44] Fin du script PHP.
+[2024-11-25 18:54:05] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:54:05] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732560845.0593
+    [REQUEST_TIME] => 1732560845
+)
+
+[2024-11-25 18:54:05] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:54:05] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:54:05] Démarrage de session...
+[2024-11-25 18:54:05] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:54:05] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 18:54:05] Utilisateur connecté : test
+[2024-11-25 18:54:05] Session active pour l'utilisateur : test
+[2024-11-25 18:54:05] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:54:05] Fin du script PHP.
+[2024-11-25 18:56:08] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:56:08] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732560968.9137
+    [REQUEST_TIME] => 1732560968
+)
+
+[2024-11-25 18:56:08] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:56:08] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:56:08] Démarrage de session...
+[2024-11-25 18:56:08] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:56:08] Session active pour l'utilisateur : test
+[2024-11-25 18:56:08] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:56:08] Fin du script PHP.
+[2024-11-25 18:57:48] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:57:48] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561068.8875
+    [REQUEST_TIME] => 1732561068
+)
+
+[2024-11-25 18:57:48] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:57:48] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:57:48] Démarrage de session...
+[2024-11-25 18:57:48] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:57:48] Session active pour l'utilisateur : test
+[2024-11-25 18:57:48] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:57:48] Fin du script PHP.
+[2024-11-25 18:58:28] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:58:28] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561108.8714
+    [REQUEST_TIME] => 1732561108
+)
+
+[2024-11-25 18:58:28] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 18:58:28] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:58:28] Démarrage de session...
+[2024-11-25 18:58:28] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 18:58:28] Session active pour l'utilisateur : test
+[2024-11-25 18:58:28] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 18:58:28] Fin du script PHP.
+[2024-11-25 19:07:32] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:32] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561652.0067
+    [REQUEST_TIME] => 1732561652
+)
+
+[2024-11-25 19:07:32] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 19:07:32] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:32] Démarrage de session...
+[2024-11-25 19:07:32] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:32] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 19:07:32] Utilisateur connecté : test
+[2024-11-25 19:07:32] Session active pour l'utilisateur : test
+[2024-11-25 19:07:32] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 19:07:32] Fin du script PHP.
+[2024-11-25 19:07:37] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:37] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561657.1064
+    [REQUEST_TIME] => 1732561657
+)
+
+[2024-11-25 19:07:37] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 19:07:37] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:37] Démarrage de session...
+[2024-11-25 19:07:37] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:07:37] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 19:07:37] Utilisateur connecté : test
+[2024-11-25 19:07:37] Session active pour l'utilisateur : test
+[2024-11-25 19:07:37] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 19:07:37] Fin du script PHP.
+[2024-11-25 19:09:26] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:09:26] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561766.41
+    [REQUEST_TIME] => 1732561766
+)
+
+[2024-11-25 19:09:26] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 19:09:26] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:09:26] Démarrage de session...
+[2024-11-25 19:09:26] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:09:26] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 19:09:26] Utilisateur connecté : test
+[2024-11-25 19:09:26] Session active pour l'utilisateur : test
+[2024-11-25 19:09:26] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 19:09:26] Fin du script PHP.
+[2024-11-25 19:10:44] PHPSESSID trouvé dans l'environnement : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:10:44] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php
+    [REQUEST_TIME_FLOAT] => 1732561844.3223
+    [REQUEST_TIME] => 1732561844
+)
+
+[2024-11-25 19:10:44] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 20
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [PHPSESSID] => n6nv85crcpqfar8m0aeik52eba
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-11-25 19:10:44] Fichier de session trouvé : /var/lib/php/sessions/sess_n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:10:44] Démarrage de session...
+[2024-11-25 19:10:44] ID de session actuel : n6nv85crcpqfar8m0aeik52eba
+[2024-11-25 19:10:44] Tentative de connexion avec le nom d'utilisateur : test
+[2024-11-25 19:10:44] Utilisateur connecté : test
+[2024-11-25 19:10:44] Session active pour l'utilisateur : test
+[2024-11-25 19:10:44] Envoi des en-têtes HTTP pour le cache.
+[2024-11-25 19:10:44] Fin du script PHP.
