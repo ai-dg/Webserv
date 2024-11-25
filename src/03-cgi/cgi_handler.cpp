@@ -12,6 +12,7 @@
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/HttpRequest.hpp"
+#include "../00-headers/01-core/scriptUtils.hpp"
 #include "../00-headers/02-utils/Log.hpp"
 #include "../00-headers/03-cgi/cgi_handler.hpp"
 
@@ -30,6 +31,8 @@ std::string Cgi_handler::getExeContext(std::string file)
         return "perl";
     if (file.find(".sh") != std::string::npos)
         return "bash";
+    if (file.find(".cgi") != std::string::npos) 
+        return getContextFromFile(file);
     return "";
 }
 
