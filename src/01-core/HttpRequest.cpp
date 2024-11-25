@@ -13,6 +13,7 @@
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/HttpRequest.hpp"
 #include "../00-headers/02-utils/Log.hpp"
+#include "../00-headers/02-utils/stringUtils.hpp"
 
 /**
  * @brief Private setters
@@ -262,7 +263,7 @@ std::string HttpRequest::getBody() const
 {
 
     Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
-    if (method == "POST" || method == "DELETE") 
+    if (method == "POST" || method == "DELETE" || method == "PUT") 
         return body;
     else if (method == "GET") 
         return getQueryString();
@@ -294,9 +295,20 @@ std::map<std::string, std::string> HttpRequest::getHeaders() const
  * @brief Validators
  */
 
+bool HttpRequest::hasFileSpecialRoute(std::string filePath) const
+{
+    std::string extension = getExtension(filePath);
+   // std::cerr << BLUE << filePath << "-----------" << extension << RESET << std::endl;
+    if (server->getRoute(extension) != NULL)
+    {
+       // std::cerr << " yeah you did it baby !!!!!! " << std::endl;
+        return true;
+    }
+    return false;
+}
+
 bool HttpRequest::isStatic() const
 {
-    std::cout << RED << "URI : " << URI << RESET << std::endl;
     std::vector<std::string> extensions;
         extensions.push_back(".js");
         extensions.push_back(".html");
@@ -315,22 +327,17 @@ bool HttpRequest::isStatic() const
         if (URI.find(*it) != std::string::npos)
             return true;
     }
-    std::cout << RED << "URI2 : " << URI << RESET << std::endl;
-    Location *route = getRouteConf("/");
+     Location *route = getRouteConf("/");
     if (URI.find(".php") != std::string::npos)
     {
         return false;
     }
-    
     if (URI == "/" && route->index().find(".php") != std::string::npos)
     {
-
-        std::cout << RED << "in false URI3 route->index(): " << route->index() << RESET << std::endl;
         return false;
     }
     else
         return true;
-    std::cout << RED << "URI4: " << URI << RESET << std::endl;
     return false;
 }
 

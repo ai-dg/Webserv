@@ -102,3 +102,11 @@ std::string removeDuplicateSlashes(const std::string& path)
     }
     return result;
 }
+
+
+std::string getExtension(std::string filePath)
+{
+    if (filePath == "/" || filePath.find(".") == std::string::npos)
+        return "";
+    return filePath.substr(filePath.find("."), std::string::npos);
+}

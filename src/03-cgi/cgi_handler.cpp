@@ -72,7 +72,6 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     }
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
-    std::cerr << RED << "COOOOOOKIIIIEEE: " << req.getHeader("Cookie");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
@@ -150,7 +149,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_out[2];
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
-    std::cerr << VIOLET << scriptPath << RESET << std::endl;
 
     Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
@@ -177,8 +175,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             perror("dup2 stdout");
             exit(1);
         }
-        setEnvironment(req);
-        debugEnvironment();
+        setEnvironment(req);      
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
@@ -235,7 +232,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            std::cerr << buffer;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }

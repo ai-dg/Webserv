@@ -122,6 +122,8 @@ Server::Server(Conf *c)
     setMaxBodySize();
     setHostNames();
     Log::output("./sessions/Server.txt") << "Server class object created" << std::endl;
+    conf->printRoutesConfig(id);
+    serverNumber++;
 }
 
 Server::Server(Server const& src) : id(src.id), keepAlive(src.keepAlive), conf(src.conf), maxBodySize(src.maxBodySize), host_ip(src.host_ip), methods(src.methods), err(src.err), Hosts(src.Hosts), ports(src.ports)
