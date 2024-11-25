@@ -21,10 +21,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-if (($_SERVER['REQUEST_METHOD'] ==='GET') && isset($_SESSION['user']))
+if (isset($_SESSION['user']))
 {
     $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 }
+
+header("Expires: 0"); // Pas d'expiration
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Pragma: no-cache");
+
+session_set_cookie_params([
+    'lifetime' => 0, // Cookie de session
+    'path' => '/',
+    'secure' => false, // Mettre à true si HTTPS est utilisé
+    'httponly' => true,
+    'samesite' => 'Lax'
+]);
 
 ?>
 

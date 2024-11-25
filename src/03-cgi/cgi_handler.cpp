@@ -35,24 +35,19 @@ std::string Cgi_handler::getExeContext(std::string file)
 
 void Cgi_handler::addToEnvironment(const char * env)
 {
-    std::cerr << "addToEnvironment A" << std::endl;
     if (env)
     {
         this->environment.push_back(strdup(const_cast<char *>(env)));
-        std::cerr << env << std::endl;
     }
 }
 
 void Cgi_handler::addToEnvironment(std::string env)
-{
-    std::cerr << "addToEnvironment B" << std::endl;
+{  
     this->environment.push_back(strdup(const_cast<char*>(env.c_str())));
-    std::cerr << env << std::endl;
 }
 
 void Cgi_handler::setEnvironment(HttpRequest &req)
-{
-   
+{   
     std::map<std::string, std::string> headers = req.getHeaders();
     std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
     std::string contentLengthEnv;
@@ -75,21 +70,17 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     {
         this->addToEnvironment(req.getFormatedHeader(it->first));  
     }
-    std::cerr << "inn"<< std::endl;
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
-    std::cerr << "inn1"<< std::endl;
-    std::string redir("REDIRECT_STATUS=1");
-    this->addToEnvironment(redir);
-    std::cerr << "inn2"<< std::endl;
+    this->addToEnvironment("REDIRECT_STATUS=1");
+    std::cerr << req.getHeader("Set-Cookie");
     if (getExeContext(scriptPath) == "php-cgi")
     {
-        std::cerr << "inn3"<< std::endl;
+        // ajouter php session ici
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
         this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
     }
     else
         this->addToEnvironment("PYTHONWARNINGS=ignore");
-    std::cerr << "inn4"<< std::endl;
     environment.push_back(NULL);
     Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
@@ -242,7 +233,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         }
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
-        {
+        {   
+            std::cerr << buffer;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }
