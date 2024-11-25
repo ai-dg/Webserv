@@ -1,44 +1,95 @@
 test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+// Fonction pour √©crire des messages de d√©bogage
+function debug_log($message) {
+    $logFile = __DIR__ . '/logs/php.log';
+    if (!file_exists(dirname($logFile))) {
+        mkdir(dirname($logFile), 0777, true);
+    }
+    file_put_contents($logFile, "[" . date('Y-m-d H:i:s') . "] " . $message . PHP_EOL, FILE_APPEND);
 }
+
+// Activer le d√©bogage des sessions
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Configurer les sessions
+ini_set('session.use_strict_mode', 1);
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_lifetime', 0);
+
+// V√©rifier si l'ID de session est transmis dans l'environnement
+if (isset($_SERVER['PHPSESSID'])) {
+    debug_log("PHPSESSID trouv√© dans l'environnement : " . $_SERVER['PHPSESSID']);
+    session_id($_SERVER['PHPSESSID']); // Utiliser l'ID transmis via l'environnement
+} elseif (isset($_COOKIE['PHPSESSID'])) {
+    debug_log("PHPSESSID re√ßu du cookie : " . $_COOKIE['PHPSESSID']);
+    session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
+} else {
+    debug_log("Aucun PHPSESSID trouv√©.");
+}
+
+// Debugger toutes les variables d'environnement
+debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
+debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
+
+// V√©rifier si le fichier de session existe
+$session_save_path = ini_get('session.save_path');
+$session_file = $session_save_path . '/sess_' . session_id();
+
+if (file_exists($session_file)) {
+    debug_log("Fichier de session trouv√© : " . $session_file);
+} else {
+    debug_log("Fichier de session introuvable : " . $session_file);
+}
+
+// D√©marrer la session
+debug_log("D√©marrage de session...");
+session_start();
+debug_log("ID de session actuel : " . session_id());
 
 // Gestion de la connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
-        // Connexion
         $username = trim($_POST['username']);
+        debug_log("Tentative de connexion avec le nom d'utilisateur : " . $username);
         if (!empty($username)) {
-            $_SESSION['user'] = $username;        
+            $_SESSION['user'] = $username;
+            debug_log("Utilisateur connect√© : " . $username);
+        } else {
+            debug_log("Nom d'utilisateur vide, connexion ignor√©e.");
         }
     } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
+        debug_log("D√©connexion demand√©e.");
+        session_unset();
+        session_destroy();
+        debug_log("Session d√©truite.");
+    } else {
+        debug_log("Requ√™te POST inconnue.");
     }
 }
 
-if (isset($_SESSION['user']))
-{
+if (isset($_SESSION['user'])) {
     $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    debug_log("Session active pour l'utilisateur : " . $username);
+} else {
+    debug_log("Aucune session utilisateur active.");
 }
 
-header("Expires: 0"); // Pas d'expiration
+// En-t√™tes HTTP
+debug_log("Envoi des en-t√™tes HTTP pour le cache.");
+header("Expires: 0");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
+// Indiquer la fin du script dans les logs
+debug_log("Fin du script PHP.");
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,348 +121,97 @@ session_set_cookie_params([
 </body>
 </html>
 test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+// Fonction pour √©crire des messages de d√©bogage
+function debug_log($message) {
+    $logFile = __DIR__ . '/logs/php.log';
+    if (!file_exists(dirname($logFile))) {
+        mkdir(dirname($logFile), 0777, true);
+    }
+    file_put_contents($logFile, "[" . date('Y-m-d H:i:s') . "] " . $message . PHP_EOL, FILE_APPEND);
 }
+
+// Activer le d√©bogage des sessions
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Configurer les sessions
+ini_set('session.use_strict_mode', 1);
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_lifetime', 0);
+
+// V√©rifier si l'ID de session est transmis dans l'environnement
+if (isset($_SERVER['PHPSESSID'])) {
+    debug_log("PHPSESSID trouv√© dans l'environnement : " . $_SERVER['PHPSESSID']);
+    session_id($_SERVER['PHPSESSID']); // Utiliser l'ID transmis via l'environnement
+} elseif (isset($_COOKIE['PHPSESSID'])) {
+    debug_log("PHPSESSID re√ßu du cookie : " . $_COOKIE['PHPSESSID']);
+    session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
+} else {
+    debug_log("Aucun PHPSESSID trouv√©.");
+}
+
+// Debugger toutes les variables d'environnement
+debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
+debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
+
+// V√©rifier si le fichier de session existe
+$session_save_path = ini_get('session.save_path');
+$session_file = $session_save_path . '/sess_' . session_id();
+
+if (file_exists($session_file)) {
+    debug_log("Fichier de session trouv√© : " . $session_file);
+} else {
+    debug_log("Fichier de session introuvable : " . $session_file);
+}
+
+// D√©marrer la session
+debug_log("D√©marrage de session...");
+session_start();
+debug_log("ID de session actuel : " . session_id());
 
 // Gestion de la connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
-        // Connexion
         $username = trim($_POST['username']);
+        debug_log("Tentative de connexion avec le nom d'utilisateur : " . $username);
         if (!empty($username)) {
-            $_SESSION['user'] = $username;        
+            $_SESSION['user'] = $username;
+            debug_log("Utilisateur connect√© : " . $username);
+        } else {
+            debug_log("Nom d'utilisateur vide, connexion ignor√©e.");
         }
     } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
+        debug_log("D√©connexion demand√©e.");
+        session_unset();
+        session_destroy();
+        debug_log("Session d√©truite.");
+    } else {
+        debug_log("Requ√™te POST inconnue.");
     }
 }
 
-if (isset($_SESSION['user']))
-{
+if (isset($_SESSION['user'])) {
     $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    debug_log("Session active pour l'utilisateur : " . $username);
+} else {
+    debug_log("Aucune session utilisateur active.");
 }
 
-header("Expires: 0"); // Pas d'expiration
+// En-t√™tes HTTP
+debug_log("Envoi des en-t√™tes HTTP pour le cache.");
+header("Expires: 0");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
+// Indiquer la fin du script dans les logs
+debug_log("Fin du script PHP.");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
 
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
-local 2 
-local : Session/index.php
-local : Session/index.php
-local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
-path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
 
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
-local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -455,46 +255,97 @@ path : www/testSession/index.php
 path : www/testSession/index.php
 path : 
 test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+// Fonction pour √©crire des messages de d√©bogage
+function debug_log($message) {
+    $logFile = __DIR__ . '/logs/php.log';
+    if (!file_exists(dirname($logFile))) {
+        mkdir(dirname($logFile), 0777, true);
+    }
+    file_put_contents($logFile, "[" . date('Y-m-d H:i:s') . "] " . $message . PHP_EOL, FILE_APPEND);
 }
+
+// Activer le d√©bogage des sessions
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Configurer les sessions
+ini_set('session.use_strict_mode', 1);
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_lifetime', 0);
+
+// V√©rifier si l'ID de session est transmis dans l'environnement
+if (isset($_SERVER['PHPSESSID'])) {
+    debug_log("PHPSESSID trouv√© dans l'environnement : " . $_SERVER['PHPSESSID']);
+    session_id($_SERVER['PHPSESSID']); // Utiliser l'ID transmis via l'environnement
+} elseif (isset($_COOKIE['PHPSESSID'])) {
+    debug_log("PHPSESSID re√ßu du cookie : " . $_COOKIE['PHPSESSID']);
+    session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
+} else {
+    debug_log("Aucun PHPSESSID trouv√©.");
+}
+
+// Debugger toutes les variables d'environnement
+debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
+debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
+
+// V√©rifier si le fichier de session existe
+$session_save_path = ini_get('session.save_path');
+$session_file = $session_save_path . '/sess_' . session_id();
+
+if (file_exists($session_file)) {
+    debug_log("Fichier de session trouv√© : " . $session_file);
+} else {
+    debug_log("Fichier de session introuvable : " . $session_file);
+}
+
+// D√©marrer la session
+debug_log("D√©marrage de session...");
+session_start();
+debug_log("ID de session actuel : " . session_id());
 
 // Gestion de la connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
-        // Connexion
         $username = trim($_POST['username']);
+        debug_log("Tentative de connexion avec le nom d'utilisateur : " . $username);
         if (!empty($username)) {
-            $_SESSION['user'] = $username;        
+            $_SESSION['user'] = $username;
+            debug_log("Utilisateur connect√© : " . $username);
+        } else {
+            debug_log("Nom d'utilisateur vide, connexion ignor√©e.");
         }
     } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
+        debug_log("D√©connexion demand√©e.");
+        session_unset();
+        session_destroy();
+        debug_log("Session d√©truite.");
+    } else {
+        debug_log("Requ√™te POST inconnue.");
     }
 }
 
-if (isset($_SESSION['user']))
-{
+if (isset($_SESSION['user'])) {
     $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    debug_log("Session active pour l'utilisateur : " . $username);
+} else {
+    debug_log("Aucune session utilisateur active.");
 }
 
-header("Expires: 0"); // Pas d'expiration
+// En-t√™tes HTTP
+debug_log("Envoi des en-t√™tes HTTP pour le cache.");
+header("Expires: 0");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
+// Indiquer la fin du script dans les logs
+debug_log("Fin du script PHP.");
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -526,46 +377,97 @@ session_set_cookie_params([
 </body>
 </html>
 test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+// Fonction pour √©crire des messages de d√©bogage
+function debug_log($message) {
+    $logFile = __DIR__ . '/logs/php.log';
+    if (!file_exists(dirname($logFile))) {
+        mkdir(dirname($logFile), 0777, true);
+    }
+    file_put_contents($logFile, "[" . date('Y-m-d H:i:s') . "] " . $message . PHP_EOL, FILE_APPEND);
 }
+
+// Activer le d√©bogage des sessions
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Configurer les sessions
+ini_set('session.use_strict_mode', 1);
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_lifetime', 0);
+
+// V√©rifier si l'ID de session est transmis dans l'environnement
+if (isset($_SERVER['PHPSESSID'])) {
+    debug_log("PHPSESSID trouv√© dans l'environnement : " . $_SERVER['PHPSESSID']);
+    session_id($_SERVER['PHPSESSID']); // Utiliser l'ID transmis via l'environnement
+} elseif (isset($_COOKIE['PHPSESSID'])) {
+    debug_log("PHPSESSID re√ßu du cookie : " . $_COOKIE['PHPSESSID']);
+    session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
+} else {
+    debug_log("Aucun PHPSESSID trouv√©.");
+}
+
+// Debugger toutes les variables d'environnement
+debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
+debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
+
+// V√©rifier si le fichier de session existe
+$session_save_path = ini_get('session.save_path');
+$session_file = $session_save_path . '/sess_' . session_id();
+
+if (file_exists($session_file)) {
+    debug_log("Fichier de session trouv√© : " . $session_file);
+} else {
+    debug_log("Fichier de session introuvable : " . $session_file);
+}
+
+// D√©marrer la session
+debug_log("D√©marrage de session...");
+session_start();
+debug_log("ID de session actuel : " . session_id());
 
 // Gestion de la connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
-        // Connexion
         $username = trim($_POST['username']);
+        debug_log("Tentative de connexion avec le nom d'utilisateur : " . $username);
         if (!empty($username)) {
-            $_SESSION['user'] = $username;        
+            $_SESSION['user'] = $username;
+            debug_log("Utilisateur connect√© : " . $username);
+        } else {
+            debug_log("Nom d'utilisateur vide, connexion ignor√©e.");
         }
     } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
+        debug_log("D√©connexion demand√©e.");
+        session_unset();
+        session_destroy();
+        debug_log("Session d√©truite.");
+    } else {
+        debug_log("Requ√™te POST inconnue.");
     }
 }
 
-if (isset($_SESSION['user']))
-{
+if (isset($_SESSION['user'])) {
     $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    debug_log("Session active pour l'utilisateur : " . $username);
+} else {
+    debug_log("Aucune session utilisateur active.");
 }
 
-header("Expires: 0"); // Pas d'expiration
+// En-t√™tes HTTP
+debug_log("Envoi des en-t√™tes HTTP pour le cache.");
+header("Expires: 0");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
+// Indiquer la fin du script dans les logs
+debug_log("Fin du script PHP.");
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -602,1469 +504,1618 @@ local 2 ./www/testSession//index.php - path size : 26
 local 2 ./www/testSession//index.php - path size : 
 local 2 ./www/testSession//index.php
 local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 
+local 2 ./www/error_pages/404.html
 local 2 
-local : Session/index.php
-local : Session/index.php
+file not found ! 
+file not found ! 
+local 2 ./www/html/default/favicon.ico - path size : 29
+local 2 ./www/html/default/favicon.ico - path size : 29
+local 2 ./www/html/default/favicon.ico - path size : 
+local 2 ./www/html/default/favicon.ico
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/html/default//favicon.ico - path size : 30
+local 2 ./www/html/default//favicon.ico - path size : 30
+local 2 ./www/html/default//favicon.ico - path size : 
+local 2 ./www/html/default//favicon.ico
+local 2 
+local : l/default/favicon.ico
+local : l/default/favicon.ico
 local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
+path : /www/html/default/favicon.ico
+path : /www/html/default/favicon.ico
 path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+file not found ! 
+file not found ! 
+local 2 ./www/html/default//favicon.ico - path size : 30
+local 2 ./www/html/default//favicon.ico - path size : 30
+local 2 ./www/html/default//favicon.ico - path size : 
+local 2 ./www/html/default//favicon.ico
+local 2 
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>403 Forbidden</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">403 Forbidden</h1>
+        <p class="error-message">You don't have permission to access this resource on the server.</p>
+        <p class="error-message">Please check your credentials or contact the server administrator.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>403 Forbidden</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">403 Forbidden</h1>
+        <p class="error-message">You don't have permission to access this resource on the server.</p>
+        <p class="error-message">Please check your credentials or contact the server administrator.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/error_pages/403.html - path size : 24
+local 2 ./www/error_pages/403.html - path size : 24
+local 2 ./www/error_pages/403.html - path size : 
+local 2 ./www/error_pages/403.html
 local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
-local 2 
-local : Session/index.php
-local : Session/index.php
+local : r_pages/403.html
+local : r_pages/403.html
 local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
+path : www/error_pages/403.html
+path : www/error_pages/403.html
 path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>403 Forbidden</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">403 Forbidden</h1>
+        <p class="error-message">You don't have permission to access this resource on the server.</p>
+        <p class="error-message">Please check your credentials or contact the server administrator.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
+test getfile : <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>403 Forbidden</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
+    <div class="error-container">
+        <h1 class="error-title">403 Forbidden</h1>
+        <p class="error-message">You don't have permission to access this resource on the server.</p>
+        <p class="error-message">Please check your credentials or contact the server administrator.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
 </body>
 </html>
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/error_pages/403.html - path size : 24
+local 2 ./www/error_pages/403.html - path size : 24
+local 2 ./www/error_pages/403.html - path size : 
+local 2 ./www/error_pages/403.html
 local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
-local 2 
-local : Session/index.php
-local : Session/index.php
+local : r_pages/403.html
+local : r_pages/403.html
 local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
+path : www/error_pages/403.html
+path : www/error_pages/403.html
 path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+    alert("Welcome to 42 library")
+});
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
+    alert("Welcome to 42 library")
+});
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/projects42/html/script.js - path size : 30
+local 2 ./www/projects42/html/script.js - path size : 30
+local 2 ./www/projects42/html/script.js - path size : 
+local 2 ./www/projects42/html/script.js
 local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+    alert("Welcome to 42 library")
+});
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
+    alert("Welcome to 42 library")
+});
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/projects42/html//script.js - path size : 31
+local 2 ./www/projects42/html//script.js - path size : 31
+local 2 ./www/projects42/html//script.js - path size : 
+local 2 ./www/projects42/html//script.js
 local 2 
-local : Session/index.php
-local : Session/index.php
+local : jects42/html/script.js
+local : jects42/html/script.js
 local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
+path : /www/projects42/html/script.js
+path : /www/projects42/html/script.js
 path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+    alert("Welcome to 42 library")
+});
+test getfile : var nameNode = document.getElementById("textclick");
+nameNode.addEventListener("click", function() 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
-
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
+    alert("Welcome to 42 library")
+});
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/projects42/html//script.js - path size : 31
+local 2 ./www/projects42/html//script.js - path size : 31
+local 2 ./www/projects42/html//script.js - path size : 
+local 2 ./www/projects42/html//script.js
 local 2 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+test getfile : .blue-button:hover 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    color: blue !important;
 }
 
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
-
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+.white-button:hover 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    color: white !important;
 }
 
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
+.red-button:hover 
+{
+    color: red !important;
+}
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
+.font-size-button 
+{
+    font-size: 10px;
+}
 
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
 
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
-</html>
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
+test getfile : .blue-button:hover 
+{
+    color: blue !important;
+}
+
+.white-button:hover 
+{
+    color: white !important;
+}
+
+.red-button:hover 
+{
+    color: red !important;
+}
+
+.font-size-button 
+{
+    font-size: 10px;
+}
+
+
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
 test getfile : 
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 26
-local 2 ./www/testSession//index.php - path size : 
-local 2 ./www/testSession//index.php
+local 2 ./www/projects42/html/styles.css - path size : 31
+local 2 ./www/projects42/html/styles.css - path size : 31
+local 2 ./www/projects42/html/styles.css - path size : 
+local 2 ./www/projects42/html/styles.css
 local 2 
-local : Session/index.php
-local : Session/index.php
+test getfile : .blue-button:hover 
+{
+    color: blue !important;
+}
+
+.white-button:hover 
+{
+    color: white !important;
+}
+
+.red-button:hover 
+{
+    color: red !important;
+}
+
+.font-size-button 
+{
+    font-size: 10px;
+}
+
+
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
+test getfile : .blue-button:hover 
+{
+    color: blue !important;
+}
+
+.white-button:hover 
+{
+    color: white !important;
+}
+
+.red-button:hover 
+{
+    color: red !important;
+}
+
+.font-size-button 
+{
+    font-size: 10px;
+}
+
+
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
+test getfile : 
+local 2 ./www/projects42/html//styles.css - path size : 32
+local 2 ./www/projects42/html//styles.css - path size : 32
+local 2 ./www/projects42/html//styles.css - path size : 
+local 2 ./www/projects42/html//styles.css
+local 2 
+local : jects42/html/styles.css
+local : jects42/html/styles.css
 local : 
-path : www/testSession/index.php
-path : www/testSession/index.php
+path : /www/projects42/html/styles.css
+path : /www/projects42/html/styles.css
 path : 
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
-
-if (isset($_SESSION['user']))
+test getfile : .blue-button:hover 
 {
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+    color: blue !important;
 }
 
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
+.white-button:hover 
+{
+    color: white !important;
+}
 
-session_set_cookie_params([
-    'lifetime' => 0, // Cookie de session
-    'path' => '/',
-    'secure' => false, // Mettre √† true si HTTPS est utilis√©
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
+.red-button:hover 
+{
+    color: red !important;
+}
 
-?>
+.font-size-button 
+{
+    font-size: 10px;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sessions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        input, button { padding: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Test Sessions</h1>
 
-    <?php
-    if (isset($_SESSION['user'])): ?>
-        <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
-        <form method="POST">
-            <button type="submit" name="logout">Se d√©connecter</button>
-        </form>
-    <?php else: ?>
-        <p>Vous n'√™tes pas connect√©.</p>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Entrez votre nom" required>
-            <button type="submit" name="login">Se connecter</button>
-        </form>
-    <?php endif; ?>
-</body>
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
+test getfile : .blue-button:hover 
+{
+    color: blue !important;
+}
+
+.white-button:hover 
+{
+    color: white !important;
+}
+
+.red-button:hover 
+{
+    color: red !important;
+}
+
+.font-size-button 
+{
+    font-size: 10px;
+}
+
+
+.font-container-text 
+{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.font-container-text-2 
+{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.image-container 
+{
+    display: inline-block;
+}
+
+
+.zone-rectangulaire 
+{
+    width: 300px;
+    height: 212px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carreau 
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.navbar 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    margin-top: 5vh; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container-void 
+{
+    height: 1vh;
+}
+
+
+.container-2 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+
+.custom-margin-top 
+{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.font-container-text 
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+.font-container-text-2 
+{
+    padding-left: 8vw;
+    padding-right: 5vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) 
+{
+    .font-container-text 
+    {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+    .font-container-text-2 
+    {
+        padding-left: 4.5vw;
+        padding-right: 2vw;
+        font-size: 1rem;
+    }
+}
+test getfile : 
+local 2 ./www/projects42/html//styles.css - path size : 32
+local 2 ./www/projects42/html//styles.css - path size : 32
+local 2 ./www/projects42/html//styles.css - path size : 
+local 2 ./www/projects42/html//styles.css
+local 2 
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : 
+local 2 ./www/projects42/images/42_Logo.svg.png - path size : 38
+local 2 ./www/projects42/images/42_Logo.svg.png - path size : 38
+local 2 ./www/projects42/images/42_Logo.svg.png - path size : 
+local 2 ./www/projects42/images/42_Logo.svg.png
+local 2 
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : 
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 39
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 39
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 
+local 2 ./www/projects42/images//42_Logo.svg.png
+local 2 
+local : jects42/images/42_Logo.svg.png
+local : jects42/images/42_Logo.svg.png
+local : 
+path : /www/projects42/images/42_Logo.svg.png
+path : /www/projects42/images/42_Logo.svg.png
+path : 
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : âPNG
+
+   IHDR         qyŒ„   gAMA  ±è¸a    cHRM  z&  ÄÑ  ˙   ÄË  u0  Í`  :ò  pú∫Q<   bKGD ˇáèÃø   tIMEË⁄K  ÁIDATx⁄Ì‹gêùU¿Òàä#:É0
+CËÑb√é:| MR0òA4	-b#î≈FÄÄRZlI@	=âB≤ñO
+éÉ"*†®®3Ç¢Hä_,πwïÂ=ª˜ﬁÁºÔÔ˜|ﬁΩªÁÚü≥ÔnR                                                                                                                                                                                               †WÜY±e∫:ç∑Üó¶π=y›õ”Åñøô«”“4€⁄ìn¨˛A√ÌçÂc™5¥∏2ÕÎ—+où∂±˛ˇx"MO˚€H?œœ˘†-Ï˘ËJ>f§M÷ „“ù÷0T˘ê˘@@ê˘‡YÚ1^>˘(+3Â#H>æmÇ|î„™43m¥Ü ˘xó|ÚQV>f»Gê|‹aÇ|»Ú! »á|–qóA> ≤X>‰C@@>rÚÒ!˘íè>k‰C>êA>jmâ|»áÄÄ|‰‰„ÉÚ"á áÄ ÚAN>÷YÉÄ ÚÅ|Ú!»áÄ Ú!1ÛÒn˘‰£$KÂ#L>÷ZÉÄ %Â„8˘‡I˘‰C>êA>‰ÉÆÂ„vk‰£WÀGOßIÚ! »GY˘¯Ä|Ñ»«Ñt´5ÚQénÚ!  9˘òö6XÉ|»á|îËi¢|Ú!Tœ«Ñtã5ÚQR>¶…á|  »GU◊§iiΩ5»«D˘‰£¨|Lïè ˘∏ŸÑ∏˘X*Ú!9˘òfÚ2ì‰C@êèí\+aÚqì5ÚQR>ﬁ'ÚÅÄ Ú!Ú! «d˘‰C>»…«ç÷  »G9æ.ÚÅÄ 9˘8J>x&)Ç|»’Û19›`Ç|»Ú! »G≠}C>‰A>rÚ1E>B‰„H˘‰C>®jCöûÆ∑A>‰É™˘òöVXÉÄ %Â√≥˘@@êè ÆKG•g¨!@>¶…áÄ eÂcä|…«rk‰C>®öèÈÚ! »á|êìèe÷  »G9V á|  »GN>ﬁ+!Úq¥|Ú!‰‰„k÷  »á|P5ÔóA>‰Éú||’Ñ∏˘X"mnıgÉÚÅÄ\Ú1›⁄Ú1!=mÚÅÄ ’¨íè ˘8F>˘(+G»Gê||≈˘ê‰C@ê˘†˘8V>˘(…j˘ac:6}Ÿ˘()áÀá|  »á|îõè/YÉÄ ÚÅ|Ú!t‹¶tº|ÚQí5ù…«¨tπ5ÚQR>OOYCà€á|Ú!d‰„2k‰C>êD>‰É.‰„˘‰C>»…«"k‰£ﬂî˘@@êèú|ºG>B‰„D˘‰C>»…«Bk‰C>êD>jÌ[Ú$'…áÄ eÂ„0˘íèK≠A@ê∑‰©’7˘¯_˘x“‰„d˘‰C>»…«%÷  DŒ«—÷–‚6˘ê˘»…«aÚ"≥ÂC@ê˘ '[ÉÄ ÚA’||X>˘êrÚqë5ÚQé;”·Ú!ÚQ=„“÷¿iÚ! »á|P›ú4ﬂ˘()„Â#»ÌC>˘(»]i|˙õ5Ñ»«9ñ  »GI˘'ÚÅÄ ÚQ™”Âë˘ 'ü∑D>‰É™ŒêD>‰Éú||Œ˘(«w‰C>‰#'cÂ#Ñ3Âë˘ 'üµD>‰˘@@‰£Ê˘Ï#ÜπÚÅÄ»GIæõ∆•øZCà||∆˘()cÂ#ÑyÚÅÄ»á|êìèO["ÚÅ|  Ú!t¡YÚÅÄ»á|êìè≥-ëèr|O>Ç¯§|  ÚQV>∆»Gê|| ˘ê‰ë˘†ÊÀ"eÂ√≥è(˘òc	à|î„˚ilz‹8W>˘(+c‰#H>NµD>‰É™Œì$Æai°|»Gÿ||¬ê∏˘XîfXÉ|»Ç|÷“x˘·|˘@@‰£¨|í≥Ü˘¯∏%  Ú!Tµ@>˘êrÚÒ1K@@‰£?î˘@@ê˘(◊ÚÅÄ»Gi˘x‘B‰„£ñÄÄ»á|P’ÖÚÅÄ»á|êìèèX"ÚÅ|  ÚQkwÀG_êD>  «¡Ú$ßX"ÚÅ|  µ «B˘ê˘@@»…«LkêèêæËŸ"%π«£Û .Oß§M÷ÄÄ»G9˘88˝…∏"ÕíD>‰ÉÍ˘ò)Ω·V ÚQsó•kÂ£≈ñV–œz+Ë]>•M¶eÓN€:Ñ¥wzƒ;¥mÆqôê˘ ˘ê˘êê˘ê˘Ä(˘¯ùwh€¨ê˘à3˜»Ú!»GN>∂s0ê˘@>‰˘ê‰C>ê≥Ÿ,ó˘êê˘êè¢ÁGÚÅ|îã/ÚÚ!Ú! ›òeÚ!qÊ'i{˘(dñ˙ÿÂC>@>™œ˘ê˘ ˘ê˘(z~*µó|»á|»»«PÃb˘ê˘ ˘ê˘êê˘®{>:Ä˝Ú±ÉÉÅ|»Ú!»á| ÚÅ|òÕÊ*˘êè8sü| ÚÅ|»Ú!»á| ¶eÆî˘êê˘ê˘ ˘ê˘h^>vt0ê˘@>‰É˙‰„∑ﬁ°msÖ|»Gú˘ô| ÚÅ|»ÚQÔ|s0‰C>@>‰C>‰‰£sπ|»á|Ä|»á|»»á|»G”Ê~˘@>‰˘»…«˘(d.ì˘êê˘ê˘ ˘ê˘êêè®≥H>‰C>` { GøπP>‰C>@>‰C>äûüÀÚQP>êè@˘ÿ…¡@>‰ÉÅÚq©ÿ6¶QÚQ»\‡X»á|Ä|»á|=…Ú!»á| uûéÖ|»»á|»á|Ä|»á|»»G‘9ﬂ±êèH˘ÿ≈¡@>‰˘ê‰C>êè.ÃØ‰˘(fŒs,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£FsÆc!ëÚ±´ÉÅ|»Ú!‘≈Ú!Ú!êìèﬂxá∂Õ|«B>‰‰C>‰£Ë˘µ| ÚÅ|‰‰c7˘(dŒq,‰C>@>‰C>‰‰C>‰C>@>‰˘ê‰£Fsñc!ÚÚ!Ú! Ú!MõáÂ˘ê‰#'ª;»G!3œ±ê˘ ˘ê˘êê˘ê˘ ˘à:s˘à3è§—Ú!»á| ÚÅ|»Úa6õ3˘êê˘êè¢Á˜ÚÅ|»Úëìè}‰£ê9√±Ë]>.q Â˘ê‰C>ê˘@>‰‰C>‰C>`pvóè~s∫c!ÚÁ„aÔP˘ê˘ ˘ê˘®Y>ˆu0iTz–;¥mNs,‰#Œ¸A>ê˘@>‰˘ê‰C>ê”2s˘êê˘ê˘ ˘ê˘h^>ˆs0êèBÊT«B>‰‰£ÍlL≥˘êê˘ê˘ÄÿY>‰C>"œÂ˘(&';Ú)˚;»á| ÚÅ|»Ú!»áŸ,'9Ú! Ú!ÚÚ!Ú! QÛq¢c!ÚÚ!Ú! ÚQ˜|\Ï∂Õ£È ˘($'8Ú! Ú!ÚÚ!Ú! QÛqºc!ÚÁ„ÔP˘êè»˘xùÉÅ|»ÚQuì‰C>ê˘@>‰˘ê‰√¥‰cñc!ÚÚ!Ú! Ú!ÕÀ«Î‰C>ê˘@>ÍõèôéÖ|»»á|»á|Ä|»á|»ƒ0R>˙ÂcÜc!ëÚÒ˘(b6§£˘à3ñ‰C>ê˘@>‰˘ê‰√»á|»»«‡fΩ|»á|Ä|‰‰c∫c!ëÚÒF˘ê‰C>ê˘@>‰˘0õÂcöc—ª|\‰ Ú!»á| ÚÅ|Ù(or0ê˘@>™Œ_‰˘(&S˘ê8øÙï˘êê˘ìÇá¶õ¨ÆÕCÈñ¿ È…´ÆNc¨æ≈‚tú%¥xYëÓÆ˛a√≥^l+˚ÓgTe	Ñ‰˝⁄Ó)+hÀ«⁄tvN@∂∞;ÄÜÁcøº ˘»2‹˛ õèuiﬂ¸wê‡9z˘`Û!  ÕÃ«⁄¡Ê√3Äfﬁ>ˆ¸ßqê†[˘ ˘ û’ˆCô—öîè—C˘	›@ ‰C@ ËV>¸†˛vJ}i˜°ˇ¥n  Ú!  ¥yEßÚ·GX uœ«nù˙‰n  Ú!  t+ ¿øåÏ|><D®g>vÌ¸À∏Å »áÄ »G∑Ú!  Úë…3Ä˙‰„é¥K˜^Œ@>†±vÓv>†˘ËÎv>@>2yàPz>ÓH£zÒ¬n  Ú!  3™w˘ÄíÛ—◊ª|Ä|@ÉÏëÓÍm>¸@ô˘ËK#z˝E∏Å »áÄ »áÄ :Pí=„‰√CtÄ≤Ú±cú/«@>@>Äˇ⁄+^>†Ñ|¨ãóêèL~ v>˙“1ø47 ˘ÄZŸ;r> n>÷EŒáÄ »G&—"Ê£/m˝ãtê®Å—e‰C@ ¢Âc]˘ ˘Ä¬Ω2›YN> äW•µiªíæ`àëè€À áÄ »áÄ »áÄ 4«´ÀÃá †˜˘ÿ∂Ã/›@>@>@>Ä~^Sz>†7˘∏≠Ù|¯-,Äﬁ‹>^Z˛∑· ﬁkÎíËn>n´K>@> ¥ÍïøÖ–Ω|lSØo…@>@>†.ﬁú÷’1–È|¨I/©Á∑&  Ú!  °º•Œ˘ÄŒÂcuùÛ·Ô@ :w˚xqΩøE7 ˘ÄlB>`ËÛ±∫	˘ ˘ ˘ÄΩµI˘Ä°À«™&Â√ﬂÅ ›ÌcÎf}Àn  É˜∂ÊÂC@ Ü"´öóêê(√€õõL>nmn>@>2˘;Äº|¨J/jˆ
+‹@ ™;$≠iz> '7¶ZÉÄ »áÄ t‹;‰C@ rÚqÉ|¸õﬂ¬®r˚ÿ ‹@ ™yß|@N>nêèVy?¬∫/Õ∑:02M±‰C@⁄˝8Õ±:pêÄPc“ıÚ—üa»áÄ »áÄ »áÄ j¨|@N>V «≥ÒóË ˇÔˆÒkpêË∏qÚ!  9˘X)P’x˘Äú|\' –Gxt.  9˘XëûgPÕ˘Äú|,óêËÇâÚ!  9˘X&π¸kº@≥o˛/Ë –yì‰C@ rÚ±L>†™…Ú1¨ÍÓñtø%¥∏7îñXCãËoÅ–~ÑÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ      ÄÄ    à     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ     ÄÄ ÄÄ    ƒ5‹
+Ëê{”dK                                                                                                                                                                                                                                           jÔü°U⁄÷∆*Ú%   %tEXtdate:create 2024-08-02T14:03:22+00:00ΩÎ£   %tEXtdate:modify 2024-08-02T14:03:22+00:00ÃZS    IENDÆB`Ç
+test getfile : 
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 39
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 39
+local 2 ./www/projects42/images//42_Logo.svg.png - path size : 
+local 2 ./www/projects42/images//42_Logo.svg.png
+local 2 
+test getfile : <!DOCTYPE html>
+<html lang="fr">
+    <!-- Links, references and scale settings -->
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>My Webpage</title>
+    </head>
+
+    <body>
+        <!-- Use of navbar tool from bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link blue-button" href="introduce.html">Introduction</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle white-button" id="projectDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            Projets
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <li><a class="dropdown-item font-size-button" href="add.html">Ajouter un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="find.html">Chercher un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="delete.html">Supprimer un projet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Content of Home page -->
+        <div class="container">
+            <h2><span id="textclick">Hello, welcome to your projects library !</span></h2>
+            <img src="./www/projects42/images/42_Logo.svg.png" alt="Arc de triomphe" width="300" height="300">
+            <p></p>
+            <div class="btn-group" role="group">
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
 </html>
-test getfile : <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+test getfile : <!DOCTYPE html>
+<html lang="fr">
+    <!-- Links, references and scale settings -->
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>My Webpage</title>
+    </head>
 
-// Gestion de la connexion
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['login'])) {
-        // Connexion
-        $username = trim($_POST['username']);
-        if (!empty($username)) {
-            $_SESSION['user'] = $username;        
-        }
-    } elseif (isset($_POST['logout'])) {
-        // D√©connexion
-        session_unset(); // Vide la session
-        session_destroy(); // D√©truit la session
-    }
-    else {
-        echo "username : ".$username;
-    }
-}
+    <body>
+        <!-- Use of navbar tool from bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link blue-button" href="introduce.html">Introduction</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle white-button" id="projectDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            Projets
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <li><a class="dropdown-item font-size-button" href="add.html">Ajouter un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="find.html">Chercher un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="delete.html">Supprimer un projet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Content of Home page -->
+        <div class="container">
+            <h2><span id="textclick">Hello, welcome to your projects library !</span></h2>
+            <img src="./www/projects42/images/42_Logo.svg.png" alt="Arc de triomphe" width="300" height="300">
+            <p></p>
+            <div class="btn-group" role="group">
+            </div>
+        </div>
 
-if (isset($_SESSION['user']))
-{
-    $username = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-}
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>
+test getfile : 
+local 2 ./www/projects42/html/index.html - path size : 31
+local 2 ./www/projects42/html/index.html - path size : 31
+local 2 ./www/projects42/html/index.html - path size : 
+local 2 ./www/projects42/html/index.html
+local 2 
+test getfile : <!DOCTYPE html>
+<html lang="fr">
+    <!-- Links, references and scale settings -->
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>My Webpage</title>
+    </head>
 
-header("Expires: 0"); // Pas d'expiration
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
+    <body>
+        <!-- Use of navbar tool from bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link blue-button" href="introduce.html">Introduction</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle white-button" id="projectDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            Projets
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <li><a class="dropdown-item font-size-button" href="add.html">Ajouter un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="find.html">Chercher un projet</a></li>
+                            <li><a class="dropdown-item font-size-button" href="delete.html">Supprimer un projet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Content of Home page -->
+        <div class="container">
+            <h2><span id="textclick">Hello, welcome to your projects library !</span></h2>
+            <img src="./www/projects42/images/42_Logo.svg.png" alt="Arc de triomphe" width="300" height="300">
+            <p></p>
+            <div class="btn-group" role="group">
+            </div>
+        </div>
 
-session_set_cookie_params([
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

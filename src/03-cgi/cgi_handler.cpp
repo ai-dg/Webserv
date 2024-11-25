@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:49:30 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/25 09:59:42 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,11 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     }
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
-    std::cerr << req.getHeader("Set-Cookie");
+    std::cerr << RED << "COOOOOOKIIIIEEE: " << req.getHeader("Cookie");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
+        this->addToEnvironment(req.getHeader("Cookie"));
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
         this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
     }
