@@ -128,7 +128,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         Location *altRoute = req.getRouteConf(getExtension(filePath));
         this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
         std::cerr << BOLD_RED << "here you have a special road to success !!!!" << RESET << std::endl;
-        std::cerr << "1 -- setResoursePath -- 1****" << this->filePath << std::endl;
+        std::cerr << "1 -- setResoursePath -- 1" << this->filePath << std::endl;
         return;
     }
     if (uri.find("/cgi-bin/") != std::string::npos
