@@ -2,6 +2,902 @@
 *************************************
 GET / HTTP/1.1
 Host: 127.0.0.10:9051
+User-Agent: curl/7.88.1
+Accept: */*
+Cookie: PHPSESSID=3oljcjafvpcf1c16m367po2m4r
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: curl/7.88.1
+Accept: */*
+Cookie: PHPSESSID=3oljcjafvpcf1c16m367po2m4r
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: curl/7.88.1
+Accept: */*
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: curl/7.88.1
+Accept: */*
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=2dk90i294mavpns1a3mqjqb8m1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=2dk90i294mavpns1a3mqjqb8m1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: PHPSESSID=3ertk2gslu9nl131ohocueqmsk
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=Chris&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: PHPSESSID=3ertk2gslu9nl131ohocueqmsk
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=Chris&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: PHPSESSID=3i1obuc8ki3dsl0s2dkcb67eha
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: PHPSESSID=3i1obuc8ki3dsl0s2dkcb67eha
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=ek8vlgmvbvb4dbeujgihst4p8c
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=ek8vlgmvbvb4dbeujgihst4p8c
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=9irp26oukvjikb8qc7sh0be9s5
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=9irp26oukvjikb8qc7sh0be9s5
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=4rt2himq71rmg1l6k809ko1ljt
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: PHPSESSID=4rt2himq71rmg1l6k809ko1ljt
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=evf8k938f1dalnmcgrlrfi6404
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=evf8k938f1dalnmcgrlrfi6404
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=9i5bohoa7bhbmmptne7dolbcg6
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=9i5bohoa7bhbmmptne7dolbcg6
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=nqolo1l5ptq5npsfl4iobhkm0k
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=nqolo1l5ptq5npsfl4iobhkm0k
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=oajecljgu7ir14n2c4bto0iej4
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=oajecljgu7ir14n2c4bto0iej4
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=svt2rfhu6sd25pv5kf4erg7hjf
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=svt2rfhu6sd25pv5kf4erg7hjf
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=md20c69m9n0459i8ovhq96sn6f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=md20c69m9n0459i8ovhq96sn6f
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=bb532cfabebufbblhqqir9bicp
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=bb532cfabebufbblhqqir9bicp
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=45h9n9mm33sd7af6q7v34vkkem
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=45h9n9mm33sd7af6q7v34vkkem
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tssss&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=k6t5l2v6oq3uac1i5b8hcmog77
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Referer: http://127.0.0.10:9051/
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=k6t5l2v6oq3uac1i5b8hcmog77
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+logout=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=9j9s7u2j7gc0e38c2jr2besdbk
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=9j9s7u2j7gc0e38c2jr2besdbk
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=dp7d9uak8n6efck31p1ng379n0
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+POST / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.10:9051/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+Origin: http://127.0.0.10:9051
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=dp7d9uak8n6efck31p1ng379n0
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+username=tyotoodfhdg&login=
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=40ir91p26bqbjroak54ulaaj16
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=40ir91p26bqbjroak54ulaaj16
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.10:9051
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
@@ -1102,899 +1998,3 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 username=tssss&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 7
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=stbh3t59fpdtgqdhfkv035pmch
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-logout=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 7
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=stbh3t59fpdtgqdhfkv035pmch
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-logout=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 21
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d27g22atcte2d5epks9fdsgbsd
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=kkkkk&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 21
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d27g22atcte2d5epks9fdsgbsd
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=kkkkk&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 21
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=475dp7k7qonbotmgg4mdmqqieu
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=kkkkk&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 21
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=475dp7k7qonbotmgg4mdmqqieu
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=kkkkk&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=pk4a7rov2nsnt05rco46vcd02n
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=pk4a7rov2nsnt05rco46vcd02n
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: cross-site
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: cross-site
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: sessionId=91f3b62a59c424e2; PHPSESSID=d8ntcjk3jmubihvfcevtu018ra
