@@ -76,6 +76,7 @@ class HttpRequest
          * @brief Validators
          */
         bool hasFileSpecialRoute(std::string filePath) const;
+        bool isScript() const;
         bool isStatic() const;
         bool isValidBodySize() const;
 

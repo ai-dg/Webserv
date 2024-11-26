@@ -8,6 +8,7 @@ SRC = src/01-core/Conf.cpp \
 	  src/01-core/Location.cpp \
 	  src/01-core/main.cpp \
 	  src/01-core/RarManager.cpp \
+	  src/01-core/scriptUtils.cpp \
       src/01-core/Server.cpp \
 	  src/01-core/SessionManager.cpp \
 	  src/01-core/SignalHandler.cpp \

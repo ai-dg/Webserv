@@ -232,6 +232,15 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
     (void) req;
 }
 
+int HttpResponse::put()
+{
+    std::cerr << BOLD_GREEN << this->filePath << RESET << std::endl;
+    Location *route;
+    (void) route;
+    std::cerr << RED << "PUUUUUUUUTTTTTTTTTTTT" << RESET << std::endl;
+    return 1;
+}
+
 void HttpResponse::send(int fd_client)
 {   
     std::string resFile;

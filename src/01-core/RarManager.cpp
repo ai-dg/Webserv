@@ -74,6 +74,14 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     {
         HttpRequest request(*req, server);
         HttpResponse response(request);
+        //////////////////////// A TESTER !!!!!!!
+        if (request.getMethod() == "PUT" && !request.isScript())
+        {
+            response.put();
+            response.setStatusCode(201);
+            response.send(*fd_client);
+        }
+        
         response.setResourcePath(request);
         if (!request.isStatic())
         {
