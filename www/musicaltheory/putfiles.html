@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Fichier</title>
+</head>
+<body>
+    <h1>Créer un fichier sur le serveur</h1>
+    <label for="filename">Nom du fichier :</label>
+    <input type="text" id="filename" placeholder="exemple.txt"><br><br>
+    <label for="filecontent">Contenu :</label><br>
+    <textarea id="filecontent" rows="10" cols="30" placeholder="Écris le contenu ici..."></textarea><br><br>
+    <button id="sendButton">Envoyer</button>
+
+    <p id="response"></p>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', async () => {
+            const filename = document.getElementById('filename').value;
+            const filecontent = document.getElementById('filecontent').value;
+            const responseDisplay = document.getElementById('response');
+
+            if (!filename || !filecontent) {
+                responseDisplay.textContent = "Le nom du fichier et le contenu sont requis.";
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://127.0.0.9:9050/${filename}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'text/plain'
+                    },
+                    body: filecontent
+                });
+
+                if (response.ok) {
+                    responseDisplay.textContent = "Fichier créé avec succès sur le serveur !";
+                } else {
+                    responseDisplay.textContent = `Erreur : ${response.statusText}`;
+                }
+            } catch (error) {
+                responseDisplay.textContent = `Erreur de connexion : ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

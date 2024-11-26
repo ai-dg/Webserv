@@ -62,6 +62,7 @@ class HttpResponse
          */
         void addHeader(const std::string &key, const std::string &value);
         void checkRedirection(const HttpRequest &req);
+        int put();
         void send(int fd_client);
 
 };

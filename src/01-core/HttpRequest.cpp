@@ -307,6 +307,13 @@ bool HttpRequest::hasFileSpecialRoute(std::string filePath) const
     return false;
 }
 
+bool HttpRequest::isScript() const
+{
+    if (hasFileSpecialRoute(getAskedFile()))
+        return true;
+    return false;
+}
+
 bool HttpRequest::isStatic() const
 {
     std::vector<std::string> extensions;

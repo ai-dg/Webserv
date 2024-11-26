@@ -19,6 +19,11 @@ server {
     host 127.0.0.9;
     server_name musicaltheory.42.fr;
 
+    location /files/ {
+        root /www/musicaltheory/files/;
+        methods PUT;
+    }
+
     location / {
         root /www/musicaltheory/;
         index index.html;
@@ -183,8 +188,6 @@ server {
         index index.html;
         methods GET POST;
     }
-
-
 }
 
 map #6: 
