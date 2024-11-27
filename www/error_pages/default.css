@@ -16,6 +16,18 @@ body {
     max-width: 600px;
 }
 
+.link {
+    text-decoration: none;
+    color:black;
+    margin-top: 10px;
+    font-size: 16px;        
+}
+.link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #d9534f;   
+}
+
 .error-title {
     font-size: 48px;
     font-weight: bold;
