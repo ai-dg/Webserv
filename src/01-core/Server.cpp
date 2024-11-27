@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/21 20:14:29 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:55:25 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ Server::Server(Conf *c)
     setMaxBodySize();
     setHostNames();
     Log::output("./sessions/Server.txt") << "Server class object created" << std::endl;
-    conf->printRoutesConfig(id);
+    //conf->printRoutesConfig(id);
     serverNumber++;
 }
 

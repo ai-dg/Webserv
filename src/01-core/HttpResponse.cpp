@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 17:20:32 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:55:51 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ HttpResponse::HttpResponse(const HttpRequest &req)
     Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
     if (!req.isValidBodySize())
         setRedirection(413);
-
     Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class created" << std::endl;
 }
 
@@ -115,20 +114,15 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     }
     if (Route->redirection() != "")
     {
-        std::cerr << "Redirection : " << Route->getRedirectionPath() << "  -  "  << Route->getRedirectionStatus() << std::endl;
         setRedirection(Route->getRedirectionPath(), Route->getRedirectionStatus());
         addHeader("Location", Route->getRedirectionPath());
         return;
     }
-    /// 
     std::string extension = getExtension(uri);
-    std::cerr << BOLD_TURQUOISE << uri << " --- " << extension << std::endl;
     if (req.hasFileSpecialRoute(filePath))
     {
         Location *altRoute = req.getRouteConf(getExtension(filePath));
         this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
-        std::cerr << BOLD_RED << "here you have a special road to success !!!!" << RESET << std::endl;
-        std::cerr << "1 -- setResoursePath -- 1" << this->filePath << std::endl;
         return;
     }
     if (uri.find("/cgi-bin/") != std::string::npos
@@ -235,7 +229,6 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 int HttpResponse::put(const HttpRequest &req)
 {
     (void) req;
-    std::cerr << BOLD_GREEN << this->filePath << RESET << std::endl;
     std::ofstream outfile(&filePath.c_str()[1]);
     if (!outfile)
     {
@@ -245,7 +238,6 @@ int HttpResponse::put(const HttpRequest &req)
     std::cout << BLUE << req.getBody() << RESET << std::endl;
     outfile << req.getBody();
     outfile.close();
-    std::cerr << RED << "PUUUUUUUUTTTTTTTTTTTT" << RESET << std::endl;
     return 1;
 }
 
