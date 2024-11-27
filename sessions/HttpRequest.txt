@@ -2,8 +2,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /images/Projects.png
------------URI: /images/Projects.png
+-----------URI: /favicon.ico
+-----------URI: /favicon.ico
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -13,67 +13,67 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/images/Projects.png[0m
------------Extracted URI: [34m/images/Projects.png[0m
------------Extracted URI: [34m/images/Projects.png
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico[0m
+-----------Extracted URI: [34m/favicon.ico
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /images/Projects.png HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page3.html
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=6
 
 [0m--END--
---START--[1;33mGET /images/Projects.png HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page3.html
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=6
 
 [0m--END--
---START--[1;33mGET /images/Projects.png HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page3.html
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=6
 
 [0m
---START--[1;33mGET /images/Projects.png HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /favicon.ico HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page3.html
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=6
 
 
 --START--[1;33m
@@ -104,52 +104,52 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m--END--
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 
 [0m
 --START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -164,8 +164,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
+-----------URI: /style.css
+-----------URI: /style.css
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -175,63 +175,63 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/introduce.html
+Referer: http://localhost:9090/page1.html
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -247,8 +247,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /introduce.html
------------URI: /introduce.html
+-----------URI: /page1.html
+-----------URI: /page1.html
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -258,21 +258,21 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/introduce.html[0m
------------Extracted URI: [34m/introduce.html[0m
------------Extracted URI: [34m/introduce.html
+-----------Extracted URI: [34m/page1.html[0m
+-----------Extracted URI: [34m/page1.html[0m
+-----------Extracted URI: [34m/page1.html
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /page1.html HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/page3.html
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
@@ -281,14 +281,14 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m--END--
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /page1.html HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/page3.html
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
@@ -297,14 +297,14 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m--END--
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /page1.html HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/page3.html
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
@@ -313,18 +313,1196 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m
---START--[1;33mGET /introduce.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /page1.html HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/page3.html
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /script.js
+-----------URI: /script.js
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /style.css
+-----------URI: /style.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /page3.html
+-----------URI: /page3.html
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/page3.html[0m
+-----------Extracted URI: [34m/page3.html[0m
+-----------Extracted URI: [34m/page3.html
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /style.css
+-----------URI: /style.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /script.js
+-----------URI: /script.js
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/index.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /index.html
+-----------URI: /index.html
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/index.html[0m
+-----------Extracted URI: [34m/index.html[0m
+-----------Extracted URI: [34m/index.html
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /index.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /index.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /index.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m
+--START--[1;33mGET /index.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /script.js
+-----------URI: /script.js
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /style.css
+-----------URI: /style.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/page3.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /page3.html
+-----------URI: /page3.html
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/page3.html[0m
+-----------Extracted URI: [34m/page3.html[0m
+-----------Extracted URI: [34m/page3.html
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m
+--START--[1;33mGET /page3.html HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /style.css
+-----------URI: /style.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css[0m
+-----------Extracted URI: [34m/style.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /style.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /script.js
+-----------URI: /script.js
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /error_pages/default.css
+-----------URI: /error_pages/default.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://localhost:9090/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
 Priority: u=0, i
 
@@ -357,13 +1535,13 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -371,13 +1549,13 @@ Priority: u=6
 
 [0m--END--
 --START--[1;33mGET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -385,13 +1563,13 @@ Priority: u=6
 
 [0m--END--
 --START--[1;33mGET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -399,13 +1577,13 @@ Priority: u=6
 
 [0m
 --START--[1;33mGET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8000
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -421,8 +1599,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
+-----------URI: /error_pages/default.css
+-----------URI: /error_pages/default.css
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -432,63 +1610,63 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css[0m
+-----------Extracted URI: [34m/error_pages/default.css
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
 Priority: u=2
 
 [0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /error_pages/default.css HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/css,*/*;q=0.1
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
+Referer: http://localhost:9090/
 Sec-Fetch-Dest: style
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
@@ -504,8 +1682,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
+-----------URI: /
+-----------URI: /
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -515,187 +1693,15 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /delete.js
------------URI: /delete.js
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/delete.js[0m
------------Extracted URI: [34m/delete.js[0m
------------Extracted URI: [34m/delete.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /show_projects.py
------------URI: /show_projects.py
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /show_projects.py
------------URI: /show_projects.py
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/show_projects.py[0m
------------Extracted URI: [34m/show_projects.py[0m
------------Extracted URI: [34m/show_projects.py
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
@@ -704,602 +1710,43 @@ Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /delete.html
------------URI: /delete.html
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/delete.html[0m
------------Extracted URI: [34m/delete.html[0m
------------Extracted URI: [34m/delete.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m--END--
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m--END--
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
 Priority: u=0, i
 
 [0m
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / DELETE[0m
-[1;37mMETHOD / DELETE[0m
-[1;37mMETHOD / DELETE
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / DELETE[0m
-[1;37mMETHOD / DELETE[0m
-[1;37mMETHOD / DELETE
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 
--------Parsed Body: 
--------Parsed Body: 
------------Extracted URI: [34m/delete_project.py?project_id=1[0m
------------Extracted URI: [34m/delete_project.py?project_id=1[0m
------------Extracted URI: [34m/delete_project.py?project_id=1
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mDELETE /delete_project.py?project_id=1 HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.1:8000/show_projects.py
-Origin: http://127.0.0.1:8000
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-[0m--END--
---START--[1;33mDELETE /delete_project.py?project_id=1 HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.1:8000/show_projects.py
-Origin: http://127.0.0.1:8000
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-[0m--END--
---START--[1;33mDELETE /delete_project.py?project_id=1 HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.1:8000/show_projects.py
-Origin: http://127.0.0.1:8000
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-[0m
---START--[1;33mDELETE /delete_project.py?project_id=1 HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.1:8000/show_projects.py
-Origin: http://127.0.0.1:8000
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /delete.js
------------URI: /delete.js
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/delete.js[0m
------------Extracted URI: [34m/delete.js[0m
------------Extracted URI: [34m/delete.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /delete.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/show_projects.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /show_projects.py
------------URI: /show_projects.py
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /show_projects.py
------------URI: /show_projects.py
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/show_projects.py[0m
------------Extracted URI: [34m/show_projects.py[0m
------------Extracted URI: [34m/show_projects.py
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET / HTTP/1.1
+Host: localhost:9090
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
@@ -1308,222 +1755,7 @@ Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /show_projects.py HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/delete.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /delete.html
------------URI: /delete.html
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/delete.html[0m
------------Extracted URI: [34m/delete.html[0m
------------Extracted URI: [34m/delete.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /delete.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
+Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
 Priority: u=0, i
 
@@ -1537,8 +1769,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
+-----------URI: /www/projects42/images/42_Logo.svg.png
+-----------URI: /www/projects42/images/42_Logo.svg.png
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1548,453 +1780,221 @@ HttpRequest class object destroyed
 Test map : keep-alive
 Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png[0m
+-----------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/find.html
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /find.html
------------URI: /find.html
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/find.html[0m
------------Extracted URI: [34m/find.html[0m
------------Extracted URI: [34m/find.html
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /find.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /find.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m--END--
---START--[1;33mGET /find.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-[0m
---START--[1;33mGET /find.html HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /www/projects42/images/Default.jpg
------------URI: /www/projects42/images/Default.jpg
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/www/projects42/images/Default.jpg[0m
------------Extracted URI: [34m/www/projects42/images/Default.jpg[0m
------------Extracted URI: [34m/www/projects42/images/Default.jpg
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /www/projects42/images/Default.jpg HTTP/1.1
+--START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.1:8000
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
+Referer: http://127.0.0.1:8000/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=5
 
 [0m--END--
---START--[1;33mGET /www/projects42/images/Default.jpg HTTP/1.1
+--START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
 Host: 127.0.0.1:8000
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.1:8000/submit_project.py
+Referer: http://127.0.0.1:8000/
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=5, i
+Priority: u=5
 
 [0m--END--
+--START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5
+
+[0m
+--START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /styles.css
+-----------URI: /styles.css
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css[0m
+-----------Extracted URI: [34m/styles.css
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m--END--
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+[0m
+--START--[1;33mGET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /script.js
+-----------URI: /script.js
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : keep-alive
+Test map : keep-alive
+Test map : 
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js[0m
+-----------Extracted URI: [34m/script.js
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m--END--
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+[0m
+--START--[1;33mGET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
