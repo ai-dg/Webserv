@@ -1,69 +1,6 @@
 HttpResponse object class destroyed
 HttpResponse object class destroyed
 [31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 201 Created
-HTTP/1.1 201 Created
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
 Response sent with status: 200[0m
 [31m
 Response sent with status: 200[0m
@@ -78,9 +15,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -88,325 +25,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 201 Created
-HTTP/1.1 201 Created
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 201 Created
-HTTP/1.1 201 Created
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 201 Created
-HTTP/1.1 201 Created
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201[0m
-[31m
-Response sent with status: 201
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 201 Created
-HTTP/1.1 201 Created
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html[0m
-[1;32mFile path set to: /www/musicaltheory/putfiles.html
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png[0m
+[1;32mFile path set to: /www/projects42/images/Projects.png
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -426,9 +47,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/notes.js[0m
-[1;32mFile path set to: /www/musicaltheory/notes.js[0m
-[1;32mFile path set to: /www/musicaltheory/notes.js
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -436,9 +57,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/notes.js[0m
-[1;32mFile path set to: /www/musicaltheory/notes.js[0m
-[1;32mFile path set to: /www/musicaltheory/notes.js
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -458,9 +79,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/tC.js[0m
-[1;32mFile path set to: /www/musicaltheory/tC.js[0m
-[1;32mFile path set to: /www/musicaltheory/tC.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -468,9 +89,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/tC.js[0m
-[1;32mFile path set to: /www/musicaltheory/tC.js[0m
-[1;32mFile path set to: /www/musicaltheory/tC.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -490,9 +111,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
-[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
-[1;32mFile path set to: /www/musicaltheory/intervals.js
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -500,9 +121,41 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
-[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
-[1;32mFile path set to: /www/musicaltheory/intervals.js
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html[0m
+[1;32mFile path set to: /www/projects42/html/introduce.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -522,9 +175,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/tones.js[0m
-[1;32mFile path set to: /www/musicaltheory/tones.js[0m
-[1;32mFile path set to: /www/musicaltheory/tones.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -532,9 +185,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/tones.js[0m
-[1;32mFile path set to: /www/musicaltheory/tones.js[0m
-[1;32mFile path set to: /www/musicaltheory/tones.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -554,9 +207,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js[0m
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js[0m
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -564,9 +217,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js[0m
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js[0m
-[1;32mFile path set to: /www/musicaltheory/tonalfunctions.js
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -586,9 +239,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/functions.js[0m
-[1;32mFile path set to: /www/musicaltheory/functions.js[0m
-[1;32mFile path set to: /www/musicaltheory/functions.js
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -596,9 +249,26 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/functions.js[0m
-[1;32mFile path set to: /www/musicaltheory/functions.js[0m
-[1;32mFile path set to: /www/musicaltheory/functions.js
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -618,9 +288,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/scales.js[0m
-[1;32mFile path set to: /www/musicaltheory/scales.js[0m
-[1;32mFile path set to: /www/musicaltheory/scales.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -628,9 +298,700 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/scales.js[0m
-[1;32mFile path set to: /www/musicaltheory/scales.js[0m
-[1;32mFile path set to: /www/musicaltheory/scales.js
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1[0m
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1[0m
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1[0m
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1[0m
+[1;32mFile path set to: www/projects42/cgi-bin/delete_project.py?project_id=1
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js[0m
+[1;32mFile path set to: /www/projects42/html/delete.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/show_projects.py
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html[0m
+[1;32mFile path set to: /www/projects42/html/delete.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/find.html[0m
+[1;32mFile path set to: /www/projects42/html/find.html[0m
+[1;32mFile path set to: /www/projects42/html/find.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/find.html[0m
+[1;32mFile path set to: /www/projects42/html/find.html[0m
+[1;32mFile path set to: /www/projects42/html/find.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/images/Default.jpg[0m
+[1;32mFile path set to: /www/projects42/images/Default.jpg[0m
+[1;32mFile path set to: /www/projects42/images/Default.jpg
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/images/Default.jpg[0m
+[1;32mFile path set to: /www/projects42/images/Default.jpg[0m
+[1;32mFile path set to: /www/projects42/images/Default.jpg
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py[0m
+[1;32mFile path set to: www/projects42/cgi-bin/submit_project.py
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/add.html[0m
+[1;32mFile path set to: /www/projects42/html/add.html[0m
+[1;32mFile path set to: /www/projects42/html/add.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/add.html[0m
+[1;32mFile path set to: /www/projects42/html/add.html[0m
+[1;32mFile path set to: /www/projects42/html/add.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js[0m
+[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
+[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css[0m
+[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html[0m
+[1;32mFile path set to: /www/projects42/html/index.html
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -658,55 +1019,23 @@ is valid body size :
 HttpResponse object class destroyed
 HttpResponse object class destroyed
 [31m
-Response sent with status: 200[0m
+Response sent with status: 404[0m
 [31m
-Response sent with status: 200[0m
+Response sent with status: 404[0m
 [31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/testsScales.js[0m
-[1;32mFile path set to: /www/musicaltheory/testsScales.js[0m
-[1;32mFile path set to: /www/musicaltheory/testsScales.js
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/testsScales.js[0m
-[1;32mFile path set to: /www/musicaltheory/testsScales.js[0m
-[1;32mFile path set to: /www/musicaltheory/testsScales.js
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
+Response sent with status: 404
 [31m
 Response sent with status: 
 [31m
 ---------------------------------
 ---------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/style.css[0m
-[1;32mFile path set to: /www/musicaltheory/style.css[0m
-[1;32mFile path set to: /www/musicaltheory/style.css
+[1;32mFile path set to: /www/html/default/index.html[0m
+[1;32mFile path set to: /www/html/default/index.html[0m
+[1;32mFile path set to: /www/html/default/index.html
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -714,985 +1043,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/style.css[0m
-[1;32mFile path set to: /www/musicaltheory/style.css[0m
-[1;32mFile path set to: /www/musicaltheory/style.css
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/musicaltheory/index.html[0m
-[1;32mFile path set to: /www/musicaltheory/index.html[0m
-[1;32mFile path set to: /www/musicaltheory/index.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/musicaltheory/index.html[0m
-[1;32mFile path set to: /www/musicaltheory/index.html[0m
-[1;32mFile path set to: /www/musicaltheory/index.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b885e32d69689e76; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b885e32d69689e76; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b885e32d69689e76; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b885e32d69689e76; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=9ef27f1c3c5f5d19; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=9ef27f1c3c5f5d19; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=9ef27f1c3c5f5d19; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=9ef27f1c3c5f5d19; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=c616e2de28eb943e; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=c616e2de28eb943e; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=c616e2de28eb943e; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=c616e2de28eb943e; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=49f4ec234588ea57; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=49f4ec234588ea57; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=49f4ec234588ea57; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=49f4ec234588ea57; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=391a840d62e8b7b0; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=391a840d62e8b7b0; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=391a840d62e8b7b0; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=391a840d62e8b7b0; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=adb07b3e87c26271; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=adb07b3e87c26271; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=adb07b3e87c26271; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=adb07b3e87c26271; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=998ad9b9a35d6cc2; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=998ad9b9a35d6cc2; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=998ad9b9a35d6cc2; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=998ad9b9a35d6cc2; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=cd073d3600242d70; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=cd073d3600242d70; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=cd073d3600242d70; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=cd073d3600242d70; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=4f683005a81345d9; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=4f683005a81345d9; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=4f683005a81345d9; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=4f683005a81345d9; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=ccfcad7cf6d2f898; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=ccfcad7cf6d2f898; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=ccfcad7cf6d2f898; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=ccfcad7cf6d2f898; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8f257d721add591c; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8f257d721add591c; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8f257d721add591c; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8f257d721add591c; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=79b86e9a92731ead; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=79b86e9a92731ead; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=79b86e9a92731ead; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=79b86e9a92731ead; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=761ee0dc06e90b78; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=761ee0dc06e90b78; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=761ee0dc06e90b78; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=761ee0dc06e90b78; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a5b62f0f10cc6a0; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a5b62f0f10cc6a0; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a5b62f0f10cc6a0; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a5b62f0f10cc6a0; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=763504fe81584f15; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=763504fe81584f15; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=763504fe81584f15; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=763504fe81584f15; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=8a6fbe0faf0b5209; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403[0m
-[31m
-Response sent with status: 403
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
-HTTP/1.1 403 Forbidden
-HTTP/1.1 403 Forbidden
----------- res by line ----------
----------- res by line ----------
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=456ee503aaf97994; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b1d2ce6d15a85154; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b1d2ce6d15a85154; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b1d2ce6d15a85154; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=b1d2ce6d15a85154; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=f75c209dcf9a3673; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=f75c209dcf9a3673; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=f75c209dcf9a3673; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=n6nv85crcpqfar8m0aeik52eba; Path=/; HttpOnlySet-Cookie: sessionId=f75c209dcf9a3673; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: sessionId=9aedb468ed356f7b; Path=/; HttpOnly
-Set-Cookie: sessionId=9aedb468ed356f7b; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=9aedb468ed356f7b; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=9aedb468ed356f7b; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: sessionId=345b48febd2172b1; Path=/; HttpOnly
-Set-Cookie: sessionId=345b48febd2172b1; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = sessionId=345b48febd2172b1; Path=/; HttpOnly
--------------Header added: Set-Cookie = sessionId=345b48febd2172b1; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=860d2ec0cb28083d; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=860d2ec0cb28083d; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=860d2ec0cb28083d; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=860d2ec0cb28083d; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=d86c008b9a798211; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=d86c008b9a798211; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=d86c008b9a798211; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=d86c008b9a798211; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=855f5cefedf1c56b; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=855f5cefedf1c56b; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=855f5cefedf1c56b; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=855f5cefedf1c56b; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=e82bf7acb92bfeb8; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=e82bf7acb92bfeb8; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=e82bf7acb92bfeb8; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=e82bf7acb92bfeb8; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=68c909f973792ebb; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=68c909f973792ebb; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=68c909f973792ebb; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=68c909f973792ebb; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=97e6596e00681069; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=97e6596e00681069; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=97e6596e00681069; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=97e6596e00681069; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=136ceb11c2e67390; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=136ceb11c2e67390; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=136ceb11c2e67390; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=136ceb11c2e67390; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=94f1abefa5e7eb33; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=94f1abefa5e7eb33; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=94f1abefa5e7eb33; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=94f1abefa5e7eb33; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=6256378fa9d483f4; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=6256378fa9d483f4; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=6256378fa9d483f4; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=9gk5ear5be9fp6ldns4mupfpme; Path=/; HttpOnlySet-Cookie: sessionId=6256378fa9d483f4; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=mtumnardqs2omn7e0l3cggcle6; Path=/; HttpOnlySet-Cookie: sessionId=b1137436f44289cd; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=mtumnardqs2omn7e0l3cggcle6; Path=/; HttpOnlySet-Cookie: sessionId=b1137436f44289cd; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=mtumnardqs2omn7e0l3cggcle6; Path=/; HttpOnlySet-Cookie: sessionId=b1137436f44289cd; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=mtumnardqs2omn7e0l3cggcle6; Path=/; HttpOnlySet-Cookie: sessionId=b1137436f44289cd; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=4351568ad69b3a27; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=4351568ad69b3a27; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=4351568ad69b3a27; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=4351568ad69b3a27; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[1;32mFile path set to: /www/html/default/index.html[0m
+[1;32mFile path set to: /www/html/default/index.html[0m
+[1;32mFile path set to: /www/html/default/index.html
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -1788,9 +1141,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: /www/musicaltheory/notes.js[0m
+[1;32mFile path set to: /www/musicaltheory/notes.js[0m
+[1;32mFile path set to: /www/musicaltheory/notes.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -1798,9 +1151,9 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js[0m
-[1;32mFile path set to: /www/projects42/html/script.js
+[1;32mFile path set to: /www/musicaltheory/notes.js[0m
+[1;32mFile path set to: /www/musicaltheory/notes.js[0m
+[1;32mFile path set to: /www/musicaltheory/notes.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -1820,9 +1173,9 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
+[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
+[1;32mFile path set to: /www/musicaltheory/intervals.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class created
@@ -1830,9 +1183,63 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css[0m
-[1;32mFile path set to: /www/projects42/html/styles.css
+[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
+[1;32mFile path set to: /www/musicaltheory/intervals.js[0m
+[1;32mFile path set to: /www/musicaltheory/intervals.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 403[0m
+[31m
+Response sent with status: 403[0m
+[31m
+Response sent with status: 403
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 403 Forbidden
+HTTP/1.1 403 Forbidden
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/tones.js[0m
+[1;32mFile path set to: /www/musicaltheory/tones.js[0m
+[1;32mFile path set to: /www/musicaltheory/tones.js
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/tones.js[0m
+[1;32mFile path set to: /www/musicaltheory/tones.js[0m
+[1;32mFile path set to: /www/musicaltheory/tones.js
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -1852,19 +1259,34 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt
 [1;32mFile path set to: 
 [1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png[0m
-[1;32mFile path set to: /www/projects42/images/42_Logo.svg.png
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
@@ -1884,117 +1306,695 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ---------- res by line ----------
 ---------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/index.html[0m
-[1;32mFile path set to: /www/projects42/html/index.html[0m
-[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt
 [1;32mFile path set to: 
 [1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: /www/projects42/html/index.html[0m
-[1;32mFile path set to: /www/projects42/html/index.html[0m
-[1;32mFile path set to: /www/projects42/html/index.html
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/ralph.txt
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
 HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=40d64f9afd6158c4; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=40d64f9afd6158c4; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=40d64f9afd6158c4; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=40d64f9afd6158c4; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
 HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=e0fd6602bfd556e5; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=e0fd6602bfd556e5; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=e0fd6602bfd556e5; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=e0fd6602bfd556e5; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
 HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=0e282422504c182b; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=0e282422504c182b; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=0e282422504c182b; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=0e282422504c182b; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
 [1;32mFile path set to: 
 [1;32m
 HttpResponse object class destroyed
 HttpResponse object class destroyed
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=a6e3e673c5eba699; Path=/; HttpOnly
-Set-Cookie: PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=a6e3e673c5eba699; Path=/; HttpOnly
-Set-Cookie: 
-Set-Cookie
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=a6e3e673c5eba699; Path=/; HttpOnly
--------------Header added: Set-Cookie = PHPSESSID=2a5005d4firjt5a9fbum8jhbqg; Path=/; HttpOnlySet-Cookie: sessionId=a6e3e673c5eba699; Path=/; HttpOnly
--------------Header added: Set-Cookie = 
--------------Header added: Set-Cookie
--------------Header added: 
-[1;32mFile path set to: www/testSession/index.php[0m
-[1;32mFile path set to: www/testSession/index.php[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/diego.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/taratata.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201[0m
+[31m
+Response sent with status: 201
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 201 Created
+HTTP/1.1 201 Created
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt[0m
+[1;32mFile path set to: /www/musicaltheory/files/test.txt
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m

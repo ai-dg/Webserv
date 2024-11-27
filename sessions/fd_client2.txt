@@ -1,50 +1,1184 @@
 *************************************
 *************************************
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=0
+Priority: u=5, i
 
-blabla
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+
+GET /images/Projects.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=0
+Priority: u=5, i
 
-blabla
+
 Requête complète : 
 Requête complète : 
 **************************
 **************************
 *************************************
 *************************************
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/introduce.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET /introduce.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /delete.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/delete.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/delete.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET /delete.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+DELETE /delete_project.py?project_id=1 HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.1:8000/show_projects.py
+Origin: http://127.0.0.1:8000
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+DELETE /delete_project.py?project_id=1 HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.1:8000/show_projects.py
+Origin: http://127.0.0.1:8000
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /delete.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/show_projects.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+
+GET /show_projects.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/delete.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/delete.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /delete.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET /delete.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/find.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /find.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET /find.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /www/projects42/images/Default.jpg HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5, i
+
+
+GET /www/projects42/images/Default.jpg HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/submit_project.py
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST /submit_project.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: multipart/form-data; boundary=---------------------------238262645712985037712130911802
+Content-Length: 1088
+Origin: http://127.0.0.1:8000
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="projectName"
+
+Webserver
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="projectGrade"
+
+5
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="expectedTime"
+
+1235
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="realTime"
+
+9999
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="experience"
+
+bullshit
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="comments"
+
+ahhhhhhhhhhhhhhhhhh
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------238262645712985037712130911802--
+
+POST /submit_project.py HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: multipart/form-data; boundary=---------------------------238262645712985037712130911802
+Content-Length: 1088
+Origin: http://127.0.0.1:8000
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="projectName"
+
+Webserver
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="projectGrade"
+
+5
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="expectedTime"
+
+1235
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="realTime"
+
+9999
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="experience"
+
+bullshit
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="satisfaction"
+
+1
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="comments"
+
+ahhhhhhhhhhhhhhhhhh
+-----------------------------238262645712985037712130911802
+Content-Disposition: form-data; name="image"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------238262645712985037712130911802--
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/add.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /add.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET /add.html HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+GET /script.js HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5, i
+
+
+GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /styles.css HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8000/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
@@ -55,11 +1189,11 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+GET / HTTP/1.1
+Host: 127.0.0.1:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
@@ -76,205 +1210,45 @@ Requête complète :
 **************************
 *************************************
 *************************************
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
+Referer: http://127.0.0.1:8080/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=0
+Priority: u=2
 
-blabla
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
+Referer: http://127.0.0.1:8080/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: same-origin
-Priority: u=0
+Priority: u=2
 
-blabla
+
 Requête complète : 
 Requête complète : 
 **************************
 **************************
 *************************************
 *************************************
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+GET /index.html HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: cross-site
-Priority: u=0, i
-
-
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: cross-site
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-PUT /test.txt HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.9:9050/putfiles.html
-Content-Type: text/plain
-Content-Length: 6
-Origin: http://127.0.0.9:9050
-Connection: keep-alive
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=0
-
-blabla
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
@@ -285,11 +1259,115 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 
-GET /putfiles.html HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+GET /index.html HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8080/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8080/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8080/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+GET /error_pages/default.css HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: http://127.0.0.1:8080/
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+GET / HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
@@ -308,9 +1386,9 @@ Requête complète :
 *************************************
 GET /notes.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Referer: http://127.0.0.9:9050/tC.js
@@ -321,9 +1399,9 @@ Sec-Fetch-Site: same-origin
 
 GET /notes.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Referer: http://127.0.0.9:9050/tC.js
@@ -338,46 +1416,14 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /tC.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/scales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-GET /tC.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/scales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
 GET /intervals.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/scales.js
+Referer: http://127.0.0.9:9050/tones.js
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
@@ -385,140 +1431,12 @@ Sec-Fetch-Site: same-origin
 
 GET /intervals.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/scales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /tones.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-GET /tones.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /tonalfunctions.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-GET /tonalfunctions.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /functions.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-GET /functions.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /scales.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
-Sec-Fetch-Dest: script
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-
-
-GET /scales.js HTTP/1.1
-Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.9:9050/testsScales.js
+Referer: http://127.0.0.9:9050/tones.js
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
@@ -532,9 +1450,9 @@ Requête complète :
 *************************************
 GET /resources/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Referer: http://127.0.0.9:9050/style.css
@@ -545,9 +1463,9 @@ Sec-Fetch-Site: same-origin
 
 GET /resources/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 Referer: http://127.0.0.9:9050/style.css
@@ -562,27 +1480,27 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /testsScales.js HTTP/1.1
+GET /tones.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/
+Referer: http://127.0.0.9:9050/testsScales.js
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
 
 
-GET /testsScales.js HTTP/1.1
+GET /tones.js HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 Accept: */*
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/
+Referer: http://127.0.0.9:9050/testsScales.js
 Sec-Fetch-Dest: script
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
@@ -594,33 +1512,43 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /style.css HTTP/1.1
+PUT /files/ralph.txt HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
+Priority: u=0
 
+blabla
+fgdsfg
 
-GET /style.css HTTP/1.1
+PUT /files/ralph.txt HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Referer: http://127.0.0.9:9050/
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
+Priority: u=0
 
+blabla
+fgdsfg
 
 Requête complète : 
 Requête complète : 
@@ -628,751 +1556,439 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET / HTTP/1.1
+PUT /files/ralph.txt HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
 
+blabla
+fgdsfg
 
-GET / HTTP/1.1
+PUT /files/ralph.txt HTTP/1.1
 Host: 127.0.0.9:9050
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET /index.php HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
+Priority: u=0
 
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+blabla
+fgdsfg
+
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br, zstd
+Referer: http://127.0.0.9:9050/putfiles.html
+Content-Type: text/plain
+Content-Length: 14
+Origin: http://127.0.0.9:9050
 Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
-Priority: u=2
+Priority: u=0
 
-
-GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
+blabla
+fgdsfg
 
 Requête complète : 
 Requête complète : 
@@ -1380,621 +1996,5 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
-GET /error_pages/default.css HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
-Priority: u=2
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=n6nv85crcpqfar8m0aeik52eba
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 7
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-logout=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 7
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Referer: http://127.0.0.10:9051/
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-logout=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=test&login=
-POST / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Referer: http://127.0.0.10:9051/
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 20
-Origin: http://127.0.0.10:9051
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-username=test&login=
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-GET / HTTP/1.1
-Host: 127.0.0.10:9051
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
-Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-Accept-Encoding: gzip, deflate, br, zstd
-Connection: keep-alive
-Cookie: PHPSESSID=9gk5ear5be9fp6ldns4mupfpme
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-Priority: u=0, i
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
+PUT /files/diego.txt HTTP/1.1
+Host: 127.0.0.9:9050

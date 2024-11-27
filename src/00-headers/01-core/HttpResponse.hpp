@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 19:32:15 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:20:51 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ class HttpResponse
          */
         void addHeader(const std::string &key, const std::string &value);
         void checkRedirection(const HttpRequest &req);
-        int put();
+        int put(const HttpRequest &req);
         void send(int fd_client);
 
 };

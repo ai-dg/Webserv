@@ -14,3 +14,7 @@ REQUEST_METHOD: DELETE
 QUERY_STRING: project_id=1
 Extracted project_id: 1
 Project with ID 1 successfully deleted.
+REQUEST_METHOD: DELETE
+QUERY_STRING: project_id=1
+Extracted project_id: 1
+Project with ID 1 successfully deleted.
