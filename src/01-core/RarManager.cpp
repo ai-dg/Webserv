@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 17:18:13 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:52:37 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,10 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         }
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);
-         
-        std::cerr << VIOLET << "2 -- type_request_manager -- " << filePath << RESET << std::endl;
+    
         std::cerr << request.getBody() << std::endl;
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(filePath)) && server->getCgiStatus()) 
         {
-            std::cerr << "3 -- " << filePath << std::endl;
             Cgi_handler cgiHandler;
             cgiHandler.executeCGI(filePath, request, *fd_client);
         }

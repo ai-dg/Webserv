@@ -1,6 +1,382 @@
 HttpResponse object class destroyed
 HttpResponse object class destroyed
 [31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+-------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+Content-Disposition: attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+-------------Header added: Content-Disposition = attachment; filename="DALL%C2%B7E%202024-10-13%2023.39.39%20-%20An%20orange%20tabby%20cat%20with%20a%20curious%20expression,%20standing%20on%20its%20paws%20and%20looking%20upwards.%20Its%20fur%20is%20vibrant%20and%20striped,%20with%20a%20slightly%20mischievous%20l.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
+[1;32mFile path set to: /www/projects42/html/favicon.ico
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/[0m
+[1;32mFile path set to: /www/projects42/upload/
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
+[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
+[1;32mFile path set to: 
+[1;32m
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+Content-Disposition: 
+Content-Disposition
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
+-------------Header added: Content-Disposition = 
+-------------Header added: Content-Disposition
+-------------Header added: 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
 Response sent with status: 404[0m
 [31m
 Response sent with status: 404[0m
@@ -1621,380 +1997,4 @@ Response sent with status:
 ---------------------------------
 HTTP/1.1 404 Not Found
 HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico[0m
-[1;32mFile path set to: /www/projects42/html/favicon.ico
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/[0m
-[1;32mFile path set to: /www/projects42/images/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg[0m
-[1;32mFile path set to: /www/projects42/upload/wp8969397-4k-space-ps4-wallpapers.jpg
-[1;32mFile path set to: 
-[1;32m
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
-Content-Disposition: 
-Content-Disposition
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = attachment; filename="wp8969397-4k-space-ps4-wallpapers.jpg"
--------------Header added: Content-Disposition = 
--------------Header added: Content-Disposition
--------------Header added: 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/[0m
-[1;32mFile path set to: /www/projects42/upload/
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
 ---------- res by line ----------
