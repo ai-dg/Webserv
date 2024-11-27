@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:11 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:51:46 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 19:14:48 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int main(int ac, char **av)
 
         if (!checkFormatOfConfig(path))
         {
+            close(signalPipeFd[0]);
+            close(signalPipeFd[1]);
             throw PathNotCorrectFormat();
         };
 
