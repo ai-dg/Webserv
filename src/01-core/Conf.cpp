@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Conf.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:49 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 18:57:50 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 19:18:55 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,34 +308,6 @@ void Conf::checkAndSetDefaultValues()
                 it->second = "60";
             else if (it->first == "client_header_timeout")
                 it->second = "10"; 
-            else if (it->first == "location_/root")
-                it->second = "/www/html";
-            else if (it->first == "location_/index")
-                it->second = "index.html";
-            else if (it->first == "location_/methods")
-                it->second = "GET POST";
-            else if (it->first == "location_/images/root") 
-                it->second = "/www/images";
-            else if (it->first == "location_/images/autoindex")
-                it->second = "on";
-            else if (it->first == "location_/upload/root")
-                it->second = "/www/uploads";
-            else if (it->first == "location_/upload/methods")
-                it->second = "POST";
-            else if (it->first == "location_/upload/upload_store")
-                it->second = "/uploads/";
-            else if (it->first == "location_/cgi-bin/root")
-                it->second = "/www/cgi-bin";
-            else if (it->first == "location_/cgi-bin/cgi")
-                it->second = "on";
-            else if (it->first == "location_/cgi-bin/cgi_bin")
-                it->second = "/cgi-bin/";
-            else if (it->first == "location_/cgi-bin/methods")
-                it->second = "GET POST";
-            else if (it->first == "location_/cgi-bin/extension")
-                it->second = ".php";
-            else if (it->first == "location_/old-page/return")
-                it->second = "301 /new-page";
         }
     }
 }
