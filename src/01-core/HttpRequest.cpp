@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 19:54:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:19:21 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void HttpRequest::setHeaders(std::string req)
 
 void HttpRequest::setBody(std::string req)
 {
+    std::cerr << YELLOW << req << RESET << std::endl;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
         this->body = req.substr(bodyPos + 4);
@@ -52,6 +53,7 @@ void HttpRequest::setBody(std::string req)
 
 void HttpRequest::setRoute()
 {    
+    std::cout << "setRoute : " << URI << std::endl;
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
 
@@ -101,6 +103,7 @@ void HttpRequest::setURI(std::string req)
         return;
     }
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
+    std::cout << "setURI : " << req << std::endl << "setURI : "<< URI << std::endl;
     Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
@@ -114,6 +117,7 @@ void HttpRequest::parseRequest(std::string req)
     setRoute();
     setAskedFile();
     setHeaders(req);
+    setBody(req);
     if (this->method == "POST" || this->method == "DELETE")
     {
         size_t bodyStartPos = req.find("\r\n\r\n");
@@ -264,7 +268,10 @@ std::string HttpRequest::getBody() const
 
     Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST" || method == "DELETE" || method == "PUT") 
+    {
+        std::cerr << "getBody : " << body << std::endl;
         return body;
+    }
     else if (method == "GET") 
         return getQueryString();
     return "";

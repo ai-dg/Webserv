@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:53:32 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:18:13 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,11 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         HttpResponse response(request);
         //////////////////////// A TESTER !!!!!!!
         if (request.getMethod() == "PUT" && !request.isScript())
-        {
-            response.put();
+        {            
+            std::cerr << VIOLET << "4 -- type_request_manager -- " << response.getFilePath() << RESET << std::endl;
+            std::cerr << VIOLET << "4.1 -- type_request_manager -- " << request.getAskedFile() << RESET << std::endl;
+            std::cerr << VIOLET << "4.1 -- type_request_manager -- " << request.getRoute() << RESET << std::endl;
+            response.put(request);
             response.setStatusCode(201);
             response.send(*fd_client);
         }
@@ -99,6 +102,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         filePath = removeDuplicateSlashes(filePath);
          
         std::cerr << VIOLET << "2 -- type_request_manager -- " << filePath << RESET << std::endl;
+        std::cerr << request.getBody() << std::endl;
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(filePath)) && server->getCgiStatus()) 
         {
             std::cerr << "3 -- " << filePath << std::endl;

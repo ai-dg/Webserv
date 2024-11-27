@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 19:54:39 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:20:32 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,11 +232,19 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
     (void) req;
 }
 
-int HttpResponse::put()
+int HttpResponse::put(const HttpRequest &req)
 {
+    (void) req;
     std::cerr << BOLD_GREEN << this->filePath << RESET << std::endl;
-    Location *route;
-    (void) route;
+    std::ofstream outfile(&filePath.c_str()[1]);
+    if (!outfile)
+    {
+        std::cerr << "fail creating file";
+        return -1;
+    }
+    std::cout << BLUE << req.getBody() << RESET << std::endl;
+    outfile << req.getBody();
+    outfile.close();
     std::cerr << RED << "PUUUUUUUUTTTTTTTTTTTT" << RESET << std::endl;
     return 1;
 }
