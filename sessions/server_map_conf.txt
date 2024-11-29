@@ -34,7 +34,7 @@ error_page_500: /default/error_pages/500.html
 host: 127.1.1.1
 keepalive_timeout: 65
 server_name: server_test.42.fr
-Ports to listen on 1: 7999 
+Ports to listen on 1: 8001 
 --------------------------------------
 
 Configuration du serveur 3 :

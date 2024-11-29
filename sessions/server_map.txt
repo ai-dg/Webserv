@@ -33,7 +33,7 @@ server {
 
 map #2: 
 server {
-    listen 7999;
+    listen 8001;
     host 127.1.1.1;
     server_name server_test.42.fr;
 
@@ -55,7 +55,7 @@ server {
     location / {
         root /www/test_site/;
         index index.html;
-        methods GET;
+        methods GET POST;
     }
 
 # /directory/ must answer to GET request and the root of it would be
