@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:52:37 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:15:09 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         HttpResponse response(request);
         //////////////////////// A TESTER !!!!!!!
         if (request.getMethod() == "PUT" && !request.isScript())
-        {            
-            std::cerr << VIOLET << "4 -- type_request_manager -- " << response.getFilePath() << RESET << std::endl;
-            std::cerr << VIOLET << "4.1 -- type_request_manager -- " << request.getAskedFile() << RESET << std::endl;
-            std::cerr << VIOLET << "4.1 -- type_request_manager -- " << request.getRoute() << RESET << std::endl;
+        {
             response.put(request);
             response.setStatusCode(201);
             response.send(*fd_client);
