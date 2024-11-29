@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 16:20:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:46:03 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class HttpResponse
         std::string mimeType;
         std::string filePath;
         std::string body;
+        std::string method;
         int statusCode;
 
         /**
@@ -56,6 +57,7 @@ class HttpResponse
          */
         std::string getHeaders();
         std::string getFilePath() const;
+        int         getStatusCode() const;
         
         /**
          * @brief Public methods
