@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:55:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:54:38 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         else
             this->filePath = Route->root() + "/" + req.getAskedFile();
     }
-    
+    this->method = req.getMethod();
     if(Route->methods().find(req.getMethod()) == std::string::npos)
     {
         std::cerr << "NO METHOD MATCH" << std::endl;
@@ -177,10 +177,14 @@ void HttpResponse::setStatusCode(int stat)
 {
     if (stat == AUTO)
     {
+        std::cout << "Body: " << body << std::endl;
         if (getFile(this->filePath) == FILENOTFOUND)
             statusCode = 404;
         else
             this->statusCode = 200;
+
+        if (body.size() == 0 && method == "POST")
+            statusCode = 405;
     }
     else
         statusCode = stat;
@@ -206,6 +210,11 @@ std::string HttpResponse::getHeaders()
 std::string HttpResponse::getFilePath() const
 {
     return this->filePath;
+}
+
+int HttpResponse::getStatusCode() const
+{
+    return this->statusCode;
 }
 
 /**

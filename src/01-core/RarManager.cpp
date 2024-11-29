@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 13:15:09 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:38:01 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,11 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         filePath = removeDuplicateSlashes(filePath);
     
         std::cerr << request.getBody() << std::endl;
+
+        response.setBody(request.getBody());
+
+        std::cout << "Returning HTTP status code: " << response.getStatusCode() << std::endl;
+
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(filePath)) && server->getCgiStatus()) 
         {
             Cgi_handler cgiHandler;
@@ -112,8 +117,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         else 
             response.send(*fd_client);
         std::string connectionHeader = request.getHeader("Connection");
-        if (connectionHeader != "keep-alive") 
+        if (connectionHeader.empty() && connectionHeader[0] != '\0' && connectionHeader != "keep-alive") 
         {
+            std::cout << "Connection: close" << std::endl;
             epoll->removeFd(*fd_client);
             close(*fd_client);
         }
@@ -212,7 +218,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                             int serverIndex = findServerIndex(req, Servers);                        
                             type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
                             requestMap.erase(fd_client);
-                            close(fd_client);
+                            // close(fd_client);
                         }
                     }
                     if (reads == 0) 
