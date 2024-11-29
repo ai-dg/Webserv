@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:11 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 19:14:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:46:36 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ int main(int ac, char **av)
 
         SessionManager sessionManager;
         if (start_all_servers(fd_sockets, Servers, Configs) == 1)
-            return 1;
-            
+            return 1;    
         /**
          * @brief Gestion du trafic de requetes et reponses (fd du client et du serveur)
          */

@@ -1,22 +1,6 @@
-HTTP/1.1 200 OK
+HTTP/1.1 0Unknown Status Code
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
-Date: Fri, 29 Nov 2024 13:11:16 GMT
-Content-Length: 530
+Date: Fri, 29 Nov 2024 20:24:55 GMT
+Content-Length: 0
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" name="dummy" value="">
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
