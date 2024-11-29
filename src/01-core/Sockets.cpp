@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Sockets.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:28 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:23:50 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:52:38 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,6 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server *>& Serve
             if (std::find(listPorts.begin(), listPorts.end(), port) == listPorts.end())
             {
                 listPorts.push_back(port);
-
             }
         }
     }
@@ -172,11 +171,11 @@ int socket_start(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
 
 int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& listPorts) 
 {
-    struct sockaddr_in addr;
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = INADDR_ANY;
     for (size_t i = 0; i < listPorts.size(); ++i) 
     {
+        struct sockaddr_in addr;
+        addr.sin_family = AF_INET;
+        addr.sin_addr.s_addr = INADDR_ANY;
         int fd_socket = fd_sockets[i];
         int opt = 1;
         if (setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int)) < 0) 

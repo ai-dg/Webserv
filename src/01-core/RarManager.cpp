@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 13:15:09 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 20:24:30 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     Log::output("./sessions/fd_client2.txt") << "Requête complète : " << std::endl;
     Log::output("./sessions/fd_client2.txt") << *req << std::endl;
     Log::output("./sessions/fd_client2.txt") << "*************************************" << std::endl;
-    
+    static int count = 1;
+
+    std::cerr << BOLD_RED << "request nbr " << BOLD_WHITE << count++ << RESET<< std::endl;
     size_t headerEnd = req->find("\r\n\r\n");
     if (headerEnd != std::string::npos) 
     {
@@ -97,10 +99,14 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         }
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);
-    
-        std::cerr << request.getBody() << std::endl;
-        if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(filePath)) && server->getCgiStatus()) 
+        if (server->getCgiStatus())
+            std::cerr << "cgi on" <<std::endl;
+        if (request.hasFileSpecialRoute(filePath))
+            std::cerr << "has special route" <<std::endl;
+        std::cerr << "typeRequestManager debug filepath : " << filePath << std::endl;
+        if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath))) && server->getCgiStatus()) 
         {
+            std::cerr << "youpiiiii cgi !!!!!" << std::endl;
             Cgi_handler cgiHandler;
             cgiHandler.executeCGI(filePath, request, *fd_client);
         }
@@ -112,11 +118,13 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         else 
             response.send(*fd_client);
         std::string connectionHeader = request.getHeader("Connection");
-        if (connectionHeader != "keep-alive") 
+            std::cerr << BOLD_BLUE << "connectionHeader : " << connectionHeader << RESET << std::endl;
+        /*if (connectionHeader != "keep-alive") 
         {
             epoll->removeFd(*fd_client);
             close(*fd_client);
-        }
+        }*/
+       (void) epoll;
         sessionManager.saveSessionsToFile();
         req->clear();
     }
@@ -139,8 +147,8 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
         for (size_t i = 0; i < fd_sockets.size(); ++i)
         {
-            epoll.addFd(fd_sockets[i], EPOLLIN);  
-            epoll.makeSocketNonBlocking(fd_sockets[i]);  
+            epoll.addFd(fd_sockets[i], EPOLLIN);
+            epoll.makeSocketNonBlocking(fd_sockets[i]);
         }
         
         epoll.addFd(signalPipeFd[0], EPOLLIN);
@@ -211,16 +219,16 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                         {
                             int serverIndex = findServerIndex(req, Servers);                        
                             type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
-                            requestMap.erase(fd_client);
-                            close(fd_client);
+                            //requestMap.erase(fd_client);
+                            //close(fd_client);
                         }
                     }
-                    if (reads == 0) 
+                    /*if (reads == 0) 
                     {
                         epoll.removeFd(fd_client);
                         close(fd_client);
                         requestMap.erase(fd_client);
-                    }
+                    }*/
                 }
             }
         }

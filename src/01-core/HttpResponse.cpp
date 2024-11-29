@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:55:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 20:08:01 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void HttpResponse::setMineType(void)
  */
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
-    setResourcePath(req);
+    //setResourcePath(req);
     removeDuplicateSlashes(this->filePath);
     body = "";
     setMineType();
@@ -99,8 +99,11 @@ void HttpResponse::setRedirection(int status)
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
+    std::string extension = getExtension(uri);
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
+        std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
@@ -118,11 +121,11 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         addHeader("Location", Route->getRedirectionPath());
         return;
     }
-    std::string extension = getExtension(uri);
-    if (req.hasFileSpecialRoute(filePath))
+    if (req.hasFileSpecialRoute(extension))
     {
-        Location *altRoute = req.getRouteConf(getExtension(filePath));
+        Location *altRoute = req.getRouteConf(getExtension(extension));
         this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
+         std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;
         return;
     }
     if (uri.find("/cgi-bin/") != std::string::npos
@@ -147,11 +150,21 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
                 return;
             }
             else
+            {
                 this->filePath = Route->root() + "/" + Route->findIndex();
+              std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
+            }
 
         }
         else
-            this->filePath = Route->root() + "/" + req.getAskedFile();
+        {
+            if(req.getAskedFile().find(".") == std::string::npos)
+                this->filePath = Route->root() + Route->findIndex();
+            else
+                this->filePath = Route->root() + req.getAskedFile();
+            std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
+              std::cerr << get_current_date() << std::endl;
+        }
     }
     
     if(Route->methods().find(req.getMethod()) == std::string::npos)
@@ -168,16 +181,18 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         addHeader("Content-Disposition", "attachment; filename=\"" + req.getAskedFile() + "\"");
         this->filePath = Route->root() + "/" + req.getAskedFile();
     }
-    setStatusCode(AUTO);    
     filePath = removeDuplicateSlashes(this->filePath);
+    setStatusCode(AUTO);    
     Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
 }
 
 void HttpResponse::setStatusCode(int stat)
 {
+    std::string file = getFile(this->filePath);
+    std::cerr << "setStatusCode : " << this->filePath << "  ->    " << file <<std::endl;
     if (stat == AUTO)
     {
-        if (getFile(this->filePath) == FILENOTFOUND)
+        if (file == FILENOTFOUND)
             statusCode = 404;
         else
             this->statusCode = 200;
