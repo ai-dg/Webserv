@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 20:24:30 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 20:28:11 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
             }
             response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
         }
+        
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);
         if (server->getCgiStatus())
