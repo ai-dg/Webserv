@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 16:20:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/30 23:58:56 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class HttpResponse
         std::string filePath;
         std::string body;
         int statusCode;
+        bool sendBody;
 
         /**
          * @brief Private setters
@@ -47,8 +48,10 @@ class HttpResponse
         void setRedirection(std::string newPath, int status);
         void setRedirection(std::string newPath);
         void setRedirection(int status);
+        std::string addSub(std::string route, std::string uri);
         void setResourcePath(const HttpRequest &req);
         void setStatusCode(int stat);
+        void setStatusCode(int stat, int body_status);
         void setBody(std::string);
 
         /**
@@ -64,5 +67,7 @@ class HttpResponse
         void checkRedirection(const HttpRequest &req);
         int put(const HttpRequest &req);
         void send(int fd_client);
+
+        bool isAllowedMethod(Location *Route, HttpRequest req) const;
 
 };

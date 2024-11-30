@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:57:58 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/30 23:47:53 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,22 +53,23 @@ void HttpRequest::setBody(std::string req)
 void HttpRequest::setRoute()
 {    
     size_t lastSlashPos = URI.find_last_of('/');
-    size_t lastDotPos = URI.find_last_of('.');
+   // size_t lastDotPos = URI.find_last_of('.');
 
-    if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
-    {
+   /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
+    {*/
         if (lastSlashPos == 0)
             route = "/"; 
         else
             route = URI.substr(0, lastSlashPos + 1); 
-    }
-    else
+    /*}*/
+    /*else
     { 
         if (URI[URI.size() - 1] != '/')
             route = URI + "/"; 
         else
             route = URI; 
-    }
+    }*/
+    std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
 }
 
 void HttpRequest::setAskedFile()

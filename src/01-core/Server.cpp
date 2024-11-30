@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/29 13:10:18 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:25:51 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,17 @@ int Server::getId()
 bool Server::getCgiStatus()
 {
     Location *Route = getRoute("/cgi-bin/");
+    if (!Route)
+        return false;
+    if (Route->cgi() == "on" )
+        return true;
+    return false;
+}
+
+bool Server::getCgiStatus(std::string path)
+{
+    std::cerr << "getcgistatus : " << path << std::endl;
+    Location *Route = getRoute(getExtension(path));
     if (!Route)
         return false;
     if (Route->cgi() == "on" )

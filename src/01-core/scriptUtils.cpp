@@ -12,12 +12,14 @@ std::string getContextFromFile(std::string path)
     {
         if (line.find("#!/usr/bin/python") != std::string::npos)
             context = "python3";
-        if (line.find("#!/usr/bin/bash") != std::string::npos)
+        else if (line.find("#!/usr/bin/bash") != std::string::npos)
             context = "bash";
-        if (line.find("#!/usr/bin/perl") != std::string::npos)
+        else if (line.find("#!/usr/bin/perl") != std::string::npos)
             context = "perl";
+        else if (line.find("#!") != std::string::npos)
+            context = line.substr(line.find_last_of("/") + 1, std::string::npos);
     }
-    if (line.find("<?php"))
+    if (line.find("<?php") != std::string::npos)
         context = "php";
     file.close();
     return context;
