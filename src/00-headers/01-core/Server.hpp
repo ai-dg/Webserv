@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/11/21 20:12:58 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:20:52 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ class Server
          */
         int getId();
         bool getCgiStatus();
+        bool getCgiStatus(std::string path);
         in_addr_t getAddr();
         Conf *getConf() const;
         size_t getMaxBodySize();

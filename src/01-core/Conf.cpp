@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:49 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 19:18:55 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/11/30 11:55:38 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -296,6 +296,8 @@ void Conf::checkAndSetDefaultValues()
                 it->second = "/default/error_pages/404.html";
             else if (it->first == "error_page_405") 
                 it->second = "/default/error_pages/405.html";
+            else if (it->first == "error_page_406") 
+                it->second = "/default/error_pages/406.html";
             else if (it->first == "error_page_413") 
                 it->second = "/default/error_pages/413.html";
             else if (it->first == "error_page_500") 

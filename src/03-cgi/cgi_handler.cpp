@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/25 09:59:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/11/29 23:58:24 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
  */
 std::string Cgi_handler::getExeContext(std::string file)
 {
+    std::cerr << "get ExeContext debug file : " << file << std::endl;
     if (file.find(".") == std::string::npos)
         return "bash";
     if (file.find(".php") != std::string::npos)
@@ -31,9 +32,9 @@ std::string Cgi_handler::getExeContext(std::string file)
         return "perl";
     if (file.find(".sh") != std::string::npos)
         return "bash";
-    if (file.find(".cgi") != std::string::npos) 
-        return getContextFromFile(file);
-    return "";
+    //if (file.find(".cgi") != std::string::npos) 
+    return getContextFromFile(file);
+    //return "";
 }
 
 void Cgi_handler::addToEnvironment(const char * env)
@@ -75,6 +76,8 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     }
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
+    this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
+    this->addToEnvironment("PATH_INFO=/");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
@@ -185,6 +188,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
             
         std::string exe_context = getExeContext(scriptPath);
+        std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
             const_cast<char*>(exe_context.c_str()),       
@@ -235,6 +239,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
+            std::cerr << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }
@@ -243,6 +248,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             Log::error("read from pipe");
             Log::output("./logs/error.log") << "Parent: Failed to read from pipe." << std::endl;
         }
+       // write(fd_client, "\r\n\r\n", 4);
         close(pipe_out[0]); 
     }
 }
