@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/30 21:19:19 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 17:00:12 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,16 +225,16 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                         {
                             int serverIndex = findServerIndex(req, Servers);                        
                             type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
-                            //requestMap.erase(fd_client);
+                            requestMap.erase(fd_client);
                             //close(fd_client);
                         }
                     }
-                    /*if (reads == 0) 
+                    if (reads == 0) 
                     {
-                        epoll.removeFd(fd_client);
-                        close(fd_client);
+                        //epoll.removeFd(fd_client);
+                        //close(fd_client);
                         requestMap.erase(fd_client);
-                    }*/
+                    }
                 }
             }
         }
