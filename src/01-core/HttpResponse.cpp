@@ -125,6 +125,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
     std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
     std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
@@ -199,7 +200,10 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         {
            //////// + addToRoute ///////
             if(req.getAskedFile().find(".") == std::string::npos)
-                this->filePath = routed + Route->findIndex();
+            {
+                this->filePath = routed + (Route->findIndex()); //// findindex ???????
+                std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
+            }
             else
                 this->filePath = routed  + req.getAskedFile();
             std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
@@ -230,7 +234,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 void HttpResponse::setStatusCode(int stat)
 {
     std::string file = getFile(this->filePath);
-    std::cerr << "setStatusCode : " << this->filePath << "  ->    " << file <<std::endl;
+   
     if (stat == AUTO)
     {
         if (file == FILENOTFOUND)
@@ -240,6 +244,7 @@ void HttpResponse::setStatusCode(int stat)
     }
     else
         statusCode = stat;
+    std::cerr << "setStatusCode(1) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setStatusCode(int stat, int body_status)
@@ -247,7 +252,6 @@ void HttpResponse::setStatusCode(int stat, int body_status)
     if (body_status == NO_BODY)
         sendBody = false;
     std::string file = getFile(this->filePath);
-    std::cerr << "setStatusCode : " << this->filePath << "  ->    " << file <<std::endl;
     if (stat == AUTO)
     {
         if (file == FILENOTFOUND)
@@ -257,6 +261,7 @@ void HttpResponse::setStatusCode(int stat, int body_status)
     }
     else
         statusCode = stat;
+    std::cerr << "setStatusCode(2) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setBody(std::string content)
@@ -352,7 +357,7 @@ void HttpResponse::send(int fd_client)
     } 
     else
         res += CRLF;
-    std::cerr << RED << "&" << res << "&" << RESET <<std::endl;
+    //std::cerr << RED << "&" << res << "&" << RESET <<std::endl;
     write(fd_client, res.c_str(), res.size());
     std::ofstream file("./sessions/fd_client.txt");
     if (file.is_open()) 

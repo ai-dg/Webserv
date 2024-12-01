@@ -68,7 +68,7 @@ server {
 # it should search for youpi.bad_extension files
     location /directory/ {
         root /www/test_site/YoupiBanane/;
-        index youpi.bad_extention;
+        index youpi.bad_extension;
         methods GET;
     }
 
