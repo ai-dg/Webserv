@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/11/30 11:58:08 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 10:46:00 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ std::string getMime(const std::string& mime)
             if (line.find(mime) != std::string::npos)
             {
                 mime_type = line.substr(0,line.find(' '));
+                file.close();
                 return mime_type;
             }
         }
@@ -83,11 +84,16 @@ std::string removePrefix(const std::string& input)
     return input; 
 }
 
+
+/// @brief //////////// TRY with file to find.... to replace index.html
+/// @param path 
+/// @return /////
 std::string getFile(const std::string& path)
 {
     std::string path2 = removePrefix(path);
     std::string decodedPath = urlDecode(path2);
     std::string local;
+    std::string content;
 
     if (!path2.empty() && path2[0] == '/') 
         local = "." + decodedPath;  
@@ -95,13 +101,14 @@ std::string getFile(const std::string& path)
         local = "./" + decodedPath; 
     
     if (decodedPath.size() < 10)
-        local += "index.html";
+        local += "index.html";///hardcoded...
     Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
     std::ifstream file(local.c_str());
-    std::string content;
+ 
     std::string line;
     if (file.is_open())
     {
+        std::cerr << "opeeeeeeeeeennnnnned !!!!!!!!!!!!!!!!!" << std::endl;
         while (std::getline(file, line))
         {
             if (!content.empty())
@@ -110,11 +117,13 @@ std::string getFile(const std::string& path)
         }
        Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
+        std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl; 
         return content;
     }
     else
         Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
     file.close();
+    std::cerr << "GETFILE debug " << local << "  -  "  << content << std::endl; 
     return FILENOTFOUND;
 }
 
@@ -266,4 +275,24 @@ bool checkFormatOfPaths(std::string const& path_file)
 const char* PathNotCorrectFormat::what() const throw()
 {
     return "Path file is not in the correct format.";
+}
+
+bool hasExtension(std::string file)
+{
+    return (file.find(".") != std::string::npos);    
+}
+
+bool isValidUri(std::string uri)
+{
+    if (uri.find("%20") != std::string::npos)
+        return false;
+    if (uri.find_first_of("<>\"#{}|\\^~[]`") !=std::string::npos)
+        return false;
+    for (size_t i = 0; i < uri.size(); i++)
+    {
+        if (uri[i] <= 0x1F || uri[i] == 0x7F)
+            return false;
+    }
+    return true;
+    
 }

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 00:12:52 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 10:25:05 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,10 +105,16 @@ std::string HttpResponse::addSub(std::string route, std::string uri)
     if (uri.find(route) != std::string::npos && uri.find(route) == 0)
         sub = uri.substr(route.size(), std::string::npos);
     std::cerr << "add sub :::::::::::::::::::::::::::: " << sub << std::endl;
+    if (sub.find_last_of("/") != std::string::npos)
+        sub = sub.substr(0, sub.find_last_of("/"));
+    if (sub.find(".") != std::string::npos)
+        sub = "";
     return sub + "/";
     
 }
 
+
+////////////////////// new fonctions isValidUri(),bool hasExtension(std::string file);
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
@@ -126,6 +132,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         setRedirection(404);
         return;
     }
+    std::string routed = Route->root() + addSub(route,uri);
     if (Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
     {
         setRedirection(403);
@@ -192,9 +199,9 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         {
            //////// + addToRoute ///////
             if(req.getAskedFile().find(".") == std::string::npos)
-                this->filePath = Route->root() + Route->findIndex();
+                this->filePath = routed + Route->findIndex();
             else
-                this->filePath = Route->root()  + req.getAskedFile();
+                this->filePath = routed  + req.getAskedFile();
             std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
               std::cerr << get_current_date() << std::endl;
         }
@@ -207,12 +214,13 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         addHeader("Allow", Route->methods());
         return ;
     }
-    if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
-        setBody(getIndexFile("./" + Route->root() + "/"));
-    else if (pathIsDir("./" + Route->root()) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
+    //routed instead of Route->root()
+    if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
+        setBody(getIndexFile("./" + routed + "/"));
+    else if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
     {
         addHeader("Content-Disposition", "attachment; filename=\"" + req.getAskedFile() + "\"");
-        this->filePath = Route->root() + "/" + req.getAskedFile();
+        this->filePath = routed + "/" + req.getAskedFile();
     }
     filePath = removeDuplicateSlashes(this->filePath);
     setStatusCode(AUTO);    
@@ -314,6 +322,7 @@ bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 
 void HttpResponse::send(int fd_client)
 {   
+    std::cerr << "SEND _ filepath debug" << filePath << std::endl;
     std::string resFile;
     if (body.size() > 0)
         resFile = body;

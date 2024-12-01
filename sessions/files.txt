@@ -1,18 +1,380 @@
 test getfile : 
 test getfile : 
 test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 32
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 32
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 
+local 2 ./www/test_site/YoupiBanane/Yeah/
 local 2 
 test getfile : 
 test getfile : 
 test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 32
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 32
+local 2 ./www/test_site/YoupiBanane/Yeah/ - path size : 
+local 2 ./www/test_site/YoupiBanane/Yeah/
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 
+local 2 ./www/error_pages/404.html
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouac
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic
+local 2 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 42
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/other.pouic
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/
+local 2 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/
+local 2 
+test getfile : 
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
+local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
+local 2 ./www/test_site/YoupiBanane/nop/
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 
+local 2 ./www/error_pages/404.html
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 36
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 36
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 
+local 2 ./www/test_site/YoupiBanane/oulalala/
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 36
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 36
+local 2 ./www/test_site/YoupiBanane/oulalala/ - path size : 
+local 2 ./www/test_site/YoupiBanane/oulalala/
 local 2 
 local : 
 local : 
@@ -102,81 +464,21 @@ local :
 path : 
 path : 
 path : 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
 test getfile : 
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 
-local 2 ./www/test_site/index.html
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 
+local 2 ./www/test_site/YoupiBanane/
 local 2 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
 test getfile : 
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 
-local 2 ./www/test_site/index.html
+test getfile : 
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 
+local 2 ./www/test_site/YoupiBanane/
 local 2 
 local : 
 local : 
@@ -763,6 +1065,776 @@ test getfile : <!DOCTYPE html>
 </body>
 </html>
 test getfile : <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test POST avec Body Taille 0</title>
+</head>
+<body>
+    <h1>Test POST avec Body de taille 0</h1>
+    <form action="http://127.1.1.1:8001/" method="POST">
+        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
+        <input type="hidden" >
+        <button type="submit">Envoyer POST (Body Taille 0)</button>
+    </form>
+</body>
+</html>
+test getfile : 
+local 2 ./www/test_site/index.html - path size : 25
+local 2 ./www/test_site/index.html - path size : 25
+local 2 ./www/test_site/index.html - path size : 
+local 2 ./www/test_site/index.html
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 
+local 2 ./www/error_pages/404.html
+local 2 
+test getfile : FILE NOT FOUND
+test getfile : FILE NOT FOUND
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 
+local 2 ./www/test_site/YoupiBanane/
+local 2 
+test getfile : FILE NOT FOUND
+test getfile : FILE NOT FOUND
+test getfile : 
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 27
+local 2 ./www/test_site/YoupiBanane/ - path size : 
+local 2 ./www/test_site/YoupiBanane/
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 
+local 2 ./www/error_pages/405.html
+local 2 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 
+local 2 ./www/error_pages/405.html
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 
+local 2 ./www/error_pages/405.html
+local 2 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error_pages/default.css">
+    <title>405 Method Not Allowed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .server-signature {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">405 Method Not Allowed</h1>
+        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
+        <hr class="separator">
+        <p class="server-signature">Webserv 42</p>
+    </div>
+</body>
+</html>
+test getfile : 
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 24
+local 2 ./www/error_pages/405.html - path size : 
+local 2 ./www/error_pages/405.html
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test POST avec Body Taille 0</title>
+</head>
+<body>
+    <h1>Test POST avec Body de taille 0</h1>
+    <form action="http://127.1.1.1:8001/" method="POST">
+        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
+        <input type="hidden" >
+        <button type="submit">Envoyer POST (Body Taille 0)</button>
+    </form>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test POST avec Body Taille 0</title>
+</head>
+<body>
+    <h1>Test POST avec Body de taille 0</h1>
+    <form action="http://127.1.1.1:8001/" method="POST">
+        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
+        <input type="hidden" >
+        <button type="submit">Envoyer POST (Body Taille 0)</button>
+    </form>
+</body>
+</html>
+test getfile : 
+local 2 ./www/test_site/index.html - path size : 25
+local 2 ./www/test_site/index.html - path size : 25
+local 2 ./www/test_site/index.html - path size : 
+local 2 ./www/test_site/index.html
+local 2 
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test POST avec Body Taille 0</title>
+</head>
+<body>
+    <h1>Test POST avec Body de taille 0</h1>
+    <form action="http://127.1.1.1:8001/" method="POST">
+        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
+        <input type="hidden" >
+        <button type="submit">Envoyer POST (Body Taille 0)</button>
+    </form>
+</body>
+</html>
+test getfile : FILE NOT FOUND
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -918,20 +1990,6 @@ local 2 ./www/error_pages/404.html - path size : 24
 local 2 ./www/error_pages/404.html - path size : 
 local 2 ./www/error_pages/404.html
 local 2 
-file not found ! 
-file not found ! 
-local 2 ./www/test_site/directory/index.html - path size : 35
-local 2 ./www/test_site/directory/index.html - path size : 35
-local 2 ./www/test_site/directory/index.html - path size : 
-local 2 ./www/test_site/directory/index.html
-local 2 
-file not found ! 
-file not found ! 
-local 2 ./www/test_site/directory/index.html - path size : 35
-local 2 ./www/test_site/directory/index.html - path size : 35
-local 2 ./www/test_site/directory/index.html - path size : 
-local 2 ./www/test_site/directory/index.html
-local 2 
 local : 
 local : 
 local : 
@@ -940,1061 +1998,3 @@ path :
 path : 
 test getfile : <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 
-local 2 ./www/error_pages/405.html
-local 2 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 
-local 2 ./www/error_pages/405.html
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 
-local 2 ./www/error_pages/405.html
-local 2 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>405 Method Not Allowed</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">405 Method Not Allowed</h1>
-        <p class="error-message">The HTTP method used in your request is not supported for the requested resource.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 24
-local 2 ./www/error_pages/405.html - path size : 
-local 2 ./www/error_pages/405.html
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : 
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 
-local 2 ./www/test_site/index.html
-local 2 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST avec Body Taille 0</title>
-</head>
-<body>
-    <h1>Test POST avec Body de taille 0</h1>
-    <form action="http://127.1.1.1:8001/" method="POST">
-        <!-- Champ vide pour s'assurer qu'aucune donnée n'est envoyée -->
-        <input type="hidden" >
-        <button type="submit">Envoyer POST (Body Taille 0)</button>
-    </form>
-</body>
-</html>
-test getfile : 
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 25
-local 2 ./www/test_site/index.html - path size : 
-local 2 ./www/test_site/index.html
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
-local 2 ./www/test_site/YoupiBanane/nop/
-local 2 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 31
-local 2 ./www/test_site/YoupiBanane/nop/ - path size : 
-local 2 ./www/test_site/YoupiBanane/nop/
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-test getfile : 
-test getfile : 
-test getfile : 
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 27
-local 2 ./www/test_site/YoupiBanane/ - path size : 
-local 2 ./www/test_site/YoupiBanane/
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">404 Not Found</h1>
-        <p class="error-message">The requested URL was not found on this server.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">404 Not Found</h1>
-        <p class="error-message">The requested URL was not found on this server.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/404.html - path size : 24
-local 2 ./www/error_pages/404.html - path size : 24
-local 2 ./www/error_pages/404.html - path size : 
-local 2 ./www/error_pages/404.html
-local 2 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">404 Not Found</h1>
-        <p class="error-message">The requested URL was not found on this server.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">404 Not Found</h1>
-        <p class="error-message">The requested URL was not found on this server.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : 
-local 2 ./www/error_pages/404.html - path size : 24
-local 2 ./www/error_pages/404.html - path size : 24
-local 2 ./www/error_pages/404.html - path size : 
-local 2 ./www/error_pages/404.html
-local 2 
-local : 
-local : 
-local : 
-path : 
-path : 
-path : 
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        .error-container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .error-title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .error-message {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        .separator {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        .server-signature {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="error-container">
-        <h1 class="error-title">404 Not Found</h1>
-        <p class="error-message">The requested URL was not found on this server.</p>
-        <hr class="separator">
-        <p class="server-signature">Webserv 42</p>
-    </div>
-</body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error_pages/default.css">
-    <title>404 Not Found</title>
-    <style>
-        body {

@@ -3,6 +3,211 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/Yeah HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/Yeah HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/Yeah HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/Yeah HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
 -----------Extracted URI: [34m/directory/oulalala[0m
 -----------Extracted URI: [34m/directory/oulalala[0m
 -----------Extracted URI: [34m/directory/oulalala
@@ -115,6 +320,191 @@ Accept-Encoding: gzip
 
 [0m
 --START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-------end parsed body
+-------end parsed body
+-------Parsed Body: 0
+
+
+-------Parsed Body: 0
+
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
@@ -497,70 +887,38 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -570,70 +928,38 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -643,70 +969,34 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mHEAD / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mHEAD / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mHEAD / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mHEAD / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
 
 
 --START--[1;33m
@@ -716,70 +1006,63 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-------end parsed body
+-------end parsed body
+-------Parsed Body: 0
+
+
+-------Parsed Body: 0
+
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mPOST / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mPOST / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mPOST / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mPOST / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 
 --START--[1;33m
@@ -789,212 +1072,38 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET / HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
-
-[0m
---START--[1;33mGET /directory/nop HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -1004,66 +1113,38 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/error_pages/default.css[0m
------------Extracted URI: [34m/directory/error_pages/default.css[0m
------------Extracted URI: [34m/directory/error_pages/default.css
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/error_pages/default.css HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.1.1.1:8001/directory/nop
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/error_pages/default.css HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.1.1.1:8001/directory/nop
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/error_pages/default.css HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.1.1.1:8001/directory/nop
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/error_pages/default.css HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Referer: http://127.1.1.1:8001/directory/nop
-Sec-Fetch-Dest: style
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Site: same-origin
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -1073,70 +1154,120 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop[0m
------------Extracted URI: [34m/directory/nop
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/nop HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Sec-Fetch-User: ?1
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop/ HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -1502,77 +1633,32 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/directory/oulalala[0m
------------Extracted URI: [34m/directory/oulalala[0m
------------Extracted URI: [34m/directory/oulalala
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah[0m
+-----------Extracted URI: [34m/directory/Yeah
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/oulalala HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/oulalala HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/oulalala HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/oulalala HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-HttpRequest class object copied
-HttpRequest class object copied
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/directory/youpi.bla[0m
------------Extracted URI: [34m/directory/youpi.bla[0m
------------Extracted URI: [34m/directory/youpi.bla
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory/youpi.bla HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET /directory/youpi.bla HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET /directory/youpi.bla HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m
---START--[1;33mGET /directory/youpi.bla HTTP/1.1
+--START--[1;33mGET /directory/Yeah HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
@@ -1588,32 +1674,32 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/directory/youpi.bad_extension[0m
------------Extracted URI: [34m/directory/youpi.bad_extension[0m
------------Extracted URI: [34m/directory/youpi.bad_extension
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac[0m
+-----------Extracted URI: [34m/directory/nop/other.pouac
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouac HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
@@ -1629,32 +1715,32 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic[0m
+-----------Extracted URI: [34m/directory/nop/other.pouic
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory HTTP/1.1
+--START--[1;33mGET /directory/nop/other.pouic HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
@@ -1670,31 +1756,35 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/[0m
+-----------Extracted URI: [34m/directory/nop/
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mHEAD / HTTP/1.1
+--START--[1;33mGET /directory/nop/ HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mHEAD / HTTP/1.1
+--START--[1;33mGET /directory/nop/ HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mHEAD / HTTP/1.1
+--START--[1;33mGET /directory/nop/ HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mHEAD / HTTP/1.1
+--START--[1;33mGET /directory/nop/ HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 --START--[1;33m
@@ -1707,98 +1797,32 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
-
--------Parsed Body: 0
-
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
+--START--[1;33mGET /directory/nop HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
+--START--[1;33mGET /directory/nop HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
+--START--[1;33mGET /directory/nop HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
+--START--[1;33mGET /directory/nop HTTP/1.1
 Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
@@ -1974,27 +1998,3 @@ Accept-Encoding: gzip
 
 --START--[1;33m
 --START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-
-[0m--END--
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.1.1.1:8001
-User-Agent: Go-http-client/1.1
-

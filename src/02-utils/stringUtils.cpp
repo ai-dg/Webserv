@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stringUtils.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:30:02 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 10:11:16 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,15 @@ std::string getExtension(std::string filePath)
     if (filePath == "/" || filePath.find(".") == std::string::npos)
         return "";
     return filePath.substr(filePath.find("."), std::string::npos);
+}
+
+size_t getNextof(std::string str, size_t pos, char c)
+{
+    size_t i = pos;
+    for (; i < str.size(); ++i)
+    {
+        if (str[i] == c)
+            return i;        
+    }
+    return std::string::npos;    
 }
