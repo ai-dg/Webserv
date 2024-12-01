@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 17:00:12 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 21:16:32 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     Log::output("./sessions/fd_client2.txt") << "Requête complète : " << std::endl;
     Log::output("./sessions/fd_client2.txt") << *req << std::endl;
     Log::output("./sessions/fd_client2.txt") << "*************************************" << std::endl;
-    static int count = 1;
+    // static int count = 1;
 
-    std::cerr << BOLD_RED << "request nbr " << BOLD_WHITE << count++ << RESET<< std::endl;
+    // std::cerr << BOLD_RED << "request nbr " << BOLD_WHITE << count++ << RESET<< std::endl;
     size_t headerEnd = req->find("\r\n\r\n");
     if (headerEnd != std::string::npos) 
     {
@@ -103,17 +103,26 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         // verifier le status de la methode de la route...
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath))) && server->getCgiStatus(filePath)) 
         {
-            Location *route = server->getRoute(getExtension(filePath));
-            if (!route)
-                return;
-            else if (response.isAllowedMethod(route, request))
+            if (request.getBody().length() >= 2097152)
             {
-                Cgi_handler cgiHandler;
-                cgiHandler.executeCGI(filePath, request, *fd_client);                
-            }else
+                response.setRedirection(413);
+    
+            }
+            else
             {
-                response.setRedirection(406);
-                response.send(*fd_client);
+                Location *route = server->getRoute(getExtension(filePath));
+                if (!route)
+                    return;
+                else if (response.isAllowedMethod(route, request))
+                {
+                    Cgi_handler cgiHandler;
+                    cgiHandler.executeCGI(filePath, request, *fd_client);                
+                }else
+                {
+                    response.setRedirection(406);
+                    response.send(*fd_client);
+                }
+                
             }
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
@@ -124,7 +133,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         else 
             response.send(*fd_client);
         std::string connectionHeader = request.getHeader("Connection");
-            std::cerr << BOLD_BLUE << "connectionHeader : " << connectionHeader << RESET << std::endl;
+            // std::cerr << BOLD_BLUE << "connectionHeader : " << connectionHeader << RESET << std::endl;
         /*if (connectionHeader != "keep-alive") 
         {
             epoll->removeFd(*fd_client);
@@ -204,6 +213,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                         requestMap[fd_client] += std::string(buff, reads);
                         bzero(buff, BUFFER_SIZE);
                     }
+                    
                     std::string& req = requestMap[fd_client];
                     size_t headerEndPos = req.find("\r\n\r\n");
                     ssize_t contentLength = -1;

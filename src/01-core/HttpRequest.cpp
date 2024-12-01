@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 10:10:48 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 20:31:26 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void HttpRequest::setRoute()
         else
             route = URI; 
     }*/
-    std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
+    // std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
 }
 
 void HttpRequest::setAskedFile()
@@ -277,7 +277,7 @@ std::string HttpRequest::getBody() const
     Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST" || method == "DELETE" || method == "PUT") 
     {
-        std::cerr << "getBody : " << body << std::endl;
+        // std::cerr << "getBody : " << body << std::endl;
         return body;
     }
     else if (method == "GET") 
@@ -365,6 +365,9 @@ bool HttpRequest::isStatic() const
 
 bool HttpRequest::isValidBodySize() const
 {
+    // Log::output("./sessions/HttpRequest.txt") << "Body max size: " << server->getMaxBodySize() << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "Body size: " << body.size() << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "Body: " << body << std::endl;
     size_t size = body.size();
     if (size <= server->getMaxBodySize())
         return true;

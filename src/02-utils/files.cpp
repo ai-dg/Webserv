@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   files.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/01 10:46:00 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:09:57 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,13 +117,13 @@ std::string getFile(const std::string& path)
         }
         Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
-        std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl;
+        // std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl;
         return content;
     }
     else
         Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
     file.close();
-    std::cerr << "GETFILE debug " << local << "  -  "  << content << std::endl; 
+    // std::cerr << "GETFILE debug " << local << "  -  "  << content << std::endl; 
     return FILENOTFOUND;
 }
 
