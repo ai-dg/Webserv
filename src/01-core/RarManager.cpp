@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 21:16:32 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 21:29:42 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,26 +103,28 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         // verifier le status de la methode de la route...
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath))) && server->getCgiStatus(filePath)) 
         {
-            if (request.getBody().length() >= 2097152)
+            Location *route = server->getRoute(getExtension(filePath));
+            if (!route)
+                return;
+            else if (response.isAllowedMethod(route, request))
             {
-                response.setRedirection(413);
-    
-            }
-            else
-            {
-                Location *route = server->getRoute(getExtension(filePath));
-                if (!route)
-                    return;
-                else if (response.isAllowedMethod(route, request))
+                std::cerr << "Lenght : " << request.getBody().length() << std::endl;
+                if (request.getBody().length() >= 100000)
+                {
+                    std::cerr << "Body too long" << std::endl;
+                    response.setRedirection(413);
+                    response.send(*fd_client);
+        
+                }
+                else
                 {
                     Cgi_handler cgiHandler;
-                    cgiHandler.executeCGI(filePath, request, *fd_client);                
-                }else
-                {
-                    response.setRedirection(406);
-                    response.send(*fd_client);
-                }
-                
+                    cgiHandler.executeCGI(filePath, request, *fd_client);
+                }             
+            }else
+            {
+                response.setRedirection(406);
+                response.send(*fd_client);
             }
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
