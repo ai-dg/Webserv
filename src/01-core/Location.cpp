@@ -213,9 +213,13 @@ std::string Location::findIndex()
 {
     std::vector<std::string>::iterator it;
     it = indexes.begin();
+    std::string root;
     for (; it != indexes.end(); ++it)
     {
-        if (doesFileExist("./" +_root + "/" + *it))
+        root =  "./" +_root + "/" + *it;
+        root = removeDuplicateSlashes(root);
+        std::cerr << "FINDINDEX debug : " << root << std::endl;
+        if (doesFileExist(root))        
             return *it;
     }
     return "";

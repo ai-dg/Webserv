@@ -66,6 +66,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <zlib.h>
+#include <sys/stat.h>
 
 /**
  * @brief Exception includes

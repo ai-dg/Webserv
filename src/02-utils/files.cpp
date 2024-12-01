@@ -104,20 +104,20 @@ std::string getFile(const std::string& path)
         local += "index.html";///hardcoded...
     Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
     std::ifstream file(local.c_str());
- 
+    //std::cerr << "local : " << local << std::endl;
     std::string line;
     if (file.is_open())
     {
-        std::cerr << "opeeeeeeeeeennnnnned !!!!!!!!!!!!!!!!!" << std::endl;
+        //std::cerr << "opeeeeeeeeeennnnnned !!!!!!!!!!!!!!!!!" << std::endl;
         while (std::getline(file, line))
         {
             if (!content.empty())
                 content += "\n";
             content += line;
         }
-       Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
+        Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
-        std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl; 
+        std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl;
         return content;
     }
     else
