@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stringUtils.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:30 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 18:57:31 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 10:09:36 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ std::string upperCaseMe(std::string);
 std::string upperCaseMe(std::string);
 std::string extractLastSegment(const std::string& path);
 std::string removeDuplicateSlashes(const std::string& path);
+size_t getNextof(std::string str, size_t pos, char c);
 

@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:39:51 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 13:12:55 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 09:22:12 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,6 @@ class PathNotCorrectFormat : public std::exception
     public:
         virtual const char* what() const throw();
 };
+
+bool hasExtension(std::string file);
+bool isValidUri(std::string uri);

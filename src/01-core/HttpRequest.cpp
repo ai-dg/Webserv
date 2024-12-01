@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/30 23:47:53 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 10:10:48 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,26 @@ void HttpRequest::setBody(std::string req)
 }
 
 void HttpRequest::setRoute()
-{    
+{   
+    size_t firstSlashPos = URI.find_first_of('/'); 
     size_t lastSlashPos = URI.find_last_of('/');
-   // size_t lastDotPos = URI.find_last_of('.');
+    size_t lastDotPos = URI.find_last_of('.');
 
    /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
     {*/
-        if (lastSlashPos == 0)
-            route = "/"; 
+    if (lastSlashPos == 0 && URI.size() == 1)
+        route = "/"; 
+    else
+    {
+        if (firstSlashPos == lastSlashPos)
+            route = URI;
         else
-            route = URI.substr(0, lastSlashPos + 1); 
+            route = URI.substr(0, getNextof(URI,1,'/') + 1); 
+    }
+        
+    if (lastDotPos == std::string::npos && URI[URI.size()-1] != '/')
+        route += "/";
+    route = removeDuplicateSlashes(route);
     /*}*/
     /*else
     { 
