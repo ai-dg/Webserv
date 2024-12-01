@@ -4,7 +4,7 @@ test getfile : <!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="error_pages/default.css">
-    <title>413 Payload Too Large</title>
+    <title>404 Not Found</title>
     <style>
         body {
             margin: 0;
@@ -52,9 +52,8 @@ test getfile : <!DOCTYPE html>
 </head>
 <body>
     <div class="error-container">
-        <h1 class="error-title">413 Payload Too Large</h1>
-        <p class="error-message">The server is unable to process the request because the payload is too large.</p>
-        <p class="error-message">Please reduce the size of the request and try again.</p>
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
         <hr class="separator">
         <p class="server-signature">Webserv 42</p>
     </div>
@@ -66,7 +65,7 @@ test getfile : <!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="error_pages/default.css">
-    <title>413 Payload Too Large</title>
+    <title>404 Not Found</title>
     <style>
         body {
             margin: 0;
@@ -114,20 +113,39 @@ test getfile : <!DOCTYPE html>
 </head>
 <body>
     <div class="error-container">
-        <h1 class="error-title">413 Payload Too Large</h1>
-        <p class="error-message">The server is unable to process the request because the payload is too large.</p>
-        <p class="error-message">Please reduce the size of the request and try again.</p>
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
         <hr class="separator">
         <p class="server-signature">Webserv 42</p>
     </div>
 </body>
 </html>
 test getfile : 
-local 2 ./www/error_pages/413.html - path size : 24
-local 2 ./www/error_pages/413.html - path size : 24
-local 2 ./www/error_pages/413.html - path size : 
-local 2 ./www/error_pages/413.html
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 24
+local 2 ./www/error_pages/404.html - path size : 
+local 2 ./www/error_pages/404.html
 local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/html/default/ - path size : 18
+local 2 ./www/html/default/ - path size : 18
+local 2 ./www/html/default/ - path size : 
+local 2 ./www/html/default/
+local 2 
+file not found ! 
+file not found ! 
+local 2 ./www/html/default/ - path size : 18
+local 2 ./www/html/default/ - path size : 18
+local 2 ./www/html/default/ - path size : 
+local 2 ./www/html/default/
+local 2 
+local : 
+local : 
+local : 
+path : 
+path : 
+path : 
 local : 
 local : 
 local : 
@@ -2040,22 +2058,3 @@ test getfile : <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        test
-    </body>
-</html>
-test getfile : <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        test
-    </body>
-</html>
-test getfile : 
