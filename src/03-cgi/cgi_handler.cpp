@@ -21,7 +21,7 @@
  */
 std::string Cgi_handler::getExeContext(std::string file)
 {
-    std::cerr << "get ExeContext debug file : " << file << std::endl;
+   // std::cerr << "get ExeContext debug file : " << file << std::endl;
     if (file.find(".") == std::string::npos)
         return "bash";
     if (file.find(".php") != std::string::npos)
@@ -188,7 +188,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
             
         std::string exe_context = getExeContext(scriptPath);
-        std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
+        //std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
             const_cast<char*>(exe_context.c_str()),       
