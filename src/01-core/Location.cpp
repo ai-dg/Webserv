@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/30 23:52:25 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:09:11 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,7 +218,7 @@ std::string Location::findIndex()
     {
         root =  "./" +_root + "/" + *it;
         root = removeDuplicateSlashes(root);
-        std::cerr << "FINDINDEX debug : " << root << std::endl;
+        // std::cerr << "FINDINDEX debug : " << root << std::endl;
         if (doesFileExist(root))        
             return *it;
     }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 10:25:05 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:09:03 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,14 +122,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
     std::string addToRoute = addSub(route, uri);
-    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
-    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
-    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
-    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
+    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
+    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
+    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
+    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
-        std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
+        // std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
         setRedirection(404);
         return;
     }
@@ -151,14 +151,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         if (isAllowedMethod(altRoute, req))
         {
             this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
-            std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;            
+            // std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;            
         }
         else
         {
             if (req.getHeader("User-Agent") == "Go-http-client/1.1")
             {
                 setStatusCode(204,NO_BODY); //// pffffff
-                std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
+                // std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
             }
             else
             {
@@ -177,8 +177,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         Route = req.getRouteConf("/cgi-bin/");
         this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
-        std::cerr << Route->root().substr(1, std::string::npos) << "   " << req.getAskedFile() << std::endl;
-        std::cerr << "1 -- setResoursePath -- " << this->filePath << std::endl;
+        // std::cerr << Route->root().substr(1, std::string::npos) << "   " << req.getAskedFile() << std::endl;
+        // std::cerr << "1 -- setResoursePath -- " << this->filePath << std::endl;
     }
     else
     {
@@ -192,7 +192,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
             else
             {
                 this->filePath = Route->root() + "/" + Route->findIndex();
-              std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
+            //   std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
             }
 
         }
@@ -202,18 +202,18 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
             if(req.getAskedFile().find(".") == std::string::npos)
             {
                 this->filePath = routed + (Route->findIndex()); //// findindex ???????
-                std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
+                // std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
             }
             else
                 this->filePath = routed  + req.getAskedFile();
-            std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
-              std::cerr << get_current_date() << std::endl;
+            // std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
+            //   std::cerr << get_current_date() << std::endl;
         }
     }
     
     if(Route->methods().find(req.getMethod()) == std::string::npos)
     {
-        std::cerr << "NO METHOD MATCH" << std::endl;
+        // std::cerr << "NO METHOD MATCH" << std::endl;
         setRedirection(405);
         addHeader("Allow", Route->methods());
         return ;
@@ -244,7 +244,7 @@ void HttpResponse::setStatusCode(int stat)
     }
     else
         statusCode = stat;
-    std::cerr << "setStatusCode(1) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
+    // std::cerr << "setStatusCode(1) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setStatusCode(int stat, int body_status)
@@ -261,7 +261,7 @@ void HttpResponse::setStatusCode(int stat, int body_status)
     }
     else
         statusCode = stat;
-    std::cerr << "setStatusCode(2) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
+    // std::cerr << "setStatusCode(2) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setBody(std::string content)
@@ -310,7 +310,7 @@ int HttpResponse::put(const HttpRequest &req)
     std::ofstream outfile(&filePath.c_str()[1]);
     if (!outfile)
     {
-        std::cerr << "fail creating file";
+        // std::cerr << "fail creating file";
         return -1;
     }
     std::cout << BLUE << req.getBody() << RESET << std::endl;
@@ -327,7 +327,7 @@ bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 
 void HttpResponse::send(int fd_client)
 {   
-    std::cerr << "SEND _ filepath debug" << filePath << std::endl;
+    // std::cerr << "SEND _ filepath debug" << filePath << std::endl;
     std::string resFile;
     if (body.size() > 0)
         resFile = body;

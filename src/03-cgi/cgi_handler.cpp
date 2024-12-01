@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 23:58:24 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 21:15:15 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,10 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
         this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
     }
-    else
+    else if (getExeContext(scriptPath) == "python3")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
+
+    this->addToEnvironment("CGI_BODY=" + req.getBody());
     environment.push_back(NULL);
     Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
@@ -156,6 +158,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
 
+    
+
     Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
@@ -188,6 +192,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
             
         std::string exe_context = getExeContext(scriptPath);
+        std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         //std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -195,7 +200,20 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             const_cast<char*>(scriptPathTemp.c_str()), 
             NULL
         };
-        execve("/usr/bin/env", argv, environment.data());     
+       
+        if (access(scriptPathTemp.c_str(), X_OK) == -1)
+        {
+            perror("acces");
+            // Log::output("./logs/error.log") << "Child: Failed to access script file." << std::endl;
+            exit(1);
+        }
+        std::cerr << "scriptPath child: " << scriptPathTemp << std::endl;
+        
+        if (execve("/usr/bin/env", argv, environment.data()) == -1)
+        {
+            perror("execve");
+            exit(1);
+        }     
         perror("execve");
         exit(1);
     } 
@@ -231,6 +249,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         bzero(buffer, 2048);
         int bytesRead = 0;
         std::string context = getExeContext(scriptPath);
+        std::cerr << "context : " << context << std::endl;
         if (context == "php-cgi" || context =="perl" || context =="bash")
         {
             std::string res = "HTTP/1.1 200 OK\r\n";
@@ -239,7 +258,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            std::cerr << buffer << std::endl;
+            // std::cerr << buffer << std::endl;
+            Log::output("./sessions/cgi_handler.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }
