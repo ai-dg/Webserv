@@ -6,6 +6,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 env > "$SCRIPT_DIR/env.txt"
 # echo "ENV VARIABLES SAVED"
 
+echo -e "Content-Length: $CONTENT_LENGTH\r\n"
+
 sed 's/^..//' "$ROOT_DIR/$CGI_FILE" | "$SCRIPT_DIR/ubuntu_cgi_tester"
 
 exit 0

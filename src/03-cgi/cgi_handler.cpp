@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:37:27 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 21:58:07 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ std::string Cgi_handler::getExeContext(std::string file)
     if (file.find(".php") != std::string::npos)
         return "php-cgi";
     if (file.find(".py") != std::string::npos)
-        return "python3";
+        return "python3.10";
     if (file.find(".pl") != std::string::npos)
         return "perl";
     if (file.find(".sh") != std::string::npos)
@@ -116,7 +116,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
-    this->addToEnvironment("PATH_INFO=/");
+    this->addToEnvironment("PATH_INFO=/usr/bin/bash");
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
@@ -320,6 +320,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             Log::output("./sessions/fd_client_cgi.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
+            write(fd_client, "\r\n", 2);
         }
         if (bytesRead == -1) 
         {
