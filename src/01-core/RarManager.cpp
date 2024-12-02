@@ -159,31 +159,49 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);      
         // verifier le status de la methode de la route...
-        if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath))) && server->getCgiStatus(filePath)) 
+        if (server->getCgiStatus(filePath))
+            std::cerr << "filepath " << filePath << "   true" << std::endl;
+        else
+            std::cerr << "filepath " << filePath << "   false" << std::endl;
+            
+        if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath)))) 
         {
-            Location *route = server->getRoute(getExtension(filePath));
+            std::cerr << "in CGI" << std::endl;   
+            Location *route = NULL;
+            if (request.hasFileSpecialRoute(getExtension(filePath)))
+                route = server->getRoute(getExtension(filePath));
+            if (filePath.find("cgi") != std::string::npos)
+                route = server->getRoute("/cgi-bin/");
             if (!route)
+            {
+                std::cerr << "no route" << std::endl;
                 return;
+            }
             else if (response.isAllowedMethod(route, request))
             {
+                std::cerr << "in CGI" << std::endl;   
                 Cgi_handler cgiHandler;
                 cgiHandler.executeCGI(filePath, request, *fd_client);
-                std::cerr << "CGI executed" << std::endl;
-                
+                std::cerr << "CGI executed" << std::endl;                
             }
             else
             {
+                 std::cerr << "22222222222" << std::endl;   
                 response.setRedirection(406);
                 response.send(*fd_client);
             }
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
+             std::cerr << "3333333333333" << std::endl;   
             response.setRedirection(403);
             response.send(*fd_client);
         }
         else 
+        {
+            std::cerr << "4444444444444" << std::endl;   
             response.send(*fd_client);
+        }
         std::string connectionHeader = request.getHeader("Connection");
             // std::cerr << BOLD_BLUE << "connectionHeader : " << connectionHeader << RESET << std::endl;
         /*if (connectionHeader != "keep-alive") 
