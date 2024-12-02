@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/25 09:59:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 20:41:38 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,15 @@ std::string Cgi_handler::getExeContext(std::string file)
     if (file.find(".php") != std::string::npos)
         return "php-cgi";
     if (file.find(".py") != std::string::npos)
-        return "python3";
+        return "python3.10";
     if (file.find(".pl") != std::string::npos)
         return "perl";
     if (file.find(".sh") != std::string::npos)
         return "bash";
     if (file.find(".cgi") != std::string::npos) 
         return getContextFromFile(file);
+    if (file.find(".bla") != std::string::npos) 
+        return "bash";
     return "";
 }
 
@@ -47,6 +49,16 @@ void Cgi_handler::addToEnvironment(const char * env)
 void Cgi_handler::addToEnvironment(std::string env)
 {  
     this->environment.push_back(strdup(const_cast<char*>(env.c_str())));
+}
+
+std::string createBufferDataFile(std::string body)
+{
+    std::string filename = "./sessions/tmp.d";
+    std::ofstream file(filename.c_str());
+    file << body;
+    file.close();
+    return filename;
+    
 }
 
 void Cgi_handler::setEnvironment(HttpRequest &req)
@@ -80,10 +92,18 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         // ajouter php session ici
         this->addToEnvironment(req.getHeader("Cookie"));
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
-        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
+        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);
+                 
     }
-    else
+    else if (getExeContext(scriptPath) == "python3")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
+    else
+    {
+        std::string filename = createBufferDataFile(req.getBody());
+        this->addToEnvironment("CGI_FILE=" + filename);
+    }
+
+    
     environment.push_back(NULL);
     Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
@@ -153,7 +173,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
 
-    Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
+    // Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -178,12 +198,23 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             perror("dup2 stdout");
             exit(1);
         }
-        setEnvironment(req);      
+        std::cerr << "Setting environment" << std::endl;
+        setEnvironment(req);
+        std::cerr << "Environment set" << std::endl;
+
+
+        std::cerr << "scriptPath: " << scriptPath << std::endl;
+        
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
+        else
+            scriptPathTemp = scriptPath;
+    
+
             
+        std::cerr << "scriptPathTemp: " << scriptPathTemp << std::endl;
         std::string exe_context = getExeContext(scriptPath);
         char* const argv[] = {
             const_cast<char*>("/usr/bin/env"),  
@@ -199,11 +230,11 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     { 
         close(pipe_in[0]);  
         close(pipe_out[1]); 
-        std::ofstream outfile("./logs/data_cgi.log");
-        if (!data.empty()) 
-            write(pipe_in[1], data.c_str(), data.size());
-        outfile << data;
-        outfile.close();
+        // std::ofstream outfile("./logs/data_cgi.log");
+        // if (!data.empty()) 
+        //     write(pipe_in[1], data.c_str(), data.size());
+        // outfile << data;
+        // outfile.close();
         close(pipe_in[1]); 
         Log::output("./sessions/cgi_handler.txt") << "Parent waiting..." << std::endl;
         int status;
@@ -226,6 +257,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         char buffer[2048];
         bzero(buffer, 2048);
         int bytesRead = 0;
+        std::ofstream file("./sessions/fd_client_final.txt");
+
         std::string context = getExeContext(scriptPath);
         if (context == "php-cgi" || context =="perl" || context =="bash")
         {
@@ -235,6 +268,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
+            file << buffer;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }
@@ -243,6 +277,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             Log::error("read from pipe");
             Log::output("./logs/error.log") << "Parent: Failed to read from pipe." << std::endl;
         }
+        file.close();
         close(pipe_out[0]); 
     }
+    // exit(0);
 }

@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+CGI_FILE=/home/dagudelo/Parcours/Webserv/sessions/tmp.d
+
+cat "$CGI_FILE" > "$SCRIPT_DIR/ubuntu_cgi_tester"
+

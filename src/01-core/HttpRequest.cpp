@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:57:58 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 20:46:34 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,34 @@ void HttpRequest::setBody(std::string req)
         this->body = "";
 }
 
+// void HttpRequest::setRoute()
+// {    
+//     size_t lastSlashPos = URI.find_last_of('/');
+//     size_t lastDotPos = URI.find_last_of('.');
+
+//     if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
+//     {
+//         if (lastSlashPos == 0)
+//             route = "/"; 
+//         else
+//             route = URI.substr(0, lastSlashPos + 1); 
+//     }
+//     else
+//     { 
+//         if (URI[URI.size() - 1] != '/')
+//             route = URI + "/"; 
+//         else
+//             route = URI; 
+//     }
+// }
+
 void HttpRequest::setRoute()
-{    
+{
+    if (URI.empty()) { // Vérifier si URI est vide
+        route = "/";
+        return;
+    }
+
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
 
@@ -63,13 +89,16 @@ void HttpRequest::setRoute()
             route = URI.substr(0, lastSlashPos + 1); 
     }
     else
-    { 
-        if (URI[URI.size() - 1] != '/')
+    {
+        // Vérifier la fin de URI en toute sécurité
+        if (!URI.empty() && URI[URI.size() - 1] != '/')
             route = URI + "/"; 
         else
             route = URI; 
     }
 }
+
+
 
 void HttpRequest::setAskedFile()
 {
@@ -266,7 +295,7 @@ std::string HttpRequest::getBody() const
     Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST" || method == "DELETE" || method == "PUT") 
     {
-        std::cerr << "getBody : " << body << std::endl;
+        // std::cerr << "getBody : " << body << std::endl;
         return body;
     }
     else if (method == "GET") 

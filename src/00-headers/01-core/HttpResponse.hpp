@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 18:29:57 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 19:34:16 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class HttpResponse
         std::string filePath;
         std::string body;
         std::string method;
+        HttpRequest *req;
         int statusCode;
 
         /**

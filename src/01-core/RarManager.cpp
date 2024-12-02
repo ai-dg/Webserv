@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 18:38:01 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 20:32:20 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,16 +98,35 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);
     
-        std::cerr << request.getBody() << std::endl;
+        // std::cerr << request.getBody() << std::endl;
 
         response.setBody(request.getBody());
 
         std::cout << "Returning HTTP status code: " << response.getStatusCode() << std::endl;
+        std::cout << "File path: " << filePath << std::endl;
+    
 
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(filePath)) && server->getCgiStatus()) 
         {
             Cgi_handler cgiHandler;
             cgiHandler.executeCGI(filePath, request, *fd_client);
+        }
+        else if (filePath.find("YoupiBanane/youpi.bla") != std::string::npos)
+        {
+            std::cerr << "YoupiBanane" << std::endl;
+            char currentPath[4096];
+            
+            if (!getcwd(currentPath, sizeof(currentPath))) {
+                std::cerr << "Error: Unable to get current working directory: " << std::strerror(errno) << std::endl;;
+            }
+
+            // Construire le chemin absolu
+            std::string absolutePath = std::string(currentPath) + filePath;
+            
+            response.setStatusCode(200);
+            Cgi_handler cgiHandler;
+            cgiHandler.executeCGI(absolutePath, request, *fd_client);
+            std::cout << "Exiting YoupiBanane" << std::endl;
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
@@ -120,8 +139,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         if (connectionHeader.empty() && connectionHeader[0] != '\0' && connectionHeader != "keep-alive") 
         {
             std::cout << "Connection: close" << std::endl;
-            epoll->removeFd(*fd_client);
-            close(*fd_client);
+            (void)epoll;
+            // epoll->removeFd(*fd_client);
+            // close(*fd_client);
         }
         sessionManager.saveSessionsToFile();
         req->clear();
@@ -223,8 +243,8 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     }
                     if (reads == 0) 
                     {
-                        epoll.removeFd(fd_client);
-                        close(fd_client);
+                        // epoll.removeFd(fd_client);
+                        // close(fd_client);
                         requestMap.erase(fd_client);
                     }
                 }

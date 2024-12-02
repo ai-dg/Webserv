@@ -67,8 +67,26 @@ server {
         methods GET POST;
     }
 
-    location /directory/nop {
+    location /nop/ {
         root /www/test_site/YoupiBanane/nop/;
+        index youpi.bad_extention;
+        methods GET POST;
+    }
+
+    location /nop {
+        root /www/test_site/YoupiBanane/nop/;
+        index youpi.bad_extention;
+        methods GET POST;
+    }
+
+    # location /Yeah {
+    #     root /www/test_site/YoupiBanane/Yeah/;
+    #     index youpi.bad_extention;
+    #     methods GET POST;
+    # }
+
+    location /Yeah/ {
+        root /www/test_site/YoupiBanane/Yeah/;
         index youpi.bad_extention;
         methods GET POST;
     }

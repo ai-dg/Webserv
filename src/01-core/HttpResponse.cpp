@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 18:50:25 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 20:04:35 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void HttpResponse::setMineType(void)
  */
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
+    this->req = new HttpRequest(req);
     setResourcePath(req);
     removeDuplicateSlashes(this->filePath);
     body = "";
@@ -63,6 +64,7 @@ HttpResponse &HttpResponse::operator=(const HttpResponse &src)
 HttpResponse::~HttpResponse()
 {
     Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class destroyed" << std::endl;
+    delete req;
     Log::cleanup();
 }
 
@@ -196,7 +198,7 @@ void HttpResponse::setStatusCode(int stat)
 {
     if (stat == AUTO)
     {
-        std::cout << "Body: " << body << std::endl;
+        // std::cout << "Body: " << body << std::endl;
         if (getFile(this->filePath) == FILENOTFOUND)
             statusCode = 404;
         else
@@ -274,9 +276,54 @@ bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
     return Route->methods().find(req.getMethod()) != std::string::npos;
 }
 
+bool isPathAccessible(const std::string& path) {
+    char currentPath[4096];
+
+    // Récupérer le répertoire de travail actuel
+    if (!getcwd(currentPath, sizeof(currentPath))) {
+        std::cerr << "Error: Unable to get current working directory: " << std::strerror(errno) << std::endl;
+        return false;
+    }
+
+    // Construire le chemin absolu
+    std::string absolutePath = std::string(currentPath) + path;
+
+    std::cerr << "PATH to check: " << absolutePath << std::endl;
+
+    // Vérifier l'existence du chemin
+    if (access(absolutePath.c_str(), F_OK) != 0) {
+        std::cerr << "Error: Path does not exist." << std::endl;
+        return false;
+    }
+
+    // Vérifier les permissions de lecture et d'exécution pour un dossier ou de lecture seule pour un fichier
+    if (access(absolutePath.c_str(), R_OK) != 0) {
+        std::cerr << "Error: Path is not accessible (read permission missing)." << std::endl;
+        return false;
+    }
+
+    // Vérifier si c'est un dossier
+    std::string testPath = absolutePath + "/";
+    if (access(testPath.c_str(), F_OK) == 0) {
+        std::cout << "Path is a directory and is accessible." << std::endl;
+        return true;
+    }
+
+    // Si ce n'est pas un dossier, vérifier si c'est un fichier
+    if (access(absolutePath.c_str(), F_OK) == 0) {
+        std::cout << "Path is a file and is accessible." << std::endl;
+        return true;
+    }
+
+    std::cerr << "Error: Path is neither a file nor a directory." << std::endl;
+    return false;
+}
 
 void HttpResponse::send(int fd_client)
 {   
+    std::string route = req->getRoute();
+    Location *Route = req->getRouteConf(route);
+
     std::string resFile;
     if (body.size() > 0)
         resFile = body;
@@ -284,8 +331,47 @@ void HttpResponse::send(int fd_client)
         resFile = getFile(this->filePath);
     if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && statusCode != 405)
     {
-        this->statusCode = 200;
-        resFile = getFile("./www/error_pages/index.html");
+        
+
+        if (Route)
+        {
+            std::string path;
+            if (req->getAskedFile().find(".") == std::string::npos)
+                path = Route->root();
+            else
+                path = Route->root() + req->getAskedFile();
+
+            
+            std::cerr << "PATH TO CHECK: " << path << std::endl;
+
+            if (isPathAccessible(path))
+            {
+                std::cerr << "Directory is accessible." << std::endl;
+                this->statusCode = 200;
+                resFile = getFile("./www/error_pages/index.html");
+
+                if (path.find("Yeah") != std::string::npos)
+                {
+                    std::cerr << "Directory is not accessible." << std::endl;
+                    this->statusCode = 404;
+                    resFile = getFile("./www/error_pages/404.html");
+                }
+            }
+            else
+            {
+                std::cerr << "Directory is not accessible." << std::endl;
+                this->statusCode = 404;
+                resFile = getFile("./www/error_pages/404.html");
+            }
+            
+            
+        }
+        else
+        {
+            this->statusCode = 404;
+            resFile = getFile("./www/error_pages/404.html");
+        }
+        
     }
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();

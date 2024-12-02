@@ -5,29 +5,16 @@ Parent: Reading from pipe to get script output...
 Parent: Child exited with status: 0
 Parent: Child exited with status: 0
 Parent: Child exited with status: 
-Child: Environment variables set: REQUEST_METHOD=GET, 
-Child: Environment variables set: REQUEST_METHOD=GET, 
-Child: Environment variables set: REQUEST_METHOD=GET, 
-Child: Environment variables set: REQUEST_METHOD=GET
+Child: Environment variables set: REQUEST_METHOD=POST, CONTENT_LENGTH=
+Child: Environment variables set: REQUEST_METHOD=POST, CONTENT_LENGTH=
+Child: Environment variables set: REQUEST_METHOD=POST, 
+Child: Environment variables set: REQUEST_METHOD=POST
 Child: Environment variables set: 
 Parent waiting...
 Parent waiting...
-[1;31m[0m
-[1;31m[0m
+[1;31mtest/file[0m
+[1;31mtest/file[0m
+[1;31mtest/file
 [1;31m
-[1;31m
-
-
 CGI Handler object class created
 CGI Handler object class created
-CGI Handler object class destroyed
-CGI Handler object class destroyed
-Parent: Reading from pipe to get script output...
-Parent: Reading from pipe to get script output...
-Parent: Child exited with status: 0
-Parent: Child exited with status: 0
-Parent: Child exited with status: 
-Child: Environment variables set: REQUEST_METHOD=DELETE, CONTENT_LENGTH=
-Child: Environment variables set: REQUEST_METHOD=DELETE, CONTENT_LENGTH=
-Child: Environment variables set: REQUEST_METHOD=DELETE, 
-Child: Environment variables set: REQUEST_METHOD=DELETE
