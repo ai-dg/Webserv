@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 18:54:38 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:50:25 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,28 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string uri = req.getURI();
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
+
+
+    std::cout << "uri: " << uri << std::endl;
+    std::cout << "route: " <<  route << std::endl;
+    std::cout << "asked file: " << req.getAskedFile() << std::endl;
+    if (Route)
+        std::cout << "Route root: " << Route->root() << std::endl;
+    else
+        std::cout << "Route is null" << std::endl;
+    // std::cout << "Redirection path: " << Route->root() << std::endl;
+
+    
+    
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
-        setRedirection(403);
+        setRedirection(404);
         return;
     }
     if (Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
     {
-        setRedirection(403);
+        setRedirection(404);
         return;
     }
     if (Route->redirection() != "")
@@ -118,6 +131,10 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         addHeader("Location", Route->getRedirectionPath());
         return;
     }
+    
+    
+    
+        
     std::string extension = getExtension(uri);
     if (req.hasFileSpecialRoute(filePath))
     {
@@ -125,6 +142,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
         return;
     }
+    
+
     if (uri.find("/cgi-bin/") != std::string::npos
         || uri.find(".py") != std::string::npos
         || uri.find(".pl") != std::string::npos
@@ -250,6 +269,12 @@ int HttpResponse::put(const HttpRequest &req)
     return 1;
 }
 
+bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
+{
+    return Route->methods().find(req.getMethod()) != std::string::npos;
+}
+
+
 void HttpResponse::send(int fd_client)
 {   
     std::string resFile;
@@ -257,10 +282,10 @@ void HttpResponse::send(int fd_client)
         resFile = body;
     else 
         resFile = getFile(this->filePath);
-    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302)
+    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && statusCode != 405)
     {
-        this->statusCode = 404;
-        resFile = getFile("./www/error_pages/404.html");
+        this->statusCode = 200;
+        resFile = getFile("./www/error_pages/index.html");
     }
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();

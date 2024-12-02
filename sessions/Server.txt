@@ -1566,22 +1566,6 @@ listening
 [1;32mServer on[0m
 [1;32mServer on
 [1;32m
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
-Server class object destroyed
 Server class object created
 Server class object created
 [1;31mprojects.42.fr[0m
@@ -1998,3 +1982,19 @@ Server class object created
 [1;31mHOST NAMES ::::::::::::::::::::::::::::: [0m
 [1;31mHOST NAMES ::::::::::::::::::::::::::::: 
 [1;31m
+BUG
+BUG
+MAX BODY SIZE SET TO : 4096M
+MAX BODY SIZE SET TO : 4096M
+MAX BODY SIZE SET TO : 4096
+MAX BODY SIZE SET TO : 
+listening 127.0.0.2 on ports 8080 
+listening 127.0.0.2 on ports 8080 
+listening 127.0.0.2 on ports 8080
+listening 127.0.0.2 on ports 
+listening 127.0.0.2
+listening 
+[1;32mServer on[0m
+[1;32mServer on[0m
+[1;32mServer on
+[1;32m

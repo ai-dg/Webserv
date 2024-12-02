@@ -1,13 +1,85 @@
 *************************************
 *************************************
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -19,12 +91,12 @@ Requête complète :
 *************************************
 *************************************
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
@@ -35,7 +107,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -45,85 +117,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -139,13 +133,85 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -157,35 +223,13 @@ Requête complète :
 *************************************
 *************************************
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -197,12 +241,12 @@ Requête complète :
 *************************************
 *************************************
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
@@ -213,7 +257,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -223,93 +267,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -325,13 +283,13 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -342,178 +300,14 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
-GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -524,56 +318,14 @@ Requête complète :
 **************************
 *************************************
 *************************************
-
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
-
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -584,24 +336,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
 Accept-Encoding: gzip
 
-0
 
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
 Accept-Encoding: gzip
-
-0
 
 
 Requête complète : 
@@ -610,14 +354,14 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -629,13 +373,13 @@ Requête complète :
 *************************************
 *************************************
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -647,12 +391,12 @@ Requête complète :
 *************************************
 *************************************
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
 HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
@@ -663,7 +407,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -673,51 +417,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -733,13 +433,13 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -750,10 +450,104 @@ Requête complète :
 **************************
 *************************************
 *************************************
-0
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-0
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -763,133 +557,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -899,7 +567,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -915,15 +583,121 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -933,7 +707,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -943,131 +717,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
-Requête complète : 
-Requête complète : 
-**************************
-**************************
-*************************************
-*************************************
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
-POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1083,15 +733,121 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -1101,7 +857,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1111,7 +867,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1127,15 +883,121 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -1145,7 +1007,7 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1155,7 +1017,7 @@ Accept-Encoding: gzip
 
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1171,15 +1033,103 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -1189,16 +1139,17 @@ Requête complète :
 *************************************
 *************************************
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
 Accept-Encoding: gzip
 
 0
+
 
 POST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -1206,6 +1157,7 @@ Accept-Encoding: gzip
 
 0
 
+
 Requête complète : 
 Requête complète : 
 **************************
@@ -1213,13 +1165,13 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -1230,38 +1182,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1270,38 +1200,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1310,38 +1218,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1350,42 +1236,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1394,38 +1254,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1434,38 +1272,14 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
 
 
 Requête complète : 
@@ -1474,38 +1288,24 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 
 Requête complète : 
@@ -1515,41 +1315,15 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1558,38 +1332,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1598,38 +1350,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1638,38 +1368,94 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 
 Requête complète : 
@@ -1679,41 +1465,15 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1722,38 +1482,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1762,38 +1500,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1802,38 +1518,94 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
 
 
 Requête complète : 
@@ -1843,41 +1615,15 @@ Requête complète :
 *************************************
 *************************************
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 GET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1886,38 +1632,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1926,38 +1650,16 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
 Requête complète : 
@@ -1966,35 +1668,333 @@ Requête complète :
 **************************
 *************************************
 *************************************
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 
-GET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+GET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+HEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+Requête complète : 
+Requête complète : 
+**************************
+**************************
+*************************************
+*************************************
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+POST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked

@@ -1,8 +1,8 @@
-HTTP/1.1 403 Forbidden
+HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
-Date: Fri, 29 Nov 2024 18:59:23 GMT
-Content-Length: 1618
+Date: Mon, 02 Dec 2024 18:56:24 GMT
+Content-Length: 1497
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ Content-Length: 1618
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="error_pages/default.css">
-    <title>403 Forbidden</title>
+    <title>404 Not Found</title>
     <style>
         body {
             margin: 0;
@@ -58,9 +58,8 @@ Content-Length: 1618
 </head>
 <body>
     <div class="error-container">
-        <h1 class="error-title">403 Forbidden</h1>
-        <p class="error-message">You don't have permission to access this resource on the server.</p>
-        <p class="error-message">Please check your credentials or contact the server administrator.</p>
+        <h1 class="error-title">404 Not Found</h1>
+        <p class="error-message">The requested URL was not found on this server.</p>
         <hr class="separator">
         <p class="server-signature">Webserv 42</p>
     </div>

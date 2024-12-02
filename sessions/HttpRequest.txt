@@ -2,8 +2,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /directory
------------URI: /directory
+-----------URI: /directory/nop
+-----------URI: /directory/nop
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -12,192 +12,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /directory
------------URI: /directory
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m--END--
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m--END--
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
-
--------Parsed Body: 0
-
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/nop
+-----------URI: /directory/nop
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -207,33 +23,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -247,8 +63,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /directory
------------URI: /directory
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -257,8 +73,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /directory
------------URI: /directory
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -268,33 +84,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -306,120 +122,58 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
 [1;37mMETHOD / 
 [1;37m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD[0m
-[1;37mMETHOD / HEAD
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
 [1;37mMETHOD / 
 [1;37m
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
 
 [0m
---START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
-
--------Parsed Body: 0
-
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
 Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
 
 
 --START--[1;33m
@@ -431,8 +185,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -441,8 +195,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -452,33 +206,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -521,94 +275,25 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-[0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-[0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-[0m
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: curl/8.5.0
-Accept: */*
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /directory
------------URI: /directory
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /directory
------------URI: /directory
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -641,22 +326,22 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m--END--
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m--END--
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
@@ -697,7 +382,7 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -707,7 +392,7 @@ Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -717,7 +402,7 @@ Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -727,7 +412,7 @@ Accept-Encoding: gzip
 
 [0m
 --START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Transfer-Encoding: chunked
 Content-Type: test/file
@@ -774,25 +459,25 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
 --START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -804,80 +489,10 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
--------Parsed Body: 0
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/nop
+-----------URI: /directory/nop
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -886,8 +501,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/nop
+-----------URI: /directory/nop
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -897,33 +512,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -935,86 +550,10 @@ HttpRequest class object created
 HttpRequest class object created
 HttpRequest class object destroyed
 HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
-
--------Parsed Body: 0
-
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1023,8 +562,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1034,33 +573,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -1074,8 +613,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1084,602 +623,47 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /script.js
------------URI: /script.js
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET
 [1;37mMETHOD / 
 [1;37m
-Test map : keep-alive
-Test map : keep-alive
 Test map : 
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js[0m
------------Extracted URI: [34m/script.js
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m
---START--[1;33mGET /script.js HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /www/projects42/images/42_Logo.svg.png
------------URI: /www/projects42/images/42_Logo.svg.png
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /www/projects42/images/42_Logo.svg.png
------------URI: /www/projects42/images/42_Logo.svg.png
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png[0m
------------Extracted URI: [34m/www/projects42/images/42_Logo.svg.png
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m
---START--[1;33mGET /www/projects42/images/42_Logo.svg.png HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: image
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /styles.css
------------URI: /styles.css
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css[0m
------------Extracted URI: [34m/styles.css
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m
---START--[1;33mGET /styles.css HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://127.0.0.1:8000/
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : keep-alive
-Test map : keep-alive
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-[0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-Connection: keep-alive
-Cache-Control: max-age=0
-sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: none
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate, br, zstd
-Accept-Language: fr-FR,fr;q=0.9
-Cookie: sessionId=ef65139b8b195115
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /directory
------------URI: /directory
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /directory
------------URI: /directory
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory[0m
------------Extracted URI: [34m/directory
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / 
-HEAD[0m
-[1;37mMETHOD / 
-HEAD[0m
-[1;37mMETHOD / 
-HEAD
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / 
-HEAD[0m
-[1;37mMETHOD / 
-HEAD[0m
-[1;37mMETHOD / 
-HEAD
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33m
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m--END--
---START--[1;33m
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m--END--
---START--[1;33m
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-[0m
---START--[1;33m
-HEAD / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
--------Parsed Body: 0
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
 
 --START--[1;33m
 --START--
@@ -1690,8 +674,8 @@ HttpRequest class object destroyed
 HttpRequest class object destroyed
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1700,8 +684,8 @@ HttpRequest class object destroyed
 [1;37m
 -----------No query string found in URI.
 -----------No query string found in URI.
------------URI: /
------------URI: /
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
 -----------URI: 
 [1;37mMETHOD / GET[0m
 [1;37mMETHOD / GET[0m
@@ -1711,170 +695,33 @@ HttpRequest class object destroyed
 Test map : 
 Test map : 
 Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension
 -----------Extracted URI: [34m
 -----------Extracted URI: 
 HttpRequest::setURI
 HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST[0m
-[1;37mMETHOD / POST
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
--------end parsed body
--------end parsed body
--------Parsed Body: 0
-
-
--------Parsed Body: 0
-
-
--------Parsed Body: 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m--END--
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-[0m
---START--[1;33mPOST / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Transfer-Encoding: chunked
-Content-Type: test/file
-Accept-Encoding: gzip
-
-0
-
-
---START--[1;33m
---START--
-
-HttpRequest class object created
-HttpRequest class object created
-HttpRequest class object destroyed
-HttpRequest class object destroyed
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
------------No query string found in URI.
------------No query string found in URI.
------------URI: /
------------URI: /
------------URI: 
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET[0m
-[1;37mMETHOD / GET
-[1;37mMETHOD / 
-[1;37m
-Test map : 
-Test map : 
-Test map : 
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/[0m
------------Extracted URI: [34m/
------------Extracted URI: [34m
------------Extracted URI: 
-HttpRequest::setURI
-HttpRequest::setURI
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m--END--
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
-User-Agent: Go-http-client/1.1
-Accept-Encoding: gzip
-
-[0m
---START--[1;33mGET / HTTP/1.1
-Host: 127.0.0.1:8000
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -1917,25 +764,25 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m--END--
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
 [0m
 --START--[1;33mGET /directory HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 Accept-Encoding: gzip
 
@@ -1968,22 +815,22 @@ Test map :
 HttpRequest::setURI
 HttpRequest::setURI
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m--END--
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m--END--
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 [0m
 --START--[1;33mHEAD / HTTP/1.1
-Host: 127.0.0.1:8000
+Host: 127.1.1.1:8001
 User-Agent: Go-http-client/1.1
 
 
@@ -1998,3 +845,1156 @@ HttpRequest class object destroyed
 [1;37mMETHOD / POST[0m
 [1;37mMETHOD / POST
 [1;37mMETHOD / 
+[1;37m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-------end parsed body
+-------end parsed body
+-------Parsed Body: 0
+
+
+-------Parsed Body: 0
+
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory
+-----------URI: /directory
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory
+-----------URI: /directory
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD
+[1;37mMETHOD / 
+[1;37m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-------end parsed body
+-------end parsed body
+-------Parsed Body: 0
+
+
+-------Parsed Body: 0
+
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/oulalala
+-----------URI: /directory/oulalala
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala[0m
+-----------Extracted URI: [34m/directory/oulalala
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/oulalala HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bla
+-----------URI: /directory/youpi.bla
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla[0m
+-----------Extracted URI: [34m/directory/youpi.bla
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/youpi.bla HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/youpi.bad_extension
+-----------URI: /directory/youpi.bad_extension
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension[0m
+-----------Extracted URI: [34m/directory/youpi.bad_extension
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory/youpi.bad_extension HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory
+-----------URI: /directory
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory
+-----------URI: /directory
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory[0m
+-----------Extracted URI: [34m/directory
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET /directory HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD
+[1;37mMETHOD / 
+[1;37m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD[0m
+[1;37mMETHOD / HEAD
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m--END--
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+[0m
+--START--[1;33mHEAD / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST[0m
+[1;37mMETHOD / POST
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-------end parsed body
+-------end parsed body
+-------Parsed Body: 0
+
+
+-------Parsed Body: 0
+
+
+-------Parsed Body: 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m--END--
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+[0m
+--START--[1;33mPOST / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Transfer-Encoding: chunked
+Content-Type: test/file
+Accept-Encoding: gzip
+
+0
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /
+-----------URI: /
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/[0m
+-----------Extracted URI: [34m/
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m
+--START--[1;33mGET / HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+
+--START--[1;33m
+--START--
+
+HttpRequest class object created
+HttpRequest class object created
+HttpRequest class object destroyed
+HttpRequest class object destroyed
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+-----------No query string found in URI.
+-----------No query string found in URI.
+-----------URI: /directory/nop
+-----------URI: /directory/nop
+-----------URI: 
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET[0m
+[1;37mMETHOD / GET
+[1;37mMETHOD / 
+[1;37m
+Test map : 
+Test map : 
+Test map : 
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop[0m
+-----------Extracted URI: [34m/directory/nop
+-----------Extracted URI: [34m
+-----------Extracted URI: 
+HttpRequest::setURI
+HttpRequest::setURI
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--
+--START--[1;33mGET /directory/nop HTTP/1.1
+Host: 127.1.1.1:8001
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+
+[0m--END--

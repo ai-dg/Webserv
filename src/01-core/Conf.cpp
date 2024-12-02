@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Conf.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:49 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/27 19:18:55 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:46:25 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ Conf::Conf(std::string& path) : path(path)
     setLocations();
     getValuesFromPath();
     Log::output("./sessions/Conf.txt") << "path: " << this->path;
-    std::ofstream file("./test.txt");
-    printConfigs(file);
+    // std::ofstream file("./test.txt");
+    // printConfigs(file);
     checkAndSetDefaultValues();
-    file.close();
+    // file.close();
     Log::output("./sessions/Conf.txt") << "Conf class object has been created" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 18:46:03 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:29:57 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ class HttpResponse
         void addHeader(const std::string &key, const std::string &value);
         void checkRedirection(const HttpRequest &req);
         int put(const HttpRequest &req);
+        bool isAllowedMethod(Location *Route, HttpRequest req) const;
         void send(int fd_client);
 
 };

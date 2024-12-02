@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:18 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 18:55:27 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:30:39 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define FILENOTFOUND "FILE NOT FOUND"
 #define BUFFER_SIZE 2048
 #define AUTO 200
+#define NO_BODY 1
 #define HOST "host"
 #define HOST_NAMES "server_name"
 #define DEFAULT_SERVER "default_server"
