@@ -66,7 +66,7 @@ launch: clean_temp
 	make
 	./webserv
 
-tester:
+test:
 	./testers/ubuntu_tester http://127.1.1.1:8001
 
 .PHONY: all clean fclean re clean_temp
