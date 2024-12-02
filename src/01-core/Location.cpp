@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 19:09:11 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:29:01 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void Location::extractField(std::string param)
         _index = value;
         setAllowedIndexes();
     }
+    if (field == "max_body")
+        setMaxBodySize(value);
     if (field == "extensions")
         _extensions = value;
     if (field == "methods")
@@ -93,6 +95,7 @@ Location& Location::operator=(Location const& src)
     _return = src._return;
     _index = src._index;
     indexes = src.indexes;
+    _max_body = src._max_body;
     redirectionPath = src.redirectionPath;
     redirectionStatus = src.redirectionStatus;
     Log::output("./sessions/Location.txt") << "Location class object assigned" << std::endl;
@@ -121,11 +124,20 @@ void Location::init()
     _index = "";
     redirectionPath = "";
     redirectionStatus = 0;
+    _max_body = 100 * 1024;
 }
 
 /**
  * @brief Setters
  */
+
+void Location::setMaxBodySize(std::string size)
+{
+    _max_body = getFormatedSizeFromString(size) * 1024;
+    std::cerr  << size << " : " << _max_body << " bytes" << std::endl;
+}
+
+
 void Location::setRedirectionStatus()
 {
     redirectionStatus = stoi(_return.substr(0,_return.find(" ")).c_str());
@@ -173,6 +185,12 @@ std::string Location::getRedirectionPath()
 /**
  * @brief Public functions
  */
+
+size_t Location::max_body_size()
+{
+    return _max_body;
+}
+
 std::string Location::index()
 {
     return _index;

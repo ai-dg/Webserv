@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 20:31:26 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 01:25:31 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,35 @@ void HttpRequest::setHeaders(std::string req)
     }
 }
 
+std::string HttpRequest::mergeChunks(std::string data)
+{
+    std::string merged;
+    //std::cerr << BOLD_BLUE << data << RESET << std::endl;
+    while(data.size())
+    {
+        size_t crlf_pos = data.find("\r\n");
+        data.erase(0, crlf_pos + 2);
+        crlf_pos = data.find("\r\n");
+        merged += data.substr(0, crlf_pos);
+        data.erase(0, crlf_pos + 2);
+    }
+    //std::cerr << BOLD_YELLOW << merged <<std::endl <<RESET;
+    return merged;
+}
+
+
+
 void HttpRequest::setBody(std::string req)
 {
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
-        this->body = req.substr(bodyPos + 4);
+        body = req.substr(bodyPos + 4);
     else
-        this->body = "";
+        body = "";
+    if (getHeader("Transfer-Encoding") == "chunked")
+        body = mergeChunks(body);
+     Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
+    std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
 }
 
 void HttpRequest::setRoute()
@@ -125,15 +147,10 @@ void HttpRequest::parseRequest(std::string req)
     setRoute();
     setAskedFile();
     setHeaders(req);
-    setBody(req);
+    
     if (this->method == "POST" || this->method == "DELETE")
     {
-        size_t bodyStartPos = req.find("\r\n\r\n");
-        if (bodyStartPos != std::string::npos)
-        {
-            this->body = req.substr(bodyStartPos + 4);
-            Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << this->body << std::endl << "-------end parsed body" << std::endl;
-        }
+        setBody(req);       
     }
 }
 
@@ -145,9 +162,9 @@ void HttpRequest::addToHeaders(std::string line)
         std::string key = line.substr(0, pos);
         std::string value = line.substr(pos + 2);
         this->headers[key] = value;
-    }
+    }/*
     else
-        this->setBody(line);
+        this->setBody(line);*/
 }
 
 /**

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   files.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/01 19:09:57 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 22:30:00 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ bool checkFormatOfConfig(std::string const& path_file)
     const char* validDirectives[] = {
         "listen", "host", "server_name", "root", "index", "methods",
         "error_page_403", "error_page_404", "error_page_405", "error_page_406", "error_page_413","error_page_500",
-        "client_max_body_size", "keepalive_timeout", "client_body_timeout",
+        "client_max_body_size", "max_body", "keepalive_timeout", "client_body_timeout",
         "client_header_timeout", "autoindex", "cgi", "cgi_bin", "extension",
         "return"
     };

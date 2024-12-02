@@ -6,12 +6,14 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 10:11:16 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:18:29 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/02-utils/stringUtils.hpp"
+#include "../00-headers/02-utils/Log.hpp"
+#include "../00-headers/04-exceptions/InvalidArgException.hpp"
 
 std::string replaceBy(std::string original, std::string find, std::string replace)
 {
@@ -120,4 +122,29 @@ size_t getNextof(std::string str, size_t pos, char c)
             return i;        
     }
     return std::string::npos;    
+}
+
+size_t getFormatedSizeFromString(std::string size)
+{
+    size_t multi = 1;
+    size_t maxBodySize = 0;
+    std::stringstream stream;
+    std::string mbs = trim(size);
+    stream << mbs;
+    try {
+        if (mbs[mbs.size() - 1] == 'M')
+            multi = 1024;
+        else if (mbs[mbs.size() - 1] == 'K')
+            multi = 1;
+        else
+            throw InvalidArgException();
+        size_t max ;
+        stream >> max;
+        maxBodySize = max * multi;
+    }
+    catch (const InvalidArgException &e)
+    {
+        maxBodySize = 2048;
+    }
+    return maxBodySize;
 }

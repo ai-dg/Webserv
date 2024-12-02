@@ -1,18 +1,13 @@
-# #!/usr/bin/bash
-# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# # Exécuter le script `ubuntu_cgi_tester` depuis ce répertoire
-# exec "$SCRIPT_DIR/ubuntu_cgi_tester"
-
 #!/usr/bin/bash
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Écrire toutes les variables d'environnement dans env.txt
 env > "$SCRIPT_DIR/env.txt"
 
 # Exécuter le script `ubuntu_cgi_tester` depuis ce répertoire
-# exec "$SCRIPT_DIR/cgi-bin/ubuntu_cgi_tester"
+# exec "$SCRIPT_DIR/ubuntu_cgi_tester"
 
-# exec env CGI_BODY="$CGI_BODY" "$SCRIPT_DIR/cgi-bin/ubuntu_cgi_tester"
+# exec env CGI_FILE="$ROOT_DIR$CGI_FILE" "$SCRIPT_DIR/ubuntu_cgi_tester"
 
-echo $CGI_BODY | ./cgi-bin/ubuntu_cgi_tester
+echo $CGI_FILE | "$SCRIPT_DIR/ubuntu_cgi_tester"

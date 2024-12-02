@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 19:51:59 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:28:33 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Location
         std::string _methods ;
         std::string _autoindex ;
         std::string _upload_store ;
+        size_t _max_body ;
         std::string _cgi;
         std::string _cgi_bin;
         std::string _return;
@@ -55,6 +56,7 @@ class Location
         void setRedirectionStatus();
         void setAllowedIndexes();
         void setRedirectionPath();
+        void setMaxBodySize(std::string size);
 
         /**
          * @brief Getters
@@ -75,6 +77,7 @@ class Location
         std::string extensions();
         std::string root();
         std::string findIndex();
+        size_t max_body_size();
 
         /**
          * @brief Debug
