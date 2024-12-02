@@ -203,11 +203,11 @@ void HttpRequest::setRoute()
     size_t firstSlashPos = URI.find_first_of('/');
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
-
-    if (lastSlashPos == 0 && URI.size() == 1) {
-        
-        route = "/";
-    } else {
+    if ((lastSlashPos == 0 && URI.size() == 1) || (lastSlashPos == 0 && lastDotPos > lastSlashPos && lastDotPos != std::string::npos))
+    {
+        route = "/"; 
+    }
+    else {
         if (firstSlashPos == lastSlashPos) {
             
             route = URI;
@@ -225,13 +225,8 @@ void HttpRequest::setRoute()
     
     if (lastDotPos == std::string::npos && !URI.empty() && URI[URI.size() - 1] != '/') {
         route += "/";
-    }
-
-    
+    }    
     route = removeDuplicateSlashes(route);
-
-    
-    
 }
 
 
@@ -439,7 +434,7 @@ void HttpRequest::getHostByName() const
     std::string line;
     while (std::getline(hosts, line))
     {
-        std::cout << line << std::endl;
+        std::cerr << line << std::endl;
     }
     hosts.close();
 }
@@ -528,5 +523,5 @@ bool HttpRequest::isValidBodySize() const
 
 void HttpRequest::printConf(std::string config) const
 {
-    std::cout << server->getConf()->getConfig(config);
+    std::cerr << server->getConf()->getConfig(config);
 }
