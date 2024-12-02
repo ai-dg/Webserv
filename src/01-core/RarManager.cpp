@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:31:28 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:49:12 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,27 +68,27 @@ std::string decode_chunked_body(const std::string& chunkedBody) {
     std::string line;
 
     while (std::getline(stream, line)) {
-        // Ignorer les lignes vides ou uniquement avec \r
+        
         if (line.empty() || line == "\r") {
             continue;
         }
 
-        // Convertir la taille du chunk de hexadécimal à entier
+        
         size_t chunkSize = 0;
         std::stringstream chunkSizeStream(line);
         chunkSizeStream >> std::hex >> chunkSize;
 
         if (chunkSize == 0) {
-            break; // Fin des chunks
+            break; 
         }
 
-        // Lire le chunk en fonction de sa taille
+        
         char* buffer = new char[chunkSize];
         stream.read(buffer, chunkSize);
         decodedBody.append(buffer, chunkSize);
         delete[] buffer;
 
-        // Ignorer le \r après chaque chunk
+        
         stream.get();
     }
 
@@ -106,7 +106,7 @@ void send_valid_body(int fd_client, const std::string& body) {
     std::string res = oss.str();
     write(fd_client, res.c_str(), res.size());
 
-    // Sauvegarder la réponse pour inspection
+    
     std::ofstream file("./sessions/fd_client.txt");
     if (file.is_open()) {
         file << res;

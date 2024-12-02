@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 21:58:07 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:56:42 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,11 @@ void Cgi_handler::addToEnvironment(std::string env)
 
 std::string createBufferDataFile(std::string body)
 {
+    (void)body;
     std::string filename = "./sessions/tmp.d";
-    std::ofstream file(filename.c_str());
-    file << body;
-    file.close();
+    // std::ofstream file(filename.c_str());
+    // file << body;
+    // file.close();
     return filename;
     
 }

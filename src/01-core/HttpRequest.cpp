@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 16:33:21 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:57:51 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,79 +80,80 @@ void HttpRequest::setHeaders(std::string req)
 //     return merged;
 // }
 
-std::string HttpRequest::mergeChunks(std::string const& data) {
-    std::string merged;
-    std::string chunk = data;
-
-    while (!chunk.empty()) {
-        
-        size_t crlf_pos = chunk.find("\r\n");
-        if (crlf_pos == std::string::npos) {
-            std::cerr << "Error: Missing CRLF in chunk header." << std::endl;
-            break;
-        }
-
-        
-        std::string chunk_size_str = chunk.substr(0, crlf_pos);
-        size_t chunk_size = 0;
-        std::stringstream chunk_size_stream(chunk_size_str);
-        chunk_size_stream >> std::hex >> chunk_size;
-
-        if (chunk_size_stream.fail()) {
-            std::cerr << "Error: Invalid chunk size format: '" << chunk_size_str << "'" << std::endl;
-            break;
-        }
-
-        if (chunk_size == 0) {
-            std::cerr << "End of chunks detected (chunk size 0)." << std::endl;
-            break;
-        }
-
-        
-        chunk.erase(0, crlf_pos + 2);
-
-        
-        if (chunk.size() < chunk_size) {
-            std::cerr << "Error: Chunk size exceeds remaining data size." << std::endl;
-            std::cerr << "Chunk size: " << chunk_size << ", Remaining size: " << chunk.size() << std::endl;
-            
-            merged += chunk.substr(0, chunk.size());
-            break;
-        }
-
-        
-        merged += chunk.substr(0, chunk_size);
-
-        
-        chunk.erase(0, chunk_size);
-
-        
-        if (chunk.size() >= 2 && chunk.substr(0, 2) == "\r\n") {
-            chunk.erase(0, 2);
-        } else if (!chunk.empty()) {
-            std::cerr << "Warning: Missing CRLF after chunk data. Remaining data: " << chunk << std::endl;
-            break;
-        }
+std::string cleanMergedData(const std::string& merged) {
+    size_t end_pos = merged.find_last_not_of('\n');
+    if (end_pos != std::string::npos) {
+        return merged.substr(0, end_pos + 1);
     }
-
-    std::cerr << "Final merged size: " << merged.size() << std::endl;
     return merged;
 }
 
 
+std::string HttpRequest::mergeChunks(const std::string& data) {
+    std::string merged;
+    std::stringstream stream(data);
+    std::string line;
+
+    while (std::getline(stream, line)) {
+        if (!line.empty() && line[line.size() - 1] == '\r') {
+            line.erase(line.size() - 1);
+        }
+
+
+        size_t chunk_size = 0;
+        std::stringstream chunk_size_stream(line);
+        chunk_size_stream >> std::hex >> chunk_size;
+
+        if (chunk_size == 0) {
+            std::cout << "DEBUG: End of chunks detected (chunk size 0)." << std::endl;
+            break;
+        }
+
+        if (chunk_size_stream.fail()) {
+            throw std::runtime_error("Invalid chunk size: " + line);
+        }
+
+        std::cout << "DEBUG: Parsed chunk size: " << chunk_size << " bytes" << std::endl;
+
+
+        std::string chunk_data;
+        chunk_data.resize(chunk_size);
+        stream.read(&chunk_data[0], chunk_size);
+
+        merged += chunk_data;
+
+        std::cout << "DEBUG: Chunk data: \"" << chunk_data.substr(0, 100) << "...\" (truncated for display)" << std::endl;
+
+        std::getline(stream, line);
+    }
+
+    return cleanMergedData(merged);
+}
 
 
 void HttpRequest::setBody(std::string req)
 {
     std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
     Log::output("./sessions/test.txt") << req << std::endl;
+    std::string body_temp;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
         body = req.substr(bodyPos + 4);
     else
         body = "";
     if (getHeader("Transfer-Encoding") == "chunked")
-        body = mergeChunks(body);
+    {
+        body_temp = mergeChunks(body);
+        body.erase();
+        body = body_temp;
+        
+    }
+
+    std::string filename = "./sessions/tmp.d";
+    std::ofstream file(filename.c_str());
+    file << body;
+    file.close();
+    
     
     std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
     Log::output("./sessions/test2.txt") << body << std::endl;

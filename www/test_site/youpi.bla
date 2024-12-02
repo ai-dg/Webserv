@@ -8,6 +8,6 @@ env > "$SCRIPT_DIR/env.txt"
 
 echo -e "Content-Length: $CONTENT_LENGTH\r\n"
 
-sed 's/^..//' "$ROOT_DIR/$CGI_FILE" | "$SCRIPT_DIR/ubuntu_cgi_tester"
+< "/home/dagudelo/Parcours/Webserv/sessions/tmp.d" cat | "$SCRIPT_DIR/ubuntu_cgi_tester"
 
 exit 0
