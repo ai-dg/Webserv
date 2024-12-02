@@ -16,8 +16,8 @@ logging.basicConfig(
 
 logging.debug("Script started.")
 
-image_upload_path = "./www/projects42/upload"
-default_image_url = "./www/projects42/images/Default.jpg"
+image_upload_path = "./upload"
+default_image_url = "./images/Default.jpg"
 
 
 request_method = os.getenv("REQUEST_METHOD", "")

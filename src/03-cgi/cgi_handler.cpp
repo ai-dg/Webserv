@@ -256,7 +256,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             const_cast<char*>(scriptPathTemp.c_str()), 
             NULL
         };
-
+        std::cerr << BOLD_BLUE <<scriptPathTemp <<RESET << std::endl;
        
         if (access(scriptPathTemp.c_str(), X_OK) == -1)
         {
@@ -279,11 +279,11 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         std::cerr << "Parent process" << std::endl; 
         close(pipe_in[0]);  
         close(pipe_out[1]); 
-        // std::ofstream outfile("./logs/data_cgi.log");
-        // if (!data.empty()) 
-        //     write(pipe_in[1], data.c_str(), data.size());
-        // outfile << data;
-        // outfile.close();
+        std::ofstream outfile("./logs/data_cgi.log");
+        if (!data.empty()) 
+             write(pipe_in[1], data.c_str(), data.size());
+        outfile << data;
+        outfile.close();
         close(pipe_in[1]); 
         Log::output("./sessions/cgi_handler.txt") << "Parent waiting..." << std::endl;
         int status;
@@ -316,7 +316,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            // std::cerr << buffer << std::endl;
+            std::cerr << buffer << std::endl;
             Log::output("./sessions/fd_client_cgi.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
