@@ -62,4 +62,11 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+launch: clean_temp
+	make
+	./webserv
+
+tester:
+	./testers/ubuntu_tester http://127.1.1.1:8001
+
+.PHONY: all clean fclean re clean_temp
