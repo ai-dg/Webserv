@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:41:48 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 08:44:46 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Log::~Log()
 
 void Log::log(std::string path, std::string message)
 {
-    const size_t MAX_LINES = 2000;     
+    const size_t MAX_LINES = 500;     
     std::ifstream fileRead(path.c_str());
     std::deque<std::string> lines;
     std::string line;
@@ -132,7 +132,7 @@ Log::LogStream& Log::output(const std::string& path)
  */
 void Log::LogStream::truncateFileIfNeeded(const std::string& newMessage)
 {
-    const size_t MAX_LINES = 2000;
+    const size_t MAX_LINES = 500;
     std::deque<std::string> lines;
     std::string line;
     

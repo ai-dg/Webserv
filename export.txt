@@ -1,0 +1,54 @@
+export REQUEST_METHOD=POST
+export CONTENT_LENGTH=254992992
+export CONTENT_TYPE=test/file
+export CGI_FILE=./sessions/tmp.d
+export REDIRECT_STATUS=1
+export SERVER_PROTOCOL=HTTP/1.1
+export PATH_INFO=/
+
+
+# #!/usr/bin/bash
+# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+# # Écrire toutes les variables d'environnement dans env.txt
+# env > "$SCRIPT_DIR/env.txt"
+
+# # Exécuter le script `ubuntu_cgi_tester` depuis ce répertoire
+# # exec "$SCRIPT_DIR/ubuntu_cgi_tester"
+
+# # exec env CGI_FILE="$ROOT_DIR$CGI_FILE" "$SCRIPT_DIR/ubuntu_cgi_tester"
+
+# # echo "HTTP/1.1 200 OK"
+# # echo "Content-Length: $CONTENT_LENGTH"
+
+
+# sed 's/^..//' "$ROOT_DIR/$CGI_FILE" | "$SCRIPT_DIR/ubuntu_cgi_tester"
+
+# exit 0
+
+# #!/usr/bin/bash
+# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+# # Log des chemins pour débogage
+# echo "SCRIPT_DIR: $SCRIPT_DIR"
+# echo "ROOT_DIR: $ROOT_DIR"
+
+# # Vérifiez que le fichier existe et n'est pas vide
+# if [ ! -s "$ROOT_DIR/$CGI_FILE" ]; then
+#     echo "Erreur : fichier introuvable ou vide ($ROOT_DIR/$CGI_FILE)" >&2
+#     exit 1
+# fi
+
+# # Utiliser sed pour modifier le fichier
+# echo "Traitement avec sed : suppression des 2 premiers caractères"
+# sed 's/^..//' "$ROOT_DIR/$CGI_FILE" > /tmp/processed_file
+
+# # Affiche le contenu traité
+# echo "Contenu traité par sed :"
+# cat /tmp/processed_file
+
+# # Passer le contenu traité à ubuntu_cgi_tester
+# cat /tmp/processed_file | "$SCRIPT_DIR/ubuntu_cgi_tester"
+

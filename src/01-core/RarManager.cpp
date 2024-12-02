@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 23:26:49 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:31:28 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,63 @@ int findServerIndex(std::string const& request, std::vector<Server *>& Servers)
     return 0;
 }
 
+std::string decode_chunked_body(const std::string& chunkedBody) {
+    std::istringstream stream(chunkedBody);
+    std::string decodedBody;
+    std::string line;
+
+    while (std::getline(stream, line)) {
+        // Ignorer les lignes vides ou uniquement avec \r
+        if (line.empty() || line == "\r") {
+            continue;
+        }
+
+        // Convertir la taille du chunk de hexadécimal à entier
+        size_t chunkSize = 0;
+        std::stringstream chunkSizeStream(line);
+        chunkSizeStream >> std::hex >> chunkSize;
+
+        if (chunkSize == 0) {
+            break; // Fin des chunks
+        }
+
+        // Lire le chunk en fonction de sa taille
+        char* buffer = new char[chunkSize];
+        stream.read(buffer, chunkSize);
+        decodedBody.append(buffer, chunkSize);
+        delete[] buffer;
+
+        // Ignorer le \r après chaque chunk
+        stream.get();
+    }
+
+    return decodedBody;
+}
+
+
+void send_valid_body(int fd_client, const std::string& body) {   
+    std::ostringstream oss;
+    oss << "Status: 200 OK\r\n";
+    oss << "Content-Type: text/html; charset=utf-8\r\n";
+    oss << "Content-Length: " << body.size() << "\r\n\r\n";
+    oss << body;
+
+    std::string res = oss.str();
+    write(fd_client, res.c_str(), res.size());
+
+    // Sauvegarder la réponse pour inspection
+    std::ofstream file("./sessions/fd_client.txt");
+    if (file.is_open()) {
+        file << res;
+        file.close();
+    } else {
+        Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ./sessions/fd_client.txt" << std::endl;
+    }
+}
+
+
+
+
 void type_request_manager(int *fd_client, std::string *req, Server *server, Epoll *epoll, SessionManager &sessionManager)
 {
     Log::output("./sessions/fd_client2.txt") << "**************************" << std::endl;
@@ -70,10 +127,11 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     Log::output("./sessions/fd_client2.txt") << "*************************************" << std::endl;
     // static int count = 1;
 
-    // std::cerr << BOLD_RED << "request nbr " << BOLD_WHITE << count++ << RESET<< std::endl;
     size_t headerEnd = req->find("\r\n\r\n");
     if (headerEnd != std::string::npos) 
     {
+             
+           
         HttpRequest request(*req, server);
         HttpResponse response(request);
         //////////////////////// A TESTER !!!!!!!
@@ -108,20 +166,12 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
                 return;
             else if (response.isAllowedMethod(route, request))
             {
-                std::cerr << "Lenght : " << request.getBody().length() << std::endl;
-                if (request.getBody().length() >= route->max_body_size())
-                {
-                    std::cerr << "Body too long" << std::endl;
-                    response.setRedirection(413);
-                    response.send(*fd_client);
-        
-                }
-                else
-                {
-                    Cgi_handler cgiHandler;
-                    cgiHandler.executeCGI(filePath, request, *fd_client);
-                }             
-            }else
+                Cgi_handler cgiHandler;
+                cgiHandler.executeCGI(filePath, request, *fd_client);
+                std::cerr << "CGI executed" << std::endl;
+                
+            }
+            else
             {
                 response.setRedirection(406);
                 response.send(*fd_client);
@@ -147,6 +197,20 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     }
     else
         Log::output("./logs/error.log") << "Requête incomplète : en attente de plus de données." << std::endl;
+
+    // char buff_2[BUFFER_SIZE];
+    // ssize_t bytesRead;
+    // std::string finalBuffer;
+    // while((bytesRead = read(*fd_client, buff_2, BUFFER_SIZE)) > 0)
+    // {
+    //     finalBuffer.append(buff_2, bytesRead);
+    // }
+    // if (bytesRead == -1)
+    // {
+    //     Log::output("./logs/error.log") << "Error reading from client socket" << std::endl;
+    // }
+    // Log::output("./sessions/fd_client_final.txt") << finalBuffer << std::endl;
+    
 }
 
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
@@ -219,7 +283,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     std::string& req = requestMap[fd_client];
                     size_t headerEndPos = req.find("\r\n\r\n");
                     ssize_t contentLength = -1;
-
                     if (headerEndPos != std::string::npos) 
                     {
                         size_t contentLengthPos = req.find("Content-Length: ");
@@ -235,13 +298,14 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                         
                         if (contentLength == -1 || totalRead >= (ssize_t)headerEndPos + 4 + contentLength) 
                         {
-                            int serverIndex = findServerIndex(req, Servers);                        
+                            int serverIndex = findServerIndex(req, Servers);                
                             type_request_manager(&fd_client, &req, Servers[serverIndex], &epoll, sessionManager);                        
                             requestMap.erase(fd_client);
                             //close(fd_client);
                         }
                     }
                     if (reads == 0) 
+                    
                     {
                         //epoll.removeFd(fd_client);
                         //close(fd_client);

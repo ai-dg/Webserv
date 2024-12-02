@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:50 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 23:55:09 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:59:34 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class HttpRequest
         void setRoute();
         void setAskedFile();
         void setURI(std::string req);
-        std::string mergeChunks(std::string data);
+        std::string mergeChunks(std::string const& data);
 
         /**
          * @brief Private parsers

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/30 23:58:56 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 11:27:33 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ class HttpResponse
         void checkRedirection(const HttpRequest &req);
         int put(const HttpRequest &req);
         void send(int fd_client);
+        void send_invalid_body(int fd_client);
 
         bool isAllowedMethod(Location *Route, HttpRequest req) const;
 

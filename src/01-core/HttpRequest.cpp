@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpRequest.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 01:25:31 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:38:25 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,93 @@ void HttpRequest::setHeaders(std::string req)
     }
 }
 
-std::string HttpRequest::mergeChunks(std::string data)
-{
+
+
+// std::string HttpRequest::mergeChunks(std::string const& data) {
+//     std::string merged;
+//     std::istringstream stream(data);
+//     std::string line;
+
+//     while (std::getline(stream, line)) {
+//         // Supprimer le '\r' à la fin de chaque ligne (s'il existe)
+//         if (!line.empty() && line[line.size() - 1] == '\r') {
+//             line.erase(line.size() - 1); // Supprimer le dernier caractère
+//         }
+
+//         // Convertir la taille du chunk (en hexadécimal) à un entier
+//         size_t chunkSize = 0;
+//         std::stringstream chunkSizeStream(line);
+//         chunkSizeStream >> std::hex >> chunkSize;
+
+//         if (chunkSize == 0) {
+//             break; // Fin des chunks
+//         }
+
+//         // Lire les données du chunk en fonction de `chunkSize`
+//         std::string chunk(chunkSize, '\0');
+//         stream.read(&chunk[0], chunkSize);
+//         merged += chunk;
+
+//         // Vérifier qu'il reste au moins deux caractères `\r\n` à ignorer
+//         if (stream.peek() == '\r') {
+//             stream.get(); // Ignorer '\r'
+//         }
+//         if (stream.peek() == '\n') {
+//             stream.get(); // Ignorer '\n'
+//         }
+//     }
+
+//     return merged;
+// }
+
+
+std::string HttpRequest::mergeChunks(std::string const& data) {
     std::string merged;
-    //std::cerr << BOLD_BLUE << data << RESET << std::endl;
-    while(data.size())
-    {
-        size_t crlf_pos = data.find("\r\n");
-        data.erase(0, crlf_pos + 2);
-        crlf_pos = data.find("\r\n");
-        merged += data.substr(0, crlf_pos);
-        data.erase(0, crlf_pos + 2);
+    std::string chunk = data;
+
+    while (!chunk.empty()) {
+        
+        size_t crlf_pos = chunk.find("\r\n");
+        if (crlf_pos == std::string::npos) {
+            std::cerr << "Error: Missing CRLF in chunk header." << std::endl;
+            break;
+        }
+
+        
+        std::string chunk_size_str = chunk.substr(0, crlf_pos);
+        size_t chunk_size = 0;
+        std::stringstream chunk_size_stream(chunk_size_str);
+        chunk_size_stream >> std::hex >> chunk_size;
+
+        if (chunk_size_stream.fail() || chunk_size == 0) {
+            std::cerr << "End of chunks or invalid chunk size detected." << std::endl;
+            break;
+        }
+
+        
+        chunk.erase(0, crlf_pos + 2);
+
+        
+        if (chunk.size() < chunk_size) {
+            std::cerr << "Error: Chunk size exceeds remaining data size." << std::endl;
+            break;
+        }
+
+        
+        merged += chunk.substr(0, chunk_size);
+
+        
+        chunk.erase(0, chunk_size + 2);
     }
-    //std::cerr << BOLD_YELLOW << merged <<std::endl <<RESET;
+
     return merged;
 }
 
 
-
 void HttpRequest::setBody(std::string req)
 {
+    std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
+    Log::output("./sessions/test.txt") << req << std::endl;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
         body = req.substr(bodyPos + 4);
@@ -68,41 +135,87 @@ void HttpRequest::setBody(std::string req)
         body = "";
     if (getHeader("Transfer-Encoding") == "chunked")
         body = mergeChunks(body);
+    
+    std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
+    Log::output("./sessions/test2.txt") << body << std::endl;
      Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
     std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
 }
 
+// void HttpRequest::setRoute()
+// {   
+//     size_t firstSlashPos = URI.find_first_of('/'); 
+//     size_t lastSlashPos = URI.find_last_of('/');
+//     size_t lastDotPos = URI.find_last_of('.');
+
+//    /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
+//     {*/
+//     if (lastSlashPos == 0 && URI.size() == 1)
+//         route = "/"; 
+//     else
+//     {
+//         if (firstSlashPos == lastSlashPos)
+//             route = URI;
+//         else
+//             route = URI.substr(0, getNextof(URI,1,'/') + 1); 
+//     }
+        
+//     if (lastDotPos == std::string::npos && URI[URI.size()-1] != '/')
+//         route += "/";
+//     route = removeDuplicateSlashes(route);
+//     /*}*/
+//     /*else
+//     { 
+//         if (URI[URI.size() - 1] != '/')
+//             route = URI + "/"; 
+//         else
+//             route = URI; 
+//     }*/
+//     // std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
+// }
+
 void HttpRequest::setRoute()
-{   
-    size_t firstSlashPos = URI.find_first_of('/'); 
+{
+    
+    if (URI.empty()) {
+        route = "/";
+        return;
+    }
+
+    size_t firstSlashPos = URI.find_first_of('/');
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
 
-   /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
-    {*/
-    if (lastSlashPos == 0 && URI.size() == 1)
-        route = "/"; 
-    else
-    {
-        if (firstSlashPos == lastSlashPos)
-            route = URI;
-        else
-            route = URI.substr(0, getNextof(URI,1,'/') + 1); 
-    }
+    if (lastSlashPos == 0 && URI.size() == 1) {
         
-    if (lastDotPos == std::string::npos && URI[URI.size()-1] != '/')
+        route = "/";
+    } else {
+        if (firstSlashPos == lastSlashPos) {
+            
+            route = URI;
+        } else {
+            
+            size_t nextSlashPos = getNextof(URI, 1, '/');
+            if (nextSlashPos != std::string::npos) {
+                route = URI.substr(0, nextSlashPos + 1);
+            } else {
+                route = URI; 
+            }
+        }
+    }
+
+    
+    if (lastDotPos == std::string::npos && !URI.empty() && URI[URI.size() - 1] != '/') {
         route += "/";
+    }
+
+    
     route = removeDuplicateSlashes(route);
-    /*}*/
-    /*else
-    { 
-        if (URI[URI.size() - 1] != '/')
-            route = URI + "/"; 
-        else
-            route = URI; 
-    }*/
-    // std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
+
+    
+    
 }
+
 
 void HttpRequest::setAskedFile()
 {
