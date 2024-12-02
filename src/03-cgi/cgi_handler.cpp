@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:37:27 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:22:27 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,8 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     // }
     else
     {
-        std::string filename = createBufferDataFile(req.getBody());
+        // std::string filename = createBufferDataFile(req.getBody());
+        std::string filename = "./sessions/tmp.d";
         this->addToEnvironment("CGI_FILE=" + filename);
         // this->addToEnvironment("CGI_BODY=" + req.getBody());
     }
@@ -193,6 +194,38 @@ Cgi_handler::~Cgi_handler()
     Log::output("./sessions/cgi_handler.txt") << "CGI Handler object class destroyed" << std::endl;
 }
 
+void drainFd(int fd_client) {
+    const size_t bufferSize = 4096; // Taille du buffer pour la lecture
+    char buffer[bufferSize];
+    ssize_t bytesRead;
+
+    while (true) {
+        bytesRead = read(fd_client, buffer, bufferSize);
+
+        if (bytesRead > 0) {
+            // Facultatif : Affichez ou ignorez les données
+            std::cout.write(buffer, bytesRead);
+        } else if (bytesRead == 0) {
+            // Connexion fermée proprement
+            std::cout << "Connection closed by peer." << std::endl;
+            break;
+        } else {
+            if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                // Pas de données disponibles et le socket est non bloquant
+                std::cout << "No more data to read (non-blocking mode)." << std::endl;
+                break;
+            } else {
+                // Autres erreurs
+                std::cerr << "Error reading from fd_client: " << strerror(errno) << std::endl;
+                break;
+            }
+        }
+    }
+
+    std::cout << "Finished draining fd_client." << std::endl;
+}
+
+
 /**
  * @brief Execute the CGI script
  */
@@ -204,6 +237,41 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_out[2];
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
+
+
+    drainFd(fd_client);
+
+    std::string outputPath = "./sessions/fd_client_final.txt";
+        const size_t bufferSize = 4096; // Taille du buffer pour les lectures
+        char buffer_2[bufferSize];
+        ssize_t bytesRead_2;
+
+        // Ouvrir un fichier pour écrire
+        std::ofstream outputFile(outputPath.c_str(), std::ios::out | std::ios::binary);
+        if (!outputFile.is_open()) {
+            std::cerr << "Error: Unable to open file " << outputPath << " for writing." << std::endl;
+            return;
+        }
+
+        // Lire les données depuis fd_client
+        while ((bytesRead_2 = read(fd_client, buffer_2, bufferSize)) > 0) {
+            // Écrire les données lues dans le fichier
+            outputFile.write(buffer_2, bytesRead_2);
+            if (outputFile.fail()) {
+                std::cerr << "Error: Failed to write to file " << outputPath << "." << std::endl;
+                break;
+            }
+        }
+
+        if (bytesRead_2 == -1) {
+            std::cerr << "Error: Failed to read from fd_client: " << strerror(errno) << std::endl;
+        }
+
+        outputFile.close();
+
+        if (bytesRead_2 != -1) {
+            std::cout << "Data successfully written to " << outputPath << "." << std::endl;
+        }
 
     // Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     // Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
@@ -308,15 +376,15 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         int bytesRead = 0;
         std::string context = getExeContext(scriptPath);
         std::cerr << "context : " << context << std::endl;
-        if (context == "php-cgi" || context =="perl" || context =="bash")
-        {
-            std::string res = "HTTP/1.1 200 OK\r\n";
-            write(fd_client, res.c_str(), res.size());
-        }
+        // if (context == "php-cgi" || context =="perl" || context =="bash")
+        // {
+        //     std::string res = "HTTP/1.1 200 OK\r\n";
+        //     write(fd_client, res.c_str(), res.size());
+        // }
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            // std::cerr << buffer << std::endl;
+            std::cerr << buffer << std::endl;
             Log::output("./sessions/fd_client_cgi.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
@@ -329,11 +397,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
        // write(fd_client, "\r\n\r\n", 4);
         close(pipe_out[0]); 
         
+        
 
-    }    
 
+    }
     
     
-
-    std::cerr << "Exiting executeCGI" << std::endl;
 }

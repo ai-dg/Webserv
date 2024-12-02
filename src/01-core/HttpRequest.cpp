@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 16:33:21 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:26:36 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,8 @@ void HttpRequest::setBody(std::string req)
     if (getHeader("Transfer-Encoding") == "chunked")
         body = mergeChunks(body);
     
+    Log::output("./sessions/tmp.d") << body << std::endl; 
+
     std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
     Log::output("./sessions/test2.txt") << body << std::endl;
      Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;

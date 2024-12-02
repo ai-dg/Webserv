@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:31:28 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:16:37 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         {
             response.put(request);
             response.setStatusCode(201);
+            std::cout << RED << "#1 send" << RESET << std::endl;
             response.send(*fd_client);
         }
         
@@ -167,6 +168,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
             else if (response.isAllowedMethod(route, request))
             {
                 Cgi_handler cgiHandler;
+                std::cout << RED << "#2 send" << RESET << std::endl;
                 cgiHandler.executeCGI(filePath, request, *fd_client);
                 std::cerr << "CGI executed" << std::endl;
                 
@@ -174,16 +176,21 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
             else
             {
                 response.setRedirection(406);
+                std::cout << RED << "#3 send" << RESET << std::endl;
                 response.send(*fd_client);
             }
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
             response.setRedirection(403);
+            std::cout << RED << "#4 send" << RESET << std::endl;
             response.send(*fd_client);
         }
         else 
+        {
+            std::cout << RED << "#5 send" << RESET << std::endl;
             response.send(*fd_client);
+        }
         std::string connectionHeader = request.getHeader("Connection");
             // std::cerr << BOLD_BLUE << "connectionHeader : " << connectionHeader << RESET << std::endl;
         /*if (connectionHeader != "keep-alive") 
@@ -197,6 +204,38 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     }
     else
         Log::output("./logs/error.log") << "Requête incomplète : en attente de plus de données." << std::endl;
+
+    // std::string outputPath = "./sessions/fd_client_final.txt";
+    // const size_t bufferSize = 4096; // Taille du buffer pour les lectures
+    // char buffer[bufferSize];
+    // ssize_t bytesRead;
+
+    // // Ouvrir un fichier pour écrire
+    // std::ofstream outputFile(outputPath.c_str(), std::ios::out | std::ios::binary);
+    // if (!outputFile.is_open()) {
+    //     std::cerr << "Error: Unable to open file " << outputPath << " for writing." << std::endl;
+    //     return;
+    // }
+
+    // // Lire les données depuis fd_client
+    // while ((bytesRead = read(*fd_client, buffer, bufferSize)) > 0) {
+    //     // Écrire les données lues dans le fichier
+    //     outputFile.write(buffer, bytesRead);
+    //     if (outputFile.fail()) {
+    //         std::cerr << "Error: Failed to write to file " << outputPath << "." << std::endl;
+    //         break;
+    //     }
+    // }
+
+    // if (bytesRead == -1) {
+    //     std::cerr << "Error: Failed to read from fd_client: " << strerror(errno) << std::endl;
+    // }
+
+    // outputFile.close();
+
+    // if (bytesRead != -1) {
+    //     std::cout << "Data successfully written to " << outputPath << "." << std::endl;
+    // }
 
     // char buff_2[BUFFER_SIZE];
     // ssize_t bytesRead;
