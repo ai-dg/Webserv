@@ -69,4 +69,4 @@ launch: clean_temp
 test:
 	./testers/ubuntu_tester http://127.1.1.1:8001
 
-.PHONY: all clean fclean re clean_temp
+.PHONY: all clean fclean re clean_temp test launch
