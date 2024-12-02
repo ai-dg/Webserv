@@ -1,6 +1,60 @@
 HttpResponse object class destroyed
 HttpResponse object class destroyed
 [31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
 Response sent with status: 413[0m
 [31m
 Response sent with status: 413[0m
@@ -382,746 +436,6 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 204[0m
-[31m
-Response sent with status: 204[0m
-[31m
-Response sent with status: 204
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 204 No Content
-HTTP/1.1 204 No Content
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/index.html[0m
-[1;32mFile path set to: /www/test_site/index.html[0m
-[1;32mFile path set to: /www/test_site/index.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404[0m
-[31m
-Response sent with status: 404
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 404 Not Found
-HTTP/1.1 404 Not Found
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 204[0m
-[31m
-Response sent with status: 204[0m
-[31m
-Response sent with status: 204
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 204 No Content
-HTTP/1.1 204 No Content
----------- res by line ----------
----------- res by line ----------
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
-[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405[0m
-[31m
-Response sent with status: 405
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-Allow: GET
-Allow: GET
-HTTP/1.1 405 Method Not Allowed
-HTTP/1.1 405 Method Not Allowed
----------- res by line ----------
----------- res by line ----------
-Allow: GET
-Allow: GET
-Allow: 
-Allow
--------------Current headers in response:
--------------Current headers in response:
--------------Header added: Allow = GET
--------------Header added: Allow = GET
--------------Header added: Allow = 
--------------Header added: Allow
--------------Header added: 
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200[0m
-[31m
-Response sent with status: 200
-[31m
-Response sent with status: 
-[31m
----------------------------------
----------------------------------
-HTTP/1.1 200 OK
-HTTP/1.1 200 OK
----------- res by line ----------
----------- res by line ----------
-[1;32mFile path set to: /www/test_site/index.html[0m
-[1;32mFile path set to: /www/test_site/index.html[0m
-[1;32mFile path set to: /www/test_site/index.html
-[1;32mFile path set to: 
-[1;32m
-HttpResponse object class created
-HttpResponse object class created
-is valid body size : 1
-is valid body size : 1
-is valid body size : 
-HttpResponse object class destroyed
-HttpResponse object class destroyed
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
@@ -1856,6 +1170,35 @@ HttpResponse object class created
 is valid body size : 1
 is valid body size : 1
 is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/html/default/[0m
+[1;32mFile path set to: /www/html/default/[0m
+[1;32mFile path set to: /www/html/default/
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
 HttpResponse object class created
 HttpResponse object class created
 is valid body size : 1
@@ -1998,3 +1341,660 @@ is valid body size : 1
 is valid body size : 
 HttpResponse object class destroyed
 HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 204[0m
+[31m
+Response sent with status: 204[0m
+[31m
+Response sent with status: 204
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 204 No Content
+HTTP/1.1 204 No Content
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Allow: GET
+Allow: GET
+HTTP/1.1 405 Method Not Allowed
+HTTP/1.1 405 Method Not Allowed
+---------- res by line ----------
+---------- res by line ----------
+Allow: GET
+Allow: GET
+Allow: 
+Allow
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Allow = GET
+-------------Header added: Allow = GET
+-------------Header added: Allow = 
+-------------Header added: Allow
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Allow: GET
+Allow: GET
+HTTP/1.1 405 Method Not Allowed
+HTTP/1.1 405 Method Not Allowed
+---------- res by line ----------
+---------- res by line ----------
+Allow: GET
+Allow: GET
+Allow: 
+Allow
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Allow = GET
+-------------Header added: Allow = GET
+-------------Header added: Allow = 
+-------------Header added: Allow
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouac
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/other.pouic
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/nop/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/oulalala/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 204[0m
+[31m
+Response sent with status: 204[0m
+[31m
+Response sent with status: 204
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 204 No Content
+HTTP/1.1 204 No Content
+---------- res by line ----------
+---------- res by line ----------
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Allow: GET
+Allow: GET
+HTTP/1.1 405 Method Not Allowed
+HTTP/1.1 405 Method Not Allowed
+---------- res by line ----------
+---------- res by line ----------
+Allow: GET
+Allow: GET
+Allow: 
+Allow
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Allow = GET
+-------------Header added: Allow = GET
+-------------Header added: Allow = 
+-------------Header added: Allow
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405[0m
+[31m
+Response sent with status: 405
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+Allow: GET
+Allow: GET
+HTTP/1.1 405 Method Not Allowed
+HTTP/1.1 405 Method Not Allowed
+---------- res by line ----------
+---------- res by line ----------
+Allow: GET
+Allow: GET
+Allow: 
+Allow
+-------------Current headers in response:
+-------------Current headers in response:
+-------------Header added: Allow = GET
+-------------Header added: Allow = GET
+-------------Header added: Allow = 
+-------------Header added: Allow
+-------------Header added: 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html[0m
+[1;32mFile path set to: /www/test_site/index.html
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200[0m
+[31m
+Response sent with status: 200
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/not_happy.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404
+[31m
+Response sent with status: 
+[31m
+---------------------------------
+---------------------------------
+HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+---------- res by line ----------
+---------- res by line ----------
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension[0m
+[1;32mFile path set to: /www/test_site/YoupiBanane/Yeah/youpi.bad_extension
+[1;32mFile path set to: 
+[1;32m
+HttpResponse object class created
+HttpResponse object class created
+is valid body size : 1
+is valid body size : 1
+is valid body size : 
+HttpResponse object class destroyed
+HttpResponse object class destroyed
+[31m
+Response sent with status: 404[0m
+[31m
+Response sent with status: 404[0m

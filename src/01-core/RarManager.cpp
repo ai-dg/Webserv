@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 21:29:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:26:49 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
             else if (response.isAllowedMethod(route, request))
             {
                 std::cerr << "Lenght : " << request.getBody().length() << std::endl;
-                if (request.getBody().length() >= 100000)
+                if (request.getBody().length() >= route->max_body_size())
                 {
                     std::cerr << "Body too long" << std::endl;
                     response.setRedirection(413);

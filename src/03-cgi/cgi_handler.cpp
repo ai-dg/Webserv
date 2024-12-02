@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 21:15:15 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 00:58:27 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,16 @@ void Cgi_handler::addToEnvironment(std::string env)
     this->environment.push_back(strdup(const_cast<char*>(env.c_str())));
 }
 
+std::string createBufferDataFile(std::string body)
+{
+    std::string filename = "./sessions/tmp.d";
+    std::ofstream file(filename.c_str());
+    file << body;
+    file.close();
+    return filename;
+    
+}
+
 void Cgi_handler::setEnvironment(HttpRequest &req)
 {   
     std::map<std::string, std::string> headers = req.getHeaders();
@@ -57,7 +67,13 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     std::string contentLengthEnv;
 
     if (req.getMethod() == "POST" || req.getMethod() == "DELETE")
-        contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
+    {
+        if (req.getHeader("Content-Length").size() != 0)
+            contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
+        else if (req.getHeader("Content-Length").size() == 0 && req.getHeader("Transfer-Encoding") == "chunked")
+            contentLengthEnv =  "CONTENT_LENGTH=" + req.getBody().size();
+         
+    }
     else
         contentLengthEnv = ""; 
     this->addToEnvironment(requestMethodEnv);
@@ -72,6 +88,8 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
     {
+        if (it->second == "chunked")
+            continue;
         this->addToEnvironment(req.getFormatedHeader(it->first));  
     }
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
@@ -87,8 +105,13 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     }
     else if (getExeContext(scriptPath) == "python3")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
-
-    this->addToEnvironment("CGI_BODY=" + req.getBody());
+    if (req.getBody().size() > getFormatedSizeFromString("1M"))
+    {
+        std::string filename = createBufferDataFile(req.getBody());
+        this->addToEnvironment("CGI_FILE=" + filename);
+    }
+    else
+        this->addToEnvironment("CGI_BODY=" + req.getBody());
     environment.push_back(NULL);
     Log::output("./sessions/cgi_handler.txt") << "Child: Environment variables set: " << requestMethodEnv
             << ", " << contentLengthEnv << std::endl;
@@ -150,6 +173,7 @@ Cgi_handler::~Cgi_handler()
  * @brief Execute the CGI script
  */
 
+
 void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) 
 {
     pid_t pid;
@@ -157,8 +181,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_out[2];
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
-
-    
 
     Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
@@ -190,7 +212,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
-            
+        debugEnvironment();   
         std::string exe_context = getExeContext(scriptPath);
         std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         //std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
@@ -258,7 +280,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            // std::cerr << buffer << std::endl;
+            std::cerr << buffer << std::endl;
             Log::output("./sessions/cgi_handler.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);

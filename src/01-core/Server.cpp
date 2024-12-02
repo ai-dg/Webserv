@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/11/29 21:25:51 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:24:41 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,7 @@
  */
 void Server::setMaxBodySize()
 {
-    int multi = 1;   
-    std::stringstream stream;
-    std::string mbs = trim(conf->getConfig("client_max_body_size"));
-    stream << mbs;
-    try {
-        if (mbs[mbs.size() - 1] == 'M')
-            multi = 1024;
-        else if (mbs[mbs.size() - 1] == 'K')
-            multi = 1;
-        else
-            throw InvalidArgException();
-        int max ;
-        stream >> max;
-        maxBodySize = max * multi;
-        char unit = 'K';
-        if (multi > 1)
-            unit = 'M';
-        Log::output("./sessions/Server.txt") << "MAX BODY SIZE SET TO : " << maxBodySize << unit << std::endl;
-    }
-    catch (const InvalidArgException &e)
-    {
-        maxBodySize = 2048;
-        Log::output("./sessions/Server.txt") << e.what() << ": client_max_body_size value set to " << maxBodySize << std::endl;
-    }
+    maxBodySize = getFormatedSizeFromString(conf->getConfig("client_max_body_size")) * 1024;
 }
 
 void Server::setHostNames()

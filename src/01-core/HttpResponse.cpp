@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HttpResponse.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 19:09:03 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 01:12:15 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -306,6 +306,7 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 
 int HttpResponse::put(const HttpRequest &req)
 {
+    //// rajouter la verification du maxbody de la route... renvoyer -1 et set payloadtoo large ou autre
     (void) req;
     std::ofstream outfile(&filePath.c_str()[1]);
     if (!outfile)
