@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:38:25 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:33:21 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ void HttpRequest::setHeaders(std::string req)
 //     return merged;
 // }
 
-
 std::string HttpRequest::mergeChunks(std::string const& data) {
     std::string merged;
     std::string chunk = data;
@@ -99,8 +98,13 @@ std::string HttpRequest::mergeChunks(std::string const& data) {
         std::stringstream chunk_size_stream(chunk_size_str);
         chunk_size_stream >> std::hex >> chunk_size;
 
-        if (chunk_size_stream.fail() || chunk_size == 0) {
-            std::cerr << "End of chunks or invalid chunk size detected." << std::endl;
+        if (chunk_size_stream.fail()) {
+            std::cerr << "Error: Invalid chunk size format: '" << chunk_size_str << "'" << std::endl;
+            break;
+        }
+
+        if (chunk_size == 0) {
+            std::cerr << "End of chunks detected (chunk size 0)." << std::endl;
             break;
         }
 
@@ -110,6 +114,9 @@ std::string HttpRequest::mergeChunks(std::string const& data) {
         
         if (chunk.size() < chunk_size) {
             std::cerr << "Error: Chunk size exceeds remaining data size." << std::endl;
+            std::cerr << "Chunk size: " << chunk_size << ", Remaining size: " << chunk.size() << std::endl;
+            
+            merged += chunk.substr(0, chunk.size());
             break;
         }
 
@@ -117,11 +124,22 @@ std::string HttpRequest::mergeChunks(std::string const& data) {
         merged += chunk.substr(0, chunk_size);
 
         
-        chunk.erase(0, chunk_size + 2);
+        chunk.erase(0, chunk_size);
+
+        
+        if (chunk.size() >= 2 && chunk.substr(0, 2) == "\r\n") {
+            chunk.erase(0, 2);
+        } else if (!chunk.empty()) {
+            std::cerr << "Warning: Missing CRLF after chunk data. Remaining data: " << chunk << std::endl;
+            break;
+        }
     }
 
+    std::cerr << "Final merged size: " << merged.size() << std::endl;
     return merged;
 }
+
+
 
 
 void HttpRequest::setBody(std::string req)

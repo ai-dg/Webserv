@@ -6,15 +6,17 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:44 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 19:12:17 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:32:24 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/02-utils/directories.hpp"
+#include "../00-headers/02-utils/stringUtils.hpp"
 
 bool pathIsDir(std::string dirPath)
 {
+    dirPath = removeDuplicateSlashes(dirPath);
     std::cerr << "PATHISDIR - " << dirPath << " - ";
     DIR *dir = opendir(dirPath.c_str());
     if (!dir)

@@ -7,6 +7,5 @@ env > "$SCRIPT_DIR/env.txt"
 # echo "ENV VARIABLES SAVED"
 
 sed 's/^..//' "$ROOT_DIR/$CGI_FILE" | "$SCRIPT_DIR/ubuntu_cgi_tester"
-echo "SCRIPT FINISHED"
 
 exit 0

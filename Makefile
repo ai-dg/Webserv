@@ -43,7 +43,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -g
 # CXXFLAGS = -Wshadow -Wno-shadow -std=c++98 -g
 
-all: $(NAME)
+all: $(NAME) clean_temp
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
@@ -53,6 +53,9 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -rf $(OBJ)
+
+clean_temp:
+	rm -rf ./sessions/* ./logs/*
 
 fclean: clean
 	rm -rf $(NAME)
