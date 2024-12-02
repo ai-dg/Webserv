@@ -68,7 +68,7 @@ void HttpRequest::setBody(std::string req)
         body = "";
     if (getHeader("Transfer-Encoding") == "chunked")
         body = mergeChunks(body);
-     Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
+     //Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
     std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
 }
 
@@ -78,9 +78,7 @@ void HttpRequest::setRoute()
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
 
-   /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
-    {*/
-    if (lastSlashPos == 0 && URI.size() == 1)
+    if ((lastSlashPos == 0 && URI.size() == 1) || (lastSlashPos == 0 && lastDotPos > lastSlashPos && lastDotPos != std::string::npos))
         route = "/"; 
     else
     {
@@ -93,15 +91,8 @@ void HttpRequest::setRoute()
     if (lastDotPos == std::string::npos && URI[URI.size()-1] != '/')
         route += "/";
     route = removeDuplicateSlashes(route);
-    /*}*/
-    /*else
-    { 
-        if (URI[URI.size() - 1] != '/')
-            route = URI + "/"; 
-        else
-            route = URI; 
-    }*/
-    // std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
+
+    std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
 }
 
 void HttpRequest::setAskedFile()
@@ -248,7 +239,7 @@ std::string HttpRequest::getQueryString() const
     if (pos != std::string::npos && pos + 1 < this->URI.size())
     {
         std::string queryString = this->URI.substr(pos + 1);
-        Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
+        //Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
         return queryString;
     }
     else

@@ -119,6 +119,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
                 else
                 {
                     Cgi_handler cgiHandler;
+                    std::cerr << "execute cgiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" << std::endl;
                     cgiHandler.executeCGI(filePath, request, *fd_client);
                 }             
             }else

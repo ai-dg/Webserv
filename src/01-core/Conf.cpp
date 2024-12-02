@@ -249,6 +249,7 @@ void Conf::setLocations()
                 if (line.find("}") != std::string::npos)
                     locationstatus = false;
             }
+            //std::cerr << "routePath :::: " << routePath << std::endl;
             routes.insert(std::make_pair(routePath, new Location(currentLocation)));
             continue;
         }

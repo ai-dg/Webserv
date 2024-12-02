@@ -26,6 +26,8 @@ std::string Cgi_handler::getExeContext(std::string file)
         return "bash";
     if (file.find(".php") != std::string::npos)
         return "php-cgi";
+    if (file.find(".bla") != std::string::npos)
+        return "bash";
     if (file.find(".py") != std::string::npos)
         return "python3";
     if (file.find(".pl") != std::string::npos)
@@ -65,37 +67,48 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     std::map<std::string, std::string> headers = req.getHeaders();
     std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
     std::string contentLengthEnv;
-
     if (req.getMethod() == "POST" || req.getMethod() == "DELETE")
     {
+        std::cerr <<"HERE WE ARE IN FUCkING setEnvironment I " << std::endl;
         if (req.getHeader("Content-Length").size() != 0)
+        {
+            std::cerr <<"HERE WE ARE IN FUCkING setEnvironment I-I " << std::endl;  
             contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
+            std::cerr <<"HERE WE ARE IN FUCkING setEnvironment I-I-I " << std::endl;  
+        }
         else if (req.getHeader("Content-Length").size() == 0 && req.getHeader("Transfer-Encoding") == "chunked")
-            contentLengthEnv =  "CONTENT_LENGTH=" + req.getBody().size();
-         
+        {
+            std::cerr <<"HERE WE ARE IN FUCkING setEnvironment I-II " << std::endl;  
+            contentLengthEnv =  "CONTENT_LENGTH=" + itos(static_cast<int>(req.getBody().size()));
+            std::cerr <<"HERE WE ARE IN FUCkING setEnvironment I-II-I " << std::endl;  
+        }
+       std::cerr <<"HERE WE ARE IN FUCkING setEnvironment II " << std::endl;  
     }
     else
         contentLengthEnv = ""; 
     this->addToEnvironment(requestMethodEnv);
     this->addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
-    
+    std::cerr <<"HERE WE ARE IN FUCkING setEnvironment III " << std::endl;  
     size_t queryPos = scriptPath.find('?');
     if (queryPos != std::string::npos) {
         std::string queryString = scriptPath.substr(queryPos + 1);
         this->addToEnvironment("QUERY_STRING=" + queryString);
     }
-
+    std::cerr <<"HERE WE ARE IN FUCkING setEnvironment IV " << std::endl;  
     std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
     {
         if (it->second == "chunked")
             continue;
-        this->addToEnvironment(req.getFormatedHeader(it->first));  
+        else
+            this->addToEnvironment(req.getFormatedHeader(it->first));  
     }
+    std::cerr <<"HERE WE ARE IN FUCkING setEnvironment V " << std::endl;  
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
     this->addToEnvironment("PATH_INFO=/");
+    std::cerr <<"HERE WE ARE IN FUCkING setEnvironment VI " << std::endl;  
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
@@ -181,8 +194,9 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     int pipe_out[2];
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
+    int count = 1;
 
-    Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
+    //Log::output("./sessions/cgi_handler.txt") << data  << std::endl;
     Log::output("./sessions/cgi_handler.txt") << BOLD_RED << req.getHeader("Content-Type") <<  RESET << std::endl;
     if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) 
     {
@@ -207,22 +221,24 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             perror("dup2 stdout");
             exit(1);
         }
-        setEnvironment(req);      
+        setEnvironment(req);
+        std::cerr <<"HERE WE ARE IN FUCkING executeCGI child " << std::endl;
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
+        std::cerr << "scriptPath : " << scriptPathTemp << std::endl;
         debugEnvironment();   
         std::string exe_context = getExeContext(scriptPath);
+        std::string exe_path = "/usr/bin/env";
         std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
-        //std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         char* const argv[] = {
-            const_cast<char*>("/usr/bin/env"),  
+            const_cast<char*>(exe_path.c_str()),  
             const_cast<char*>(exe_context.c_str()),       
             const_cast<char*>(scriptPathTemp.c_str()), 
             NULL
         };
-       
+        std::cerr << BOLD_TURQUOISE << " ---------- STEP 1" << count++ << " ----------" << std::endl;
         if (access(scriptPathTemp.c_str(), X_OK) == -1)
         {
             perror("acces");
@@ -241,13 +257,28 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     } 
     else 
     { 
+        std::cerr <<"HERE WE ARE IN FUCkING executeCGI parent " << std::endl;
         close(pipe_in[0]);  
         close(pipe_out[1]); 
-        std::ofstream outfile("./logs/data_cgi.log");
-        if (!data.empty()) 
-            write(pipe_in[1], data.c_str(), data.size());
-        outfile << data;
-        outfile.close();
+        //std::ofstream outfile("./logs/data_cgi.log");
+        while (!data.empty())
+        {
+            if(data.size() > BUFFER_SIZE)
+            {
+                std::string chunk = data.substr(0, BUFFER_SIZE);
+                data.erase(0,BUFFER_SIZE);
+                write(pipe_in[1], chunk.c_str(), BUFFER_SIZE);
+            }
+            else
+            {
+                write(pipe_in[1], data.c_str(), data.size());
+                break;
+            }
+
+        }
+        
+        //outfile << data;
+        //outfile.close();
         close(pipe_in[1]); 
         Log::output("./sessions/cgi_handler.txt") << "Parent waiting..." << std::endl;
         int status;
@@ -267,24 +298,30 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
                 Log::output("./sessions/cgi_handler.txt") << "Parent: Child ended abnormally" << std::endl;
         }
         
+        std::cerr << BOLD_TURQUOISE << " ---------- STEP 2" << count++ << " ----------" << std::endl;
         char buffer[2048];
         bzero(buffer, 2048);
         int bytesRead = 0;
         std::string context = getExeContext(scriptPath);
         std::cerr << "context : " << context << std::endl;
+        std::cerr << BOLD_TURQUOISE << " ---------- STEP 3" << count++ << " ----------" << std::endl;
         if (context == "php-cgi" || context =="perl" || context =="bash")
         {
             std::string res = "HTTP/1.1 200 OK\r\n";
+            std::cerr << BOLD_TURQUOISE << " ---------- STEP 4" << count++ << " ----------" << std::endl;
             write(fd_client, res.c_str(), res.size());
+            std::cerr << BOLD_TURQUOISE << " ---------- STEP 5" << count++ << " ----------" << std::endl;
         }
-        Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
+        std::cerr << BOLD_TURQUOISE << " ---------- STEP 6" << count++ << " ----------" << std::endl;
+        //Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            std::cerr << buffer << std::endl;
-            Log::output("./sessions/cgi_handler.txt") << buffer << std::endl;
+            std::cerr << RED << buffer << RESET << std::endl;
+            //Log::output("./sessions/cgi_handler.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);
         }
+        std::cerr << BOLD_TURQUOISE << " ---------- STEP 7" << count++ << " ----------" << std::endl;
         if (bytesRead == -1) 
         {
             Log::error("read from pipe");

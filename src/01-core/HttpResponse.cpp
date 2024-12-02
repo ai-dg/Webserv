@@ -104,13 +104,12 @@ std::string HttpResponse::addSub(std::string route, std::string uri)
 
     if (uri.find(route) != std::string::npos && uri.find(route) == 0)
         sub = uri.substr(route.size(), std::string::npos);
-    std::cerr << "add sub :::::::::::::::::::::::::::: " << sub << std::endl;
+    //std::cerr << "add sub :::::::::::::::::::::::::::: " << sub << std::endl;
     if (sub.find_last_of("/") != std::string::npos)
         sub = sub.substr(0, sub.find_last_of("/"));
     if (sub.find(".") != std::string::npos)
         sub = "";
     return sub + "/";
-    
 }
 
 
@@ -122,14 +121,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
     std::string addToRoute = addSub(route, uri);
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
+     std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
+     std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
+     //std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
     // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
-        // std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
+         std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
         setRedirection(404);
         return;
     }
@@ -151,14 +150,14 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         if (isAllowedMethod(altRoute, req))
         {
             this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
-            // std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;            
+             std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;            
         }
         else
         {
             if (req.getHeader("User-Agent") == "Go-http-client/1.1")
             {
                 setStatusCode(204,NO_BODY); //// pffffff
-                // std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
+                std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
             }
             else
             {
@@ -177,8 +176,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         Route = req.getRouteConf("/cgi-bin/");
         this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
-        // std::cerr << Route->root().substr(1, std::string::npos) << "   " << req.getAskedFile() << std::endl;
-        // std::cerr << "1 -- setResoursePath -- " << this->filePath << std::endl;
+         std::cerr << Route->root().substr(1, std::string::npos) << "   " << req.getAskedFile() << std::endl;
+         std::cerr << "1 -- setResoursePath -- " << this->filePath << std::endl;
     }
     else
     {
@@ -191,8 +190,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
             }
             else
             {
-                this->filePath = Route->root() + "/" + Route->findIndex();
-            //   std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
+                this->filePath = Route->root() + Route->findIndex();
+                std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
             }
 
         }
@@ -202,11 +201,11 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
             if(req.getAskedFile().find(".") == std::string::npos)
             {
                 this->filePath = routed + (Route->findIndex()); //// findindex ???????
-                // std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
+                 std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
             }
             else
                 this->filePath = routed  + req.getAskedFile();
-            // std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
+             std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
             //   std::cerr << get_current_date() << std::endl;
         }
     }

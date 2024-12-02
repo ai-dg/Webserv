@@ -35,6 +35,8 @@ SRC += src/03-cgi/cgi_handler.cpp
 SRC += src/04-exceptions/InvalidArgException.cpp
 
 
+#/home/${USER}/webserver/www/test_site/ubuntu_cgi_tester
+
 OBJ = $(SRC:.cpp=.o)
 
 NAME = webserv
