@@ -314,7 +314,7 @@ int HttpResponse::put(const HttpRequest &req)
         // std::cerr << "fail creating file";
         return -1;
     }
-    std::cout << BLUE << req.getBody() << RESET << std::endl;
+    std::cerr << BLUE << req.getBody() << RESET << std::endl;
     outfile << req.getBody();
     outfile.close();
     return 1;
