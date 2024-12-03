@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 18:32:13 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:49:42 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,12 +169,19 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 	std::time_t now = std::time(0);
 	Epoll::timers.insert(std::make_pair(fd, now));
 	event.data.fd = fd;
-	event.events = eventsMask;
+	event.events = eventsMask | EPOLLIN;
 	if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, fd, &event) == -1)
 	{
 		Log::error("Failed to add file descriptor to epoll");
 		return (false);
 	}
+	
+	std::ostringstream logMsg;
+	logMsg << "File descriptor " << fd << " added to epoll with events: " << eventsMask;
+	Log::debug(logMsg.str());
+	
+	
+
 	Log::debug("File descriptor added to epoll successfully");
 	return (true);
 }

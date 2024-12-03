@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 19:15:44 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:46:31 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -247,7 +247,6 @@ void saveRawRequestToFile(const std::string& data) {
 }
 
 
-
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
 {
     try
@@ -430,6 +429,191 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         std::cerr << "Error: " << e.what() << std::endl;
     }
 }
+
+
+
+// void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
+// {
+//     try
+//     {
+//         std::map<int, std::string> requestMap;
+//         Epoll epoll(10);
+//         char buff[BUFFER_SIZE];
+//         int fd_client;
+//         ssize_t reads;
+//         struct epoll_event event;
+//         struct sockaddr_in client_addr;
+//         socklen_t client_addr_len;
+//         std::string req;
+
+
+//         for (size_t i = 0; i < fd_sockets.size(); ++i)
+//         {
+//             epoll.addFd(fd_sockets[i], EPOLLIN);
+//             epoll.makeSocketNonBlocking(fd_sockets[i]);
+//         }
+        
+//         epoll.addFd(signalPipeFd[0], EPOLLIN);
+
+//         while (!signalReceived) 
+//         {
+//             int eventCount = epoll.wait(-1);
+//             if (eventCount == -1)
+//             {
+//                 Log::error("Fatal error during epoll_wait");
+//                 break;
+//             }
+
+//             if (eventCount == 0)
+//                 continue;
+
+//             for (int i = 0; i < eventCount && !signalReceived; ++i) 
+//             {
+//                 Log::debug("Event ***********************");
+//                 event = epoll.getEvent(i);
+//                 Log::debug("*****************************");
+//                 bool isServerSocket = false;
+
+//                 for (size_t j = 0; j < fd_sockets.size(); ++j)
+//                 {
+//                     if (event.data.fd == fd_sockets[j])
+//                     {
+//                         isServerSocket = true;
+//                         break;
+//                     }
+//                 }
+//                 if (isServerSocket)
+//                 {
+//                     client_addr_len = sizeof(client_addr);
+//                     fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
+//                     if (fd_client == -1) 
+//                     {
+//                         Log::error("accept");
+//                         continue;
+//                     }
+//                     epoll.makeSocketNonBlocking(fd_client);
+//                     epoll.addFd(fd_client, EPOLLIN);
+//                 }
+//                 else if (event.events & EPOLLIN) 
+//                 {
+//                     ///////////////////////
+//                     fd_client = event.data.fd;                    
+                    
+                    
+//                     while (true) 
+//                     {
+//                         reads = recv(fd_client, buff, BUFFER_SIZE, 0);
+//                         if (reads <= 0)
+//                             break;
+//                         requestMap[fd_client].append(buff, reads);
+//                     }
+
+//                     // while (true) 
+//                     // {
+//                     //     reads = recv(fd_client, buff, BUFFER_SIZE, 0);
+//                     //     if (reads <= 0)
+//                     //         break;
+//                     //     requestMap[fd_client].append(buff, reads);
+//                     // }
+
+                    
+//                     std::cerr << RED << "Bytes received in recv(): " << reads << RESET << std::endl;
+//                     std::cerr << RED << "requestMap[" << fd_client << "].size() : " << requestMap[fd_client].size() << RESET << std::endl;
+
+//                     saveRawRequestToFile(requestMap[fd_client]);
+//                     std::cerr << RED << "req.size() : " << requestMap[fd_client].size() << RESET << std::endl;
+
+                    
+//                     int serverIndex = findServerIndex(requestMap[fd_client], Servers);
+//                     size_t headerEnd = requestMap[fd_client].find("\r\n\r\n");
+//                     if (headerEnd != std::string::npos) 
+//                     {
+
+//                         /**
+//                          * Debug message
+//                          */
+//                         std::map<int, std::string>::iterator it = requestMap.begin();
+//                         while (it != requestMap.end())
+//                         {
+//                             std::cerr << GREEN << "fd_client: " << it->first << RESET << std::endl;
+
+//                             // Conversion de it->first (int) en chaîne
+//                             std::ostringstream oss;
+//                             oss << it->first;
+
+//                             // Construction du chemin du fichier
+//                             std::string file = "./sessions/request_" + oss.str() + ".txt";
+
+//                             std::cerr << "File path: " << file << std::endl; // Debugging log
+
+//                             std::ofstream fileStream(file.c_str());
+
+//                             fileStream << it->second;
+//                             fileStream.close();
+                            
+//                             it++;
+//                         }
+//                         // std::map<int, std::string>::iterator it = requestMap.begin();
+//                         // while (it != requestMap.end())
+//                         // {
+//                         //     std::cerr << GREEN << "fd_client: " << it->first << RESET << std::endl;
+
+//                         //     // Conversion de it->first (int) en chaîne
+//                         //     std::ostringstream oss;
+//                         //     oss << it->first;
+
+//                         //     // Construction du chemin du fichier
+//                         //     std::string file = "./sessions/request_" + oss.str() + ".txt";
+//                         //     std::cerr << "File path: " << file << std::endl; // Debugging log
+
+//                         //     // Ouvrir un fichier pour écrire les données lues
+//                         //     std::ofstream fileStream(file.c_str());
+//                         //     if (!fileStream.is_open())
+//                         //     {
+//                         //         std::cerr << "Erreur : Impossible d'ouvrir le fichier " << file << std::endl;
+//                         //         ++it;
+//                         //         continue;
+//                         //     }
+
+//                         //     // Lire depuis le descripteur it->first
+//                         //     char buffer[1024];
+//                         //     ssize_t bytesRead;
+//                         //     while ((bytesRead = read(it->first, buffer, sizeof(buffer))) > 0)
+//                         //     {
+//                         //         fileStream.write(buffer, bytesRead); // Écrire les données dans le fichier
+//                         //     }
+
+//                         //     if (bytesRead == -1)
+//                         //     {
+//                         //         std::cerr << "Erreur lors de la lecture depuis fd " << it->first << ": " << strerror(errno) << std::endl;
+//                         //     }
+
+//                         //     fileStream.close();
+//                         //     ++it;
+//                         // }
+
+//                         ////////////////
+                        
+//                         type_request_manager(&fd_client, &requestMap[fd_client], Servers[serverIndex], &epoll, sessionManager);
+//                     }
+//                     ///////////////////////
+//                 }
+//             }
+//         }
+        
+        
+//         if (signalReceived)
+//         {
+//             //sessionManager.saveSessionsToFile();
+//             Log::cleanup();
+//             throw SignalException();
+//         }
+//     }
+//     catch (std::exception& e)
+//     {
+//         std::cerr << "Error: " << e.what() << std::endl;
+//     }
+// }
 
 
 
