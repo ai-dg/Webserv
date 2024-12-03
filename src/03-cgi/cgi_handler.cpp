@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 23:56:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:35:12 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,10 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
-    this->addToEnvironment("PATH_INFO=/usr/bin/bash");
+
+    
+    this->addToEnvironment("PATH_INFO=/");
+    
     if (getExeContext(scriptPath) == "php-cgi")
     {
         // ajouter php session ici
@@ -251,23 +254,45 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         std::string exe_context = getExeContext(scriptPath);
         std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
         //std::cerr << "executeCGI :: debug exe_context : " << exe_context << std::endl;
+    
+
+        std::string path = "/usr/bin/env";
+
+        if (scriptPathTemp.find(".bla") != std::string::npos)
+        {
+            path = "/home/dagudelo/Parcours/Webserv/tests/ubuntu_cgi_tester";
+            exe_context = "/home/dagudelo/Parcours/find/webserv/www/YoupiBanane/youpi.bla";
+            scriptPathTemp.clear();
+        }
+        else
+        {
+            path = "/usr/bin/env";
+        } 
+
         char* const argv[] = {
-            const_cast<char*>("/usr/bin/env"),  
+            const_cast<char*>(path.c_str()),  
             const_cast<char*>(exe_context.c_str()),       
             const_cast<char*>(scriptPathTemp.c_str()), 
             NULL
         };
+        
         std::cerr << BOLD_BLUE <<scriptPathTemp <<RESET << std::endl;
        
-        if (access(scriptPathTemp.c_str(), X_OK) == -1)
-        {
-            perror("acces");
-            // Log::output("./logs/error.log") << "Child: Failed to access script file." << std::endl;
-            exit(1);
-        }
+        // if (access(scriptPathTemp.c_str(), X_OK) == -1)
+        // {
+        //     perror("acces");
+        //     // Log::output("./logs/error.log") << "Child: Failed to access script file." << std::endl;
+        //     exit(1);
+        // }
         std::cerr << "scriptPath child: " << scriptPathTemp << std::endl;
-        
-        if (execve("/usr/bin/env", argv, environment.data()) == -1)
+
+        for (size_t i = 0; argv[i]; ++i)
+        {
+            std::cerr << BLUE << "argv[" << i << "] : " << argv[i] << RESET << std::endl;
+        }
+
+
+        if (execve(argv[0], argv, environment.data()) == -1)
         {
             perror("execve");
             exit(1);
@@ -277,7 +302,9 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     } 
     else 
     {
-        std::cerr << "Parent process" << std::endl; 
+        std::cerr << "Parent process" << std::endl;
+        
+        
         close(pipe_in[0]);  
         close(pipe_out[1]); 
         std::ofstream outfile("./logs/data_cgi.log");
@@ -317,7 +344,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         Log::output("./sessions/cgi_handler.txt") << "Parent: Reading from pipe to get script output..." << std::endl;
         while ((bytesRead = read(pipe_out[0], buffer, sizeof(buffer) - 1)) > 0) 
         {   
-            std::cerr << buffer << std::endl;
+            // std::cerr << buffer << std::endl;
             Log::output("./sessions/fd_client_cgi.txt") << buffer << std::endl;
             write(fd_client, buffer, bytesRead);
             bzero(buffer, 2048);

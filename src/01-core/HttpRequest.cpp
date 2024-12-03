@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 23:57:51 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 15:59:53 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ std::string cleanMergedData(const std::string& merged) {
 }
 
 
-std::string HttpRequest::mergeChunks(const std::string& data) {
+std::string HttpRequest::mergeChunks(std::string data) {
     std::string merged;
     std::stringstream stream(data);
     std::string line;
@@ -129,6 +129,22 @@ std::string HttpRequest::mergeChunks(const std::string& data) {
 
     return cleanMergedData(merged);
 }
+
+// std::string HttpRequest::mergeChunks(std::string data)
+// {
+//     std::string merged;
+//     //std::cerr << BOLD_BLUE << data << RESET << std::endl;
+//     while(data.size())
+//     {
+//         size_t crlf_pos = data.find("\r\n");
+//         data.erase(0, crlf_pos + 2);
+//         crlf_pos = data.find("\r\n");
+//         merged += data.substr(0, crlf_pos);
+//         data.erase(0, crlf_pos + 2);
+//     }
+//     //std::cerr << BOLD_YELLOW << merged <<std::endl <<RESET;
+//     return merged;
+// }
 
 
 void HttpRequest::setBody(std::string req)
