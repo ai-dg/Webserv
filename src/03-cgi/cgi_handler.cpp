@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:52:40 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 00:40:30 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "../00-headers/01-core/scriptUtils.hpp"
 #include "../00-headers/01-core/Pipe.hpp"
 #include "../00-headers/02-utils/Log.hpp"
+#include "../00-headers/02-utils/files.hpp"
 #include "../00-headers/03-cgi/cgi_handler.hpp"
 
 /**
@@ -250,15 +251,34 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
 
         // debugEnvironment();
-
+ 
         std::string exe_context = getExeContext(scriptPath);
         std::string path = "/usr/bin/env";
 
-        if (scriptPathTemp.find(".bla") != std::string::npos) {
-            path = "/home/dagudelo/Parcours/Webserv/tests/ubuntu_cgi_tester";
-            exe_context = "/home/dagudelo/Parcours/find/webserv/www/YoupiBanane/youpi.bla";
-            scriptPathTemp.clear();
+        if (req.hasFileSpecialRoute(scriptPathTemp))
+        {
+            Location *route = req.getRouteConf(getExtension(scriptPathTemp));
+            if (!route)
+                std::cerr << "unkown route" << std::endl;
+            if (!route->exe().empty())
+            {
+               if (resolvePath(route->exe()))        
+                    path.assign(resolvePath(route->exe()));
+            }
+            if (resolvePath(scriptPathTemp))           
+                exe_context.assign(resolvePath(scriptPathTemp));
+            scriptPathTemp.clear();            
         }
+/*
+        if (scriptPathTemp.find(".bla") != std::string::npos) {
+            std::cerr << "scriptPathTemp : " << scriptPathTemp << std::endl;
+           // path = "/home/dagudelo/Parcours/Webserv/tests/ubuntu_cgi_tester";
+            std::string path2 = "./www/test_site/cgi-bin/ubuntu_cgi_tester";
+            
+            //path.assign(resolvePath(path2));
+            exe_context.assign(resolvePath(scriptPathTemp));
+            scriptPathTemp.clear();
+        }*/
 
         char *const argv[] = {
             const_cast<char *>(path.c_str()),

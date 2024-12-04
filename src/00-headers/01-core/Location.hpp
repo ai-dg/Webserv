@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 23:28:33 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/04 23:33:35 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Location
         size_t _max_body ;
         std::string _cgi;
         std::string _cgi_bin;
+        std::string _exe;
         std::string _return;
         std::string _index;
         std::vector<std::string> indexes;
@@ -70,6 +71,7 @@ class Location
         std::string index();
         std::string redirection();
         std::string cgi();
+        std::string exe();
         std::string cgi_bin();
         std::string upload_store();
         std::string autoindex();

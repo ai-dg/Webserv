@@ -6,7 +6,7 @@
 /*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:39:51 by ls                #+#    #+#             */
-/*   Updated: 2024/12/01 09:22:12 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 00:27:50 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ std::string getMime(const std::string& mime);
 std::string getFile(const std::string& path);
 bool checkFormatOfConfig(std::string const& path_file);
 bool checkFormatOfPaths(std::string const& path_file);
+char *resolvePath(std::string path);
 
 class PathNotCorrectFormat : public std::exception
 {

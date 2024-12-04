@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:38:03 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 23:47:58 by calbor-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void Location::extractField(std::string param)
         _index = value;
         setAllowedIndexes();
     }
+    if (field == "exe")
+        _exe = value;
     if (field == "max_body")
         setMaxBodySize(value);
     if (field == "extensions")
@@ -78,6 +80,7 @@ Location::Location(std::string &loc)
 
 Location::Location(Location const& src) : _root(src._root), _extensions(src._extensions), _methods(src._methods), _autoindex(src._autoindex), _upload_store(src._upload_store), _cgi(src._cgi), _cgi_bin(src._cgi_bin), _return(src._return), _index(src._index), indexes(src.indexes), redirectionPath(src.redirectionPath), redirectionStatus(src.redirectionStatus)
 {
+    _exe = src._exe;
     // Log::output("./sessions/Location.txt") << "Location class object copied" << std::endl;
 }
 
@@ -91,6 +94,7 @@ Location& Location::operator=(Location const& src)
     _autoindex = src._autoindex;
     _upload_store = src._upload_store;
     _cgi = src._cgi;
+    _exe = src._exe;
     _cgi_bin = src._cgi_bin;
     _return = src._return;
     _index = src._index;
@@ -119,6 +123,7 @@ void Location::init()
     _autoindex = "";
     _upload_store = "";
     _cgi = "";
+    _exe = "";
     _cgi_bin = "";
     _return = "";
     _index = "";
@@ -196,18 +201,27 @@ std::string Location::index()
 {
     return _index;
 }
+
 std::string Location::redirection()
 {
     return _return;
 }
+
 std::string Location::cgi()
 {
     return _cgi;
 }
+
+std::string Location::exe()
+{
+    return _exe;
+}
+
 std::string Location::cgi_bin()
 {
     return _cgi_bin;
 }
+
 std::string Location::upload_store()
 {
     return _upload_store;
