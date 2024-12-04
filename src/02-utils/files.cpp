@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   files.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/01 22:30:00 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ std::string getMime(const std::string& mime)
 std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
-    Log::output("./sessions/files.txt") << "path : " << path << std::endl;
+    // Log::output("./sessions/files.txt") << "path : " << path << std::endl;
     local.erase(0,8);
-    Log::output("./sessions/files.txt") << "local : " << local << std::endl;
+    // Log::output("./sessions/files.txt") << "local : " << local << std::endl;
     if (local == "/")
         return "text/html";
     std::string mime = local.substr(local.find_last_of(".") + 1);
@@ -102,7 +102,7 @@ std::string getFile(const std::string& path)
     
     if (decodedPath.size() < 10)
         local += "index.html";///hardcoded...
-    Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
+    // Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
     std::ifstream file(local.c_str());
     //std::cerr << "local : " << local << std::endl;
     std::string line;
@@ -115,13 +115,13 @@ std::string getFile(const std::string& path)
                 content += "\n";
             content += line;
         }
-        Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
+        // Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
         // std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl;
         return content;
     }
     else
-        Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
+        // Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
     file.close();
     // std::cerr << "GETFILE debug " << local << "  -  "  << content << std::endl; 
     return FILENOTFOUND;

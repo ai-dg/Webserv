@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 12:28:55 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:39:31 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,24 +42,24 @@ int findServerIndex(std::string const& request, std::vector<Server *>& Servers)
         else 
             host = hostPort;
     }
-    Log::output("./sessions/find_server_index.txt") << "Request Host: " << host << ", Port: " << port << std::endl;
+    // Log::output("./sessions/find_server_index.txt") << "Request Host: " << host << ", Port: " << port << std::endl;
     for (size_t i = 0; i < Servers.size(); ++i) 
     {
-        Log::output("./sessions/find_server_index.txt") << "Checking Server index " << i << std::endl;
-        Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i]->getConf()->getConfig("host") << ", Ports: ";
+        // Log::output("./sessions/find_server_index.txt") << "Checking Server index " << i << std::endl;
+        // Log::output("./sessions/find_server_index.txt") << "Server Host: " << Servers[i]->getConf()->getConfig("host") << ", Ports: ";
         const std::vector<int>& serverPorts = Servers[i]->getPorts();
         for (std::vector<int>::const_iterator it = serverPorts.begin(); it != serverPorts.end(); ++it)
-            Log::output("./sessions/find_server_index.txt") << *it << " ";
-        Log::output("./sessions/find_server_index.txt") << std::endl;        
+            // Log::output("./sessions/find_server_index.txt") << *it << " ";
+        // Log::output("./sessions/find_server_index.txt") << std::endl;        
         if (Servers[i]->getConf()->getConfig("host") == host && 
             std::find(serverPorts.begin(), serverPorts.end(), port) != serverPorts.end()) 
         {
-            Log::output("./sessions/find_server_index.txt") << "Match found at index " << i << std::endl;
+            // Log::output("./sessions/find_server_index.txt") << "Match found at index " << i << std::endl;
             return i; 
         }
     }
-    Log::output("./sessions/find_server_index.txt") << "No match found, defaulting to index 0" << std::endl;
-    Log::output("./sessions/find_server_index.txt") << Servers[0]->getConf()->getConfig("host") << std::endl;
+    // Log::output("./sessions/find_server_index.txt") << "No match found, defaulting to index 0" << std::endl;
+    // Log::output("./sessions/find_server_index.txt") << Servers[0]->getConf()->getConfig("host") << std::endl;
     return 0;
 }
 
@@ -113,7 +113,7 @@ void send_valid_body(int fd_client, const std::string& body) {
         file << res;
         file.close();
     } else {
-        Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ./sessions/fd_client.txt" << std::endl;
+        // Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ./sessions/fd_client.txt" << std::endl;
     }
 }
 
@@ -122,10 +122,10 @@ void send_valid_body(int fd_client, const std::string& body) {
 
 void type_request_manager(int *fd_client, std::string *req, Server *server, Epoll *epoll, SessionManager &sessionManager)
 {
-    Log::output("./sessions/fd_client2.txt") << "**************************" << std::endl;
-    Log::output("./sessions/fd_client2.txt") << "Requête complète : " << std::endl;
-    Log::output("./sessions/fd_client2.txt") << *req << std::endl;
-    Log::output("./sessions/fd_client2.txt") << "*************************************" << std::endl;
+    // Log::output("./sessions/fd_client2.txt") << "**************************" << std::endl;
+    // Log::output("./sessions/fd_client2.txt") << "Requête complète : " << std::endl;
+    // Log::output("./sessions/fd_client2.txt") << *req << std::endl;
+    // Log::output("./sessions/fd_client2.txt") << "*************************************" << std::endl;
     // static int count = 1;
 
     // size_t headerEnd = req->find("\r\n\r\n");
@@ -160,14 +160,14 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         std::string filePath = response.getFilePath();
         filePath = removeDuplicateSlashes(filePath);      
         // verifier le status de la methode de la route...
-        if (server->getCgiStatus(filePath))
-            std::cerr << "filepath " << filePath << "   true" << std::endl;
-        else
-            std::cerr << "filepath " << filePath << "   false" << std::endl;
+        // if (server->getCgiStatus(filePath))
+        //     std::cerr << "filepath " << filePath << "   true" << std::endl;
+        // else
+        //     std::cerr << "filepath " << filePath << "   false" << std::endl;
             
         if ((filePath.find("cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath)))) 
         {
-            std::cerr << "in CGI" << std::endl;   
+            // std::cerr << "in CGI" << std::endl;   
             Location *route = NULL;
             if (request.hasFileSpecialRoute(getExtension(filePath)))
                 route = server->getRoute(getExtension(filePath));
@@ -175,32 +175,32 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
                 route = server->getRoute("/cgi-bin/");
             if (!route)
             {
-                std::cerr << "no route" << std::endl;
+                // std::cerr << "no route" << std::endl;
                 return;
             }
             else if (response.isAllowedMethod(route, request))
             {
-                std::cerr << "in CGI" << std::endl;   
+                // std::cerr << "in CGI" << std::endl;   
                 Cgi_handler cgiHandler;
                 cgiHandler.executeCGI(filePath, request, *fd_client);
-                std::cerr << "CGI executed" << std::endl;                
+                // std::cerr << "CGI executed" << std::endl;                
             }
             else
             {
-                 std::cerr << "22222222222" << std::endl;   
+                //  std::cerr << "22222222222" << std::endl;   
                 response.setRedirection(406);
                 response.send(*fd_client);
             }
         }
         else if (filePath.find("cgi-bin/") != std::string::npos && !server->getCgiStatus())
         {
-             std::cerr << "3333333333333" << std::endl;   
+            //  std::cerr << "3333333333333" << std::endl;   
             response.setRedirection(403);
             response.send(*fd_client);
         }
         else 
         {
-            std::cerr << "4444444444444" << std::endl;   
+            // std::cerr << "4444444444444" << std::endl;   
             response.send(*fd_client);
         }
         std::string connectionHeader = request.getHeader("Connection");
@@ -215,7 +215,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
         req->clear();
     // }
     // else
-    //     Log::output("./logs/error.log") << "Requête incomplète : en attente de plus de données." << std::endl;
+    //     // Log::output("./logs/error.log") << "Requête incomplète : en attente de plus de données." << std::endl;
 
     // char buff_2[BUFFER_SIZE];
     // ssize_t bytesRead;
@@ -226,9 +226,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Epol
     // }
     // if (bytesRead == -1)
     // {
-    //     Log::output("./logs/error.log") << "Error reading from client socket" << std::endl;
+    //     // Log::output("./logs/error.log") << "Error reading from client socket" << std::endl;
     // }
-    // Log::output("./sessions/fd_client_final.txt") << finalBuffer << std::endl;
+    // // Log::output("./sessions/fd_client_final.txt") << finalBuffer << std::endl;
     
 }
 
@@ -280,7 +280,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
                 if (event.data.fd == signalPipeFd[0]) 
                 {
-                    std::cerr << "Signal reçu. Arrêt en cours." << std::endl;
+                    // std::cerr << "Signal reçu. Arrêt en cours." << std::endl;
                     signalReceived = true;
                     break;
                 }
@@ -306,24 +306,24 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     }
                     epoll.makeSocketNonBlocking(fd_client);
                     epoll.addFd(fd_client, EPOLLIN);
-                    std::cerr << "Nouveau client accepté : FD " << fd_client << std::endl;
+                    // std::cerr << "Nouveau client accepté : FD " << fd_client << std::endl;
                 }
                 else if (event.events & EPOLLIN) 
                 {
                     fd_client = event.data.fd;
-                    std::cerr << "FD " << fd_client << " est prêt pour recv." << std::endl;
+                    // std::cerr << "FD " << fd_client << " est prêt pour recv." << std::endl;
 
                     std::string &currentRequest = requestMap[fd_client];
 
                     while ((reads = recv(fd_client, buff, BUFFER_SIZE, 0)) > 0)
                     {
                         currentRequest.append(buff, reads);
-                        std::cerr << "Reçu " << reads << " octets sur FD " << fd_client << ". Taille accumulée : " << currentRequest.size() << " octets." << std::endl;
+                        // std::cerr << "Reçu " << reads << " octets sur FD " << fd_client << ". Taille accumulée : " << currentRequest.size() << " octets." << std::endl;
                     }
 
                     if (reads == 0) 
                     {
-                        std::cerr << "Connexion fermée par le client (FD " << fd_client << ")." << std::endl;
+                        // std::cerr << "Connexion fermée par le client (FD " << fd_client << ")." << std::endl;
                         epoll.removeFd(fd_client);
                         close(fd_client);
                         requestMap.erase(fd_client);
@@ -331,7 +331,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     }
                     else if (reads < 0 && errno != EAGAIN && errno != EWOULDBLOCK) 
                     {
-                        std::cerr << "Erreur lors de recv (FD " << fd_client << ") : " << strerror(errno) << std::endl;
+                        // std::cerr << "Erreur lors de recv (FD " << fd_client << ") : " << strerror(errno) << std::endl;
                         epoll.removeFd(fd_client);
                         close(fd_client);
                         requestMap.erase(fd_client);
@@ -343,12 +343,12 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     size_t headerEnd = currentRequest.find("\r\n\r\n");
                     if (headerEnd != std::string::npos)
                     {
-                        std::cerr << "En-têtes complets reçus sur FD " << fd_client << "." << std::endl;
+                        // std::cerr << "En-têtes complets reçus sur FD " << fd_client << "." << std::endl;
 
                         
                         if (currentRequest.find("Transfer-Encoding: chunked") != std::string::npos)
                         {
-                            std::cerr << "Détection de Transfer-Encoding: chunked sur FD " << fd_client << "." << std::endl;
+                            // std::cerr << "Détection de Transfer-Encoding: chunked sur FD " << fd_client << "." << std::endl;
 
                             size_t chunk_start = headerEnd + 4;
                             while (true)
@@ -356,7 +356,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                                 size_t chunk_size_end = currentRequest.find("\r\n", chunk_start);
                                 if (chunk_size_end == std::string::npos)
                                 {
-                                    std::cerr << "Chunk incomplet détecté sur FD " << fd_client << "." << std::endl;
+                                    // std::cerr << "Chunk incomplet détecté sur FD " << fd_client << "." << std::endl;
                                     break;
                                 }
 
@@ -365,7 +365,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
                                 if (chunk_size == 0)
                                 {
-                                    std::cerr << "Chunk final reçu sur FD " << fd_client << "." << std::endl;
+                                    // std::cerr << "Chunk final reçu sur FD " << fd_client << "." << std::endl;
                                     int serverIndex = findServerIndex(currentRequest, Servers);
                                     type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], &epoll, sessionManager);
                                     currentRequest.clear();
@@ -377,7 +377,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
                                 if (chunk_data_end > currentRequest.size())
                                 {
-                                    std::cerr << "Données chunk incompletes détectées sur FD " << fd_client << "." << std::endl;
+                                    // std::cerr << "Données chunk incompletes détectées sur FD " << fd_client << "." << std::endl;
                                     break;
                                 }
 
@@ -400,21 +400,21 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
                                     if (currentRequest.size() >= body_start + content_length)
                                     {
-                                        std::cerr << "Requête complète reçue sur FD " << fd_client << "." << std::endl;
+                                        // std::cerr << "Requête complète reçue sur FD " << fd_client << "." << std::endl;
                                         int serverIndex = findServerIndex(currentRequest, Servers);
                                         type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], &epoll, sessionManager);
                                         currentRequest.clear();
                                     }
                                     else
                                     {
-                                        std::cerr << "Contenu incomplet sur FD " << fd_client << ". Attente de plus de données." << std::endl;
+                                        // std::cerr << "Contenu incomplet sur FD " << fd_client << ". Attente de plus de données." << std::endl;
                                     }
                                 }
                             }
                             else
                             {
                                 
-                                std::cerr << "Pas de Content-Length ni chunked. Traitement en tant que requête simple." << std::endl;
+                                // std::cerr << "Pas de Content-Length ni chunked. Traitement en tant que requête simple." << std::endl;
                                 int serverIndex = findServerIndex(currentRequest, Servers);
                                 type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], &epoll, sessionManager);
                                 currentRequest.clear();

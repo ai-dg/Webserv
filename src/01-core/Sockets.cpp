@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:28 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 20:59:52 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server *>& Serve
         for (size_t j = 0; j < server->getPorts().size(); j++)
         {
             int port = server->getPorts()[j];
-            Log::output("./sessions/Sockets.txt") << "Port: " << port << std::endl;
+            // Log::output("./sessions/Sockets.txt") << "Port: " << port << std::endl;
             if (std::find(listPorts.begin(), listPorts.end(), port) == listPorts.end())
             {
                 listPorts.push_back(port);
@@ -195,7 +195,7 @@ int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& list
         }       
         if (listen(fd_socket, 128) < 0) 
         {
-            Log::output("./logs/error.log") << "Failed to listen on port " << listPorts[i] << std::endl;
+            // Log::output("./logs/error.log") << "Failed to listen on port " << listPorts[i] << std::endl;
             close(fd_socket);
             return 1;
         }

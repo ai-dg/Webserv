@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 20:49:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
 		exit(EXIT_FAILURE);
 	}
 	events = new epoll_event[maxEvents];
-	Log::output("./sessions/epoll.log") << "Epoll class object created" << std::endl;
+	// Log::output("./sessions/epoll.log") << "Epoll class object created" << std::endl;
 }
 
 Epoll::Epoll(const Epoll &src) : epoll_fd(src.epoll_fd),
 	maxEvents(src.maxEvents), events(src.events)
 {
 	timers = src.timers;
-	Log::output("./sessions/epoll.log") << "Epoll class object copied" << std::endl;
+	// Log::output("./sessions/epoll.log") << "Epoll class object copied" << std::endl;
 }
 
 Epoll &Epoll::operator=(const Epoll &src)
@@ -46,7 +46,7 @@ Epoll &Epoll::operator=(const Epoll &src)
 	maxEvents = src.maxEvents;
 	events = src.events;
 	timers = src.timers;
-	Log::output("./sessions/epoll.log") << "Epoll class object assigned" << std::endl;
+	// Log::output("./sessions/epoll.log") << "Epoll class object assigned" << std::endl;
 	return (*this);
 }
 
@@ -55,7 +55,7 @@ Epoll::~Epoll()
 	close(epoll_fd);
 	timers.clear();
 	delete[] events;
-	Log::output("./sessions/epoll.log") << "Epoll class object destroyed" << std::endl;
+	// Log::output("./sessions/epoll.log") << "Epoll class object destroyed" << std::endl;
 	Log::cleanup();
 }
 

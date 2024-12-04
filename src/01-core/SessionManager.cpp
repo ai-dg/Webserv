@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:18 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:20:16 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:36:15 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::string SessionManager::generateSessionsId()
         ss << std::hex << randomValue;
     }
     std::string sessionId = ss.str();
-    Log::output("./sessions/SessionManager.txt") << "Generated session ID: " << sessionId << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "Generated session ID: " << sessionId << std::endl;
     return sessionId;
 }
 
@@ -39,13 +39,13 @@ SessionManager::SessionManager()
 {
     std::srand(std::time(0));
     loadSessionsFromFile();
-    Log::output("./sessions/SessionManager.txt") << "SessionManager object class created" << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class created" << std::endl;
 }
 
 SessionManager::SessionManager(SessionManager const& src) 
 {
     *this = src;
-    Log::output("./sessions/SessionManager.txt") << "SessionManager object class copied" << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class copied" << std::endl;
 }
 
 SessionManager& SessionManager::operator=(SessionManager const& src) 
@@ -54,13 +54,13 @@ SessionManager& SessionManager::operator=(SessionManager const& src)
     {
         sessions = src.sessions;
     }
-    Log::output("./sessions/SessionManager.txt") << "SessionManager object class assigned" << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class assigned" << std::endl;
     return *this;
 }
 
 SessionManager::~SessionManager() 
 {
-    Log::output("./sessions/SessionManager.txt") << "SessionManager object class destroyed" << std::endl;
+    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -102,7 +102,7 @@ void SessionManager::saveSessionsToFile()
     std::ofstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
     {
-        Log::output("./logs/error.log") << "Error opening session file for saving: " << SESSION_FILE_PATH << std::endl;
+        // Log::output("./logs/error.log") << "Error opening session file for saving: " << SESSION_FILE_PATH << std::endl;
         return;
     }
 
@@ -121,7 +121,7 @@ void SessionManager::loadSessionsFromFile()
     std::ifstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
     {
-        Log::output("./logs/error.log") << "No existing session file found: " << SESSION_FILE_PATH << std::endl;
+        // Log::output("./logs/error.log") << "No existing session file found: " << SESSION_FILE_PATH << std::endl;
         return;
     }
 

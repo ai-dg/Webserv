@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:44 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 16:32:24 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:40:10 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 bool pathIsDir(std::string dirPath)
 {
     dirPath = removeDuplicateSlashes(dirPath);
-    std::cerr << "PATHISDIR - " << dirPath << " - ";
+    // std::cerr << "PATHISDIR - " << dirPath << " - ";
     DIR *dir = opendir(dirPath.c_str());
     if (!dir)
     {
-        std::cerr << "false" << std::endl;
+        // std::cerr << "false" << std::endl;
         return false;
     }
     closedir(dir);
-    std::cerr << "true" << std::endl;
+    // std::cerr << "true" << std::endl;
     return (true);
 }
 
@@ -41,10 +41,10 @@ bool isReadableFile(const std::string& path) {
 
 bool doesFileExist(std::string filePath)
 {
-    std::cerr << "try !!!!!!!!!!!!!!!" << std::endl;
+    // std::cerr << "try !!!!!!!!!!!!!!!" << std::endl;
     if (pathIsDir(filePath.c_str()))
     {
-        std::cerr << "it's a directory !!!!!!!!!!!!!!!" << std::endl;
+        // std::cerr << "it's a directory !!!!!!!!!!!!!!!" << std::endl;
         return false;
     }
     if (access(filePath.c_str(), R_OK) == 0)

@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 18:04:36 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:38:16 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Pipe::Pipe(std::string const& path) : path(path)
         throw std::runtime_error("Failed to create/read temporary file for writeFd");
     }
 
-    std::cerr << "Pipe: file created: " << path << std::endl;
+    // std::cerr << "Pipe: file created: " << path << std::endl;
 }
 
 Pipe::~Pipe() {

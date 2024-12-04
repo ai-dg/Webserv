@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 20:07:59 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:43:46 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ std::string HttpRequest::mergeChunks(std::string data)
         chunk_size_stream >> std::hex >> chunk_size;
 
         if (chunk_size == 0) {
-            std::cout << "DEBUG: End of chunks detected (chunk size 0)." << std::endl;
+            // std::cout << "DEBUG: End of chunks detected (chunk size 0)." << std::endl;
             break;
         }
 
@@ -114,7 +114,7 @@ std::string HttpRequest::mergeChunks(std::string data)
             throw std::runtime_error("Invalid chunk size: " + line);
         }
 
-        std::cout << "DEBUG: Parsed chunk size: " << chunk_size << " bytes" << std::endl;
+        // std::cout << "DEBUG: Parsed chunk size: " << chunk_size << " bytes" << std::endl;
 
 
         std::string chunk_data;
@@ -123,7 +123,7 @@ std::string HttpRequest::mergeChunks(std::string data)
 
         merged += chunk_data;
 
-        std::cout << "DEBUG: Chunk data: \"" << chunk_data.substr(0, 100) << "...\" (truncated for display)" << std::endl;
+        // std::cout << "DEBUG: Chunk data: \"" << chunk_data.substr(0, 100) << "...\" (truncated for display)" << std::endl;
 
         std::getline(stream, line);
     }
@@ -157,7 +157,7 @@ std::string encodingSecretCode(std::string data, const std::string& value)
     }
 
     char replacementChar = value[0]; 
-    std::cerr << "Encoding with value: " << replacementChar << std::endl;
+    // std::cerr << "Encoding with value: " << replacementChar << std::endl;
 
     
     for (size_t i = 0; i < data.size(); ++i) {
@@ -170,8 +170,8 @@ std::string encodingSecretCode(std::string data, const std::string& value)
 
 void HttpRequest::setBody(std::string req)
 {
-    std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
-    Log::output("./sessions/test.txt") << req << std::endl;
+    // std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
+    // Log::output("./sessions/test.txt") << req << std::endl;
     std::string body_temp;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
@@ -202,10 +202,10 @@ void HttpRequest::setBody(std::string req)
     file.close();
     
     
-    std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
-    Log::output("./sessions/test2.txt") << body << std::endl;
-     Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
-    std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
+    // std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
+    // Log::output("./sessions/test2.txt") << body << std::endl;
+     // Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
+    // std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
 }
 
 // void HttpRequest::setRoute()
@@ -308,7 +308,7 @@ void HttpRequest::setURI(std::string req)
         return;
     }
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
 /**
@@ -346,14 +346,14 @@ void HttpRequest::addToHeaders(std::string line)
  */
 HttpRequest::HttpRequest(std::string req)
 {
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
-    Log::output("./sessions/HttpRequest.txt") << std::endl << BOLD_YELLOW << req << RESET << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << std::endl << BOLD_YELLOW << req << RESET << std::endl;
     parseRequest(req);
 }
 
 HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
 {
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
     parseRequest(req);
     std::vector<Server *>::iterator it;
     for (it = Servers.begin(); it != Servers.end(); ++it)
@@ -361,21 +361,21 @@ HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
         if ((*it)->foundHostName(headers["Host"]))
             server = (*it);
     }
-    Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
     this->server = server;
-    Log::output("./sessions/HttpRequest.txt") << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
     parseRequest(req);
-    Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::HttpRequest(HttpRequest const& src) : headers(src.headers), method(src.method), host(src.host), URI(src.URI), route(src.route), askedFile(src.askedFile), body(src.body), server(src.server)
 {
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object copied" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object copied" << std::endl;
 }
 
 HttpRequest& HttpRequest::operator=(HttpRequest const& src)
@@ -391,13 +391,13 @@ HttpRequest& HttpRequest::operator=(HttpRequest const& src)
         this->body = src.body;
         this->server = src.server;
     }
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object assigned" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object assigned" << std::endl;
     return *this;
 }
 
 HttpRequest::~HttpRequest()
 {    
-    Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object destroyed" << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -418,15 +418,15 @@ std::string HttpRequest::getRequestedFile() const
 std::string HttpRequest::getQueryString() const
 {
     size_t pos = this->URI.find("?");
-    Log::output("./sessions/HttpRequest.txt") << "-----------URI: " << this->URI << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << "-----------URI: " << this->URI << std::endl;
     if (pos != std::string::npos && pos + 1 < this->URI.size())
     {
         std::string queryString = this->URI.substr(pos + 1);
-        Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
+        // Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
         return queryString;
     }
     else
-        Log::output("./sessions/HttpRequest.txt") << "-----------No query string found in URI." << std::endl;
+        // Log::output("./sessions/HttpRequest.txt") << "-----------No query string found in URI." << std::endl;
     return "";
 }
 
@@ -465,7 +465,7 @@ std::string HttpRequest::getMethod() const
 std::string HttpRequest::getBody() const
 {
 
-    Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
+    // Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST" || method == "DELETE" || method == "PUT") 
     {
         // std::cerr << "getBody : " << body << std::endl;
@@ -556,9 +556,9 @@ bool HttpRequest::isStatic() const
 
 bool HttpRequest::isValidBodySize() const
 {
-    // Log::output("./sessions/HttpRequest.txt") << "Body max size: " << server->getMaxBodySize() << std::endl;
-    // Log::output("./sessions/HttpRequest.txt") << "Body size: " << body.size() << std::endl;
-    // Log::output("./sessions/HttpRequest.txt") << "Body: " << body << std::endl;
+    // // Log::output("./sessions/HttpRequest.txt") << "Body max size: " << server->getMaxBodySize() << std::endl;
+    // // Log::output("./sessions/HttpRequest.txt") << "Body size: " << body.size() << std::endl;
+    // // Log::output("./sessions/HttpRequest.txt") << "Body: " << body << std::endl;
     size_t size = body.size();
     if (size <= server->getMaxBodySize())
         return true;
