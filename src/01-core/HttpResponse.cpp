@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:11:41 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 21:37:18 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -360,13 +360,15 @@ void HttpResponse::send(int fd_client)
         res += CRLF;
     //std::cerr << RED << "&" << res << "&" << RESET <<std::endl;
     write(fd_client, res.c_str(), res.size());
-    std::ofstream file("./sessions/fd_client.txt");
-    if (file.is_open()) 
-    {
-        file << res;
-        file.close();
-    } 
-    else 
-        Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
+
+    Log::output("./sessions/fd_client.txt") << res << std::endl;
+    // std::ofstream file("./sessions/fd_client.txt");
+    // if (file.is_open()) 
+    // {
+    //     file << res;
+    //     file.close();
+    // } 
+    // else 
+    //     Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
     Log::output("./sessions/HttpResponse.txt") << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:28 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 20:50:32 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:59:52 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,7 +158,7 @@ int socket_start(std::vector<int>& fd_sockets, std::vector<int>& listPorts)
     fd_sockets.clear();
     for (size_t i = 0; i < listPorts.size(); ++i)
     {
-        int fd_socket = socket(AF_INET, SOCK_STREAM, 0);
+        int fd_socket = socket(PF_INET, SOCK_STREAM, 0);
         if (fd_socket == -1)
         {
             perror("socket");
@@ -176,6 +176,8 @@ int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& list
         struct sockaddr_in addr;
         addr.sin_family = AF_INET;
         addr.sin_addr.s_addr = INADDR_ANY;
+        
+
         int fd_socket = fd_sockets[i];
         int opt = 1;
         if (setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int)) < 0) 
@@ -191,7 +193,7 @@ int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& list
             close(fd_socket);
             return 1;
         }       
-        if (listen(fd_socket, 10) < 0) 
+        if (listen(fd_socket, 128) < 0) 
         {
             Log::output("./logs/error.log") << "Failed to listen on port " << listPorts[i] << std::endl;
             close(fd_socket);
