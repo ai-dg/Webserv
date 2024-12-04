@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 15:18:00 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 18:04:36 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,76 +14,41 @@
 #include "../00-headers/01-core/Pipe.hpp"
 
 
-Pipe::Pipe() {
-    char tempTemplate[] = "./sessions/pipe_sim_XXXXXX";
-
-    
-    fd = mkstemp(tempTemplate);
+Pipe::Pipe(std::string const& path) : path(path)
+{
+    fd = open(path.c_str(), O_CREAT | O_RDWR, 0644);
     if (fd == -1) {
-        throw std::runtime_error("Failed to create temporary file for Pipe simulation");
+        perror("open write file");
+        close(fd);
+        throw std::runtime_error("Failed to create/read temporary file for writeFd");
     }
 
-    
-    tempFilePath = tempTemplate;
-
-    
-    unlink(tempTemplate);
+    std::cerr << "Pipe: file created: " << path << std::endl;
 }
 
 Pipe::~Pipe() {
-    if (fd != -1) {
-        close(fd);
-    }
+    // closeRead();
+    // closeWrite();
+
+    // // Supprimer les fichiers temporaires
+    // if (!readFilePath.empty()) remove(readFilePath.c_str());
+    // if (!writeFilePath.empty()) remove(writeFilePath.c_str());
 }
 
-int Pipe::getReadFd() const {
+
+int Pipe::getFd() const {
     return fd;
 }
 
-int Pipe::getWriteFd() const {
-    return fd;
+void Pipe::closeFd() {
+    close(fd);
 }
 
-void Pipe::write(const std::string &data) {
-    ssize_t bytesWritten = ::write(fd, data.c_str(), data.size());
-    if (bytesWritten == -1) {
-        throw std::runtime_error("Failed to write to Pipe");
-    }
-    std::cerr << "Pipe: Wrote " << bytesWritten << " bytes to file." << std::endl;
-
-    
-    fsync(fd);
+std::string Pipe::getPath() {
+    return path;
 }
 
-std::string Pipe::read() {
-    
-    lseek(fd, 0, SEEK_SET);
 
-    char buffer[4096];
-    ssize_t bytesRead = ::read(fd, buffer, sizeof(buffer) - 1);
-    if (bytesRead == -1) {
-        throw std::runtime_error("Failed to read from Pipe");
-    }
-    buffer[bytesRead] = '\0';
-    std::cerr << "Pipe: Read " << bytesRead << " bytes from file." << std::endl;
-
-    return std::string(buffer);
-}
-
-void Pipe::closeRead() {
-    if (fd != -1) {
-        close(fd);
-        fd = -1;
-    }
-}
-
-void Pipe::closeWrite() {
-    if (fd != -1) {
-        close(fd);
-        fd = -1;
-    }
-}
-
-std::string Pipe::getTempFilePath() const {
-    return tempFilePath;
+void Pipe::removeFile() {
+    remove(path.c_str());
 }

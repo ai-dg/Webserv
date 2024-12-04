@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 21:37:18 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:31:57 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,16 @@ void HttpResponse::setMineType(void)
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
     //setResourcePath(req);
+    this->req = new HttpRequest(req);
     removeDuplicateSlashes(this->filePath);
     sendBody = true;
     body = "";
     setMineType();
     Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
-    if (!req.isValidBodySize())
-        setRedirection(413);
+    
+    
+    // if (!req.isValidBodySize())
+    //     setRedirection(413);
     Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class created" << std::endl;
 }
 
@@ -64,6 +67,7 @@ HttpResponse &HttpResponse::operator=(const HttpResponse &src)
 HttpResponse::~HttpResponse()
 {
     Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class destroyed" << std::endl;
+    delete req;
     Log::cleanup();
 }
 
@@ -122,14 +126,29 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
     std::string addToRoute = addSub(route, uri);
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
+    size_t sizeMaxInLocation = Route->max_body_size();
+    size_t bodySize = req.getBody().size() + 1.024;
+    std::cerr << BOLD_WHITE << "Uri debug " << uri << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "Extension debug " << extension << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "SizeMax of body : " << sizeMaxInLocation << RESET << std::endl;
+    std::cerr << BOLD_WHITE << "Size of body : " << bodySize << RESET << std::endl;
+    
+    
+
+    if (bodySize >= sizeMaxInLocation)
+    {
+        setRedirection(413);
+        return;
+    }
+    
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
-        // std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
+        std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
         setRedirection(404);
         return;
     }
@@ -237,7 +256,7 @@ void HttpResponse::setStatusCode(int stat)
    
     if (stat == AUTO)
     {
-        if (file == FILENOTFOUND)
+        if (file == FILENOTFOUND && req->getRouteConf(req->getRoute())->findIndex() != "")
             statusCode = 404;
         else
             this->statusCode = 200;
@@ -254,7 +273,7 @@ void HttpResponse::setStatusCode(int stat, int body_status)
     std::string file = getFile(this->filePath);
     if (stat == AUTO)
     {
-        if (file == FILENOTFOUND)
+        if (file == FILENOTFOUND && req->getRouteConf(req->getRoute())->findIndex() != "")
             statusCode = 404;
         else
             this->statusCode = 200;
@@ -334,8 +353,10 @@ void HttpResponse::send(int fd_client)
         resFile = body;
     else 
         resFile = getFile(this->filePath);
-    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && sendBody)
+        
+    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && sendBody && !req->getRouteConf(req->getRoute()))
     {
+        std::cerr << RED << "404 NOT FOUND" << RESET << std::endl;
         this->statusCode = 404;
         resFile = getFile("./www/error_pages/404.html");
     }

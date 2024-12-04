@@ -6,6 +6,11 @@ export REDIRECT_STATUS=1
 export SERVER_PROTOCOL=HTTP/1.1
 export PATH_INFO=/
 
+ curl -v -X POST http://127.1.1.1:8001/post_body \
+     -H "Transfer-Encoding: chunked" \
+     -H "Content-Type: test/file" \
+     --data-binary @chunked_data.txt
+
 
 # #!/usr/bin/bash
 # SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

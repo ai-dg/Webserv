@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/03 15:59:53 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 20:07:59 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,8 @@ std::string cleanMergedData(const std::string& merged) {
 }
 
 
-std::string HttpRequest::mergeChunks(std::string data) {
+std::string HttpRequest::mergeChunks(std::string data) 
+{
     std::string merged;
     std::stringstream stream(data);
     std::string line;
@@ -130,6 +131,8 @@ std::string HttpRequest::mergeChunks(std::string data) {
     return cleanMergedData(merged);
 }
 
+
+
 // std::string HttpRequest::mergeChunks(std::string data)
 // {
 //     std::string merged;
@@ -145,6 +148,24 @@ std::string HttpRequest::mergeChunks(std::string data) {
 //     //std::cerr << BOLD_YELLOW << merged <<std::endl <<RESET;
 //     return merged;
 // }
+
+std::string encodingSecretCode(std::string data, const std::string& value) 
+{
+    if (value.empty()) {
+        std::cerr << "Error: Value for encoding is empty. No transformation applied." << std::endl;
+        return data;
+    }
+
+    char replacementChar = value[0]; 
+    std::cerr << "Encoding with value: " << replacementChar << std::endl;
+
+    
+    for (size_t i = 0; i < data.size(); ++i) {
+        data[i] = replacementChar;
+    }
+
+    return data;
+}
 
 
 void HttpRequest::setBody(std::string req)
@@ -164,6 +185,16 @@ void HttpRequest::setBody(std::string req)
         body = body_temp;
         
     }
+
+    std::map<std::string, std::string>::iterator it = headers.begin();
+    for (; it != headers.end(); ++it)
+    {
+        if (it->first.find("X-Secret") != std::string::npos)
+        {
+            body = encodingSecretCode(body, it->second);
+        }
+    }
+    
 
     std::string filename = "./sessions/tmp.d";
     std::ofstream file(filename.c_str());

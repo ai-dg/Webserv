@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 15:16:42 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 19:30:35 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,37 +202,45 @@ Cgi_handler::~Cgi_handler()
  * @brief Execute the CGI script
  */
 
+
 void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) {
     pid_t pid;
-    Pipe pipe_in;
-    Pipe pipe_out;
+    Pipe pipe_in("./sessions/pipe_infile");
+    Pipe pipe_out("./sessions/pipe_outfile");
     this->scriptPath = scriptPath;
     std::string data = req.getBody();
 
     std::cerr << "Entering executeCGI" << std::endl;
 
-    std::cerr << "Fork" << std::endl;
+    if (pipe_in.getFd() == -1 || pipe_out.getFd() == -1) {
+        std::cerr << "Error: Failed to open temporary files for Pipe." << std::endl;
+        return;
+    }
+
+    std::cerr << "Forking..." << std::endl;
     pid = fork();
     if (pid < 0) {
         perror("fork");
         return;
     }
 
-    if (pid == 0) {  // Child process
-        std::cerr << "Child process" << std::endl;
+    if (pid == 0) {  
+        std::cerr << "Child process started." << std::endl;
 
-        // pipe_in.closeWrite();
-        // pipe_out.closeRead();
+        ::lseek(pipe_in.getFd(), 0, SEEK_SET);
 
-        if (dup2(pipe_in.getReadFd(), STDIN_FILENO) == -1) {
+        if (dup2(pipe_in.getFd(), STDIN_FILENO) == -1) {
             perror("dup2 stdin");
             exit(1);
         }
 
-        if (dup2(pipe_out.getWriteFd(), STDOUT_FILENO) == -1) {
+        if (dup2(pipe_out.getFd(), STDOUT_FILENO) == -1) {
             perror("dup2 stdout");
             exit(1);
         }
+
+        pipe_in.closeFd();
+        pipe_out.closeFd();
 
         setEnvironment(req);
 
@@ -258,56 +266,355 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             const_cast<char *>(scriptPathTemp.c_str()),
             NULL};
 
+        std::cerr << "Child: Executing script with execve..." << std::endl;
         if (execve(argv[0], argv, environment.data()) == -1) {
             perror("execve");
             exit(1);
         }
-    } else {  // Parent process
-        std::cerr << "Parent process" << std::endl;
+    } else {  
+        std::cerr << "Parent process started." << std::endl;
 
-        pipe_in.closeRead();
-        pipe_out.closeWrite();
+        
 
         size_t offset = 0;
         ssize_t bytes_written;
 
         while (offset < data.size()) {
-            bytes_written = ::write(pipe_in.getWriteFd(), data.c_str() + offset, data.size() - offset);
+            bytes_written = ::write(pipe_in.getFd(), data.c_str() + offset, data.size() - offset);
             if (bytes_written == -1) {
+                if (errno == EPIPE) {
+                    std::cerr << "Error: Client disconnected." << std::endl;
+                    break;
+                }
                 perror("write");
-                pipe_in.closeWrite();
-                pipe_out.closeRead();
+                pipe_out.closeFd();
                 return;
             }
             offset += bytes_written;
         }
 
-        pipe_in.closeWrite();
+        pipe_in.closeFd(); 
 
         int status;
-        if (waitpid(pid, &status, 0) == -1) {
+        pid_t wpid = waitpid(pid, &status, 0);
+        if (wpid == -1) {
             perror("waitpid");
             return;
+        }
+
+        if (WIFEXITED(status)) {
+            std::cerr << "Child exited with status: " << WEXITSTATUS(status) << std::endl;
+        } else if (WIFSIGNALED(status)) {
+            std::cerr << "Child terminated by signal: " << WTERMSIG(status) << std::endl;
+        } else {
+            std::cerr << "Child ended abnormally." << std::endl;
         }
 
         char buffer[4096];
         ssize_t bytesRead;
 
-        while ((bytesRead = ::read(pipe_out.getReadFd(), buffer, sizeof(buffer) - 1)) > 0) {
-            buffer[bytesRead] = '\0';
-            write(fd_client, buffer, bytesRead);
+        ::lseek(pipe_out.getFd(), 0, SEEK_SET);
+
+        std::cerr << "Script path: " << scriptPath << std::endl;
+
+        std::string bufferAccumulator;
+        std::string bufferAccumulator2;
+
+        if (scriptPath.find(".bla") != std::string::npos) {
+            std::cerr << "Reading from bla file..." << std::endl;
+
+            std::ostringstream headers;
+            headers << "HTTP/1.1 200 OK\r\n"
+                    << "Content-Length: " << data.size() << "\r\n"
+                    << "Content-Type: text/html; charset=utf-8\r\n"
+                    << "Date: Wed, 04 Dec 2024 16:22:54 GMT\r\n"
+                    << "Server: webserv/1.0\r\n\r\n";
+
+            std::string headersStr = headers.str();
+
+            
+            size_t offset = 0;
+            ssize_t bytesWritten;
+
+            while (offset < headersStr.size()) {
+                bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
+                if (bytesWritten == -1) {
+                    if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                        ::usleep(1000);
+                        continue;
+                    }
+                    ::perror("write to client");
+                    return;
+                }
+                offset += bytesWritten;
+            }
+
+            bool headersSkipped = false;
+            bufferAccumulator2.append(headersStr);
+
+            std::string remainingBuffer;
+
+            
+            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) {
+                buffer[bytesRead] = '\0';
+                remainingBuffer += buffer;
+
+                
+                if (!headersSkipped) {
+                    size_t headerEnd = remainingBuffer.find("\r\n\r\n");
+                    if (headerEnd != std::string::npos) {
+                        headersSkipped = true;
+                        
+                        remainingBuffer = remainingBuffer.substr(headerEnd + 4);
+                    } else {
+                        
+                        continue;
+                    }
+                }
+
+                
+                offset = 0;
+                while (offset < remainingBuffer.size()) {
+                    bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
+                    if (bytesWritten == -1) {
+                        if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                            ::usleep(1000);
+                            continue;
+                        }
+                        perror("write to client");
+                        break;
+                    }
+                    offset += bytesWritten;
+                }
+                bufferAccumulator2 += remainingBuffer; 
+                remainingBuffer.clear();               
+            }
+
+            if (bytesRead == -1) {
+                perror("read");
+            }
+
+            if (data.size() >= 100000 && data.size() <= 200000)
+            {
+                
+                std::ofstream debugFile("./sessions/debug_output.txt", std::ios::out | std::ios::trunc);
+                if (debugFile.is_open()) {
+                    debugFile << bufferAccumulator2;
+                    debugFile.close();
+                    // exit(1);
+                } else {
+                    std::cerr << "Error: Unable to open debug_output.txt for writing." << std::endl;
+                }
+                
+            }
         }
 
-        std::cerr << "Path: " << pipe_out.getTempFilePath() << std::endl;
 
-        std::cerr << "Parent: Wrote " << bytesRead << " bytes to client." << std::endl;
+        else 
+        {
+            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) {
+                buffer[bytesRead] = '\0';
 
-        pipe_out.closeRead();
+                size_t offset = 0;
+                ssize_t bytesWritten;
+
+                while (offset < (size_t)bytesRead) {
+                    bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
+                    if (bytesWritten == -1) {
+                        if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                            
+                            usleep(1000);
+                            continue;
+                        }
+                        perror("write to client");
+                        break;
+                    }
+                    offset += bytesWritten;
+                }
+            }
+
+            if (bytesRead == -1) {
+                perror("read");
+            }
+        }
+
+      
+
+        if (bytesRead == -1) {
+            perror("read");
+        }
+
+        // if (data.size() >= 100000 && data.size() <= 200000) {
+        //     std::cerr << "Test 100000: Writing bufferAccumulator to file..." << std::endl;
+
+        //     std::ofstream file("./sessions/100000.txt", std::ios::out | std::ios::trunc);
+        //     if (!file.is_open()) {
+        //         perror("Error opening 100000.txt");
+        //         return;
+        //     }
+
+        //     // Écrire le contenu de bufferAccumulator dans le fichier
+        //     file << bufferAccumulator2;
+
+        //     if (file.fail()) {
+        //         std::cerr << "Error writing to file 100000.txt" << std::endl;
+        //     } else {
+        //         std::cerr << "Data successfully written to ./sessions/100000.txt" << std::endl;
+        //     }
+
+        //     file.close();
+
+        //     exit(1);
+        // }
+
+
+      
+        bufferAccumulator2.clear();
+
+        pipe_out.closeFd();
+
+        pipe_in.removeFile();
+        pipe_out.removeFile();
     }
 
     std::cerr << "Exiting executeCGI" << std::endl;
 }
 
+
+
+// void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) {
+//     pid_t pid;
+//     Pipe pipe_in("./sessions/pipe_infile");
+//     Pipe pipe_out("./sessions/pipe_outfile");
+//     this->scriptPath = scriptPath;
+//     std::string data = req.getBody();
+
+//     std::cerr << "Entering executeCGI" << std::endl;
+
+//     // Vérifier si les fichiers sont correctement ouverts
+//     if (pipe_in.getFd() == -1 || pipe_out.getFd() == -1) {
+//         std::cerr << "Error: Failed to open temporary files for Pipe." << std::endl;
+//         return;
+//     }
+
+//     std::cerr << "Forking..." << std::endl;
+//     pid = fork();
+//     if (pid < 0) {
+//         perror("fork");
+//         return;
+//     }
+
+//     if (pid == 0) {  // Child process
+//         std::cerr << "Child process started." << std::endl;
+
+//         // Repositionner le pointeur de lecture au début du fichier temporaire
+//         lseek(pipe_in.getFd(), 0, SEEK_SET);
+
+//         // Duplication des fichiers pour stdin et stdout
+//         std::cerr << "Child: Dup2 stdin with fd: " << pipe_in.getFd() << std::endl;
+//         if (dup2(pipe_in.getFd(), STDIN_FILENO) == -1) {
+//             perror("dup2 stdin");
+//             exit(1);
+//         }
+
+//         std::cerr << "Child: Dup2 stdout with fd: " << pipe_out.getFd() << std::endl;
+//         if (dup2(pipe_out.getFd(), STDOUT_FILENO) == -1) {
+//             perror("dup2 stdout");
+//             exit(1);
+//         }
+
+//         setEnvironment(req);
+
+//         std::string scriptPathTemp = scriptPath;
+//         size_t queryPos = scriptPathTemp.find('?');
+//         if (queryPos != std::string::npos)
+//             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
+
+//         debugEnvironment();
+
+//         std::string exe_context = getExeContext(scriptPath);
+//         std::string path = "/usr/bin/env";
+
+//         if (scriptPathTemp.find(".bla") != std::string::npos) {
+//             path = "/home/dagudelo/Parcours/Webserv/tests/ubuntu_cgi_tester";
+//             exe_context = "/home/dagudelo/Parcours/find/webserv/www/YoupiBanane/youpi.bla";
+//             scriptPathTemp.clear();
+//         }
+
+//         char *const argv[] = {
+//             const_cast<char *>(path.c_str()),
+//             const_cast<char *>(exe_context.c_str()),
+//             const_cast<char *>(scriptPathTemp.c_str()),
+//             NULL};
+
+//         std::cerr << "Child: Executing script..." << std::endl;
+//         if (execve(argv[0], argv, environment.data()) == -1) {
+//             perror("execve");
+//             exit(1);
+//         }
+        
+//         std::cerr << "Child: Script executed." << std::endl;
+        
+//     } else {  // Parent process
+//         std::cerr << "Parent process started." << std::endl;
+
+//         // Écrire les données dans le fichier d'entrée
+//         size_t offset = 0;
+//         ssize_t bytes_written;
+
+//         while (offset < data.size()) {
+//             bytes_written = ::write(pipe_in.getFd(), data.c_str() + offset, data.size() - offset);
+//             if (bytes_written == -1) {
+//                 perror("write");
+//                 pipe_in.closeFd();
+//                 pipe_out.closeFd();
+//                 return;
+//             }
+//             offset += bytes_written;
+//         }
+
+//         pipe_in.closeFd(); // Fermer l'écriture une fois terminé
+
+//         // Attendre la fin du processus enfant
+//         int status;
+//         pid_t wpid  = waitpid(pid, &status, 0);
+//         if (wpid == -1) 
+//         {
+//             perror("waitpid");
+//             Log::output("./logs/error.log") << "Parent: Failed to wait for child process." << std::endl;
+//         } 
+//         else 
+//         {
+//             if (WIFEXITED(status)) 
+//                 Log::output("./sessions/cgi_handler.txt") << "Parent: Child exited with status: " << WEXITSTATUS(status) << std::endl;
+//             else if (WIFSIGNALED(status)) 
+//                 Log::output("./sessions/cgi_handler.txt") << "Parent: Child killed by signal: " << WTERMSIG(status) << std::endl;
+//             else 
+//                 Log::output("./sessions/cgi_handler.txt") << "Parent: Child ended abnormally" << std::endl;
+//         }
+
+//         // Lecture des résultats depuis le fichier de sortie
+//         char buffer[4096];
+//         ssize_t bytesRead;
+
+//         lseek(pipe_out.getFd(), 0, SEEK_SET); // Repositionner le pointeur pour la lecture
+
+//         while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) {
+//             buffer[bytesRead] = '\0';
+//             write(fd_client, buffer, bytesRead);
+//         }
+        
+//         std::cerr << "Parent: Wrote " << bytesRead << " bytes to client." << std::endl;
+
+//         if (bytesRead == -1) {
+//             perror("read");
+//         }
+
+//         pipe_out.closeFd(); // Fermer la lecture une fois terminé
+//     }
+
+//     std::cerr << "Exiting executeCGI" << std::endl;
+// }
 
 
 

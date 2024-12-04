@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/01 23:29:01 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/04 21:09:45 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,8 @@ void Location::init()
     _index = "";
     redirectionPath = "";
     redirectionStatus = 0;
-    _max_body = 100 * 1024;
+    // _max_body = 100 * 1024;
+    _max_body = 100000 * 1024;
 }
 
 /**
@@ -133,7 +134,7 @@ void Location::init()
 
 void Location::setMaxBodySize(std::string size)
 {
-    _max_body = getFormatedSizeFromString(size) * 1024;
+    _max_body = getFormatedSizeFromString(size);
     std::cerr  << size << " : " << _max_body << " bytes" << std::endl;
 }
 

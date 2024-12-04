@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 15:15:29 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/04 18:04:32 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,20 @@
 
 class Pipe {
 private:
-    int fd;  // Descripteur pour lecture et écriture
-    std::string tempFilePath;
+    int fd;
+    std::string path;
 
 public:
-    Pipe();
+    Pipe(std::string const& path);
     ~Pipe();
 
-    int getReadFd() const;
-    int getWriteFd() const;
+    int getFd() const;
 
-    void write(const std::string &data);
-    std::string read();
+    void closeFd();
 
-    void closeRead();
-    void closeWrite();
+    
+    std::string getPath() ;
 
-    std::string getTempFilePath() const;
+    void removeFile();
+
 };
