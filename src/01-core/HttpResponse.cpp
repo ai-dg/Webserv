@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:25:35 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:15:17 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,12 +128,12 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         return;
     }
     std::string routed = Route->root() + addSub(route,uri);
-    if (Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
+    if (Route && Route->extensions() != "" && Route->extensions().find(req.getAskedFile().substr(req.getAskedFile().find("."), std::string::npos)) == std::string::npos)
     {
         setRedirection(403);
         return;
     }
-    if (Route->redirection() != "")
+    if (Route && Route->redirection() != "")
     {
         setRedirection(Route->getRedirectionPath(), Route->getRedirectionStatus());
         addHeader("Location", Route->getRedirectionPath());
@@ -163,7 +163,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         || uri.find(".pl") != std::string::npos
         || uri.find(".sh") != std::string::npos
         || uri.find(".php") != std::string::npos || 
-        (uri == "/" && Route->index().find(".php") != std::string::npos))
+        (uri == "/" && Route && Route->index().find(".php") != std::string::npos))
     {
         Route = req.getRouteConf("/cgi-bin/");
         this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
@@ -172,7 +172,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         if (uri =="/")
         {
-            if (Route->findIndex() == "")
+            if (Route && Route->findIndex() == "")
             {
                 setRedirection(403);
                 return;
@@ -188,15 +188,15 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
                 this->filePath = routed  + req.getAskedFile();
         }
     }
-    if(Route->methods().find(req.getMethod()) == std::string::npos)
+    if(Route && Route->methods().find(req.getMethod()) == std::string::npos)
     {
         setRedirection(405);
         addHeader("Allow", Route->methods());
         return ;
     }
-    if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
+    if (pathIsDir("./" + routed) && Route && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
         setBody(getIndexFile("./" + routed + "/"));
-    else if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
+    else if (pathIsDir("./" + routed) && Route && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
     {
         addHeader("Content-Disposition", "attachment; filename=\"" + req.getAskedFile() + "\"");
         this->filePath = routed + "/" + req.getAskedFile();
@@ -285,7 +285,7 @@ int HttpResponse::put(const HttpRequest &req)
 
 bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 {
-    return Route->methods().find(req.getMethod()) != std::string::npos;
+    return Route && (Route->methods().find(req.getMethod()) != std::string::npos);
 }
 
 void HttpResponse::send(int fd_client)

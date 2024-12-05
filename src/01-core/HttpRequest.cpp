@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:18:58 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:10:03 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -387,9 +387,12 @@ bool HttpRequest::isStatic() const
     {
         return false;
     }
-    if (URI == "/" && route->index().find(".php") != std::string::npos)
+    if (route)
     {
-        return false;
+        if (URI == "/" && route->index().find(".php") != std::string::npos)
+        {
+            return false;
+        }
     }
     else
         return true;

@@ -1,17 +1,67 @@
 # MIME types par défaut
 
+# Texte
 text/html                           html htm;
 text/css                            css;
 text/javascript                     js;
+text/plain                          txt log;
+text/csv                            csv;
+
+# Images
 image/jpeg                          jpeg jpg;
 image/png                           png;
 image/gif                           gif;
 image/x-icon                        ico;
+image/svg+xml                       svg;
+image/webp                          webp;
+image/tiff                          tiff tif;
+
+# Polices
+font/ttf                            ttf;
+font/otf                            otf;
+font/woff                           woff;
+font/woff2                          woff2;
+
+# Applications
 application/json                    json;
 application/xml                     xml;
 application/pdf                     pdf;
 application/zip                     zip;
+application/gzip                    gz;
+application/x-7z-compressed         7z;
+application/x-rar-compressed        rar;
+application/x-tar                   tar;
+application/octet-stream            bin exe dmg iso;
+
+# Multimédia
 audio/mpeg                          mp3;
+audio/ogg                           oga ogg;
+audio/wav                           wav;
+audio/aac                           aac;
+audio/flac                          flac;
 video/mp4                           mp4;
-application/octet-stream            bin exe;
-text/plain                          txt;
+video/mpeg                          mpeg mpg;
+video/x-msvideo                     avi;
+video/x-matroska                    mkv;
+video/ogg                           ogv;
+video/webm                          webm;
+
+# Documents
+application/msword                  doc;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document docx;
+application/vnd.ms-excel            xls;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet xlsx;
+application/vnd.ms-powerpoint       ppt;
+application/vnd.openxmlformats-officedocument.presentationml.presentation pptx;
+
+# Archives
+application/x-zip-compressed        zip;
+application/x-bzip2                 bz2;
+application/x-xz                    xz;
+application/x-zstd-compressed       zst;
+
+# Scripts
+application/x-sh                    sh;
+application/x-python                py;
+application/x-perl                  pl;
+application/x-httpd-php             php;

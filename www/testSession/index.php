@@ -1,4 +1,5 @@
 <?php
+
 // Fonction pour écrire des messages de débogage
 function debug_log($message) {
     $logFile = __DIR__ . '/logs/php.log';
@@ -7,6 +8,9 @@ function debug_log($message) {
     }
     file_put_contents($logFile, "[" . date('Y-m-d H:i:s') . "] " . $message . PHP_EOL, FILE_APPEND);
 }
+
+debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
+debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
 
 // Activer le débogage des sessions
 ini_set('display_errors', 1);
@@ -28,20 +32,6 @@ if (isset($_SERVER['PHPSESSID'])) {
     session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
 } else {
     debug_log("Aucun PHPSESSID trouvé.");
-}
-
-// Debugger toutes les variables d'environnement
-debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
-debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
-
-// Vérifier si le fichier de session existe
-$session_save_path = ini_get('session.save_path');
-$session_file = $session_save_path . '/sess_' . session_id();
-
-if (file_exists($session_file)) {
-    debug_log("Fichier de session trouvé : " . $session_file);
-} else {
-    debug_log("Fichier de session introuvable : " . $session_file);
 }
 
 // Démarrer la session
@@ -77,20 +67,9 @@ if (isset($_SESSION['user'])) {
     debug_log("Aucune session utilisateur active.");
 }
 
-// En-têtes HTTP
-debug_log("Envoi des en-têtes HTTP pour le cache.");
-header("Expires: 0");
-header("Cache-Control: no-store, no-cache, must-revalidate");
-header("Pragma: no-cache");
-
-// Indiquer la fin du script dans les logs
-debug_log("Fin du script PHP.");
+// Capture du contenu HTML
+ob_start();
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,8 +84,7 @@ debug_log("Fin du script PHP.");
 <body>
     <h1>Test Sessions</h1>
 
-    <?php
-    if (isset($_SESSION['user'])): ?>
+    <?php if (isset($_SESSION['user'])): ?>
         <p>Bienvenue, <strong><?php echo htmlspecialchars($_SESSION['user']); ?></strong> !</p>
         <form method="POST">
             <button type="submit" name="logout">Se déconnecter</button>
@@ -120,3 +98,25 @@ debug_log("Fin du script PHP.");
     <?php endif; ?>
 </body>
 </html>
+<?php
+// Fin de la capture
+$content = ob_get_clean();
+
+// Calculer la longueur du contenu
+$content_length = strlen($content);
+
+header("Content-Type: text/html; charset=utf-8");
+header("Content-Length: $content_length");
+header("Expires: 0");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Pragma: no-cache");
+
+// Ajout au log pour vérifier les en-têtes
+debug_log("En-têtes générés : " . print_r(headers_list(), true));
+
+// Envoyer le contenu
+echo $content;
+
+// Indiquer la fin du script dans les logs
+debug_log("Fin du script PHP.");
+?>

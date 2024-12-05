@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:00:30 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:15:47 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,25 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     {
         if (it->second == "chunked")
             continue;
-        this->addToEnvironment(req.getFormatedHeader(it->first));  
+        if (it->first.find("Cookie") != std::string::npos)
+        {
+            std::string cookieHeader = it->second;
+            size_t start = 0;
+            size_t end = 0;
+            while ((end = cookieHeader.find(';', start)) != std::string::npos)
+            {
+                std::string cookie = cookieHeader.substr(start, end - start);
+                start = end + 2; 
+                this->addToEnvironment(cookie);
+            }
+            if (start < cookieHeader.size())
+            {
+                std::string cookie = cookieHeader.substr(start);
+                this->addToEnvironment(cookie);
+            }
+        }
+        else
+            this->addToEnvironment(req.getFormatedHeader(it->first));
     }
     this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
@@ -100,9 +118,8 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
     this->addToEnvironment("PATH_INFO=/");
     if (getExeContext(scriptPath) == "php-cgi")
     {
-        this->addToEnvironment(req.getHeader("Cookie"));
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
-        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);         
+        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);        
     }
     else if (getExeContext(scriptPath) == "python3")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
@@ -203,14 +220,14 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
-        std::string exe_context = getExeContext(scriptPath);
+        std::string exe_context = getExeContext(scriptPathTemp);
         std::string path = "/usr/bin/env";
         if (req.hasFileSpecialRoute(scriptPathTemp))
         {
             Location *route = req.getRouteConf(getExtension(scriptPathTemp));
             if (!route)
                 std::cerr << "unkown route" << std::endl;
-            if (!route->exe().empty())
+            if (route && !route->exe().empty())
             {   
                 if (resolvePath(route->exe()))        
                     path.assign(resolvePath(route->exe()));
@@ -236,7 +253,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
     } 
     else 
     {  
-         size_t offset = 0;
+        size_t offset = 0;
         ssize_t bytes_written;
         while (offset < data.size()) 
         {
@@ -260,12 +277,12 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
         if (WIFEXITED(status)) 
         {
-            if (WEXITSTATUS(status) < 0) 
+            if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
             {
                 res.setRedirection(500);
                 res.send(fd_client);
                 return;
-            }   
+            }
         } 
         else if (WIFSIGNALED(status)) 
         {
@@ -284,7 +301,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
         std::string bufferAccumulator;
         std::string bufferAccumulator2;
-
+        if (scriptPath.find(".php") != std::string::npos) 
+            write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {
             std::ostringstream headers;
