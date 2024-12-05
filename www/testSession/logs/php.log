@@ -227,3 +227,289 @@
 )
 
 [2024-12-05 18:07:58] Fin du script PHP.
+[2024-12-05 18:20:14] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422814.1043
+    [REQUEST_TIME] => 1733422814
+)
+
+[2024-12-05 18:20:14] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:20:14] PHPSESSID trouvé dans l'environnement : i8a5qdula1obnovtub1p22cdcc
+[2024-12-05 18:20:14] Démarrage de session...
+[2024-12-05 18:20:14] ID de session actuel : i8a5qdula1obnovtub1p22cdcc
+[2024-12-05 18:20:14] Session active pour l'utilisateur : asdasd
+[2024-12-05 18:20:14] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=i8a5qdula1obnovtub1p22cdcc; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 578
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:20:14] Fin du script PHP.
+[2024-12-05 18:22:17] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422937.5575
+    [REQUEST_TIME] => 1733422937
+)
+
+[2024-12-05 18:22:17] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:22:17] PHPSESSID trouvé dans l'environnement : i8a5qdula1obnovtub1p22cdcc
+[2024-12-05 18:22:17] Démarrage de session...
+[2024-12-05 18:22:17] ID de session actuel : i8a5qdula1obnovtub1p22cdcc
+[2024-12-05 18:22:17] Déconnexion demandée.
+[2024-12-05 18:22:17] Session détruite.
+[2024-12-05 18:22:17] Aucune session utilisateur active.
+[2024-12-05 18:22:17] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=i8a5qdula1obnovtub1p22cdcc; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 653
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:22:17] Fin du script PHP.
+[2024-12-05 18:22:19] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 25
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422939.582
+    [REQUEST_TIME] => 1733422939
+)
+
+[2024-12-05 18:22:19] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 25
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => i8a5qdula1obnovtub1p22cdcc
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:22:19] PHPSESSID trouvé dans l'environnement : i8a5qdula1obnovtub1p22cdcc
+[2024-12-05 18:22:19] Démarrage de session...
+[2024-12-05 18:22:19] ID de session actuel : jtnu57kb5ueehml5d8l9qd4380
+[2024-12-05 18:22:19] Tentative de connexion avec le nom d'utilisateur : asdasdasd
+[2024-12-05 18:22:19] Utilisateur connecté : asdasdasd
+[2024-12-05 18:22:19] Session active pour l'utilisateur : asdasdasd
+[2024-12-05 18:22:19] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=jtnu57kb5ueehml5d8l9qd4380; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 581
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:22:19] Fin du script PHP.
+[2024-12-05 18:22:20] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => jtnu57kb5ueehml5d8l9qd4380
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422940.3603
+    [REQUEST_TIME] => 1733422940
+)
+
+[2024-12-05 18:22:20] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 7
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => jtnu57kb5ueehml5d8l9qd4380
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:22:20] PHPSESSID trouvé dans l'environnement : jtnu57kb5ueehml5d8l9qd4380
+[2024-12-05 18:22:20] Démarrage de session...
+[2024-12-05 18:22:20] ID de session actuel : jtnu57kb5ueehml5d8l9qd4380
+[2024-12-05 18:22:20] Déconnexion demandée.
+[2024-12-05 18:22:20] Session détruite.
+[2024-12-05 18:22:20] Aucune session utilisateur active.
+[2024-12-05 18:22:20] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=jtnu57kb5ueehml5d8l9qd4380; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 653
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:22:20] Fin du script PHP.
+[2024-12-05 18:22:23] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 22
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => jtnu57kb5ueehml5d8l9qd4380
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422943.0528
+    [REQUEST_TIME] => 1733422943
+)
+
+[2024-12-05 18:22:23] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => POST
+    [CONTENT_LENGTH] => 22
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => jtnu57kb5ueehml5d8l9qd4380
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:22:23] PHPSESSID trouvé dans l'environnement : jtnu57kb5ueehml5d8l9qd4380
+[2024-12-05 18:22:23] Démarrage de session...
+[2024-12-05 18:22:23] ID de session actuel : safstm28fj2ppeqkshu3hsvuvq
+[2024-12-05 18:22:23] Tentative de connexion avec le nom d'utilisateur : asdasd
+[2024-12-05 18:22:23] Utilisateur connecté : asdasd
+[2024-12-05 18:22:23] Session active pour l'utilisateur : asdasd
+[2024-12-05 18:22:23] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=safstm28fj2ppeqkshu3hsvuvq; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 578
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:22:23] Fin du script PHP.
+[2024-12-05 18:22:24] Contenu de $_SERVER : Array
+(
+    [REQUEST_METHOD] => GET
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => safstm28fj2ppeqkshu3hsvuvq
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+    [PHP_SELF] => www/testSession/index.php/
+    [REQUEST_TIME_FLOAT] => 1733422944.8511
+    [REQUEST_TIME] => 1733422944
+)
+
+[2024-12-05 18:22:24] Variables d'environnement via getenv() : Array
+(
+    [REQUEST_METHOD] => GET
+    [sessionId] => 191172cce5e965cb
+    [PHPSESSID] => safstm28fj2ppeqkshu3hsvuvq
+    [CONTENT_TYPE] => 
+    [REDIRECT_STATUS] => 1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [PATH_INFO] => /
+    [SCRIPT_NAME] => www/testSession/index.php
+    [SCRIPT_FILENAME] => www/testSession/index.php
+)
+
+[2024-12-05 18:22:24] PHPSESSID trouvé dans l'environnement : safstm28fj2ppeqkshu3hsvuvq
+[2024-12-05 18:22:24] Démarrage de session...
+[2024-12-05 18:22:24] ID de session actuel : safstm28fj2ppeqkshu3hsvuvq
+[2024-12-05 18:22:24] Session active pour l'utilisateur : asdasd
+[2024-12-05 18:22:24] En-têtes générés : Array
+(
+    [0] => X-Powered-By: PHP/8.3.14
+    [1] => Set-Cookie: PHPSESSID=safstm28fj2ppeqkshu3hsvuvq; path=/
+    [2] => Content-Type: text/html; charset=utf-8
+    [3] => Content-Length: 578
+    [4] => Expires: 0
+    [5] => Cache-Control: no-store, no-cache, must-revalidate
+    [6] => Pragma: no-cache
+)
+
+[2024-12-05 18:22:24] Fin du script PHP.

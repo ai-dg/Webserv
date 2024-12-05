@@ -1,6 +1,6 @@
 <?php
 
-// Fonction pour écrire des messages de débogage
+//
 function debug_log($message) {
     $logFile = __DIR__ . '/logs/php.log';
     if (!file_exists(dirname($logFile))) {
@@ -12,34 +12,34 @@ function debug_log($message) {
 debug_log("Contenu de \$_SERVER : " . print_r($_SERVER, true));
 debug_log("Variables d'environnement via getenv() : " . print_r(getenv(), true));
 
-// Activer le débogage des sessions
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Configurer les sessions
+
 ini_set('session.use_strict_mode', 1);
 ini_set('session.use_cookies', 1);
 ini_set('session.use_only_cookies', 1);
 ini_set('session.cookie_lifetime', 0);
 
-// Vérifier si l'ID de session est transmis dans l'environnement
+
 if (isset($_SERVER['PHPSESSID'])) {
     debug_log("PHPSESSID trouvé dans l'environnement : " . $_SERVER['PHPSESSID']);
-    session_id($_SERVER['PHPSESSID']); // Utiliser l'ID transmis via l'environnement
+    session_id($_SERVER['PHPSESSID']); 
 } elseif (isset($_COOKIE['PHPSESSID'])) {
     debug_log("PHPSESSID reçu du cookie : " . $_COOKIE['PHPSESSID']);
-    session_id($_COOKIE['PHPSESSID']); // Utiliser l'ID transmis via le cookie
+    session_id($_COOKIE['PHPSESSID']); 
 } else {
     debug_log("Aucun PHPSESSID trouvé.");
 }
 
-// Démarrer la session
+
 debug_log("Démarrage de session...");
 session_start();
 debug_log("ID de session actuel : " . session_id());
 
-// Gestion de la connexion
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
         $username = trim($_POST['username']);
@@ -67,7 +67,7 @@ if (isset($_SESSION['user'])) {
     debug_log("Aucune session utilisateur active.");
 }
 
-// Capture du contenu HTML
+
 ob_start();
 ?>
 <!DOCTYPE html>
@@ -99,10 +99,10 @@ ob_start();
 </body>
 </html>
 <?php
-// Fin de la capture
+
 $content = ob_get_clean();
 
-// Calculer la longueur du contenu
+
 $content_length = strlen($content);
 
 header("Content-Type: text/html; charset=utf-8");
@@ -111,12 +111,12 @@ header("Expires: 0");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
-// Ajout au log pour vérifier les en-têtes
+
 debug_log("En-têtes générés : " . print_r(headers_list(), true));
 
-// Envoyer le contenu
+
 echo $content;
 
-// Indiquer la fin du script dans les logs
+
 debug_log("Fin du script PHP.");
 ?>
