@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:37:45 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:53:19 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         {
             if (req.getHeader("User-Agent") == "Go-http-client/1.1")
             {
-                setStatusCode(204,NO_BODY); //// pffffff
+                setStatusCode(204, NO_BODY); //// pffffff
                 // std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
             }
             else
@@ -363,9 +363,9 @@ void HttpResponse::send(int fd_client)
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();
     // Log::output("./sessions/HttpResponse.txt") << "---------- res by line ----------" << std::endl;
-    std::istringstream ss(res);
-    std::string line;
-    while (std::getline(ss, line)) 
+    // std::istringstream ss(res);
+    // std::string line;
+    // while (std::getline(ss, line)) 
         // Log::output("./sessions/HttpResponse.txt") << line << std::endl;
     // Log::output("./sessions/HttpResponse.txt") << "---------------------------------" << std::endl;
     if (sendBody)
@@ -382,13 +382,13 @@ void HttpResponse::send(int fd_client)
     //std::cerr << RED << "&" << res << "&" << RESET <<std::endl;
     write(fd_client, res.c_str(), res.size());
 
-    // Log::output("./sessions/fd_client.txt") << res << std::endl;
-    // std::ofstream file("./sessions/fd_client.txt");
-    // if (file.is_open()) 
-    // {
-    //     file << res;
-    //     file.close();
-    // } 
+    Log::output("./sessions/fd_client.txt") << res << std::endl;
+    std::ofstream file("./sessions/fd_client.txt");
+    if (file.is_open()) 
+    {
+        file << res;
+        file.close();
+    } 
     // else 
     //     // Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
     // Log::output("./sessions/HttpResponse.txt") << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;

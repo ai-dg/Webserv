@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:39:31 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:02:26 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -910,9 +910,9 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
 //             for (int i = 0; i < eventCount && !signalReceived; ++i) 
 //             {
-//                 Log::debug("Event ***********************");
+//                 // Log::debug("Event ***********************");
 //                 event = epoll.getEvent(i);
-//                 Log::debug("*****************************");
+//                 // Log::debug("*****************************");
 //                 bool isServerSocket = false;
 
 //                 for (size_t j = 0; j < fd_sockets.size(); ++j)
@@ -1124,9 +1124,9 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
 
 //             for (int i = 0; i < eventCount && !signalReceived; ++i) 
 //             {
-//                 Log::debug("Event ***********************");
+//                 // Log::debug("Event ***********************");
 //                 event = epoll.getEvent(i);
-//                 Log::debug("*****************************");
+//                 // Log::debug("*****************************");
 //                 bool isServerSocket = false;
 
 //                 for (size_t j = 0; j < fd_sockets.size(); ++j)

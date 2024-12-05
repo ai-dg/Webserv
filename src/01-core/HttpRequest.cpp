@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:43:46 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:53:14 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ void HttpRequest::setMethod(std::string req)
         this->method = req.substr(0, spacePos);
     else
         this->method = "";
+
+    
+    this->method = cleanString(this->method);
+    
 }
 
 void HttpRequest::setHeaders(std::string req)
@@ -172,19 +176,19 @@ void HttpRequest::setBody(std::string req)
 {
     // std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
     // Log::output("./sessions/test.txt") << req << std::endl;
-    std::string body_temp;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
         body = req.substr(bodyPos + 4);
     else
         body = "";
+
+
     if (getHeader("Transfer-Encoding") == "chunked")
     {
-        body_temp = mergeChunks(body);
-        body.erase();
-        body = body_temp;
+        body = mergeChunks(body);
         
     }
+    
 
     std::map<std::string, std::string>::iterator it = headers.begin();
     for (; it != headers.end(); ++it)
@@ -321,6 +325,7 @@ void HttpRequest::parseRequest(std::string req)
     setRoute();
     setAskedFile();
     setHeaders(req);
+    
     
     if (this->method == "POST" || this->method == "DELETE")
     {

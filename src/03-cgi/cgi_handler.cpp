@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:59:06 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 00:40:30 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:59:17 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,7 +204,8 @@ Cgi_handler::~Cgi_handler()
  */
 
 
-void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) {
+void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client) 
+{
     pid_t pid;
     Pipe pipe_in("./sessions/pipe_infile");
     Pipe pipe_out("./sessions/pipe_outfile");
@@ -225,7 +226,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         return;
     }
 
-    if (pid == 0) {  
+    if (pid == 0) 
+    {  
         // std::cerr << "Child process started." << std::endl;
 
         ::lseek(pipe_in.getFd(), 0, SEEK_SET);
@@ -261,24 +263,18 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             if (!route)
                 std::cerr << "unkown route" << std::endl;
             if (!route->exe().empty())
-            {
-               if (resolvePath(route->exe()))        
+            {   
+                if (resolvePath(route->exe()))        
                     path.assign(resolvePath(route->exe()));
             }
             if (resolvePath(scriptPathTemp))           
                 exe_context.assign(resolvePath(scriptPathTemp));
+            else
+                exe_context.clear();
             scriptPathTemp.clear();            
         }
-/*
-        if (scriptPathTemp.find(".bla") != std::string::npos) {
-            std::cerr << "scriptPathTemp : " << scriptPathTemp << std::endl;
-           // path = "/home/dagudelo/Parcours/Webserv/tests/ubuntu_cgi_tester";
-            std::string path2 = "./www/test_site/cgi-bin/ubuntu_cgi_tester";
-            
-            //path.assign(resolvePath(path2));
-            exe_context.assign(resolvePath(scriptPathTemp));
-            scriptPathTemp.clear();
-        }*/
+        
+
 
         char *const argv[] = {
             const_cast<char *>(path.c_str()),
@@ -286,12 +282,16 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             const_cast<char *>(scriptPathTemp.c_str()),
             NULL};
 
+        
+
         // std::cerr << "Child: Executing script with execve..." << std::endl;
         if (execve(argv[0], argv, environment.data()) == -1) {
             perror("execve");
             exit(1);
         }
-    } else {  
+    } 
+    else 
+    {  
         // std::cerr << "Parent process started." << std::endl;
 
         
@@ -322,13 +322,17 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             return;
         }
 
-        if (WIFEXITED(status)) {
-            std::cerr << "Child exited with status: " << WEXITSTATUS(status) << std::endl;
-        } else if (WIFSIGNALED(status)) {
-            std::cerr << "Child terminated by signal: " << WTERMSIG(status) << std::endl;
-        } else {
-            std::cerr << "Child ended abnormally." << std::endl;
-        }
+        // if (WIFEXITED(status)) {
+        //     std::cerr << "Child exited with status: " << WEXITSTATUS(status) << std::endl;
+        // } 
+        // else if (WIFSIGNALED(status)) 
+        // {
+        //     std::cerr << "Child terminated by signal: " << WTERMSIG(status) << std::endl;
+        // } 
+        // else 
+        // {
+        //     std::cerr << "Child ended abnormally." << std::endl;
+        // }
 
         char buffer[4096];
         ssize_t bytesRead;
@@ -341,7 +345,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         std::string bufferAccumulator2;
 
         if (scriptPath.find(".bla") != std::string::npos) {
-            // std::cerr << "Reading from bla file..." << std::endl;
+            // std::cerr << BLUE << "Reading from bla file..." << RESET << std::endl;
 
             std::ostringstream headers;
             headers << "HTTP/1.1 200 OK\r\n"
@@ -358,16 +362,20 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
 
             while (offset < headersStr.size()) {
                 bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
+
                 if (bytesWritten == -1) {
-                    if (errno == EAGAIN || errno == EWOULDBLOCK) {
-                        ::usleep(1000);
-                        continue;
-                    }
-                    ::perror("write to client");
+                    
+                    ::usleep(1000); 
+                    continue;
+                } else if (bytesWritten == 0) {
+                    
+                    ::perror("write returned 0 (unexpected)");
                     return;
                 }
-                offset += bytesWritten;
+
+                offset += bytesWritten; 
             }
+
 
             bool headersSkipped = false;
             bufferAccumulator2.append(headersStr);
@@ -396,16 +404,20 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
                 offset = 0;
                 while (offset < remainingBuffer.size()) {
                     bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
+
                     if (bytesWritten == -1) {
-                        if (errno == EAGAIN || errno == EWOULDBLOCK) {
-                            ::usleep(1000);
-                            continue;
-                        }
-                        perror("write to client");
+                        
+                        ::usleep(1000); 
+                        continue;
+                    } else if (bytesWritten == 0) {
+                        
+                        ::perror("write returned 0 (unexpected)");
                         break;
                     }
-                    offset += bytesWritten;
+
+                    offset += bytesWritten; 
                 }
+
                 bufferAccumulator2 += remainingBuffer; 
                 remainingBuffer.clear();               
             }
@@ -414,7 +426,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
                 perror("read");
             }
 
-            if (data.size() >= 100000 && data.size() <= 200000)
+            if (data.size() >= 50000 && data.size() <= 200000)
             {
                 
                 std::ofstream debugFile("./sessions/debug_output.txt", std::ios::out | std::ios::trunc);
@@ -439,18 +451,21 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
                 ssize_t bytesWritten;
 
                 while (offset < (size_t)bytesRead) {
-                    bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
-                    if (bytesWritten == -1) {
-                        if (errno == EAGAIN || errno == EWOULDBLOCK) {
-                            
-                            usleep(1000);
-                            continue;
-                        }
-                        perror("write to client");
-                        break;
-                    }
-                    offset += bytesWritten;
+                bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
+
+                if (bytesWritten == -1) {
+                    
+                    ::usleep(1000); 
+                    continue;
+                } else if (bytesWritten == 0) {
+                    
+                    ::perror("write returned 0 (unexpected)");
+                    break;
                 }
+
+                offset += bytesWritten; 
+            }
+
             }
 
             if (bytesRead == -1) {

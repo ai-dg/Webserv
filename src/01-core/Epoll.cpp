@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:02:26 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,13 @@ int Epoll::getFd(void)
 // {
 // 	int	eventCount;
 
-// 	Log::debug("Starting epoll_wait...");
+// 	// Log::debug("Starting epoll_wait...");
 // 	eventCount = epoll_wait(epoll_fd, events, maxEvents, timeout);
 // 	if (eventCount == -1)
 // 	{
 // 		if (errno == EINTR)
 // 		{
-// 			Log::debug("epoll_wait interrupted by a signal");
+// 			// Log::debug("epoll_wait interrupted by a signal");
 // 			return (0);
 // 		}
 // 		else
@@ -93,7 +93,7 @@ int Epoll::getFd(void)
 // 	}
 // 	std::ostringstream successMsg;
 // 	successMsg << "epoll_wait returned with " << eventCount << " events";
-// 	Log::debug(successMsg.str());
+// 	// Log::debug(successMsg.str());
 // 	return (eventCount);
 // }
 
@@ -102,13 +102,13 @@ int Epoll::wait(int timeout)
 {
     int eventCount;
 
-    Log::debug("Starting epoll_wait...");
+    // Log::debug("Starting epoll_wait...");
     eventCount = epoll_wait(epoll_fd, events, maxEvents, timeout);
     if (eventCount == -1)
     {
         if (errno == EINTR)
         {
-            Log::debug("epoll_wait interrupted by a signal");
+            // Log::debug("epoll_wait interrupted by a signal");
             return (0);
         }
         else
@@ -123,7 +123,7 @@ int Epoll::wait(int timeout)
     // Log du nombre d'événements détectés
     std::ostringstream successMsg;
     successMsg << "epoll_wait returned with " << eventCount << " events";
-    Log::debug(successMsg.str());
+    // Log::debug(successMsg.str());
 
     // Ajout des détails pour chaque événement
     for (int i = 0; i < eventCount; ++i)
@@ -149,7 +149,7 @@ int Epoll::wait(int timeout)
             eventMsg << " [EPOLLRDHUP]";
         }
 
-        Log::debug(eventMsg.str());
+        // Log::debug(eventMsg.str());
     }
 
     return (eventCount);
@@ -178,11 +178,11 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 	
 	std::ostringstream logMsg;
 	logMsg << "File descriptor " << fd << " added to epoll with events: " << eventsMask;
-	Log::debug(logMsg.str());
+	// Log::debug(logMsg.str());
 	
 	
 
-	Log::debug("File descriptor added to epoll successfully");
+	// Log::debug("File descriptor added to epoll successfully");
 	return (true);
 }
 
@@ -196,7 +196,7 @@ bool Epoll::removeFd(int fd)
 	if (close(fd) == -1)
 		Log::error("Failed to close file descriptor");
 	else
-		Log::debug("File descriptor closed successfully");
+		// Log::debug("File descriptor closed successfully");
 	Epoll::timers.erase(fd);
 	return (true);
 }

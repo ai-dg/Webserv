@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:01:51 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:51:15 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,3 +210,14 @@ size_t getFormatedSizeFromString(std::string size) {
 
 
 
+std::string cleanString(const std::string& str) 
+{
+    std::string cleaned;
+    for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) 
+    {
+        if (!std::isspace(static_cast<unsigned char>(*it))) {
+            cleaned += *it;
+        }
+    }
+    return cleaned;
+}

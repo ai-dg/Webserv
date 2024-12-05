@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   files.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/05 00:29:21 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:54:11 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -302,6 +302,6 @@ char *resolvePath(std::string path)
     char* resolvedPath;
     resolvedPath = realpath(path.c_str(), NULL);
     if (!resolvedPath)  
-        std::cerr << "fail resolving Path" << std::endl;
+        std::cerr << "Fail resolving Path " << path << std::endl;
     return resolvedPath;
 }
