@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 19:15:17 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 21:53:59 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,10 +112,11 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
     std::string addToRoute = addSub(route, uri);
-    size_t sizeMaxInLocation;
+    size_t sizeMaxInLocation = 100000 * 1024;
     if (Route)
         sizeMaxInLocation = Route->max_body_size();
-    size_t bodySize = req.getBody().size() + 1.024;
+    size_t bodySize = 0;
+    bodySize = req.getBody().size() + 1.024;
     if (bodySize >= sizeMaxInLocation)
     {
         setRedirection(413);

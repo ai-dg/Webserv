@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:10:14 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 20:03:20 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,11 @@ Pipe::Pipe(std::string const& path) : path(path)
 
 Pipe::~Pipe() 
 {
-    closeFd();
+    if (fd != -1)
+    {
+        closeFd();
+        fd = -1;
+    }
     ::remove(path.c_str());
 }
 
@@ -36,7 +40,11 @@ int Pipe::getFd() const
 
 void Pipe::closeFd() 
 {
-    ::close(fd);
+    if (fd != -1)
+    {
+       ::close(fd);
+       fd = -1;  
+    }
 }
 
 std::string Pipe::getPath() 

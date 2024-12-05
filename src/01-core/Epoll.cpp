@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:15:21 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 21:50:24 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,33 @@ Epoll &Epoll::operator=(const Epoll &src)
 
 Epoll::~Epoll()
 {
-	close(epoll_fd);
-	timers.clear();
-	delete[] events;
-	Log::cleanup();
+    if (epoll_fd != -1)
+    {
+        
+        std::map<int, std::time_t>::iterator it;
+        for (it = timers.begin(); it != timers.end(); ++it)
+        {
+            int fd = it->first;
+            if (fd != -1)
+            {
+                Log::print_final_log("Closing connections and fd", "ID:", fd);
+                ::close(fd); 
+            }
+        }
+        timers.clear(); 
+
+        
+        ::close(epoll_fd);
+        epoll_fd = -1;
+    }
+
+    
+    delete[] events;
+
+    
+    Log::cleanup();
 }
+
 
 /**
  * @brief Getters
@@ -104,22 +126,22 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 		Log::error("Failed to add file descriptor to epoll");
 		return (false);
 	}
-	std::ostringstream logMsg;
-	logMsg << "File descriptor " << fd << " added to epoll with events: " << eventsMask;
 	return (true);
 }
 
-bool Epoll::removeFd(int fd)
+bool Epoll::removeFd(int& fd)
 {
 	if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1)
 	{
-		Log::error("Failed to remove file descriptor from epoll");
+		Log::print_final_log("epoll_ctl: removeFd", "FD:", fd);
 		return (false);
 	}
-	if (close(fd) == -1)
-		Log::error("Failed to close file descriptor");
-	else
-	Epoll::timers.erase(fd);
+	if (fd != -1)
+	{
+		Epoll::timers.erase(fd);
+		::close(fd);
+		fd = -1;
+	}
 	return (true);
 }
 
@@ -147,7 +169,8 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 				Log::error("epoll_ctl: removeFd");
 				return (false);
 			}
-			close(it->first);
+			if (it->first != -1)
+				::close(it->first);
 			Epoll::timers.erase(it++);
 		}
 		else

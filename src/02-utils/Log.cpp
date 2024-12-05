@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 04:11:05 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 20:42:15 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ void Log::purgeLog(std::string filename)
     std::ofstream file;
     file.open(Log::files[filename].c_str());
     file << "";
+    file.close();
 }
 
 Log::LogStream& Log::output(const std::string& path)

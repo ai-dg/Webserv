@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:28 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:29:46 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 20:07:21 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,19 +152,31 @@ int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& list
         if (setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int)) < 0) 
         {
             Log::error("setsockopt failed");
-            ::close(fd_socket);
+            if (fd_socket != -1)
+            {
+                ::close(fd_socket);
+                fd_socket = -1;
+            }
             return 1;
         }        
         addr.sin_port = htons(listPorts[i]);        
         if (bind(fd_socket, (struct sockaddr*)&addr, sizeof(addr)) < 0) 
         {
             Log::error("binding failed");
-            ::close(fd_socket);
+            if (fd_socket != -1)
+            {
+                ::close(fd_socket);
+                fd_socket = -1;
+            }
             return 1;
         }       
         if (listen(fd_socket, 128) < 0) 
         {
-            ::close(fd_socket);
+            if (fd_socket != -1)
+            {
+                ::close(fd_socket);
+                fd_socket = -1;
+            }
             return 1;
         }
     }

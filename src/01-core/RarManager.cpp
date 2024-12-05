@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 18:33:14 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 21:29:32 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         struct epoll_event event;
         struct sockaddr_in client_addr;
         socklen_t client_addr_len;
+        int eventCount;
         
         for (size_t i = 0; i < fd_sockets.size(); ++i)
         {
@@ -133,7 +134,7 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
         epoll.addFd(signalPipeFd[0], EPOLLIN);
         while (!signalReceived)
         {
-            int eventCount = epoll.wait(-1);
+            eventCount = epoll.wait(-1);
             if (eventCount == -1)
             {
                 Log::error("Erreur lors de epoll_wait");
@@ -179,7 +180,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     {
                         Log::print_final_log("Connection closed by client", "FD:", fd_client);
                         epoll.removeFd(fd_client);
-                        ::close(fd_client);
                         requestMap.erase(fd_client);
                         continue;
                     }
@@ -187,7 +187,6 @@ void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<S
                     {
                         Log::print_final_log("Error in recv", "FD: ", strerror(errno));
                         epoll.removeFd(fd_client);
-                        ::close(fd_client);
                         requestMap.erase(fd_client);
                         continue;
                     }

@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:11 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 05:10:14 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 21:39:24 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,16 @@ int main(int ac, char **av)
 
         if (!checkFormatOfConfig(path))
         {
-            ::close(signalPipeFd[0]);
-            ::close(signalPipeFd[1]);
+            if (signalPipeFd[0] != -1)
+            {
+                ::close(signalPipeFd[0]);
+                signalPipeFd[0] = -1;
+            }
+            if (signalPipeFd[1] != -1)
+            {
+                ::close(signalPipeFd[1]);
+                signalPipeFd[1] = -1;
+            }
             throw PathNotCorrectFormat();
         };
         /**
@@ -58,15 +66,28 @@ int main(int ac, char **av)
          */
         request_and_response_fd_manager(fd_sockets, Servers, sessionManager);
 
-        for (size_t i = 0; i < fd_sockets.size() ; ++i)
-        {
-            ::close(fd_sockets[i]);
-        }
+        // for (size_t i = 0; i < fd_sockets.size() ; ++i)
+        // {
+        //     if (fd_sockets[i] != -1)
+        //     {
+        //         ::close(fd_sockets[i]);
+        //         fd_sockets[i] = -1;
+        //     }
+        // }
         Log::cleanup();
         clearMemory(Configs);
         clearArray(Servers);
-        ::close(signalPipeFd[0]);
-        ::close(signalPipeFd[1]);
+        // if (signalPipeFd[0] != -1)
+        // {
+        //     ::close(signalPipeFd[0]);
+        //     signalPipeFd[0] = -1;
+        // }
+        if (signalPipeFd[1] != -1)
+        {
+            ::close(signalPipeFd[1]);
+            signalPipeFd[1] = -1;
+        }
+        Log::print_final_log("Clean", "exit");
     }
     catch (SignalException const& e)
     {
