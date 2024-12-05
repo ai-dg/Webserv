@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   format.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ls <ls@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:10:05 by ls                #+#    #+#             */
-/*   Updated: 2024/09/08 18:33:05 by ls               ###   ########.fr       */
+/*   Updated: 2024/12/05 05:31:30 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 std::string numberToString(int number) {
     std::ostringstream oss;
-    oss << number;  // Convertir le nombre en chaîne
+    oss << number;
     return oss.str();
 }
 

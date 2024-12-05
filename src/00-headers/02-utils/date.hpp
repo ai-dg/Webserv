@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 21:38:21 by ls                #+#    #+#             */
-/*   Updated: 2024/11/21 20:26:10 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 03:29:06 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,4 @@
 #include "../00-shared/includes.hpp"
 
 std::string get_current_date();
+std::string get_current_time();

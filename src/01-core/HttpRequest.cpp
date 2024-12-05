@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 01:53:14 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:18:58 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,53 +45,13 @@ void HttpRequest::setHeaders(std::string req)
     }
 }
 
-
-
-// std::string HttpRequest::mergeChunks(std::string const& data) {
-//     std::string merged;
-//     std::istringstream stream(data);
-//     std::string line;
-
-//     while (std::getline(stream, line)) {
-//         // Supprimer le '\r' à la fin de chaque ligne (s'il existe)
-//         if (!line.empty() && line[line.size() - 1] == '\r') {
-//             line.erase(line.size() - 1); // Supprimer le dernier caractère
-//         }
-
-//         // Convertir la taille du chunk (en hexadécimal) à un entier
-//         size_t chunkSize = 0;
-//         std::stringstream chunkSizeStream(line);
-//         chunkSizeStream >> std::hex >> chunkSize;
-
-//         if (chunkSize == 0) {
-//             break; // Fin des chunks
-//         }
-
-//         // Lire les données du chunk en fonction de `chunkSize`
-//         std::string chunk(chunkSize, '\0');
-//         stream.read(&chunk[0], chunkSize);
-//         merged += chunk;
-
-//         // Vérifier qu'il reste au moins deux caractères `\r\n` à ignorer
-//         if (stream.peek() == '\r') {
-//             stream.get(); // Ignorer '\r'
-//         }
-//         if (stream.peek() == '\n') {
-//             stream.get(); // Ignorer '\n'
-//         }
-//     }
-
-//     return merged;
-// }
-
-std::string cleanMergedData(const std::string& merged) {
+std::string cleanMergedData(const std::string& merged) 
+{
     size_t end_pos = merged.find_last_not_of('\n');
-    if (end_pos != std::string::npos) {
+    if (end_pos != std::string::npos) 
         return merged.substr(0, end_pos + 1);
-    }
     return merged;
 }
-
 
 std::string HttpRequest::mergeChunks(std::string data) 
 {
@@ -99,188 +59,86 @@ std::string HttpRequest::mergeChunks(std::string data)
     std::stringstream stream(data);
     std::string line;
 
-    while (std::getline(stream, line)) {
-        if (!line.empty() && line[line.size() - 1] == '\r') {
+    while (std::getline(stream, line)) 
+    {
+        if (!line.empty() && line[line.size() - 1] == '\r') 
             line.erase(line.size() - 1);
-        }
-
-
         size_t chunk_size = 0;
         std::stringstream chunk_size_stream(line);
         chunk_size_stream >> std::hex >> chunk_size;
-
-        if (chunk_size == 0) {
-            // std::cout << "DEBUG: End of chunks detected (chunk size 0)." << std::endl;
+        if (chunk_size == 0)
             break;
-        }
-
-        if (chunk_size_stream.fail()) {
+        if (chunk_size_stream.fail()) 
             throw std::runtime_error("Invalid chunk size: " + line);
-        }
-
-        // std::cout << "DEBUG: Parsed chunk size: " << chunk_size << " bytes" << std::endl;
-
-
         std::string chunk_data;
         chunk_data.resize(chunk_size);
         stream.read(&chunk_data[0], chunk_size);
-
         merged += chunk_data;
-
-        // std::cout << "DEBUG: Chunk data: \"" << chunk_data.substr(0, 100) << "...\" (truncated for display)" << std::endl;
-
         std::getline(stream, line);
     }
-
     return cleanMergedData(merged);
 }
 
-
-
-// std::string HttpRequest::mergeChunks(std::string data)
-// {
-//     std::string merged;
-//     //std::cerr << BOLD_BLUE << data << RESET << std::endl;
-//     while(data.size())
-//     {
-//         size_t crlf_pos = data.find("\r\n");
-//         data.erase(0, crlf_pos + 2);
-//         crlf_pos = data.find("\r\n");
-//         merged += data.substr(0, crlf_pos);
-//         data.erase(0, crlf_pos + 2);
-//     }
-//     //std::cerr << BOLD_YELLOW << merged <<std::endl <<RESET;
-//     return merged;
-// }
-
 std::string encodingSecretCode(std::string data, const std::string& value) 
 {
-    if (value.empty()) {
+    if (value.empty()) 
+    {
         std::cerr << "Error: Value for encoding is empty. No transformation applied." << std::endl;
         return data;
     }
-
     char replacementChar = value[0]; 
-    // std::cerr << "Encoding with value: " << replacementChar << std::endl;
-
-    
-    for (size_t i = 0; i < data.size(); ++i) {
+    for (size_t i = 0; i < data.size(); ++i) 
         data[i] = replacementChar;
-    }
-
     return data;
 }
 
-
 void HttpRequest::setBody(std::string req)
 {
-    // std::cerr << YELLOW << "REQ SIZE BODY "  << req.size() << RESET << std::endl;
-    // Log::output("./sessions/test.txt") << req << std::endl;
     size_t bodyPos = req.find("\r\n\r\n");
     if (bodyPos != std::string::npos)
         body = req.substr(bodyPos + 4);
     else
         body = "";
-
-
     if (getHeader("Transfer-Encoding") == "chunked")
-    {
         body = mergeChunks(body);
-        
-    }
-    
-
     std::map<std::string, std::string>::iterator it = headers.begin();
     for (; it != headers.end(); ++it)
-    {
         if (it->first.find("X-Secret") != std::string::npos)
-        {
             body = encodingSecretCode(body, it->second);
-        }
-    }
-    
-
-    std::string filename = "./sessions/tmp.d";
-    std::ofstream file(filename.c_str());
-    file << body;
-    file.close();
-    
-    
-    // std::cerr << YELLOW << "SIZE BODY "  << req.size() << RESET << std::endl;
-    // Log::output("./sessions/test2.txt") << body << std::endl;
-     // Log::output("./sessions/HttpRequest.txt") << "-------Parsed Body: " << body << std::endl << "-------end parsed body" << std::endl;
-    // std::cerr << YELLOW << "Yes it's chunked" << RESET << std::endl;
 }
-
-// void HttpRequest::setRoute()
-// {   
-//     size_t firstSlashPos = URI.find_first_of('/'); 
-//     size_t lastSlashPos = URI.find_last_of('/');
-//     size_t lastDotPos = URI.find_last_of('.');
-
-//    /* if (lastDotPos != std::string::npos && lastDotPos > lastSlashPos)
-//     {*/
-//     if (lastSlashPos == 0 && URI.size() == 1)
-//         route = "/"; 
-//     else
-//     {
-//         if (firstSlashPos == lastSlashPos)
-//             route = URI;
-//         else
-//             route = URI.substr(0, getNextof(URI,1,'/') + 1); 
-//     }
-        
-//     if (lastDotPos == std::string::npos && URI[URI.size()-1] != '/')
-//         route += "/";
-//     route = removeDuplicateSlashes(route);
-//     /*}*/
-//     /*else
-//     { 
-//         if (URI[URI.size() - 1] != '/')
-//             route = URI + "/"; 
-//         else
-//             route = URI; 
-//     }*/
-//     // std::cerr << BOLD_VIOLET << "URI : " << URI << " ------------- extracted route : "<< route << std::endl;
-// }
 
 void HttpRequest::setRoute()
 {
-    
-    if (URI.empty()) {
+    if (URI.empty()) 
+    {
         route = "/";
         return;
     }
-
     size_t firstSlashPos = URI.find_first_of('/');
     size_t lastSlashPos = URI.find_last_of('/');
     size_t lastDotPos = URI.find_last_of('.');
     if ((lastSlashPos == 0 && URI.size() == 1) || (lastSlashPos == 0 && lastDotPos > lastSlashPos && lastDotPos != std::string::npos))
-    {
         route = "/"; 
-    }
-    else {
-        if (firstSlashPos == lastSlashPos) {
-            
+    else 
+    {
+        if (firstSlashPos == lastSlashPos) 
             route = URI;
-        } else {
-            
+        else 
+        {
             size_t nextSlashPos = getNextof(URI, 1, '/');
-            if (nextSlashPos != std::string::npos) {
+            if (nextSlashPos != std::string::npos) 
+            {
                 route = URI.substr(0, nextSlashPos + 1);
-            } else {
-                route = URI; 
-            }
+            } 
+            else 
+                route = URI;
         }
-    }
-
-    
+    } 
     if (lastDotPos == std::string::npos && !URI.empty() && URI[URI.size() - 1] != '/') {
         route += "/";
     }    
     route = removeDuplicateSlashes(route);
 }
-
 
 void HttpRequest::setAskedFile()
 {
@@ -312,7 +170,6 @@ void HttpRequest::setURI(std::string req)
         return;
     }
     this->URI = req.substr(uriStartPos, uriEndPos - uriStartPos);
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest::setURI" << std::endl << "-----------Extracted URI: " << BLUE << this->URI << RESET << std::endl;
 }
 
 /**
@@ -341,9 +198,7 @@ void HttpRequest::addToHeaders(std::string line)
         std::string key = line.substr(0, pos);
         std::string value = line.substr(pos + 2);
         this->headers[key] = value;
-    }/*
-    else
-        this->setBody(line);*/
+    }
 }
 
 /**
@@ -351,14 +206,11 @@ void HttpRequest::addToHeaders(std::string line)
  */
 HttpRequest::HttpRequest(std::string req)
 {
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
-    // Log::output("./sessions/HttpRequest.txt") << std::endl << BOLD_YELLOW << req << RESET << std::endl;
     parseRequest(req);
 }
 
 HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
 {
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
     parseRequest(req);
     std::vector<Server *>::iterator it;
     for (it = Servers.begin(); it != Servers.end(); ++it)
@@ -366,21 +218,16 @@ HttpRequest::HttpRequest(std::string req, std::vector<Server *> Servers)
         if ((*it)->foundHostName(headers["Host"]))
             server = (*it);
     }
-    // Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::HttpRequest(std::string req, Server *server)
 {
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object created" << std::endl;
     this->server = server;
-    // Log::output("./sessions/HttpRequest.txt") << std::endl << "--START--" << BOLD_YELLOW << req << RESET << "--END--" << std::endl;
     parseRequest(req);
-    // Log::output("./sessions/HttpRequest.txt") << "Test map : " << this->headers["Connection"] << std::endl;
 }
 
 HttpRequest::HttpRequest(HttpRequest const& src) : headers(src.headers), method(src.method), host(src.host), URI(src.URI), route(src.route), askedFile(src.askedFile), body(src.body), server(src.server)
 {
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object copied" << std::endl;
 }
 
 HttpRequest& HttpRequest::operator=(HttpRequest const& src)
@@ -396,16 +243,13 @@ HttpRequest& HttpRequest::operator=(HttpRequest const& src)
         this->body = src.body;
         this->server = src.server;
     }
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object assigned" << std::endl;
     return *this;
 }
 
 HttpRequest::~HttpRequest()
 {    
-    // Log::output("./sessions/HttpRequest.txt") << "HttpRequest class object destroyed" << std::endl;
     Log::cleanup();
 }
-
 
 /**
  * @brief Getters
@@ -423,15 +267,12 @@ std::string HttpRequest::getRequestedFile() const
 std::string HttpRequest::getQueryString() const
 {
     size_t pos = this->URI.find("?");
-    // Log::output("./sessions/HttpRequest.txt") << "-----------URI: " << this->URI << std::endl;
     if (pos != std::string::npos && pos + 1 < this->URI.size())
     {
         std::string queryString = this->URI.substr(pos + 1);
-        // Log::output("./sessions/HttpRequest.txt") << "------------Extracted Query String: " << queryString << std::endl; 
         return queryString;
     }
     else
-        // Log::output("./sessions/HttpRequest.txt") << "-----------No query string found in URI." << std::endl;
     return "";
 }
 
@@ -470,10 +311,8 @@ std::string HttpRequest::getMethod() const
 std::string HttpRequest::getBody() const
 {
 
-    // Log::output("./sessions/HttpRequest.txt") << BOLD_WHITE << "METHOD / " << method << RESET << std::endl;
     if (method == "POST" || method == "DELETE" || method == "PUT") 
     {
-        // std::cerr << "getBody : " << body << std::endl;
         return body;
     }
     else if (method == "GET") 
@@ -509,10 +348,8 @@ std::map<std::string, std::string> HttpRequest::getHeaders() const
 bool HttpRequest::hasFileSpecialRoute(std::string filePath) const
 {
     std::string extension = getExtension(filePath);
-   // std::cerr << BLUE << filePath << "-----------" << extension << RESET << std::endl;
     if (server->getRoute(extension) != NULL)
     {
-       // std::cerr << " yeah you did it baby !!!!!! " << std::endl;
         return true;
     }
     return false;
@@ -561,9 +398,6 @@ bool HttpRequest::isStatic() const
 
 bool HttpRequest::isValidBodySize() const
 {
-    // // Log::output("./sessions/HttpRequest.txt") << "Body max size: " << server->getMaxBodySize() << std::endl;
-    // // Log::output("./sessions/HttpRequest.txt") << "Body size: " << body.size() << std::endl;
-    // // Log::output("./sessions/HttpRequest.txt") << "Body: " << body << std::endl;
     size_t size = body.size();
     if (size <= server->getMaxBodySize())
         return true;

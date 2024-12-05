@@ -16,8 +16,8 @@ logging.basicConfig(
 
 logging.debug("Script started.")
 
-image_upload_path = "./upload"
-default_image_url = "./images/Default.jpg"
+image_upload_path = "./www/projects42/upload/"
+default_image_url = "./www/projects42/images/Default.jpg"
 
 
 request_method = os.getenv("REQUEST_METHOD", "")
@@ -51,6 +51,9 @@ if form and 'image' in form:
 
 template_success_path = "./www/projects42/html/add_success.html"
 template_failure_path = "./www/projects42/html/add_failure.html"
+
+image_url = image_url.replace("./www/projects42", "")
+
 
 try:
     with open(template_success_path, 'r') as file:

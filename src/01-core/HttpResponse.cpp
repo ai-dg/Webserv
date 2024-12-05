@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 01:53:19 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:25:35 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
  */
 void HttpResponse::setMineType(void)
 {
-    // protections et verifications a faires/// tests a faire avec netcat et telnet en envoyant des demandes erronées pour les fichiers
     this->mimeType = checkMimeType(this->filePath);
 }
 
@@ -32,23 +31,15 @@ void HttpResponse::setMineType(void)
  */
 HttpResponse::HttpResponse(const HttpRequest &req)
 {
-    //setResourcePath(req);
     this->req = new HttpRequest(req);
     removeDuplicateSlashes(this->filePath);
     sendBody = true;
     body = "";
     setMineType();
-    // Log::output("./sessions/HttpResponse.txt") << "is valid body size : " << req.isValidBodySize() << std::endl;
-    
-    
-    // if (!req.isValidBodySize())
-    //     setRedirection(413);
-    // Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class created" << std::endl;
 }
 
 HttpResponse::HttpResponse(const HttpResponse &src) : headers(src.headers), mimeType(src.mimeType), filePath(src.filePath), body(src.body), statusCode(src.statusCode)
-{
-    // Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class copied" << std::endl;    
+{  
 }
 
 HttpResponse &HttpResponse::operator=(const HttpResponse &src)
@@ -60,13 +51,11 @@ HttpResponse &HttpResponse::operator=(const HttpResponse &src)
     filePath = src.filePath;
     body = src.body;
     statusCode = src.statusCode;
-    // Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class assigned" << std::endl;
     return *this;
 }
 
 HttpResponse::~HttpResponse()
 {
-    // Log::output("./sessions/HttpResponse.txt") << "HttpResponse object class destroyed" << std::endl;
     delete req;
     Log::cleanup();
 }
@@ -108,7 +97,6 @@ std::string HttpResponse::addSub(std::string route, std::string uri)
 
     if (uri.find(route) != std::string::npos && uri.find(route) == 0)
         sub = uri.substr(route.size(), std::string::npos);
-    // std::cerr << "add sub :::::::::::::::::::::::::::: " << sub << std::endl;
     if (sub.find_last_of("/") != std::string::npos)
         sub = sub.substr(0, sub.find_last_of("/"));
     if (sub.find(".") != std::string::npos)
@@ -117,8 +105,6 @@ std::string HttpResponse::addSub(std::string route, std::string uri)
     
 }
 
-
-////////////////////// new fonctions isValidUri(),bool hasExtension(std::string file);
 void HttpResponse::setResourcePath(const HttpRequest &req)
 {
     std::string uri = req.getURI();
@@ -126,29 +112,18 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     std::string route = req.getRoute();
     Location *Route = req.getRouteConf(route);
     std::string addToRoute = addSub(route, uri);
-    size_t sizeMaxInLocation = Route->max_body_size();
+    size_t sizeMaxInLocation;
+    if (Route)
+        sizeMaxInLocation = Route->max_body_size();
     size_t bodySize = req.getBody().size() + 1.024;
-    // std::cerr << BOLD_WHITE << "Uri debug " << uri << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "Extension debug " << extension << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ filePath debug " << filePath << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ uri debug " << uri << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route " << route << "   " << Route->root() << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SET_RESOURCE_PATH _ route.index() " << route << "   " << Route->findIndex() << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "SizeMax of body : " << sizeMaxInLocation << RESET << std::endl;
-    // std::cerr << BOLD_WHITE << "Size of body : " << bodySize << RESET << std::endl;
-    
-    
-
     if (bodySize >= sizeMaxInLocation)
     {
         setRedirection(413);
         return;
     }
-    
     if (!Route)
     {
         this->filePath = "/" + req.getAskedFile();
-        // std::cerr << BOLD_RED << "NO ROUUUUUUUUTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << RESET << std::endl;
         setRedirection(404);
         return;
     }
@@ -169,16 +144,12 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         Location *altRoute = req.getRouteConf(getExtension(extension));
         if (isAllowedMethod(altRoute, req))
         {
-            this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();
-            // std::cerr << "2 -- setResoursePath -- " << this->filePath << std::endl;            
+            this->filePath = altRoute->root().substr(1, std::string::npos) + req.getAskedFile();           
         }
         else
         {
             if (req.getHeader("User-Agent") == "Go-http-client/1.1")
-            {
-                setStatusCode(204, NO_BODY); //// pffffff
-                // std::cerr << "2 . 405 - "<< req.getHeader("User-Agent") << std::endl;
-            }
+                setStatusCode(204, NO_BODY);
             else
             {
                 addHeader("Allow", altRoute->methods());
@@ -196,8 +167,6 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     {
         Route = req.getRouteConf("/cgi-bin/");
         this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
-        // std::cerr << Route->root().substr(1, std::string::npos) << "   " << req.getAskedFile() << std::endl;
-        // std::cerr << "1 -- setResoursePath -- " << this->filePath << std::endl;
     }
     else
     {
@@ -209,35 +178,22 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
                 return;
             }
             else
-            {
                 this->filePath = Route->root() + "/" + Route->findIndex();
-            //   std::cerr << "4 -- setResoursePath -- " << this->filePath << std::endl;   
-            }
-
         }
         else
         {
-           //////// + addToRoute ///////
             if(req.getAskedFile().find(".") == std::string::npos)
-            {
-                this->filePath = routed + (Route->findIndex()); //// findindex ???????
-                // std::cerr << "3 --- final : this->filePath : " <<filePath << std::endl;
-            }
+                this->filePath = routed + (Route->findIndex());
             else
                 this->filePath = routed  + req.getAskedFile();
-            // std::cerr << "3 -- setResoursePath -- " << this->filePath  << std::endl;   
-            //   std::cerr << get_current_date() << std::endl;
         }
     }
-    
     if(Route->methods().find(req.getMethod()) == std::string::npos)
     {
-        // std::cerr << "NO METHOD MATCH" << std::endl;
         setRedirection(405);
         addHeader("Allow", Route->methods());
         return ;
     }
-    //routed instead of Route->root()
     if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() == 0)
         setBody(getIndexFile("./" + routed + "/"));
     else if (pathIsDir("./" + routed) && Route->autoindex() == "on" && req.getAskedFile().size() > 0)
@@ -246,8 +202,7 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
         this->filePath = routed + "/" + req.getAskedFile();
     }
     filePath = removeDuplicateSlashes(this->filePath);
-    setStatusCode(AUTO);    
-    // Log::output("./sessions/HttpResponse.txt") << BOLD_GREEN << "File path set to: " << this->filePath << RESET << std::endl;
+    setStatusCode(AUTO);
 }
 
 void HttpResponse::setStatusCode(int stat)
@@ -263,7 +218,6 @@ void HttpResponse::setStatusCode(int stat)
     }
     else
         statusCode = stat;
-    // std::cerr << "setStatusCode(1) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setStatusCode(int stat, int body_status)
@@ -280,7 +234,6 @@ void HttpResponse::setStatusCode(int stat, int body_status)
     }
     else
         statusCode = stat;
-    // std::cerr << "setStatusCode(2) : " << this->filePath << file << "  ->  statusCode :" << statusCode <<std::endl;
 }
 
 void HttpResponse::setBody(std::string content)
@@ -311,11 +264,6 @@ std::string HttpResponse::getFilePath() const
 void HttpResponse::addHeader(const std::string &key, const std::string &value)
 {
     headers[key] = value;
-    // Log::output("./sessions/HttpResponse.txt") << "-------------Header added: " << key << " = " << value << std::endl;
-    // Log::output("./sessions/HttpResponse.txt") << "-------------Current headers in response:" << std::endl;
-    for (std::map<std::string, std::string>::const_iterator it = headers.begin(); it != headers.end(); ++it) {
-        // Log::output("./sessions/HttpResponse.txt") << it->first << ": " << it->second << std::endl;
-    }
 }
 
 void HttpResponse::checkRedirection(const HttpRequest &req)
@@ -325,15 +273,10 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 
 int HttpResponse::put(const HttpRequest &req)
 {
-    //// rajouter la verification du maxbody de la route... renvoyer -1 et set payloadtoo large ou autre
     (void) req;
     std::ofstream outfile(&filePath.c_str()[1]);
     if (!outfile)
-    {
-        // std::cerr << "fail creating file";
         return -1;
-    }
-    // std::cerr << BLUE << req.getBody() << RESET << std::endl;
     outfile << req.getBody();
     outfile.close();
     return 1;
@@ -347,28 +290,22 @@ bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 
 void HttpResponse::send(int fd_client)
 {   
-    // std::cerr << "SEND _ filepath debug" << filePath << std::endl;
     std::string resFile;
+    std::string uri = req->getURI();
+    std::string extension = getExtension(uri);
+    
     if (body.size() > 0)
         resFile = body;
     else 
         resFile = getFile(this->filePath);
-        
     if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && sendBody && !req->getRouteConf(req->getRoute()))
     {
-        // std::cerr << RED << "404 NOT FOUND" << RESET << std::endl;
         this->statusCode = 404;
         resFile = getFile("./www/error_pages/404.html");
     }
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();
-    // Log::output("./sessions/HttpResponse.txt") << "---------- res by line ----------" << std::endl;
-    // std::istringstream ss(res);
-    // std::string line;
-    // while (std::getline(ss, line)) 
-        // Log::output("./sessions/HttpResponse.txt") << line << std::endl;
-    // Log::output("./sessions/HttpResponse.txt") << "---------------------------------" << std::endl;
-    if (sendBody)
+    if (sendBody && extension.empty())
         res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n";           
     res += "Connection: keep-alive\r\n";
     res += "Date: " + get_current_date() + CRLF;
@@ -379,17 +316,6 @@ void HttpResponse::send(int fd_client)
     } 
     else
         res += CRLF;
-    //std::cerr << RED << "&" << res << "&" << RESET <<std::endl;
     write(fd_client, res.c_str(), res.size());
-
-    Log::output("./sessions/fd_client.txt") << res << std::endl;
-    std::ofstream file("./sessions/fd_client.txt");
-    if (file.is_open()) 
-    {
-        file << res;
-        file.close();
-    } 
-    // else 
-    //     // Log::output("./logs/error.log") << "Erreur : impossible d'ouvrir le fichier ../sessions/fd_client.txt" << std::endl;
-    // Log::output("./sessions/HttpResponse.txt") << RED << "\nResponse sent with status: " << this->statusCode << RESET << std::endl;
+    Log::print_final_log("Response sent with status: ", this->statusCode, "FD:", fd_client);
 }

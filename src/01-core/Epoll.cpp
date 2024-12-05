@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 01:02:26 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:15:21 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
 		exit(EXIT_FAILURE);
 	}
 	events = new epoll_event[maxEvents];
-	// Log::output("./sessions/epoll.log") << "Epoll class object created" << std::endl;
 }
 
 Epoll::Epoll(const Epoll &src) : epoll_fd(src.epoll_fd),
 	maxEvents(src.maxEvents), events(src.events)
 {
 	timers = src.timers;
-	// Log::output("./sessions/epoll.log") << "Epoll class object copied" << std::endl;
 }
 
 Epoll &Epoll::operator=(const Epoll &src)
@@ -46,7 +44,6 @@ Epoll &Epoll::operator=(const Epoll &src)
 	maxEvents = src.maxEvents;
 	events = src.events;
 	timers = src.timers;
-	// Log::output("./sessions/epoll.log") << "Epoll class object assigned" << std::endl;
 	return (*this);
 }
 
@@ -55,7 +52,6 @@ Epoll::~Epoll()
 	close(epoll_fd);
 	timers.clear();
 	delete[] events;
-	// Log::output("./sessions/epoll.log") << "Epoll class object destroyed" << std::endl;
 	Log::cleanup();
 }
 
@@ -70,47 +66,15 @@ int Epoll::getFd(void)
 /**
  * @brief Epoll functions
  */
-// int Epoll::wait(int timeout)
-// {
-// 	int	eventCount;
-
-// 	// Log::debug("Starting epoll_wait...");
-// 	eventCount = epoll_wait(epoll_fd, events, maxEvents, timeout);
-// 	if (eventCount == -1)
-// 	{
-// 		if (errno == EINTR)
-// 		{
-// 			// Log::debug("epoll_wait interrupted by a signal");
-// 			return (0);
-// 		}
-// 		else
-// 		{
-// 			std::ostringstream errorMsg;
-// 			errorMsg << "epoll_wait failed with error: " << strerror(errno);
-// 			Log::error(errorMsg.str());
-// 			return (-1);
-// 		}
-// 	}
-// 	std::ostringstream successMsg;
-// 	successMsg << "epoll_wait returned with " << eventCount << " events";
-// 	// Log::debug(successMsg.str());
-// 	return (eventCount);
-// }
-
-
 int Epoll::wait(int timeout)
 {
     int eventCount;
 
-    // Log::debug("Starting epoll_wait...");
     eventCount = epoll_wait(epoll_fd, events, maxEvents, timeout);
     if (eventCount == -1)
     {
         if (errno == EINTR)
-        {
-            // Log::debug("epoll_wait interrupted by a signal");
             return (0);
-        }
         else
         {
             std::ostringstream errorMsg;
@@ -119,43 +83,8 @@ int Epoll::wait(int timeout)
             return (-1);
         }
     }
-
-    // Log du nombre d'événements détectés
-    std::ostringstream successMsg;
-    successMsg << "epoll_wait returned with " << eventCount << " events";
-    // Log::debug(successMsg.str());
-
-    // Ajout des détails pour chaque événement
-    for (int i = 0; i < eventCount; ++i)
-    {
-        std::ostringstream eventMsg;
-        eventMsg << "Event " << i << ": fd=" << events[i].data.fd 
-                 << ", events=" << events[i].events;
-
-        // Détailler les types d'événements
-        if (events[i].events & EPOLLIN) {
-            eventMsg << " [EPOLLIN]";
-        }
-        if (events[i].events & EPOLLOUT) {
-            eventMsg << " [EPOLLOUT]";
-        }
-        if (events[i].events & EPOLLHUP) {
-            eventMsg << " [EPOLLHUP]";
-        }
-        if (events[i].events & EPOLLERR) {
-            eventMsg << " [EPOLLERR]";
-        }
-        if (events[i].events & EPOLLRDHUP) {
-            eventMsg << " [EPOLLRDHUP]";
-        }
-
-        // Log::debug(eventMsg.str());
-    }
-
     return (eventCount);
 }
-
-
 
 bool Epoll::addFd(int fd, uint32_t eventsMask)
 {
@@ -175,14 +104,8 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 		Log::error("Failed to add file descriptor to epoll");
 		return (false);
 	}
-	
 	std::ostringstream logMsg;
 	logMsg << "File descriptor " << fd << " added to epoll with events: " << eventsMask;
-	// Log::debug(logMsg.str());
-	
-	
-
-	// Log::debug("File descriptor added to epoll successfully");
 	return (true);
 }
 
@@ -196,7 +119,6 @@ bool Epoll::removeFd(int fd)
 	if (close(fd) == -1)
 		Log::error("Failed to close file descriptor");
 	else
-		// Log::debug("File descriptor closed successfully");
 	Epoll::timers.erase(fd);
 	return (true);
 }

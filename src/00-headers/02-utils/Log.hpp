@@ -6,12 +6,13 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:09 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:40:12 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 04:26:37 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "../00-shared/includes.hpp"
+#include "../02-utils/date.hpp"
 
 class Log
 {
@@ -88,5 +89,44 @@ class Log
         static void error(std::string error);
         static void debug(std::string debug);
         static void purgeLog(std::string file);
+        template <typename T>
+        static void print_final_log(const std::string& data, const T& value) {
+            std::ostringstream logStream;
+
+            logStream << BLUE << "[" << get_current_time() << "] " << RESET
+                    << GREEN << data << RESET << " "
+                    << YELLOW << value << RESET;
+
+            std::cout << logStream.str() << std::endl;
+        }
+
+        template <typename T, typename U>
+        static void print_final_log(const std::string& data, const T& value1, const U& value2) {
+            std::ostringstream logStream;
+
+            logStream << BLUE << "[" << get_current_time() << "] " << RESET
+                    << GREEN << data << RESET << " "
+                    << YELLOW << value1 << RESET << " "
+                    << VIOLET << value2 << RESET;
+
+            std::cout << logStream.str() << std::endl;
+        }
+
+        template <typename T, typename U, typename Z>
+        static void print_final_log(const std::string& data, const T& value1, const U& value2, const Z& value3) {
+            std::ostringstream logStream;
+
+            logStream << BLUE << "[" << get_current_time() << "] " << RESET
+                    << GREEN << data << RESET << " "
+                    << YELLOW << value1 << RESET << " "
+                    << VIOLET << value2 << RESET << " "
+                    << RED << value3 << RESET;
+
+            std::cout << logStream.str() << std::endl;
+        }
+
+
+
+        
         static LogStream& output(const std::string& path); 
 };

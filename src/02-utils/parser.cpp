@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:32:55 by calbor-p          #+#    #+#             */
-/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:31:39 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void setServer(Conf const& conf, Server *server)
 {
 	(void)conf;
 	(void)server;
-	// Log::output("./sessions/parser.txt") << "parsing server config..." << std::endl;	
-	// Log::output("./sessions/parser.txt") << "done..." << std::endl;
 }
 
 std::string trim(std::string str, char c)

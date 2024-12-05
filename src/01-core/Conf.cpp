@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:49 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:34:19 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:12:18 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,14 @@ Conf::Conf(std::string& path) : path(path)
     configMap.insert(std::make_pair("client_header_timeout", ""));
     setLocations();
     getValuesFromPath();
-    // Log::output("./sessions/Conf.txt") << "path: " << this->path;
     std::ofstream file("./test.txt");
     printConfigs(file);
     checkAndSetDefaultValues();
     file.close();
-    // Log::output("./sessions/Conf.txt") << "Conf class object has been created" << std::endl;
 }
 
 Conf::Conf(Conf const& src) : configMap(src.configMap), routes(src.routes), path(src.path), listenPorts(src.listenPorts)
 {
-    // Log::output("./sessions/Conf.txt") << "Conf class object has been copied" << std::endl;
 }
 
 Conf& Conf::operator=(Conf &conf)
@@ -56,7 +53,6 @@ Conf& Conf::operator=(Conf &conf)
         this->path = conf.path;
         this->listenPorts = conf.listenPorts;
     }
-    // Log::output("./sessions/Conf.txt") << "Conf class object has been assigned" << std::endl;
     return *this;
 }
 
@@ -74,7 +70,6 @@ Conf::~Conf()
     configMap.clear();         
     listenPorts.clear();       
     path.clear();              
-    // Log::output("./sessions/Conf.txt") << "Conf class object has been destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -128,7 +123,6 @@ void Conf::printFile()
 
     if (!confFile.is_open()) 
     {
-        // Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
         return;
     }
     while (std::getline(confFile, line)) 
@@ -148,7 +142,6 @@ void Conf::getValuesFromPath()
 
     if (!confFile.is_open()) 
     {
-        // Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
         return;
     }
     while (std::getline(confFile, line)) 
@@ -191,11 +184,8 @@ void Conf::getValuesFromPath()
                 key.erase(0, key.find_first_not_of(" \t")); 
                 key.erase(key.find_last_not_of(" \t") + 1); 
             }
-            // Log::output("./sessions/Conf.txt") << "Key: " << key << ", Value: " << value << std::endl;
             if (hasKey(key)) 
                 setConf(key, value);
-            else 
-                Log::output("./sessions/Conf.txt") << "Key not found: " << key << std::endl;
         }
     }
     confFile.close();
@@ -227,7 +217,6 @@ void Conf::setLocations()
 
     if (!confFile.is_open()) 
     {
-        // Log::output("./logs/error.log") << "Unable to open configuration file: " << path << std::endl;
         return;
     }
     while (std::getline(confFile, line)) 

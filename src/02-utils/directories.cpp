@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:44 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:40:10 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:30:17 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,14 @@ bool pathIsDir(std::string dirPath)
     return (true);
 }
 
-bool isReadableFile(const std::string& path) {
+bool isReadableFile(const std::string& path) 
+{
     struct stat fileInfo;
-    if (stat(path.c_str(), &fileInfo) == 0) {
-        if (S_ISREG(fileInfo.st_mode) && access(path.c_str(), R_OK) == 0) {
-            return true; // C'est un fichier lisible
+    if (stat(path.c_str(), &fileInfo) == 0) 
+    {
+        if (S_ISREG(fileInfo.st_mode) && access(path.c_str(), R_OK) == 0) 
+        {
+            return true;
         }
     }
     return false;
@@ -51,15 +54,15 @@ bool doesFileExist(std::string filePath)
         return true;    
     switch(errno) {
             case ENOENT: 
-                std::cerr << "Le fichier n'existe pas" << std::endl; 
+                std::cerr << ""; 
                 break;
             case EACCES: 
-                std::cerr << "Permissions insuffisantes" << std::endl; 
+                std::cerr << "";
                 break;
             default: 
-                std::cerr << "Erreur inconnue" << std::endl;
+                std::cerr << "";
     }
         
-    std::cerr << "can't open !!!!!!!!!!!!!!!" << std::endl;
+    std::cerr << "";
     return false; 
 }

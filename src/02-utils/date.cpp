@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   date.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 21:34:06 by ls                #+#    #+#             */
-/*   Updated: 2024/10/24 15:08:20 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 03:28:26 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,18 @@ std::string get_current_date()
         << format_num(ltm->tm_hour) << ":"
         << format_num(ltm->tm_min) << ":"
         << format_num(ltm->tm_sec) << " GMT";
+    std::string date = dm.str();
+    return date;
+}
+
+std::string get_current_time()
+{
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    std::ostringstream dm;
+    dm  << format_num(ltm->tm_hour) << ":"
+        << format_num(ltm->tm_min) << ":"
+        << format_num(ltm->tm_sec);
     std::string date = dm.str();
     return date;
 }

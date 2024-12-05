@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:28 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:33:47 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:29:46 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,6 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
     if (!file.is_open()) 
     {
         Log::error("Unable to open file: " + path);
-        return;
-    }
-    std::ofstream outfile_map("./sessions/server_map.txt");
-    if (!outfile_map.is_open())
-    {
-        Log::error("Unable to open output file: sessions/server_map.txt");
-        return;
-    }
-    std::ofstream outfile("./sessions/server_map_conf.txt");
-    if (!outfile.is_open()) 
-    {
-        Log::error("Unable to open output file: sessions/server_map_conf.txt");
         return;
     }
     while (std::getline(file, line)) 
@@ -77,14 +65,6 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
         else if (in_server_block)
             server_block += line + "\n";
     }
-
-    index = 0;
-    for (std::map<int, std::string>::iterator it = map_conf.begin(); it != map_conf.end(); ++it)
-    {
-        outfile_map << "map #" << index << ": " << std::endl << it->second << std::endl;
-        index++;
-    }
-
     index = 0;   
     for (std::map<int, std::string>::iterator it = map_conf.begin(); it != map_conf.end(); ++it)
     {
@@ -96,19 +76,10 @@ void get_all_server_conf(std::string const& path, std::vector<Conf*>& Configs)
         
         Conf *conf = new Conf(temp_file_path);
         Configs.push_back(conf);
-        remove("./config/temp_server_block.conf");
+        ::remove("./config/temp_server_block.conf");
         index++;
     }
-
-    for (size_t i = 0; i < Configs.size(); ++i) 
-    {
-        outfile << "Configuration du serveur " << i << " :" << std::endl;
-        Configs[i]->printConfigs(outfile);
-        outfile << std::endl;
-    }
     file.close();
-    outfile_map.close();
-    outfile.close();
 }
 
 int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server *>& Servers, std::vector<Conf *>& Configs)
@@ -119,21 +90,20 @@ int start_all_servers(std::vector<int>& fd_sockets, std::vector<Server *>& Serve
     for (it = Configs.begin(); it != Configs.end(); ++it)
     {
         /**
-         * Server start
+         * @brief Server start
          */
         Server *server = new Server(*it);        
         Servers.push_back(server);
         for (size_t j = 0; j < server->getPorts().size(); j++)
         {
             int port = server->getPorts()[j];
-            // Log::output("./sessions/Sockets.txt") << "Port: " << port << std::endl;
             if (std::find(listPorts.begin(), listPorts.end(), port) == listPorts.end())
             {
                 listPorts.push_back(port);
+                Log::print_final_log("Server listening", server->getHostipv4(), port);
             }
         }
     }
-  
     /**
      * @brief Reglages des connexion et communication "Sockets"
      */
@@ -177,26 +147,24 @@ int setup_connection_socket(std::vector<int>& fd_sockets, std::vector<int>& list
         addr.sin_family = AF_INET;
         addr.sin_addr.s_addr = INADDR_ANY;
         
-
         int fd_socket = fd_sockets[i];
         int opt = 1;
         if (setsockopt(fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(int)) < 0) 
         {
             Log::error("setsockopt failed");
-            close(fd_socket);
+            ::close(fd_socket);
             return 1;
         }        
         addr.sin_port = htons(listPorts[i]);        
         if (bind(fd_socket, (struct sockaddr*)&addr, sizeof(addr)) < 0) 
         {
             Log::error("binding failed");
-            close(fd_socket);
+            ::close(fd_socket);
             return 1;
         }       
         if (listen(fd_socket, 128) < 0) 
         {
-            // Log::output("./logs/error.log") << "Failed to listen on port " << listPorts[i] << std::endl;
-            close(fd_socket);
+            ::close(fd_socket);
             return 1;
         }
     }

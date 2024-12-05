@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/12/04 21:39:55 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:28:06 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void Server::setHostNames()
             {
                 Hosts.push_back(host_names.substr(0, spacepos));
                 host_names.erase(0, spacepos+1);
-                // Log::output("./sessions/Server.txt") <<host_names << std::endl;
                 spacepos = host_names.find_first_of(" \t");
                 if (spacepos == std::string::npos)
                 {   
@@ -55,10 +54,7 @@ void Server::setHostNames()
                 }
             }
         }
-    }
-    // Log::output("./sessions/Server.txt") << "BUG" << std::endl;
-    // Log::output("./sessions/Server.txt") << BOLD_RED << "HOST NAMES ::::::::::::::::::::::::::::: " << RESET << std::endl;
-    printContenerValues(Hosts, BOLD_RED);    
+    }   
 }
 
 /**
@@ -74,9 +70,7 @@ Server::Server(Conf *c)
     {
         int portNumber = atoi(listenPorts[i].c_str());
         if (portNumber >= 1 && portNumber <= 65535) 
-        {
             ports.push_back(portNumber);
-        } 
         else 
             Log::output("./logs/error.log") << "Port invalide dans la configuration : " << portNumber << std::endl;  
     }
@@ -85,27 +79,14 @@ Server::Server(Conf *c)
         perror("invalid host");
         Log::error("Invalid host : check your configuration file");
     }
-    else
-    {
-        // Log::output("./sessions/Server.txt") << BOLD_GREEN << "Server on" << RESET << std::endl;
-        // Log::output("./sessions/Server.txt") << "listening " << conf->getConfig("host") << " on ports ";
-        std::vector<int>::iterator it;
-        for (it = ports.begin(); it != ports.end(); it++)
-        {
-            // Log::output("./sessions/Server.txt") << *it << " ";
-        }
-        // Log::output("./sessions/Server.txt") << std::endl; 
-    } 
     setMaxBodySize();
     setHostNames();
-    // Log::output("./sessions/Server.txt") << "Server class object created" << std::endl;
-    conf->printRoutesConfig(id);
     serverNumber++;
 }
 
 Server::Server(Server const& src) : id(src.id), keepAlive(src.keepAlive), conf(src.conf), maxBodySize(src.maxBodySize), host_ip(src.host_ip), methods(src.methods), err(src.err), Hosts(src.Hosts), ports(src.ports)
 {
-    // Log::output("./sessions/Server.txt") << "Server classs object copied" << std::endl;
+
 }
 
 Server& Server::operator=(Server &server)
@@ -122,13 +103,11 @@ Server& Server::operator=(Server &server)
         this->Hosts = server.Hosts;
         this->ports = server.ports;
     }
-    // Log::output("./sessions/Server.txt") << "Server class object assigned" << std::endl;
     return *this;
 }
 
 Server::~Server()
 {
-    // Log::output("./sessions/Server.txt") << "Server class object destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -152,7 +131,6 @@ bool Server::getCgiStatus()
 
 bool Server::getCgiStatus(std::string path)
 {
-    // std::cerr << "getcgistatus : " << path << std::endl;
     Location *Route = getRoute(getExtension(path));
     if (!Route)
         return false;

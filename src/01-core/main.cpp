@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:11 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/29 13:46:36 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:10:14 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 
 int main(int ac, char **av)
 {
-    
     setupSignalHandler();
     try
     {
@@ -34,7 +33,7 @@ int main(int ac, char **av)
         std::vector<Server *> Servers;
 
         /**
-         * Conditions du path, si NULL, path par defaut
+         * @brief Conditions du path, si NULL, path par defaut
          */
         if (ac >= 2)
             path.assign(av[1]);
@@ -43,16 +42,14 @@ int main(int ac, char **av)
 
         if (!checkFormatOfConfig(path))
         {
-            close(signalPipeFd[0]);
-            close(signalPipeFd[1]);
+            ::close(signalPipeFd[0]);
+            ::close(signalPipeFd[1]);
             throw PathNotCorrectFormat();
         };
-
         /**
-         * Extraire les informations dans le path
+         * @brief Extraire les informations dans le path
          */
-        get_all_server_conf(path, Configs);  
-
+        get_all_server_conf(path, Configs);
         SessionManager sessionManager;
         if (start_all_servers(fd_sockets, Servers, Configs) == 1)
             return 1;    
@@ -63,13 +60,13 @@ int main(int ac, char **av)
 
         for (size_t i = 0; i < fd_sockets.size() ; ++i)
         {
-            close(fd_sockets[i]);
+            ::close(fd_sockets[i]);
         }
         Log::cleanup();
         clearMemory(Configs);
         clearArray(Servers);
-        close(signalPipeFd[0]);
-        close(signalPipeFd[1]);
+        ::close(signalPipeFd[0]);
+        ::close(signalPipeFd[1]);
     }
     catch (SignalException const& e)
     {

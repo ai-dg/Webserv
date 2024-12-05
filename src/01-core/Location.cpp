@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Location.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:08 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 23:47:58 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:27:02 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void Location::extractField(std::string param)
 Location::Location()
 {
     init();
-    // Log::output("./sessions/Location.txt") << "Location class object created" << std::endl;
 }
 
 Location::Location(std::string &loc)
@@ -81,7 +80,6 @@ Location::Location(std::string &loc)
 Location::Location(Location const& src) : _root(src._root), _extensions(src._extensions), _methods(src._methods), _autoindex(src._autoindex), _upload_store(src._upload_store), _cgi(src._cgi), _cgi_bin(src._cgi_bin), _return(src._return), _index(src._index), indexes(src.indexes), redirectionPath(src.redirectionPath), redirectionStatus(src.redirectionStatus)
 {
     _exe = src._exe;
-    // Log::output("./sessions/Location.txt") << "Location class object copied" << std::endl;
 }
 
 Location& Location::operator=(Location const& src)
@@ -102,13 +100,11 @@ Location& Location::operator=(Location const& src)
     _max_body = src._max_body;
     redirectionPath = src.redirectionPath;
     redirectionStatus = src.redirectionStatus;
-    // Log::output("./sessions/Location.txt") << "Location class object assigned" << std::endl;
     return *this;
 }
 
 Location::~Location()
 {
-    // Log::output("./sessions/Location.txt") << "Location class object destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -129,7 +125,6 @@ void Location::init()
     _index = "";
     redirectionPath = "";
     redirectionStatus = 0;
-    // _max_body = 100 * 1024;
     _max_body = 100000 * 1024;
 }
 
@@ -140,7 +135,6 @@ void Location::init()
 void Location::setMaxBodySize(std::string size)
 {
     _max_body = getFormatedSizeFromString(size);
-    // std::cerr  << size << " : " << _max_body << " bytes" << std::endl;
 }
 
 
@@ -251,7 +245,6 @@ std::string Location::findIndex()
     {
         root =  "./" +_root + "/" + *it;
         root = removeDuplicateSlashes(root);
-        // std::cerr << "FINDINDEX debug : " << root << std::endl;
         if (doesFileExist(root))        
             return *it;
     }
@@ -282,26 +275,3 @@ void Location::debugValues()
     if (_index != "")
         std::cerr << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
 }
-
-
-// void Location::debugValues()
-// {
-//     if (_root != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _root << RESET << std::endl;
-//     if (_extensions != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _extensions << RESET << std::endl;
-//     if (_methods != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _methods << RESET << std::endl;
-//     if (_autoindex != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _autoindex << RESET << std::endl;
-//     if (_upload_store != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _upload_store << RESET << std::endl;
-//     if (_cgi_bin != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi_bin << RESET << std::endl;
-//     if (_cgi != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _cgi << RESET << std::endl;
-//     if (_return != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _return << RESET << std::endl;
-//     if (_index != "")
-//         // Log::output("./sessions/Location.txt") << "\t\t" << BOLD_WHITE << _index << RESET << std::endl;
-// }

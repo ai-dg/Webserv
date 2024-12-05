@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:18 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/04 21:36:15 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:28:54 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ std::string SessionManager::generateSessionsId()
         ss << std::hex << randomValue;
     }
     std::string sessionId = ss.str();
-    // Log::output("./sessions/SessionManager.txt") << "Generated session ID: " << sessionId << std::endl;
     return sessionId;
 }
 
@@ -39,13 +38,11 @@ SessionManager::SessionManager()
 {
     std::srand(std::time(0));
     loadSessionsFromFile();
-    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class created" << std::endl;
 }
 
 SessionManager::SessionManager(SessionManager const& src) 
 {
     *this = src;
-    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class copied" << std::endl;
 }
 
 SessionManager& SessionManager::operator=(SessionManager const& src) 
@@ -54,13 +51,11 @@ SessionManager& SessionManager::operator=(SessionManager const& src)
     {
         sessions = src.sessions;
     }
-    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class assigned" << std::endl;
     return *this;
 }
 
 SessionManager::~SessionManager() 
 {
-    // Log::output("./sessions/SessionManager.txt") << "SessionManager object class destroyed" << std::endl;
     Log::cleanup();
 }
 
@@ -71,20 +66,12 @@ std::string SessionManager::createSessions()
 {
     std::string sessionId = generateSessionsId();
     sessions[sessionId] = std::map<std::string, std::string>();
-    if (sessions.find(sessionId) != sessions.end()) 
-        Log::output("./sessions/SessionManager.txt") << "Session successfully added to map." << std::endl;
-    else 
-        Log::output("./sessions/SessionManager.txt") << "Error: Session was not added to map." << std::endl;
     return sessionId;
 }
 
 bool SessionManager::sessionExist(std::string const& sessionId) 
 {
     bool exists = sessions.find(sessionId) != sessions.end();
-    if (exists)
-        Log::output("./sessions/SessionManager.txt") << "Yes" << std::endl;
-    else 
-        Log::output("./sessions/SessionManager.txt") << "No" << std::endl;
     return exists;
 }
 
@@ -92,8 +79,6 @@ std::map<std::string, std::string>& SessionManager::getSession(std::string const
 {
     if (sessions.find(sessionId) == sessions.end()) 
         sessions[sessionId] = std::map<std::string, std::string>();
-    else 
-        Log::output("./sessions/SessionManager.txt") << "Session data found for session ID: " << sessionId << std::endl;
     return sessions[sessionId];
 }
 
@@ -101,11 +86,7 @@ void SessionManager::saveSessionsToFile()
 {
     std::ofstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
-    {
-        // Log::output("./logs/error.log") << "Error opening session file for saving: " << SESSION_FILE_PATH << std::endl;
         return;
-    }
-
     for (std::map<std::string, std::map<std::string, std::string> >::iterator it = sessions.begin(); it != sessions.end(); ++it) 
     {
         file << it->first << "\n";
@@ -120,10 +101,7 @@ void SessionManager::loadSessionsFromFile()
 {
     std::ifstream file(SESSION_FILE_PATH.c_str());
     if (!file.is_open()) 
-    {
-        // Log::output("./logs/error.log") << "No existing session file found: " << SESSION_FILE_PATH << std::endl;
         return;
-    }
 
     std::string line, sessionId;
     while (std::getline(file, line)) 

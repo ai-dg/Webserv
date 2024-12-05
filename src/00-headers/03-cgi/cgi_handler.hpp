@@ -6,13 +6,14 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:33 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/21 20:46:04 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 04:40:47 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "../00-shared/includes.hpp"
 #include "../01-core/HttpRequest.hpp"
+#include "../01-core/HttpResponse.hpp"
 #include "../02-utils/stringUtils.hpp"
 
 class Cgi_handler
@@ -44,6 +45,6 @@ class Cgi_handler
         /**
          * @brief Execute the CGI script
          */
-        void executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client);
+        void executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client, HttpResponse &res);
 
 };

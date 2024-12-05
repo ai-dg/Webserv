@@ -6,12 +6,13 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:53 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 01:03:47 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 04:11:05 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/02-utils/Log.hpp"
+#include "../00-headers/02-utils/date.hpp"
 
 std::map<std::string, std::string> Log::files;
 std::map<std::string, Log::LogStream*> Log::logStreams;

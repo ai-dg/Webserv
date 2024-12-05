@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/05 01:54:11 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:31:19 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 std::string getMime(const std::string& mime)
 {
-    std::ifstream file("config/mime.types"); /// may need to change the path
+    std::ifstream file("config/mime.types");
     std::string line;
     std::string mime_type;
    
@@ -41,9 +41,7 @@ std::string getMime(const std::string& mime)
 std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
-    // Log::output("./sessions/files.txt") << "path : " << path << std::endl;
     local.erase(0,8);
-    // Log::output("./sessions/files.txt") << "local : " << local << std::endl;
     if (local == "/")
         return "text/html";
     std::string mime = local.substr(local.find_last_of(".") + 1);
@@ -101,32 +99,23 @@ std::string getFile(const std::string& path)
         local = "./" + decodedPath; 
     
     if (decodedPath.size() < 10)
-        local += "index.html";///hardcoded...
-    // Log::output("./sessions/files.txt") << "local 2 " << local << " - path size : " << decodedPath.size() << std::endl;
+        local += "index.html";
     std::ifstream file(local.c_str());
-    //std::cerr << "local : " << local << std::endl;
     std::string line;
     if (file.is_open())
     {
-        //std::cerr << "opeeeeeeeeeennnnnned !!!!!!!!!!!!!!!!!" << std::endl;
         while (std::getline(file, line))
         {
             if (!content.empty())
                 content += "\n";
             content += line;
         }
-        // Log::output("./sessions/files.txt") << "test getfile : " << content << std::endl;
         file.close();
-        // std::cerr << "GETFILE debug " << local << "  -  " << content << std::endl;
         return content;
     }
-    else
-        // Log::output("./sessions/files.txt") << "file not found ! " << std::endl;
     file.close();
-    // std::cerr << "GETFILE debug " << local << "  -  "  << content << std::endl; 
     return FILENOTFOUND;
 }
-
 
 bool checkFormatOfConfig(std::string const& path_file)
 {
@@ -136,7 +125,6 @@ bool checkFormatOfConfig(std::string const& path_file)
         std::cerr << "Unable to open the file." << std::endl;
         return false;
     }
-
     std::string line;
     std::stack<std::string> blocks; 
     size_t lineNumber = 0;
@@ -301,7 +289,5 @@ char *resolvePath(std::string path)
 {
     char* resolvedPath;
     resolvedPath = realpath(path.c_str(), NULL);
-    if (!resolvedPath)  
-        std::cerr << "Fail resolving Path " << path << std::endl;
     return resolvedPath;
 }

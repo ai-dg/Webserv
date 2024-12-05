@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:59 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 01:51:15 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/05 05:32:48 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,31 +124,6 @@ size_t getNextof(std::string str, size_t pos, char c)
     return std::string::npos;    
 }
 
-// size_t getFormatedSizeFromString(std::string size)
-// {
-//     size_t multi = 1;
-//     size_t maxBodySize = 0;
-//     std::stringstream stream;
-//     std::string mbs = trim(size);
-//     stream << mbs;
-//     try {
-//         if (mbs[mbs.size() - 1] == 'M')
-//             multi = 1024;
-//         else if (mbs[mbs.size() - 1] == 'K')
-//             multi = 1;
-//         else
-//             throw InvalidArgException();
-//         size_t max ;
-//         stream >> max;
-//         maxBodySize = max * multi;
-//     }
-//     catch (const InvalidArgException &e)
-//     {
-//         maxBodySize = 2048;
-//     }
-//     return maxBodySize;
-// }
-
 size_t getFormatedSizeFromString(std::string size) {
     size_t multi = 1;
     size_t maxBodySize = 0;
@@ -157,43 +132,34 @@ size_t getFormatedSizeFromString(std::string size) {
 
     
     for (size_t i = 0; i < mbs.size(); ++i) 
-    {
         if (mbs[i] == '.') 
-        {
             ++decimalPointCount;
-        }
-    }
 
-    
     if (decimalPointCount > 1) 
     {
         std::cerr << "Error: Invalid format - multiple decimal points in size string: " << size << std::endl;
         return 2048; 
     }
-
-    try {
+    try 
+    {
         
         if (mbs[mbs.size() - 1] == 'M') 
         {
             multi = 1024 * 1024; 
             mbs = mbs.substr(0, mbs.size() - 1); 
-        } else if (mbs[mbs.size() - 1] == 'K') 
+        } 
+        else if (mbs[mbs.size() - 1] == 'K') 
         {
             multi = 1024; 
             mbs = mbs.substr(0, mbs.size() - 1); 
         } 
         else 
-        {
             throw InvalidArgException();
-        }
 
         double max = 0.0; 
         max = atof(mbs.c_str()); 
-
         if (max <= 0.0) 
-        { 
             throw InvalidArgException();
-        }
 
         maxBodySize = static_cast<size_t>(max * multi);
     } 
@@ -202,22 +168,14 @@ size_t getFormatedSizeFromString(std::string size) {
         std::cerr << "Error: Invalid size string format: " << size << std::endl;
         maxBodySize = 2048; 
     }
-
-    std::cerr << "Parsed size: " << size << " => " << maxBodySize << " bytes" << std::endl;
-
     return maxBodySize;
 }
-
-
 
 std::string cleanString(const std::string& str) 
 {
     std::string cleaned;
     for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) 
-    {
-        if (!std::isspace(static_cast<unsigned char>(*it))) {
+        if (!std::isspace(static_cast<unsigned char>(*it))) 
             cleaned += *it;
-        }
-    }
     return cleaned;
 }
