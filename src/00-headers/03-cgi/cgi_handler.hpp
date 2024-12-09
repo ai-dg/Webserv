@@ -41,9 +41,10 @@ class Cgi_handler
         void executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context);
         int handleErrorStatus(int status);
         void handleDirectIO(Pipe &pipe_out);
-        void handleSecretHeaderIO(Pipe &pipe_out);
+        void handleIOWithHeaders(Pipe &pipe_out);
         std::string getHeaders(std::string const &status);
         void sendHeaders(std::string const &headersStr);
+        void sendBody(std::string &remainingBuffer, std::string &bufferAccumulator);
  
     public:
         /**

@@ -304,7 +304,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
     else 
     {  
         size_t offset = 0;
-        ssize_t bytes_written;
+        ssize_t bytes_written = 0;
         while (offset < data.size())
         {
             bytes_written = ::write(pipe_in.getFd(), data.c_str() + offset, data.size() - offset);
@@ -330,12 +330,12 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
             ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {
-            handleSecretHeaderIO(pipe_out);
+            handleIOWithHeaders(pipe_out);
         }
         else 
         {   
             handleDirectIO(pipe_out);              
-        }      
+        }
         pipe_out.closeFd();
         pipe_in.removeFile();
         pipe_out.removeFile();
@@ -418,21 +418,38 @@ void Cgi_handler::sendHeaders(std::string const &headersStr)
     }
 }
 
-void Cgi_handler::handleSecretHeaderIO(Pipe &pipe_out)
+void Cgi_handler::sendBody(std::string &remainingBuffer, std::string &bufferAccumulator)
+{
+      size_t offset = 0;
+        ssize_t bytesWritten = 0; 
+        while (offset < remainingBuffer.size()) 
+        {
+            bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
+            if (bytesWritten == -1) 
+            {
+                ::usleep(1000); 
+                continue;
+            } 
+            else if (bytesWritten == 0) 
+            {
+                ::perror("write returned 0 (unexpected)");
+                break;
+            }
+            offset += bytesWritten; 
+        }
+        bufferAccumulator += remainingBuffer; 
+        remainingBuffer.clear();
+}
+
+void Cgi_handler::handleIOWithHeaders(Pipe &pipe_out)
 {
     char buffer[4096];
     ssize_t bytesRead = 0;
-    std::string bufferAccumulator;
-   	std::string headersStr = getHeaders("200");
-	sendHeaders(headersStr);
-	bufferAccumulator.append(headersStr);
-    
-            //////////////////////////////////////////////////////
+    std::string bufferAccumulator;   	
     bool headersSkipped = false;
-    
     std::string remainingBuffer;
-	std::string status;
-    while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0)
+	std::string status = "";
+    while ((bytesRead = ::read(pipe_out.getFd(),buffer, sizeof(buffer) - 1)) > 0)
     {
 		buffer[bytesRead] = '\0';
 		getHeaderStatus(buffer, status);
@@ -443,33 +460,17 @@ void Cgi_handler::handleSecretHeaderIO(Pipe &pipe_out)
 	    	if (headerEnd != std::string::npos) 
 	    	{
 	        	headersSkipped = true;
+                std::string headersStr = getHeaders(status);
+            	sendHeaders(headersStr);
+	            bufferAccumulator.append(headersStr);
 	        	remainingBuffer = remainingBuffer.substr(headerEnd + 4);
 	    	} 
 	    	else 
 	        	continue;
-	}
-		
-	size_t offset = 0;
-    ssize_t bytesWritten = 0; 
-	while (offset < remainingBuffer.size()) 
-	{
-	    bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
-	    if (bytesWritten == -1) 
-	    {
-	        ::usleep(1000); 
-	        continue;
-	    } 
-	    else if (bytesWritten == 0) 
-	    {
-	        ::perror("write returned 0 (unexpected)");
-	        break;
 	    }
-	    offset += bytesWritten; 
-	}
-	bufferAccumulator += remainingBuffer; 
-	remainingBuffer.clear();               
-            }
-            if (bytesRead == -1) 
-	::perror("read");
-            bufferAccumulator.clear();
+        sendBody(remainingBuffer, bufferAccumulator);
+    }
+    if (bytesRead == -1) 
+	    ::perror("read");
+    bufferAccumulator.clear();
 }
