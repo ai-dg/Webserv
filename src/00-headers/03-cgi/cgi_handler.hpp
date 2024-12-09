@@ -34,6 +34,10 @@ class Cgi_handler
         void addToEnvironment(const char * env);
         void setEnvironment();
         void debugEnvironment();
+        void parentCgiProcess(Pipe &pipe_in, Pipe &pipe_out, pid_t pid);
+        void childCgiProcess(Pipe &pipe_in, Pipe &pipe_out);        
+        void setupSpecialRoute(std::string &path, std::string &scriptPathTemp, std::string &exe_context);
+        void executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context);
  
     public:
         /**

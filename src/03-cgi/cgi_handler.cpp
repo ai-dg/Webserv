@@ -182,6 +182,73 @@ Cgi_handler::Cgi_handler(int _fd_client, HttpRequest *_req, HttpResponse *_res):
 {
 }
 
+void Cgi_handler::parentCgiProcess(Pipe &pipe_in, Pipe &pipe_out, pid_t pid)
+{
+    (void)pipe_in;
+    (void)pipe_out;
+    (void)pid;
+}
+
+void Cgi_handler::setupSpecialRoute(std::string &path, std::string &scriptPathTemp, std::string &exe_context)
+{
+    Location *route = req->getRouteConf(getExtension(scriptPathTemp));
+    if (!route)
+        std::cerr << "unkown route" << std::endl;
+    if (route && !route->exe().empty())
+    {   
+        if (resolvePath(route->exe()))        
+            path.assign(resolvePath(route->exe()));
+    }
+    if (resolvePath(scriptPathTemp))           
+        exe_context.assign(resolvePath(scriptPathTemp));
+    else
+        exe_context.clear();
+    scriptPathTemp.clear();
+}
+
+void Cgi_handler::childCgiProcess(Pipe &pipe_in, Pipe &pipe_out)
+{
+     ::lseek(pipe_in.getFd(), 0, SEEK_SET);
+        if (dup2(pipe_in.getFd(), STDIN_FILENO) == -1) 
+        {
+            ::perror("dup2 stdin");
+            ::exit(1);
+        }
+        if (::dup2(pipe_out.getFd(), STDOUT_FILENO) == -1) 
+        {
+            ::perror("dup2 stdout");
+            ::exit(1);
+        }
+        pipe_in.closeFd();
+        pipe_out.closeFd();
+        setEnvironment();
+        std::string scriptPathTemp = scriptPath;
+        size_t queryPos = scriptPathTemp.find('?');
+        if (queryPos != std::string::npos)
+            scriptPathTemp = scriptPathTemp.substr(0, queryPos);
+        std::string exe_context = getExeContext(scriptPathTemp);
+        std::string path = "/usr/bin/env";
+        if (req->hasFileSpecialRoute(scriptPathTemp))
+            setupSpecialRoute(path, scriptPathTemp, exe_context);
+       executeScript(path, scriptPathTemp, exe_context);
+}
+
+void Cgi_handler::executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context)
+{
+    char *const argv[] = 
+    {
+        const_cast<char *>(path.c_str()),
+        const_cast<char *>(exe_context.c_str()),
+        const_cast<char *>(scriptPathTemp.c_str()),
+        NULL
+    };
+    if (execve(argv[0], argv, environment.data()) == -1)
+    {
+        ::perror("execve");
+        ::exit(1);
+    }
+}
+
 /**
  * @brief Execute the CGI script
  */
@@ -206,65 +273,17 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
     }
     if (pid == 0) 
     {
-        ::lseek(pipe_in.getFd(), 0, SEEK_SET);
-        if (dup2(pipe_in.getFd(), STDIN_FILENO) == -1) 
-        {
-            ::perror("dup2 stdin");
-            ::exit(1);
-        }
-        if (::dup2(pipe_out.getFd(), STDOUT_FILENO) == -1) 
-        {
-            ::perror("dup2 stdout");
-            ::exit(1);
-        }
-        pipe_in.closeFd();
-        pipe_out.closeFd();
-        setEnvironment();
-        std::string scriptPathTemp = scriptPath;
-        size_t queryPos = scriptPathTemp.find('?');
-        if (queryPos != std::string::npos)
-            scriptPathTemp = scriptPathTemp.substr(0, queryPos);
-        std::string exe_context = getExeContext(scriptPathTemp);
-        std::string path = "/usr/bin/env";
-        if (req->hasFileSpecialRoute(scriptPathTemp))
-        {
-            Location *route = req->getRouteConf(getExtension(scriptPathTemp));
-            if (!route)
-                std::cerr << "unkown route" << std::endl;
-            if (route && !route->exe().empty())
-            {   
-                if (resolvePath(route->exe()))        
-                    path.assign(resolvePath(route->exe()));
-            }
-            if (resolvePath(scriptPathTemp))           
-                exe_context.assign(resolvePath(scriptPathTemp));
-            else
-                exe_context.clear();
-            scriptPathTemp.clear();
-        }
-        char *const argv[] = 
-        {
-            const_cast<char *>(path.c_str()),
-            const_cast<char *>(exe_context.c_str()),
-            const_cast<char *>(scriptPathTemp.c_str()),
-            NULL
-        };
-        if (execve(argv[0], argv, environment.data()) == -1)
-        {
-            ::perror("execve");
-            ::exit(1);
-        }
+       childCgiProcess(pipe_in, pipe_out);
     } 
     else 
     {  
         size_t offset = 0;
         ssize_t bytes_written;
-        while (offset < data.size()) 
+        while (offset < data.size())
         {
             bytes_written = ::write(pipe_in.getFd(), data.c_str() + offset, data.size() - offset);
-            if (bytes_written == -1) 
+            if (bytes_written == -1)
             {
-
                 perror("write");
                 pipe_out.closeFd();
                 return;
