@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
+/*	           				                                                  */
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
@@ -13,6 +13,7 @@
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/HttpRequest.hpp"
 #include "../00-headers/01-core/scriptUtils.hpp"
+#include "../00-headers/01-core/Status.hpp"
 #include "../00-headers/01-core/Pipe.hpp"
 #include "../00-headers/02-utils/Log.hpp"
 #include "../00-headers/02-utils/files.hpp"
@@ -58,22 +59,22 @@ std::string createBufferDataFile(std::string body)
     return filename;
 }
 
-void Cgi_handler::setEnvironment(HttpRequest &req)
+void Cgi_handler::setEnvironment()
 {   
-    std::map<std::string, std::string> headers = req.getHeaders();
-    std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
+    std::map<std::string, std::string> headers = req->getHeaders();
+    std::string requestMethodEnv = "REQUEST_METHOD=" + req->getMethod();
     std::string contentLengthEnv;
 
-    if (req.getMethod() == "POST" || req.getMethod() == "DELETE")
+    if (req->getMethod() == "POST" || req->getMethod() == "DELETE")
     {
-        if (req.getHeader("Content-Length").size() != 0)
+        if (req->getHeader("Content-Length").size() != 0)
         {
-            contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
+            contentLengthEnv =  "CONTENT_LENGTH=" + req->getHeader("Content-Length");
         }
-        else if (req.getHeader("Content-Length").size() == 0 && req.getHeader("Transfer-Encoding") == "chunked")
+        else if (req->getHeader("Content-Length").size() == 0 && req->getHeader("Transfer-Encoding") == "chunked")
         {
             std::ostringstream oss;
-            oss << req.getBody().length();
+            oss << req->getBody().length();
             contentLengthEnv = "CONTENT_LENGTH=" + oss.str();
         }
     }
@@ -110,9 +111,9 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
             }
         }
         else
-            this->addToEnvironment(req.getFormatedHeader(it->first));
+            this->addToEnvironment(req->getFormatedHeader(it->first));
     }
-    this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
+    this->addToEnvironment("CONTENT_TYPE=" + req->getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
     this->addToEnvironment("PATH_INFO=/");
@@ -125,7 +126,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         this->addToEnvironment("PYTHONWARNINGS=ignore");
     else
     {
-        std::string filename = createBufferDataFile(req.getBody());
+        std::string filename = createBufferDataFile(req->getBody());
         this->addToEnvironment("CGI_FILE=" + filename);
     }
     environment.push_back(NULL);
@@ -178,31 +179,37 @@ Cgi_handler::~Cgi_handler()
     environment.clear();
 }
 
-/**
- * @brief Execute the CGI script
- */
-
-
-void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client, HttpResponse &res) 
+Cgi_handler::Cgi_handler(int _fd_client, HttpRequest *_req, HttpResponse *_res): fd_client(_fd_client), req(_req), res(_res)
 {
-    pid_t pid;
-    Pipe pipe_in("./sessions/pipe_infile");
-    Pipe pipe_out("./sessions/pipe_outfile");
-    this->scriptPath = scriptPath;
-    std::string data = req.getBody();
+}
 
-    if (pipe_in.getFd() == -1 || pipe_out.getFd() == -1) {
-        std::cerr << "Error: Failed to open temporary files for Pipe." << std::endl;
-        return;
+void Cgi_handler::parentCgiProcess(Pipe &pipe_in, Pipe &pipe_out, pid_t pid)
+{
+    (void)pipe_in;
+    (void)pipe_out;
+    (void)pid;
+}
+
+void Cgi_handler::setupSpecialRoute(std::string &path, std::string &scriptPathTemp, std::string &exe_context)
+{
+    Location *route = req->getRouteConf(getExtension(scriptPathTemp));
+    if (!route)
+        std::cerr << "unkown route" << std::endl;
+    if (route && !route->exe().empty())
+    {   
+        if (resolvePath(route->exe()))        
+            path.assign(resolvePath(route->exe()));
     }
-    pid = fork();
-    if (pid < 0) {
-        perror("fork");
-        return;
-    }
-    if (pid == 0) 
-    {
-        ::lseek(pipe_in.getFd(), 0, SEEK_SET);
+    if (resolvePath(scriptPathTemp))           
+        exe_context.assign(resolvePath(scriptPathTemp));
+    else
+        exe_context.clear();
+    scriptPathTemp.clear();
+}
+
+void Cgi_handler::childCgiProcess(Pipe &pipe_in, Pipe &pipe_out)
+{
+     ::lseek(pipe_in.getFd(), 0, SEEK_SET);
         if (dup2(pipe_in.getFd(), STDIN_FILENO) == -1) 
         {
             ::perror("dup2 stdin");
@@ -215,52 +222,94 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         }
         pipe_in.closeFd();
         pipe_out.closeFd();
-        setEnvironment(req);
+        setEnvironment();
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
         std::string exe_context = getExeContext(scriptPathTemp);
         std::string path = "/usr/bin/env";
-        if (req.hasFileSpecialRoute(scriptPathTemp))
+        if (req->hasFileSpecialRoute(scriptPathTemp))
+            setupSpecialRoute(path, scriptPathTemp, exe_context);
+       executeScript(path, scriptPathTemp, exe_context);
+}
+
+void Cgi_handler::executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context)
+{
+    char *const argv[] = 
+    {
+        const_cast<char *>(path.c_str()),
+        const_cast<char *>(exe_context.c_str()),
+        const_cast<char *>(scriptPathTemp.c_str()),
+        NULL
+    };
+    if (execve(argv[0], argv, environment.data()) == -1)
+    {
+        ::perror("execve");
+        ::exit(1);
+    }
+}
+
+/**
+ * @brief Execute the CGI script
+ */
+
+int Cgi_handler::handleErrorStatus(int status)
+{
+    if (WIFEXITED(status)) 
         {
-            Location *route = req.getRouteConf(getExtension(scriptPathTemp));
-            if (!route)
-                std::cerr << "unkown route" << std::endl;
-            if (route && !route->exe().empty())
-            {   
-                if (resolvePath(route->exe()))        
-                    path.assign(resolvePath(route->exe()));
+            if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
+            {
+                res->setRedirection(500);
+                res->send(fd_client);
+                return -1;
             }
-            if (resolvePath(scriptPathTemp))           
-                exe_context.assign(resolvePath(scriptPathTemp));
-            else
-                exe_context.clear();
-            scriptPathTemp.clear();
-        }
-        char *const argv[] = 
+        } 
+        else if (WIFSIGNALED(status)) 
         {
-            const_cast<char *>(path.c_str()),
-            const_cast<char *>(exe_context.c_str()),
-            const_cast<char *>(scriptPathTemp.c_str()),
-            NULL
-        };
-        if (execve(argv[0], argv, environment.data()) == -1)
+            res->setRedirection(500);
+            res->send(fd_client);
+            return -1;
+        } 
+        else 
         {
-            ::perror("execve");
-            ::exit(1);
+            res->setRedirection(500);
+            res->send(fd_client);
+            return -1;
         }
+        return 1;
+}
+
+void Cgi_handler::executeCGI(std::string const& scriptPath) 
+{
+    pid_t pid;
+    Pipe pipe_in("./sessions/pipe_infile");
+    Pipe pipe_out("./sessions/pipe_outfile");
+    this->scriptPath = scriptPath;
+    std::string data = req->getBody();
+
+    if (pipe_in.getFd() == -1 || pipe_out.getFd() == -1) {
+        std::cerr << "Error: Failed to open temporary files for Pipe." << std::endl;
+        return;
+    }
+    pid = fork();
+    if (pid < 0) {
+        perror("fork");
+        return;
+    }
+    if (pid == 0) 
+    {
+       childCgiProcess(pipe_in, pipe_out);
     } 
     else 
     {  
         size_t offset = 0;
-        ssize_t bytes_written;
-        while (offset < data.size()) 
+        ssize_t bytes_written = 0;
+        while (offset < data.size())
         {
             bytes_written = ::write(pipe_in.getFd(), data.c_str() + offset, data.size() - offset);
-            if (bytes_written == -1) 
+            if (bytes_written == -1)
             {
-
                 perror("write");
                 pipe_out.closeFd();
                 return;
@@ -274,137 +323,154 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
             perror("waitpid");
             return;
         }
-
-        if (WIFEXITED(status)) 
-        {
-            if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
-            {
-                res.setRedirection(500);
-                res.send(fd_client);
-                return;
-            }
-        } 
-        else if (WIFSIGNALED(status)) 
-        {
-            res.setRedirection(500);
-            res.send(fd_client);
-            return;
-        } 
-        else 
-        {
-            res.setRedirection(500);
-            res.send(fd_client);
-            return;
-        }
-        char buffer[4096];
-        ssize_t bytesRead;
+        if(handleErrorStatus(status) < 1)
+            return;        
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
-        std::string bufferAccumulator;
-        std::string bufferAccumulator2;
         if (scriptPath.find(".php") != std::string::npos) 
-            write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
+            ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {
-            std::ostringstream headers;
-            headers << "HTTP/1.1 200 OK" << CRLF
-                    << "Content-Length: " << data.size() << CRLF
-                    << "Content-Type: text/html; charset=utf-8" << CRLF
-                    << "Date: " << get_current_date() << CRLF << CRLF;
-
-            std::string headersStr = headers.str();
-            size_t offset = 0;
-            ssize_t bytesWritten;
-            while (offset < headersStr.size()) 
-            {
-                bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
-                if (bytesWritten == -1) 
-                {
-                    ::usleep(1000); 
-                    continue;
-                } 
-                else if (bytesWritten == 0) 
-                {
-                    ::perror("write returned 0 (unexpected)");
-                    return;
-                }
-                offset += bytesWritten; 
-            }
-            bool headersSkipped = false;
-            bufferAccumulator2.append(headersStr);
-            std::string remainingBuffer;
-            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) {
-                buffer[bytesRead] = '\0';
-                remainingBuffer += buffer;
-
-                
-                if (!headersSkipped) 
-                {
-                    size_t headerEnd = remainingBuffer.find("\r\n\r\n");
-                    if (headerEnd != std::string::npos) 
-                    {
-                        headersSkipped = true;
-                        remainingBuffer = remainingBuffer.substr(headerEnd + 4);
-                    } 
-                    else 
-                        continue;
-                }
-                offset = 0;
-                while (offset < remainingBuffer.size()) 
-                {
-                    bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
-                    if (bytesWritten == -1) 
-                    {
-                        ::usleep(1000); 
-                        continue;
-                    } 
-                    else if (bytesWritten == 0) 
-                    {
-                        ::perror("write returned 0 (unexpected)");
-                        break;
-                    }
-
-                    offset += bytesWritten; 
-                }
-                bufferAccumulator2 += remainingBuffer; 
-                remainingBuffer.clear();               
-            }
-            if (bytesRead == -1) 
-                ::perror("read");
+            handleIOWithHeaders(pipe_out);
         }
         else 
-        {
-            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) 
-            {
-                buffer[bytesRead] = '\0';
-                size_t offset = 0;
-                ssize_t bytesWritten;
-                while (offset < (size_t)bytesRead) 
-                {
-                    bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
-
-                    if (bytesWritten == -1) 
-                    {   
-                        ::usleep(1000); 
-                        continue;
-                    } 
-                    else if (bytesWritten == 0) 
-                    {
-                        ::perror("write returned 0 (unexpected)");
-                        break;
-                    }
-                    offset += bytesWritten; 
-                }
-            }
-            if (bytesRead == -1) 
-                ::perror("read");
+        {   
+            handleDirectIO(pipe_out);              
         }
-        if (bytesRead == -1) 
-            ::perror("read");
-        bufferAccumulator2.clear();
         pipe_out.closeFd();
         pipe_in.removeFile();
         pipe_out.removeFile();
     }
-    res.setStatusCode(200);
+    res->setStatusCode(200);
     Log::print_final_log("Response sent with status CGI:", 200, "FD:", fd_client);
+}
+
+
+void Cgi_handler::handleDirectIO(Pipe &pipe_out)
+{
+    char buffer[4096];
+    ssize_t bytesRead = 0;
+    while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) 
+    {
+        buffer[bytesRead] = '\0';
+        size_t offset = 0;
+        ssize_t bytesWritten;
+        while (offset < (size_t)bytesRead) 
+        {
+            bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
+
+            if (bytesWritten == -1) 
+            {   
+                ::usleep(1000); 
+                continue;
+            } 
+            else if (bytesWritten == 0) 
+            {
+                ::perror("write returned 0 (unexpected)");
+                break;
+            }
+            offset += bytesWritten; 
+        }
+    }
+    if (bytesRead == -1) 
+        ::perror("read");
+}
+
+std::string getHeaderStatus(char *buffer, std::string &status)
+{
+	std::string line(buffer);
+	size_t statusPos = line.find("Status");
+	if (statusPos != std::string::npos)
+	{
+		status = line.substr(statusPos + 8, 3);
+		return status;
+	}
+	return "";
+}
+
+std::string Cgi_handler::getHeaders(std::string const &status)
+{
+	std::ostringstream headers;
+    headers << "HTTP/1.1 " << status << " " << Status::get(status) << CRLF
+            << "Content-Length: " << req->getBody().size() << CRLF
+            << "Content-Type: text/html; charset=utf-8" << CRLF
+            << "Date: " << get_current_date() << CRLF << CRLF;
+	return headers.str();
+}
+
+void Cgi_handler::sendHeaders(std::string const &headersStr)
+{
+	size_t offset = 0;
+    ssize_t bytesWritten = 0; 
+    while (offset < headersStr.size()) 
+    {
+		bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
+		if (bytesWritten == -1) 
+		{
+	    	::usleep(1000); 
+	    	continue;
+		} 
+		else if (bytesWritten == 0) 
+		{
+	    	::perror("write returned 0 (unexpected)");
+	    	return;
+		}
+		offset += bytesWritten; 
+    }
+}
+
+void Cgi_handler::sendBody(std::string &remainingBuffer, std::string &bufferAccumulator)
+{
+      size_t offset = 0;
+        ssize_t bytesWritten = 0; 
+        while (offset < remainingBuffer.size()) 
+        {
+            bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
+            if (bytesWritten == -1) 
+            {
+                ::usleep(1000); 
+                continue;
+            } 
+            else if (bytesWritten == 0) 
+            {
+                ::perror("write returned 0 (unexpected)");
+                break;
+            }
+            offset += bytesWritten; 
+        }
+        bufferAccumulator += remainingBuffer; 
+        remainingBuffer.clear();
+}
+
+void Cgi_handler::handleIOWithHeaders(Pipe &pipe_out)
+{
+    char buffer[4096];
+    ssize_t bytesRead = 0;
+    std::string bufferAccumulator;   	
+    bool headersSkipped = false;
+    std::string remainingBuffer;
+	std::string status = "";
+    while ((bytesRead = ::read(pipe_out.getFd(),buffer, sizeof(buffer) - 1)) > 0)
+    {
+		buffer[bytesRead] = '\0';
+		getHeaderStatus(buffer, status);
+		remainingBuffer += buffer;	
+		if (!headersSkipped) 
+		{
+	    	size_t headerEnd = remainingBuffer.find("\r\n\r\n");
+	    	if (headerEnd != std::string::npos) 
+	    	{
+	        	headersSkipped = true;
+                std::string headersStr = getHeaders(status);
+            	sendHeaders(headersStr);
+	            bufferAccumulator.append(headersStr);
+	        	remainingBuffer = remainingBuffer.substr(headerEnd + 4);
+	    	} 
+	    	else 
+	        	continue;
+	    }
+        sendBody(remainingBuffer, bufferAccumulator);
+    }
+    if (bytesRead == -1) 
+	    ::perror("read");
+    bufferAccumulator.clear();
 }

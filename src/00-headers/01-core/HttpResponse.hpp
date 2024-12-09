@@ -38,6 +38,7 @@ class HttpResponse
         /**
          * @brief Copelin form
          */
+        HttpResponse();
         HttpResponse(const HttpRequest &req);
         HttpResponse(const HttpResponse &src);
         HttpResponse &operator=(const HttpResponse &src);

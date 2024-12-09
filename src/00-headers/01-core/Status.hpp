@@ -20,4 +20,5 @@ class Status
         static const std::map<int, std::string>codes;
     public:
         static std::string get(int code);
+        static std::string get(std::string code);
 };

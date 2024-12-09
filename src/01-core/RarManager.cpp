@@ -93,8 +93,8 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
             return;
         else if (response.isAllowedMethod(route, request))
         {
-            Cgi_handler cgiHandler;
-            cgiHandler.executeCGI(filePath, request, *fd_client, response);              
+            Cgi_handler cgiHandler(*fd_client, &request, &response);
+            cgiHandler.executeCGI(filePath);
         }
         else
         { 
