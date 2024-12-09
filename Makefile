@@ -9,6 +9,7 @@ SRC = src/01-core/Conf.cpp \
 	  src/01-core/main.cpp \
 	  src/01-core/Pipe.cpp \
 	  src/01-core/RarManager.cpp \
+	  src/01-core/RequestResponseManager.cpp \
 	  src/01-core/scriptUtils.cpp \
       src/01-core/Server.cpp \
 	  src/01-core/SessionManager.cpp \

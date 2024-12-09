@@ -13,6 +13,7 @@
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/RarManager.hpp"
 #include "../00-headers/01-core/HttpRequest.hpp"
+#include "../00-headers/01-core/RequestResponseManager.hpp"
 #include "../00-headers/01-core/HttpResponse.hpp"
 #include "../00-headers/01-core/Cookies.hpp"
 #include "../00-headers/01-core/SignalHandler.hpp"
@@ -114,157 +115,168 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
 
 void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
 {
-    try
-    {
-        std::map<int, std::string> requestMap;
-        Epoll epoll(10);
-        char buff[BUFFER_SIZE];
-        int fd_client;
-        ssize_t reads;
-        struct epoll_event event;
-        struct sockaddr_in client_addr;
-        socklen_t client_addr_len;
-        int eventCount;
-        
-        for (size_t i = 0; i < fd_sockets.size(); ++i)
-        {
-            epoll.addFd(fd_sockets[i], EPOLLIN);
-            epoll.makeSocketNonBlocking(fd_sockets[i]);
-        }
-        epoll.addFd(signalPipeFd[0], EPOLLIN);
-        while (!signalReceived)
-        {
-            eventCount = epoll.wait(-1);
-            if (eventCount == -1)
-            {
-                Log::error("Erreur lors de epoll_wait");
-                break;
-            }
-            for (int i = 0; i < eventCount; ++i)
-            {
-                event = epoll.getEvent(i);
-
-                if (event.data.fd == signalPipeFd[0]) 
-                {
-                    signalReceived = true;
-                    break;
-                }
-                bool isServerSocket = false;
-                for (size_t j = 0; j < fd_sockets.size(); ++j)
-                {
-                    if (event.data.fd == fd_sockets[j])
-                    {
-                        isServerSocket = true;
-                        break;
-                    }
-                }
-                if (isServerSocket) 
-                {
-                    client_addr_len = sizeof(client_addr);
-                    fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
-                    if (fd_client == -1)
-                    {
-                        Log::print_final_log("Erreur lors de accept", "FD:", strerror(errno));
-                        continue;
-                    }
-                    epoll.makeSocketNonBlocking(fd_client);
-                    epoll.addFd(fd_client, EPOLLIN);
-                }
-                else if (event.events & EPOLLIN) 
-                {
-                    fd_client = event.data.fd;
-                    std::string &currentRequest = requestMap[fd_client];
-                    while ((reads = recv(fd_client, buff, BUFFER_SIZE, 0)) > 0)
-                        currentRequest.append(buff, reads);
-                    if (reads == 0) 
-                    {
-                        Log::print_final_log("Connection closed by client", "FD:", fd_client);
-                        epoll.removeFd(fd_client);
-                        requestMap.erase(fd_client);
-                        continue;
-                    }
-                    else if (reads < 0 && errno != EAGAIN && errno != EWOULDBLOCK) 
-                    {
-                        Log::print_final_log("Error in recv", "FD: ", strerror(errno));
-                        epoll.removeFd(fd_client);
-                        requestMap.erase(fd_client);
-                        continue;
-                    }
-                    size_t headerEnd = currentRequest.find("\r\n\r\n");
-                    if (headerEnd != std::string::npos)
-                    {
-                        if (currentRequest.find("Transfer-Encoding: chunked") != std::string::npos)
-                        {
-                            size_t chunk_start = headerEnd + 4;
-                            while (true)
-                            {
-                                size_t chunk_size_end = currentRequest.find("\r\n", chunk_start);
-                                if (chunk_size_end == std::string::npos)
-                                    break;
-                                std::string chunk_size_str = currentRequest.substr(chunk_start, chunk_size_end - chunk_start);
-                                size_t chunk_size = std::strtol(chunk_size_str.c_str(), NULL, 16);
-                                if (chunk_size == 0)
-                                {
-                                    Log::print_final_log("Chunked request received:", "FD:", fd_client);
-                                    int serverIndex = findServerIndex(currentRequest, Servers);
-                                    type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
-                                    currentRequest.clear();
-                                    break;
-                                }
-                                size_t chunk_data_start = chunk_size_end + 2;
-                                size_t chunk_data_end = chunk_data_start + chunk_size;
-
-                                if (chunk_data_end > currentRequest.size())
-                                    break;
-                                chunk_start = chunk_data_end + 2; 
-                            }
-                        }
-                        else
-                        {
-                            size_t content_length_pos = currentRequest.find("Content-Length:");
-                            if (content_length_pos != std::string::npos)
-                            {
-                                size_t content_length_start = content_length_pos + strlen("Content-Length:");
-                                size_t content_length_end = currentRequest.find("\r\n", content_length_start);
-                                if (content_length_end != std::string::npos)
-                                {
-                                    std::string content_length_str = currentRequest.substr(content_length_start, content_length_end - content_length_start);
-                                    size_t content_length = std::atoi(content_length_str.c_str());
-                                    size_t body_start = headerEnd + 4;
-
-                                    if (currentRequest.size() >= body_start + content_length)
-                                    {
-                                        Log::print_final_log("Content-Length request received:", "FD:", fd_client);
-                                        int serverIndex = findServerIndex(currentRequest, Servers);
-                                        type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
-                                        currentRequest.clear();
-                                    }
-                                    else
-                                        Log::print_final_log("Incomplete content-length data detected:", "FD:", fd_client);
-                                }
-                            }
-                            else
-                            {
-                                Log::print_final_log("No Content-Length or chunked data detected:", "FD:", fd_client);
-                                int serverIndex = findServerIndex(currentRequest, Servers);
-                                type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
-                                currentRequest.clear();
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (signalReceived)
-        {
-            sessionManager.saveSessionsToFile();
-            Log::cleanup();
-            throw SignalException();
-        }
-    }
-    catch (std::exception& e)
-    {
-        Log::print_final_log("Closing:", e.what());
-        Log::print_final_log("Server powered off", "Goodbye!");
-    }
+    RequestResponseManager rrm(fd_sockets, Servers, sessionManager);
+    rrm.run();
 }
+
+
+
+
+// void request_and_response_fd_manager(std::vector<int>& fd_sockets, std::vector<Server*>& Servers, SessionManager &sessionManager)
+// {
+//     try
+//     {
+//         std::map<int, std::string> requestMap;
+//         Epoll epoll(10);
+
+//         char buff[BUFFER_SIZE];
+//         int fd_client;
+//         ssize_t reads;
+//         struct epoll_event event;
+//         struct sockaddr_in client_addr;
+//         socklen_t client_addr_len;
+//         int eventCount;
+        
+//         for (size_t i = 0; i < fd_sockets.size(); ++i)
+//         {
+//             epoll.addFd(fd_sockets[i], EPOLLIN);
+//             epoll.makeSocketNonBlocking(fd_sockets[i]);
+//         }
+//         epoll.addFd(signalPipeFd[0], EPOLLIN);
+//         while (!signalReceived)
+//         {
+//             eventCount = epoll.wait(-1);
+//             if (eventCount == -1)
+//             {
+//                 Log::error("Erreur lors de epoll_wait");
+//                 break;
+//             }
+//             for (int i = 0; i < eventCount; ++i)
+//             {
+//                 event = epoll.getEvent(i);
+
+//                 if (event.data.fd == signalPipeFd[0]) 
+//                 {
+//                     signalReceived = true;
+//                     break;
+//                 }
+
+//                 bool isServerSocket = false;
+//                 for (size_t j = 0; j < fd_sockets.size(); ++j)
+//                 {
+//                     if (event.data.fd == fd_sockets[j])
+//                     {
+//                         isServerSocket = true;
+//                         break;
+//                     }
+//                 }
+//                 if (isServerSocket) 
+//                 {
+//                     client_addr_len = sizeof(client_addr);
+//                     fd_client = accept(event.data.fd, (struct sockaddr*)&client_addr, &client_addr_len);
+//                     if (fd_client == -1)
+//                     {
+//                         Log::print_final_log("Erreur lors de accept", "FD:", strerror(errno));
+//                         continue;
+//                     }
+//                     epoll.makeSocketNonBlocking(fd_client);
+//                     epoll.addFd(fd_client, EPOLLIN);
+//                 }
+//                 else if (event.events & EPOLLIN) 
+//                 {
+//                     fd_client = event.data.fd;
+//                     std::string &currentRequest = requestMap[fd_client];
+//                     while ((reads = recv(fd_client, buff, BUFFER_SIZE, 0)) > 0)
+//                         currentRequest.append(buff, reads);
+//                     if (reads == 0) 
+//                     {
+//                         Log::print_final_log("Connection closed by client", "FD:", fd_client);
+//                         epoll.removeFd(fd_client);
+//                         requestMap.erase(fd_client);
+//                         continue;
+//                     }
+//                     else if (reads < 0 && errno != EAGAIN && errno != EWOULDBLOCK) 
+//                     {
+//                         Log::print_final_log("Error in recv", "FD: ", strerror(errno));
+//                         epoll.removeFd(fd_client);
+//                         requestMap.erase(fd_client);
+//                         continue;
+//                     }
+//                     size_t headerEnd = currentRequest.find("\r\n\r\n");
+//                     if (headerEnd != std::string::npos)
+//                     {
+//                         if (currentRequest.find("Transfer-Encoding: chunked") != std::string::npos)
+//                         {
+//                             size_t chunk_start = headerEnd + 4;
+//                             while (true)
+//                             {
+//                                 size_t chunk_size_end = currentRequest.find("\r\n", chunk_start);
+//                                 if (chunk_size_end == std::string::npos)
+//                                     break;
+//                                 std::string chunk_size_str = currentRequest.substr(chunk_start, chunk_size_end - chunk_start);
+//                                 size_t chunk_size = std::strtol(chunk_size_str.c_str(), NULL, 16);
+//                                 if (chunk_size == 0)
+//                                 {
+//                                     Log::print_final_log("Chunked request received:", "FD:", fd_client);
+//                                     int serverIndex = findServerIndex(currentRequest, Servers);
+//                                     type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
+//                                     currentRequest.clear();
+//                                     break;
+//                                 }
+//                                 size_t chunk_data_start = chunk_size_end + 2;
+//                                 size_t chunk_data_end = chunk_data_start + chunk_size;
+
+//                                 if (chunk_data_end > currentRequest.size())
+//                                     break;
+//                                 chunk_start = chunk_data_end + 2; 
+//                             }
+//                         }
+//                         else
+//                         {
+//                             size_t content_length_pos = currentRequest.find("Content-Length:");
+//                             if (content_length_pos != std::string::npos)
+//                             {
+//                                 size_t content_length_start = content_length_pos + strlen("Content-Length:");
+//                                 size_t content_length_end = currentRequest.find("\r\n", content_length_start);
+//                                 if (content_length_end != std::string::npos)
+//                                 {
+//                                     std::string content_length_str = currentRequest.substr(content_length_start, content_length_end - content_length_start);
+//                                     size_t content_length = std::atoi(content_length_str.c_str());
+//                                     size_t body_start = headerEnd + 4;
+
+//                                     if (currentRequest.size() >= body_start + content_length)
+//                                     {
+//                                         Log::print_final_log("Content-Length request received:", "FD:", fd_client);
+//                                         int serverIndex = findServerIndex(currentRequest, Servers);
+//                                         type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
+//                                         currentRequest.clear();
+//                                     }
+//                                     else
+//                                         Log::print_final_log("Incomplete content-length data detected:", "FD:", fd_client);
+//                                 }
+//                             }
+//                             else
+//                             {
+//                                 Log::print_final_log("No Content-Length or chunked data detected:", "FD:", fd_client);
+//                                 int serverIndex = findServerIndex(currentRequest, Servers);
+//                                 type_request_manager(&fd_client, &currentRequest, Servers[serverIndex], sessionManager);
+//                                 currentRequest.clear();
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         if (signalReceived)
+//         {
+//             sessionManager.saveSessionsToFile();
+//             Log::cleanup();
+//             throw SignalException();
+//         }
+//     }
+//     catch (std::exception& e)
+//     {
+//         Log::print_final_log("Closing:", e.what());
+//         Log::print_final_log("Server powered off", "Goodbye!");
+//     }
+// }

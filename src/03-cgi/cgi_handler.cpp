@@ -30,7 +30,7 @@ std::string Cgi_handler::getExeContext(std::string file)
     if (file.find(".php") != std::string::npos)
         return "php-cgi";
     if (file.find(".py") != std::string::npos)
-        return "python3.10";
+        return "python";
     if (file.find(".pl") != std::string::npos)
         return "perl";
     if (file.find(".sh") != std::string::npos)
