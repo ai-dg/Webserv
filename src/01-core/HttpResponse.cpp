@@ -21,6 +21,12 @@
 /**
  * @brief Private setters
  */
+
+HttpResponse::HttpResponse()
+{
+
+}
+
 void HttpResponse::setMineType(void)
 {
     this->mimeType = checkMimeType(this->filePath);

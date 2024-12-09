@@ -58,22 +58,22 @@ std::string createBufferDataFile(std::string body)
     return filename;
 }
 
-void Cgi_handler::setEnvironment(HttpRequest &req)
+void Cgi_handler::setEnvironment()
 {   
-    std::map<std::string, std::string> headers = req.getHeaders();
-    std::string requestMethodEnv = "REQUEST_METHOD=" + req.getMethod();
+    std::map<std::string, std::string> headers = req->getHeaders();
+    std::string requestMethodEnv = "REQUEST_METHOD=" + req->getMethod();
     std::string contentLengthEnv;
 
-    if (req.getMethod() == "POST" || req.getMethod() == "DELETE")
+    if (req->getMethod() == "POST" || req->getMethod() == "DELETE")
     {
-        if (req.getHeader("Content-Length").size() != 0)
+        if (req->getHeader("Content-Length").size() != 0)
         {
-            contentLengthEnv =  "CONTENT_LENGTH=" + req.getHeader("Content-Length");
+            contentLengthEnv =  "CONTENT_LENGTH=" + req->getHeader("Content-Length");
         }
-        else if (req.getHeader("Content-Length").size() == 0 && req.getHeader("Transfer-Encoding") == "chunked")
+        else if (req->getHeader("Content-Length").size() == 0 && req->getHeader("Transfer-Encoding") == "chunked")
         {
             std::ostringstream oss;
-            oss << req.getBody().length();
+            oss << req->getBody().length();
             contentLengthEnv = "CONTENT_LENGTH=" + oss.str();
         }
     }
@@ -110,9 +110,9 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
             }
         }
         else
-            this->addToEnvironment(req.getFormatedHeader(it->first));
+            this->addToEnvironment(req->getFormatedHeader(it->first));
     }
-    this->addToEnvironment("CONTENT_TYPE=" + req.getHeader("Content-Type"));
+    this->addToEnvironment("CONTENT_TYPE=" + req->getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
     this->addToEnvironment("PATH_INFO=/");
@@ -125,7 +125,7 @@ void Cgi_handler::setEnvironment(HttpRequest &req)
         this->addToEnvironment("PYTHONWARNINGS=ignore");
     else
     {
-        std::string filename = createBufferDataFile(req.getBody());
+        std::string filename = createBufferDataFile(req->getBody());
         this->addToEnvironment("CGI_FILE=" + filename);
     }
     environment.push_back(NULL);
@@ -178,18 +178,22 @@ Cgi_handler::~Cgi_handler()
     environment.clear();
 }
 
+Cgi_handler::Cgi_handler(int _fd_client, HttpRequest *_req, HttpResponse *_res): fd_client(_fd_client), req(_req), res(_res)
+{
+}
+
 /**
  * @brief Execute the CGI script
  */
 
 
-void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, int fd_client, HttpResponse &res) 
+void Cgi_handler::executeCGI(std::string const& scriptPath) 
 {
     pid_t pid;
     Pipe pipe_in("./sessions/pipe_infile");
     Pipe pipe_out("./sessions/pipe_outfile");
     this->scriptPath = scriptPath;
-    std::string data = req.getBody();
+    std::string data = req->getBody();
 
     if (pipe_in.getFd() == -1 || pipe_out.getFd() == -1) {
         std::cerr << "Error: Failed to open temporary files for Pipe." << std::endl;
@@ -215,16 +219,16 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         }
         pipe_in.closeFd();
         pipe_out.closeFd();
-        setEnvironment(req);
+        setEnvironment();
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
         std::string exe_context = getExeContext(scriptPathTemp);
         std::string path = "/usr/bin/env";
-        if (req.hasFileSpecialRoute(scriptPathTemp))
+        if (req->hasFileSpecialRoute(scriptPathTemp))
         {
-            Location *route = req.getRouteConf(getExtension(scriptPathTemp));
+            Location *route = req->getRouteConf(getExtension(scriptPathTemp));
             if (!route)
                 std::cerr << "unkown route" << std::endl;
             if (route && !route->exe().empty())
@@ -279,21 +283,21 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         {
             if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
             {
-                res.setRedirection(500);
-                res.send(fd_client);
+                res->setRedirection(500);
+                res->send(fd_client);
                 return;
             }
         } 
         else if (WIFSIGNALED(status)) 
         {
-            res.setRedirection(500);
-            res.send(fd_client);
+            res->setRedirection(500);
+            res->send(fd_client);
             return;
         } 
         else 
         {
-            res.setRedirection(500);
-            res.send(fd_client);
+            res->setRedirection(500);
+            res->send(fd_client);
             return;
         }
         char buffer[4096];
@@ -405,6 +409,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath, HttpRequest &req, in
         pipe_in.removeFile();
         pipe_out.removeFile();
     }
-    res.setStatusCode(200);
+    res->setStatusCode(200);
     Log::print_final_log("Response sent with status CGI:", 200, "FD:", fd_client);
 }

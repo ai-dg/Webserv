@@ -15,9 +15,14 @@
 #include "../00-headers/02-utils/Log.hpp"
 #include "../00-headers/02-utils/stringUtils.hpp"
 
+HttpRequest::HttpRequest(){}
+
+
 /**
  * @brief Private setters
  */
+
+
 void HttpRequest::setMethod(std::string req)
 {
     size_t spacePos = req.find(" ");

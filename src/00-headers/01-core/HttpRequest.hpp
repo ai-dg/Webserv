@@ -49,6 +49,7 @@ class HttpRequest
         /**
          * @brief Copelin form
          */
+        HttpRequest();
         HttpRequest(std::string req);
         HttpRequest(std::string req, std::vector<Server *> Servers);
         HttpRequest(std::string req, Server *server);
