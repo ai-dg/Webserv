@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
+/*	           				                                                  */
 /*                                                        :::      ::::::::   */
 /*   cgi_handler.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
@@ -13,6 +13,7 @@
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/HttpRequest.hpp"
 #include "../00-headers/01-core/scriptUtils.hpp"
+#include "../00-headers/01-core/Status.hpp"
 #include "../00-headers/01-core/Pipe.hpp"
 #include "../00-headers/02-utils/Log.hpp"
 #include "../00-headers/02-utils/files.hpp"
@@ -253,6 +254,31 @@ void Cgi_handler::executeScript(std::string &path, std::string &scriptPathTemp, 
  * @brief Execute the CGI script
  */
 
+int Cgi_handler::handleErrorStatus(int status)
+{
+    if (WIFEXITED(status)) 
+        {
+            if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
+            {
+                res->setRedirection(500);
+                res->send(fd_client);
+                return -1;
+            }
+        } 
+        else if (WIFSIGNALED(status)) 
+        {
+            res->setRedirection(500);
+            res->send(fd_client);
+            return -1;
+        } 
+        else 
+        {
+            res->setRedirection(500);
+            res->send(fd_client);
+            return -1;
+        }
+        return 1;
+}
 
 void Cgi_handler::executeCGI(std::string const& scriptPath) 
 {
@@ -297,137 +323,153 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
             perror("waitpid");
             return;
         }
-
-        if (WIFEXITED(status)) 
-        {
-            if (WEXITSTATUS(status) == 1 || WEXITSTATUS(status) == 126 || WEXITSTATUS(status) == 127 || WEXITSTATUS(status) > 128)
-            {
-                res->setRedirection(500);
-                res->send(fd_client);
-                return;
-            }
-        } 
-        else if (WIFSIGNALED(status)) 
-        {
-            res->setRedirection(500);
-            res->send(fd_client);
-            return;
-        } 
-        else 
-        {
-            res->setRedirection(500);
-            res->send(fd_client);
-            return;
-        }
-        char buffer[4096];
-        ssize_t bytesRead;
+        if(handleErrorStatus(status) < 1)
+            return;        
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
-        std::string bufferAccumulator;
-        std::string bufferAccumulator2;
         if (scriptPath.find(".php") != std::string::npos) 
-            write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
+            ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {
-            std::ostringstream headers;
-            headers << "HTTP/1.1 200 OK" << CRLF
-                    << "Content-Length: " << data.size() << CRLF
-                    << "Content-Type: text/html; charset=utf-8" << CRLF
-                    << "Date: " << get_current_date() << CRLF << CRLF;
-
-            std::string headersStr = headers.str();
-            size_t offset = 0;
-            ssize_t bytesWritten;
-            while (offset < headersStr.size()) 
-            {
-                bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
-                if (bytesWritten == -1) 
-                {
-                    ::usleep(1000); 
-                    continue;
-                } 
-                else if (bytesWritten == 0) 
-                {
-                    ::perror("write returned 0 (unexpected)");
-                    return;
-                }
-                offset += bytesWritten; 
-            }
-            bool headersSkipped = false;
-            bufferAccumulator2.append(headersStr);
-            std::string remainingBuffer;
-            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) {
-                buffer[bytesRead] = '\0';
-                remainingBuffer += buffer;
-
-                
-                if (!headersSkipped) 
-                {
-                    size_t headerEnd = remainingBuffer.find("\r\n\r\n");
-                    if (headerEnd != std::string::npos) 
-                    {
-                        headersSkipped = true;
-                        remainingBuffer = remainingBuffer.substr(headerEnd + 4);
-                    } 
-                    else 
-                        continue;
-                }
-                offset = 0;
-                while (offset < remainingBuffer.size()) 
-                {
-                    bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
-                    if (bytesWritten == -1) 
-                    {
-                        ::usleep(1000); 
-                        continue;
-                    } 
-                    else if (bytesWritten == 0) 
-                    {
-                        ::perror("write returned 0 (unexpected)");
-                        break;
-                    }
-
-                    offset += bytesWritten; 
-                }
-                bufferAccumulator2 += remainingBuffer; 
-                remainingBuffer.clear();               
-            }
-            if (bytesRead == -1) 
-                ::perror("read");
+            handleSecretHeaderIO(pipe_out);
         }
         else 
-        {
-            while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) 
-            {
-                buffer[bytesRead] = '\0';
-                size_t offset = 0;
-                ssize_t bytesWritten;
-                while (offset < (size_t)bytesRead) 
-                {
-                    bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
-
-                    if (bytesWritten == -1) 
-                    {   
-                        ::usleep(1000); 
-                        continue;
-                    } 
-                    else if (bytesWritten == 0) 
-                    {
-                        ::perror("write returned 0 (unexpected)");
-                        break;
-                    }
-                    offset += bytesWritten; 
-                }
-            }
-            if (bytesRead == -1) 
-                ::perror("read");
-        }
-        if (bytesRead == -1) 
-            ::perror("read");
-        bufferAccumulator2.clear();
+        {   
+            handleDirectIO(pipe_out);              
+        }      
         pipe_out.closeFd();
         pipe_in.removeFile();
         pipe_out.removeFile();
     }
     res->setStatusCode(200);
     Log::print_final_log("Response sent with status CGI:", 200, "FD:", fd_client);
+}
+
+
+void Cgi_handler::handleDirectIO(Pipe &pipe_out)
+{
+    char buffer[4096];
+    ssize_t bytesRead = 0;
+    while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0) 
+    {
+        buffer[bytesRead] = '\0';
+        size_t offset = 0;
+        ssize_t bytesWritten;
+        while (offset < (size_t)bytesRead) 
+        {
+            bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
+
+            if (bytesWritten == -1) 
+            {   
+                ::usleep(1000); 
+                continue;
+            } 
+            else if (bytesWritten == 0) 
+            {
+                ::perror("write returned 0 (unexpected)");
+                break;
+            }
+            offset += bytesWritten; 
+        }
+    }
+    if (bytesRead == -1) 
+        ::perror("read");
+}
+
+std::string getHeaderStatus(char *buffer, std::string &status)
+{
+	std::string line(buffer);
+	size_t statusPos = line.find("Status");
+	if (statusPos != std::string::npos)
+	{
+		status = line.substr(statusPos + 8, 3);
+		return status;
+	}
+	return "";
+}
+
+std::string Cgi_handler::getHeaders(std::string const &status)
+{
+	std::ostringstream headers;
+    headers << "HTTP/1.1 " << status << " " << Status::get(status) << CRLF
+            << "Content-Length: " << req->getBody().size() << CRLF
+            << "Content-Type: text/html; charset=utf-8" << CRLF
+            << "Date: " << get_current_date() << CRLF << CRLF;
+	return headers.str();
+}
+
+void Cgi_handler::sendHeaders(std::string const &headersStr)
+{
+	size_t offset = 0;
+    ssize_t bytesWritten = 0; 
+    while (offset < headersStr.size()) 
+    {
+		bytesWritten = ::write(fd_client, headersStr.c_str() + offset, headersStr.size() - offset);
+		if (bytesWritten == -1) 
+		{
+	    	::usleep(1000); 
+	    	continue;
+		} 
+		else if (bytesWritten == 0) 
+		{
+	    	::perror("write returned 0 (unexpected)");
+	    	return;
+		}
+		offset += bytesWritten; 
+    }
+}
+
+void Cgi_handler::handleSecretHeaderIO(Pipe &pipe_out)
+{
+    char buffer[4096];
+    ssize_t bytesRead = 0;
+    std::string bufferAccumulator;
+   	std::string headersStr = getHeaders("200");
+	sendHeaders(headersStr);
+	bufferAccumulator.append(headersStr);
+    
+            //////////////////////////////////////////////////////
+    bool headersSkipped = false;
+    
+    std::string remainingBuffer;
+	std::string status;
+    while ((bytesRead = ::read(pipe_out.getFd(), buffer, sizeof(buffer) - 1)) > 0)
+    {
+		buffer[bytesRead] = '\0';
+		getHeaderStatus(buffer, status);
+		remainingBuffer += buffer;	
+		if (!headersSkipped) 
+		{
+	    	size_t headerEnd = remainingBuffer.find("\r\n\r\n");
+	    	if (headerEnd != std::string::npos) 
+	    	{
+	        	headersSkipped = true;
+	        	remainingBuffer = remainingBuffer.substr(headerEnd + 4);
+	    	} 
+	    	else 
+	        	continue;
+	}
+		
+	size_t offset = 0;
+    ssize_t bytesWritten = 0; 
+	while (offset < remainingBuffer.size()) 
+	{
+	    bytesWritten = ::write(fd_client, remainingBuffer.c_str() + offset, remainingBuffer.size() - offset);
+	    if (bytesWritten == -1) 
+	    {
+	        ::usleep(1000); 
+	        continue;
+	    } 
+	    else if (bytesWritten == 0) 
+	    {
+	        ::perror("write returned 0 (unexpected)");
+	        break;
+	    }
+	    offset += bytesWritten; 
+	}
+	bufferAccumulator += remainingBuffer; 
+	remainingBuffer.clear();               
+            }
+            if (bytesRead == -1) 
+	::perror("read");
+            bufferAccumulator.clear();
 }

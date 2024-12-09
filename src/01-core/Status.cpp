@@ -12,6 +12,7 @@
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/Status.hpp"
+#include "../00-headers/02-utils/stringUtils.hpp"
 
 // Initialisation de la map statique
 const std::map<int, std::string> Status::codes = Status::initializeCodes();
@@ -52,6 +53,15 @@ std::map<int, std::string> Status::initializeCodes()
 std::string Status::get(int code)
 {
     std::map<int, std::string>::const_iterator it = Status::codes.find(code);
+    if (it != Status::codes.end())
+        return it->second;
+    return "Unknown Status Code";
+}
+
+std::string Status::get(std::string code)
+{
+    int iCode = stoi(code);
+    std::map<int, std::string>::const_iterator it = Status::codes.find(iCode);
     if (it != Status::codes.end())
         return it->second;
     return "Unknown Status Code";

@@ -14,6 +14,7 @@
 #include "../00-shared/includes.hpp"
 #include "../01-core/HttpRequest.hpp"
 #include "../01-core/HttpResponse.hpp"
+#include "../01-core/Pipe.hpp"
 #include "../02-utils/stringUtils.hpp"
 
 class Cgi_handler
@@ -38,6 +39,11 @@ class Cgi_handler
         void childCgiProcess(Pipe &pipe_in, Pipe &pipe_out);        
         void setupSpecialRoute(std::string &path, std::string &scriptPathTemp, std::string &exe_context);
         void executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context);
+        int handleErrorStatus(int status);
+        void handleDirectIO(Pipe &pipe_out);
+        void handleSecretHeaderIO(Pipe &pipe_out);
+        std::string getHeaders(std::string const &status);
+        void sendHeaders(std::string const &headersStr);
  
     public:
         /**
@@ -53,5 +59,4 @@ class Cgi_handler
          * @brief Execute the CGI script
          */
         void executeCGI(std::string const& scriptPath);
-
 };
