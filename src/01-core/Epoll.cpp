@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 21:50:24 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/09 10:31:33 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,15 +185,9 @@ int Epoll::makeSocketNonBlocking(int fd)
 
 	flags = fcntl(fd, F_GETFL, 0);
 	if (flags == -1)
-	{
-		Log::error("fcntl");
-		return (-1);
-	}
+		throw std::runtime_error("fcntl GETFL failed");
 	flags |= O_NONBLOCK;
 	if (fcntl(fd, F_SETFL, flags) == -1)
-	{
-		Log::error("fcntl");
-		return -1;
-	}
+		throw std::runtime_error("fcntl SETFL failed");
 	return 0;
 }
