@@ -10,7 +10,8 @@
 #include "../01-core/Epoll.hpp"
 
 
-class RequestResponseManager {
+class RequestResponseManager 
+{
     private:
         std::vector<int>& m_fdSockets;
         std::vector<Server*>& m_servers;
@@ -27,11 +28,12 @@ class RequestResponseManager {
         bool handleContentLengthRequest(int fdClient, std::string& currentRequest);
         void processRequestWithServer(int fdClient, std::string& request);
         void handleClientDisconnection(int fdClient);
-
         void handleRecvError(int fdClient);
+        bool isSocketReadyForRead(int fd_Client);
 
     public:
-        RequestResponseManager(
+        RequestResponseManager
+        (
             std::vector<int>& fdSockets, 
             std::vector<Server*>& servers, 
             SessionManager& sessionManager

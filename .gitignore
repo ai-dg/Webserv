@@ -3,7 +3,9 @@ chrisnotes.md
 webserv
 webserv.pdf
 sessions/*
+!sessions/.gitkeep
 logs/*
+!logs/.gitkeep
 www/test_site/result.txt
 vgcore.*
 result.txt

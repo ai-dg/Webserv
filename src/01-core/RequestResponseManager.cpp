@@ -18,13 +18,11 @@ bool RequestResponseManager::handleNewConnection(const struct epoll_event& event
     int fd_Client = accept(event.data.fd, 
                             (struct sockaddr*)&client_addr, 
                             &client_addr_len);
-    
     if (fd_Client == -1) 
     {
         Log::print_final_log("Erreur lors de accept", "FD:", strerror(errno));
         return false;
     }
-
     m_epoll.makeSocketNonBlocking(fd_Client);
     m_epoll.addFd(fd_Client, EPOLLIN);
     return true;
@@ -36,17 +34,20 @@ bool RequestResponseManager::processRequest(int fd_Client)
     char buff[BUFFER_SIZE];
     ssize_t reads;
 
-    while ((reads = ::recv(fd_Client, buff, BUFFER_SIZE, 0)) > 0) 
-        currentRequest.append(buff, reads);
-    if (reads == 0) 
+    while ((reads = ::recv(fd_Client, buff, BUFFER_SIZE, 0)) > 0)
     {
-        handleClientDisconnection(fd_Client);
-        return false;
-    }
-    if (reads < 0) 
-    {
-        handleRecvError(fd_Client);
-        return false;
+        if (reads > 0)
+            currentRequest.append(buff, reads);
+        if (reads == 0) 
+        {
+            handleClientDisconnection(fd_Client);
+            return false;
+        }
+        if (reads < 0) 
+        {
+            handleRecvError(fd_Client);
+            return false;
+        }
     }
     return parseAndProcessRequest(fd_Client, currentRequest);
 }
