@@ -1,5 +1,11 @@
 #!/bin/bash
 
+export $(cat | xargs)
+
+
+env > env.txt
+
+
 # Envoi des en-têtes HTTP
 echo "Content-type: text/html"
 echo "Content-length: $(wc -c << 'EOF'
@@ -29,7 +35,7 @@ echo "Content-length: $(wc -c << 'EOF'
     </style>
 </head>
 <body>
-    <h1>Bonjour le monde !</h1>
+    <h1>Bonjour $(name) !</h1>
     <div class="info">
         <p>Ceci est ma première page générée en Bash CGI</p>
         <p>Date et heure : $(date)</p>
@@ -42,7 +48,7 @@ EOF
 echo ""
 
 # Envoi du contenu HTML
-cat << 'EOF'
+cat << EOF
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -69,7 +75,7 @@ cat << 'EOF'
     </style>
 </head>
 <body>
-    <h1>Bonjour le monde !</h1>
+    <h1>Bonjour $(echo $name) !</h1>
     <div class="info">
         <p>Ceci est ma première page générée en Bash CGI</p>
         <p>Date et heure : $(date)</p>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   defines.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:18 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/11/30 21:41:52 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:04:58 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #define CRLF "\r\n"
 #define FILENOTFOUND "FILE NOT FOUND"
+#define PATH_NOT_FOUND "PATH NOT FOUND"
+#define PATH_FOUND "PATH FOUND"
 #define BUFFER_SIZE 2048
 #define AUTO 200
 #define NO_BODY 1

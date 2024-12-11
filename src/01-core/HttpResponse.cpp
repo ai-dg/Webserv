@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 21:53:59 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:10:01 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ HttpResponse::HttpResponse(const HttpRequest &req)
     removeDuplicateSlashes(this->filePath);
     sendBody = true;
     body = "";
-    setMineType();
 }
 
 HttpResponse::HttpResponse(const HttpResponse &src) : headers(src.headers), mimeType(src.mimeType), filePath(src.filePath), body(src.body), statusCode(src.statusCode)
@@ -301,19 +300,34 @@ void HttpResponse::send(int fd_client)
     std::string uri = req->getURI();
     std::string extension = getExtension(uri);
     
+    // this->filePath = req->getURI();
+    
     if (body.size() > 0)
         resFile = body;
-    else 
+    else
         resFile = getFile(this->filePath);
-    if (resFile == FILENOTFOUND && statusCode !=301 && statusCode !=302 && sendBody && !req->getRouteConf(req->getRoute()))
+
+    if (req->getRouteConf(req->getRoute()) && extension == "" && resFile == FILENOTFOUND)
+        resFile = PATH_FOUND;
+
+    if (extension == "" && resFile == FILENOTFOUND && !req->getRouteConf(req->getRoute()))
+       resFile = PATH_NOT_FOUND;
+
+    if (resFile == FILENOTFOUND && statusCode != 301 && statusCode !=302 && sendBody)
+    {
+        this->statusCode = 404;
+        resFile = getFile("./www/error_pages/404.html");
+    }
+    if (resFile == PATH_NOT_FOUND)
     {
         this->statusCode = 404;
         resFile = getFile("./www/error_pages/404.html");
     }
     std::string res = "HTTP/1.1 " + numberToString(this->statusCode) + Status::get(statusCode) + CRLF;
     res += getHeaders();
-    if (sendBody && extension.empty())
-        res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n";           
+    setMineType();
+    if (this->mimeType != "")
+        res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n";
     res += "Connection: keep-alive\r\n";
     res += "Date: " + get_current_date() + CRLF;
     if (statusCode != 301 && statusCode != 302 && sendBody)

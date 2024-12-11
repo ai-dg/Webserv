@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:23:00 by ls                #+#    #+#             */
-/*   Updated: 2024/12/05 05:31:19 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:00:19 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ std::string getMime(const std::string& mime)
 std::string checkMimeType(const std::string& path)
 {
     std::string local = path;
-    local.erase(0,8);
     if (local == "/")
         return "text/html";
     std::string mime = local.substr(local.find_last_of(".") + 1);

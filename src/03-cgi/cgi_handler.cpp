@@ -84,7 +84,8 @@ void Cgi_handler::setEnvironment()
     this->addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
     
     size_t queryPos = scriptPath.find('?');
-    if (queryPos != std::string::npos) {
+    if (queryPos != std::string::npos) 
+    {
         std::string queryString = scriptPath.substr(queryPos + 1);
         this->addToEnvironment("QUERY_STRING=" + queryString);
     }
@@ -122,7 +123,7 @@ void Cgi_handler::setEnvironment()
         this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
         this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);        
     }
-    else if (getExeContext(scriptPath) == "python3")
+    else if (getExeContext(scriptPath) == "python")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
     else
     {
@@ -243,9 +244,15 @@ void Cgi_handler::executeScript(std::string &path, std::string &scriptPathTemp, 
         const_cast<char *>(scriptPathTemp.c_str()),
         NULL
     };
+    std::string argv_2 = argv[2];
+    if (argv_2 != "" && access(argv[2], X_OK) == -1)
+    {
+        Log::print_final_log("Error: access", scriptPathTemp);
+        ::exit(1);
+    }
     if (execve(argv[0], argv, environment.data()) == -1)
     {
-        ::perror("execve");
+        Log::print_final_log("Error: execve", scriptPathTemp);
         ::exit(1);
     }
 }
@@ -326,7 +333,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
         if(handleErrorStatus(status) < 1)
             return;        
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
-        if (scriptPath.find(".php") != std::string::npos) 
+        if (scriptPath.find(".php") != std::string::npos || scriptPath.find(".sh") != std::string::npos) 
             ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {
