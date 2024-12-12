@@ -202,6 +202,7 @@ void RequestResponseManager::run()
                     handleNewConnection(event);
                 else if (event.events & EPOLLIN) 
                     processRequest(event.data.fd);
+                // m_epoll.check_timeouts_of_clients();
             }
         }
 

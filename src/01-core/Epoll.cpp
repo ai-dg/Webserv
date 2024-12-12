@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/12 22:46:16 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/12 23:00:49 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,27 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 		
 	}
 	return (false);
+}
+
+void Epoll::check_timeouts_of_clients() 
+{
+    std::time_t now = std::time(0); 
+	int timeout_seconds = 10;
+    
+    std::map<int, std::time_t>::iterator it = timers.begin();
+    while (it != timers.end()) 
+	{
+        
+        if (now - it->second > timeout_seconds) 
+		{            
+            close(it->first);            
+            timers.erase(it++);
+        } 
+		else 
+		{
+            ++it; 
+        }
+    }
 }
 
 int Epoll::makeSocketNonBlocking(int fd)
