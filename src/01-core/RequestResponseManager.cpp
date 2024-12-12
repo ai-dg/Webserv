@@ -133,6 +133,8 @@ bool RequestResponseManager::handleContentLengthRequest(int fd_Client, std::stri
 void RequestResponseManager::processRequestWithServer(int fd_Client, std::string& request) 
 {
     int serverIndex = findServerIndex(request, m_servers);
+    if (m_epoll.purgeTimeOutFds(*(m_servers[serverIndex]->getConf()), fd_Client) == true)
+        return;
     type_request_manager(&fd_Client, &request, m_servers[serverIndex], m_sessionManager);
 }
 

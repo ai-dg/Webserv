@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:43 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/05 21:45:55 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/12 22:21:18 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ class Epoll
         struct epoll_event getEvent(int index) const;
         static bool purgeTimeOutFds(const Conf &conf, int epoll_fd);
         int makeSocketNonBlocking(int fd);
+        void check_timeouts_of_clients();
 };

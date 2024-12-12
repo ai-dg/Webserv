@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/09 10:31:33 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/12 22:46:16 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,21 +162,26 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 	std::map<int, std::time_t>::iterator it;
 	for (it = Epoll::timers.begin(); it != Epoll::timers.end();)
 	{
-		if (now - it->second > MAX_TIME)
+		if (it->first == epoll_fd)
 		{
-			if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, it->first, NULL) == -1)
+			if (now - it->second > MAX_TIME)
 			{
-				Log::error("epoll_ctl: removeFd");
-				return (false);
+				if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, it->first, NULL) == -1)
+				{
+					Log::print_final_log("epoll_ctl keepalive_timeout finished:", MAX_TIME, "ID:", epoll_fd);
+					return (true);
+				}
+				if (it->first != -1)
+					::close(it->first);
+				Epoll::timers.erase(it++);
+				Log::print_final_log("keepalive_timeout finished:", MAX_TIME, "ID:", epoll_fd);
+				return (true);
 			}
-			if (it->first != -1)
-				::close(it->first);
-			Epoll::timers.erase(it++);
 		}
-		else
-			it++;
+		it++;
+		
 	}
-	return (true);
+	return (false);
 }
 
 int Epoll::makeSocketNonBlocking(int fd)
