@@ -18,6 +18,8 @@ class RequestResponseManager
         SessionManager& m_sessionManager;
         
         Epoll m_epoll;
+        bool m_acceptPaused;
+        int fdLimit;
         std::map<int, std::string> m_requestMap;
 
         void initializeEpoll();

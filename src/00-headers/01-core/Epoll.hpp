@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:43 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/12 22:21:18 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/13 00:25:04 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Epoll
     private:
         int epoll_fd;                 
         int maxEvents;
+        int totalActiveClients;
         struct epoll_event *events;
         static std::map<int, std::time_t> timers;
      
@@ -43,7 +44,10 @@ class Epoll
         bool addFd(int fd, uint32_t events);
         bool removeFd(int& fd);
         struct epoll_event getEvent(int index) const;
-        static bool purgeTimeOutFds(const Conf &conf, int epoll_fd);
+        bool purgeTimeOutFds(const Conf &conf, int epoll_fd);
         int makeSocketNonBlocking(int fd);
-        void check_timeouts_of_clients();
+        void disableFd(int fd);
+        void enableFd(int fd);
+        void check_timeouts_of_clients(std::vector<int> const& m_fdSockets, int signalPipefd);
+        int getTotalActiveClients() const;
 };

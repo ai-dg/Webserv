@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/12 23:00:49 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/13 00:25:46 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ std::map<int, std::time_t> Epoll::timers;
 /**
  * @brief Coplien Form
  */
-Epoll::Epoll(int maxEvents) : maxEvents(maxEvents)
+Epoll::Epoll(int maxEvents) : maxEvents(maxEvents), totalActiveClients(0)
 {
 	epoll_fd = epoll_create(maxEvents);
 	if (epoll_fd == -1)
@@ -126,6 +126,7 @@ bool Epoll::addFd(int fd, uint32_t eventsMask)
 		Log::error("Failed to add file descriptor to epoll");
 		return (false);
 	}
+	totalActiveClients++;
 	return (true);
 }
 
@@ -142,6 +143,7 @@ bool Epoll::removeFd(int& fd)
 		::close(fd);
 		fd = -1;
 	}
+	totalActiveClients--;
 	return (true);
 }
 
@@ -168,12 +170,13 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 			{
 				if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, it->first, NULL) == -1)
 				{
-					Log::print_final_log("epoll_ctl keepalive_timeout finished:", MAX_TIME, "ID:", epoll_fd);
+					Log::print_final_log("Error erasing fd with epollctl", strerror(errno));
 					return (true);
 				}
 				if (it->first != -1)
 					::close(it->first);
 				Epoll::timers.erase(it++);
+				totalActiveClients--; 
 				Log::print_final_log("keepalive_timeout finished:", MAX_TIME, "ID:", epoll_fd);
 				return (true);
 			}
@@ -184,26 +187,45 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 	return (false);
 }
 
-void Epoll::check_timeouts_of_clients() 
+void Epoll::check_timeouts_of_clients(const std::vector<int>& m_fdSockets, int signalPipefd) 
 {
     std::time_t now = std::time(0); 
-	int timeout_seconds = 10;
-    
+    int timeout_seconds = 10;
+
     std::map<int, std::time_t>::iterator it = timers.begin();
     while (it != timers.end()) 
-	{
-        
-        if (now - it->second > timeout_seconds) 
-		{            
-            close(it->first);            
-            timers.erase(it++);
-        } 
-		else 
+    {
+        int fd = it->first;        
+        if (std::find(m_fdSockets.begin(), m_fdSockets.end(), fd) != m_fdSockets.end()) 
+        {
+            ++it;
+            continue;
+        }
+		if (fd == signalPipefd) 
 		{
+			++it;
+			continue;
+		}    
+        if (now - it->second > timeout_seconds) 
+        {    
+            if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1) 
+            {
+                Log::print_final_log("Error erasing fd with epollctl", strerror(errno));
+            }
+            if (close(fd) == -1) 
+            {
+                Log::print_final_log("Error closing the fd", strerror(errno));
+            }
+			totalActiveClients--;
+            timers.erase(it++); 
+        } 
+        else 
+        {
             ++it; 
         }
     }
 }
+
 
 int Epoll::makeSocketNonBlocking(int fd)
 {
@@ -216,4 +238,25 @@ int Epoll::makeSocketNonBlocking(int fd)
 	if (fcntl(fd, F_SETFL, flags) == -1)
 		throw std::runtime_error("fcntl SETFL failed");
 	return 0;
+}
+
+void Epoll::disableFd(int fd) 
+{
+    struct epoll_event ev;
+    ev.data.fd = fd;
+    ev.events = 0;
+    epoll_ctl(epoll_fd, EPOLL_CTL_MOD, fd, &ev);
+}
+
+void Epoll::enableFd(int fd) 
+{
+    struct epoll_event ev;
+    ev.data.fd = fd;
+    ev.events = getEvent(fd).events;
+    epoll_ctl(epoll_fd, EPOLL_CTL_MOD, fd, &ev);
+}
+
+int Epoll::getTotalActiveClients() const
+{
+	return totalActiveClients;
 }

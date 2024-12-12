@@ -164,10 +164,43 @@ RequestResponseManager::RequestResponseManager(
     m_epoll(20) 
 {}
 
+int findFdLimit() 
+{
+    std::vector<int> fds;
+    int fd;
+
+    while (true) {
+        fd = open("/dev/null", O_RDONLY);
+        if (fd == -1) {
+            if (errno == EMFILE) 
+            {
+                break;
+            } 
+            else 
+            {
+                perror("Erreur lors de l'ouverture de /dev/null");
+                return -1;
+            }
+        }
+        fds.push_back(fd);
+    }
+    for (size_t i = 0; i < fds.size(); ++i) {
+        close(fds[i]);
+    }
+    return fds.size();
+}
+
 void RequestResponseManager::run() 
 {
     int eventCount;
     struct epoll_event event;
+    m_acceptPaused = false;
+    fdLimit = findFdLimit();
+    if (fdLimit == -1) 
+    {
+        throw std::runtime_error("Error finding fd limit");
+        return;
+    }
 
     try 
     {
@@ -198,11 +231,37 @@ void RequestResponseManager::run()
                     event.data.fd
                 ) != m_fdSockets.end();//should be ok...
 
-                if (isServerSocket) 
-                    handleNewConnection(event);
+                if (isServerSocket && !m_acceptPaused)
+                {
+                    if (handleNewConnection(event) == false)
+                    {
+                        Log::print_final_log("Desactivate new connections", "FD:", event.data.fd);
+                        for (std::vector<int>::iterator it = m_fdSockets.begin(); it != m_fdSockets.end(); ++it) 
+                        {
+                            m_epoll.disableFd(*it);
+                        }
+                        m_acceptPaused = true;
+                    }
+
+                } 
                 else if (event.events & EPOLLIN) 
                     processRequest(event.data.fd);
-                // m_epoll.check_timeouts_of_clients();
+                
+                int activeFdCount = m_epoll.getTotalActiveClients();
+
+                std::cerr << "Active FD count: " << activeFdCount << std::endl;
+                if (activeFdCount < fdLimit) 
+                {
+                    std::cerr << "FD limit: " << fdLimit << std::endl;
+
+                    Log::print_final_log("Activate new connections", "FD:", event.data.fd);
+                    for (std::vector<int>::iterator it = m_fdSockets.begin(); it != m_fdSockets.end(); ++it) 
+                    {
+                        m_epoll.enableFd(*it);
+                    }
+                    m_acceptPaused = false;
+                }
+                m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0]);
             }
         }
 

@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:18 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/11 18:04:58 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/12 23:44:55 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #define PATH_NOT_FOUND "PATH NOT FOUND"
 #define PATH_FOUND "PATH FOUND"
 #define BUFFER_SIZE 2048
+#define FD_RESERVE 10
 #define AUTO 200
 #define NO_BODY 1
 #define BODY 2
