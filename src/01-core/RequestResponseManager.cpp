@@ -134,6 +134,8 @@ void RequestResponseManager::processRequestWithServer(int fd_Client, std::string
 {
     int serverIndex = findServerIndex(request, m_servers);
     m_servers[serverIndex]->addFdClient(fd_Client);
+    if (m_epoll.purgeTimeOutFds(*(m_servers[serverIndex]->getConf()), fd_Client, m_servers))
+        return;
     type_request_manager(&fd_Client, &request, m_servers[serverIndex], m_sessionManager);
 }
 
@@ -174,7 +176,8 @@ int RequestResponseManager::findFdLimit()
 
     while (true) {
         fd = open("/dev/null", O_RDONLY);
-        if (fd == -1) {
+        if (fd == -1) 
+        {
             if (errno == EMFILE) 
             {
                 break;
@@ -187,7 +190,8 @@ int RequestResponseManager::findFdLimit()
         }
         fds.push_back(fd);
     }
-    for (size_t i = 0; i < fds.size(); ++i) {
+    for (size_t i = 0; i < fds.size(); ++i) 
+    {
         close(fds[i]);
     }
     return fds.size();
@@ -272,14 +276,25 @@ void RequestResponseManager::run()
                     Log::print_final_log("Erasing all connections", "in", "1 seconds...");
                     m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0], m_servers);
                 }
-                for (size_t i = 0; i < m_servers.size(); i++) 
-                {
-                    for (size_t j = 0; j < m_servers[i]->fd_clients.size(); j++) 
-                    {
-                        int fd_Client = m_servers[i]->fd_clients[j];
-                        m_epoll.purgeTimeOutFds(*(m_servers[i]->getConf()), fd_Client, m_servers);
-                    }
-                }
+                // for (size_t i = 0; i < m_servers.size(); i++) 
+                // {
+                //     for (size_t j = 0; j < m_servers[i]->fd_clients.size(); j++) 
+                //     {
+                //         int fd = m_servers[i]->fd_clients[j];
+                //         bool isSocketFd = false;
+                //         for (size_t k = 0; k < m_fdSockets.size(); k++)
+                //         {
+                //             if (fd == m_fdSockets[k]) 
+                //             {
+                //                 isSocketFd = true;
+                //                 break;
+                //             }
+                //         }
+                //         if (isSocketFd || fd == signalPipeFd[0]) 
+                //             continue;
+                //         m_epoll.purgeTimeOutFds(*(m_servers[i]->getConf()), fd, m_servers);
+                //     }
+                // }
             }
         }
 
