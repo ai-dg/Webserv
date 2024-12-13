@@ -133,8 +133,7 @@ bool RequestResponseManager::handleContentLengthRequest(int fd_Client, std::stri
 void RequestResponseManager::processRequestWithServer(int fd_Client, std::string& request) 
 {
     int serverIndex = findServerIndex(request, m_servers);
-    if (m_epoll.purgeTimeOutFds(*(m_servers[serverIndex]->getConf()), fd_Client) == true)
-        return;
+    m_servers[serverIndex]->addFdClient(fd_Client);
     type_request_manager(&fd_Client, &request, m_servers[serverIndex], m_sessionManager);
 }
 
@@ -143,6 +142,8 @@ void RequestResponseManager::handleClientDisconnection(int fd_Client)
     Log::print_final_log("Connection closed by client", "FD:", fd_Client);
     m_epoll.removeFd(fd_Client);
     m_requestMap.erase(fd_Client);
+    for (size_t i = 0; i < m_servers.size(); i++) 
+        m_servers[i]->removeFdClient(fd_Client);
 }
 
 void RequestResponseManager::handleRecvError(int fd_Client) 
@@ -150,6 +151,8 @@ void RequestResponseManager::handleRecvError(int fd_Client)
     Log::print_final_log("Error in recv", "FD: ", strerror(errno));
     m_epoll.removeFd(fd_Client);
     m_requestMap.erase(fd_Client);
+    for (size_t i = 0; i < m_servers.size(); i++) 
+        m_servers[i]->removeFdClient(fd_Client);
 }
 
 
@@ -164,7 +167,7 @@ RequestResponseManager::RequestResponseManager(
     m_epoll(20) 
 {}
 
-int findFdLimit() 
+int RequestResponseManager::findFdLimit() 
 {
     std::vector<int> fds;
     int fd;
@@ -248,12 +251,10 @@ void RequestResponseManager::run()
                     processRequest(event.data.fd);
                 
                 int activeFdCount = m_epoll.getTotalActiveClients();
-
-                std::cerr << "Active FD count: " << activeFdCount << std::endl;
-                if (activeFdCount < fdLimit) 
+                // std::cerr << "Active FD count: " << activeFdCount << std::endl;
+                // std::cerr << "FD Limit: " << fdLimit << std::endl;
+                if (activeFdCount < fdLimit && m_acceptPaused) 
                 {
-                    std::cerr << "FD limit: " << fdLimit << std::endl;
-
                     Log::print_final_log("Activate new connections", "FD:", event.data.fd);
                     for (std::vector<int>::iterator it = m_fdSockets.begin(); it != m_fdSockets.end(); ++it) 
                     {
@@ -261,7 +262,24 @@ void RequestResponseManager::run()
                     }
                     m_acceptPaused = false;
                 }
-                m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0]);
+                if (activeFdCount >= fdLimit)
+                {
+                    std::ostringstream oss;
+                    oss << RED;
+                    oss << "Fd Limit reached: " << activeFdCount << "/" << fdLimit;
+                    oss << RESET;
+                    Log::print_final_log(oss.str(), "FD:", event.data.fd);
+                    Log::print_final_log("Erasing all connections", "in", "1 seconds...");
+                    m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0], m_servers);
+                }
+                for (size_t i = 0; i < m_servers.size(); i++) 
+                {
+                    for (size_t j = 0; j < m_servers[i]->fd_clients.size(); j++) 
+                    {
+                        int fd_Client = m_servers[i]->fd_clients[j];
+                        m_epoll.purgeTimeOutFds(*(m_servers[i]->getConf()), fd_Client, m_servers);
+                    }
+                }
             }
         }
 

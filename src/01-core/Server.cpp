@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:22 by ls                #+#    #+#             */
-/*   Updated: 2024/12/05 05:28:06 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/13 01:11:40 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,4 +194,16 @@ bool Server::foundHostName(std::string hostname)
 void Server::addPort(int port)
 {
     ports.push_back(port);
+}
+
+void Server::addFdClient(int fd)
+{
+    fd_clients.push_back(fd);
+}
+
+void Server::removeFdClient(int fd)
+{
+    std::vector<int>::iterator it = std::find(fd_clients.begin(), fd_clients.end(), fd);
+    if (it != fd_clients.end())
+        fd_clients.erase(it);
 }

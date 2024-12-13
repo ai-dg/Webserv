@@ -32,6 +32,7 @@ class RequestResponseManager
         void handleClientDisconnection(int fdClient);
         void handleRecvError(int fdClient);
         bool isSocketReadyForRead(int fd_Client);
+        int findFdLimit();
 
     public:
         RequestResponseManager

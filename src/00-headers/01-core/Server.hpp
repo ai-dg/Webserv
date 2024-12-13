@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:47:59 by ls                #+#    #+#             */
-/*   Updated: 2024/11/29 21:20:52 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/13 01:18:29 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Server
         void setHostNames();
     
     public:
+        std::vector<int> fd_clients;
         /**
          * @brief Copelien Form
          */
@@ -65,4 +66,6 @@ class Server
          * @brief Adders
          */
         void addPort(int port);
+        void addFdClient(int fd);
+        void removeFdClient(int fd);
 };

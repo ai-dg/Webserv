@@ -6,13 +6,14 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:43 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/13 00:25:04 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/13 01:16:19 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "../00-shared/includes.hpp"
 #include "../01-core/Conf.hpp"
+#include "../01-core/Server.hpp"
 
 class Epoll 
 {
@@ -44,10 +45,10 @@ class Epoll
         bool addFd(int fd, uint32_t events);
         bool removeFd(int& fd);
         struct epoll_event getEvent(int index) const;
-        bool purgeTimeOutFds(const Conf &conf, int epoll_fd);
+        bool purgeTimeOutFds(const Conf &conf, int fd, std::vector<Server*>& m_servers);
         int makeSocketNonBlocking(int fd);
         void disableFd(int fd);
         void enableFd(int fd);
-        void check_timeouts_of_clients(std::vector<int> const& m_fdSockets, int signalPipefd);
+        void check_timeouts_of_clients(std::vector<int> const& m_fdSockets, int signalPipefd, std::vector<Server*>& m_servers);
         int getTotalActiveClients() const;
 };

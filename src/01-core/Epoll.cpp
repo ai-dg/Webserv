@@ -6,12 +6,13 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:57:55 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/13 00:25:46 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/13 01:23:31 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../00-headers/00-shared/includes.hpp"
 #include "../00-headers/01-core/Epoll.hpp"
+#include "../00-headers/01-core/Server.hpp"
 #include "../00-headers/02-utils/Log.hpp"
 
 std::map<int, std::time_t> Epoll::timers;
@@ -155,24 +156,26 @@ struct epoll_event Epoll::getEvent(int index) const
 	return (epoll_event());
 }
 
-bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
+bool Epoll::purgeTimeOutFds(const Conf &conf, int fd, std::vector<Server*>& m_servers)
 {
 	int	MAX_TIME;
 
 	std::time_t now = std::time(0);
-	MAX_TIME = atoi(conf.getConfig("keepalive_timeout").c_str());
+	MAX_TIME = ::atoi(conf.getConfig("keepalive_timeout").c_str());
 	std::map<int, std::time_t>::iterator it;
 	for (it = Epoll::timers.begin(); it != Epoll::timers.end();)
 	{
-		if (it->first == epoll_fd)
+		if (it->first == fd)
 		{
 			if (now - it->second > MAX_TIME)
 			{
 				if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, it->first, NULL) == -1)
 				{
-					Log::print_final_log("Error erasing fd with epollctl", strerror(errno));
-					return (true);
+					Log::print_final_log("Error erasing fd with epollctl in server", strerror(errno));
+					return (false);
 				}
+				for (size_t i = 0; i < m_servers.size(); i++)
+					m_servers[i]->removeFdClient(it->first);
 				if (it->first != -1)
 					::close(it->first);
 				Epoll::timers.erase(it++);
@@ -187,10 +190,10 @@ bool Epoll::purgeTimeOutFds(const Conf &conf, int epoll_fd)
 	return (false);
 }
 
-void Epoll::check_timeouts_of_clients(const std::vector<int>& m_fdSockets, int signalPipefd) 
+void Epoll::check_timeouts_of_clients(const std::vector<int>& m_fdSockets, int signalPipefd, std::vector<Server*>& m_servers) 
 {
     std::time_t now = std::time(0); 
-    int timeout_seconds = 10;
+    int timeout_seconds = 1;
 
     std::map<int, std::time_t>::iterator it = timers.begin();
     while (it != timers.end()) 
@@ -210,12 +213,14 @@ void Epoll::check_timeouts_of_clients(const std::vector<int>& m_fdSockets, int s
         {    
             if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1) 
             {
-                Log::print_final_log("Error erasing fd with epollctl", strerror(errno));
+                Log::print_final_log("Error erasing fd with epollctl in global", strerror(errno));
             }
             if (close(fd) == -1) 
             {
                 Log::print_final_log("Error closing the fd", strerror(errno));
             }
+			for (size_t i = 0; i < m_servers.size(); i++)
+				m_servers[i]->removeFdClient(fd);
 			totalActiveClients--;
             timers.erase(it++); 
         } 
@@ -242,7 +247,7 @@ int Epoll::makeSocketNonBlocking(int fd)
 
 void Epoll::disableFd(int fd) 
 {
-    struct epoll_event ev;
+    struct epoll_event ev = {};
     ev.data.fd = fd;
     ev.events = 0;
     epoll_ctl(epoll_fd, EPOLL_CTL_MOD, fd, &ev);
@@ -250,9 +255,9 @@ void Epoll::disableFd(int fd)
 
 void Epoll::enableFd(int fd) 
 {
-    struct epoll_event ev;
+    struct epoll_event ev = {};
     ev.data.fd = fd;
-    ev.events = getEvent(fd).events;
+    ev.events = EPOLLIN;
     epoll_ctl(epoll_fd, EPOLL_CTL_MOD, fd, &ev);
 }
 
