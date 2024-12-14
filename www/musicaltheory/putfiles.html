@@ -20,7 +20,7 @@
             const filename = document.getElementById('filename').value;
             const filecontent = document.getElementById('filecontent').value;
             const responseDisplay = document.getElementById('response');
-
+            console.log(filecontent);
             if (!filename || !filecontent) {
                 responseDisplay.textContent = "Le nom du fichier et le contenu sont requis.";
                 return;

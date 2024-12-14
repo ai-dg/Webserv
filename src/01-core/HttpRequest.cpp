@@ -189,7 +189,7 @@ void HttpRequest::parseRequest(std::string req)
     setHeaders(req);
     
     
-    if (this->method == "POST" || this->method == "DELETE")
+    if (this->method == "POST" || this->method == "DELETE" || this->method == "PUT")
     {
         setBody(req);       
     }

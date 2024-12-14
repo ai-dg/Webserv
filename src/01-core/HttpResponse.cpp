@@ -279,8 +279,10 @@ void HttpResponse::checkRedirection(const HttpRequest &req)
 
 int HttpResponse::put(const HttpRequest &req)
 {
-    (void) req;
-    std::ofstream outfile(&filePath.c_str()[1]);
+    std::string path = req.getRouteConf(req.getRoute())->root();
+    std::string file = req.getAskedFile();
+    filePath = "." + path + file; 
+    std::ofstream outfile(filePath.c_str());
     if (!outfile)
         return -1;
     outfile << req.getBody();
