@@ -10,17 +10,14 @@ std::string getContextFromFile(std::string path)
     std::string context = "";
     std::getline(file, line);
     line = trim(line);
-    std::cerr << RED << "getContextFromFile : -" << line << "-" << std::endl;
-    std::cerr << RED << "path : -" << path << "-" << std::endl;
-
+ 
     if (line.find("#!/bin/") != std::string::npos)
     {
         if (line.find("#!/bin/python") != std::string::npos)
             context = "python3";
         else if (line.find("#!/bin/bash") != std::string::npos)
         {
-            std::cerr << "in bash cond" << RESET << std::endl;
-            context = "bash";
+             context = "bash";
         }
         else if (line.find("#!/bin/perl") != std::string::npos)
             context = "perl";

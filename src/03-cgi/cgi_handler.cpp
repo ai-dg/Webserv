@@ -87,13 +87,13 @@ void Cgi_handler::setEnvironment()
         contentLengthEnv = ""; 
     this->addToEnvironment(requestMethodEnv);
     this->addToEnvironment(contentLengthEnv[0] ? const_cast<char*>(contentLengthEnv.c_str()) : NULL);
-    
     size_t queryPos = scriptPath.find('?');
     if (queryPos != std::string::npos) 
     {
         std::string queryString = scriptPath.substr(queryPos + 1);
         this->addToEnvironment("QUERY_STRING=" + queryString);
     }
+
     std::map<std::string, std::string>::iterator it;
     for (it = headers.begin(); it != headers.end(); ++it)
     {
@@ -101,20 +101,19 @@ void Cgi_handler::setEnvironment()
             continue;
         if (it->first.find("Cookie") != std::string::npos)
         {
+            std::string cookie = "HTTP_COOKIE=";
             std::string cookieHeader = it->second;
             size_t start = 0;
             size_t end = 0;
             while ((end = cookieHeader.find(';', start)) != std::string::npos)
             {
-                std::string cookie = cookieHeader.substr(start, end - start);
+                cookie += cookieHeader.substr(start, end - start);
                 start = end + 2; 
-                this->addToEnvironment(cookie);
+                cookie += ";";
             }
             if (start < cookieHeader.size())
-            {
-                std::string cookie = cookieHeader.substr(start);
-                this->addToEnvironment(cookie);
-            }
+                cookie += cookieHeader.substr(start);
+            this->addToEnvironment(cookie);
         }
         else
             this->addToEnvironment(req->getFormatedHeader(it->first));
@@ -229,13 +228,11 @@ void Cgi_handler::childCgiProcess(Pipe &pipe_in, Pipe &pipe_out)
         pipe_in.closeFd();
         pipe_out.closeFd();
         setEnvironment();
-        //debugEnvironment();
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
         std::string exe_context = getExeContext(scriptPathTemp);
-        std::cerr << RED << "exeContext : -" << exe_context << "-" << RESET << std::endl;
         std::string path = "/usr/bin/env";
         if (req->hasFileSpecialRoute(scriptPathTemp))
             setupSpecialRoute(path, scriptPathTemp, exe_context);
@@ -301,7 +298,6 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
     pid_t pid;
     Pipe pipe_in("./sessions/pipe_infile");
     Pipe pipe_out("./sessions/pipe_outfile");
-    std::cerr << "scriptPath : " << scriptPath << std::endl;
     this->scriptPath = scriptPath;
     std::string data = req->getBody();
 
@@ -344,8 +340,10 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
             return;        
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
         if (scriptPath.find(".php") != std::string::npos || scriptPath.find(".sh") != std::string::npos
-             || scriptPath.find(".cgi") != std::string::npos) 
+             || scriptPath.find(".cgi") != std::string::npos)
+        {
             ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
+        }
         if (scriptPath.find(".bla") != std::string::npos) 
         {
             handleIOWithHeaders(pipe_out);
@@ -375,6 +373,7 @@ void Cgi_handler::handleDirectIO(Pipe &pipe_out)
         while (offset < (size_t)bytesRead) 
         {
             bytesWritten = ::write(fd_client, buffer + offset, bytesRead - offset);
+
 
             if (bytesWritten == -1) 
             {   

@@ -1,8 +1,8 @@
 
-*
+/* *
 {
     user-select: none;
-}
+} */
 
 .title
 {
@@ -93,4 +93,12 @@
 {
     color : white;
     background-color: rgba(0,0,0,0.7);
+}
+
+#cookieValue
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 52px;
+    color: rgb(235, 94, 29);
 }

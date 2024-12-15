@@ -311,8 +311,7 @@ int HttpResponse::put(const HttpRequest &req)
 
 bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 {
-    if (Route && Route->methods().find(req.getMethod()) != std::string::npos)
-        DEBUG_MSG "GET METHOD : " << req.getMethod() END_DEBUG
+
     return Route && (Route->methods().find(req.getMethod()) != std::string::npos);
 }
 

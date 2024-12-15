@@ -1,6 +1,9 @@
-le script s'execute, même si la methode est inconnue;
 verifier la limitation du body
 
-displaying directories (.. bug)
-reformat test site
-don't stop
+[18:03:49] Server listening 127.0.0.2 8080
+[18:03:49] Server listening 127.0.0.9 9050
+[18:03:49] Server listening 127.0.0.1 8000
+[18:03:49] Server listening 127.0.0.5 9000
+[18:03:49] Server listening 127.0.0.6 8090
+[18:03:49] Server listening 127.0.0.3 9090
+

@@ -68,8 +68,9 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
         response.send(*fd_client);
     }
     response.setResourcePath(request);
-    if (request.isStatic())
-    {
+ 
+   /* if (!request.isStatic())
+    {*/
         std::string cookieHeader = request.getHeader("Cookie");
         Cookies cookies(cookieHeader);
         std::string sessionId = cookies.getCookie("sessionId");
@@ -79,7 +80,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
             cookies.setCookie("sessionId", sessionId);
         }
         response.addHeader("Set-Cookie", cookies.getSetCookieHeader().substr(12));
-    }
+   /* }*/
     std::string filePath = response.getFilePath();
     filePath = removeDuplicateSlashes(filePath);            
     if ((filePath.find("cgi") != std::string::npos || filePath.find(".cgi") != std::string::npos || request.hasFileSpecialRoute(getExtension(filePath)))) 
