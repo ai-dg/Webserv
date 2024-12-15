@@ -60,6 +60,12 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
     std::ostringstream msg_size;
     msg_size << request.getBody().size();
     msg_size << " bytes";
+    if (!request.isValidBodySize())
+    {
+        response.setRedirection(413);
+        response.send(*fd_client);
+        return;
+    }
     Log::print_final_log("Request:", request.getMethod(), request.getURI(), msg_size.str());
     if (request.getMethod() == "PUT" && !request.isScript())
     {

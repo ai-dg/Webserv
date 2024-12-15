@@ -142,7 +142,6 @@ size_t getFormatedSizeFromString(std::string size) {
     }
     try 
     {
-        
         if (mbs[mbs.size() - 1] == 'M') 
         {
             multi = 1024 * 1024; 

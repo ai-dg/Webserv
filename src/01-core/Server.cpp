@@ -22,7 +22,7 @@
  */
 void Server::setMaxBodySize()
 {
-    maxBodySize = getFormatedSizeFromString(conf->getConfig("client_max_body_size")) * 1024;
+    maxBodySize = getFormatedSizeFromString(conf->getConfig("client_max_body_size"));
 }
 
 void Server::setHostNames()

@@ -232,6 +232,8 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
 void HttpResponse::setStatusCode(int stat)
 {
     std::string file = getFile(this->filePath);
+    if (stat == 413)
+        file = getFile("./www/error_pages/413.html");
    
     if (stat == AUTO)
     {
