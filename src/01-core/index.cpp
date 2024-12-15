@@ -71,10 +71,8 @@ std::string getFormatedHtmlIndexLine(std::string path, char *name)
     return "<a class=\"link\"href=\"" + filename + "\">" + filename + "</a>\n";
 }
 
-std::string getIndexFile(std::string path)
+std::string getParentLink(std::string path)
 {
-    std::string html_index = getHtmlHeaders();
-    html_index += "<br><br><p class=\"paragraph\">Directory :</p>";
     DIR *dir = opendir(path.c_str());
     if (dir == NULL)
     {
@@ -85,11 +83,44 @@ std::string getIndexFile(std::string path)
     while (files)
     {
         std::string file(files->d_name);
-        if (file != ".")
+        if (file == "..")
+        {
+            closedir(dir);   
+            return getFormatedHtmlIndexLine(path, files->d_name);
+        }
+        files = readdir(dir);
+    }
+    closedir(dir);
+    return "";
+}
+
+std::string getFilesLinks(std::string path)
+{
+    std::string html_index;
+    DIR *dir = opendir(path.c_str());
+    if (dir == NULL)
+    {
+        std::cerr << "can't access directory" << std::endl;
+        return "";
+    }
+    struct dirent * files = readdir(dir);
+    while (files)
+    {
+        std::string file(files->d_name);
+        if (file != "." && file != "..")
             html_index += getFormatedHtmlIndexLine(path, files->d_name);
         files = readdir(dir);
     }
     closedir(dir);
+    return html_index;
+}
+
+std::string getIndexFile(std::string path)
+{
+    std::string html_index = getHtmlHeaders();
+    html_index += "<br><br><p class=\"paragraph\">Directory :</p>";
+    html_index += getParentLink(path);
+    html_index += getFilesLinks(path);
     html_index += getHtmlFooter();
     return html_index;
 }

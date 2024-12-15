@@ -13,6 +13,7 @@
 #ifndef DEFINES_HPP
 #define DEFINES_HPP
 
+#include "colors.hpp"
 #define CRLF "\r\n"
 #define FILENOTFOUND "FILE NOT FOUND"
 #define PATH_NOT_FOUND "PATH NOT FOUND"
@@ -33,5 +34,7 @@
 #define CLIENT_HEADER_TIMEOUT "client_header_timeout"
 #define LOCATION_ROOT "location_/root"
 #define LOCATION_ROOT_INDEX "location_/index"
+#define DEBUG_MSG std::cerr << RED <<
+#define END_DEBUG << RESET << std::endl;
 
 #endif

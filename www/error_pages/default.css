@@ -6,6 +6,11 @@ body {
     color: #333;
 }
 
+.marge
+{
+    margin: 5px;
+}
+
 .error-container {
     text-align: center;
     position: absolute;

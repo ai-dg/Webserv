@@ -68,6 +68,10 @@ launch: clean_temp
 	make
 	./webserv
 
+tests: clean_temp
+	make
+	./webserv config/tests.conf
+
 test:
 	./testers/ubuntu_tester http://127.1.1.1:8001
 

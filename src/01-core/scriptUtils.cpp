@@ -3,18 +3,26 @@
 
 std::string getContextFromFile(std::string path)
 {
+    if (path[0] != '.')
+        path = "." + path;
     std::ifstream file(path.c_str());
     std::string line = "";    
     std::string context = "";
     std::getline(file, line);
     line = trim(line);
-    if (line.find("#!/usr/bin/") != std::string::npos)
+    std::cerr << RED << "getContextFromFile : -" << line << "-" << std::endl;
+    std::cerr << RED << "path : -" << path << "-" << std::endl;
+
+    if (line.find("#!/bin/") != std::string::npos)
     {
-        if (line.find("#!/usr/bin/python") != std::string::npos)
+        if (line.find("#!/bin/python") != std::string::npos)
             context = "python3";
-        else if (line.find("#!/usr/bin/bash") != std::string::npos)
+        else if (line.find("#!/bin/bash") != std::string::npos)
+        {
+            std::cerr << "in bash cond" << RESET << std::endl;
             context = "bash";
-        else if (line.find("#!/usr/bin/perl") != std::string::npos)
+        }
+        else if (line.find("#!/bin/perl") != std::string::npos)
             context = "perl";
         else if (line.find("#!") != std::string::npos)
             context = line.substr(line.find_last_of("/") + 1, std::string::npos);

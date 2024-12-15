@@ -166,13 +166,31 @@ void HttpResponse::setResourcePath(const HttpRequest &req)
     }
     if (uri.find("/cgi-bin/") != std::string::npos
         || uri.find(".py") != std::string::npos
+        || uri.find(".cgi") != std::string::npos
         || uri.find(".pl") != std::string::npos
         || uri.find(".sh") != std::string::npos
-        || uri.find(".php") != std::string::npos || 
-        (uri == "/" && Route && Route->index().find(".php") != std::string::npos))
+        || uri.find(".php") != std::string::npos)
     {
         Route = req.getRouteConf("/cgi-bin/");
-        this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
+        if (Route)
+            this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
+        else
+        {
+            setRedirection(500);
+            return;
+
+        }
+    }
+    else if (uri == "/" && Route && Route->index().find(".php") != std::string::npos)
+    {
+        Route = req.getRouteConf("/");
+        if (Route)
+            this->filePath = Route->root().substr(1, std::string::npos) + req.getAskedFile();
+        else
+        {
+            setRedirection(500);
+            return;
+        }
     }
     else
     {
@@ -293,6 +311,8 @@ int HttpResponse::put(const HttpRequest &req)
 
 bool HttpResponse::isAllowedMethod(Location *Route, HttpRequest req) const
 {
+    if (Route && Route->methods().find(req.getMethod()) != std::string::npos)
+        DEBUG_MSG "GET METHOD : " << req.getMethod() END_DEBUG
     return Route && (Route->methods().find(req.getMethod()) != std::string::npos);
 }
 
@@ -300,10 +320,8 @@ void HttpResponse::send(int fd_client)
 {   
     std::string resFile;
     std::string uri = req->getURI();
-    std::string extension = getExtension(uri);
-    
-    // this->filePath = req->getURI();
-    
+    std::string extension = getExtension(uri);    
+  
     if (body.size() > 0)
         resFile = body;
     else
@@ -332,7 +350,7 @@ void HttpResponse::send(int fd_client)
         res += "Content-Type: " + this->mimeType + "; charset=UTF-8\r\n";
     res += "Connection: keep-alive\r\n";
     res += "Date: " + get_current_date() + CRLF;
-    if (statusCode != 301 && statusCode != 302 && sendBody)
+    if (sendBody)
     {
         res += "Content-Length: " + numberToString(resFile.size()) + CRLF + CRLF 
          + resFile;

@@ -36,7 +36,12 @@ std::string Cgi_handler::getExeContext(std::string file)
         return "perl";
     if (file.find(".sh") != std::string::npos)
         return "bash";
-    return getContextFromFile(file);;
+    if (file.find(".cgi") != std::string::npos)
+    {
+        file = route->root() + req->getAskedFile();
+        return getContextFromFile(file);
+    }
+    return getContextFromFile(file);
 }
 
 void Cgi_handler::addToEnvironment(const char * env)
@@ -117,11 +122,11 @@ void Cgi_handler::setEnvironment()
     this->addToEnvironment("CONTENT_TYPE=" + req->getHeader("Content-Type"));
     this->addToEnvironment("REDIRECT_STATUS=1");
     this->addToEnvironment("SERVER_PROTOCOL=HTTP/1.1");
-    this->addToEnvironment("PATH_INFO=/");
+    this->addToEnvironment("PATH_INFO=./");
     if (getExeContext(scriptPath) == "php-cgi")
     {
-        this->addToEnvironment("SCRIPT_NAME=" + scriptPath);
-        this->addToEnvironment("SCRIPT_FILENAME=" + scriptPath);        
+        this->addToEnvironment("SCRIPT_NAME=." + scriptPath);
+        this->addToEnvironment("SCRIPT_FILENAME=." + scriptPath);        
     }
     else if (getExeContext(scriptPath) == "python")
         this->addToEnvironment("PYTHONWARNINGS=ignore");
@@ -180,7 +185,7 @@ Cgi_handler::~Cgi_handler()
     environment.clear();
 }
 
-Cgi_handler::Cgi_handler(int _fd_client, HttpRequest *_req, HttpResponse *_res): fd_client(_fd_client), req(_req), res(_res)
+Cgi_handler::Cgi_handler(int _fd_client, HttpRequest *_req, HttpResponse *_res, Location *_route): fd_client(_fd_client), req(_req), res(_res), route(_route)
 {
 }
 
@@ -224,15 +229,19 @@ void Cgi_handler::childCgiProcess(Pipe &pipe_in, Pipe &pipe_out)
         pipe_in.closeFd();
         pipe_out.closeFd();
         setEnvironment();
+        //debugEnvironment();
         std::string scriptPathTemp = scriptPath;
         size_t queryPos = scriptPathTemp.find('?');
         if (queryPos != std::string::npos)
             scriptPathTemp = scriptPathTemp.substr(0, queryPos);
         std::string exe_context = getExeContext(scriptPathTemp);
+        std::cerr << RED << "exeContext : -" << exe_context << "-" << RESET << std::endl;
         std::string path = "/usr/bin/env";
         if (req->hasFileSpecialRoute(scriptPathTemp))
             setupSpecialRoute(path, scriptPathTemp, exe_context);
-       executeScript(path, scriptPathTemp, exe_context);
+        if (scriptPathTemp[0] != '.')
+            scriptPathTemp = "." + scriptPathTemp;
+        executeScript(path, scriptPathTemp, exe_context);
 }
 
 void Cgi_handler::executeScript(std::string &path, std::string &scriptPathTemp, std::string &exe_context)
@@ -292,6 +301,7 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
     pid_t pid;
     Pipe pipe_in("./sessions/pipe_infile");
     Pipe pipe_out("./sessions/pipe_outfile");
+    std::cerr << "scriptPath : " << scriptPath << std::endl;
     this->scriptPath = scriptPath;
     std::string data = req->getBody();
 
@@ -333,7 +343,8 @@ void Cgi_handler::executeCGI(std::string const& scriptPath)
         if(handleErrorStatus(status) < 1)
             return;        
         ::lseek(pipe_out.getFd(), 0, SEEK_SET);
-        if (scriptPath.find(".php") != std::string::npos || scriptPath.find(".sh") != std::string::npos) 
+        if (scriptPath.find(".php") != std::string::npos || scriptPath.find(".sh") != std::string::npos
+             || scriptPath.find(".cgi") != std::string::npos) 
             ::write(fd_client, "HTTP/1.1 200 OK\r\n", 17);
         if (scriptPath.find(".bla") != std::string::npos) 
         {

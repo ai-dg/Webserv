@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="title">Testing Webserv ...</div>
+            <div class="nav">
+                <a class="nav_link" href="index.html">Home</a>
+                <a class="nav_link" href="bash.html">Bash.sh script</a>
+                <a class="nav_link" href="unkown.html">unkown method</a>
+                <a class="nav_link" href="bashCgi.html">Bash.cgi script</a>
+                <a class="nav_link" href="php.html">Php script</a>
+                <a class="nav_link" href="putfiles.html">Test PUT</a>
+                <a class="nav_link" href="p.html">A non existent file...</a>
+                <a class="nav_link" target="_blank" href="/google/">External redirections</a>
+                <a class="nav_link" target="_blank" href="/sessions/index.php">Internal redirections</a>
+                <a class="nav_link" href="/files/">Display Directory</a>
+            </div>         
+        </header>
+    
+        <div class="subtitle">Testing Put Method</div>
+    <div class="container">
+        <label for="filename" class="marge">Nom du fichier :</label>
+        <br>
+        <input class="marge" type="text" id="filename" placeholder="exemple.txt"><br><br>
+        <label for="filecontent" class="marge">Contenu :</label><br>
+        <textarea class="marge" id="filecontent" rows="10" cols="30" placeholder="Écris le contenu ici..."></textarea><br><br>
+        <button id="sendButton" class = "btn marge">Envoyer</button>
+    
+        <p id="response"></p>
+
+    </div>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', async () => {
+            const filename = document.getElementById('filename').value;
+            const filecontent = document.getElementById('filecontent').value;
+            const responseDisplay = document.getElementById('response');
+            console.log(filecontent);
+            if (!filename || !filecontent) {
+                responseDisplay.textContent = "Le nom du fichier et le contenu sont requis.";
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://127.0.0.1:8000/files/${filename}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'text/plain'
+                    },
+                    body: filecontent
+                });
+
+                if (response.ok) {
+                    responseDisplay.textContent = "Fichier créé avec succès sur le serveur !";
+                } else {
+                    responseDisplay.textContent = `Erreur : ${response.statusText}`;
+                }
+            } catch (error) {
+                responseDisplay.textContent = `Erreur de connexion : ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -90,9 +90,6 @@ bool RequestResponseManager::handleChunkedRequest(int fd_Client, std::string& cu
             break;
         chunk_start = chunk_data_end + 2; 
     }
-        // Chunk processing logic...
-        //chunk_start += chunk_size + 4; // Skip chunk data
-    // }
     return false;
 }
 
@@ -253,10 +250,8 @@ void RequestResponseManager::run()
                 } 
                 else if (event.events & EPOLLIN) 
                     processRequest(event.data.fd);
-                
+
                 int activeFdCount = m_epoll.getTotalActiveClients();
-                // std::cerr << "Active FD count: " << activeFdCount << std::endl;
-                // std::cerr << "FD Limit: " << fdLimit << std::endl;
                 if (activeFdCount < fdLimit && m_acceptPaused) 
                 {
                     Log::print_final_log("Activate new connections", "FD:", event.data.fd);
@@ -276,25 +271,6 @@ void RequestResponseManager::run()
                     Log::print_final_log("Erasing all connections", "in", "1 seconds...");
                     m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0], m_servers);
                 }
-                // for (size_t i = 0; i < m_servers.size(); i++) 
-                // {
-                //     for (size_t j = 0; j < m_servers[i]->fd_clients.size(); j++) 
-                //     {
-                //         int fd = m_servers[i]->fd_clients[j];
-                //         bool isSocketFd = false;
-                //         for (size_t k = 0; k < m_fdSockets.size(); k++)
-                //         {
-                //             if (fd == m_fdSockets[k]) 
-                //             {
-                //                 isSocketFd = true;
-                //                 break;
-                //             }
-                //         }
-                //         if (isSocketFd || fd == signalPipeFd[0]) 
-                //             continue;
-                //         m_epoll.purgeTimeOutFds(*(m_servers[i]->getConf()), fd, m_servers);
-                //     }
-                // }
             }
         }
 

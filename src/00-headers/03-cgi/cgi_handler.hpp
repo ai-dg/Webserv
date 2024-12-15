@@ -14,6 +14,7 @@
 #include "../00-shared/includes.hpp"
 #include "../01-core/HttpRequest.hpp"
 #include "../01-core/HttpResponse.hpp"
+#include "../01-core/Location.hpp"
 #include "../01-core/Pipe.hpp"
 #include "../02-utils/stringUtils.hpp"
 
@@ -25,6 +26,7 @@ class Cgi_handler
         int fd_client;
         HttpRequest *req;
         HttpResponse *res;
+        Location *route;
         std::vector<char *> environment;
 
         /**
@@ -51,7 +53,7 @@ class Cgi_handler
          * @brief Coplien form
          */
         Cgi_handler();
-        Cgi_handler(int fd_client, HttpRequest *req, HttpResponse *res);
+        Cgi_handler(int fd_client, HttpRequest *req, HttpResponse *res, Location *route);
         Cgi_handler(Cgi_handler const& src);
         Cgi_handler& operator=(Cgi_handler const& src);
         ~Cgi_handler();
