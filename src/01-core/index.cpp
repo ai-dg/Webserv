@@ -64,7 +64,7 @@ std::string getHtmlFooter()
     return std::string("\t</body>\n</html>");
 }
 
-std::string getFormatedHtmlIndexLine(std::string path, char *name)
+std::string getFormatedHtmlIndexLine(std::string path, char const* name)
 {
     (void) path;
     std::string filename(name);
@@ -73,24 +73,24 @@ std::string getFormatedHtmlIndexLine(std::string path, char *name)
 
 std::string getParentLink(std::string path)
 {
-    DIR *dir = opendir(path.c_str());
+    DIR *dir = ::opendir(path.c_str());
     if (dir == NULL)
     {
         std::cerr << "can't access directory" << std::endl;
         return "";
     }
-    struct dirent * files = readdir(dir);
+    struct dirent * files = ::readdir(dir);
     while (files)
     {
         std::string file(files->d_name);
         if (file == "..")
         {
-            closedir(dir);   
-            return getFormatedHtmlIndexLine(path, files->d_name);
+            ::closedir(dir);   
+            return getFormatedHtmlIndexLine(path, file.c_str());
         }
-        files = readdir(dir);
+        files = ::readdir(dir);
     }
-    closedir(dir);
+    ::closedir(dir);
     return "";
 }
 

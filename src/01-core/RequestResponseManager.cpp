@@ -252,15 +252,7 @@ void RequestResponseManager::run()
                     processRequest(event.data.fd);
 
                 int activeFdCount = m_epoll.getTotalActiveClients();
-                if (activeFdCount < fdLimit && m_acceptPaused) 
-                {
-                    Log::print_final_log("Activate new connections", "FD:", event.data.fd);
-                    for (std::vector<int>::iterator it = m_fdSockets.begin(); it != m_fdSockets.end(); ++it) 
-                    {
-                        m_epoll.enableFd(*it);
-                    }
-                    m_acceptPaused = false;
-                }
+                
                 if (activeFdCount >= fdLimit)
                 {
                     std::ostringstream oss;
@@ -270,6 +262,15 @@ void RequestResponseManager::run()
                     Log::print_final_log(oss.str(), "FD:", event.data.fd);
                     Log::print_final_log("Erasing all connections", "in", "1 seconds...");
                     m_epoll.check_timeouts_of_clients(m_fdSockets, signalPipeFd[0], m_servers);
+                }
+                if (activeFdCount < fdLimit && m_acceptPaused == true) 
+                {
+                    Log::print_final_log("Activate new connections", "FD:", event.data.fd);
+                    for (std::vector<int>::iterator it = m_fdSockets.begin(); it != m_fdSockets.end(); ++it) 
+                    {
+                        m_epoll.enableFd(*it);
+                    }
+                    m_acceptPaused = false;
                 }
             }
         }
