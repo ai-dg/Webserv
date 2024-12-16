@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/16 10:31:46 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/16 10:39:35 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
     msg_size << request.getBody().size();
     msg_size << " bytes";
     
-    size_t line_break = req->find("\r\n");
 
     if (request.getMethod().size() == 0)
     {
@@ -69,7 +68,7 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
         response.send(*fd_client);
         return;
     }
-    if (req->find("HTTP/1.1", line_break) == std::string::npos)
+    if (req->find("HTTP/1.1") == std::string::npos)
     {
         response.setRedirection(505);
         response.send(*fd_client);
