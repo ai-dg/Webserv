@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/16 10:15:07 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/16 10:29:09 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void HttpResponse::setRedirection(int status)
         case 405:
         case 406:
         case 413:
+        case 505:
         case 500: fp << "www/error_pages/" << status <<".html";
                     filePath = fp.str(); break;   
         default: break;

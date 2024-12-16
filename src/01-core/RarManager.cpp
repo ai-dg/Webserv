@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RarManager.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calbor-p <calbor-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:55:04 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/16 10:11:53 by calbor-p         ###   ########.fr       */
+/*   Updated: 2024/12/16 10:31:46 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,19 +60,27 @@ void type_request_manager(int *fd_client, std::string *req, Server *server, Sess
     std::ostringstream msg_size;
     msg_size << request.getBody().size();
     msg_size << " bytes";
-    if (!request.isValidBodySize())
-    {
-        response.setRedirection(413);
-        response.send(*fd_client);
-        return;
-    }
+    
+    size_t line_break = req->find("\r\n");
+
     if (request.getMethod().size() == 0)
     {
         response.setRedirection(400);
         response.send(*fd_client);
         return;
     }
-        
+    if (req->find("HTTP/1.1", line_break) == std::string::npos)
+    {
+        response.setRedirection(505);
+        response.send(*fd_client);
+        return;
+    }
+    if (!request.isValidBodySize())
+    {
+        response.setRedirection(413);
+        response.send(*fd_client);
+        return;
+    }
     Log::print_final_log("Request:", request.getMethod(), request.getURI(), msg_size.str());
     if (request.getMethod() == "PUT" && !request.isScript())
     {
