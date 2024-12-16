@@ -6,7 +6,7 @@
 /*   By: dagudelo <dagudelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:58:02 by dagudelo          #+#    #+#             */
-/*   Updated: 2024/12/11 18:10:01 by dagudelo         ###   ########.fr       */
+/*   Updated: 2024/12/16 10:15:07 by dagudelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void HttpResponse::setRedirection(int status)
     std::stringstream fp;
     switch (status)
     {
+        case 400:
         case 403:
         case 404:
         case 405:
