@@ -46,14 +46,13 @@ It serves as a comprehensive introduction to **network programming**, **HTTP pro
 
 ## ▌Features
 
-✔️ **HTTP/1.1 Compliance**: Full implementation of GET, POST, and DELETE methods\
+✔️ **HTTP/1.1 Compliance**: GET and POST methods (DELETE requests are parsed but not handled)\
 ✔️ **Non-blocking Architecture**: Epoll-based event loop for handling thousands of connections\
 ✔️ **Virtual Hosts**: Multiple server configurations with different ports and hostnames\
 ✔️ **CGI Execution**: Support for PHP, Python, Perl, and Bash scripts\
 ✔️ **File Upload**: Image uploads via the `submit_project.py` CGI form handler\
 ✔️ **Static File Serving**: Efficient delivery of HTML, CSS, JavaScript, images\
-✔️ **Custom Error Pages**: Configurable error pages for 404 and 500\
-✔️ **Directory Listing**: Optional autoindex for directories\
+✔️ **Error Pages**: HTML error pages for 403, 404, 413, 500 (served from `www/error_pages/`)\
 ✔️ **HTTP Redirections**: `return` directive parsed but not applied\
 ✔️ **Request Body Limits**: Configurable maximum body size\
 ✔️ **MIME Type Detection**: Automatic content-type headers\
@@ -66,7 +65,6 @@ It serves as a comprehensive introduction to **network programming**, **HTTP pro
 
 - ■ **Session Management**: Cookie-based session tracking with persistent storage
 - ■ **Multiple CGI Support**: PHP-CGI, Python, Perl, and Bash script execution
-- ■ **Timeout Management**: Automatic cleanup of idle connections
 - ■ **Signal Handling**: Graceful shutdown on SIGINT
 - ■ **Comprehensive Logging**: Debug, error, and access logs
 - ■ **Non-blocking Sockets**: All operations use epoll for maximum efficiency
@@ -266,7 +264,7 @@ curl http://127.0.0.1:9090/
 curl -X POST -d "name=test&value=123" http://127.0.0.1:9090/cgi-bin/submit_project.py
 
 # File upload
-curl -X POST -F "file=@image.jpg" http://127.0.0.1:9090/upload
+curl -X POST -F "image=@image.jpg" -F "projectName=test" http://127.0.0.1:9090/cgi-bin/submit_project.py
 
 # DELETE request
 curl -X POST -d "name=test" http://127.0.0.1:9090/cgi-bin/delete_project.py
@@ -555,25 +553,22 @@ server {
 
 ### ■ Expected Performance
 
-On modern hardware (4-core CPU, 8GB RAM):
-
 | Metric | Value |
 |--------|-------|
-| **Memory Usage** | ~50MB (idle) |
-| **CPU Usage** | < 5% (moderate load) |
+| **Requests/s** | ~220 (ab -n 100 -c 10, tests/stress_apache.txt) |
 
 ### ■ Load Testing
 
 **Using Apache Bench:**
 
 ```bash
-# 1000 requests, 100 concurrent
-ab -n 1000 -c 100 http://127.0.0.1:9090/
+# 100 requests, 10 concurrent
+ab -n 100 -c 10 http://localhost:8080/
 
-# Results:
-# (see tests/stress_apache.txt for a recorded run)
-# Time per request:       19.103 [ms]
-# Transfer rate:          1234.56 [Kbytes/sec]
+# Results (recorded run, tests/stress_apache.txt):
+# Requests per second:    220.54 [#/sec] (mean)
+# Time per request:       45.344 [ms] (mean)
+# Transfer rate:          648.48 [Kbytes/sec] received
 ```
 
 **Using Python stress test:**
@@ -588,13 +583,12 @@ python3 tests/stress_test.py
 - ✅ **Static Files**: HTML, CSS, JavaScript, images
 - ✅ **CGI Scripts**: PHP, Python, Perl, Bash
 - ✅ **File Upload**: Single and multiple files
-- ✅ **HTTP Methods**: GET, POST, DELETE
+- ✅ **HTTP Methods**: GET, POST (DELETE parsed but not handled)
 - ✅ **Error Handling**: 403, 404, 413, 500
 - ⬜ **Redirects**: not implemented
 - ✅ **Keep-Alive**: Persistent connections
 - ✅ **Large Files**: > 100MB uploads
 - ✅ **Concurrent Requests**: 1000+ simultaneous
-- ✅ **Timeout Handling**: Idle connection cleanup
 - ✅ **Signal Handling**: Graceful shutdown
 
 ### ■ Browser Compatibility
@@ -1146,7 +1140,7 @@ The project meets all mandatory requirements:
 - ✅ HTTP/1.1 server implementation in C++98
 - ✅ Non-blocking I/O with epoll
 - ✅ Multiple server configurations (virtual hosts)
-- ✅ GET, POST, and DELETE methods
+- ✅ GET and POST methods (DELETE requests are parsed but not handled)
 - ✅ Static file serving
 - ✅ File upload handling
 - ✅ CGI script execution
@@ -1154,14 +1148,12 @@ The project meets all mandatory requirements:
 - ✅ Configuration file parsing
 - ✅ Request body size limits
 - ⬜ HTTP redirections (parsed, not applied)
-- ✅ Directory listing (autoindex)
 - ✅ Default index files
 - ✅ Multiple ports and hosts
 
 Bonus features implemented:
 - ✅ Session management with cookies
 - ✅ Multiple CGI support (PHP, Python, Perl, Bash)
-- ✅ Timeout management for connections
 - ✅ Signal handling for graceful shutdown
 - ✅ Comprehensive logging system
 - ✅ Keep-alive connection support
