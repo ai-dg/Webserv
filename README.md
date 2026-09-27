@@ -50,11 +50,11 @@ It serves as a comprehensive introduction to **network programming**, **HTTP pro
 ✔️ **Non-blocking Architecture**: Epoll-based event loop for handling thousands of connections\
 ✔️ **Virtual Hosts**: Multiple server configurations with different ports and hostnames\
 ✔️ **CGI Execution**: Support for PHP, Python, Perl, and Bash scripts\
-✔️ **File Upload**: Handle multipart/form-data file uploads\
+✔️ **File Upload**: Image uploads via the `submit_project.py` CGI form handler\
 ✔️ **Static File Serving**: Efficient delivery of HTML, CSS, JavaScript, images\
-✔️ **Custom Error Pages**: Configurable error pages for 403, 404, 413, 500\
+✔️ **Custom Error Pages**: Configurable error pages for 404 and 500\
 ✔️ **Directory Listing**: Optional autoindex for directories\
-✔️ **HTTP Redirections**: 301/302 redirects configuration\
+✔️ **HTTP Redirections**: `return` directive parsed but not applied\
 ✔️ **Request Body Limits**: Configurable maximum body size\
 ✔️ **MIME Type Detection**: Automatic content-type headers\
 ✔️ **Keep-Alive Support**: Persistent connections for better performance\
@@ -67,7 +67,7 @@ It serves as a comprehensive introduction to **network programming**, **HTTP pro
 - ■ **Session Management**: Cookie-based session tracking with persistent storage
 - ■ **Multiple CGI Support**: PHP-CGI, Python, Perl, and Bash script execution
 - ■ **Timeout Management**: Automatic cleanup of idle connections
-- ■ **Signal Handling**: Graceful shutdown on SIGINT/SIGTERM
+- ■ **Signal Handling**: Graceful shutdown on SIGINT
 - ■ **Comprehensive Logging**: Debug, error, and access logs
 - ■ **Non-blocking Sockets**: All operations use epoll for maximum efficiency
 
@@ -122,7 +122,7 @@ The server uses **epoll** for efficient event-driven I/O:
 
 **Epoll Setup:**
 ```cpp
-int epoll_fd = epoll_create1(0);
+int epoll_fd = epoll_create(MAX_EVENTS);
 struct epoll_event event;
 event.events = EPOLLIN | EPOLLET;  // Edge-triggered
 event.data.fd = socket_fd;
@@ -193,8 +193,8 @@ PARENT PROCESS              CHILD PROCESS
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/webserv.git
-cd webserv
+git clone https://github.com/ai-dg/Webserv.git
+cd Webserv
 ```
 
 2. Compile the server
@@ -206,7 +206,6 @@ make
 3. Verify the binary
 
 ```bash
-./webserv --help
 ```
 
 ### ■ Quick Start
@@ -251,7 +250,7 @@ Press `Ctrl+C` for graceful shutdown.
 # Use custom configuration file
 ./webserv path/to/config.conf
 
-# The server will display:
+# Listening addresses are logged to sessions/Server.txt (stdout stays silent):
 # Server listening on 127.0.0.1:9090
 # Server listening on 127.0.0.2:8000
 # Server listening on 127.0.0.5:9000
@@ -270,7 +269,7 @@ curl -X POST -d "name=test&value=123" http://127.0.0.1:9090/cgi-bin/submit_proje
 curl -X POST -F "file=@image.jpg" http://127.0.0.1:9090/upload
 
 # DELETE request
-curl -X DELETE http://127.0.0.1:9090/uploads/image.jpg
+curl -X POST -d "name=test" http://127.0.0.1:9090/cgi-bin/delete_project.py
 ```
 
 **Testing with telnet:**
@@ -450,13 +449,13 @@ webserv/
 │   └── error_pages/           # Error page templates
 │
 ├── cgi-bin/                     # CGI scripts
-│   ├── hello_world.py         # Python CGI
+│   ├── search_project.py      # Search handler
 │   ├── hello_world.php        # PHP CGI
 │   ├── hello_world.pl         # Perl CGI
 │   ├── hello_world.sh         # Bash CGI
 │   ├── submit_project.py      # Form handler
 │   ├── show_projects.py       # Data display
-│   └── upload.py              # File upload handler
+│   └── upload.py              # Empty placeholder
 │
 ├── uploads/                     # Uploaded files directory
 ├── database/                    # Simple file-based storage
@@ -469,12 +468,12 @@ webserv/
 ├── tests/                       # Test utilities
 │   ├── tester                 # Automated tester
 │   ├── stress_test.py         # Load testing
-│   └── unit_tests.cpp         # Unit tests
+│   └── unit_tests.cpp         # Empty placeholder
 │
 └── docs/                        # Documentation
-    ├── README.md              # This file
-    ├── CONFIG.md              # Configuration guide
-    └── INSTALL.md             # Installation guide
+    ├── README.md              # Two-line placeholder
+    ├── CONFIG.md              # Empty placeholder
+    └── INSTALL.md             # Empty placeholder
 ```
 
 ---
@@ -508,7 +507,7 @@ webserv/
 
 ### ■ Multiple Server Configuration
 
-You can define multiple virtual hosts in one configuration file:
+You can define multiple virtual hosts in one configuration file (only the location paths /, /images/, /upload, /cgi-bin/ and /old-page are recognised by the parser):
 
 ```nginx
 # Server 1: Main site on port 9090
@@ -560,9 +559,6 @@ On modern hardware (4-core CPU, 8GB RAM):
 
 | Metric | Value |
 |--------|-------|
-| **Concurrent Connections** | 1000+ |
-| **Requests per Second** | 5000+ (static files) |
-| **Response Time** | < 10ms (static files) |
 | **Memory Usage** | ~50MB (idle) |
 | **CPU Usage** | < 5% (moderate load) |
 
@@ -575,7 +571,7 @@ On modern hardware (4-core CPU, 8GB RAM):
 ab -n 1000 -c 100 http://127.0.0.1:9090/
 
 # Results:
-# Requests per second:    5234.56 [#/sec]
+# (see tests/stress_apache.txt for a recorded run)
 # Time per request:       19.103 [ms]
 # Transfer rate:          1234.56 [Kbytes/sec]
 ```
@@ -583,7 +579,8 @@ ab -n 1000 -c 100 http://127.0.0.1:9090/
 **Using Python stress test:**
 
 ```bash
-python3 tests/stress_test.py --url http://127.0.0.1:9090 --requests 10000 --concurrent 100
+# URL, request count and concurrency are constants at the top of the script
+python3 tests/stress_test.py
 ```
 
 ### ■ Testing Checklist
@@ -593,7 +590,7 @@ python3 tests/stress_test.py --url http://127.0.0.1:9090 --requests 10000 --conc
 - ✅ **File Upload**: Single and multiple files
 - ✅ **HTTP Methods**: GET, POST, DELETE
 - ✅ **Error Handling**: 403, 404, 413, 500
-- ✅ **Redirects**: 301, 302
+- ⬜ **Redirects**: not implemented
 - ✅ **Keep-Alive**: Persistent connections
 - ✅ **Large Files**: > 100MB uploads
 - ✅ **Concurrent Requests**: 1000+ simultaneous
@@ -654,7 +651,7 @@ Content-Type: application/x-www-form-urlencoded
    std::string body = readBytes(contentLength);
    ```
 
-4. **Handle Chunked Encoding:**
+4. **Chunked Encoding (not implemented):**
    ```cpp
    // If Transfer-Encoding: chunked
    while (true) {
@@ -1156,7 +1153,7 @@ The project meets all mandatory requirements:
 - ✅ Custom error pages
 - ✅ Configuration file parsing
 - ✅ Request body size limits
-- ✅ HTTP redirections
+- ⬜ HTTP redirections (parsed, not applied)
 - ✅ Directory listing (autoindex)
 - ✅ Default index files
 - ✅ Multiple ports and hosts
